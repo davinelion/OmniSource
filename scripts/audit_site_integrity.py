@@ -7,11 +7,10 @@ system, and reports anything that would 404, plus a set of structural
 checks (missing alt/lang/title, duplicate ids, unbalanced i18n keys).
 Read-only. Exit code 1 when problems are found.
 """
+
 from __future__ import annotations
 
 import json
-import os
-import re
 import sys
 from collections import defaultdict
 from html.parser import HTMLParser
@@ -20,17 +19,35 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parent.parent
 SKIP_DIRS = {
-    ".git", "node_modules", ".venv", "_site", "web", "sdk", "tests", "scripts",
-    "src", ".github", ".cache", "__pycache__",
+    ".git",
+    "node_modules",
+    ".venv",
+    "_site",
+    "web",
+    "sdk",
+    "tests",
+    "scripts",
+    "src",
+    ".github",
+    ".cache",
+    "__pycache__",
 }
 EXTERNAL_SCHEMES = {"http:", "https:", "mailto:", "tel:", "data:", "blob:"}
 # Custom URL schemes used for sideloading deep links — valid, not files.
 DEEP_SCHEMES = {"altstore:", "sidestore:", "feather:", "esign:", "livecontainer:", "itms-apps:", "apple-music:"}
 
 URL_ATTRS = {
-    "a": ["href"], "link": ["href"], "script": ["src"], "img": ["src", "data-src"],
-    "source": ["src", "srcset"], "iframe": ["src"], "video": ["src", "poster"],
-    "audio": ["src"], "image": ["href"], "use": ["href"], "form": ["action"],
+    "a": ["href"],
+    "link": ["href"],
+    "script": ["src"],
+    "img": ["src", "data-src"],
+    "source": ["src", "srcset"],
+    "iframe": ["src"],
+    "video": ["src", "poster"],
+    "audio": ["src"],
+    "image": ["href"],
+    "use": ["href"],
+    "form": ["action"],
 }
 
 
@@ -59,11 +76,11 @@ class Collector(HTMLParser):
         if "id" in d:
             self.ids.append(d["id"])
         for key, val in d.items():
-            if key.startswith("data-i18n"):
-                if val and not key.endswith(("placeholder", "label", "alt", "title")):
-                    self.i18n_keys.add(val)
-                elif val:
-                    self.i18n_keys.add(val)
+            # Every data-i18n* value is a bundle key worth checking, including
+            # the aria/placeholder variants — a missing key shows up as the
+            # raw "nav.language" string wherever it is used.
+            if key.startswith("data-i18n") and val:
+                self.i18n_keys.add(val)
         for attr in URL_ATTRS.get(tag, []):
             val = d.get(attr)
             if not val:
@@ -95,11 +112,7 @@ def classify(url: str) -> str:
 def resolve(page: Path, url: str) -> Path:
     parts = urlsplit(url)
     path = unquote(parts.path)
-    if url.startswith("/"):
-        target = ROOT / path.lstrip("/")
-    else:
-        target = (page.parent / path)
-    return target
+    return ROOT / path.lstrip("/") if url.startswith("/") else page.parent / path
 
 
 def exists(target: Path) -> bool:
@@ -113,10 +126,7 @@ def exists(target: Path) -> bool:
 
 
 def main() -> int:
-    pages = sorted(
-        p for p in ROOT.rglob("*.html")
-        if not any(part in SKIP_DIRS for part in p.relative_to(ROOT).parts)
-    )
+    pages = sorted(p for p in ROOT.rglob("*.html") if not any(part in SKIP_DIRS for part in p.relative_to(ROOT).parts))
     broken: list[str] = []
     dup_ids: list[str] = []
     no_lang: list[str] = []
@@ -143,13 +153,13 @@ def main() -> int:
         rel = page.relative_to(ROOT).as_posix()
         try:
             raw = page.read_text(encoding="utf-8")
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             broken.append(f"{rel}: unreadable ({exc})")
             continue
         c = Collector()
         try:
             c.feed(raw)
-        except Exception as exc:  # noqa: BLE001
+        except Exception as exc:
             broken.append(f"{rel}: HTML parse error ({exc})")
             continue
         stats["pages"] += 1
@@ -162,7 +172,7 @@ def main() -> int:
             counts[i] += 1
         for i, n in counts.items():
             if n > 1:
-                dup_ids.append(f"{rel}: #{i} × {n}")
+                dup_ids.append(f"{rel}: #{i} appears {n}x")
         for src, line in c.imgs_no_alt:
             no_alt.append(f"{rel}:{line}: <img src={src}>")
         for key in sorted(c.i18n_keys):
@@ -175,7 +185,7 @@ def main() -> int:
                 continue
             target = resolve(page, url)
             if not exists(target):
-                broken.append(f"{rel}:{line}: {attr}=\"{url}\"")
+                broken.append(f'{rel}:{line}: {attr}="{url}"')
 
     print(f"pages scanned: {stats['pages']}")
     print(f"local urls: {stats['url:local']}  external: {stats['url:external']}  deep links: {stats['url:deep']}")
@@ -192,7 +202,10 @@ def main() -> int:
     section("MISSING html[lang]", no_lang)
     section("MISSING <title>", no_title)
     section("IMG WITHOUT ALT", no_alt)
-    section("I18N KEYS MISSING FROM en.json", [f"{k}  (used by {len(v)} page(s): {', '.join(v[:3])})" for k, v in sorted(missing_keys.items())])
+    section(
+        "I18N KEYS MISSING FROM en.json",
+        [f"{k}  (used by {len(v)} page(s): {', '.join(v[:3])})" for k, v in sorted(missing_keys.items())],
+    )
 
     # Locale coverage relative to English
     def flat(doc, prefix=""):
@@ -206,7 +219,7 @@ def main() -> int:
         return out
 
     en_flat = flat(en)
-    print("\n== LOCALE COVERAGE (vs en.json, %d keys)" % len(en_flat))
+    print(f"\n== LOCALE COVERAGE (vs en.json, {len(en_flat)} keys)")
     for code, doc in sorted(locale_docs.items()):
         if code == "en":
             continue
@@ -214,8 +227,10 @@ def main() -> int:
         miss = [k for k in en_flat if k not in f or not str(f[k]).strip()]
         extra = [k for k in f if k not in en_flat]
         pct = 100.0 * (len(en_flat) - len(miss)) / max(1, len(en_flat))
-        print(f"   {code}: {pct:5.1f}%  missing={len(miss)}  extra={len(extra)}"
-              + (f"  e.g. {', '.join(miss[:4])}" if miss else ""))
+        print(
+            f"   {code}: {pct:5.1f}%  missing={len(miss)}  extra={len(extra)}"
+            + (f"  e.g. {', '.join(miss[:4])}" if miss else "")
+        )
 
     problems = len(broken) + len(dup_ids) + len(missing_keys) + len(no_lang) + len(no_title)
     print(f"\nTOTAL PROBLEMS (broken urls + dup ids + missing i18n + no lang + no title): {problems}")

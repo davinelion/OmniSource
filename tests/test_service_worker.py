@@ -61,25 +61,32 @@ class TestServiceWorkerShell(unittest.TestCase):
         # All three rings must be namespaced by VERSION, otherwise an update
         # leaves stale entries behind forever.
         for ring in ("CORE_CACHE", "DATA_CACHE", "ASSET_CACHE"):
-            self.assertRegex(source, rf"const {ring} = `\$\{{VERSION\}}-",
-                             f"{ring} is not derived from VERSION")
+            self.assertRegex(source, rf"const {ring} = `\$\{{VERSION\}}-", f"{ring} is not derived from VERSION")
 
     def test_every_module_script_is_precached(self) -> None:
         # The ES-module layer is lazy-loaded by js/features.js and the page
         # bundles; if one is missing from the shell its page dies offline.
         core = set(_array("CORE_ASSETS"))
         for module in sorted((ROOT / "js" / "modules").glob("*.js")):
-            self.assertIn(f"./js/modules/{module.name}", core,
-                          f"js/modules/{module.name} is not precached")
+            self.assertIn(f"./js/modules/{module.name}", core, f"js/modules/{module.name} is not precached")
 
     def test_pages_referenced_by_the_shell_are_precached(self) -> None:
         core = set(_array("CORE_ASSETS"))
-        for page in ("./index.html", "./install/index.html", "./docs/index.html",
-                     "./sources/index.html", "./status/index.html",
-                     "./analytics/index.html", "./search/index.html",
-                     "./favorites/index.html", "./collections/index.html",
-                     "./compare/index.html", "./discover/index.html",
-                     "./graph/index.html", "./translation-status/index.html"):
+        for page in (
+            "./index.html",
+            "./install/index.html",
+            "./docs/index.html",
+            "./sources/index.html",
+            "./status/index.html",
+            "./analytics/index.html",
+            "./search/index.html",
+            "./favorites/index.html",
+            "./collections/index.html",
+            "./compare/index.html",
+            "./discover/index.html",
+            "./graph/index.html",
+            "./translation-status/index.html",
+        ):
             self.assertIn(page, core, f"{page} is not in the offline shell")
             self.assertTrue((ROOT / page.lstrip("./")).is_file(), f"{page} does not exist")
 
@@ -87,12 +94,15 @@ class TestServiceWorkerShell(unittest.TestCase):
         core = set(_array("CORE_ASSETS"))
         referenced = set()
         for page in ROOT.glob("*.html"):
-            referenced |= set(re.findall(
-                r'<link[^>]+href="((?:\.\./)*(?:assets|src)/[^"]+\.css)"',
-                page.read_text(encoding="utf-8")))
-        referenced |= set(re.findall(
-            r'<link[^>]+href="(assets/design-system/[^"]+\.css)"',
-            (ROOT / "install" / "index.html").read_text(encoding="utf-8")))
+            referenced |= set(
+                re.findall(r'<link[^>]+href="((?:\.\./)*(?:assets|src)/[^"]+\.css)"', page.read_text(encoding="utf-8"))
+            )
+        referenced |= set(
+            re.findall(
+                r'<link[^>]+href="(assets/design-system/[^"]+\.css)"',
+                (ROOT / "install" / "index.html").read_text(encoding="utf-8"),
+            )
+        )
         self.assertTrue(referenced, "found no stylesheet links to check")
         for href in sorted(referenced):
             self.assertIn(f"./{href}", core, f"{href} is loaded by a page but not precached")
@@ -106,8 +116,11 @@ class TestServiceWorkerShell(unittest.TestCase):
     def test_every_locale_bundle_is_precached(self) -> None:
         core = set(_array("CORE_ASSETS"))
         for bundle in sorted((ROOT / "locales").glob("*.json")):
-            self.assertIn(f"./locales/{bundle.name}", core,
-                          f"locales/{bundle.name} is not precached (language switch would fail offline)")
+            self.assertIn(
+                f"./locales/{bundle.name}",
+                core,
+                f"locales/{bundle.name} is not precached (language switch would fail offline)",
+            )
 
     def test_placeholder_artwork_is_precached(self) -> None:
         # website/assets/AssetManager.js falls back to these whenever an icon

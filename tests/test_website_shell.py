@@ -77,10 +77,8 @@ class TestWebsiteShell(unittest.TestCase):
         # page for icon fallbacks), /translation-status/ and the placeholder
         # artwork were missing entirely — those pages broke on an offline
         # reload. tests/test_service_worker.py asserts the list against disk.
-        for module in ("analytics", "collections", "compare", "favorites",
-                       "install", "pwa", "store"):
-            self.assertIn("js/modules/" + module + ".js", sw,
-                          module + " module is not precached")
+        for module in ("analytics", "collections", "compare", "favorites", "install", "pwa", "store"):
+            self.assertIn("js/modules/" + module + ".js", sw, module + " module is not precached")
         self.assertIn("website/assets/AssetManager.js", sw)
         self.assertIn("translation-status/index.html", sw)
         self.assertIn("assets/placeholders/app.svg", sw)
@@ -292,21 +290,22 @@ class TestWebsiteShell(unittest.TestCase):
         rules = re.findall(r"([^{}]*\.nav-links a[^{}]*)\{([^{}]*)\}", css)
         self.assertTrue(rules, "no .nav-links a rules found at all")
         for selector, body in rules:
-            self.assertNotIn("text-overflow: ellipsis", body,
-                             selector.strip() + " still ellipsizes nav labels")
+            self.assertNotIn("text-overflow: ellipsis", body, selector.strip() + " still ellipsizes nav labels")
         # The two structural rules pin each link to its natural width so the
         # overflow guard — not the box model — decides what fits.
         for selector in (".nav-links a", ".ap-header-inner .nav-links a"):
             body = re.search(re.escape(selector) + r" \{([^{}]*)\}", css)
             self.assertIsNotNone(body, selector + " rule disappeared")
-            self.assertRegex(body.group(1), r"flex: none;",
-                             selector + " must not shrink below its label")
+            self.assertRegex(body.group(1), r"flex: none;", selector + " must not shrink below its label")
         # And the guard itself must exist and run.
         core = (ROOT / "js" / "core.js").read_text(encoding="utf-8")
         self.assertIn("function setupNavFit()", core)
         self.assertIn("setupNavFit();", core, "the guard must run at boot")
-        self.assertRegex(core, r"addEventListener\('i18n:changed', schedule\)",
-                         "translated labels change width, so re-measure on switch")
+        self.assertRegex(
+            core,
+            r"addEventListener\('i18n:changed', schedule\)",
+            "translated labels change width, so re-measure on switch",
+        )
 
     def test_nav_drawer_breakpoint_matches_css(self) -> None:
         # core.js decides when the drawer owns the links; components.css
@@ -316,8 +315,7 @@ class TestWebsiteShell(unittest.TestCase):
         css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
         js_bp = re.search(r"var NAV_DRAWER_WIDTH = (\d+);", core)
         self.assertIsNotNone(js_bp, "NAV_DRAWER_WIDTH constant missing from core.js")
-        self.assertNotRegex(core, r"window\.innerWidth [<>]=? 1100",
-                            "stale hardcoded breakpoint in core.js")
+        self.assertNotRegex(core, r"window\.innerWidth [<>]=? 1100", "stale hardcoded breakpoint in core.js")
         self.assertIn("@media (max-width: " + js_bp.group(1) + "px)", css)
         self.assertIn(".nav-toggle { display: grid; }", css)
 
@@ -342,15 +340,12 @@ class TestWebsiteShell(unittest.TestCase):
         self.assertIn("aria-selected", features)
 
         css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
-        for selector in (".lang-picker", ".lang-toggle", ".lang-menu",
-                         ".lang-option", ".hero-lang", ".lang-pill"):
+        for selector in (".lang-picker", ".lang-toggle", ".lang-menu", ".lang-option", ".hero-lang", ".lang-pill"):
             self.assertIn(selector, css, selector + " is not styled by the design system")
         self.assertIn(".lang-menu[hidden] { display: none; }", css)
         # On narrow screens the header button drops its two-letter code but
         # must never disappear.
-        self.assertRegex(
-            css,
-            r"@media \(max-width: 560px\) \{[^}]*\.lang-toggle \.lang-code \{ display: none; \}")
+        self.assertRegex(css, r"@media \(max-width: 560px\) \{[^}]*\.lang-toggle \.lang-code \{ display: none; \}")
         self.assertNotIn(".lang-picker { display: none", css)
 
     def test_language_switcher_covers_every_supported_locale(self) -> None:
@@ -359,8 +354,7 @@ class TestWebsiteShell(unittest.TestCase):
         features = (ROOT / "js" / "features.js").read_text(encoding="utf-8")
         i18n = (ROOT / "src" / "js" / "i18n.js").read_text(encoding="utf-8")
         picker = set(re.findall(r"^\s{6}(\w\w): \{ name: '", features, re.M))
-        runtime = set(re.findall(
-            r"'(\w\w)'", re.search(r"var supported = \[(.*?)\];", i18n, re.S).group(1)))
+        runtime = set(re.findall(r"'(\w\w)'", re.search(r"var supported = \[(.*?)\];", i18n, re.S).group(1)))
         bundles = {path.stem for path in (ROOT / "locales").glob("*.json")}
         self.assertTrue(picker, "no languages found in the picker table")
         self.assertEqual(picker, runtime, "picker languages != i18n runtime languages")
@@ -692,10 +686,8 @@ class TestWebsiteShell(unittest.TestCase):
         # install.js wraps its table in Object.freeze({...}) and site.js keeps
         # its copy inside an IIFE, so rather than guessing brace depth, pick
         # out the lines that are literally `key: 'scheme://template'`.
-        self.assertIn("CLIENT_SCHEMES", source,
-                      "CLIENT_SCHEMES table missing from " + path.name)
-        entries = re.findall(
-            r"^\s+(\w+): '([a-z][a-z0-9+.-]*://[^']*)',?\s*$", source, re.M)
+        self.assertIn("CLIENT_SCHEMES", source, "CLIENT_SCHEMES table missing from " + path.name)
+        entries = re.findall(r"^\s+(\w+): '([a-z][a-z0-9+.-]*://[^']*)',?\s*$", source, re.M)
         self.assertTrue(entries, "no scheme entries found in " + path.name)
         return dict(entries)
 
@@ -706,18 +698,15 @@ class TestWebsiteShell(unittest.TestCase):
         # builder spells Feather's argument `{host}{path}` while the JS uses a
         # single `{hostpath}`, and both resolve to the same URL. What matters
         # is that a tap produces the same deep link the client recognises.
-        expected = {
-            cid: profile["scheme"].split("{", 1)[0]
-            for cid, profile in CLIENT_PROFILES.items()
-        }
+        expected = {cid: profile["scheme"].split("{", 1)[0] for cid, profile in CLIENT_PROFILES.items()}
         self.assertEqual(
             {"altstore", "sidestore", "feather", "esign", "livecontainer"},
-            set(expected), "builder gained/lost a client; update this test too")
+            set(expected),
+            "builder gained/lost a client; update this test too",
+        )
         for path in (ROOT / "js" / "modules" / "install.js", ROOT / "js" / "site.js"):
-            got = {cid: scheme.split("{", 1)[0]
-                   for cid, scheme in self._js_scheme_table(path).items()}
-            self.assertEqual(expected, got,
-                             path.name + " disagrees with omnisource.install")
+            got = {cid: scheme.split("{", 1)[0] for cid, scheme in self._js_scheme_table(path).items()}
+            self.assertEqual(expected, got, path.name + " disagrees with omnisource.install")
 
     def test_deep_link_query_is_not_fully_percent_encoded(self) -> None:
         # The generated pages keep the feed URL raw in the query; the browser
@@ -727,11 +716,10 @@ class TestWebsiteShell(unittest.TestCase):
         # encoder that only escapes what would break the link or its href.
         for path in (ROOT / "js" / "modules" / "install.js", ROOT / "js" / "site.js"):
             source = path.read_text(encoding="utf-8")
-            self.assertIn("encodeFeedParam", source,
-                          path.name + " lost the narrow feed-URL encoder")
+            self.assertIn("encodeFeedParam", source, path.name + " lost the narrow feed-URL encoder")
             self.assertRegex(
-                source, r"replace\(/\[\"<>#&\\s\]/g",
-                path.name + " must escape only quote/angle/hash/ampersand/space")
+                source, r"replace\(/\[\"<>#&\\s\]/g", path.name + " must escape only quote/angle/hash/ampersand/space"
+            )
             # …and must not blanket-encode the feed URL any more.
             self.assertNotIn("encodeURIComponent(url)", source)
             self.assertNotIn("encodeURIComponent(feedUrl)", source)
@@ -752,7 +740,8 @@ class TestWebsiteShell(unittest.TestCase):
             "globalThis.window = { OS: { url: (p) => 'https://example.org/OmniSource/' + p } };\n"
             "const m = await import(" + json.dumps(str(ROOT / "js" / "modules" / "install.js")) + ");\n"
             "const out = {};\n"
-            "for (const id of " + json.dumps(client_ids) + ") out[id] = m.installUrlFor(id, " + json.dumps(feed) + ");\n"
+            "for (const id of " + json.dumps(client_ids) + ") "
+            "out[id] = m.installUrlFor(id, " + json.dumps(feed) + ");\n"
             "console.log(JSON.stringify(out));\n"
         )
         with tempfile.TemporaryDirectory() as tmp:
@@ -762,8 +751,11 @@ class TestWebsiteShell(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
         from_js = json.loads(result.stdout.strip().splitlines()[-1])
         for client_id in client_ids:
-            self.assertEqual(install_url(client_id, feed), from_js[client_id],
-                             "js/modules/install.js disagrees with the builder for " + client_id)
+            self.assertEqual(
+                install_url(client_id, feed),
+                from_js[client_id],
+                "js/modules/install.js disagrees with the builder for " + client_id,
+            )
 
     def test_no_invented_client_schemes_survive(self) -> None:
         # `delta://` and `walle://` were invented in js/modules/install.js;
@@ -772,11 +764,14 @@ class TestWebsiteShell(unittest.TestCase):
             source = path.read_text(encoding="utf-8")
             for bogus in ("delta://", "walle://"):
                 self.assertNotIn(bogus, source, path.name + " still references " + bogus)
-            for real in ("esign://addsource?url=", "livecontainer://sources?url=",
-                         "altstore://source?url=", "sidestore://source?url=",
-                         "feather://source/"):
-                self.assertIn(real, source,
-                              path.name + " lost the " + real.split("://")[0] + " scheme")
+            for real in (
+                "esign://addsource?url=",
+                "livecontainer://sources?url=",
+                "altstore://source?url=",
+                "sidestore://source?url=",
+                "feather://source/",
+            ):
+                self.assertIn(real, source, path.name + " lost the " + real.split("://")[0] + " scheme")
 
 
 if __name__ == "__main__":
