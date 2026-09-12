@@ -1434,7 +1434,7 @@
       // language <select>s and the document title) need refreshing.
       window.addEventListener('i18n:changed', () => {
         this.currentLanguage = (window.OmniI18n && window.OmniI18n.language) || this.currentLanguage;
-        this.syncLanguageSelects();
+        this.syncLanguageControls();
         this._applyTitle();
       });
     },
@@ -1454,124 +1454,230 @@
       }
     },
 
+    /* Language UI.
+     *
+     * Two always-visible controls replace the old cramped <select>:
+     *
+     *   1. a globe button + dropdown in the header row (`.nav-controls`),
+     *      rendered at *every* breakpoint — the previous header copy was
+     *      hidden below 1100px, so on a phone the only way to change
+     *      language was to open the hamburger drawer and dig for it;
+     *   2. a language pill row in the home-page hero, so the choice sits
+     *      right on the main screen with nothing to open.
+     *
+     * Both drive the same setLanguage() path and are kept in step by
+     * syncLanguageControls(). Their styles live in the design system
+     * (`.lang-picker` / `.lang-menu` / `.hero-lang` in components.css)
+     * rather than an injected <style> tag, so they are themeable, survive a
+     * strict CSP and cannot flash unstyled.
+     */
     _injectUI() {
-      const style = document.createElement('style');
-      style.textContent = `
-        .language-selector {
-          position: relative;
-          flex: none;
-          min-width: 0;
-        }
-        .language-selector select {
-          height: 38px;
-          border: 1px solid var(--line);
-          background: var(--surface-solid);
-          color: var(--text);
-          border-radius: var(--radius-md);
-          padding: 0 28px 0 12px;
-          font-size: 12px;
-          cursor: pointer;
-          appearance: none;
-          -webkit-appearance: none;
-          min-width: 0;
-          max-width: 110px;
-        }
-        .language-selector::after {
-          content: '▼';
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          pointer-events: none;
-          color: var(--muted);
-          font-size: 10px;
-        }
-        .nav-lang {
-          display: none;
-          align-items: center;
-          gap: 10px;
-          padding: 12px 16px 6px;
-          margin-top: 10px;
-          border-top: 1px solid var(--line);
-        }
-        .nav-lang > span {
-          font-size: 11px;
-          font-weight: 700;
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-          color: var(--muted);
-          flex: none;
-        }
-        .nav-lang .language-selector { flex: 1 1 auto; }
-        /* Below the hamburger breakpoint the row's copy hides and the
-           menu's copy takes over — exactly one language control is ever
-           visible, and neither can overflow the nav row. */
-        @media (max-width: 1100px) {
-          .nav-controls .language-selector { display: none; }
-          .nav-links .nav-lang { display: flex; }
-        }
-      `;
-      document.head.appendChild(style);
-
-      const buildSelect = () => {
-        const select = document.createElement('select');
-        select.className = 'lang-select';
-        select.setAttribute('aria-label', 'Language');
-        // OmniI18n.apply() picks these injected nodes up by attribute, so
-        // the switcher follows the active language with no extra listeners.
-        select.setAttribute('data-i18n-aria-label', 'nav.language');
-        Object.entries(this.languages).forEach(([code, lang]) => {
-          const option = document.createElement('option');
-          option.value = code;
-          option.textContent = lang.native;
-          if (code === this.currentLanguage) option.selected = true;
-          select.appendChild(option);
-        });
-        return select;
-      };
-
-      const buildWrap = () => {
-        const wrap = document.createElement('div');
-        wrap.className = 'language-selector';
-        wrap.appendChild(buildSelect());
-        return wrap;
-      };
-
-      // Header row (visible ≥1100px, where the links are inline).
-      const navControls = document.querySelector('.nav-controls');
-      if (navControls) {
-        const wrap = buildWrap();
-        navControls.appendChild(wrap);
-        wrap.querySelector('select').addEventListener('change', (e) => {
-          this.setLanguage(e.target.value);
-        });
-      }
-
-      // Hamburger menu (visible <1100px, where the row is tight on phones).
-      const navLinks = document.querySelector('.nav-links');
-      if (navLinks) {
-        const row = document.createElement('div');
-        row.className = 'nav-lang';
-        const label = document.createElement('span');
-        label.textContent = 'Language';
-        label.setAttribute('data-i18n', 'nav.language');
-        const wrap = buildWrap();
-        row.appendChild(label);
-        row.appendChild(wrap);
-        navLinks.appendChild(row);
-        wrap.querySelector('select').addEventListener('change', (e) => {
-          this.setLanguage(e.target.value);
-          if (OS.closeNav) OS.closeNav();
-        });
-      }
-
-      this.syncLanguageSelects();
+      this._buildHeaderPicker();
+      this._buildHeroPicker();
+      this._bindDismissal();
+      this.syncLanguageControls();
     },
 
-    syncLanguageSelects() {
-      document.querySelectorAll('.lang-select').forEach((select) => {
-        select.value = this.currentLanguage;
+    _globeSvg() {
+      return '<svg class="icon-globe" aria-hidden="true" viewBox="0 0 24 24">' +
+        '<circle cx="12" cy="12" r="9"/><path d="M3.2 12h17.6"/>' +
+        '<path d="M12 3.2c2.4 2.4 3.7 5.5 3.7 8.8s-1.3 6.4-3.7 8.8c-2.4-2.4-3.7-5.5-3.7-8.8S9.6 5.6 12 3.2Z"/>' +
+        '</svg>';
+    },
+
+    _buildHeaderPicker() {
+      const controls = document.querySelector('.nav-controls');
+      if (!controls || controls.querySelector('[data-lang-picker]')) return;
+
+      const picker = document.createElement('div');
+      picker.className = 'lang-picker';
+      picker.setAttribute('data-lang-picker', '');
+
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.id = 'langToggle';
+      toggle.className = 'icon-button lang-toggle';
+      toggle.setAttribute('aria-haspopup', 'listbox');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.innerHTML = this._globeSvg() + '<span class="lang-code">EN</span>';
+
+      const menu = document.createElement('div');
+      menu.className = 'lang-menu';
+      menu.id = 'langMenu';
+      menu.setAttribute('role', 'listbox');
+      menu.setAttribute('data-i18n-aria-label', 'nav.language');
+      menu.setAttribute('tabindex', '-1');
+      menu.hidden = true;
+      toggle.setAttribute('aria-controls', menu.id);
+
+      Object.entries(this.languages).forEach(([code, lang]) => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'lang-option';
+        option.setAttribute('role', 'option');
+        option.setAttribute('aria-selected', 'false');
+        option.setAttribute('data-lang', code);
+        // textContent, never innerHTML: native language names are exactly the
+        // kind of string that must not be parsed as markup.
+        const native = document.createElement('span');
+        native.className = 'lang-native';
+        native.textContent = lang.native;
+        const name = document.createElement('span');
+        name.className = 'lang-name';
+        name.textContent = lang.name;
+        option.appendChild(native);
+        option.appendChild(name);
+        option.addEventListener('click', () => {
+          this.setLanguage(code);
+          this._closeMenu(true);
+        });
+        menu.appendChild(option);
       });
+
+      toggle.addEventListener('click', (event) => {
+        // Stop the document-level dismissal handler (bound below) from
+        // immediately re-closing what this click just opened.
+        event.stopPropagation();
+        if (menu.hidden) this._openMenu(); else this._closeMenu(true);
+      });
+      toggle.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+          event.preventDefault();
+          this._openMenu();
+        }
+      });
+      menu.addEventListener('keydown', (event) => this._menuKeys(event));
+
+      picker.appendChild(toggle);
+      picker.appendChild(menu);
+      controls.appendChild(picker);
+      this._toggle = toggle;
+      this._menu = menu;
+    },
+
+    /* Home-page hero pill row — the "main screen" copy of the switcher. */
+    _buildHeroPicker() {
+      if (!document.body || document.body.dataset.page !== 'home') return;
+      const hero = document.querySelector('.hero-inner') || document.querySelector('.hero');
+      if (!hero || hero.querySelector('[data-hero-lang]')) return;
+
+      const row = document.createElement('div');
+      row.className = 'hero-lang';
+      row.setAttribute('data-hero-lang', '');
+      row.setAttribute('role', 'group');
+      row.setAttribute('data-i18n-aria-label', 'nav.language');
+
+      const label = document.createElement('span');
+      label.className = 'hero-lang-label';
+      label.innerHTML = this._globeSvg();
+      const labelText = document.createElement('span');
+      labelText.setAttribute('data-i18n', 'nav.language');
+      labelText.textContent = 'Language';
+      label.appendChild(labelText);
+
+      const options = document.createElement('div');
+      options.className = 'hero-lang-options';
+      Object.entries(this.languages).forEach(([code, lang]) => {
+        const pill = document.createElement('button');
+        pill.type = 'button';
+        pill.className = 'lang-pill';
+        pill.setAttribute('data-lang', code);
+        pill.setAttribute('aria-pressed', 'false');
+        pill.setAttribute('title', lang.name);
+        pill.textContent = lang.native;
+        pill.addEventListener('click', () => this.setLanguage(code));
+        options.appendChild(pill);
+      });
+
+      row.appendChild(label);
+      row.appendChild(options);
+      // Between the calls to action and the search bar: on the first screen,
+      // without competing with the headline.
+      const anchor = hero.querySelector('.hero-search') || hero.querySelector('.source-box');
+      if (anchor) hero.insertBefore(row, anchor); else hero.appendChild(row);
+    },
+
+    _openMenu() {
+      const menu = this._menu;
+      const toggle = this._toggle;
+      if (!menu || !toggle) return;
+      menu.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      const picker = toggle.closest('.lang-picker');
+      if (picker) picker.classList.add('is-open');
+      const active = menu.querySelector('[aria-selected="true"]') || menu.firstElementChild;
+      if (active && active.focus) active.focus();
+    },
+
+    _closeMenu(refocus) {
+      const menu = this._menu;
+      const toggle = this._toggle;
+      if (!menu || menu.hidden) return;
+      menu.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      const picker = toggle.closest('.lang-picker');
+      if (picker) picker.classList.remove('is-open');
+      if (refocus && toggle.focus) toggle.focus();
+    },
+
+    _menuKeys(event) {
+      const menu = this._menu;
+      if (!menu) return;
+      const options = Array.prototype.slice.call(menu.querySelectorAll('.lang-option'));
+      if (!options.length) return;
+      const index = options.indexOf(document.activeElement);
+      const key = event.key;
+      if (key === 'Escape') { event.preventDefault(); this._closeMenu(true); return; }
+      if (key === 'Tab') { this._closeMenu(false); return; }
+      if (key === 'ArrowDown') { event.preventDefault(); options[(index + 1) % options.length].focus(); return; }
+      if (key === 'ArrowUp') { event.preventDefault(); options[(index - 1 + options.length) % options.length].focus(); return; }
+      if (key === 'Home') { event.preventDefault(); options[0].focus(); return; }
+      if (key === 'End') { event.preventDefault(); options[options.length - 1].focus(); }
+    },
+
+    _bindDismissal() {
+      document.addEventListener('click', (event) => {
+        const picker = this._toggle && this._toggle.closest('.lang-picker');
+        if (picker && !picker.contains(event.target)) this._closeMenu(false);
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') this._closeMenu(false);
+      });
+      window.addEventListener('resize', () => this._closeMenu(false), { passive: true });
+    },
+
+    /* Keep every language control in step with the active locale. */
+    syncLanguageControls() {
+      const current = this.currentLanguage;
+      const meta = this.languages[current] || this.languages.en;
+      document.querySelectorAll('.lang-option').forEach((option) => {
+        const on = option.getAttribute('data-lang') === current;
+        option.setAttribute('aria-selected', String(on));
+        option.classList.toggle('is-active', on);
+      });
+      document.querySelectorAll('.lang-pill').forEach((pill) => {
+        const on = pill.getAttribute('data-lang') === current;
+        pill.setAttribute('aria-pressed', String(on));
+        pill.classList.toggle('is-active', on);
+      });
+      document.querySelectorAll('.lang-code').forEach((node) => {
+        node.textContent = String(current).toUpperCase();
+      });
+      if (this._toggle) {
+        // Set by hand rather than data-i18n-aria-label so the label can carry
+        // the active language: OmniI18n.apply() would flatten it to just
+        // "Language" on every pass.
+        const base = this.t('nav.language');
+        const text = (base === 'nav.language' ? 'Language' : base) + ': ' + meta.native;
+        this._toggle.setAttribute('aria-label', text);
+        this._toggle.title = text;
+      }
+      document.documentElement.setAttribute('data-language', current);
+    },
+
+    /* Back-compat alias: earlier revisions exposed syncLanguageSelects(). */
+    syncLanguageSelects() {
+      this.syncLanguageControls();
     },
 
     setLanguage(code) {
@@ -1580,7 +1686,7 @@
       if (!this.languages[code]) return;
       this.currentLanguage = code;
       Storage.set(this.STORAGE_KEY, code);
-      this.syncLanguageSelects();
+      this.syncLanguageControls();
       if (window.OmniI18n && window.OmniI18n.setLanguage) {
         // setLanguage re-applies the page itself and emits i18n:changed,
         // which this module listens for (see init) to finish the update.
@@ -1635,90 +1741,66 @@
   // TOAST NOTIFICATIONS (Utility)
   // ============================================================================
 
+  /* Toasts.
+   *
+   * js/core.js already owns a working implementation: one shared #toast node
+   * revealed by adding `.show` (components.css ships `.toast` at opacity 0
+   * and `.toast.show` at opacity 1). This module used to overwrite OS.toast
+   * with its own renderer, which appended `<div class="toast">` nodes to a
+   * #toast-container and relied on an inline `slideIn` animation to make
+   * them visible. Because the shared `.toast` rule sets `opacity: 0` and the
+   * inline style never overrode it — and a CSS animation without
+   * `animation-fill-mode` snaps back to the base value the instant it ends —
+   * every toast on the site was invisible: copy confirmations, "Saved for
+   * later", ratings, the PWA install notice and the service-worker update
+   * notice all fired and showed nothing.
+   *
+   * So: delegate to core.js whenever it is present, and keep a standalone
+   * fallback (for embeds that ship features.js without core.js) that drives
+   * the exact same `.toast` / `.toast.show` contract instead of inventing a
+   * second, invisible one.
+   */
+  const coreToast = typeof OS.toast === 'function' ? OS.toast.bind(OS) : null;
+
   const Toast = {
     init() {
-      this._injectContainer();
-    },
-
-    _injectContainer() {
-      if (document.getElementById('toast-container')) return;
-
-      const container = document.createElement('div');
-      container.id = 'toast-container';
-      container.style.cssText = `
-        position: fixed;
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 2000;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        pointer-events: none;
-      `;
-      document.body.appendChild(container);
+      // Nothing to inject: the shared #toast node is created on demand by
+      // whichever implementation runs (core.js, or _fallback below).
     },
 
     show(message, options = {}) {
-      const { duration = 3000, type = 'default' } = options;
+      if (message == null || message === '') return null;
+      if (coreToast) return coreToast(String(message));
+      return Toast._fallback(String(message), options);
+    },
 
-      const toast = document.createElement('div');
-      toast.className = `toast ${type}`;
-      toast.textContent = message;
-      toast.style.cssText = `
-        background: var(--surface-solid);
-        color: var(--text);
-        border: 1px solid var(--line);
-        border-radius: var(--radius-pill);
-        padding: 12px 20px;
-        font-size: 13px;
-        font-weight: 600;
-        box-shadow: var(--shadow-lg);
-        pointer-events: auto;
-        animation: slideIn 0.3s ease-out;
-        ${type === 'success' ? 'border-color: var(--green);' : ''}
-        ${type === 'error' ? 'border-color: var(--red);' : ''}
-        ${type === 'warning' ? 'border-color: var(--amber);' : ''}
-      `;
-
-      const container = document.getElementById('toast-container');
-      container.appendChild(toast);
-
-      // Auto-remove
-      setTimeout(() => {
-        toast.style.animation = 'slideOut 0.3s ease-out';
-        setTimeout(() => toast.remove(), 300);
-      }, duration);
-
-      return toast;
+    /** Standalone renderer, used only when js/core.js is not on the page. */
+    _fallback(message, options = {}) {
+      const duration = options.duration || 2600;
+      let node = document.getElementById('toast');
+      if (!node) {
+        node = document.createElement('div');
+        node.className = 'toast';
+        node.id = 'toast';
+        node.setAttribute('role', 'status');
+        node.setAttribute('aria-live', 'polite');
+        node.innerHTML =
+          '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span></span>';
+        document.body.appendChild(node);
+      }
+      const label = node.querySelector('span');
+      if (label) label.textContent = message;
+      node.classList.add('show');
+      clearTimeout(Toast._timer);
+      Toast._timer = setTimeout(() => node.classList.remove('show'), duration);
+      return node;
     }
   };
 
-  // Add toast animation styles
-  const toastStyles = document.createElement('style');
-  toastStyles.textContent = `
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(16px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes slideOut {
-      from {
-        opacity: 1;
-        transform: translateY(0);
-      }
-      to {
-        opacity: 0;
-        transform: translateY(-16px);
-      }
-    }
-  `;
-  document.head.appendChild(toastStyles);
+  // The slideIn/slideOut keyframes this module used to inject are gone: the
+  // shared `.toast` / `.toast.show` rules in components.css (with the
+  // `os-toast-in` keyframe) are now the only toast animation, so there is
+  // exactly one source of truth for it.
 
   // ============================================================================
   // INITIALIZE ALL FEATURES
@@ -1727,7 +1809,10 @@
   const init = () => {
     // Initialize utilities
     Toast.init();
-    OS.toast = Toast.show;
+    // Only claim OS.toast when core.js did not already provide one; the
+    // delegate above keeps `OS.toast(msg)` working either way and never
+    // shadows the shared #toast renderer the stylesheet is built for.
+    if (!coreToast) OS.toast = Toast.show;
 
     // Initialize features
     Favorites.init();

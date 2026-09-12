@@ -742,6 +742,12 @@
     update();
   }
 
+  /* Width at or below which the header collapses into the glass drawer.
+     Keep in sync with the `@media (max-width: 1180px)` nav rules in
+     assets/design-system/components.css — setupNavFit() below uses it to
+     know when the inline row (and its overflow guard) is off duty. */
+  var NAV_DRAWER_WIDTH = 1180;
+
   /* Mobile glass drawer. Injected so generated app pages get it for free. */
   function setupMobileNav() {
     var nav = $('.site-header .nav') || $('.ap-header-inner');
@@ -781,13 +787,13 @@
       document.body.classList.remove('nav-open');
       btn.setAttribute('aria-expanded', 'false');
       btn.setAttribute('aria-label', 'Open menu');
-      if (window.innerWidth > 1100) moreMenus.forEach(function (d) { d.open = false; });
+      if (window.innerWidth > NAV_DRAWER_WIDTH) moreMenus.forEach(function (d) { d.open = false; });
     }
     function openNav() {
       document.body.classList.add('nav-open');
       btn.setAttribute('aria-expanded', 'true');
       btn.setAttribute('aria-label', 'Close menu');
-      if (window.innerWidth <= 1100) moreMenus.forEach(function (d) { d.open = true; });
+      if (window.innerWidth <= NAV_DRAWER_WIDTH) moreMenus.forEach(function (d) { d.open = true; });
     }
     btn.addEventListener('click', function () {
       document.body.classList.contains('nav-open') ? closeNav() : openNav();
@@ -798,7 +804,7 @@
     });
     // Desktop: close the "More" menu when clicking/tapping outside of it.
     document.addEventListener('click', function (event) {
-      if (window.innerWidth <= 1100) return;
+      if (window.innerWidth <= NAV_DRAWER_WIDTH) return;
       moreMenus.forEach(function (details) {
         if (details.open && !details.contains(event.target)) details.open = false;
       });
@@ -810,27 +816,126 @@
       if (event.key === 'Escape') closeNav();
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth > 1100) closeNav();
+      if (window.innerWidth > NAV_DRAWER_WIDTH) closeNav();
     });
     OS.closeNav = closeNav;
   }
 
-  /* Install prompt (beforeinstallprompt) — the browser hands us the moment. */
+  /* Nav fit guard.
+     Labels are never ellipsized (see `.nav-links a` in components.css), so
+     something has to give when a row runs out of room — a wide locale
+     (German "Sammlungen", Japanese "コレクション"), browser zoom, a large-text
+     setting or the install pill appearing can all do it. Instead of clipping
+     text we park the trailing links inside the "More" menu that is already
+     there, and bring them back the moment room returns. Below the drawer
+     breakpoint the guard stands down: the drawer lists every link. */
+  function setupNavFit() {
+    $$('.site-header .nav, .ap-header-inner').forEach(fitOneNav);
+  }
+
+  function fitOneNav(nav) {
+    var wrap = nav.querySelector('.nav-links');
+    if (!wrap || wrap.dataset.navFit === '1') return;
+    var more = wrap.querySelector('.nav-more');
+    var menu = more && more.querySelector('.nav-menu');
+    if (!more || !menu) return;
+    wrap.dataset.navFit = '1';
+
+    // The collapsible labels are the direct <a> children that sit before the
+    // "More" control. Captured once so a parked link can never be lost.
+    var pool = [];
+    Array.prototype.forEach.call(wrap.children, function (node) {
+      if (node.tagName === 'A') pool.push(node);
+    });
+    if (!pool.length) return;
+
+    // Parked links go at the top of the menu, above its static entries.
+    var anchor = menu.firstElementChild;
+    var parked = 0;
+
+    function layout(n) {
+      if (n === parked) return;
+      parked = n;
+      pool.forEach(function (link) { wrap.insertBefore(link, more); });
+      pool.slice(pool.length - n).forEach(function (link) { menu.insertBefore(link, anchor); });
+      wrap.classList.toggle('has-parked', n > 0);
+    }
+
+    function overflows() {
+      // scrollWidth reports overflowing content even with overflow:hidden,
+      // which is exactly the signal we need; the nav itself is checked too so
+      // a wide controls group is caught as well.
+      return (wrap.scrollWidth - wrap.clientWidth > 1) || (nav.scrollWidth - nav.clientWidth > 1);
+    }
+
+    function sync() {
+      if (window.innerWidth <= NAV_DRAWER_WIDTH || document.body.classList.contains('nav-open')) {
+        layout(0); // the drawer shows every link, so nothing stays parked
+        return;
+      }
+      layout(0);
+      var n = 0;
+      // Keep at least "Home" in the row; everything else can live in "More".
+      while (overflows() && n < pool.length - 1) { n += 1; layout(n); }
+    }
+
+    var frame = 0;
+    function schedule() {
+      if (frame) return;
+      frame = window.requestAnimationFrame(function () { frame = 0; sync(); });
+    }
+
+    window.addEventListener('resize', schedule, { passive: true });
+    // Translated labels change width, so re-measure on every language switch.
+    window.addEventListener('i18n:changed', schedule);
+    if (OS.on) OS.on('language:changed', schedule);
+    // Web fonts land after first paint and shift every measurement.
+    if (document.fonts && document.fonts.ready && document.fonts.ready.then) {
+      document.fonts.ready.then(schedule, function () { /* ignore */ });
+    }
+    sync();
+    OS.syncNavFit = schedule;
+  }
+
+  /* Install button.
+     `beforeinstallprompt` is Chromium-only: it never fires on iOS Safari or
+     Firefox, which between them are most of this site's audience. Waiting for
+     it meant the header's Install button stayed at `display: none` forever on
+     exactly the devices the catalog is for. So the button is revealed at boot
+     and bound once — when the browser does hand us a native prompt we use it,
+     otherwise the button opens the installation center, which is the real
+     answer for a sideloading source (pick a client, add the feed). */
   var installEvent = null;
+
+  function setupInstallPrompt() {
+    var btn = document.querySelector('.install-prompt');
+    if (!btn || btn.dataset.bound === '1') return;
+    btn.dataset.bound = '1';
+    btn.classList.add('is-visible');
+    btn.addEventListener('click', function () {
+      if (installEvent) {
+        installEvent.prompt();
+        if (installEvent.userChoice && installEvent.userChoice.then) {
+          installEvent.userChoice.then(function (choice) {
+            if (choice && choice.outcome === 'accepted') OS.toast('OmniSource installed');
+            installEvent = null;
+          }, function () { installEvent = null; });
+        }
+        return;
+      }
+      location.href = url('install/');
+    });
+  }
+
   window.addEventListener('beforeinstallprompt', function (event) {
     event.preventDefault();
     installEvent = event;
     var btn = document.querySelector('.install-prompt');
     if (btn) {
       btn.classList.add('is-visible');
-      btn.addEventListener('click', function () {
-        installEvent.prompt();
-        installEvent.userChoice.then(function (choice) {
-          if (choice.outcome === 'accepted') OS.toast('OmniSource installed');
-          btn.classList.remove('is-visible');
-          installEvent = null;
-        });
-      });
+      // Bound once at boot; this only refreshes the affordance's label so a
+      // native install is offered instead of navigating.
+      btn.setAttribute('data-native-install', '1');
     }
   });
 
@@ -1035,6 +1140,8 @@
     setupQrButton();
     setupHeaderState();
     setupMobileNav();
+    setupNavFit();
+    setupInstallPrompt();
     setupDeferredAnchors();
     setupReveal();
     setupCounts();

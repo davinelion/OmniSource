@@ -59,7 +59,7 @@ class TestWebsiteShell(unittest.TestCase):
 
     def test_service_worker_version(self) -> None:
         sw = (ROOT / "sw.js").read_text(encoding="utf-8")
-        self.assertIn("omnisource-v11", sw)
+        self.assertIn("omnisource-v12", sw)
         # The shell precaches the lightweight WebP logo; the PNG stays for
         # favicons, feed iconURLs and non-WebP fallbacks only.
         self.assertIn("'./assets/OmniSource.webp'", sw)
@@ -72,6 +72,18 @@ class TestWebsiteShell(unittest.TestCase):
         self.assertIn("docs/index.html", sw)
         self.assertIn("js/modules/utils.js", sw)
         self.assertIn("js/modules/sources.js", sw)
+        # v12 closed the gaps: the v11 comment claimed all twelve modules were
+        # precached when only five were, and AssetManager.js (loaded by every
+        # page for icon fallbacks), /translation-status/ and the placeholder
+        # artwork were missing entirely — those pages broke on an offline
+        # reload. tests/test_service_worker.py asserts the list against disk.
+        for module in ("analytics", "collections", "compare", "favorites",
+                       "install", "pwa", "store"):
+            self.assertIn("js/modules/" + module + ".js", sw,
+                          module + " module is not precached")
+        self.assertIn("website/assets/AssetManager.js", sw)
+        self.assertIn("translation-status/index.html", sw)
+        self.assertIn("assets/placeholders/app.svg", sw)
 
     def test_homepage_stat_markers(self) -> None:
         # The site builder (site._inject_homepage_stats) rewrites these
@@ -259,25 +271,115 @@ class TestWebsiteShell(unittest.TestCase):
             shutil.rmtree(tmp, ignore_errors=True)
 
     def test_nav_never_pushes_controls_off_page(self) -> None:
-        # The header row is wider than the 1200px shell on desktops (11
-        # links + controls); the nav links must absorb the squeeze so the
-        # controls (search/theme/install/language) always stay on-page.
+        # The header row is wider than the 1200px shell on desktops (7 links
+        # + controls). The links absorb the squeeze by *relocating* into the
+        # "More" menu (js/core.js setupNavFit), never by clipping their text,
+        # so the controls stay on-page AND every label stays readable.
         css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
         self.assertRegex(css, r"\.nav-links \{[^}]*flex: 0 1 auto;[^}]*min-width: 0;")
-        self.assertRegex(css, r"\.nav-links a \{[^}]*text-overflow: ellipsis;")
         self.assertRegex(css, r"\.nav-controls \{[^}]*flex: none;")
         self.assertIn("@media (max-width: 560px)", css)
         self.assertIn("@media (max-width: 430px)", css)
 
-    def test_language_selector_has_a_home_at_every_breakpoint(self) -> None:
-        # features.js renders the language switcher in the header row AND in
-        # the hamburger menu; the CSS swap keeps exactly one visible so it
-        # can never overflow the row (it used to sit past the page edge).
+    def test_nav_labels_are_never_truncated(self) -> None:
+        # Regression: `.nav-links a` carried `overflow: hidden` +
+        # `text-overflow: ellipsis` with `min-width: 0`, so the row squeezed
+        # the labels and the header read "Apps / Collec… / Sour… / Stat…".
+        # Every translation is wider than the English (German "Sammlungen",
+        # Spanish "Colecciones", Japanese "コレクション"), so the clipping was
+        # worst immediately after a language switch.
+        css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
+        rules = re.findall(r"([^{}]*\.nav-links a[^{}]*)\{([^{}]*)\}", css)
+        self.assertTrue(rules, "no .nav-links a rules found at all")
+        for selector, body in rules:
+            self.assertNotIn("text-overflow: ellipsis", body,
+                             selector.strip() + " still ellipsizes nav labels")
+        # The two structural rules pin each link to its natural width so the
+        # overflow guard — not the box model — decides what fits.
+        for selector in (".nav-links a", ".ap-header-inner .nav-links a"):
+            body = re.search(re.escape(selector) + r" \{([^{}]*)\}", css)
+            self.assertIsNotNone(body, selector + " rule disappeared")
+            self.assertRegex(body.group(1), r"flex: none;",
+                             selector + " must not shrink below its label")
+        # And the guard itself must exist and run.
+        core = (ROOT / "js" / "core.js").read_text(encoding="utf-8")
+        self.assertIn("function setupNavFit()", core)
+        self.assertIn("setupNavFit();", core, "the guard must run at boot")
+        self.assertRegex(core, r"addEventListener\('i18n:changed', schedule\)",
+                         "translated labels change width, so re-measure on switch")
+
+    def test_nav_drawer_breakpoint_matches_css(self) -> None:
+        # core.js decides when the drawer owns the links; components.css
+        # decides when it is *styled*. They drifted apart once already
+        # (1100 in JS vs 1180 in CSS), so pin them to the same number.
+        core = (ROOT / "js" / "core.js").read_text(encoding="utf-8")
+        css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
+        js_bp = re.search(r"var NAV_DRAWER_WIDTH = (\d+);", core)
+        self.assertIsNotNone(js_bp, "NAV_DRAWER_WIDTH constant missing from core.js")
+        self.assertNotRegex(core, r"window\.innerWidth [<>]=? 1100",
+                            "stale hardcoded breakpoint in core.js")
+        self.assertIn("@media (max-width: " + js_bp.group(1) + "px)", css)
+        self.assertIn(".nav-toggle { display: grid; }", css)
+
+    def test_language_switcher_is_on_the_main_screen(self) -> None:
+        # The switcher used to be a <select> that injected CSS hid below the
+        # drawer breakpoint, so on a phone the only copy lived inside the
+        # hamburger menu. It is now a globe button in `.nav-controls` that
+        # renders at *every* breakpoint, plus a pill row in the home-page
+        # hero, so changing language never requires opening a menu.
         features = (ROOT / "js" / "features.js").read_text(encoding="utf-8")
-        self.assertIn("nav-lang", features)
-        self.assertIn(".nav-controls .language-selector { display: none; }", features)
-        self.assertIn(".nav-links .nav-lang { display: flex; }", features)
-        self.assertIn("syncLanguageSelects", features)
+        self.assertIn("_buildHeaderPicker()", features)
+        self.assertIn("_buildHeroPicker()", features)
+        self.assertIn("syncLanguageControls()", features)
+        for marker in ("lang-picker", "lang-toggle", "hero-lang", "lang-pill"):
+            self.assertIn(marker, features)
+        # The old drawer-only copy and its hide-rule must stay gone.
+        self.assertNotIn(".nav-controls .language-selector { display: none; }", features)
+        self.assertNotIn("nav-lang", features)
+        # ARIA contract for the dropdown.
+        self.assertIn("aria-haspopup', 'listbox'", features)
+        self.assertIn("role', 'option'", features)
+        self.assertIn("aria-selected", features)
+
+        css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
+        for selector in (".lang-picker", ".lang-toggle", ".lang-menu",
+                         ".lang-option", ".hero-lang", ".lang-pill"):
+            self.assertIn(selector, css, selector + " is not styled by the design system")
+        self.assertIn(".lang-menu[hidden] { display: none; }", css)
+        # On narrow screens the header button drops its two-letter code but
+        # must never disappear.
+        self.assertRegex(
+            css,
+            r"@media \(max-width: 560px\) \{[^}]*\.lang-toggle \.lang-code \{ display: none; \}")
+        self.assertNotIn(".lang-picker { display: none", css)
+
+    def test_language_switcher_covers_every_supported_locale(self) -> None:
+        # The picker must offer exactly the locales src/js/i18n.js can load;
+        # otherwise a language appears in one list and 404s in the other.
+        features = (ROOT / "js" / "features.js").read_text(encoding="utf-8")
+        i18n = (ROOT / "src" / "js" / "i18n.js").read_text(encoding="utf-8")
+        picker = set(re.findall(r"^\s{6}(\w\w): \{ name: '", features, re.M))
+        runtime = set(re.findall(
+            r"'(\w\w)'", re.search(r"var supported = \[(.*?)\];", i18n, re.S).group(1)))
+        bundles = {path.stem for path in (ROOT / "locales").glob("*.json")}
+        self.assertTrue(picker, "no languages found in the picker table")
+        self.assertEqual(picker, runtime, "picker languages != i18n runtime languages")
+        self.assertEqual(picker, bundles, "picker languages != locales/*.json bundles")
+
+    def test_install_button_does_not_wait_for_beforeinstallprompt(self) -> None:
+        # `beforeinstallprompt` is Chromium-only: it never fires on iOS Safari
+        # or Firefox. The button was `display: none` until that event, so on
+        # exactly the devices this catalog is for it never appeared at all.
+        core = (ROOT / "js" / "core.js").read_text(encoding="utf-8")
+        self.assertIn("function setupInstallPrompt()", core)
+        self.assertIn("setupInstallPrompt();", core, "the button must be revealed at boot")
+        self.assertIn("classList.add('is-visible')", core)
+        # …and when no native prompt exists it must go somewhere useful
+        # rather than being a dead button.
+        self.assertIn("location.href = url('install/')", core)
+        # Bound once: beforeinstallprompt can fire repeatedly and used to
+        # stack a new click listener each time.
+        self.assertRegex(core, r"btn\.dataset\.bound === '1'")
 
     def test_os_search_engine_is_not_shadowed_by_features(self) -> None:
         # js/core.js publishes the search *engine* as OS.Search and js/site.js
@@ -393,7 +495,7 @@ class TestWebsiteShell(unittest.TestCase):
         css = (ROOT / "assets" / "design-system" / "components.css").read_text(encoding="utf-8")
         self.assertIn("LIQUID GLASS layer", css)
         self.assertIn(".nav-toggle", css)
-        self.assertIn("@media (max-width: 1100px)", css)
+        self.assertIn("@media (max-width: 1180px)", css)
         self.assertIn("var(--glass-nav)", css)
 
     # -- regressions from the website audit ---------------------------------
@@ -579,6 +681,102 @@ class TestWebsiteShell(unittest.TestCase):
 
         # …and it must not treat an unrelated tag as a script element.
         self.assertEqual(bodies("<scriptx>var c = 3;</scriptx>"), [])
+
+    # -- client deep links --------------------------------------------------
+    # Three tables described the same five clients and disagreed with each
+    # other, which is why ESign and LiveContainer behaved differently from
+    # the AltStore/SideStore links the user compared them against.
+
+    def _js_scheme_table(self, path: Path) -> dict[str, str]:
+        source = path.read_text(encoding="utf-8")
+        # install.js wraps its table in Object.freeze({...}) and site.js keeps
+        # its copy inside an IIFE, so rather than guessing brace depth, pick
+        # out the lines that are literally `key: 'scheme://template'`.
+        self.assertIn("CLIENT_SCHEMES", source,
+                      "CLIENT_SCHEMES table missing from " + path.name)
+        entries = re.findall(
+            r"^\s+(\w+): '([a-z][a-z0-9+.-]*://[^']*)',?\s*$", source, re.M)
+        self.assertTrue(entries, "no scheme entries found in " + path.name)
+        return dict(entries)
+
+    def test_js_scheme_tables_match_the_builder(self) -> None:
+        from omnisource.install import CLIENT_PROFILES
+
+        # Compare the scheme *prefix* rather than the whole template: the
+        # builder spells Feather's argument `{host}{path}` while the JS uses a
+        # single `{hostpath}`, and both resolve to the same URL. What matters
+        # is that a tap produces the same deep link the client recognises.
+        expected = {
+            cid: profile["scheme"].split("{", 1)[0]
+            for cid, profile in CLIENT_PROFILES.items()
+        }
+        self.assertEqual(
+            {"altstore", "sidestore", "feather", "esign", "livecontainer"},
+            set(expected), "builder gained/lost a client; update this test too")
+        for path in (ROOT / "js" / "modules" / "install.js", ROOT / "js" / "site.js"):
+            got = {cid: scheme.split("{", 1)[0]
+                   for cid, scheme in self._js_scheme_table(path).items()}
+            self.assertEqual(expected, got,
+                             path.name + " disagrees with omnisource.install")
+
+    def test_deep_link_query_is_not_fully_percent_encoded(self) -> None:
+        # The generated pages keep the feed URL raw in the query; the browser
+        # copies used `encodeURIComponent`, which produced
+        # `esign://addsource?url=https%3A%2F%2F…`. Clients that parse the
+        # query naively reject that. Both copies must now use the narrow
+        # encoder that only escapes what would break the link or its href.
+        for path in (ROOT / "js" / "modules" / "install.js", ROOT / "js" / "site.js"):
+            source = path.read_text(encoding="utf-8")
+            self.assertIn("encodeFeedParam", source,
+                          path.name + " lost the narrow feed-URL encoder")
+            self.assertRegex(
+                source, r"replace\(/\[\"<>#&\\s\]/g",
+                path.name + " must escape only quote/angle/hash/ampersand/space")
+            # …and must not blanket-encode the feed URL any more.
+            self.assertNotIn("encodeURIComponent(url)", source)
+            self.assertNotIn("encodeURIComponent(feedUrl)", source)
+
+    def test_module_deep_links_execute_identically_to_the_builder(self) -> None:
+        # String comparison above can pass while the code still produces
+        # something else, so actually run the module and diff the output.
+        node = shutil.which("node")
+        if not node:
+            self.skipTest("node is not installed")
+        import json
+
+        from omnisource.install import CLIENT_PROFILES, install_url
+
+        client_ids = sorted(CLIENT_PROFILES)
+        feed = "https://example.org/OmniSource/feeds/apollo.json"
+        harness = (
+            "globalThis.window = { OS: { url: (p) => 'https://example.org/OmniSource/' + p } };\n"
+            "const m = await import(" + json.dumps(str(ROOT / "js" / "modules" / "install.js")) + ");\n"
+            "const out = {};\n"
+            "for (const id of " + json.dumps(client_ids) + ") out[id] = m.installUrlFor(id, " + json.dumps(feed) + ");\n"
+            "console.log(JSON.stringify(out));\n"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            script = Path(tmp) / "schemes.mjs"
+            script.write_text(harness, encoding="utf-8")
+            result = subprocess.run([node, str(script)], capture_output=True, text=True)
+        self.assertEqual(0, result.returncode, result.stderr)
+        from_js = json.loads(result.stdout.strip().splitlines()[-1])
+        for client_id in client_ids:
+            self.assertEqual(install_url(client_id, feed), from_js[client_id],
+                             "js/modules/install.js disagrees with the builder for " + client_id)
+
+    def test_no_invented_client_schemes_survive(self) -> None:
+        # `delta://` and `walle://` were invented in js/modules/install.js;
+        # no such install scheme exists and those buttons dead-ended.
+        for path in (ROOT / "js" / "site.js", ROOT / "js" / "modules" / "install.js"):
+            source = path.read_text(encoding="utf-8")
+            for bogus in ("delta://", "walle://"):
+                self.assertNotIn(bogus, source, path.name + " still references " + bogus)
+            for real in ("esign://addsource?url=", "livecontainer://sources?url=",
+                         "altstore://source?url=", "sidestore://source?url=",
+                         "feather://source/"):
+                self.assertIn(real, source,
+                              path.name + " lost the " + real.split("://")[0] + " scheme")
 
 
 if __name__ == "__main__":

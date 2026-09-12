@@ -56,11 +56,17 @@
 'use strict';
 
 // omnisource-v9/v10 compatibility markers: older smoke-test clients may
-// still inspect these while upgrading to the v11 cache schema.
+// still inspect these while upgrading to the v12 cache schema.
 // v11: Source Explorer (sources/ pages), docs hub, and the js/modules/*
 // ES-module layer (utils/search/status/theme/sources/favorites/analytics/
 // compare/install/pwa/collections/store).
-const VERSION = 'omnisource-v11';
+// v12: the shell list was incomplete — the v11 comment claimed all twelve
+// js/modules/* files were precached but only five were, and
+// website/assets/AssetManager.js (loaded by *every* page for icon
+// fallbacks), /translation-status/ and the placeholder artwork were missing
+// entirely. Those pages therefore broke on an offline reload. The list is
+// now asserted against the filesystem by tests/test_service_worker.py.
+const VERSION = 'omnisource-v12';
 const CORE_CACHE = `${VERSION}-core`;
 const DATA_CACHE = `${VERSION}-data`;
 const ASSET_CACHE = `${VERSION}-assets`;
@@ -80,12 +86,21 @@ const CORE_ASSETS = [
   './collections/index.html',
   './sources/index.html',
   './docs/index.html',
+  './translation-status/index.html',
   './js/modules/utils.js',
   './js/modules/search.js',
   './js/modules/status.js',
   './js/modules/theme.js',
   './js/modules/sources.js',
   './js/modules/pwa.js',
+  './js/modules/analytics.js',
+  './js/modules/collections.js',
+  './js/modules/compare.js',
+  './js/modules/favorites.js',
+  './js/modules/install.js',
+  './js/modules/pwa.js',
+  './js/modules/store.js',
+  './website/assets/AssetManager.js',
   './manifest.webmanifest',
   './assets/design-system/tokens.css',
   './assets/design-system/utilities.css',
@@ -101,6 +116,9 @@ const CORE_ASSETS = [
   './js/site.js',
   './js/features.js',
   './assets/OmniSource.webp',
+  './assets/placeholders/app.svg',
+  './assets/placeholders/category.svg',
+  './assets/placeholders/banner.svg',
   './src/js/i18n.js',
   './locales/en.json', './locales/es.json', './locales/fr.json', './locales/de.json',
   './locales/ar.json', './locales/bn.json', './locales/zh.json', './locales/ja.json'

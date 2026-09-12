@@ -359,13 +359,38 @@
     };
   }
 
+  /* Percent-encode only what would break the link or the attribute it lives
+     in (a quote or angle bracket ends the href; `#`, `&` and whitespace end
+     or split the query). `:` and `/` stay intact so every deep link the
+     browser renders is byte-identical to the ones the build generates in
+     feeds/install.json and apps/<slug>/ from
+     src/omnisource/install.py — several clients parse the query naively and
+     reject a fully encoded `https%3A%2F%2F…`, which is why ESign and
+     LiveContainer used to behave differently from AltStore and SideStore. */
+  function encodeFeedParam(value) {
+    return String(value == null ? '' : value).replace(/["<>#&\s]/g, function (ch) {
+      return encodeURIComponent(ch);
+    });
+  }
+
+  /* One table, mirroring src/omnisource/install.py::CLIENT_PROFILES. All five
+     clients ship a one-tap "add source" scheme; Feather is the odd one out
+     and takes a bare host+path instead of a query string. */
+  var CLIENT_SCHEMES = {
+    altstore: 'altstore://source?url={url}',
+    sidestore: 'sidestore://source?url={url}',
+    feather: 'feather://source/{hostpath}',
+    esign: 'esign://addsource?url={url}',
+    livecontainer: 'livecontainer://sources?url={url}'
+  };
+
   function installUrlFor(clientId, feedUrl) {
-    if (clientId === 'altstore' || clientId === 'sidestore') return clientId + '://source?url=' + encodeURIComponent(feedUrl);
-    if (clientId === 'feather') return 'feather://source/' + feedUrl.replace(/^https?:\/\//, '');
-    // ESign and LiveContainer both ship one-tap "add source" schemes.
-    if (clientId === 'esign') return 'esign://addsource?url=' + encodeURIComponent(feedUrl);
-    if (clientId === 'livecontainer') return 'livecontainer://sources?url=' + encodeURIComponent(feedUrl);
-    return '';
+    var scheme = CLIENT_SCHEMES[String(clientId || '').toLowerCase()];
+    if (!scheme || !feedUrl) return '';
+    var hostpath = String(feedUrl).replace(/^[a-z]+:\/\//i, '');
+    return scheme
+      .replace('{url}', encodeFeedParam(feedUrl))
+      .replace('{hostpath}', hostpath);
   }
 
   function clientButton(client, feedUrl) {
@@ -782,6 +807,16 @@
     },
 
     renderFilters: function () {
+      /* Every row below is rebuilt from scratch, which throws away the chip
+         the user just activated. Mouse users never notice, but a keyboard
+         user tabbing across the filter chips was dropped back to the top of
+         the document on every single press. Remember which chip had focus and
+         hand it back once the new nodes exist. */
+      var focused = document.activeElement;
+      var focusKey = focused && focused.dataset && focused.dataset.kind
+        ? focused.dataset.kind + ':' + focused.dataset.id
+        : null;
+
       var categoryCounts = new Map();
       var statusCounts = new Map();
       var provenanceCounts = { official: 0, community: 0 };
@@ -844,6 +879,14 @@
             return '<option value="' + level + '">' + OS.esc(OS.t('catalog.worksOnIOS', { level: level }, 'Works on iOS ${level}+')) + '</option>';
           }).join('');
         osSelect.value = osLevels.indexOf(Number(current)) !== -1 ? String(current) : 'any';
+      }
+
+      if (focusKey) {
+        var parts = focusKey.split(':');
+        var again = document.querySelector(
+          '[data-kind="' + parts[0] + '"][data-id="' + (parts[1] || '').replace(/"/g, '\\"') + '"]'
+        );
+        if (again && again.focus) again.focus();
       }
     },
 
