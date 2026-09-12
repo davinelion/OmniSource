@@ -833,9 +833,8 @@
          the document on every single press. Remember which chip had focus and
          hand it back once the new nodes exist. */
       var focused = document.activeElement;
-      var focusKey = focused && focused.dataset && focused.dataset.kind
-        ? focused.dataset.kind + ':' + focused.dataset.id
-        : null;
+      var focusKind = focused && focused.dataset && focused.dataset.kind ? focused.dataset.kind : null;
+      var focusId = focusKind ? focused.dataset.id : null;
 
       var categoryCounts = new Map();
       var statusCounts = new Map();
@@ -901,12 +900,19 @@
         osSelect.value = osLevels.indexOf(Number(current)) !== -1 ? String(current) : 'any';
       }
 
-      if (focusKey) {
-        var parts = focusKey.split(':');
-        var again = document.querySelector(
-          '[data-kind="' + parts[0] + '"][data-id="' + (parts[1] || '').replace(/"/g, '\\"') + '"]'
-        );
-        if (again && again.focus) again.focus();
+      if (focusKind) {
+        /* Match on the dataset properties rather than building an attribute
+           selector out of them. A chip id is catalog data, so interpolating it
+           into a selector string would need escaping that is easy to get
+           subtly wrong (escaping `"` but not `\` leaves the string breakable)
+           — comparing values has no such surface at all. */
+        var chips = document.querySelectorAll('[data-kind][data-id]');
+        for (var ci = 0; ci < chips.length; ci += 1) {
+          if (chips[ci].dataset.kind === focusKind && chips[ci].dataset.id === focusId) {
+            if (chips[ci].focus) chips[ci].focus();
+            break;
+          }
+        }
       }
     },
 

@@ -375,6 +375,19 @@ class TestWebsiteShell(unittest.TestCase):
         # stack a new click listener each time.
         self.assertRegex(core, r"btn\.dataset\.bound === '1'")
 
+    def test_focus_restore_does_not_build_a_selector_from_data(self) -> None:
+        # CodeQL flagged js/incomplete-sanitization here: renderFilters()
+        # re-focused the activated chip by interpolating its catalog id into
+        # `[data-id="…"]` with only `"` escaped, so a backslash in an id could
+        # break out of the string. Matching on dataset properties instead has
+        # no escaping surface at all.
+        site = (ROOT / "js" / "site.js").read_text(encoding="utf-8")
+        self.assertNotIn("[data-kind=\"' +", site)
+        self.assertNotIn("[data-id=\"' +", site)
+        self.assertNotIn(".replace(/\"/g, '\\\\\"')", site)
+        self.assertIn("chips[ci].dataset.kind === focusKind", site)
+        self.assertIn("chips[ci].dataset.id === focusId", site)
+
     def test_os_search_engine_is_not_shadowed_by_features(self) -> None:
         # js/core.js publishes the search *engine* as OS.Search and js/site.js
         # plus core.js call OS.Search.load()/search()/highlight()/.docs.
