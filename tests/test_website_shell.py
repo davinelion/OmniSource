@@ -712,17 +712,100 @@ class TestWebsiteShell(unittest.TestCase):
         # The generated pages keep the feed URL raw in the query; the browser
         # copies used `encodeURIComponent`, which produced
         # `esign://addsource?url=https%3A%2F%2F…`. Clients that parse the
-        # query naively reject that. Both copies must now use the narrow
-        # encoder that only escapes what would break the link or its href.
+        # query naively reject that, which is why ESign and LiveContainer
+        # behaved differently from the AltStore/SideStore links next to them.
+        # Both copies must keep `:` and `/` literal and use a function
+        # replacer — `$` is not escaped by encodeURIComponent, so a `$&` or
+        # `$'` sequence in a feed URL would otherwise be interpreted as a
+        # String.replace replacement pattern.
         for path in (ROOT / "js" / "modules" / "install.js", ROOT / "js" / "site.js"):
             source = path.read_text(encoding="utf-8")
             self.assertIn("encodeFeedParam", source, path.name + " lost the narrow feed-URL encoder")
-            self.assertRegex(
-                source, r"replace\(/\[\"<>#&\\s\]/g", path.name + " must escape only quote/angle/hash/ampersand/space"
-            )
-            # …and must not blanket-encode the feed URL any more.
             self.assertNotIn("encodeURIComponent(url)", source)
             self.assertNotIn("encodeURIComponent(feedUrl)", source)
+            self.assertNotRegex(
+                source,
+                r"replace\('\{url\}',\s*(?:encodeFeedParam|hostPath)\(",
+                path.name + " must substitute {url}/{hostpath} with a function replacer, not a string",
+            )
+
+    def _install_urls_from_node(self, feeds: dict[str, str]) -> dict[str, dict[str, str]]:
+        """Run js/modules/install.js in Node and return {case: {client: url}}."""
+        node = shutil.which("node")
+        if not node:
+            self.skipTest("node is not installed")
+        import json
+
+        from omnisource.install import CLIENT_PROFILES
+
+        harness = "\n".join(
+            [
+                "globalThis.window = { OS: { url: (p) => 'https://example.org/OmniSource/' + p } };",
+                "const m = await import(" + json.dumps(str(ROOT / "js" / "modules" / "install.js")) + ");",
+                "const feeds = " + json.dumps(feeds) + ";",
+                "const ids = " + json.dumps(sorted(CLIENT_PROFILES)) + ";",
+                "const out = {};",
+                "for (const [name, feed] of Object.entries(feeds)) {",
+                "  out[name] = {};",
+                "  for (const id of ids) out[name][id] = m.installUrlFor(id, feed);",
+                "}",
+                "console.log(JSON.stringify(out));",
+            ]
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            script = Path(tmp) / "schemes.mjs"
+            script.write_text(harness, encoding="utf-8")
+            result = subprocess.run([node, str(script)], capture_output=True, text=True)
+        self.assertEqual(0, result.returncode, result.stderr)
+        return json.loads(result.stdout.strip().splitlines()[-1])
+
+    def test_deep_link_escapes_hostile_feed_urls(self) -> None:
+        # CodeQL flagged the encoder for incomplete string escaping: the
+        # character class omitted backslash, so a crafted feed URL could put
+        # characters into the href that the template never intended to carry.
+        # Assert the behaviour rather than the shape of the regex.
+        feeds = {
+            "backslash": "https://ex.org/a\\b.json",
+            "quote_angle": 'https://ex.org/">x.json',
+            "dollar_amp": "https://ex.org/$&evil.json",
+            "dollar_tick": "https://ex.org/$'tail.json",
+            "space": "https://ex.org/a b.json",
+            "brace_bar": "https://ex.org/{a|b}.json",
+            "hash": "https://ex.org/a#b.json",
+        }
+        got = self._install_urls_from_node(feeds)
+
+        # The four query-parameter clients put the feed URL after `?url=`,
+        # where `&`, `#`, `$` and friends change how the value parses. Nothing
+        # RFC-excluded may survive there.
+        query_forbidden = ['"', "<", ">", "\\", " ", "\t", "{", "}", "|", "$", "#", "&", "`", "^"]
+        for client_id in ("altstore", "sidestore", "esign", "livecontainer"):
+            for name, url_by_client in got.items():
+                url = url_by_client[client_id]
+                for char in query_forbidden:
+                    self.assertNotIn(
+                        char,
+                        url,
+                        f"{name}/{client_id} left {char!r} raw in the deep link: {url}",
+                    )
+
+        # Feather is different on purpose: its argument is a bare host+path,
+        # not a query value, and `src/omnisource/install.py` builds it with
+        # `netloc + path` and no escaping. `$`, `&` and `'` are legal path
+        # sub-delims, so demanding they be escaped would break the
+        # byte-identical contract with the builder. Only the characters that
+        # would break the href attribute or are illegal in a path are checked.
+        path_forbidden = ['"', "<", ">", "\\", " ", "\t", "\n"]
+        for name, url_by_client in got.items():
+            url = url_by_client["feather"]
+            for char in path_forbidden:
+                self.assertNotIn(char, url, f"{name}/feather left {char!r} raw in the deep link: {url}")
+            self.assertTrue(url.startswith("feather://source/"), f"{name}/feather lost its scheme: {url}")
+            self.assertNotIn("://", url[len("feather://source/") :], f"{name}/feather kept the scheme: {url}")
+
+        # `$&` must not have expanded into the matched substring (the reason
+        # substitution uses a function replacer rather than a string).
+        self.assertNotIn("evil", got["dollar_amp"]["esign"].replace("%26evil", ""))
 
     def test_module_deep_links_execute_identically_to_the_builder(self) -> None:
         # String comparison above can pass while the code still produces

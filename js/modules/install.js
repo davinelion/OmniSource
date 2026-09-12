@@ -47,14 +47,17 @@ function hostPath(url) {
 }
 
 /* Percent-encode only what would actually break the link: a quote or angle
- * bracket would end the href attribute, and `#` / `&` / whitespace would end
- * or split the query. `:` and `/` stay intact on purpose so the result is
- * byte-identical to src/omnisource/install.py — which is what the generated
- * app pages and feeds/install.json ship. Several clients parse the query
- * naively and reject a fully encoded `https%3A%2F%2F…`, which is how ESign and
- * LiveContainer ended up behaving differently from AltStore and SideStore. */
+ * bracket would end the href attribute, `#` / `&` / whitespace would end or
+ * split the query, and `\ ^ ` { | } $ '` are excluded from URLs by RFC 3986
+ * (§2) so no legitimate feed URL contains them — escaping them costs nothing
+ * and closes the hole where a crafted value smuggles structure into the
+ * template. `:` and `/` stay intact on purpose so the result is byte-identical
+ * to src/omnisource/install.py, which is what the generated app pages and
+ * feeds/install.json ship. Several clients parse the query naively and reject
+ * a fully encoded `https%3A%2F%2F…`, which is how ESign and LiveContainer
+ * ended up behaving differently from AltStore and SideStore. */
 function encodeFeedParam(url) {
-  return String(url).replace(/["<>#&\s]/g, (ch) => encodeURIComponent(ch));
+  return String(url).replace(/["'<>#&\s\\^`{|}$]/g, (ch) => encodeURIComponent(ch));
 }
 
 /** Install URL for one client (falls back to the plain feed URL). */
@@ -62,9 +65,11 @@ export function installUrlFor(client, feedUrl) {
   const url = feedUrl || sourceFeedUrl();
   const scheme = CLIENT_SCHEMES[String(client || '').toLowerCase()];
   if (!scheme) return url;
+  // Function replacers, not strings: a `$` in the value would otherwise be
+  // read as a replacement pattern (`$&`, `$'`, `$1`, …) by String.replace.
   return scheme
-    .replace('{url}', encodeFeedParam(url))
-    .replace('{hostpath}', hostPath(url));
+    .replace('{url}', () => encodeFeedParam(url))
+    .replace('{hostpath}', () => hostPath(url));
 }
 
 /** Copy text to the clipboard with the pre-async fallback core.js uses. */

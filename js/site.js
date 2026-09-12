@@ -360,17 +360,35 @@
   }
 
   /* Percent-encode only what would break the link or the attribute it lives
-     in (a quote or angle bracket ends the href; `#`, `&` and whitespace end
-     or split the query). `:` and `/` stay intact so every deep link the
-     browser renders is byte-identical to the ones the build generates in
-     feeds/install.json and apps/<slug>/ from
+     in: a quote or angle bracket ends the href, `#` / `&` / whitespace end or
+     split the query, and backslash, caret, grave accent, braces, bar, dollar
+     and apostrophe are excluded from URLs by RFC 3986 §2 — so no legitimate
+     feed URL contains them, escaping them costs nothing, and a crafted value
+     cannot smuggle structure into the scheme template. `:` and `/` stay
+     intact so every deep link the browser renders is byte-identical to the
+     ones the build generates in feeds/install.json and apps/<slug>/ from
      src/omnisource/install.py — several clients parse the query naively and
      reject a fully encoded `https%3A%2F%2F…`, which is why ESign and
      LiveContainer used to behave differently from AltStore and SideStore. */
+  var FEED_PARAM_UNSAFE = /["'<>#&\s\\^`{|}$]/g;
+
   function encodeFeedParam(value) {
-    return String(value == null ? '' : value).replace(/["<>#&\s]/g, function (ch) {
+    return String(value == null ? '' : value).replace(FEED_PARAM_UNSAFE, function (ch) {
       return encodeURIComponent(ch);
     });
+  }
+
+  /* Feather's bare host+path, matching install.py's `netloc + path`: the
+     scheme AND any query/fragment are dropped, not just the scheme. */
+  function hostPath(value) {
+    var raw = String(value == null ? '' : value);
+    try {
+      var parsed = new URL(raw);
+      return (parsed.host + parsed.pathname) || raw.split('://').pop();
+    } catch (err) {
+      var noScheme = raw.indexOf('://') > -1 ? raw.slice(raw.indexOf('://') + 3) : raw;
+      return noScheme.split(/[?#]/)[0];
+    }
   }
 
   /* One table, mirroring src/omnisource/install.py::CLIENT_PROFILES. All five
@@ -387,10 +405,12 @@
   function installUrlFor(clientId, feedUrl) {
     var scheme = CLIENT_SCHEMES[String(clientId || '').toLowerCase()];
     if (!scheme || !feedUrl) return '';
-    var hostpath = String(feedUrl).replace(/^[a-z]+:\/\//i, '');
+    /* Function replacers, never strings: `$` is not escaped by
+       encodeURIComponent, so a `$&` / `$'` / `$1` sequence in a value would
+       otherwise be interpreted as a replacement pattern by String.replace. */
     return scheme
-      .replace('{url}', encodeFeedParam(feedUrl))
-      .replace('{hostpath}', hostpath);
+      .replace('{url}', function () { return encodeFeedParam(feedUrl); })
+      .replace('{hostpath}', function () { return hostPath(feedUrl); });
   }
 
   function clientButton(client, feedUrl) {
