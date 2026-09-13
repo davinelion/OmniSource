@@ -30,6 +30,46 @@
   <link rel="stylesheet" href="../assets/design-system/utilities.css">
   <link rel="stylesheet" href="../assets/design-system/animations.css">
   <link rel="stylesheet" href="../assets/design-system/components.css">
+  <!-- Scoped styles for the ?add=<client> one-tap hand-off banner. -->
+  <style>
+    .in-autoadd {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 22px;
+      margin-bottom: 26px;
+      border: 1px solid var(--accent-ring);
+      background: var(--accent-grad-soft);
+      box-shadow: var(--glow-accent);
+      animation: iaa-in .45s cubic-bezier(.22,1,.36,1) both;
+    }
+    .in-autoadd[hidden] { display: none; }
+    .in-autoadd.is-error {
+      border-color: color-mix(in srgb, var(--amber) 38%, transparent);
+      background: var(--amber-soft);
+      box-shadow: none;
+    }
+    .iaa-icon { flex: none; width: 48px; height: 48px; display: grid; place-items: center; }
+    .iaa-icon img { width: 44px; height: 44px; border-radius: 12px; box-shadow: 0 6px 16px rgba(40, 35, 110, .22); }
+    .iaa-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--amber); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .iaa-dot { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--accent-grad); color: #fff; font-weight: 700; font-size: 20px; }
+    .iaa-body { min-width: 0; flex: 1; }
+    .iaa-body h2 { margin: 2px 0 6px; font-size: 18px; letter-spacing: -0.02em; }
+    .iaa-body p { margin: 0 0 12px; font-size: 13.5px; line-height: 1.6; color: var(--muted); }
+    .iaa-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    /* The matching client card in the grid gets a ring + glow; its existing
+       Recommended/Deep link badge already labels it, so no extra overlay. */
+    .client-card.is-autoadd-target {
+      border-color: var(--accent);
+      box-shadow: var(--glow-accent);
+    }
+    @keyframes iaa-in { from { opacity: 0; transform: translateY(10px) scale(.99); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .in-autoadd { animation: none; } }
+    @media (max-width: 560px) {
+      .in-autoadd { padding: 16px; gap: 12px; }
+      .iaa-body h2 { font-size: 16.5px; }
+    }
+  </style>
   <script>
     (function () {
       try {
@@ -114,6 +154,10 @@
       <h1>Get OmniSource on your <span class="grad-text">iPhone</span></h1>
       <p>OmniSource is one AltStore-compatible feed that works with every major sideloading client. Pick your client below — the links are generated from the catalog on every build, never hard-coded.</p>
     </section>
+
+    <!-- One-tap hand-off target for /install/?add=<client>[&app=<slug>] links
+         (README badges, QR codes, shared links). Filled in by js/site.js. -->
+    <section id="installAutoAdd" hidden aria-live="polite"></section>
 
     <div class="in-clients" id="installClients" aria-live="polite">
       <div class="os-skeleton" style="height:320px"></div><div class="os-skeleton" style="height:320px"></div><div class="os-skeleton" style="height:320px"></div>

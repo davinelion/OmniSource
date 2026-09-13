@@ -7,16 +7,37 @@
 [![Validate](https://github.com/iamsmmh/OmniSource/actions/workflows/validate.yml/badge.svg)](https://github.com/iamsmmh/OmniSource/actions/workflows/validate.yml)
 [![Security](https://github.com/iamsmmh/OmniSource/actions/workflows/security.yml/badge.svg)](https://github.com/iamsmmh/OmniSource/actions/workflows/security.yml)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fiamsmmh.github.io%2FOmniSource%2F)](https://iamsmmh.github.io/OmniSource/)
+[![Apps](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamsmmh%2FOmniSource%2Fmain%2Ffeeds%2Fbadge-apps.json)](https://iamsmmh.github.io/OmniSource/)
+[![Verified](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamsmmh%2FOmniSource%2Fmain%2Ffeeds%2Fbadge-verified.json)](https://iamsmmh.github.io/OmniSource/status/)
+[![Download health](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamsmmh%2FOmniSource%2Fmain%2Ffeeds%2Fbadge-health.json)](https://iamsmmh.github.io/OmniSource/status/)
+[![Last sync](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamsmmh%2FOmniSource%2Fmain%2Ffeeds%2Fbadge-sync.json)](https://iamsmmh.github.io/OmniSource/status/)
+[![Source spec](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fiamsmmh%2FOmniSource%2Fmain%2Ffeeds%2Fbadge-version.json)](https://iamsmmh.github.io/OmniSource/apps.json)
 [![License](https://img.shields.io/github/license/iamsmmh/OmniSource)](LICENSE)
 
 <br>
 
+<a href="https://iamsmmh.github.io/OmniSource/install/"><img src="assets/brand/btn-add-source.svg" alt="Add the OmniSource source"></a>
+
+<br>
+
+<a href="https://iamsmmh.github.io/OmniSource/install/?add=altstore"><img src="assets/brand/btn-add-altstore.svg" alt="Add to AltStore" height="46"></a>
+<a href="https://iamsmmh.github.io/OmniSource/install/?add=sidestore"><img src="assets/brand/btn-add-sidestore.svg" alt="Add to SideStore" height="46"></a>
+<a href="https://iamsmmh.github.io/OmniSource/install/?add=feather"><img src="assets/brand/btn-add-feather.svg" alt="Add to Feather" height="46"></a>
+<a href="https://iamsmmh.github.io/OmniSource/install/?add=esign"><img src="assets/brand/btn-add-esign.svg" alt="Add to ESign" height="46"></a>
+<a href="https://iamsmmh.github.io/OmniSource/install/?add=livecontainer"><img src="assets/brand/btn-add-livecontainer.svg" alt="Add to LiveContainer" height="46"></a>
+
+<br>
+
 <a href="https://iamsmmh.github.io/OmniSource/"><img src="assets/brand/btn-website.svg" alt="Website"></a>
-<a href="https://iamsmmh.github.io/OmniSource/install/"><img src="assets/brand/btn-install.svg" alt="Add source"></a>
 <a href="docs/API-V3.md"><img src="assets/brand/btn-api.svg" alt="API v3"></a>
 <a href="docs/"><img src="assets/brand/btn-docs.svg" alt="Documentation"></a>
 <a href="CONTRIBUTING.md"><img src="assets/brand/btn-contribute.svg" alt="Contributing"></a>
 <a href="web/"><img src="assets/brand/btn-webapp.svg" alt="Web app"></a>
+
+**On iPhone?** Tap your client above — the source opens in its Add Source
+screen automatically. On desktop, the same link takes you to the
+[installation center](https://iamsmmh.github.io/OmniSource/install/),
+where you can scan a QR code with your phone.
 
 </div>
 
@@ -27,7 +48,11 @@
 OmniSource discovers and aggregates public iOS sources, validates their feed
 and release metadata, tracks release history, enriches records, verifies
 provenance and hashes, monitors availability, and publishes deterministic
-feeds and machine-readable health reports — fully automated end to end.
+feeds and machine-readable health reports — **fully automated end to end**.
+
+Every entry is resolved from the app's own official upstream project — GitHub
+Releases or the developer's official feed — and each download link is
+re-probed and re-verified automatically before publication.
 
 It is deliberately **not** a social or marketplace product. There are no
 accounts, comments, reviews, ratings, behavioral profiles, personalized
@@ -35,42 +60,76 @@ recommendation feeds, or marketplace transactions. Catalog collections are
 committed, transparent source groupings; analytics describe repository and
 release observations rather than user activity.
 
-| Apps catalogued | Sideloading clients | Automated workflows | Monitoring cadence |
-|:---:|:---:|:---:|:---:|
-| **94** | **5** | **15** | **30 min** |
+| 🔗 One feed, five clients | 🧾 Provenance & hashes | 🤖 Automated end to end |
+|---|---|---|
+| AltStore Source v2 served to AltStore, SideStore, Feather, ESign and LiveContainer | Official-upstream resolution with SHA-256/SHA-512 coverage and published checksums | Discovery, validation, enrichment and publication run unattended on GitHub Actions |
+| **🩺 Self-healing** | **🔍 Transparent by construction** | **🔒 No accounts, no tracking** |
+| 30-minute probes, quarantine for invalid sources and mirror failover | A hand-maintained `catalog.json` plus append-only ledgers; generated files are never edited | No sign-in, no analytics on users, no marketplace — only metadata and links |
 
-> 🧊 The hero artwork, pill buttons and dividers above are generated from the
+> 🧊 The hero artwork, pill buttons and dividers are generated from the
 > repo's own **Liquid Glass · Fluid Edition** tokens in
 > [`assets/design-system/`](assets/design-system/) — the same translucent
 > materials, chromatic refraction and aurora diffusion that power the website.
 
+## 📑 Contents
+
+- [Add the source](#-add-the-source)
+- [Catalog preview](#-catalog-preview)
+- [Architecture](#-architecture)
+- [Repository layout](#-repository-layout)
+- [Local development](#-local-development)
+- [API & website](#-api--website)
+- [Automation](#️-automation)
+- [Documentation](#-documentation)
+- [Contributing](#-contributing)
+- [License](#️-license)
+
 ## 🔗 Add the source
 
-The compatibility feed is:
+The compatibility feed — one URL that every supported client accepts:
 
 ```text
 https://iamsmmh.github.io/OmniSource/apps.json
 ```
 
-Client-specific feeds are available at
-`feeds/clients/{altstore,sidestore,feather,esign,livecontainer}.json`.
-Single-app feeds live at `feeds/single/<slug>.json`; collection feeds live at
-`feeds/collections/<slug>.json`. All of these are generated and validated
-before publication.
+**On your iPhone**, tap your client in the table (or the badge buttons at the
+top of this file). The link first opens the installation center, which hands
+off directly to the client's Add Source screen. If the client is not installed
+yet, that page also gives you the feed URL and a QR code to add it manually.
 
-| Client | Install link |
-|---|---|
-| <img src="assets/AltStore.webp" width="20" height="20"> AltStore | [Add to AltStore](altstore://source?url=https://iamsmmh.github.io/OmniSource/apps.json) |
-| <img src="assets/SideStore.webp" width="20" height="20"> SideStore | [Add to SideStore](sidestore://source?url=https://iamsmmh.github.io/OmniSource/apps.json) |
-| <img src="assets/Feather.webp" width="20" height="20"> Feather | [Add to Feather](feather://source/iamsmmh.github.io/OmniSource/apps.json) |
-| <img src="assets/E-Sign.webp" width="20" height="20"> ESign | [Add to ESign](esign://addsource?url=https://iamsmmh.github.io/OmniSource/apps.json) |
-| <img src="assets/LiveContainer.webp" width="20" height="20"> LiveContainer | [Add to LiveContainer](livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/apps.json) |
+| Client | One-tap add | Manual path |
+|---|---|---|
+| <img src="assets/AltStore.webp" width="20" height="20"> AltStore | **[Add to AltStore](https://iamsmmh.github.io/OmniSource/install/?add=altstore)** | Settings → Sources → + |
+| <img src="assets/SideStore.webp" width="20" height="20"> SideStore | **[Add to SideStore](https://iamsmmh.github.io/OmniSource/install/?add=sidestore)** | Settings → Sources → + |
+| <img src="assets/Feather.webp" width="20" height="20"> Feather | **[Add to Feather](https://iamsmmh.github.io/OmniSource/install/?add=feather)** | Sources → Add |
+| <img src="assets/E-Sign.webp" width="20" height="20"> ESign | **[Add to ESign](https://iamsmmh.github.io/OmniSource/install/?add=esign)** | Sources → + |
+| <img src="assets/LiveContainer.webp" width="20" height="20"> LiveContainer | **[Add to LiveContainer](https://iamsmmh.github.io/OmniSource/install/?add=livecontainer)** | Settings → Sources |
+
+> GitHub and most chat apps strip app-specific links (`altstore://`,
+> `feather://`, …), which is why the buttons above point at the HTTPS
+> installation center rather than at the client scheme directly. That page
+> performs the one-tap hand-off for you, from anywhere the README is viewed.
+
+Client-specific feeds are published at
+`feeds/clients/{altstore,sidestore,feather,esign,livecontainer}.json`,
+single-app feeds at `feeds/single/<slug>.json` (also reachable as
+`feeds/<slug>.json` — useful when a client cannot co-install apps sharing a
+bundle ID), and collection feeds at `feeds/collections/<slug>.json`. All of
+them are generated and validated before publication. Release watchers can
+subscribe to the [RSS feed](https://iamsmmh.github.io/OmniSource/feeds/feed.xml).
+
+The same one-tap hand-off works for a single app by adding `&app=<slug>` —
+for example, on iPhone, [add Delta straight to AltStore](https://iamsmmh.github.io/OmniSource/install/?add=altstore&app=delta)
+or [add Feather's source for one app](https://iamsmmh.github.io/OmniSource/install/?add=feather&app=delta).
+This is the workaround for clients that cannot co-install apps sharing a
+bundle ID.
 
 ## 🗂 Catalog preview
 
 A look inside the validated catalog — every icon opens its published detail
-page with release history, hashes, provenance and install links. Browse all
-**94 apps** on the [website](https://iamsmmh.github.io/OmniSource/).
+page with release history, hashes, provenance and install links. Browse the
+full catalog on the [website](https://iamsmmh.github.io/OmniSource/); the live
+**apps** badge at the top of this file always shows the current count.
 
 | | | | | | |
 |:--:|:--:|:--:|:--:|:--:|:--:|
@@ -138,6 +197,7 @@ schemas/                       machine-readable contracts
 data/quarantine/              isolated untrusted discovery records
 docs/                          architecture, API and operations guides
 assets/design-system/          Liquid Glass design tokens (theme, motion, glass)
+assets/brand/                  hero, dividers and the pill buttons used above
 ```
 
 ## 🛠 Local development
@@ -175,7 +235,10 @@ The backward-compatible feed/API surface remains available:
 - `api/*.json` — flat machine-readable snapshots and gzip twins;
 - `api/v2/` — legacy delta-friendly endpoints;
 - `api/v3/` — versioned pagination, filtering, sorting, fuzzy search, ETags,
-  cache headers, sources, releases, status, security and analytics.
+  cache headers, sources, releases, status, security and analytics;
+- `feeds/install.json` — machine-readable per-client deep links and setup
+  steps, which the [installation center](https://iamsmmh.github.io/OmniSource/install/)
+  renders (the README's add buttons link there with `?add=<client>`).
 
 The modern app in `web/` provides Home, Apps, Sources, Collections, Categories,
 Developers, Statistics, Status, Security, Search, About, source timelines,
@@ -219,6 +282,7 @@ validated before use.
 
 ## 📚 Documentation
 
+- [Installation center](https://iamsmmh.github.io/OmniSource/install/) — one-tap links, QR codes, per-client guides
 - [Complete audit](audit-report.md)
 - [Architecture and diagram](docs/ARCHITECTURE.md)
 - [Discovery and quarantine](docs/DISCOVERY.md)
@@ -246,3 +310,9 @@ than modifying core dispatch code.
 OmniSource is GPL-3.0. App names, icons, trademarks, and upstream releases
 belong to their respective owners. OmniSource aggregates metadata and links to
 public publishers; it does not claim ownership of upstream binaries.
+
+<div align="center">
+
+<a href="https://iamsmmh.github.io/OmniSource/install/"><img src="assets/brand/btn-add-source.svg" alt="Add the OmniSource source"></a>
+
+</div>
