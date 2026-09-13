@@ -96,10 +96,19 @@ Create and verify a metadata-only recovery snapshot before a deployment or
 incident drill:
 
 ```bash
-python3 scripts/backup/create_backup.py create --label drill --destination /tmp/omni-backup
-python3 scripts/backup/create_backup.py verify --backup /tmp/omni-backup
-python3 scripts/backup/create_backup.py restore --backup /tmp/omni-backup --destination /tmp/restore --dry-run
+# --label is the retention tier: daily | weekly | monthly | manual (a drill is
+# a manual snapshot). create prints the snapshot directory it wrote.
+python3 scripts/backup/create_backup.py create --label manual --destination /tmp/omni-backup
+# verify and restore take that snapshot directory as a positional argument.
+python3 scripts/backup/create_backup.py verify /tmp/omni-backup/manual-20260913T120000Z
+# restore is a dry run unless --apply is passed; --root is the tree to restore
+# into (only a snapshot whose checksums all verify is restored at all).
+python3 scripts/backup/create_backup.py restore /tmp/omni-backup/manual-20260913T120000Z --root /tmp/restore
 ```
+
+`backup.yml` labels each scheduled snapshot with the tier of the cron that
+fired it (`daily` 01:45 UTC, `weekly` Sunday 02:00, `monthly` day 1 at 02:15)
+and a manual dispatch as `manual`.
 
 Snapshots exclude IPA/TIPA payloads, caches, credentials, and build outputs.
 CI retains daily/weekly/monthly artifacts for 90 days.
@@ -111,5 +120,5 @@ CI retains daily/weekly/monthly artifacts for 90 days.
 | `data/status.json` → `degraded` | `failing[]`, `monitoring.yml` logs | `selfheal_report.json` plans; `retry` auto-clears transients |
 | `security.yml` red | `data/security.json` findings | Fix `critical` (malformed digest) or `--fail-on high` breach, re-run |
 | `publish.yml` red | `build_client_feeds --check`, `validate.py` | Never hand-edit `feeds/`; fix `catalog.json`, let `sync` rebuild |
-| `discovery.yml` red | `validate_source.py` output | Quarantine offending record (reputation 0), re-run |
+| `discovery.yml` red | `validate_source.py` output | Invalid records self-quarantine (`--quarantine-invalid`); red means one could not be isolated or a verified/published record is invalid — fix it, re-run |
 | Empty `monitoring` commit loop | `history` cap is 30 — by design | None; each run appends one sample |

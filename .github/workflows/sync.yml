@@ -253,5 +253,32 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      # actions/deploy-pages only works while Pages is set to *GitHub Actions*.
+      # This repository publishes from the branch (build_type "legacy"), where
+      # GitHub's own "pages build and deployment" run serves the tree the
+      # pipeline keeps complete — so deploying the _site/ artifact here would
+      # fail the run for a configuration that works as designed. Detect the
+      # mode at runtime instead of hard-coding it: switching Pages to *GitHub
+      # Actions* in the repository settings is all it takes to use this path.
+      - name: Detect the Pages deployment mode
+        id: pages-mode
+        env:
+          PAGES_URL: ${{ github.api_url }}/repos/${{ github.repository }}/pages
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          build_type=$(curl -fsSL \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "${PAGES_URL}" | jq -r '.build_type // empty') || build_type=""
+          echo "pages build_type: ${build_type:-unknown}"
+          if [ "${build_type}" = "workflow" ]; then
+            echo "deploy=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "deploy=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Pages builds from the branch (${build_type:-unknown}); the branch deployment serves this run's tree."
+          fi
+
       - id: deployment
+        if: steps.pages-mode.outputs.deploy == 'true'
         uses: actions/deploy-pages@v4

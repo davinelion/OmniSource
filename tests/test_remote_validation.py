@@ -18,6 +18,7 @@ from omnisource.remote_validation import (
     validate_remote_release,
     validate_source_record,
 )
+from omnisource.validation import SOURCE_ID_RE
 
 
 def _app(**overrides) -> dict:
@@ -50,6 +51,25 @@ class SourceRecordTests(TestCase):
 
     def test_rejects_non_object(self) -> None:
         self.assertTrue(validate_source_record([]))
+
+    def test_accepts_url_derived_source_ids(self) -> None:
+        # Discovery ids are host + path stem + digest, bounded at 80 characters
+        # by schemas/discovery.schema.json. Validating them with the 32-char
+        # catalog app-slug rule (SLUG_RE) made every discovered candidate an
+        # error, so discovery.yml failed as soon as a pass found anything.
+        record = autodiscovery.new_record(
+            url="https://github.com/some-owner/a-long-repository-name/apps.json",
+            feed_type="altstore",
+        )
+        self.assertGreater(len(record["source_id"]), 32)
+        self.assertRegex(record["source_id"], SOURCE_ID_RE)
+        self.assertEqual(validate_source_record(record), [])
+
+    def test_rejects_source_id_outside_the_schema(self) -> None:
+        record = autodiscovery.new_record(url="https://example.com/apps.json", feed_type="altstore")
+        record["source_id"] = "a" * 81
+        errors = validate_source_record(record)
+        self.assertTrue(any("source_id" in error for error in errors))
 
 
 class RemoteFeedTests(TestCase):
@@ -112,6 +132,25 @@ class PublishableTests(TestCase):
         ok, errors, _warnings = assert_publishable(record, feed_payload={"nope": True})
         self.assertFalse(ok)
         self.assertTrue(errors)
+
+    def test_non_integer_reputation_is_an_error_not_a_crash(self) -> None:
+        # A discovered record is untrusted input: a third-party feed can put any
+        # JSON value in "reputation". Comparing it with `<` used to raise
+        # TypeError, which took the whole fail-closed gate down with a traceback
+        # instead of reporting the record as invalid.
+        record = autodiscovery.new_record(url="https://example.com/apps.json", feed_type="altstore")
+        record["reputation"] = "high"
+        ok, errors, warnings = assert_publishable(record)
+        self.assertFalse(ok)
+        self.assertTrue(any("reputation" in error for error in errors))
+        self.assertEqual(warnings, [])
+
+    def test_low_reputation_warns_without_blocking(self) -> None:
+        record = autodiscovery.new_record(url="https://example.com/apps.json", feed_type="altstore", reputation=10)
+        ok, errors, warnings = assert_publishable(record)
+        self.assertTrue(ok)
+        self.assertEqual(errors, [])
+        self.assertTrue(any("reputation below 25" in warning for warning in warnings))
 
     def test_non_url_unreachable(self) -> None:
         ok, _detail = check_url_reachable("not-a-url")

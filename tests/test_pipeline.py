@@ -142,6 +142,16 @@ class TestPipeline(unittest.TestCase):
             publish_repo_artifacts(root, health_doc=health_doc, analytics_doc=analytics_doc)
             self.assertFalse(stale.exists(), "a feed that no longer exists must not stay published")
 
+            # ...but a root document another workflow publishes is kept:
+            # security.yml commits the root copy of its machine-readable report,
+            # and pruning it made sync.yml publish the deletion (the URL 404'd
+            # until the next daily scan restored it).
+            external = root / "security-report.json"
+            external.write_text("{}", encoding="utf-8")
+            summary = publish_repo_artifacts(root, health_doc=health_doc, analytics_doc=analytics_doc)
+            self.assertTrue(external.is_file(), "the publisher must not prune another workflow's root document")
+            self.assertNotIn("security-report.json", summary["removed"])
+
 
 class _UnreachableProvider:
     """Stands in for a provider whose every leg errors (host blocked, API down)."""

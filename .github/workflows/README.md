@@ -7,11 +7,14 @@ permissions and opts in to exactly what it needs, never more.
 | --- | --- | --- | --- |
 | [`sync.yml`](sync.yml) | schedule (6 h, incremental) · push · manual | feeds, `apps/` pages, README, published root URLs, Pages | Resolve official upstream releases, probe links, rebuild every feed + intelligence documents + app pages, republish the flat/API URLs, deploy |
 | [`validate.yml`](validate.yml) | pull request · push · manual | nothing | Parallel offline gate: structural validation + reproducibility, unit test matrix (3.11/3.12), `ruff` + `actionlint` (cached) |
+| [`validation.yml`](validation.yml) | pull request · push (catalog / feeds / quarantine / validators) · manual | nothing | Named publication gate for the source lifecycle: discovery-store schema (strict), feed + per-client feed structure, metadata contract, unit tests |
+| [`backup.yml`](backup.yml) | schedule (daily 01:45 · weekly Sun 02:00 · monthly day 1 02:15 UTC) · manual | nothing (artifact) | Metadata-only disaster-recovery snapshot of `catalog.json`, `feeds/`, `data/`, `api/` with SHA-256 verification, labeled with the tier of the cron that fired it and retained 90 days |
+| [`build-tweak.yml`](build-tweak.yml) | manual | Release asset | Inject a `.deb` tweak into a decrypted base IPA; inputs are sanitized and https-only |
 | [`merge.yml`](merge.yml) | `feeds/*.json` changed (PR check · push commit) · manual | `feeds/apps.json` + its published copies | Rebuild the unified master source from modular feeds; on a pull request the same gate runs read-only and fails if `apps.json` is not the merge output |
 | [`health-check.yml`](health-check.yml) | schedule (daily) · manual | GitHub Issue | HEAD-probe every download URL + mirror and report broken links via an issue |
 | [`verify.yml`](verify.yml) | schedule (weekly, Mon 07:00 UTC) · manual | `feeds/state.json`, `feeds/integrity_report.json` + its `/api/` copies | Stream and hash every published asset (full integrity), record the verdict as `lastFullVerification` and fail on a digest/size mismatch |
 | [`build-uyouenhanced.yml`](build-uyouenhanced.yml) | manual | Release asset | Build and publish the uYouEnhanced IPA, then trigger a feed sync |
-| [`discovery.yml`](discovery.yml) | schedule (12 h) · manual | `data/discovered_sources.json` | Autonomous discovery (GitHub code search, feed probes, release scans, web catalogs) + validation gate |
+| [`discovery.yml`](discovery.yml) | schedule (12 h) · manual | `data/discovered_sources.json`, `data/quarantine/sources.json`, `data/published_sources.json` | Autonomous discovery (repository + code search, feed probes, release scans, web catalogs), a self-quarantining validation gate, and the explicit verified→published projection |
 | [`monitoring.yml`](monitoring.yml) | schedule (30 min) · manual | `data/status.json`, `data/selfheal_report.json`, `data/mirror_status.json` | Probe sources/downloads, plan self-healing repairs, evaluate mirrors |
 | [`security.yml`](security.yml) | push · PR · schedule (daily) · manual | `data/security.json` | SHA/hash audit, duplicate binaries, integrity rollup; fails on critical findings |
 | [`analytics.yml`](analytics.yml) | schedule (daily) · manual | `data/analytics_rollup.json` | Daily / weekly / monthly analytics windows |
@@ -57,7 +60,11 @@ build-uyouenhanced.yml   merge.yml (scripts/merge_feeds.py)
 - Every multi-line `run:` block starts with `set -euo pipefail`.
 - All shell variables are quoted; word-splitting uses arrays (`"${ARGS[@]}"`).
 - Workflow inputs / step outputs reach the shell through `env:` only — never
-  interpolate `${{ }}` into `run:` scripts (script injection).
+  interpolate `${{ }}` into `run:` scripts (script injection). Actions expands
+  those expressions *before* the shell runs and `actionlint` parses them
+  **including inside shell comments**, so do not write an example expression in
+  a comment there either: an empty or malformed one fails the Validate lint
+  gate. Read values from `GITHUB_EVENT_PATH` with `jq` instead.
 - Dispatch inputs are validated (https-only URLs, character allowlists) and
   sanitized before use in artifact names.
 - Minimal `permissions`, `concurrency` groups and `timeout-minutes` everywhere.
@@ -69,8 +76,12 @@ build-uyouenhanced.yml   merge.yml (scripts/merge_feeds.py)
      generated URLs are published there by the pipeline, so `/apps.json`,
      `/<slug>.json`, `/api/*`, `sitemap.xml` and `robots.txt` resolve.
    * *GitHub Actions* serves the `_site/` artifact that `sync.yml` uploads.
-     `sync.yml` deploys it either way; GitHub simply ignores the artifact
-     while the branch mode is selected.
+     `sync.yml`'s deploy job probes the Pages `build_type` first and only calls
+     `actions/deploy-pages` in this mode: in branch mode the action does not
+     get ignored, it fails the run (`Get Pages site failed`), so the job skips
+     the deploy and GitHub's own *pages build and deployment* run serves the
+     committed tree instead. Flip the setting and the next sync deploys the
+     artifact with no workflow change.
 2. **Settings → Actions → Workflow permissions** — leave at the default
    *read repository contents*; each workflow requests more explicitly.
 3. No repository secrets are required — `github.token` covers every case.

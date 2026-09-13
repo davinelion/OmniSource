@@ -4,11 +4,11 @@
 
 1. Keep existing `catalog.json` entries. They remain the hand-maintained source
    declaration and are backward compatible with `apps.json`.
-2. Run `python3 scripts/derived/build_canonical.py` to create canonical app
+2. Run `python3 scripts/build_canonical.py` to create canonical app
    identities and inspect `data/canonical_apps.json`.
-3. Run `python3 scripts/derived/build_release_history.py` to create the
+3. Run `python3 scripts/build_release_history.py` to create the
    append-only release ledger.
-4. Run `python3 scripts/derived/enrich_metadata.py` to normalize metadata.
+4. Run `python3 scripts/enrich_metadata.py` to normalize metadata.
 5. Build `data/source_registry.json` and intelligence with:
 
    ```bash

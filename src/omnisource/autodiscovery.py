@@ -74,12 +74,19 @@ def utcnow() -> str:
 
 
 def source_id_for_url(url: str) -> str:
-    """Stable, filesystem-safe identifier derived from a feed URL."""
+    """Stable, filesystem-safe identifier derived from a feed URL.
+
+    The result always satisfies ``SOURCE_ID_RE`` (and therefore
+    ``schemas/discovery.schema.json``): every component is reduced to
+    ``[a-z0-9-]``, the id is capped at 80 characters and never ends on a
+    separator. Hostnames are sanitized like the path stem, so an IDN or an
+    otherwise exotic host yields a valid id instead of a quarantined record.
+    """
     parsed = urllib.parse.urlparse(url)
-    host = (parsed.hostname or "feed").lower().replace(".", "-")
+    host = re.sub(r"[^a-z0-9-]+", "-", (parsed.hostname or "feed").lower()).strip("-") or "feed"
     digest = hashlib.sha256(url.encode("utf-8")).hexdigest()[:10]
     stem = re.sub(r"[^a-z0-9-]+", "-", parsed.path.strip("/").lower()).strip("-") or "root"
-    return f"{host}-{stem[:32]}-{digest}"[:80]
+    return f"{host}-{stem[:32]}-{digest}"[:80].rstrip("-")
 
 
 def new_record(

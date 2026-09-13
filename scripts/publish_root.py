@@ -46,6 +46,9 @@ from omnisource.site import (
     API_V2_APPS_ROUTE,
     API_V2_CONTRACT,
     API_V2_STANDALONE,
+    ROOT_EXTERNALLY_PUBLISHED,
+    ROOT_GENERATED_FILES,
+    ROOT_HAND_MAINTAINED,
     publish_repo_artifacts,
 )
 
@@ -66,10 +69,12 @@ def find_stale_mirror_files() -> list[str]:
         stale.append("apps.json")
 
     # A root JSON/XML the publisher no longer owns is stale: the publisher
-    # prunes it on the next run.
-    # The root security report is a deliberate machine-readable publication
-    # artifact, maintained by the security workflow alongside data/security.json.
-    owned = {"apps.json", "catalog.json", "security-report.json", "sitemap.xml"}
+    # prunes it on the next run. The ownership sets come from site.py itself so
+    # this report and the prune can never disagree again — that drift is what
+    # made a build delete the root security report (a machine-readable
+    # publication artifact the security workflow maintains alongside
+    # data/security.json) and sync.yml commit the deletion.
+    owned = {*ROOT_GENERATED_FILES, *ROOT_HAND_MAINTAINED, *ROOT_EXTERNALLY_PUBLISHED}
     for path in sorted(REPO_ROOT.glob("*")):
         if path.is_file() and path.suffix.lower() in {".json", ".xml"} and path.name not in owned:
             stale.append(f"{path.name} (stale root copy)")

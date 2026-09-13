@@ -45,6 +45,19 @@ def make_sync_report():
     )
 
 
+def make_idle_sync_report():
+    """The report of a build that never contacted an upstream (--no-sync)."""
+    return SimpleNamespace(
+        apps_synced=0,
+        apps_incremental_hit=0,
+        apps_updated=0,
+        apps_failed=0,
+        api_requests=0,
+        updates=[],
+        errors=[],
+    )
+
+
 class TestBuildReport(unittest.TestCase):
     def test_snapshot_shape(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -186,6 +199,53 @@ class TestWriteReports(unittest.TestCase):
             self.assertEqual(write_reports(**kwargs), [])
             after = {name: (root / "reports" / name).read_bytes() for name in ("latest.json", "history.json")}
             self.assertEqual(before, after)
+
+    def _prepared_root(self, tmp: str) -> tuple[Path, Path, dict]:
+        root = Path(tmp)
+        feeds = root / "feeds"
+        (feeds / "api" / "v2").mkdir(parents=True)
+        (feeds / "api" / "v2" / "manifest.json").write_text(json.dumps({"feedVersion": "abc123"}), encoding="utf-8")
+        base = {"root": root, "feeds_dir": feeds, "health_doc": make_health(), "analytics_doc": make_analytics()}
+        return root, feeds, base
+
+    def test_offline_rebuild_carries_the_last_sync_forward(self):
+        # A rebuild (--no-sync) has no telemetry of its own. Zeroing the
+        # run-scoped blocks is what made scripts/check_reproducible.py fail
+        # after every scheduled sync — and erased what that sync had done.
+        with tempfile.TemporaryDirectory() as tmp:
+            root, _feeds, base = self._prepared_root(tmp)
+            write_reports(sync_report=make_sync_report(), **base)
+            after_sync = {name: (root / "reports" / name).read_bytes() for name in ("latest.json", "history.json")}
+
+            changed = write_reports(sync_report=make_idle_sync_report(), sync_ran=False, **base)
+
+            self.assertEqual(changed, [], "an offline rebuild must not touch the monitoring ledger")
+            after_rebuild = {name: (root / "reports" / name).read_bytes() for name in ("latest.json", "history.json")}
+            self.assertEqual(after_sync, after_rebuild)
+            report = json.loads((root / "reports" / "latest.json").read_text(encoding="utf-8"))
+            self.assertEqual(report["sync"]["apiRequests"], 12)
+            self.assertEqual(report["errors"], ["boom"])
+            self.assertEqual(len(report["updates"]), 1)
+            history = json.loads((root / "reports" / "history.json").read_text(encoding="utf-8"))
+            self.assertEqual(len(history["history"]), 1, "a rebuild must not append a fake zero row")
+
+    def test_a_real_sync_still_reports_its_own_telemetry(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root, _feeds, base = self._prepared_root(tmp)
+            write_reports(sync_report=make_sync_report(), **base)
+            write_reports(sync_report=make_idle_sync_report(), **base)
+            report = json.loads((root / "reports" / "latest.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["sync"]["apiRequests"], 0)
+        self.assertEqual(report["errors"], [])
+        self.assertEqual(report["updates"], [])
+
+    def test_carry_forward_without_a_previous_report_degrades_to_zero(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root, _feeds, base = self._prepared_root(tmp)
+            write_reports(sync_report=make_idle_sync_report(), sync_ran=False, **base)
+            report = json.loads((root / "reports" / "latest.json").read_text(encoding="utf-8"))
+        self.assertEqual(report["sync"]["synced"], 0)
+        self.assertEqual(report["errors"], [])
 
 
 if __name__ == "__main__":

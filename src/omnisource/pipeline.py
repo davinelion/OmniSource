@@ -903,7 +903,10 @@ def run(
     # Monitoring ledger: per-build snapshot + rolling history. Written from
     # the same deterministic inputs as the feeds, so a rebuild from
     # committed state is a byte-level no-op (consecutive identical history
-    # rows are skipped).
+    # rows are skipped). A run that did not sync has no telemetry of its own,
+    # so it carries the last sync's counters/updates/errors forward instead of
+    # resetting them — otherwise the reproducibility gate in sync.yml fails on
+    # every scheduled run and erases what the sync actually did.
     with Group("Write monitoring reports"):
         changed.extend(
             write_reports(
@@ -912,6 +915,7 @@ def run(
                 health_doc=health_doc,
                 analytics_doc=analytics_doc,
                 sync_report=report,
+                sync_ran=not no_sync,
             )
         )
 

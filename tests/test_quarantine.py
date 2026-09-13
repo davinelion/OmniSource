@@ -69,6 +69,19 @@ class QuarantineLifecycleTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 store.transition("example-source", PUBLISHED)
 
+    def test_untrusted_reputation_is_coerced_not_fatal(self) -> None:
+        # Discovered records are untrusted input: int("high") used to raise
+        # inside the fail-closed quarantine path, so a malformed candidate
+        # crashed the gate instead of being isolated.
+        for value, expected in (("high", 0), (None, 0), ("55", 55), (550, 100), (-4, 0), (55.9, 55)):
+            candidate = self._candidate()
+            candidate["reputation"] = value
+            with tempfile.TemporaryDirectory() as directory, self.subTest(value=value):
+                store = QuarantineStore(Path(directory))
+                result = validate_candidates([candidate], lambda _record: ["bad feed"], store)
+                self.assertEqual(result.accepted, [])
+                self.assertEqual(store.get("example-source")["reputation_score"], expected)
+
 
 if __name__ == "__main__":
     unittest.main()

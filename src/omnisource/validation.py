@@ -28,6 +28,11 @@ REQUIRED_APP_FIELDS = ("name", "bundleIdentifier", "developerName", "version", "
 REQUIRED_VERSION_FIELDS = ("version", "date", "downloadURL", "size", "localizedDescription")
 REQUIRED_CATALOG_FIELDS = ("slug", "name", "bundleIdentifier", "developerName", "icon", "status", "compatibility")
 SLUG_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,31}$")
+# Discovery source ids are derived from a feed URL (host + path stem + digest,
+# see autodiscovery.source_id_for_url) and are bounded by
+# schemas/discovery.schema.json — not by the 32-char catalog app slug rule.
+# Validating them with SLUG_RE rejected every URL-derived id.
+SOURCE_ID_RE = re.compile(r"^[a-z0-9][a-z0-9-]{1,79}$")
 BUNDLE_RE = re.compile(r"^[A-Za-z0-9.-]+$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}(?:[Tt ]\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:[Zz]|[+-]\d{2}:?\d{2})?)?$")
 TINT_RE = re.compile(r"^[0-9A-Fa-f]{6}$")
