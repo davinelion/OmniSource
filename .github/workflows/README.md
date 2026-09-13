@@ -60,7 +60,11 @@ build-uyouenhanced.yml   merge.yml (scripts/merge_feeds.py)
 - Every multi-line `run:` block starts with `set -euo pipefail`.
 - All shell variables are quoted; word-splitting uses arrays (`"${ARGS[@]}"`).
 - Workflow inputs / step outputs reach the shell through `env:` only — never
-  interpolate `${{ }}` into `run:` scripts (script injection).
+  interpolate `${{ }}` into `run:` scripts (script injection). Actions expands
+  those expressions *before* the shell runs and `actionlint` parses them
+  **including inside shell comments**, so do not write an example expression in
+  a comment there either: an empty or malformed one fails the Validate lint
+  gate. Read values from `GITHUB_EVENT_PATH` with `jq` instead.
 - Dispatch inputs are validated (https-only URLs, character allowlists) and
   sanitized before use in artifact names.
 - Minimal `permissions`, `concurrency` groups and `timeout-minutes` everywhere.
