@@ -52,9 +52,9 @@
     "description": "Add the OmniSource feed to a sideloading client and install curated iOS apps.",
     "totalTime": "PT5M",
     "step": [
-      { "@type": "HowToStep", "position": 1, "name": "Install a sideloading client", "text": "Install AltStore, SideStore, Feather, ESign or LiveContainer on your iPhone." },
-      { "@type": "HowToStep", "position": 2, "name": "Add the OmniSource source", "text": "Use the one-tap deep link for AltStore, SideStore or Feather, or paste the feed URL in ESign and LiveContainer." },
-      { "@type": "HowToStep", "position": 3, "name": "Install apps", "text": "Browse the OmniSource catalog and install any app. Updates refresh on every six-hour sync." }
+      { "@type": "HowToStep", "position": 1, "name": "Install a sideloading client", "text": "Install AltStore, SideStore, Feather, ESign or LiveContainer on your iPhone. AltStore Classic needs AltServer on a computer; SideStore needs one only for this first install." },
+      { "@type": "HowToStep", "position": 2, "name": "Add the OmniSource source", "text": "Every client has a one-tap link that opens its Add Source screen. If nothing opens, the client is not installed yet: copy the feed URL and add it under Sources instead." },
+      { "@type": "HowToStep", "position": 3, "name": "Install apps", "text": "Browse the OmniSource catalog and install any app. New versions appear when the source next checks for updates; keeping an app installed between updates is the client's job and differs per client." }
     ]
   }
   </script>
@@ -166,7 +166,7 @@
       <h2>Good to know</h2>
       <div class="grid-2 mt-3" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
         <div class="stack-sm">
-          <p class="text-muted" style="line-height:1.65"><b style="color:var(--text)">Re-signing cadence.</b> Free Apple Developer accounts re-sign every 7 days; paid developer accounts extend that to 90 days. Your client handles the refresh — AltStore, SideStore and Feather can refresh over Wi-Fi or via a desktop companion.</p>
+          <p class="text-muted" style="line-height:1.65"><b style="color:var(--text)">Re-signing cadence.</b> A free Apple Account re-signs every 7 days and holds two apps beside the client itself; a paid developer account extends that to 90 days. AltStore and SideStore refresh for you — AltStore over Wi-Fi via its desktop companion, SideStore on-device through its local VPN. Feather and ESign sign on demand, so re-signing an app that ran out of days is a manual tap. Apps installed inside LiveContainer ride on its signature instead of using a slot of their own.</p>
           <p class="text-muted" style="line-height:1.65"><b style="color:var(--text)">Shared bundle IDs.</b> YouTube-family apps (YTLite, YouPro, uYouEnhanced…) share one bundle identifier — installing a new one replaces the previous. The catalog flags these conflicts.</p>
         </div>
         <div class="stack-sm">

@@ -218,6 +218,12 @@
           renderFavorites([]);
         }
 
+        function esc(value) {
+          return String(value == null ? '' : value)
+            .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
         function renderFavorites(catalog) {
           var content = document.getElementById('favorites-content');
           var pill = document.getElementById('favCountPill');
@@ -257,7 +263,13 @@
               var name = a.name || a.localizedDescription || a.slug;
               var dev = a.developerName || a.developer || '';
               var ver = a.version || (a.versions && a.versions[0] && a.versions[0].version) || '';
-              return '<article class="app-card" data-reveal><div class="card-top"><div class="icon-wrap"><img class="app-icon" src="'+icon+'" alt=""></div><div class="card-identity"><h3>'+ name +'</h3><p class="card-dev">'+ dev +'</p></div></div><p class="app-description">'+ (a.subtitle || a.localizedDescription || '').slice(0,120) +'</p><div class="card-bottom"><span class="badge">'+ ver +'</span><span class="get-button" data-slug="'+ (a.slug||'') +'">View</span></div></article>';
+              var slug = a.slug || a.id || '';
+              var href = slug ? '../apps/' + encodeURIComponent(slug) + '/' : '#';
+              // View is a link, not a span with a data attribute: this page
+              // never loads js/site.js, so there is no openApp() to call and a
+              // data-slug hook would do nothing when tapped. apps/<slug>/ is
+              // the same detail view and needs no JS at all.
+              return '<article class="app-card" data-reveal><div class="card-top"><div class="icon-wrap"><img class="app-icon" src="'+ esc(icon) +'" alt=""></div><div class="card-identity"><h3><a href="'+ esc(href) +'">'+ esc(name) +'</a></h3><p class="card-dev">'+ esc(dev) +'</p></div></div><p class="app-description">'+ esc((a.subtitle || a.localizedDescription || '').slice(0,120)) +'</p><div class="card-bottom"><span class="badge">'+ esc(ver) +'</span><a class="get-button" href="'+ esc(href) +'">View</a></div></article>';
             }).join('');
           }
           content.innerHTML = '<div class="apps-grid">' + gridHtml + '</div>';

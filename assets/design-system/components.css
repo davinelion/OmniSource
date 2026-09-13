@@ -3097,6 +3097,21 @@ a.ap-source-link:focus-visible {
 }
 .client-head h3 { font-size: 17.5px; letter-spacing: -0.02em; }
 .client-head .client-badge { margin-left: auto; }
+/* What the client is, straight from feeds/install.json. Every client gets the
+   same slot, so ESign and LiveContainer are described as thoroughly as
+   AltStore instead of inheriting its wording. */
+.client-about { margin: 5px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; max-width: 46ch; }
+.client-needs {
+  margin: 0;
+  padding: 9px 12px;
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.client-needs b { color: var(--text); font-weight: 700; }
 .client-steps { list-style: none; margin: 0; padding: 0; counter-reset: step; display: grid; gap: 11px; }
 .client-steps li {
   display: flex;

@@ -9,7 +9,7 @@ from __future__ import annotations
 
 from typing import Any
 
-from omnisource.domain import App, Catalog
+from omnisource.domain import App, Catalog, today
 
 
 def render_altstore_app(
@@ -97,13 +97,30 @@ def feed_envelope(
     }
 
 
-def render_health_doc(rendered: list[tuple[App, dict[str, Any]]]) -> dict[str, Any]:
+def render_health_doc(rendered: list[tuple[App, dict[str, Any]]], *, generated_at: str | None = None) -> dict[str, Any]:
+    """Render the flat ``feeds/health.json`` document.
+
+    ``generatedAt`` is when this document was built, not the newest date found in
+    the data. The health document is a product of a run — the monitoring
+    staleness check (``SYNC_STALE_DAYS`` in health-check.yml) and the README's
+    "Last sync" line both read it as "when was this recomputed", and a
+    data-derived stamp made a healthy source look stale during any quiet week
+    (and could even move *backwards* when the newest app was removed).
+    ``lastEventAt`` keeps the value that used to be here for readers that want
+    the newest release or status change across the apps.
+    """
     reachable = sum(1 for _, entry in rendered if entry["omnisource"]["health"]["downloadReachable"])
+    events = [
+        stamp
+        for stamp in (
+            [str(entry["omnisource"]["health"].get("statusSince") or "") for _, entry in rendered]
+            + [str(entry.get("versionDate") or "") for _, entry in rendered]
+        )
+        if stamp
+    ]
     return {
-        "generatedAt": max(
-            [entry["omnisource"]["health"]["statusSince"] for _, entry in rendered]
-            + [entry["versionDate"] for _, entry in rendered]
-        ),
+        "generatedAt": generated_at or today(),
+        "lastEventAt": max(events, default=""),
         "totals": {
             "apps": len(rendered),
             "reachable": reachable,

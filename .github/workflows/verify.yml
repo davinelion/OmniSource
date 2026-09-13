@@ -1,0 +1,166 @@
+# -----------------------------------------------------------------------------
+# Weekly full-integrity pass (layer 2 of src/omnisource/integrity.py).
+#
+# Every build verifies *metadata* offline: a recorded digest that is not a
+# 64-char hex string, a zero-byte asset, a primary download that is not an IPA.
+# A digest *mismatch* can only be proven by reading the bytes, so that half of
+# the engine - stream each published asset, SHA-256/SHA-512 it, compare the byte
+# count - had no caller outside a manual `--verify-downloads` run. The result is
+# that `lastFullVerification` was absent from every entry of feeds/state.json,
+# so the published integrity report only ever reflected the metadata rules while
+# docs/SECURITY-REPORT.md described an active weekly checker.
+#
+# This job is that checker. It rebuilds from committed state (no upstream API
+# calls), verifies, and commits the two documents the verdict lives in. The
+# pipeline exits non-zero when an asset is rejected, so a broken or swapped
+# download fails this run instead of being recorded quietly.
+# -----------------------------------------------------------------------------
+name: Verify Downloads
+
+on:
+  schedule:
+    # Monday 07:00 UTC: after the daily publish pass, off the sync cadence, and
+    # far enough from the weekend that a failure is triaged on a working day.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Optional: verify only these app slugs (space separated)"
+        required: false
+        default: ""
+      sync_first:
+        description: "Sync upstream releases before verifying (slower, hits provider APIs)"
+        type: boolean
+        required: false
+        default: false
+
+# One verifier at a time: two concurrent runs would both rewrite feeds/state.json
+# and race each other's commit. Cancelling midway is never allowed.
+concurrency:
+  group: verify-downloads
+  cancel-in-progress: false
+
+# Read-only by default; the job opts into what it needs (same shape as sync.yml).
+permissions: {}
+
+jobs:
+  verify:
+    name: Hash every published asset
+    runs-on: ubuntu-latest
+    # 94 assets, streamed at 4-way concurrency with a 300s-per-download ceiling:
+    # a slow CDN leg can stretch well past the default 15-minute job timeout.
+    timeout-minutes: 120
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # src/omnisource is stdlib-only on purpose: no pip install, no third-party
+      # code running with a write-scoped token.
+      #
+      # --no-sync is the point, not an optimisation: this job verifies *what is
+      # published right now*, so it must read the committed state rather than a
+      # fresh upstream view that could differ from the feeds a client installed.
+      # --no-health keeps the link prober out of the way - this pass reaches the
+      # same URLs for real, and a HEAD probe adds nothing to that.
+      - name: Verify downloads
+        env:
+          SLUGS: ${{ inputs.slugs }}
+          SYNC_FIRST: ${{ inputs.sync_first }}
+        run: |
+          set -euo pipefail
+          ARGS=(--verify-downloads --no-health)
+          if [ "${SYNC_FIRST}" != "true" ]; then
+            ARGS+=(--no-sync)
+          fi
+          # Inputs arrive through env: above, never as an action expression in
+          # this script; the loop is deliberately unquoted to word-split a
+          # space-separated slug list.
+          for slug in ${SLUGS:-}; do
+            ARGS+=(--only "${slug}")
+          done
+          python3 scripts/omnisource.py "${ARGS[@]}"
+
+      # The integrity report is a validated artifact; a run that produces a
+      # structurally wrong document must not commit it.
+      - name: Validate output
+        run: |
+          set -euo pipefail
+          python3 scripts/validate.py
+
+      - name: Show verification summary
+        if: always()
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          report = json.loads(Path("feeds/integrity_report.json").read_text(encoding="utf-8"))
+          totals = report.get("totals", {})
+          entries = [item for item in report.get("apps", []) if isinstance(item, dict)]
+          verified = [item for item in entries if isinstance(item.get("fullVerification"), dict)]
+          mismatched = [item for item in verified if item["fullVerification"].get("ok") is False]
+
+          print("## Full-integrity verification")
+          print()
+          print(f"- apps in report: {totals.get('apps', 'n/a')}")
+          print(f"- metadata pass/warn/fail: {totals.get('pass')}/{totals.get('warn')}/{totals.get('fail')}")
+          print(f"- assets hashed this run: {len(verified)}")
+          print(f"- digest or size mismatches: {len(mismatched)}")
+          for item in report.get("rejected", [])[:20]:
+              print(f"- REJECTED {item.get('slug')}: {', '.join(item.get('reasons') or [])}")
+          if verified and not mismatched:
+              print()
+              print("Every hashed asset matched the digest and byte count on record.")
+          if not verified:
+              print()
+              print("::warning::no app carries a lastFullVerification record - the verify pass did not run")
+          PY
+
+      # Deliberately narrow: this job owns the verification record and the
+      # document derived from it, nothing else. The date fields of the other
+      # feeds were refreshed by the rebuild above and are left dirty - the next
+      # sync run commits them, which keeps this job out of the docs churn.
+      - name: Commit verification results
+        id: commit
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- feeds/state.json feeds/integrity_report.json \
+            'api/integrity_report.json' 'api/integrity_report.json.gz'
+          if git diff --cached --quiet; then
+            echo "No verification changes."
+            exit 0
+          fi
+          git commit -m "chore(integrity): weekly download verification [skip ci]"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash origin "${GITHUB_REF_NAME}"; then
+              break
+            fi
+            if [ "${attempt}" -eq 3 ]; then
+              echo "::error::git pull --rebase failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 5))
+          done
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              break
+            fi
+            if [ "${attempt}" -eq 3 ]; then
+              echo "::error::git push failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 5))
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          done

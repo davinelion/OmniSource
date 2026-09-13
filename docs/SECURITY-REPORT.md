@@ -29,7 +29,11 @@ observable and fails closed on evidence of corruption.
 - SHA-256 and SHA-512 metadata is checked for format and coverage. The optional
   `--verify-downloads` security mode streams each HTTPS binary in bounded
   chunks, computes both hashes, checks size, and records mismatches as
-  critical findings.
+  critical findings. The same pass runs on a schedule as
+  `.github/workflows/verify.yml` (weekly), which also writes
+  `lastFullVerification` into `feeds/state.json` so the integrity report can
+  distinguish "digest format looks right" from "digest was checked against the
+  downloaded bytes".
 - Mirror failover uses only declared, recorded URLs and never invents a
   replacement download.
 - Generated files are written atomically and checked for reproducibility.
@@ -48,8 +52,9 @@ Regenerate it with:
 
 ```bash
 python3 scripts/security/scan.py
-# expensive weekly binary verification:
+# expensive binary verification — also what the weekly verify.yml job runs:
 python3 scripts/security/scan.py --verify-downloads
+python3 scripts/omnisource.py --no-sync --no-health --verify-downloads  # records the verdict in state
 ```
 
 ## Threat model and residual risk

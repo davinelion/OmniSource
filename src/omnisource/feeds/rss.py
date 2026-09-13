@@ -9,25 +9,56 @@ from __future__ import annotations
 
 import html
 from datetime import UTC, datetime
+from email.utils import parsedate_to_datetime
 from typing import Any
 
 from omnisource.domain import Catalog
 
 
 def _rfc822_date(date_str: str) -> str:
-    """Format an ISO date string (YYYY-MM-DD or full timestamp) as RFC 822."""
+    """Format an ISO date string (YYYY-MM-DD or full timestamp) as RFC 822.
+
+    Returns ``""`` for a missing or unparsable date rather than substituting the
+    current time. An RSS ``<pubDate>`` is a claim about when the *item* was
+    published; stamping an unknown date with "now" both states something the
+    builder does not know and makes the rendered file depend on the wall clock.
+    Both elements are optional in RSS 2.0, so "no date" renders as no element.
+    """
+    if not date_str:
+        return ""
     try:
         if "T" in date_str or " " in date_str:
             dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
         else:
             dt = datetime.strptime(date_str[:10], "%Y-%m-%d").replace(tzinfo=UTC)
-        return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
-    except Exception:
-        return datetime.now(UTC).strftime("%a, %d %b %Y %H:%M:%S +0000")
+    except ValueError:
+        return ""
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=UTC)
+    return dt.strftime("%a, %d %b %Y %H:%M:%S +0000")
 
 
-def _now_rfc822() -> str:
-    return datetime.now(UTC).strftime("%a, %d %b %Y %H:%M:%S +0000")
+def _newest_date(items: list[dict[str, Any]]) -> str:
+    """Newest ``date`` among ``items``, or ``""`` when none carry one.
+
+    Compared as datetimes because RFC 822 leads with the weekday: a lexicographic
+    ``max`` would rank ``Fri,`` above ``Mon,`` regardless of the year and pick an
+    arbitrary item as the channel's build date.
+    """
+    newest: tuple[datetime, str] | None = None
+    for item in items:
+        raw = str(item.get("date") or "")
+        if not raw:
+            continue
+        try:
+            when = parsedate_to_datetime(raw)
+        except (TypeError, ValueError):
+            continue
+        if when.tzinfo is None:
+            when = when.replace(tzinfo=UTC)
+        if newest is None or when > newest[0]:
+            newest = (when, raw)
+    return newest[1] if newest else ""
 
 
 def _collect_items(
@@ -119,7 +150,15 @@ def _render_channel(
     self_link: str,
     items: list[dict[str, Any]],
 ) -> str:
-    """Render an RSS 2.0 channel with a CDATA description per item."""
+    """Render an RSS 2.0 channel with a CDATA description per item.
+
+    Pure by design: the same catalog and state always render the same bytes. The
+    channel's ``<lastBuildDate>`` is therefore the newest item date, not the
+    moment the renderer ran — the previous ``_now_rfc822()`` stamp made every
+    feed churn on a rebuild that changed nothing (the docs bot committed 95
+    re-dated ``feeds/<slug>.xml`` files on a day with a single app update), and
+    it broke the build's own reproducibility guarantee.
+    """
     item_xml_lines: list[str] = []
     for item in items:
         esc_title = html.escape(item["title"])
@@ -132,16 +171,18 @@ def _render_channel(
             size = item.get("size", 0)
             enclosure = f'\n      <enclosure url="{esc_dl}" length="{size}" type="application/octet-stream" />'
 
+        pub_date = f"\n      <pubDate>{item['date']}</pubDate>" if item.get("date") else ""
         item_xml_lines.append(
             f"""    <item>
       <title>{esc_title}</title>
       <link>{esc_link}</link>
-      <guid isPermaLink="false">{esc_guid}</guid>
-      <pubDate>{item["date"]}</pubDate>
+      <guid isPermaLink="false">{esc_guid}</guid>{pub_date}
       <description>{esc_desc}</description>{enclosure}
     </item>"""
         )
 
+    newest = _newest_date(items)
+    last_build_line = f"    <lastBuildDate>{newest}</lastBuildDate>\n" if newest else ""
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -149,8 +190,7 @@ def _render_channel(
     <link>{html.escape(link)}</link>
     <description>{html.escape(description)}</description>
     <language>en-us</language>
-    <lastBuildDate>{_now_rfc822()}</lastBuildDate>
-    <atom:link href="{html.escape(self_link)}" rel="self" type="application/rss+xml"/>
+{last_build_line}    <atom:link href="{html.escape(self_link)}" rel="self" type="application/rss+xml"/>
 {chr(10).join(item_xml_lines)}
   </channel>
 </rss>

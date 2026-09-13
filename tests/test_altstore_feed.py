@@ -126,6 +126,24 @@ class TestAltStoreFeed(unittest.TestCase):
         self.assertEqual(doc["totals"]["reachable"], 1)
         self.assertEqual(doc["totals"]["unreachable"], 0)
 
+    def test_health_generated_at_is_the_build_date(self) -> None:
+        # The stamp used to be max(statusSince, versionDate) across the apps, so
+        # a source with nothing new this week read as a stale sync.
+        app = App(slug="test", raw={"slug": "test", "name": "Test", "icon": "Test.png"})
+        entry = {
+            "version": "1.0",
+            "versionDate": "2026-01-04",
+            "size": 1000,
+            "omnisource": {
+                "featured": False,
+                "health": {"downloadReachable": True, "detail": "HTTP 200", "statusSince": "2026-01-04"},
+            },
+        }
+        doc = render_health_doc([(app, entry)], generated_at="2026-09-13")
+        self.assertEqual(doc["generatedAt"], "2026-09-13")
+        self.assertEqual(doc["lastEventAt"], "2026-01-04")
+        self.assertEqual(render_health_doc([], generated_at="2026-09-13")["lastEventAt"], "")
+
     def test_render_news_items(self) -> None:
         state = {
             "spotiflac": {

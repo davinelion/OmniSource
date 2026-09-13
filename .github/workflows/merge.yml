@@ -22,14 +22,85 @@ concurrency:
   group: merge-feeds
   cancel-in-progress: false
 
-permissions:
-  contents: write
+# Read-only by default, like sync.yml and publish.yml: only the job that commits
+# opts in. This workflow also runs on `pull_request`, and a PR job has no
+# legitimate use for a write token - feeds/*.json is precisely the path a
+# workflow-triggered push can loop back through, so the blast radius of a
+# compromised step here is the whole feed tree.
+permissions: {}
 
 jobs:
-  merge:
-    name: Rebuild apps.json from feeds/
+  # The check half of the trigger: a feed PR gets the same merge + validate +
+  # reproducibility gate as the push path, and is told when apps.json is not
+  # what merge_feeds.py produces. validate.yml validates the *committed* files,
+  # so without this job nothing exercises the merge on a PR until it lands.
+  check:
+    name: Check merged feeds
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 5
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Merge modular feeds into apps.json
+        run: |
+          set -euo pipefail
+          python3 scripts/merge_feeds.py
+
+      - name: Publish repository-root URLs
+        run: |
+          set -euo pipefail
+          python3 scripts/publish_root.py
+
+      - name: Run unit tests
+        run: |
+          set -euo pipefail
+          python3 -m unittest discover -s tests
+
+      - name: Validate merged feeds
+        run: |
+          set -euo pipefail
+          python3 scripts/validate.py
+          bash scripts/validate_jq.sh
+
+      # No check_reproducible.py here on purpose: validate.yml already runs that
+      # gate on every PR (including this one), and repeating it would report the
+      # same failure twice from two workflows. What this job adds is the
+      # feeds/*.json-specific assertion below, which the repo-wide gate cannot
+      # make: merge_feeds.py --check only compares merge *inputs*, and the
+      # pipeline overwrites those files after the merge, so "apps.json equals
+      # merge output" is verified nowhere else.
+      #
+      # Nothing is committed on a PR, so the rebuild's own output is the diff to
+      # check: any change means the branch carries a hand-edited apps.json.
+      - name: Fail when apps.json is not the merge output
+        run: |
+          set -euo pipefail
+          paths=(feeds/apps.json apps.json api/apps.json api/apps api/apps.json.gz api/apps.gz)
+          if ! git diff --quiet -- "${paths[@]}"; then
+            echo "::error::apps.json (and its published copies) is not what scripts/merge_feeds.py produces from feeds/*.json on this branch."
+            echo "Run: python3 scripts/merge_feeds.py && python3 scripts/publish_root.py, then commit the result."
+            git status --porcelain -- "${paths[@]}"
+            exit 1
+          fi
+          echo "apps.json matches the modular feeds."
+
+  merge:
+    name: Rebuild apps.json from feeds/
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v4

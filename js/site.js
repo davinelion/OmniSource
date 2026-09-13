@@ -50,7 +50,12 @@
     os: 'any',
     sort: 'featured',
     activeApp: null,
-    activeTab: 'about'
+    activeTab: 'about',
+    /* `loaded` flips once the first-paint feeds and the catalog metadata are
+       in, which lets openApp() tell "this app is not in the catalog" from "the
+       catalog has not arrived yet" (see state.pendingOpen). */
+    loaded: false,
+    pendingOpen: null
   };
 
   /* Favorites are shared with js/features.js (favorites/collections pages).
@@ -555,17 +560,137 @@
       '</div></article>';
   }
 
+  /* ------------------------------------------------------ catalog bindings
+     Delegated interaction handlers for the catalog: attached to `document`
+     (which always exists) instead of to the grid, and attached on DOM-ready
+     instead of at the end of the data pipeline.
+
+     They used to live inside Home.renderCatalog(), which only runs once
+     apps.json, every first-paint feed and catalog.json have resolved. The
+     deferred feeds already repaint the catalog through refreshPage() by then,
+     so the cards were on screen with no listener attached at all: tapping VIEW
+     did nothing until the rest of the boot chain finished - a second or two on
+     a fast connection, the full fetch timeout on a slow one, and for the rest
+     of the session if any earlier renderer threw (the boot catch clears the
+     grid, a deferred refresh then repaints it unbound). Delegating on document
+     and binding before the first request removes the ordering dependency
+     entirely: a painted card is an interactive card. */
+  function bindCatalog() {
+    var root = document.documentElement;
+    if (root.dataset.osCatalogBound) return;
+    root.dataset.osCatalogBound = '1';
+
+    var searchInput = $('#searchInput');
+    if (searchInput && !searchInput._osBound) {
+      // Debounced: filtering 94 cards is cheap, rebuilding the DOM on every
+      // keystroke still causes layout churn and drops hover states.
+      searchInput._osBound = true;
+      var searchTimer = null;
+      searchInput.addEventListener('input', function () {
+        var value = this.value;
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(function () {
+          state.query = value;
+          Home.filterAndRender();
+        }, 110);
+      });
+      searchInput.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && state.query) {
+          clearTimeout(searchTimer);
+          state.query = '';
+          searchInput.value = '';
+          Home.filterAndRender();
+        }
+      });
+    }
+
+    document.addEventListener('change', function (event) {
+      var select = event.target;
+      if (!select || !select.matches) return;
+      if (select.matches('#sortSelect')) {
+        state.sort = select.value;
+        Home.filterAndRender();
+        return;
+      }
+      if (select.matches('#osSelect')) {
+        state.os = select.value === 'any' ? 'any' : Number(select.value);
+        Home.filterAndRender();
+      }
+    });
+
+    document.addEventListener('click', function (event) {
+      var target = event.target;
+      if (!target || !target.closest) return;
+
+      if (target.closest('#clearFilters') || target.closest('#emptyClear')) {
+        Home.clearFilters();
+        return;
+      }
+
+      var chip = target.closest('[data-kind]');
+      if (chip && chip.closest('.filter-groups')) {
+        if (chip.dataset.kind === 'category') state.category = state.category === chip.dataset.id ? 'all' : chip.dataset.id;
+        if (chip.dataset.kind === 'status') state.statusFilter = state.statusFilter === chip.dataset.id ? 'all' : chip.dataset.id;
+        if (chip.dataset.kind === 'provenance') state.provenance = state.provenance === chip.dataset.id ? 'all' : chip.dataset.id;
+        Home.renderFilters();
+        Home.filterAndRender();
+        return;
+      }
+
+      var grid = $('#appsGrid');
+      if (!grid || !grid.contains(target)) return;
+
+      var favorite = target.closest('[data-favorite]');
+      if (favorite) {
+        event.preventDefault();
+        event.stopPropagation();
+        var saved = favorite.dataset.favorite;
+        if (state.favorites.has(saved)) state.favorites.delete(saved); else state.favorites.add(saved);
+        saveFavorites();
+        Home.renderFilters(); // refresh the "Saved" chip count
+        Home.filterAndRender();
+        OS.toast(state.favorites.has(saved) ? 'Saved for later' : 'Removed from saved apps');
+        return;
+      }
+
+      var slug = catalogTargetSlug(target);
+      if (slug) Home.openApp(slug);
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      var target = event.target;
+      if (!target || !target.matches || !target.matches('.app-card')) return;
+      event.preventDefault();
+      Home.openApp(target.dataset.slug);
+    });
+  }
+
+  /* Resolve what a click inside the catalog should open: the explicit VIEW
+     button first (data-open), then the card around it (data-slug). Links
+     inside the card - the app name, PAGE - keep navigating. */
+  function catalogTargetSlug(target) {
+    var trigger = target.closest('[data-open]');
+    if (trigger && trigger.dataset.open) return trigger.dataset.open;
+    if (target.closest('a')) return '';
+    var card = target.closest('[data-slug]');
+    return card && card.dataset.slug ? card.dataset.slug : '';
+  }
+
   /* ------------------------------------------------------------- home page */
   var Home = {
     render: function () {
-      this.renderHero();
-      this.renderRails();
-      this.renderMetrics();
-      this.renderSourceHealth();
-      this.renderInstallGuide();
-      this.renderCatalog();
-      this.renderTimeline();
-      this.renderFooterClients();
+      // Each section is isolated on purpose: a hero that used to throw took
+      // the catalog down with it, and the deferred feeds then repainted a grid
+      // nobody had finished wiring.
+      ['renderHero', 'renderRails', 'renderMetrics', 'renderSourceHealth', 'renderInstallGuide',
+        'renderCatalog', 'renderTimeline', 'renderFooterClients'].forEach(function (name) {
+        try {
+          this[name]();
+        } catch (error) {
+          console.error('OmniSource: ' + name + ' failed', error);
+        }
+      }, this);
     },
 
     renderHero: function () {
@@ -742,86 +867,7 @@
 
     /* ---- catalog --------------------------------------------------------- */
     renderCatalog: function () {
-      var self = this;
-      var searchInput = $('#searchInput');
-      if (searchInput) {
-        // Debounced: filtering 77 cards is cheap, rebuilding the DOM on every
-        // keystroke still causes layout churn and drops hover states.
-        if (!searchInput._osBound) {
-          searchInput._osBound = true;
-          var searchTimer = null;
-          searchInput.addEventListener('input', function () {
-            var value = this.value;
-            clearTimeout(searchTimer);
-            searchTimer = setTimeout(function () {
-              state.query = value;
-              self.filterAndRender();
-            }, 110);
-          });
-          searchInput.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && state.query) {
-              clearTimeout(searchTimer);
-              state.query = '';
-              searchInput.value = '';
-              self.filterAndRender();
-            }
-          });
-        }
-      }
-      var sortSelect = $('#sortSelect');
-      if (sortSelect) {
-        sortSelect.addEventListener('change', function () { state.sort = this.value; self.filterAndRender(); });
-      }
-      var osSelect = $('#osSelect');
-      if (osSelect) {
-        osSelect.addEventListener('change', function () {
-          state.os = this.value === 'any' ? 'any' : Number(this.value);
-          self.filterAndRender();
-        });
-      }
-      var groups = $('.filter-groups');
-      if (groups) {
-        groups.addEventListener('click', function (event) {
-          var chip = event.target.closest ? event.target.closest('[data-kind]') : null;
-          if (!chip) return;
-          if (chip.dataset.kind === 'category') state.category = state.category === chip.dataset.id ? 'all' : chip.dataset.id;
-          if (chip.dataset.kind === 'status') state.statusFilter = state.statusFilter === chip.dataset.id ? 'all' : chip.dataset.id;
-          if (chip.dataset.kind === 'provenance') state.provenance = state.provenance === chip.dataset.id ? 'all' : chip.dataset.id;
-          self.renderFilters();
-          self.filterAndRender();
-        });
-      }
-      var clearButton = $('#clearFilters');
-      if (clearButton) clearButton.addEventListener('click', function () { self.clearFilters(); });
-      var emptyClear = $('#emptyClear');
-      if (emptyClear) emptyClear.addEventListener('click', function () { self.clearFilters(); });
-
-      var grid = $('#appsGrid');
-      if (grid) {
-        grid.addEventListener('click', function (event) {
-          var favorite = event.target.closest ? event.target.closest('[data-favorite]') : null;
-          if (favorite) {
-            event.stopPropagation();
-            var slug = favorite.dataset.favorite;
-            if (state.favorites.has(slug)) state.favorites.delete(slug); else state.favorites.add(slug);
-            saveFavorites();
-            self.renderFilters(); // refresh the "Saved" chip count
-            self.filterAndRender();
-            OS.toast(state.favorites.has(slug) ? 'Saved for later' : 'Removed from saved apps');
-            return;
-          }
-          if (event.target.closest && event.target.closest('a')) return;
-          var card = event.target.closest ? event.target.closest('[data-slug]') : null;
-          if (card) Home.openApp(card.dataset.slug);
-        });
-        grid.addEventListener('keydown', function (event) {
-          if ((event.key === 'Enter' || event.key === ' ') && event.target.matches && event.target.matches('.app-card')) {
-            event.preventDefault();
-            Home.openApp(event.target.dataset.slug);
-          }
-        });
-      }
-
+      bindCatalog();
       this.renderFilters();
       this.filterAndRender();
     },
@@ -1175,19 +1221,31 @@
     var health = healthFor(app);
     var version = (app.versions || [{}])[0];
     var osMajor = minOSMajor(app);
+    // Values are escaped where they are built. The two cells that carry markup
+    // of their own (the copy buttons) opt out through `raw`, which keeps the
+    // rule at the render site simple: nothing reaches innerHTML unescaped by
+    // accident. Feed-supplied fields (developer name, category, health detail)
+    // used to be the exception - they are catalog data today, but they arrive
+    // over the network, so they are escaped like everything else.
     var cells = [
-      ['Version', 'v' + (app.version || '—')],
-      ['Updated', OS.fmtDate(app.versionDate)],
-      ['Size', OS.fmtBytes(app.size)],
-      ['Requires iOS', osMajor !== null ? osMajor + '+' : 'Not listed'],
-      ['Category', categoryLabel(app.category)],
-      ['Developer', app.developerName || '—'],
-      ['Bundle ID', '<button type="button" data-copy="' + OS.esc(app.bundleIdentifier || '') + '">' + OS.esc(app.bundleIdentifier || '—') + ' <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>'],
-      ['Checksum', version.sha256
-        ? '<button type="button" data-copy="' + OS.esc(version.sha256) + '">' + OS.esc(version.sha256.slice(0, 16)) + '…</button>'
-        : 'Not published'],
-      ['Health', (health.downloadReachable ? 'Online' : 'Unavailable') + (health.detail ? ' · ' + OS.esc(health.detail) : '')],
-      ['Last release', OS.timeAgo(app.versionDate) + (health.updatedDaysAgo ? ' (' + health.updatedDaysAgo + 'd)' : '')]
+      ['Version', 'v' + OS.esc(app.version || '—')],
+      ['Updated', OS.esc(OS.fmtDate(app.versionDate))],
+      ['Size', OS.esc(OS.fmtBytes(app.size))],
+      ['Requires iOS', osMajor !== null ? OS.esc(osMajor + '+') : 'Not listed'],
+      ['Category', OS.esc(categoryLabel(app.category))],
+      ['Developer', OS.esc(app.developerName || '—')],
+      {
+        label: 'Bundle ID',
+        raw: '<button type="button" data-copy="' + OS.esc(app.bundleIdentifier || '') + '">' + OS.esc(app.bundleIdentifier || '—') + ' <svg viewBox="0 0 24 24"><rect x="8" y="8" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></button>'
+      },
+      {
+        label: 'Checksum',
+        raw: version.sha256
+          ? '<button type="button" data-copy="' + OS.esc(version.sha256) + '">' + OS.esc(version.sha256.slice(0, 16)) + '…</button>'
+          : 'Not published'
+      },
+      ['Health', OS.esc((health.downloadReachable ? 'Online' : 'Unavailable') + (health.detail ? ' · ' + health.detail : ''))],
+      ['Last release', OS.esc(OS.timeAgo(app.versionDate) + (health.updatedDaysAgo ? ' (' + health.updatedDaysAgo + 'd)' : ''))]
     ];
     var sourceNotes = compatibility.notes;
     var upstreamUrl = meta.upstreamURL ? OS.cleanUrl(meta.upstreamURL) : '#';
@@ -1201,6 +1259,7 @@
     var privacyEntries = privacy ? Object.entries(privacy) : [];
     var legacyPerms = Array.isArray(app.permissions) ? app.permissions : [];
     return '<div class="info-grid">' + cells.map(function (cell) {
+      if (cell.raw !== undefined) return '<div class="info-cell"><span>' + OS.esc(cell.label) + '</span><strong>' + cell.raw + '</strong></div>';
       return '<div class="info-cell"><span>' + OS.esc(cell[0]) + '</span><strong>' + cell[1] + '</strong></div>';
     }).join('') + '</div>' +
       '<div class="detail-section"><h3>Build provenance</h3>' +
@@ -1267,22 +1326,80 @@
       '</div>';
   }
 
+  /* showModal()/close() are missing on older engines (Safari/iOS < 15), where
+     calling them threw - which is one way a tap on VIEW could end with nothing
+     on screen. The [open] attribute renders the dialog the same way, just
+     non-modally, so every call site goes through these two. */
+  function showModal(dialog) {
+    if (!dialog) return;
+    if (typeof dialog.showModal === 'function') dialog.showModal();
+    else dialog.setAttribute('open', '');
+  }
+
+  function hideModal(dialog) {
+    if (!dialog) return;
+    if (typeof dialog.close === 'function') dialog.close();
+    else dialog.removeAttribute('open');
+  }
+
+  /* Opening an app must never be a silent no-op. Three paths used to swallow
+     the tap: the app not being in state.apps yet (the lookup just returned), a
+     page without the dialog markup, and an engine without showModal(). Each one
+     now falls through to the app's generated static detail page, which exists
+     for every catalog entry and carries the same information. */
   Home.openApp = function (slug, tab) {
+    if (!slug) return;
     var app = appForSlug(slug);
-    if (!app) return;
+    if (!app) {
+      if (!state.loaded) {
+        // The feeds are still in flight: remember the tap and replay it once
+        // they land (flushPendingOpen) instead of dropping it on the floor.
+        state.pendingOpen = { slug: slug, tab: tab };
+        return;
+      }
+      Home.openStaticPage(slug);
+      return;
+    }
     state.activeApp = app;
     state.activeTab = tab || 'about';
     var content = $('#dialogContent');
     var dialog = $('#appDialog');
-    if (!content || !dialog) return;
-    content.innerHTML = detailMarkup(app);
-    dialog.showModal();
-    history.replaceState(null, '', '#' + encodeURIComponent(slug));
+    if (!content || !dialog) {
+      Home.openStaticPage(slug);
+      return;
+    }
+    try {
+      content.innerHTML = detailMarkup(app);
+    } catch (error) {
+      console.error('OmniSource: detail render failed', error);
+      Home.openStaticPage(slug);
+      return;
+    }
+    showModal(dialog);
+    try {
+      history.replaceState(null, '', '#' + encodeURIComponent(slug));
+    } catch (error) {
+      /* Sandboxed frame: the hash is a nicety, not the point. */
+    }
   };
+
+  /* The static page generated for one app - the fallback target whenever the
+     dialog cannot be built (no data yet, no dialog on this page, bad render). */
+  Home.openStaticPage = function (slug) {
+    if (!slug) return;
+    location.href = OS.url('apps/' + encodeURIComponent(slug) + '/');
+  };
+
+  function flushPendingOpen() {
+    var pending = state.pendingOpen;
+    if (!pending) return;
+    state.pendingOpen = null;
+    Home.openApp(pending.slug, pending.tab);
+  }
 
   function closeApp() {
     var dialog = $('#appDialog');
-    if (dialog && dialog.open) dialog.close();
+    if (dialog && dialog.open) hideModal(dialog);
     state.activeApp = null;
     if (location.hash && location.hash.charAt(0) === '#') {
       history.replaceState(null, '', location.pathname + location.search);
@@ -1311,7 +1428,7 @@
     $('#qrTitle').textContent = title;
     $('#qrText').textContent = text;
     $('#qrImage').src = 'https://api.qrserver.com/v1/create-qr-code/?size=460x460&margin=0&data=' + encodeURIComponent(text);
-    dialog.showModal();
+    showModal(dialog);
   }
 
   function shareApp(app) {
@@ -1329,9 +1446,10 @@
 
   function bindQr() {
     var qrDialog = $('#qrDialog');
-    if (!qrDialog) return;
+    if (!qrDialog || qrDialog.dataset.osBound) return;
+    qrDialog.dataset.osBound = '1';
     qrDialog.addEventListener('click', function (event) {
-      if (event.target === qrDialog || (event.target.closest && event.target.closest('[data-close]'))) qrDialog.close();
+      if (event.target === qrDialog || (event.target.closest && event.target.closest('[data-close]'))) hideModal(qrDialog);
     });
     var qrCopy = $('#qrCopy');
     if (qrCopy) qrCopy.addEventListener('click', function () {
@@ -1343,10 +1461,13 @@
     });
   }
 
+  /* Guarded so calling it twice (boot, then a later refresh) cannot double the
+     close/tab/share handlers on the same dialog. */
   function bindDialogs() {
     bindQr();
     var appDialog = $('#appDialog');
-    if (appDialog) {
+    if (appDialog && !appDialog.dataset.osBound) {
+      appDialog.dataset.osBound = '1';
       appDialog.addEventListener('click', function (event) {
         if (event.target === appDialog || (event.target.closest && event.target.closest('[data-close]'))) { closeApp(); return; }
         var tab = event.target.closest ? event.target.closest('.tab') : null;
@@ -1605,9 +1726,12 @@
           ['Sources checked', String(doc.sources.length)],
           ['Apps in catalog', String(state.apps.length)],
           ['Sync cadence', 'every 6 hours (GitHub Actions)'],
-          ['Pipeline', '<code>scripts/omnisource.py</code>']
+          ['Pipeline', '<code>scripts/omnisource.py</code>', 'raw']
         ].map(function (cell) {
-          return '<div class="st-sync-cell"><span>' + OS.esc(cell[0]) + '</span><strong>' + cell[1] + '</strong></div>';
+          // The one cell that carries markup is marked; everything else is
+          // escaped, so a feed value can never become live HTML here.
+          if (cell[2] === 'raw') return '<div class="st-sync-cell"><span>' + OS.esc(cell[0]) + '</span><strong>' + cell[1] + '</strong></div>';
+          return '<div class="st-sync-cell"><span>' + OS.esc(cell[0]) + '</span><strong>' + OS.esc(cell[1]) + '</strong></div>';
         }).join('');
       }
 
@@ -1873,14 +1997,19 @@
         var deep = card && card.url ? card.url : installUrlFor(client.id, sourceUrl);
         var manual = card ? card.manualSetup : !deep;
         var recommended = card ? card.recommended : false;
-        var steps = installSteps(client, sourceUrl);
+        var steps = clientSteps(client, sourceUrl);
+        var about = client.description || '';
+        var needs = client.requirements || '';
         return '<article class="client-card panel os-lift" data-reveal style="--reveal-delay:' + (i * 60) + 'ms">' +
           '<div class="client-head">' +
             (client.icon ? '<img src="' + OS.esc(OS.url('assets/' + client.icon)) + '" alt="" width="48" height="48" loading="lazy">' : '') +
-            '<div><h3>' + OS.esc(client.name) + '</h3></div>' +
+            '<div><h3>' + OS.esc(client.name) + '</h3>' +
+              (about ? '<p class="client-about">' + OS.esc(about) + '</p>' : '') +
+            '</div>' +
             (recommended ? '<span class="badge ok client-badge">Recommended</span>' : manual ? '<span class="badge warn client-badge">Manual setup</span>' : '<span class="badge cyan client-badge">Deep link</span>') +
           '</div>' +
-          '<ol class="client-steps">' + steps.map(function (step) { return '<li>' + step + '</li>'; }).join('') + '</ol>' +
+          (needs ? '<p class="client-needs"><b>Needs</b> ' + OS.esc(needs) + '</p>' : '') +
+          '<ol class="client-steps">' + steps.map(function (step) { return '<li>' + OS.esc(step) + '</li>'; }).join('') + '</ol>' +
           (deep
             ? '<a class="button primary" href="' + OS.esc(deep) + '">Add source in ' + OS.esc(client.name) + '</a>'
             : '<button class="button" type="button" data-copy="' + OS.esc(sourceUrl) + '" data-copy-msg="Source URL copied — paste it in ' + OS.esc(client.name) + '">Copy source URL</button>') +
@@ -1936,17 +2065,27 @@
     }
   };
 
+  /* Steps for one client card. feeds/install.json carries the per-client copy
+     (generated from src/omnisource/install.py::CLIENT_PROFILES), so the page
+     and the API document cannot drift apart. installSteps() below is only the
+     fallback for a client the builder does not know about. */
+  function clientSteps(client, sourceUrl) {
+    var fromDoc = Array.isArray(client.steps) ? client.steps.filter(function (step) { return String(step).trim(); }) : null;
+    if (fromDoc && fromDoc.length) return fromDoc;
+    return installSteps(client, sourceUrl);
+  }
+
   function installSteps(client, sourceUrl) {
     var name = client.name || 'the client';
-    var base = [
-      'Install ' + name + ' on your iPhone (it stays as your sideloading host).',
-      'Add the OmniSource feed as a source — the URL is one tap below.',
-      'Browse the catalog and install any app. Updates refresh automatically on every sync.'
+    // "It stays as your sideloading host" is true of AltStore and SideStore and
+    // wrong for ESign (a signer, refreshed by hand) and LiveContainer (a
+    // container installed through another client), so it is not a constant.
+    var host = client.id === 'altstore' || client.id === 'sidestore';
+    return [
+      'Install ' + name + (host ? ' on your iPhone (it stays as your sideloading host).' : '.'),
+      'Add the OmniSource feed as a source — the link below opens it on the right screen; if it does not, copy this URL and paste it into the client.',
+      'Browse the catalog and install any app. New versions show up when the source next checks for updates.'
     ];
-    if (client.id === 'esign' || client.id === 'livecontainer') {
-      base[1] = 'Tap <b>Add source in ' + name + '</b> below to import the feed automatically. If the app does not open, copy the source URL and paste it under <b>Sources</b> in ' + name + '.';
-    }
-    return base;
   }
 
   /* ============================================================== search */
@@ -2042,11 +2181,21 @@
   function boot() {
     var page = document.body.dataset.page;
     if (!page) return;
+    /* Wire the catalog and the dialogs before requesting anything: the handlers
+       are delegated on `document`, so they survive every re-render, and a
+       deferred feed can paint the first cards at any moment - they have to be
+       clickable the instant they exist, not after the last feed of the boot
+       chain resolves (which is what used to make VIEW a no-op for a second or
+       two, or forever on a slow connection). */
+    bindCatalog();
+    bindDialogs();
     loadData().then(loadCatalogMeta).then(function () {
       buildCollisions();
+      state.loaded = true;
+      // A VIEW tap that arrived before the feeds did is replayed here.
+      flushPendingOpen();
       if (page === 'home') {
         Home.render();
-        bindDialogs();
         // Deep link: #slug opens the dialog.
         var hash = location.hash.slice(1);
         if (hash) {
@@ -2066,6 +2215,15 @@
         SearchPage.render();
       }
     }).catch(function (error) {
+      // The catalog could not be loaded, so a tap can no longer be answered
+      // from memory: release anything queued (it falls through to the app's
+      // static page) before showing the error state.
+      state.loaded = true;
+      try {
+        flushPendingOpen();
+      } catch (pendingError) {
+        console.error('OmniSource: queued app open failed', pendingError);
+      }
       try {
         console.error('OmniSource: data load failed', error);
         var grid = $('#appsGrid');

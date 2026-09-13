@@ -26,6 +26,15 @@ INSTALL_SCHEMA_VERSION = 1
 # (the feed URLs never contain ``&`` or spaces, and this matches the format
 # AltStore/SideStore clients expect). If a future scheme breaks, flip the
 # profile back to ``deepLinkable: False`` and the UI falls back to copy.
+#
+# ``description`` and ``steps`` are the install advice shown on /install/ and on
+# every app page. They are per client on purpose: the five tools do different
+# things. AltStore and SideStore are signing *hosts* that keep apps alive in the
+# background; ESign is a signer with no background refresh; LiveContainer is a
+# container that has to be installed through another client first and then hosts
+# the apps itself. A single generic triple ("install X, it stays as your
+# sideloading host") was wrong for the last two and told a reader nothing the
+# first two did not already know.
 CLIENT_PROFILES = {
     "altstore": {
         "id": "altstore",
@@ -34,6 +43,21 @@ CLIENT_PROFILES = {
         "deepLinkable": True,
         "instructions": "Tap to add the source to AltStore.",
         "manualSetup": False,
+        "description": (
+            "The reference sideloading client: it signs apps with your own Apple Account and keeps them "
+            "installed by refreshing them over Wi-Fi."
+        ),
+        "requirements": (
+            "AltServer on a Mac or PC (AltStore Classic), or an EU Apple Account on iOS 17.4+ (AltStore PAL)."
+        ),
+        "steps": [
+            "Install AltStore — AltStore Classic needs AltServer on a Mac or PC; AltStore PAL (EU, iOS 17.4+) "
+            "installs directly and is notarized by Apple.",
+            "Add this source: the link below opens AltStore on the Add Source screen, or use "
+            "AltStore → Settings → Sources → Add Source.",
+            "Install from the catalog. A free Apple Account keeps two apps installed alongside AltStore and "
+            "re-signs them every 7 days; a paid developer account extends that to 90.",
+        ],
     },
     "sidestore": {
         "id": "sidestore",
@@ -42,6 +66,19 @@ CLIENT_PROFILES = {
         "deepLinkable": True,
         "instructions": "Tap to add the source to SideStore.",
         "manualSetup": False,
+        "description": (
+            "An AltStore fork that refreshes on the device through its own local VPN — you need a computer once, "
+            "to install it, and never again to keep apps alive."
+        ),
+        "requirements": "A computer once, for iloader; LocalDevVPN installed and connected on the device.",
+        "steps": [
+            "Install SideStore with iloader on a computer (iOS 15+ and a device passcode are required), then "
+            "install the LocalDevVPN app and keep it switched on while installing or refreshing.",
+            "Add this source: the link below opens SideStore on the Add Source screen, or use "
+            "SideStore → Sources → Add Source.",
+            "Install from the catalog; SideStore refreshes its own apps on-device, so nothing has to be plugged "
+            "in. The free Apple Account limits still apply.",
+        ],
     },
     "feather": {
         "id": "feather",
@@ -50,6 +87,19 @@ CLIENT_PROFILES = {
         "deepLinkable": True,
         "instructions": "Tap to add the source to Feather.",
         "manualSetup": False,
+        "description": (
+            "A source browser and installer for jailbroken, TrollStore-equipped or certificate-holding devices: "
+            "Feather lists sources, installs from them and leaves refreshing to you."
+        ),
+        "requirements": "A jailbreak, TrollStore/ERE, or your own signing certificate.",
+        "steps": [
+            "Install Feather — it needs a signing path of its own (jailbreak, TrollStore/ERE, or your own "
+            "developer certificate).",
+            "Add this source: the link below opens Feather's source importer, or use Feather → Sources → Add "
+            "Source and paste the URL.",
+            "Browse the catalog and install. Apps installed through TrollStore never expire; anything signed "
+            "with a certificate has to be re-signed from Feather when it runs out.",
+        ],
     },
     "esign": {
         "id": "esign",
@@ -60,6 +110,19 @@ CLIENT_PROFILES = {
             "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
         ),
         "manualSetup": False,
+        "description": (
+            "A signer rather than a store: ESign reads AltStore-format sources, then re-signs and installs each "
+            "app itself — no companion computer, but also no background refresh."
+        ),
+        "requirements": "A certificate you trust on the device (Apple Account, self-signed or enterprise).",
+        "steps": [
+            "Install ESign (signed with an Apple Account, a self-signed certificate or an enterprise "
+            "certificate) and trust that certificate under Settings → General → VPN & Device Management.",
+            "Add this source: the link below asks ESign to import it; otherwise open ESign → App Sources → + and "
+            "paste the URL.",
+            "Open the source in ESign and tap install — ESign signs and drops the app on your home screen. "
+            "Re-sign from the same menu before the certificate expires; nothing happens automatically.",
+        ],
     },
     "livecontainer": {
         "id": "livecontainer",
@@ -71,6 +134,21 @@ CLIENT_PROFILES = {
             "open LiveContainer → Settings → Sources and paste the URL."
         ),
         "manualSetup": False,
+        "description": (
+            "Runs sideloaded apps inside containers, so one signature covers all of them — but LiveContainer is "
+            "itself installed through another client, so add it where you install apps today."
+        ),
+        "requirements": (
+            "AltStore 2.2.1+, SideStore 0.6.2+, TrollStore or a jailbreak — to install LiveContainer itself."
+        ),
+        "steps": [
+            "Install LiveContainer with AltStore 2.2.1+ or SideStore 0.6.2+ (the LiveContainer+SideStore build "
+            "goes in through Impactor or iloader; TrollStore and a jailbreak work too).",
+            "Add this source in LiveContainer → Settings → Sources — version 3.7.0 and newer also accept the "
+            "one-tap link below.",
+            "Install apps from inside LiveContainer: they share its signature, so they do not each take one of "
+            "your Apple Account slots.",
+        ],
     },
 }
 

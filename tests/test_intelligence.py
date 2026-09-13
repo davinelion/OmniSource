@@ -17,6 +17,8 @@ from omnisource.dead_apps import build_dead_apps_doc, classify_age
 from omnisource.domain import App, Catalog
 from omnisource.health_score import annotate_health_doc, build_health_scores, compute_health_score
 from omnisource.integrity import build_integrity_doc, integrity_errors, metadata_checks
+from omnisource.reputation import build_reputation_doc
+from omnisource.utils.dates import average_update_gap_days, version_dates
 from omnisource.verification import compute_trust_score, trust_badge
 
 
@@ -175,12 +177,12 @@ class DeadAppsTests(unittest.TestCase):
         self.assertEqual(classify_age(180), "stale")
         self.assertEqual(classify_age(365), "archived")
 
-    def test_removed_release_is_critical(self) -> None:
+    def test_removed_release_newer_than_published_is_critical(self) -> None:
         app = _app()
         state = {
             "demo": {
                 "versions": [{"version": "1.0", "date": "2026-09-01"}],
-                "removedReleases": [{"version": "0.9", "at": "2026-09-02"}],
+                "removedReleases": [{"version": "1.1", "at": "2026-09-02"}],
             }
         }
         doc = build_dead_apps_doc(_catalog(app), state, today_iso="2026-09-10")
@@ -189,12 +191,81 @@ class DeadAppsTests(unittest.TestCase):
         self.assertEqual(doc["summary"]["critical"], 1)
         self.assertEqual(entry["removedReleases"], 1)
 
+    def test_superseded_release_is_not_a_takedown(self) -> None:
+        # upstream.keepVersions is 1, so the previous latest disappears from the
+        # set on every ordinary bump; the same version on a new URL is a
+        # failover rename. Neither may be published as a critical dead app.
+        state = {
+            "demo": {
+                "versions": [{"version": "1.0", "date": "2026-09-01"}],
+                "removedReleases": [{"version": "0.9", "at": "2026-09-02"}],
+            },
+            "other": {
+                "versions": [{"version": "12.9.2", "date": "2026-09-01"}],
+                "removedReleases": [{"version": "12.9.2", "at": "2026-09-02"}],
+            },
+        }
+        doc = build_dead_apps_doc(_catalog(_app(), _app("other")), state, today_iso="2026-09-10")
+        self.assertEqual(doc["summary"]["critical"], 0)
+        by_slug = {entry["slug"]: entry for entry in doc["apps"]}
+        for slug in ("demo", "other"):
+            self.assertEqual(by_slug[slug]["classification"], "healthy", slug)
+            self.assertEqual(by_slug[slug]["removedReleases"], 0, slug)
+            self.assertEqual(by_slug[slug]["supersededReleases"], 1, slug)
+
     def test_fresh_app_is_healthy(self) -> None:
         app = _app()
         state = {"demo": {"versions": [{"version": "1.0", "date": "2026-09-08"}]}}
         doc = build_dead_apps_doc(_catalog(app), state, today_iso="2026-09-10")
         self.assertEqual(doc["count"], 0)
         self.assertEqual(doc["apps"][0]["classification"], "healthy")
+
+
+def _cadence_state() -> dict:
+    """One app whose releases live only in the shared timeline.
+
+    ``keepVersions`` is 1 for most of this catalog, so ``versions`` alone holds a
+    single dated release - enough to prove a release happened, not enough to say
+    how often they happen.
+    """
+    return {
+        "demo": {"versions": [{"version": "3.0", "date": "2026-09-01", "downloadURL": "https://example.test/d.ipa"}]},
+        "updateHistory": [
+            {"appId": "demo", "version": "3.0", "releaseDate": "2026-09-01"},
+            {"appId": "demo", "version": "2.0", "releaseDate": "2026-08-08"},
+            {"appId": "demo", "version": "1.0", "releaseDate": "2026-07-01"},
+            {"appId": "other", "version": "9.9", "releaseDate": "2026-07-20"},
+        ],
+    }
+
+
+class ReleaseCadenceTests(unittest.TestCase):
+    """#4: cadence is measured on the whole timeline, not on keepVersions."""
+
+    def test_per_app_window_alone_sees_no_interval(self) -> None:
+        state = _cadence_state()
+        self.assertEqual([d.isoformat() for d in version_dates(state, "demo")], ["2026-09-01"])
+        self.assertEqual(average_update_gap_days(state, "demo"), 0.0)
+
+    def test_shared_timeline_fills_the_series(self) -> None:
+        state = _cadence_state()
+        dates = version_dates(state, "demo", include_history=True)
+        self.assertEqual([d.isoformat() for d in dates], ["2026-07-01", "2026-08-08", "2026-09-01"])
+        # 38 days, then 24; the duplicate on 2026-09-01 (same release in both
+        # sources) collapses instead of becoming a zero-length gap.
+        self.assertAlmostEqual(average_update_gap_days(state, "demo", include_history=True), 31.0)
+
+    def test_other_apps_do_not_leak_in(self) -> None:
+        state = _cadence_state()
+        self.assertEqual(version_dates(state, "missing", include_history=True), [])
+
+    def test_reputation_publishes_the_merged_cadence(self) -> None:
+        app = _app("demo", upstream={"type": "github", "repo": "example/demo", "assetPattern": ".*"})
+        doc = build_reputation_doc(_catalog(app), _cadence_state())
+        signals = doc["sources"][0]["signals"]
+        self.assertEqual(signals["updateFrequencyDays"], 31.0)
+        # The same releases are what the 365-day window counts.
+        self.assertEqual(signals["releasesPastYear"], 3)
 
 
 class CollectionsTests(unittest.TestCase):

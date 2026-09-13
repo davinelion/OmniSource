@@ -188,6 +188,20 @@
       }
       function statusLabel(s) { var m={stable:'Stable',beta:'Beta',manual:'Manual',unmaintained:'Unmaintained'}; return m[s] || (s||'').charAt(0).toUpperCase()+(s||'').slice(1); }
 
+      /* The header promises "all dynamic markup is escaped via OS.esc"; the card
+         renderer below had not kept that promise, and its href was built with a
+         ${...} placeholder inside a single-quoted string, so every card linked
+         to the literal path /apps/${app.slug}/ - a 404 for the whole page. */
+      function esc(value) {
+        return String(value == null ? '' : value)
+          .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+      }
+      function appHref(app) {
+        var slug = app && (app.slug || app.id);
+        return slug ? '../apps/' + encodeURIComponent(slug) + '/' : '#';
+      }
+
       function renderCheckboxes(container, items, stateKey) {
         container.innerHTML = items.map(function (it) {
           return '<label class="filter-option"><input type="radio" name="' + stateKey + '" value="' + it.id + '"' + (state.filters[stateKey] === it.id ? ' checked' : '') + '><span>' + it.label + '</span><span class="count">' + it.count + '</span></label>';
@@ -207,20 +221,20 @@
         badges.push(online ? '<span class="badge ok"><span class="dot"></span>Online</span>' : '<span class="badge bad"><span class="dot"></span>Offline</span>');
         var vLevel = (app.verificationLevel||'UNVERIFIED').toUpperCase();
         if (vLevel.indexOf('VERIFIED') !== -1) badges.push('<span class="badge verified">Verified</span>');
-        return '<a class="d-app-card" href="../apps/${app.slug}/" role="listitem" aria-label="' + (app.name||'') + '">' +
+        return '<a class="d-app-card" href="' + esc(appHref(app)) + '" role="listitem" aria-label="' + esc(app.name||'') + '">' +
           '<div class="d-app-top">' +
-            '<img class="d-app-icon" src="' + icon + '" alt="" width="54" height="54" loading="lazy" onerror="this.onerror=null;this.src=\'../assets/OmniSource.png\'">' +
+            '<img class="d-app-icon" src="' + esc(icon) + '" alt="" width="54" height="54" loading="lazy" onerror="this.onerror=null;this.src=\'../assets/OmniSource.png\'">' +
             '<div style="min-width:0;flex:1">' +
-              '<h3 class="d-app-name">' + (app.name||'') + '</h3>' +
-              '<div class="d-app-dev">' + (app.developerName||app.developer||'Independent developer') + '</div>' +
+              '<h3 class="d-app-name">' + esc(app.name||'') + '</h3>' +
+              '<div class="d-app-dev">' + esc(app.developerName||app.developer||'Independent developer') + '</div>' +
               '<div class="d-app-badges">' + badges.join('') + '</div>' +
             '</div>' +
           '</div>' +
-          '<p class="d-app-desc">' + (app.shortDescription || app.description || app.subtitle || '') + '</p>' +
+          '<p class="d-app-desc">' + esc(app.shortDescription || app.description || app.subtitle || '') + '</p>' +
           '<div class="d-app-meta">' +
-            '<span>v' + (app.version||'—') + '</span>' +
-            '<span>' + categoryLabel(app.category) + '</span>' +
-            (app.releaseDate ? '<span>' + app.releaseDate + '</span>' : '') +
+            '<span>v' + esc(app.version||'—') + '</span>' +
+            '<span>' + esc(categoryLabel(app.category)) + '</span>' +
+            (app.releaseDate ? '<span>' + esc(app.releaseDate) + '</span>' : '') +
             (score != null ? '<span style="margin-left:auto;color:var(--accent)">score ' + Math.round(score) + '</span>' : '') +
           '</div>' +
         '</a>';

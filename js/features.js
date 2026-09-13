@@ -455,27 +455,36 @@
     },
 
     _renderAppCard(app) {
+      // Every value below comes from a fetched catalog document, so it is
+      // escaped on the way into innerHTML - the same rule js/site.js follows
+      // for the cards this one mirrors.
+      const esc = (value) => OS.esc(value == null ? '' : value);
       return `
-        <article class="app-card" data-app-id="${app.id}">
+        <article class="app-card" data-app-id="${esc(app.id)}">
           <div class="card-top">
             <div class="icon-wrap">
-              <img src="${OS.asset(app.icon || 'OmniSource.png')}" alt="${app.name}" class="app-icon" width="58" height="58">
+              <img src="${esc(OS.asset(app.icon || 'OmniSource.png'))}" alt="${esc(app.name)}" class="app-icon" width="58" height="58">
             </div>
             <div class="card-identity">
-              <h3><a href="${OS.url(`apps/${app.id}/`)}">${app.name}</a></h3>
-              <p class="card-dev">${app.developer || 'Unknown'}</p>
+              <h3><a href="${esc(OS.url(`apps/${app.id}/`))}">${esc(app.name)}</a></h3>
+              <p class="card-dev">${esc(app.developer || 'Unknown')}</p>
             </div>
-            <button class="favorite-btn active" aria-label="Remove from favorites" data-app-id="${app.id}">
+            <button class="favorite-btn active" aria-label="Remove from favorites" data-app-id="${esc(app.id)}">
               <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
               </svg>
             </button>
           </div>
-          <p class="app-description">${app.description || 'No description available.'}</p>
+          <p class="app-description">${esc(app.description || 'No description available.')}</p>
           <div class="card-meta">
-            <span class="meta-item"><b>${app.version || 'N/A'}</b> version</span>
-            <span class="meta-item"><b>${app.status || 'unknown'}</b> status</span>
-            <span class="meta-item"><b>${app.source || 'N/A'}</b> source</span>
+            <span class="meta-item"><b>${esc(app.version || 'N/A')}</b> version</span>
+            <span class="meta-item"><b>${esc(app.status || 'unknown')}</b> status</span>
+            <span class="meta-item"><b>${esc(app.source || 'N/A')}</b> source</span>
+          </div>
+          <div class="card-bottom">
+            <a class="get-button" href="${esc(OS.url(`apps/${app.id}/`))}">View details
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+            </a>
           </div>
         </article>
       `;
