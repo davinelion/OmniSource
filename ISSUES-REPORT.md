@@ -33,15 +33,23 @@ one, the equivalent code here is what was changed.
 | 9 | `generatedAt` is not a build timestamp | **Fixed** | `render_health_doc` stamps `generatedAt = today()` and exposes the previous value as `lastEventAt`. The README's “Last sync” line and `health-check.yml`'s staleness check both read it as a build time, so both were wrong on any week with no new release. `rendered == []` no longer raises in `max()` |
 | 10 | Docs / CI drift | **Partly fixed** | The `verify.yml` half is closed (item 3). **Not done:** the `docs/` reorganisation half — this checkout has no generated-docs pipeline (`scripts/update_docs.py` is absent), so the hand-written `docs/*.md` set was edited in place instead of restructured |
 
-Two caveats that apply to rows 2, 4, 6 and 9: the *published* JSON/XML is
-unchanged in this branch, because a rebuild rewrites `generatedAt` in ~489 files
-(`domain.today()` has no environment hook, so there is no way to pin the build
-date) and the site reads these documents at runtime regardless. The next
-`sync.yml` run — every 6 hours — commits the corrected documents. Separately,
-`python3 scripts/check_reproducible.py --diff` fails on a clean tree in this
-checkout (a couple of analytics/health fields move by a day between two
-consecutive builds); that is pre-existing, unrelated to these items, and was not
-attempted here.
+Rows 2, 4, 6 and 9 change generator output, so the published corpus is
+regenerated in the same branch: 44 documents differ in content (the health
+stamp, the reputation cadence and scores, the dead-app board, the source pages
+that embed those scores, and the install document) and the rest is the
+`generatedAt`/`<lastmod>` refresh the same build performs. The split is not a
+style choice — `feeds/api/v2/manifest.json` pins the sha256 of every v2 document
+and `tests/test_api_v2.py` checks the pins, so a partially regenerated corpus
+fails: reverting the date-stamped per-app documents broke the manifest digest.
+`scripts/check_reproducible.py` (both modes) is green on the result, 697
+generated files stable.
+
+The residual problem is the reason those stamps move at all: `domain.today()`
+has no environment hook, so a build cannot be pinned to a date. Consequence:
+this tree is reproducible until a day passes — on `main`, `check_reproducible.py`
+currently fails for exactly that reason (its own `updatedDaysAgo` fields age by a
+day between a commit and a later build), which is pre-existing here and out of
+scope; `SOURCE_DATE_EPOCH` support in the writers is the real fix.
 
 
 ## P0 — High

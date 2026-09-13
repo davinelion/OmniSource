@@ -72,11 +72,14 @@ jobs:
           python3 scripts/validate.py
           bash scripts/validate_jq.sh
 
-      - name: Verify generated artifacts are reproducible
-        run: |
-          set -euo pipefail
-          python3 scripts/check_reproducible.py
-
+      # No check_reproducible.py here on purpose: validate.yml already runs that
+      # gate on every PR (including this one), and repeating it would report the
+      # same failure twice from two workflows. What this job adds is the
+      # feeds/*.json-specific assertion below, which the repo-wide gate cannot
+      # make: merge_feeds.py --check only compares merge *inputs*, and the
+      # pipeline overwrites those files after the merge, so "apps.json equals
+      # merge output" is verified nowhere else.
+      #
       # Nothing is committed on a PR, so the rebuild's own output is the diff to
       # check: any change means the branch carries a hand-edited apps.json.
       - name: Fail when apps.json is not the merge output

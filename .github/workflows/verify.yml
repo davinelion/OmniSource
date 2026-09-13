@@ -8,7 +8,7 @@
 # count - had no caller outside a manual `--verify-downloads` run. The result is
 # that `lastFullVerification` was absent from every entry of feeds/state.json,
 # so the published integrity report only ever reflected the metadata rules while
-# docs/security.md and README.md described an active weekly checker.
+# docs/SECURITY-REPORT.md described an active weekly checker.
 #
 # This job is that checker. It rebuilds from committed state (no upstream API
 # calls), verifies, and commits the two documents the verdict lives in. The
@@ -80,8 +80,9 @@ jobs:
           if [ "${SYNC_FIRST}" != "true" ]; then
             ARGS+=(--no-sync)
           fi
-          # Workflow inputs reach the shell through the environment only - never
-          # interpolate ${{ }} expressions into run: scripts.
+          # Inputs arrive through env: above, never as an action expression in
+          # this script; the loop is deliberately unquoted to word-split a
+          # space-separated slug list.
           for slug in ${SLUGS:-}; do
             ARGS+=(--only "${slug}")
           done
