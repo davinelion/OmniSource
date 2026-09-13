@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+import tempfile
 from pathlib import Path
 from unittest import TestCase
 
@@ -203,14 +204,17 @@ class BackupLabelContractTests(TestCase):
         self.assertEqual(crons, mapped, "a cron without a case branch snapshots as 'manual'")
 
     def test_the_cli_rejects_an_unknown_label(self) -> None:
-        # The guard above only means something while the CLI stays strict.
+        # The guard above only means something while the CLI stays strict:
+        # argparse must reject the label before any snapshot is created.
         script = self.root / "scripts" / "backup" / "create_backup.py"
-        result = subprocess.run(
-            [sys.executable, str(script), "create", "--label", "scheduled", "--destination", "/tmp/omni-label-probe"],
-            capture_output=True,
-            text=True,
-            check=False,
-        )
+        with tempfile.TemporaryDirectory() as destination:
+            result = subprocess.run(
+                [sys.executable, str(script), "create", "--label", "scheduled", "--destination", destination],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+            self.assertEqual(list(Path(destination).iterdir()), [], "an invalid label must not create a snapshot")
         self.assertEqual(result.returncode, 2)
         self.assertIn("invalid choice", result.stderr)
 
