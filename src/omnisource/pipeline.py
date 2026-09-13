@@ -72,6 +72,7 @@ from omnisource.source_pages import build_source_pages, build_sources_doc
 from omnisource.tracking import compile_version_pattern, detect_update, select_versions
 from omnisource.translations import build_translation_status_doc
 from omnisource.trending import build_trending_doc
+from omnisource.utils.versioning import compare_versions
 from omnisource.verification import build_verification_doc
 
 
@@ -279,10 +280,11 @@ def stage_sync(
             if isinstance(previous_versions, list) and previous_versions:
                 previous_version = str(previous_versions[0].get("version") or "") or None
             # Phase 8 signal: the upstream no longer offers the previously
-            # newest version (deleted release, or policy change) — the dead-app
-            # engine classifies such apps as critical.
+            # newest version. Only a *regression* is a takedown — see
+            # dead_apps._unexplained_removals, which is the other half of the
+            # same rule and keeps already-recorded entries from escalating.
             if isinstance(previous_versions, list) and previous_versions and isinstance(versions, list):
-                previous_latest = previous_versions[0]
+                previous_latest = previous_versions[0] if isinstance(previous_versions[0], dict) else {}
                 current_keys = {
                     (str(v.get("version") or ""), str(v.get("downloadURL") or ""))
                     for v in versions
@@ -292,7 +294,15 @@ def stage_sync(
                     str(previous_latest.get("version") or ""),
                     str(previous_latest.get("downloadURL") or ""),
                 )
-                if previous_key not in current_keys:
+                # keepVersions is 1 for nearly every app, so the previous latest
+                # disappears from the set on every ordinary bump; a same-version
+                # entry with a new URL is a failover between provider legs.
+                # Neither means the release was pulled, so neither is recorded.
+                still_newer = next((str(v.get("version") or "") for v in versions if isinstance(v, dict)), "")
+                explained = bool(still_newer) and compare_versions(previous_key[0], still_newer) <= 0
+                if explained and previous_key[0]:
+                    entry.pop("removedReleases", None)
+                elif previous_key not in current_keys:
                     removed = entry.setdefault("removedReleases", [])
                     if not isinstance(removed, list):
                         removed = []
@@ -870,7 +880,7 @@ def run(
     verify_failed: list[dict[str, Any]] = []
     if verify:
         with Group("Verify downloads (full integrity)"):
-            records = verify_downloads(container, catalog, state, workers=max(1, min(workers, 4)))
+            records = verify_downloads(container, catalog, state, only=only, workers=max(1, min(workers, 4)))
             verify_failed = [record for record in records if not record.get("ok")]
             report.broken_assets += len(verify_failed)
             for record in verify_failed:

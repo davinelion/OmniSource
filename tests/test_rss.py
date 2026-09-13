@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import sys
 import unittest
+from datetime import UTC, datetime
 from pathlib import Path
 
 _SRC = Path(__file__).resolve().parents[1] / "src"
@@ -11,7 +12,7 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 from omnisource.domain import Catalog
-from omnisource.feeds.rss import render_app_rss_feed, render_rss_feed
+from omnisource.feeds.rss import _newest_date, _rfc822_date, render_app_rss_feed, render_rss_feed
 
 
 class TestRssFeed(unittest.TestCase):
@@ -39,6 +40,43 @@ class TestRssFeed(unittest.TestCase):
             ],
         }
         self.catalog = Catalog.from_dict(self.raw_catalog)
+
+    def test_feed_bytes_are_a_function_of_the_inputs(self) -> None:
+        # lastBuildDate used to be the renderer's own clock, so a rebuild with no
+        # data change rewrote all 95 feeds and broke the reproducibility gate.
+        state = {
+            "spotiflac": {
+                "versions": [
+                    {"version": "4.9.6", "date": "2026-09-07", "downloadURL": "https://example.com/a.ipa", "size": 1}
+                ]
+            },
+            "updateHistory": [{"appId": "spotiflac", "version": "4.9.5", "releaseDate": "2026-08-01"}],
+        }
+        first = render_rss_feed(self.catalog, state)
+        second = render_rss_feed(self.catalog, state)
+        self.assertEqual(first, second)
+        # The channel date is the newest item, not today.
+        self.assertIn("<lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>", first)
+        self.assertNotIn(datetime.now(UTC).strftime("%a, %d %b %Y"), first)
+
+    def test_undated_items_and_empty_feeds_omit_dates(self) -> None:
+        # 2026-09-07 is a Monday; the point of _newest_date is that a lexicographic
+        # max over RFC 822 strings would rank "Fri, ..." above "Mon, ...".
+        items = [
+            {"date": _rfc822_date("2026-08-01")},
+            {"date": _rfc822_date("2026-09-07")},
+            {"date": _rfc822_date("")},
+        ]
+        self.assertEqual(items[2]["date"], "")
+        self.assertEqual(_newest_date(items), _rfc822_date("2026-09-07"))
+        self.assertEqual(_newest_date([{"date": ""}]), "")
+        self.assertEqual(_rfc822_date("not a date"), "")
+        self.assertEqual(_rfc822_date(""), "")
+        # An item without a date renders no <pubDate>; an empty feed no lastBuild.
+        state = {"spotiflac": {"versions": [{"version": "1.0", "downloadURL": "https://example.com/a.ipa"}]}}
+        xml = render_rss_feed(self.catalog, state)
+        self.assertNotIn("<pubDate>", xml)
+        self.assertNotIn("<lastBuildDate>", xml)
 
     def test_render_rss_feed(self) -> None:
         state = {

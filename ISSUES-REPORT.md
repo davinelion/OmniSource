@@ -11,6 +11,39 @@ the ones those checks cannot see.
 
 ---
 
+## Status (reviewed 2026-09-13, branch `arena/01a09925-omnisource`)
+
+This table is the audit's own ledger, kept current so the document says what the
+tree does. Line references below were written against `8edb83e`; a few files
+listed here do not exist in this checkout (`scripts/update_docs.py`,
+`src/omnisource/news.py`, `docs/reputation-analytics.md`,
+`tests/test_pipeline_v2.py`, `src/omnisource/validate.py`) — where an item named
+one, the equivalent code here is what was changed.
+
+| # | Item | Status | What happened |
+| --- | --- | --- | --- |
+| 1 | Shell injection in `build-tweak.yml` | **Fixed** | `env:`-only input passing, https-only URL validation, `tweak_name` sanitized to `[A-Za-z0-9._-]{1,64}` (see the workflow's *Sanitize inputs* step) |
+| 2 | False “critical” dead-app takedowns | **Fixed** | `dead_apps._unexplained_removals()` escalates only when the disappeared release is *newer* than what is still published; `pipeline.stage_sync` stopped recording supersession and failover renames at all. Re-running the classifier over the committed `feeds/state.json`: `critical` 10 → 0, `count` 43 → 33 — the report's predicted outcome. Tests in `tests/test_intelligence.py` pin both directions |
+| 3 | Full integrity verification never runs | **Fixed (workflow added)** | New `.github/workflows/verify.yml`: weekly `--verify-downloads --no-sync --no-health`, validates, commits `feeds/state.json` + the integrity report, exits non-zero on a digest/size mismatch. `pipeline.run` now forwards `only=` to `verify_downloads()`, so the job's per-app rerun option actually restricts the verification (it previously narrowed only the sync). `docs/SECURITY-REPORT.md` and `.github/workflows/README.md` name the job |
+| 4 | Degenerate reputation cadence | **Partly fixed** | `utils.dates.version_dates()` gained `include_history`, and reputation scores/ages/365-day counts now merge the shared `updateHistory` timeline. Measured on the committed data: sources with `updateFrequencyDays: null` 77 → 70, four of them now clear the 85-point bar (`Verified` 0 → 5). **Still open:** the other 70 — `state[slug]["versions"]` is capped at `upstream.keepVersions` (1 for most apps) and `updateHistory` holds 100 events for the whole catalog, so most apps have exactly one dated release and *no interval exists to average*. That is a retention decision (per-app release history, or a larger timeline), not a formula bug. `compare.py` / `health_score.py` publish the per-app window on purpose and were left alone |
+| 5 | `merge.yml` write token on `pull_request` | **Fixed** | Workflow-level `permissions: {}`; `contents: write` moved onto the push job (`if: github.event_name != 'pull_request'`); a new read-only `check` job runs the same merge/validate/reproducibility gate on PRs and fails when `apps.json` is not the merge output. Note `merge_feeds.py --check` cannot cover this: it verifies merge *inputs*, and the pipeline overwrites those files afterwards |
+| 6 | RSS `lastBuildDate` churn | **Fixed** | `_render_channel` derives `<lastBuildDate>` from the newest item date (`_newest_date`, compared as datetimes — RFC 822 leads with the weekday, so a string `max` is wrong) and omits it for an empty feed. `_rfc822_date` no longer substitutes the current time for a missing/unparsable date: an item without a date emits no `<pubDate>`. The RSS renderer is now clock-free; `tests/test_rss.py` pins byte-equality across two renders |
+| 7 | 15 apps share 4 bundle IDs | **Documented, deliberately open** | `validation.py` already *fails* the build on an undeclared shared bundle ID, so this cannot drift silently; the collisions themselves are the catalog's reality (multiple tweaks shipping one app) and de-duplicating them means changing published `bundleIdentifier` values for installed clients. See the note under item 7 |
+| 8 | Unescaped data path in the detail dialog | **Fixed** | `js/site.js` escapes every `infoPanel` cell (markup-carrying cells opt out explicitly via `{label, raw}`) and the status-board sync cells; also the same class of bug found alongside it: `discover/index.html` (its card `href` was a literal `${app.slug}` inside a single-quoted string, so every card 404'd — unrelated to the report but the page was completely broken), `favorites/index.html`, and `js/features.js::_renderAppCard` |
+| 9 | `generatedAt` is not a build timestamp | **Fixed** | `render_health_doc` stamps `generatedAt = today()` and exposes the previous value as `lastEventAt`. The README's “Last sync” line and `health-check.yml`'s staleness check both read it as a build time, so both were wrong on any week with no new release. `rendered == []` no longer raises in `max()` |
+| 10 | Docs / CI drift | **Partly fixed** | The `verify.yml` half is closed (item 3). **Not done:** the `docs/` reorganisation half — this checkout has no generated-docs pipeline (`scripts/update_docs.py` is absent), so the hand-written `docs/*.md` set was edited in place instead of restructured |
+
+Two caveats that apply to rows 2, 4, 6 and 9: the *published* JSON/XML is
+unchanged in this branch, because a rebuild rewrites `generatedAt` in ~489 files
+(`domain.today()` has no environment hook, so there is no way to pin the build
+date) and the site reads these documents at runtime regardless. The next
+`sync.yml` run — every 6 hours — commits the corrected documents. Separately,
+`python3 scripts/check_reproducible.py --diff` fails on a clean tree in this
+checkout (a couple of analytics/health fields move by a day between two
+consecutive builds); that is pre-existing, unrelated to these items, and was not
+attempted here.
+
+
 ## P0 — High
 
 ### 1. Shell injection in `build-tweak.yml` (CWE-94)
@@ -40,6 +73,8 @@ reference them as `"$IN_BASE_IPA_URL"` etc.
 ---
 
 ### 2. Dead-app detection produces false "critical" takedowns
+
+**Status:** fixed in `dead_apps._unexplained_removals` + `pipeline.stage_sync`; see the table above.
 
 `src/omnisource/pipeline.py:295-305` records a `removedReleases` entry whenever the previously
 newest version is absent from the freshly resolved set, and `src/omnisource/dead_apps.py:60-70`
@@ -80,6 +115,8 @@ rollback) or the old URL fails a probe. Otherwise treat it as supersession and c
 
 ### 3. Full integrity verification never runs
 
+**Status:** fixed — `.github/workflows/verify.yml` now exists and commits the results.
+
 `--verify-downloads` exists at `src/omnisource/cli.py:25-28` and `src/omnisource/integrity.py:185`,
 but **no workflow invokes it**, and `src/omnisource/integrity.py:19-20` plus `pipeline.py:839`
 document a *"weekly `verify.yml` job"* that is not in `.github/workflows/`.
@@ -97,6 +134,8 @@ README claim to "checksums published upstream are surfaced, not verified".
 ---
 
 ### 4. Reputation scores are degenerate — no source can reach "Verified"
+
+**Status:** partly fixed — the cadence now reads the shared timeline (77 → 70 nulls); the remaining 70 need longer retained release history, not a formula change.
 
 Root cause: `catalog.json` sets `upstream.keepVersions: 1` for 75 of 77 apps, so
 `feeds/state.json` holds exactly **one** version for 76 apps (one app keeps 3).
@@ -126,6 +165,8 @@ activity from `state["updateHistory"]` — which already holds 85 real update ev
 
 ### 5. `merge.yml` executes PR-authored code with a write-scoped token
 
+**Status:** fixed — `contents: write` is on the push job only, and PRs get a read-only `check` job.
+
 `.github/workflows/merge.yml` triggers `on: pull_request`, grants `permissions: contents: write`
 at the top level, checks out the PR merge ref with `persist-credentials` left at its default, and
 then runs `scripts/merge_feeds.py` and `scripts/publish_root.py` **from that ref**. The
@@ -139,6 +180,8 @@ the token is still materialised in `.git/config` for whatever the PR's code does
 and a privileged `push` job, or gate the whole job on `github.event_name == 'push'`.
 
 ### 6. RSS timestamp churn defeats the reproducibility gate and dirties the tree
+
+**Status:** fixed — `lastBuildDate` comes from the newest item and the module no longer reads the clock.
 
 `src/omnisource/feeds/rss.py:152` stamps `<lastBuildDate>` with wall-clock time
 (`_now_rfc822()`), and `scripts/check_reproducible.py:90` then normalises that exact field away
@@ -156,6 +199,12 @@ thing that always changes.
 `check_reproducible.py` restore the tree it mutated and drop the normaliser.
 
 ### 7. 15 of 77 apps collide on 4 bundle IDs in the single installable feed
+**Status:** documented only — deliberately. `validation.py:97-124` already
+FAILs a build whose shared bundle ID is undeclared, so the silent version of this
+bug is closed; the collisions are real catalog data (several tweaks ship as one
+app) and "fixing" them means changing the `bundleIdentifier` a client already
+installed against, which is a catalog decision rather than a code one.
+
 
 `api/duplicates.json`:
 
@@ -177,6 +226,8 @@ one master feed per collision group.
 
 ### 8. One unescaped data path in the app detail dialog
 
+**Status:** fixed, plus the same pattern in `discover/`, `favorites/` and `js/features.js`.
+
 `js/site.js:1115` puts `app.developerName` into the `infoPanel` cell array raw, and
 `categoryLabel()` (`js/site.js:94`) falls through to the raw category string for any value not in
 `CATEGORY_LABELS`. `js/site.js:1135` then prints `cell[1]` **without** `OS.esc` —
@@ -196,12 +247,18 @@ at the render site and drop the pre-built HTML from the cells that need it.
 
 ### 9. `api/health.json` `generatedAt` is not a build timestamp
 
+**Status:** fixed — build date in `generatedAt`, newest event in `lastEventAt`.
+
 `render_health_doc` (`src/omnisource/feeds/altstore.py:100-108`) sets `generatedAt` to
 `max(statusSince, versionDate)` — the newest *app release* date, not when the build ran. It reads
 `2026-09-11` while every sibling document from the same build reads `2026-09-12`, so the published
 health feed looks a day stale whenever no app happened to ship.
 
 ### 10. Docs and CI drift
+**Status:** partly fixed — the advertised-but-missing `verify.yml` now exists;
+the `docs/` reorganisation was not attempted in this checkout (no generated-docs
+pipeline here, so `docs/*.md` was edited in place).
+
 
 * `src/omnisource/integrity.py:19-20` and `pipeline.py:839` describe a `verify.yml` job that does
   not exist (see issue 3).

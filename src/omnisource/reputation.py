@@ -83,6 +83,19 @@ def _level_for(score: float) -> str:
     return "EXPERIMENTAL"
 
 
+def _cadence_dates(state: dict[str, Any], slug: str) -> list:
+    """Release dates used for cadence, age and window counts.
+
+    The per-app ``versions`` list holds at most ``upstream.keepVersions`` entries
+    — three, and one for most of this catalog — so scoring a source's cadence on
+    it alone left 77 of 78 sources with ``updateFrequencyDays: null`` while the
+    same releases sat in the shared ``updateHistory`` timeline, which keeps 100
+    events across all apps. Both are merged (de-duplicated) here, so an app that
+    updates often is finally measured over the series it actually has.
+    """
+    return version_dates(state, slug, include_history=True)
+
+
 def _broken_releases(state: dict[str, Any], slug: str) -> int:
     broken = (state.get(slug) or {}).get("brokenReleases")
     if isinstance(broken, int):
@@ -92,7 +105,7 @@ def _broken_releases(state: dict[str, Any], slug: str) -> int:
     # usually indicates a bad release.
     if len(state.get(slug, {}).get("versions") or []) < 2:
         return 0
-    dates = version_dates(state, slug)[::-1]
+    dates = _cadence_dates(state, slug)[::-1]
     rolled = 0
     for i in range(1, len(dates)):
         delta = (dates[i - 1] - dates[i]).days
@@ -107,7 +120,7 @@ def _releases_in_window(state: dict[str, Any], slug: str, *, within_days: int, t
     if start is None:
         return 0
     floor = start - timedelta(days=within_days)
-    return sum(1 for when in version_dates(state, slug) if floor <= when <= start)
+    return sum(1 for when in _cadence_dates(state, slug) if floor <= when <= start)
 
 
 def _app_has_valid_entry(app: App, state: dict[str, Any]) -> bool:
@@ -282,11 +295,11 @@ def build_reputation_doc(
         uptime = reachable / total if total else (currently_reachable / len(app_slugs) if app_slugs else 0.0)
         avg_latency = sum(latencies) / len(latencies) if latencies else None
         # Update frequency: average over the source's apps.
-        deltas = [_update_frequency(state, slug) for slug in app_slugs]
+        deltas = [_update_frequency(state, slug, include_history=True) for slug in app_slugs]
         active_deltas = [d for d in deltas if d > 0]
         avg_delta = sum(active_deltas) / len(active_deltas) if active_deltas else 0.0
         # Newest release age across the source.
-        ages = [days_since(max(version_dates(state, slug), default=None), today_iso=today_iso) for slug in app_slugs]
+        ages = [days_since(max(_cadence_dates(state, slug), default=None), today_iso=today_iso) for slug in app_slugs]
         ages = [age for age in ages if age < 3650]
         last_release_age = min(ages) if ages else 3650
         broken = sum(_broken_releases(state, slug) for slug in app_slugs)

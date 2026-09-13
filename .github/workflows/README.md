@@ -7,8 +7,9 @@ permissions and opts in to exactly what it needs, never more.
 | --- | --- | --- | --- |
 | [`sync.yml`](sync.yml) | schedule (6 h, incremental) · push · manual | feeds, `apps/` pages, README, published root URLs, Pages | Resolve official upstream releases, probe links, rebuild every feed + intelligence documents + app pages, republish the flat/API URLs, deploy |
 | [`validate.yml`](validate.yml) | pull request · push · manual | nothing | Parallel offline gate: structural validation + reproducibility, unit test matrix (3.11/3.12), `ruff` + `actionlint` (cached) |
-| [`merge.yml`](merge.yml) | `feeds/*.json` changed · manual | `feeds/apps.json` + its published copies | Rebuild the unified master source from modular feeds |
+| [`merge.yml`](merge.yml) | `feeds/*.json` changed (PR check · push commit) · manual | `feeds/apps.json` + its published copies | Rebuild the unified master source from modular feeds; on a pull request the same gate runs read-only and fails if `apps.json` is not the merge output |
 | [`health-check.yml`](health-check.yml) | schedule (daily) · manual | GitHub Issue | HEAD-probe every download URL + mirror and report broken links via an issue |
+| [`verify.yml`](verify.yml) | schedule (weekly, Mon 07:00 UTC) · manual | `feeds/state.json`, `feeds/integrity_report.json` + its `/api/` copies | Stream and hash every published asset (full integrity), record the verdict as `lastFullVerification` and fail on a digest/size mismatch |
 | [`build-uyouenhanced.yml`](build-uyouenhanced.yml) | manual | Release asset | Build and publish the uYouEnhanced IPA, then trigger a feed sync |
 | [`discovery.yml`](discovery.yml) | schedule (12 h) · manual | `data/discovered_sources.json` | Autonomous discovery (GitHub code search, feed probes, release scans, web catalogs) + validation gate |
 | [`monitoring.yml`](monitoring.yml) | schedule (30 min) · manual | `data/status.json`, `data/selfheal_report.json`, `data/mirror_status.json` | Probe sources/downloads, plan self-healing repairs, evaluate mirrors |
@@ -37,6 +38,12 @@ build-uyouenhanced.yml   merge.yml (scripts/merge_feeds.py)
   `scripts/publish_root.py`, keeping `feeds/` as the single source of truth.
 - **`health-check.yml`** is independent of releases: a broken upstream link is
   reported even when nothing new has shipped.
+- **`verify.yml`** is the only job that reads the bytes. `sync.yml` verifies
+  metadata on every build (recorded digest format, non-zero size, an installable
+  IPA); proving a digest *matches* needs the download, which is too slow for a
+  6-hour cadence. It rebuilds from committed state (`--no-sync`) so the verdict
+  always describes the feeds that are published today, not a newer upstream view,
+  and commits only the two documents it owns.
 - **`validate.yml`** guards pull requests. It is read-only and network-free, so it
   is safe on forks. The reproducibility step fails a PR that hand-edits a
   generated feed instead of `catalog.json`.
@@ -86,6 +93,6 @@ and the homepage statistics there:
   Actions deployment.
 
 Copies are byte-identical to `feeds/` — git stores the shared blob once — and
-`scripts/check_reproducible.py` (run by `validate.yml`, `merge.yml` and
+`scripts/check_reproducible.py` (run by `validate.yml`, both `merge.yml` jobs and
 `sync.yml`) fails a rebuild that would change one, so a hand-edited feed can
 never be published.
