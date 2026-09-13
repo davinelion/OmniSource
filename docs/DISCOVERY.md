@@ -10,7 +10,8 @@ LiveContainer sources without human intervention, on a 12-hour schedule
 |---|---|
 | `scripts/discovery/discover_github.py` | GitHub code search for `source.json`, `apps.json`, `altsource`, `altstore source`, `sidestore source`, `feather source` (+ `--term` extras) |
 | `scripts/discovery/discover_feeds.py` | Probes candidate feed URLs (bare sites expand to likely filenames) and classifies live feeds by client |
-| `scripts/discovery/discover_releases.py` | Flags `owner/repo`s whose releases ship `.ipa`/`.tipa` assets |
+| `scripts/discovery/discover_releases.py` | Flags GitHub `owner/repo`s whose releases ship `.ipa`/`.tipa` assets |
+| `scripts/discovery/discover_forges.py` | Searches GitLab, Codeberg and configured Forgejo instances for projects with actual IPA/TIPA release assets |
 | `scripts/discovery/discover_web_catalogs.py` | Scrapes catalog pages for linked `*.json` feeds and probes each |
 | `scripts/discovery/discover_sources.py` | Orchestrator: runs every pass, validates, merges into the store |
 
