@@ -104,7 +104,11 @@ def _gitlab(host: str, terms: tuple[str, ...], pages: int, token: str | None) ->
                 project_id = project.get("id")
                 if project_id is None:
                     continue
-                releases = _get(f"{host.rstrip('/')}/api/v4/projects/{urllib.parse.quote(str(project_id), safe='')}/releases?per_page=20", token=token)
+                project_path = urllib.parse.quote(str(project_id), safe="")
+                releases = _get(
+                    f"{host.rstrip('/')}/api/v4/projects/{project_path}/releases?per_page=20",
+                    token=token,
+                )
                 ok, tag = _has_installable(releases)
                 if ok:
                     item = _record(provider="gitlab", project=project, host=host, tag=tag, term=term)
@@ -165,7 +169,9 @@ def main(argv: list[str] | None = None) -> int:
     old = existing.get("sources", []) if isinstance(existing, dict) else []
     merged = autodiscovery.merge_records([item for item in old if isinstance(item, dict)], result.accepted)
     autodiscovery.save_store(Path(args.store), merged)
-    print(f"forge discovery: {len(result.accepted)} accepted, {len(result.quarantined)} quarantined, {len(merged)} total")
+    print(
+        f"forge discovery: {len(result.accepted)} accepted, {len(result.quarantined)} quarantined, {len(merged)} total"
+    )
     return 0
 
 
