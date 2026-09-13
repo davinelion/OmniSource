@@ -5,8 +5,95 @@
     <link>https://iamsmmh.github.io/OmniSource/</link>
     <description>OmniSource is a curated, automatically maintained AltStore-compatible iOS app source. Every entry is resolved from the app&#x27;s own official upstream project - GitHub Releases or the developer&#x27;s official AltStore feed - and each download link is re-verified automatically.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Voyager v2.49.1</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/voyager.json</link>
+      <guid isPermaLink="false">voyager-2.49.1</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Voyager 2.49.1 | Voyager-iOS-2.49.1
+
+## 🐛 Fixes
+
+- fix: preserve special characters in search
+   - PR: #2358
+
+## 📝 Other Changes
+
+- chore: rust react compiler pipeline
+   - PR: #2357
+- chore: upgrade dependencies
+   - PR: #2359]]></description>
+      <enclosure url="https://github.com/aeharding/voyager/releases/download/2.49.1/Voyager-iOS-2.49.1.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Apollo v3.7.1</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/apollo.json</link>
+      <guid isPermaLink="false">apollo-3.7.1</guid>
+      <pubDate>Sun, 13 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Apollo 3.7.1 | Apollo-Reborn-3.7.1
+
+### Features
+
+- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)
+  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row
+  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls
+
+### Fixes
+
+- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)
+- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)
+- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)
+- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)
+  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there
+- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be created, seen when tapping the Posts tab to return to the top of a long Popular feed; the element is left blank instead (#1099: @icpryde)
+- Fix **Keep in Floating Tab** and the other Apollo Reborn rows in the legacy ⋯ sheet crashing the app when a third-party menu tweak such as Translomatic is installed (#1076: @icpryde)
+- Fix **videos going quiet** after rotating the phone with the fullscreen viewer open, and stop a second video under the viewer from starting its own audio (#1080: @icpryde)
+- Fix **Add to Multireddit** reporting "Error adding to multireddit" even though the subreddit was added, and the multireddit's subtitle lagging until the next refresh (#1081: @icpryde)
+- Keep the Liquid Glass action pill **expanded by default** again — collapsing it into the ⋯ is now the opt-in **Collapse Navigation Actions** switch (Interface → Display & Navigation), and **Center Title Between Buttons** is back for the expanded layout (#1105: @IllIIllIllIllII)
+  - Titles stay centered unless the expanded actions need the room, the pill no longer flashes when the subreddit picker opens or closes, and a startup recursion on the always-expanded path is fixed
+- Restore **Hidden** as a **Header Style** option on Liquid Glass — it removes the top scroll-edge effect without adding a blur, and existing Hidden preferences and backups work again (#1074: @IllIIllIllIllII)
+- Fix the Liquid Glass tab bar popping open and snapping back on iOS 27 when a **Two-Gesture** reveal starts with the Left or Right hide style (#1078: @IllIIllIllIllII)
+- Show the **+N new-comment count** on Community Highlights again after a refresh (#1098: @IllIIllIllIllII)]]></description>
+      <enclosure url="https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>YTKACE v21.36.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>
+      <guid isPermaLink="false">ytkace-21.36.6</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[YouTube 21.36.6 | YTKACE 0.9.3 | YTKACE_0.9.3_YouTube_21.36.6
+
+by @itzzace0
+
+What's new:
+• Updated for YouTube 21.36.6
+• Added a toggle to remove the Save button from Shorts
+
+Fixed:
+• Fixed the feed lagging while scrolling with Remove Shorts, Products, Mixes or Community Posts on
+• Fixed the You tab moving to the end of the tab bar after changing other tabs
+• Fixed hold to speed staying stuck at the held speed after letting go
+• Fixed the Save button in Shorts overlapping the other buttons
+• Fixed Block Premium Prompts stopping community post images from opening
+• Fixed Clear Cache saying there was nothing to clear while YouTube's video cache kept growing
+
+YouTube 21.36.6 requires iOS 17, so there are two IPAs:
+• `YTKACE_0.9.3_YouTube_21.36.6.ipa` for iOS 17 and newer
+• `YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa` for iOS 16]]></description>
+      <enclosure url="https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Telegram MxGram v12.9.4</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json</link>
+      <guid isPermaLink="false">telegram-mxgram-12.9.4</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Telegram 12.9.4 | Telegram-12.9.4-iQTele
+
+IPA Vault build for Telegram (iQTele), version 12.9.4]]></description>
+      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Telegram-12.9.4-iQTele.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Dopamine (RootHide) v2.4.9.27</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json</link>
@@ -503,284 +590,6 @@ For the people that don't like black-bars around their videos there is now the o
 - Added and improved translations across all supported languages.
 - Includes numerous performance improvements and bug fixes.]]></description>
       <enclosure url="https://github.com/clquwu/Cosmos-Music-Player/releases/download/1.2.5/Cosmos-Music-Player.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>SpotiFLAC Mobile v4.9.6</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json</link>
-      <guid isPermaLink="false">spotiflac-4.9.6</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[SpotiFLAC 4.9.6 | SpotiFLAC-v4.9.6-ios-unsigned
-
-### New Features
-
-- **about**: Show compiled short Git commit
-- **metadata**: Add safe batch editing and matching
-- **library**: Add bulk duplicate cleanup
-
-### Bug Fixes
-
-- **metadata**: Preserve track tags across collection screens
-- **replaygain**: Report decoder failures and reject incomplete scans
-- **memory**: Release retired runtimes and idle download heap
-- **download**: Resolve missing album folders before publishing
-- **metadata**: Read quality from Opus in MP4 containers
-- **download**: Remove legacy HIGH quality conversion
-- **download**: Preserve native containers before legacy quality conversion
-- **download**: Publish converted SAF files with the final extension
-- **download**: Size quality picker to its content
-- **download**: Allow dragging the quality picker to dismiss
-- **library**: Retain Opus badges when bitrate is missing
-- **download**: Estimate sizes from track quality metadata
-- **download**: Compare size estimates at each quality tier
-- **replaygain**: Write and verify native Opus gain tags
-- **metadata**: Match recording IDs across inconsistent catalogs
-- **metadata**: Normalize artist credits and preserve recording versions
-- **altstore**: Match source bundle ID to released IPA
-- **download**: Prepare fallback sessions before availability checks
-- **metadata**: Preserve Opus tags during batch re-enrichment
-- Restore SAF metadata fallback and preserve active transfers
-- **download**: Preserve verification provider during fallback
-- Resolve backend and test analyzer diagnostics
-- **download**: Route verification notifications to pending challenges
-- **extensions**: Preserve verification on availability errors
-- **extensions**: Bound stream resolution without timing out active transfers
-- **download**: Preserve audio quality across provider fallback
-- **lyrics**: Align usability checks with shared fixtures
-- **library**: Bound playlist picker SQL parameters
-- **playback**: Retain ReplayGain for SAF descriptor leases
-- **android**: Scope SAF read failures to each descriptor
-- **ios**: Isolate download progress subscriptions
-- **metadata**: Preserve Track fields during enrichment
-- **conversion**: Reserve FLAC outputs without overwriting files
-- **search**: Let latest live queries supersede cancelled requests
-- **auth**: Preserve shared signed-session challenge identity
-- **ui**: Resolve collapsed header title overlap
-- **ui**: Improve adaptive phone and tablet layouts
-- **cover**: Preserve provider high-resolution artwork
-- **extensions**: Shorten verification timeout
-- **audio**: Preserve Opus codec in M4A scans
-- **extensions**: Preserve verification callback retries
-- **conversion**: Preserve Unicode SAF document names
-
-### Performance
-
-- **ui**: Retain platform link lookup across rebuilds
-- **ui**: Retain track history lookup snapshots
-- **metadata**: Read complete SAF tags through descriptors
-- **mp3**: Share bounded ID3 metadata and cover reads
-- **library**: Page missing-file cleanup with safe SAF batch checks
-- **extensions**: Clone only the requested storage value
-- **artwork**: Batch and throttle cached preview validation
-- **library**: Reuse collection lookups across selection rebuilds
-- **search**: Decode large extension results off the UI isolate
-- **library**: Stream normalized scan timestamp snapshots
-- **cache**: Enforce cover byte budget during foreground use
-- **queue**: Apply sparse progress updates with chunked snapshots
-- **images**: Size decoded covers from layout constraints
-
-### Refactoring
-
-- **i18n**: Share supported language choices
-- **batch**: Share local track actions and phase settings
-- **ffmpeg**: Remove unused live DASH subsystem
-
-### Documentation
-
-- **changelog**: Document version 4.9.6
-
-### Styling
-
-- **dart**: Apply pinned formatter to existing files
-
-### Testing
-
-- Decouple app fixtures from extension identities
-
-### Chores
-
-- **release**: Bump app version to 4.9.6
-- **ios**: Reuse backend build script without duplicate framework setup
-- Update AltStore source to v4.9.5 by [@github-actions[bot]](https://github.com/github-actions[bot])
-
-### Build
-
-- **ios**: Require iOS 16 and restore local builds
-
-### Revert
-
-- Remove download size estimates
-
-
-
-
-**Full Changelog**: [v4.9.5...v4.9.6](https://github.com/spotiflacapp/SpotiFLAC-Mobile/compare/v4.9.5...v4.9.6)
-
----
-
-### Downloads
-
-#### Android
-- **arm64**: `SpotiFLAC-v4.9.6-arm64.apk` (recommended for modern devices)
-- **arm32**: `SpotiFLAC-v4.9.6-arm32.apk` (older devices)
-
-#### iOS
-- **iOS**: `SpotiFLAC-v4.9.6-ios-unsigned.ipa` (sideload required)
-
-### Installation
-**Android**: Enable "Install from unknown sources" and install the APK
-**iOS**: Use AltStore, Sideloadly, or similar tools to sideload the IPA]]></description>
-      <enclosure url="https://github.com/spotiflacapp/SpotiFLAC-Mobile/releases/download/v4.9.6/SpotiFLAC-v4.9.6-ios-unsigned.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>NexaSC v8.77.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/nexasc.json</link>
-      <guid isPermaLink="false">nexasc-8.77.0</guid>
-      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[SoundCloud 8.77.0 | SoundCloud-8.77.0-NexaSC
-
-IPA Vault build for SoundCloud (NexaSC), version 8.77.0]]></description>
-      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Voyager v2.49.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/voyager.json</link>
-      <guid isPermaLink="false">voyager-2.49.0</guid>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Voyager 2.49.0 | Voyager-iOS-2.49.0
-
-## 🚀 Features
-
-- feat: enable rich editor by default
-   - PR: #2352
-
-## 🐛 Fixes
-
-- fix: show two column setting in desktop app
-   - PR: #2346
-- fix: stabilize navigation after ionic v9 upgrade
-   - PR: #2348
-- fix: preserve tab state during route transitions
-   - PR: #2349
-- fix: prevent random community transition flicker
-   - PR: #2353
-
-## 📝 Other Changes
-
-- chore: upgrade to ionic v9
-   - PR: #2347
-- test: expand provider matrix to comment threads, feed and search
-   - PR: #2321
-- chore: upgrade threadiverse to 0.21.2
-   - PR: #2350
-- chore: upgrade dependencies
-   - PR: #2351]]></description>
-      <enclosure url="https://github.com/aeharding/voyager/releases/download/2.49.0/Voyager-iOS-2.49.0.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Synkplay v0.24.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/synkplay.json</link>
-      <guid isPermaLink="false">synkplay-0.24.0</guid>
-      <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Synkplay 0.24.0 | synkplay-0.24.0-ios
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/ffd4c612dcc653267006b125e5b7572371cf528b/art/synkplay_app_badge_512.png" width="128" height="128" alt="Synkplay logo">
-</p>
-<p align="center">
-  <a href="https://play.google.com/store/apps/details?id=com.yuroyami.syncplay"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/google-play.png" width="150" alt="Get it on Google Play"></a>
-  &nbsp;&nbsp;
-  <a href="https://apps.apple.com/us/app/synkplay/id6760187432"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/app-store.png" width="150" alt="Download on the App Store"></a>
-  &nbsp;&nbsp;
-  <a href="https://apt.izzysoft.de/fdroid/index/apk/com.reddnek.syncplay"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/IzzyOnDroid.png" width="150" alt="Get it on IzzyOnDroid"></a>
-  &nbsp;&nbsp;
-  <a href="https://celloserenity.github.io/altdirect/?url=https://raw.githubusercontent.com/yuroyami/syncplay-mobile/refs/heads/master/altstore_yuroyami.json"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/AltSource_Blue.png" width="150" alt="Add the AltStore source"></a>
-</p>
-
-## Downloads
-
-| File | Platform | What it is | Size |
-|---|---|---|---|
-| [`synkplay-0.24.0-full-universal.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/synkplay-0.24.0-full-universal.apk) | Android 8.0 and up | The full app: ExoPlayer, mpv and KitePlayer, every CPU type in one file. Pick this one. | 89 MB |
-| [`syncplay-0.24.0-exo-only.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/syncplay-0.24.0-exo-only.apk) | Android 8.0 and up | ExoPlayer only, and much smaller. This is the build IzzyOnDroid carries. It installs beside the full app as a separate app. | 21 MB |
-| [`synkplay-0.24.0-ios.ipa`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/synkplay-0.24.0-ios.ipa) | iOS 14.1 and up | Sideload with AltStore or install it directly. The [install guide](https://github.com/yuroyami/syncplay-mobile/wiki/How-to-install-the-app-on-iOS) covers both. | 85 MB |
-
-## Changelog
-
-<details><summary><b>Everything since v0.23.0</b>. Click to unfold.</summary>
-
-### 0.24.0
-
-#### The new look
-
-- The whole app was redrawn: one set of controls, five text sizes, colours that come from the theme, and frosted panels over the video on devices that can draw them.
-- Home is a single form: your name, the server, the player, and Join. It fits a phone, a phone on its side, a tablet or a desktop window.
-- The room has a rail for its actions and a status line. The controls hide while the video plays and come back on a tap.
-- Settings have a search box, grouped rows, values in units people actually read, and colours you edit in place. Each player's settings sit inside the player category.
-- Themes preview as a miniature of the app, and the theme creator shows what a seed colour will do before you save.
-- Motion can be reduced from settings. A screen reader announces who is ready, connection changes and new messages.
-- Watching alone has its own row in About: tap the logo on Home.
-
-#### Players
-
-- KitePlayer, a new engine written for this app on top of FFmpeg, is available on Android, iOS and desktop as an experimental choice. It has chapters, external and styled subtitles, pitch-preserved speed from 0.25x to 4x, and plays links over https.
-- Three engines per platform: ExoPlayer, mpv and KitePlayer on Android, and the system player, VLCKit and KitePlayer on iOS. VLC on Android and mpv on iOS are gone. VLCKit is the iOS default.
-- Volume can go past 100 on players that can boost (mpv, ExoPlayer, VLCKit). The device volume fills first, then the player's own gain takes over.
-- Double taps add up to one jump, and a long press shows where a seek will land before it commits.
-- When you watch alone, the app remembers where you left a file and offers to continue from there.
-- Seeking with KitePlayer lands on the exact frame in one step and is about twice as fast. Files with tens of thousands of subtitle lines no longer slow it down.
-- YouTube links work again with the updated extractor, and a friend's YouTube link in the shared playlist is accepted without any setup. SoundCloud, PeerTube, Bandcamp and media.ccc.de links work the same way on Android and desktop. iOS handles YouTube only.
-
-#### Sync and playback
-
-- Fixed the phantom pause: a player stopping on its own no longer pauses the whole room.
-- The room shows when it is waiting for the video instead of looking frozen, and says who it is waiting for before playback starts.
-- Audio and subtitle picks survive a reload on every engine, and follow your preferred languages.
-- Tracks marked as accessibility captions, audio description or forced now say so in the picker.
-- When a file ends, the playlist moves on once, not once per person in the room.
-- A file that is still opening no longer drags the whole room back to the start.
-- If you load your file after the room has already started, you now sync to the room instead of sitting paused at the start.
-- A per-user time offset lets two different rips of the same film be watched together.
-- The three drift thresholds (rewind, slowdown, fast-forward) are now settings.
-- A phone coming back from the background follows the room instead of dragging it back.
-
-#### Room and chat
-
-- Chat colours follow the theme, so they stay readable on a light one.
-- Chat timestamps follow your device's clock format.
-- Slash commands in the chat box: /ready, /room, /seek, /op, /users and /help.
-- Volume and brightness have their own controls, so a swipe is no longer the only way.
-- You can mute someone, and image links from other people stay hidden until you tap them.
-- The user list has a compact view and a detailed one. The detailed view shows each person's file, its length, its size and whether it matches yours.
-- A playlist change can be undone.
-- Picture in picture grows out of the video instead of popping up from nowhere.
-- The room can follow the device's rotation or stay in landscape. There is a setting for it.
-- Android: lock screen and headset controls work in the room and follow the same readiness rules as the play button.
-- On a television, the room's controls stay inside the visible area.
-- The locked screen tells you how to unlock it.
-- The room shows whether your connection is encrypted.
-- Panels look right on a light theme.
-- Buffering no longer pushes the play button around. The button rounds into a circle and its colours move until the player catches up.
-- The custom skip button sits between the two jump buttons.
-- Chat that fades in while the controls are hidden now shows at the top centre, under the notices, at a readable size. It used to sit tiny at the left edge.
-- Subtitle search and download work again, you can pick the subtitle language, and a failed search says why.
-- A bug report sent from the app says which engine, which build and which device.
-
-#### Connection
-
-- Encrypted connections now check the server's certificate against the name you typed.
-- You can require encryption. A server that offers none is refused before anything is sent.
-- A dropped connection reconnects with a growing wait instead of hammering the server.
-- A handshake that never finishes gives up instead of hanging.
-- Leaving the server address empty joins the official server, as it always looked like it would.
-- The network you are on can no longer push the app's own services onto plain HTTP.
-- A pasted link is checked against the site it really points to, not the text shown in front of it.
-
-#### Hosting
-
-- Hosting lives on the home screen now, under the server choice, with the address first.
-- The hosting screen and its notification use the app's language.
-- A …]]></description>
-      <enclosure url="https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/synkplay-0.24.0-ios.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

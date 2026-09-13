@@ -5,8 +5,34 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>
     <description>Release feed for YTKACE within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/ytkace.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>YTKACE v21.36.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>
+      <guid isPermaLink="false">ytkace-21.36.6</guid>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[YouTube 21.36.6 | YTKACE 0.9.3 | YTKACE_0.9.3_YouTube_21.36.6
+
+by @itzzace0
+
+What's new:
+• Updated for YouTube 21.36.6
+• Added a toggle to remove the Save button from Shorts
+
+Fixed:
+• Fixed the feed lagging while scrolling with Remove Shorts, Products, Mixes or Community Posts on
+• Fixed the You tab moving to the end of the tab bar after changing other tabs
+• Fixed hold to speed staying stuck at the held speed after letting go
+• Fixed the Save button in Shorts overlapping the other buttons
+• Fixed Block Premium Prompts stopping community post images from opening
+• Fixed Clear Cache saying there was nothing to clear while YouTube's video cache kept growing
+
+YouTube 21.36.6 requires iOS 17, so there are two IPAs:
+• `YTKACE_0.9.3_YouTube_21.36.6.ipa` for iOS 17 and newer
+• `YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa` for iOS 16]]></description>
+      <enclosure url="https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>YTKACE v21.35.3</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>

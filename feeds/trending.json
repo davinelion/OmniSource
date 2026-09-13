@@ -81,14 +81,14 @@
       "downloadReachable": true
     },
     {
-      "slug": "dopamine-roothide",
-      "name": "Dopamine (RootHide)",
-      "category": "utilities",
-      "version": "2.4.9.27",
-      "releaseDate": "2026-09-12",
-      "score": 0.7933,
+      "slug": "voyager",
+      "name": "Voyager",
+      "category": "social",
+      "version": "2.49.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
       "signals": {
-        "recency": 0.9833,
+        "recency": 1.0,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -101,28 +101,11 @@
       "slug": "apollo",
       "name": "Apollo",
       "category": "social",
-      "version": "3.7.0",
-      "releaseDate": "2026-09-11",
-      "score": 0.7867,
+      "version": "3.7.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
       "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "maxmusic",
-      "name": "MaxMusic",
-      "category": "music",
-      "version": "9.36.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
+        "recency": 1.0,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -136,10 +119,10 @@
       "name": "iQFace",
       "category": "social",
       "version": "578.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
       "signals": {
-        "recency": 0.95,
+        "recency": 1.0,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -149,14 +132,14 @@
       "downloadReachable": true
     },
     {
-      "slug": "ryukgram",
-      "name": "RyukGram",
-      "category": "social",
-      "version": "446.0.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "category": "photo-video",
+      "version": "21.36.6",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
       "signals": {
-        "recency": 0.95,
+        "recency": 0.9833,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -166,14 +149,14 @@
       "downloadReachable": true
     },
     {
-      "slug": "sparkle",
-      "name": "Sparkle",
+      "slug": "telegram-mxgram",
+      "name": "Telegram MxGram",
       "category": "social",
-      "version": "446.0.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
+      "version": "12.9.4",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
       "signals": {
-        "recency": 0.95,
+        "recency": 0.9833,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -181,9 +164,7 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
-    }
-  ],
-  "rising": [
+    },
     {
       "slug": "dopamine-roothide",
       "name": "Dopamine (RootHide)",
@@ -200,16 +181,103 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
+    }
+  ],
+  "rising": [
+    {
+      "slug": "voyager",
+      "name": "Voyager",
+      "category": "social",
+      "version": "2.49.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
     },
     {
       "slug": "apollo",
       "name": "Apollo",
       "category": "social",
-      "version": "3.7.0",
-      "releaseDate": "2026-09-11",
-      "score": 0.7867,
+      "version": "3.7.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
       "signals": {
-        "recency": 0.9667,
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "iqface",
+      "name": "iQFace",
+      "category": "social",
+      "version": "578.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "category": "photo-video",
+      "version": "21.36.6",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
+      "signals": {
+        "recency": 0.9833,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "telegram-mxgram",
+      "name": "Telegram MxGram",
+      "category": "social",
+      "version": "12.9.4",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
+      "signals": {
+        "recency": 0.9833,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "dopamine-roothide",
+      "name": "Dopamine (RootHide)",
+      "category": "utilities",
+      "version": "2.4.9.27",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
+      "signals": {
+        "recency": 0.9833,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -253,23 +321,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "iqface",
-      "name": "iQFace",
-      "category": "social",
-      "version": "578.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "ryukgram",
       "name": "RyukGram",
       "category": "social",
@@ -291,57 +342,6 @@
       "name": "Sparkle",
       "category": "social",
       "version": "446.0.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "messenger-flow",
-      "name": "Messenger Flow",
-      "category": "social",
-      "version": "578.1.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "msgplusx",
-      "name": "MSGPlusX",
-      "category": "social",
-      "version": "578.1.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "threadsaver",
-      "name": "ThreadSaver",
-      "category": "social",
-      "version": "446.1",
       "releaseDate": "2026-09-10",
       "score": 0.78,
       "signals": {
@@ -357,10 +357,61 @@
   ],
   "recentlyUpdated": [
     {
-      "slug": "dopamine-roothide",
-      "name": "Dopamine (RootHide)",
-      "category": "utilities",
-      "version": "2.4.9.27",
+      "slug": "voyager",
+      "name": "Voyager",
+      "category": "social",
+      "version": "2.49.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "apollo",
+      "name": "Apollo",
+      "category": "social",
+      "version": "3.7.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "iqface",
+      "name": "iQFace",
+      "category": "social",
+      "version": "578.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "category": "photo-video",
+      "version": "21.36.6",
       "releaseDate": "2026-09-12",
       "score": 0.7933,
       "signals": {
@@ -374,14 +425,31 @@
       "downloadReachable": true
     },
     {
-      "slug": "apollo",
-      "name": "Apollo",
+      "slug": "telegram-mxgram",
+      "name": "Telegram MxGram",
       "category": "social",
-      "version": "3.7.0",
-      "releaseDate": "2026-09-11",
-      "score": 0.7867,
+      "version": "12.9.4",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
       "signals": {
-        "recency": 0.9667,
+        "recency": 0.9833,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "dopamine-roothide",
+      "name": "Dopamine (RootHide)",
+      "category": "utilities",
+      "version": "2.4.9.27",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
+      "signals": {
+        "recency": 0.9833,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -425,23 +493,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "iqface",
-      "name": "iQFace",
-      "category": "social",
-      "version": "578.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "ryukgram",
       "name": "RyukGram",
       "category": "social",
@@ -463,57 +514,6 @@
       "name": "Sparkle",
       "category": "social",
       "version": "446.0.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "messenger-flow",
-      "name": "Messenger Flow",
-      "category": "social",
-      "version": "578.1.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "msgplusx",
-      "name": "MSGPlusX",
-      "category": "social",
-      "version": "578.1.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "threadsaver",
-      "name": "ThreadSaver",
-      "category": "social",
-      "version": "446.1",
       "releaseDate": "2026-09-10",
       "score": 0.78,
       "signals": {
@@ -597,6 +597,91 @@
       "downloadReachable": true
     },
     {
+      "slug": "voyager",
+      "name": "Voyager",
+      "category": "social",
+      "version": "2.49.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "apollo",
+      "name": "Apollo",
+      "category": "social",
+      "version": "3.7.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "iqface",
+      "name": "iQFace",
+      "category": "social",
+      "version": "578.1",
+      "releaseDate": "2026-09-13",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "category": "photo-video",
+      "version": "21.36.6",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
+      "signals": {
+        "recency": 0.9833,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "telegram-mxgram",
+      "name": "Telegram MxGram",
+      "category": "social",
+      "version": "12.9.4",
+      "releaseDate": "2026-09-12",
+      "score": 0.7933,
+      "signals": {
+        "recency": 0.9833,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "dopamine-roothide",
       "name": "Dopamine (RootHide)",
       "category": "utilities",
@@ -614,44 +699,10 @@
       "downloadReachable": true
     },
     {
-      "slug": "apollo",
-      "name": "Apollo",
-      "category": "social",
-      "version": "3.7.0",
-      "releaseDate": "2026-09-11",
-      "score": 0.7867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "maxmusic",
       "name": "MaxMusic",
       "category": "music",
       "version": "9.36.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "iqface",
-      "name": "iQFace",
-      "category": "social",
-      "version": "578.1",
       "releaseDate": "2026-09-10",
       "score": 0.78,
       "signals": {
@@ -937,23 +988,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "voyager",
-      "name": "Voyager",
-      "category": "social",
-      "version": "2.49.0",
-      "releaseDate": "2026-09-06",
-      "score": 0.7533,
-      "signals": {
-        "recency": 0.8833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "synkplay",
       "name": "Synkplay",
       "category": "photo-video",
@@ -992,23 +1026,6 @@
       "name": "Swiftgram",
       "category": "social",
       "version": "12.9.2",
-      "releaseDate": "2026-09-05",
-      "score": 0.7467,
-      "signals": {
-        "recency": 0.8667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "telegram-mxgram",
-      "name": "Telegram MxGram",
-      "category": "social",
-      "version": "12.9.3",
       "releaseDate": "2026-09-05",
       "score": 0.7467,
       "signals": {
@@ -1166,23 +1183,6 @@
       "score": 0.72,
       "signals": {
         "recency": 0.8,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ytkace",
-      "name": "YTKACE",
-      "category": "photo-video",
-      "version": "21.35.3",
-      "releaseDate": "2026-08-31",
-      "score": 0.7133,
-      "signals": {
-        "recency": 0.7833,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
