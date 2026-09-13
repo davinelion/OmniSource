@@ -21,6 +21,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 from omnisource import autodiscovery
 from omnisource.io import read_json
 from omnisource.quarantine import QuarantineStore, validate_candidates
+from omnisource.remote_validation import validate_source_record
 
 ROOT = Path(__file__).resolve().parents[2]
 STORE = ROOT / "data" / "discovered_sources.json"
@@ -125,8 +126,16 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def autodiscovery_validate(record: dict[str, Any]) -> list[str]:
-    """Validate repository candidates without treating a repo page as a feed."""
-    errors = []
+    """Validate repository candidates without treating a repo page as a feed.
+
+    The discovery store's publication gate (``scripts/validation/validate_source.py``)
+    applies the full record schema, so a candidate accepted here has to satisfy
+    it as well: this pass used to check only the URL, the name and the archived
+    flag, which let it write records the very next workflow step rejected — and
+    a rejected record failed ``discovery.yml`` before it could be committed or
+    quarantined. The repository-specific rules stay on top of the shared schema.
+    """
+    errors = list(validate_source_record(record))
     url = str(record.get("url") or "")
     if not url.startswith("https://github.com/"):
         errors.append("repository URL must be an HTTPS GitHub URL")

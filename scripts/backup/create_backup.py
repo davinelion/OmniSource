@@ -9,7 +9,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 
-from omnisource.backup import create_snapshot, restore_snapshot, verify_snapshot
+from omnisource.backup import LABELS, create_snapshot, restore_snapshot, verify_snapshot
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -20,7 +20,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     create = sub.add_parser("create")
     create.add_argument("--root", default=str(ROOT))
     create.add_argument("--destination", default=str(ROOT / ".backups"))
-    create.add_argument("--label", choices=("daily", "weekly", "monthly", "manual"), default="manual")
+    create.add_argument("--label", choices=LABELS, default="manual")
     verify = sub.add_parser("verify")
     verify.add_argument("snapshot")
     restore = sub.add_parser("restore")

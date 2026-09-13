@@ -52,6 +52,65 @@ day between a commit and a later build), which is pre-existing here and out of
 scope; `SOURCE_DATE_EPOCH` support in the writers is the real fix.
 
 
+## CI failures (reviewed 2026-09-13, branch `arena/01a09c23-omnisource`)
+
+Each item below was reproduced locally before and after the fix. The review
+started from runs
+[34765462173](https://github.com/iamsmmh/OmniSource/actions/runs/34765462173/job/103745515346)
+(Sync & Publish) and
+[34766172646](https://github.com/iamsmmh/OmniSource/actions/runs/34766172646/job/103747416461)
+(Discovery); over the last 100 runs the red workflows were `Sync & Publish`
+7/7, `Discovery` 2/2, `Backup and Recovery` 2/2, `Validate` 3/10 and
+`Merge Feeds` 1/3.
+
+| # | Symptom | Root cause | Fix |
+| --- | --- | --- | --- |
+| C1 | `Sync & Publish` fails at *Verify generated artifacts are reproducible* on **every** run — so feeds never publish and Pages never deploys — and `Validate`/`Merge Feeds` fail the same step whenever the committed ledger carries telemetry | `reports/latest.json` embedded **run-scoped** sync telemetry (`sync.synced/incrementalHits/updated/failed/apiRequests`, `updates`, `errors`). The checker rebuilds with `--no-sync`, whose fresh `SyncReport` is all zeros, so the rebuild always differed from the sync before it. `reports/history.json` shows the artifact: a real row (`updated: 18, failed: 17, errors: 17`) followed by a fake zero row from the same day | `reports.py` carries the run-scoped blocks forward when a run performed no sync (`write_reports(sync_ran=…)`, set from `pipeline.run`): the ledger keeps describing the last real sync and an offline rebuild is byte-identical. Verified with a real `--incremental` sync (131 API requests, 17 upstream failures) → `check_reproducible.py`: *697 generated file(s) stable* |
+| C2 | `Discovery` fails at *Validate discoveries (invalid sources never publish)* on every run that finds anything | `remote_validation.validate_source_record` checked `source_id` against `SLUG_RE` — the 32-char **catalog app slug** rule — while `autodiscovery.source_id_for_url` generates `host-stem-digest` ids of up to 80 chars, exactly as `schemas/discovery.schema.json` allows. Reproduced: 166 repository candidates → `166 error(s)`, all *source_id must be a lowercase slug* | New `SOURCE_ID_RE` (`^[a-z0-9][a-z0-9-]{1,79}$`) matching the schema, and `source_id_for_url` sanitizes the host as well as the path, so ids are schema-valid by construction (IDN hosts included). `discover_repositories.py` now validates candidates with the same rules the gate applies, so a pass cannot write records the next step rejects. Verified: 166 candidates → `0 error(s)` |
+| C3 | `Backup and Recovery` fails at *Snapshot catalog, feeds, data, and API* on every scheduled run (exit 2) — the repository had **no** disaster-recovery snapshots at all | `backup.yml` passed `--label scheduled`; `create_backup.py` accepts only `daily/weekly/monthly/manual`, so argparse exited 2 before snapshotting | The job reads the cron that fired it from `$GITHUB_EVENT_PATH` (no `${{ }}` in the shell) and maps it to its tier, `manual` for a dispatch. `backup.LABELS` is now the single source of truth for the taxonomy and `tests/test_ops.py` pins the workflow's labels *and* its cron mapping to it. Verified: `create --label daily` → *894 files, verified=True* |
+| C4 | The published root `/security-report.json` disappears between runs | `site._prune_mirror` kept only `{apps.json, sitemap.xml, robots.txt, .nojekyll, catalog.json}` at the root, so every build deleted the report `security.yml` commits — and `sync.yml`'s `git add -A -- '*.json'` published the deletion. `publish_root.py --check` and `tests/test_website_shell.py` both treated the file as owned: the code contradicted its own documentation | `ROOT_EXTERNALLY_PUBLISHED` keeps it; `publish_root.py` derives its `owned` set from `site.py` so the two cannot drift again; a regression test asserts the publisher never prunes another workflow's root document |
+| C5 | `Security` run 34748720624: *The job was not started because it repeatedly failed to be acquired (5 attempts)* | GitHub runner capacity, not a repository defect | None needed — 10/11 security runs are green |
+
+Three further defects surfaced while reproducing the above, all fixed:
+
+* **Untrusted input crashed the fail-closed gate.** `assert_publishable`
+  compared `record.get("reputation", 0) < 25` and `quarantine._source_fields`
+  called `int()` on the same field; a third-party feed that puts a string
+  there raised `TypeError`/`ValueError`, so one malformed candidate took the
+  whole validation gate down with a traceback instead of being quarantined.
+  Both coerce safely now, and a non-integer reputation is reported as the
+  schema error it already was.
+* **A single bad record wedged `discovery.yml` permanently.** The validate
+  step failed *before* the commit step, so the quarantine it prescribed was
+  never persisted and every later run hit the same record — the runbook in
+  `docs/OPERATIONS.md` said "quarantine the offending record, re-run", by
+  hand. `validate_source.py --quarantine-invalid` isolates invalid records
+  (fail-closed: they leave the store, so they can never publish) and stays
+  green so the commit persists the quarantine; it still fails when isolation
+  is impossible or when an already verified/published record is invalid,
+  which is a genuine breach. Default and `--strict` behaviour is unchanged
+  for the read-only `validation.yml` gate.
+
+* **Every documented backup command was invalid.** `docs/OPERATIONS.md` and
+  `docs/DEPLOYMENT-GUIDE.md` both told operators to run
+  `create --label drill`, `verify --backup <dir>` and
+  `restore --backup <dir> --destination <dir> --dry-run`: `drill` is not a
+  label, and `verify`/`restore` take the snapshot directory *positionally*
+  (`restore` is a dry run unless `--apply` is given, `--root` names the target
+  tree). The recovery runbook could not be executed as written. Both are
+  corrected, and `docs/MIGRATION.md` pointed at `scripts/derived/*.py` for
+  three builders that live at `scripts/*.py`. A sweep of all 34 documented
+  `python3 scripts/…` invocations (plus every workflow and the Makefile) now
+  resolves against the real argparse definitions.
+
+Also latent, now guarded: `sync.yml`'s deploy job calls `actions/deploy-pages`,
+which **fails** while Pages is set to *Deploy from a branch* — this
+repository's setting (`build_type: legacy`) — rather than "simply ignoring the
+artifact" as `.github/workflows/README.md` claimed. The job had never executed
+because the build job always failed first, so fixing C1 would have moved the
+failure there. It now probes the Pages `build_type` and deploys only in
+Actions mode, and the docs describe what actually happens.
+
 ## P0 — High
 
 ### 1. Shell injection in `build-tweak.yml` (CWE-94)

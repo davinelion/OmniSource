@@ -52,6 +52,21 @@ def _record_id(record: dict[str, Any]) -> str:
     return hashlib.sha256(url.encode("utf-8")).hexdigest()[:24]
 
 
+def _reputation_score(record: dict[str, Any]) -> int:
+    """Coerce an untrusted reputation value into ``0..100``.
+
+    Discovery records come from third-party feeds and scraped catalog pages,
+    so the field can hold any JSON value; ``int("high")`` would raise and
+    crash the fail-closed quarantine path instead of isolating the record.
+    """
+    value = record.get("reputation_score", record.get("reputation", 0)) or 0
+    try:
+        score = int(value)
+    except (TypeError, ValueError):
+        return 0
+    return max(0, min(100, score))
+
+
 def _source_fields(record: dict[str, Any]) -> dict[str, Any]:
     """Return the public naming contract while retaining legacy fields."""
     source_id = _record_id(record)
@@ -65,10 +80,7 @@ def _source_fields(record: dict[str, Any]) -> dict[str, Any]:
         "last_seen": str(record.get("last_seen") or record.get("last_checked") or utcnow()),
         "health_status": str(record.get("health_status") or record.get("health") or "unknown"),
         "verification_status": str(record.get("verification_status") or "unverified"),
-        "reputation_score": max(
-            0,
-            min(100, int(record.get("reputation_score", record.get("reputation", 0)) or 0)),
-        ),
+        "reputation_score": _reputation_score(record),
     }
 
 

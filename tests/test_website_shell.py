@@ -116,6 +116,14 @@ class TestWebsiteShell(unittest.TestCase):
         self.assertIn("scripts/build_site.py", sync)
         self.assertIn("actions/upload-pages-artifact", sync)
         self.assertIn("actions/deploy-pages", sync)
+        # ...but only when Pages is configured to build from Actions. This
+        # repository publishes from the branch, where deploy-pages fails the
+        # whole run for a configuration that works as designed, so the step is
+        # guarded by a runtime probe of the Pages build_type.
+        self.assertRegex(
+            sync,
+            r"if: steps\.pages-mode\.outputs\.deploy == 'true'\s+uses: actions/deploy-pages",
+        )
 
     def test_installable_source_url_is_published_at_the_root(self) -> None:
         # https://iamsmmh.github.io/OmniSource/apps.json is the URL installers

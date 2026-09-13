@@ -68,7 +68,13 @@ jobs:
       - name: Validate discoveries (invalid sources never publish)
         run: |
           set -euo pipefail
-          python3 scripts/validation/validate_source.py
+          # Fail closed, but stay green: an invalid record is isolated in
+          # data/quarantine/ and dropped from the discovery store, which the
+          # commit step below persists. Failing hard here instead would skip
+          # that commit, leave the bad record in the store and wedge every
+          # later run. A record that cannot be isolated — or one that was
+          # already verified/published — still fails the job.
+          python3 scripts/validation/validate_source.py --quarantine-invalid
 
       - name: Verify and publish only clean feeds
         env:

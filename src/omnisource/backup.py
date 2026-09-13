@@ -21,6 +21,11 @@ from omnisource.io import atomic_write_text
 SCHEMA_VERSION = 1
 DEFAULT_INCLUDE = ("catalog.json", "feeds", "data", "api")
 EXCLUDE_NAMES = {".cache", "node_modules", ".git", "__pycache__", "*.ipa", "*.tipa"}
+# The retention tiers a snapshot may be labeled with. ``backup.yml`` maps the
+# cron that fired a scheduled run onto one of them (and a manual dispatch onto
+# ``manual``); ``tests/test_ops.py`` pins that mapping to this tuple, so a
+# workflow label the CLI does not accept cannot ship again.
+LABELS = ("daily", "weekly", "monthly", "manual")
 
 
 def utcnow() -> str:
@@ -140,4 +145,4 @@ def restore_snapshot(snapshot: Path, root: Path, *, dry_run: bool = True) -> dic
     return {"ok": True, "dryRun": dry_run, "restored": restored, "errors": []}
 
 
-__all__ = ["build_manifest", "create_snapshot", "restore_snapshot", "verify_snapshot"]
+__all__ = ["LABELS", "build_manifest", "create_snapshot", "restore_snapshot", "verify_snapshot"]

@@ -2,10 +2,15 @@
 
 from __future__ import annotations
 
+import re
+import subprocess
+import sys
+from pathlib import Path
 from unittest import TestCase
 
 from omnisource import mirrors, reputation_labels, security, selfheal
 from omnisource.analytics_rollup import build_rollup, normalize_history
+from omnisource.backup import LABELS
 from omnisource.enrichment import clean_text, enrich_app, normalize_category, normalize_url
 from omnisource.probes import build_status, state_for
 
@@ -167,6 +172,47 @@ class RollupTests(TestCase):
         self.assertTrue(doc["daily"])
         self.assertTrue(doc["weekly"])
         self.assertEqual(len(doc["monthly"]), 1)
+
+
+class BackupLabelContractTests(TestCase):
+    """``backup.yml`` must only use labels ``create_backup.py`` accepts.
+
+    The workflow passed ``--label scheduled``, which is not one of the CLI's
+    choices, so argparse exited 2 and every scheduled run failed *before*
+    taking a snapshot — the repository had no recovery backups at all. Neither
+    side can see that contract on its own (the CLI is right, the YAML parses),
+    so it is pinned here.
+    """
+
+    root = Path(__file__).resolve().parents[1]
+
+    def _workflow(self) -> str:
+        return (self.root / ".github" / "workflows" / "backup.yml").read_text(encoding="utf-8")
+
+    def test_every_label_the_workflow_uses_is_accepted(self) -> None:
+        used = set(re.findall(r"label=(\S+)", self._workflow()))
+        self.assertTrue(used, "backup.yml no longer maps a run to a backup label")
+        for label in sorted(used):
+            self.assertIn(label, LABELS, f"create_backup.py rejects --label {label}")
+
+    def test_every_scheduled_cron_maps_to_a_tier(self) -> None:
+        text = self._workflow()
+        crons = set(re.findall(r"^\s*-\s*cron:\s*[\"']([^\"']+)[\"']", text, re.MULTILINE))
+        mapped = set(re.findall(r"^\s*'([^']+)'\)\s*label=", text, re.MULTILINE))
+        self.assertTrue(crons, "backup.yml lost its schedule")
+        self.assertEqual(crons, mapped, "a cron without a case branch snapshots as 'manual'")
+
+    def test_the_cli_rejects_an_unknown_label(self) -> None:
+        # The guard above only means something while the CLI stays strict.
+        script = self.root / "scripts" / "backup" / "create_backup.py"
+        result = subprocess.run(
+            [sys.executable, str(script), "create", "--label", "scheduled", "--destination", "/tmp/omni-label-probe"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("invalid choice", result.stderr)
 
 
 if __name__ == "__main__":

@@ -802,6 +802,12 @@ class _CatalogShell:
 # JSON/XML exists).
 ROOT_GENERATED_FILES = ("apps.json", "sitemap.xml", "robots.txt", ".nojekyll")
 ROOT_HAND_MAINTAINED = ("catalog.json",)
+# Root documents another workflow publishes. ``security.yml`` commits the root
+# copy of its machine-readable report (``scripts/security/scan.py --alias``),
+# so the feed pipeline must keep it: pruning it deleted a committed file, which
+# ``sync.yml``'s ``git add -A -- '*.json'`` then published as a removal, and
+# the report 404'd until the next daily scan restored it.
+ROOT_EXTERNALLY_PUBLISHED = ("security-report.json",)
 
 
 def _prune_mirror(directory: Path, keep: set[str]) -> list[Path]:
@@ -867,7 +873,7 @@ def publish_repo_artifacts(
     # the mirror just published; per-app records of removed apps are pruned.
     removed.extend(_prune_mirror(root / "api" / "v2", set(api["v2_published"]) | {"index.json"}))
     removed.extend(_prune_mirror(root / "api" / "v2" / "apps", set(api["v2_apps_published"])))
-    keep = {*ROOT_GENERATED_FILES, *ROOT_HAND_MAINTAINED}
+    keep = {*ROOT_GENERATED_FILES, *ROOT_HAND_MAINTAINED, *ROOT_EXTERNALLY_PUBLISHED}
     keep.update(f"{name}.gz" for name in ROOT_GENERATED_FILES if name.endswith(".json"))
     removed.extend(_prune_mirror(root, keep))
 

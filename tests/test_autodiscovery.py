@@ -5,6 +5,7 @@ from __future__ import annotations
 from unittest import TestCase
 
 from omnisource import autodiscovery
+from omnisource.validation import SOURCE_ID_RE
 
 
 def _record(url: str = "https://example.com/apps.json", **overrides) -> dict:
@@ -30,6 +31,24 @@ class DiscoveryRecordTests(TestCase):
             autodiscovery.source_id_for_url("https://a.example.com/apps.json"),
             autodiscovery.source_id_for_url("https://b.example.com/apps.json"),
         )
+
+    def test_source_id_always_matches_the_discovery_schema(self) -> None:
+        # The id is generated from arbitrary discovered URLs, so it must satisfy
+        # SOURCE_ID_RE (schemas/discovery.schema.json) by construction: an
+        # exotic host or an over-long path used to produce an id the validation
+        # gate rejected, quarantining a candidate for its own identifier.
+        urls = (
+            "https://example.com/apps.json",
+            "https://github.com/SomeOwner/A-Very-Long-Repository-Name-Here/releases",
+            "https://a-very-long-subdomain-name.example.co.uk/sources/altstore/apps.json",
+            "https://例え.example/source.json",
+            "https://example.com/" + "p" * 200,
+        )
+        for url in urls:
+            with self.subTest(url=url):
+                source_id = autodiscovery.source_id_for_url(url)
+                self.assertRegex(source_id, SOURCE_ID_RE)
+                self.assertLessEqual(len(source_id), 80)
 
     def test_reputation_is_clamped(self) -> None:
         high = autodiscovery.new_record(url="https://example.com/a.json", reputation=500)

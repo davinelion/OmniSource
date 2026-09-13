@@ -24,7 +24,7 @@ from typing import Any
 from omnisource.autodiscovery import KNOWN_TYPES
 from omnisource.constants import USER_AGENT
 from omnisource.http import is_http_url
-from omnisource.validation import BUNDLE_RE, DATE_RE, SHA_RE, SLUG_RE, TINT_RE
+from omnisource.validation import BUNDLE_RE, DATE_RE, SHA_RE, SOURCE_ID_RE, TINT_RE
 
 ALLOWED_TYPES = frozenset(KNOWN_TYPES)
 ALLOWED_HEALTH = frozenset({"unknown", "online", "degraded", "offline"})
@@ -90,8 +90,8 @@ def validate_source_record(record: Any) -> list[str]:
     if not isinstance(reputation, int) or isinstance(reputation, bool) or not 0 <= reputation <= 100:
         errors.append("reputation must be an integer 0..100")
     source_id = values.get("source_id", "")
-    if source_id and not SLUG_RE.match(str(source_id)):
-        errors.append("source_id must be a lowercase slug")
+    if source_id and not SOURCE_ID_RE.match(str(source_id)):
+        errors.append("source_id must be a lowercase kebab-case id of 2-80 characters")
     return errors
 
 
@@ -240,6 +240,10 @@ def assert_publishable(
             ok, detail = check_url_reachable(str(app.get("downloadURL", "")))
             if not ok:
                 warnings.append(f"{app.get('name', '?')}: download unreachable ({detail})")
-    if record.get("reputation", 0) < 25:
+    # A non-integer reputation is already an error above; comparing it here
+    # would raise on untrusted input (a third-party feed can put any JSON
+    # value in the field) and take the whole validation gate down with it.
+    reputation = record.get("reputation", 0)
+    if isinstance(reputation, int) and not isinstance(reputation, bool) and reputation < 25:
         warnings.append("reputation below 25: quarantine recommended")
     return (not errors, errors, warnings)

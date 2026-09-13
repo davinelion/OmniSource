@@ -45,9 +45,12 @@ publishing unverified data. Review `data/status.json`,
 ## Recovery drill
 
 ```bash
-python3 scripts/backup/create_backup.py create --label drill --destination /tmp/omnisource-backup
-python3 scripts/backup/create_backup.py verify --backup /tmp/omnisource-backup
-python3 scripts/backup/create_backup.py restore --backup /tmp/omnisource-backup --destination /tmp/restore --dry-run
+# A drill is a manual snapshot: --label takes daily | weekly | monthly | manual.
+python3 scripts/backup/create_backup.py create --label manual --destination /tmp/omnisource-backup
+# create prints the snapshot directory; verify and restore take it positionally.
+python3 scripts/backup/create_backup.py verify /tmp/omnisource-backup/manual-20260913T120000Z
+# restore is a dry run unless --apply is passed; --root is the tree to restore into.
+python3 scripts/backup/create_backup.py restore /tmp/omnisource-backup/manual-20260913T120000Z --root /tmp/restore
 ```
 
 Backups intentionally contain metadata, manifests, configuration, and source

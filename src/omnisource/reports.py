@@ -17,6 +17,13 @@ normalizes wholesale (same as the analytics history). In particular the
 report embeds no wall-clock durations and no ``files_changed`` counts —
 a rebuild from committed state reports 0 changed files while the original
 run reported N, so either value would fail the gate.
+
+The same reasoning applies to the sync counters, the update events and the
+error list: they describe the last *sync*, not the last build, and a rebuild
+(``--no-sync``) has no telemetry of its own. Emitting zeros there made every
+scheduled run fail the reproducibility gate — and erased the record of what
+the sync actually did — so a run that performed no sync carries the previous
+report's values forward (:data:`RUN_SCOPED_FIELDS`) instead of resetting them.
 """
 
 from __future__ import annotations
@@ -28,6 +35,11 @@ from typing import Any
 from omnisource.io import write_json
 
 HISTORY_LIMIT = 30
+
+# Report blocks that describe the run rather than the committed state. A build
+# that did not sync (--no-sync: an offline rebuild, the weekly integrity job)
+# has nothing to report here, so it keeps the values of the last real sync.
+RUN_SCOPED_FIELDS = ("sync", "updates", "errors")
 
 
 def _read_json(path: Path) -> dict[str, Any] | None:
@@ -44,8 +56,15 @@ def build_report(
     analytics_doc: dict[str, Any],
     sync_report: Any,
     feeds_dir: Path,
+    previous_report: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    """Assemble the deterministic per-build report document."""
+    """Assemble the deterministic per-build report document.
+
+    ``previous_report`` is the report already on disk when this run performed
+    no sync; its :data:`RUN_SCOPED_FIELDS` blocks are carried forward so an
+    offline rebuild reproduces the ledger byte-for-byte instead of zeroing the
+    last sync's counters, updates and errors.
+    """
     totals = health_doc.get("totals", {})
     analytics_totals = analytics_doc.get("totals", {})
     unreachable = sorted(
@@ -66,7 +85,7 @@ def build_report(
         )
     manifest = _read_json(feeds_dir / "api" / "v2" / "manifest.json") or {}
     translations = _read_json(feeds_dir / "translation-status.json") or {}
-    return {
+    report = {
         "generatedAt": health_doc.get("generatedAt"),
         "feedVersion": manifest.get("feedVersion"),
         "apps": {
@@ -87,6 +106,13 @@ def build_report(
         "errors": list(getattr(sync_report, "errors", []) or []),
         "translations": translations,
     }
+    if isinstance(previous_report, dict):
+        # Values are replaced in place, so the key order (and therefore the
+        # serialized bytes) of the document stays stable.
+        for field in RUN_SCOPED_FIELDS:
+            if field in previous_report:
+                report[field] = previous_report[field]
+    return report
 
 
 def history_row(report: dict[str, Any]) -> dict[str, Any]:
@@ -125,21 +151,30 @@ def write_reports(
     health_doc: dict[str, Any],
     analytics_doc: dict[str, Any],
     sync_report: Any,
+    sync_ran: bool = True,
 ) -> list[Path]:
     """Write ``reports/latest.json`` + ``reports/history.json``.
+
+    ``sync_ran`` is False for a build that did not contact upstreams
+    (``--no-sync``). Such a run has no sync telemetry, so the run-scoped
+    blocks of the report already on disk are carried forward: the ledger keeps
+    describing the last real sync and an offline rebuild stays a byte-level
+    no-op, which is what ``scripts/check_reproducible.py`` asserts.
 
     Returns the paths that changed on disk.
     """
     reports_dir = root / "reports"
     reports_dir.mkdir(parents=True, exist_ok=True)
+    latest_path = reports_dir / "latest.json"
+    previous = None if sync_ran else _read_json(latest_path)
     report = build_report(
         health_doc=health_doc,
         analytics_doc=analytics_doc,
         sync_report=sync_report,
         feeds_dir=feeds_dir,
+        previous_report=previous,
     )
     changed: list[Path] = []
-    latest_path = reports_dir / "latest.json"
     if write_json(latest_path, report):
         changed.append(latest_path)
     history_path = reports_dir / "history.json"

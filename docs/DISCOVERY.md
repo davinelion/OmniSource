@@ -42,15 +42,24 @@ Merges are keyed by URL: re-discovery refreshes `last_checked` (and
 `scripts/validation/` (`src/omnisource/remote_validation.py`):
 
 - `validate_source.py` — store schema, https URLs, known types, 0–100
-  reputation, slug IDs. Fails `discovery.yml` before commit.
+  reputation, and `source_id` shape. Ids are URL-derived (`host-stem-digest`,
+  capped at 80 characters by `schemas/discovery.schema.json`) — deliberately
+  *not* the 32-character `catalog.json` app-slug rule, which rejected every
+  discovered id. `discovery.yml` runs it with `--quarantine-invalid`: an
+  invalid record is isolated in `data/quarantine/sources.json` and dropped
+  from the store (fail-closed) while the run stays green so the commit step
+  persists the quarantine. It still fails when a record cannot be isolated,
+  or when an already verified/published record is invalid. Without the flag
+  (local runs, `validation.yml`) every finding is a hard error.
 - `validate_feed.py` — envelope schema, per-app rules, duplicate bundle
   IDs, optional `--check-downloads` reachability probe.
 - `validate_app.py` — single app entry (+ `--check-download`).
 - `validate_release.py` — tag, installable assets, digest format.
 
 `assert_publishable()` returns `(ok, errors, warnings)`; anything with
-errors is quarantined (kept in the store with `reputation: 0`, never
-merged toward feeds).
+errors is quarantined in `data/quarantine/sources.json` and never merged
+toward a feed. Every discovery pass validates its candidates with the same
+rules this gate applies, so a record a pass accepted cannot fail the gate.
 
 ## Promotion path
 
