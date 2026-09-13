@@ -1984,6 +1984,101 @@
     render: function () {
       this.renderClientCards();
       this.renderAppPicker();
+      this.handleAutoAdd();
+    },
+
+    /* One-tap hand-off used by README badges, QR codes and external links:
+       /install/?add=altstore|sidestore|feather|esign|livecontainer
+       optionally with &app=<slug> for a single-app feed. GitHub (and most
+       chat apps) strip non-http schemes from links, so those badges point
+       here and this page performs the scheme navigation itself. The attempt
+       fires once per page load; if the client is not installed iOS shows its
+       own alert and the banner below stays on screen with a manual retry and
+       the feed URL, so the flow can never dead-end. */
+    handleAutoAdd: function () {
+      var banner = $('#installAutoAdd');
+      var params;
+      try {
+        params = new URLSearchParams(location.search);
+      } catch (err) {
+        return;
+      }
+      var wanted = String(params.get('add') || '').trim().toLowerCase();
+      if (!wanted || !banner) return;
+      var client = state.clients.filter(function (c) { return c.id === wanted; })[0] || null;
+      if (!client || !installUrlFor(wanted, 'https://example.com/apps.json')) {
+        banner.hidden = false;
+        banner.className = 'panel in-autoadd is-error';
+        banner.innerHTML = '<div class="iaa-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Zm0 6v5m0 3.2v.1"/></svg></div>' +
+          '<div class="iaa-body"><h2>Unknown client</h2><p>' + OS.esc(wanted) + ' is not a supported sideloading client. Pick one of the clients below instead.</p></div>';
+        return;
+      }
+
+      var appSlug = String(params.get('app') || '').trim().toLowerCase().replace(/[^a-z0-9._-]/g, '');
+      var app = appSlug ? appForSlug(appSlug) : null;
+      if (appSlug && !app) {
+        banner.hidden = false;
+        banner.className = 'panel in-autoadd is-error';
+        banner.innerHTML = '<div class="iaa-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.8 20h18.4L12 3Zm0 6v5m0 3.2v.1"/></svg></div>' +
+          '<div class="iaa-body"><h2>App not found</h2><p>There is no single-app feed for <code>' + OS.esc(appSlug) + '</code>. Add the master feed instead, or pick the app from the install center.</p></div>';
+        return;
+      }
+
+      var feed = appSlug
+        ? OS.ROOT.replace(/\/$/, '') + '/feeds/' + appSlug + '.json'
+        : OS.ROOT.replace(/\/$/, '') + '/apps.json';
+
+      // Prefer the URL the Python builder published in feeds/install.json
+      // (byte-identical to the static app pages); installUrlFor() is the
+      // fallback if that feed has not loaded yet.
+      var deep = '';
+      var doc = state.install;
+      if (doc) {
+        var set = appSlug ? (doc.apps || []).filter(function (a) { return a.slug === appSlug; })[0] : doc.master;
+        var card = set && (set.cards || []).filter(function (c) { return c.client === wanted; })[0];
+        if (card && card.url) deep = card.url;
+      }
+      if (!deep) deep = installUrlFor(wanted, feed);
+      if (!deep) return;
+
+      var icon = client.icon
+        ? '<img src="' + OS.esc(OS.url('assets/' + client.icon)) + '" alt="" width="40" height="40">'
+        : '<span class="iaa-dot">' + OS.esc(String(client.name || '?').slice(0, 1)) + '</span>';
+      var target = app ? '<code>' + OS.esc(app.name) + '</code>' : 'the <b>master feed</b> (all ' + state.apps.length + ' apps)';
+      banner.hidden = false;
+      banner.className = 'panel in-autoadd';
+      banner.innerHTML =
+        '<div class="iaa-icon">' + icon + '</div>' +
+        '<div class="iaa-body">' +
+          '<span class="kicker">OPENING CLIENT</span>' +
+          '<h2>Add OmniSource to ' + OS.esc(client.name) + '</h2>' +
+          '<p>Adding ' + target + '. If ' + OS.esc(client.name) + ' does not open, it is not installed on this device — install it first, or paste the source URL manually.</p>' +
+          '<div class="iaa-actions">' +
+            '<a class="button primary" id="iaaContinue" href="' + OS.esc(deep) + '">Open ' + OS.esc(client.name) + ' &amp; add source</a>' +
+            '<button class="button" type="button" data-copy="' + OS.esc(feed) + '" data-copy-msg="Source URL copied — paste it in ' + OS.esc(client.name) + '">Copy source URL</button>' +
+            (app ? '' : '<a class="text-button" href="' + OS.esc(feed) + '" target="_blank" rel="noopener">View feed ↗</a>') +
+          '</div>' +
+        '</div>';
+
+      // Highlight the matching client card in the grid below.
+      var grid = $('#installClients');
+      if (grid) {
+        Array.prototype.forEach.call(grid.querySelectorAll('a[href]'), function (link) {
+          if (link.getAttribute('href') === deep) {
+            var card = link.closest('.client-card');
+            if (card) card.classList.add('is-autoadd-target');
+          }
+        });
+      }
+
+      // One programmatic hand-off per load; further attempts are explicit
+      // taps on the banner button.
+      if (!this._autoAddFired) {
+        this._autoAddFired = true;
+        setTimeout(function () {
+          try { window.location.href = deep; } catch (err) { /* banner remains */ }
+        }, 450);
+      }
     },
 
     renderClientCards: function () {

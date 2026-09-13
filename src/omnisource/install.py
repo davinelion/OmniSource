@@ -9,6 +9,15 @@ recomputing deep links.
 The result is intentionally not hard-coded — every URL is derived from
 ``baseURL`` and the per-app feed, so a future host rename is a single edit
 to the catalog.
+
+Markdown contexts that strip non-http schemes (GitHub README rendering, most
+chat apps) cannot link the client URLs above directly. They instead link the
+installation center with an ``add`` parameter —
+``/install/?add=<client-id>[&app=<slug>]`` — and the page (``js/site.js``,
+``Install.handleAutoAdd``) renders a status banner and performs the scheme
+hand-off once, falling back to a manual retry and the feed URL when the
+client is not installed. The README badge buttons and the client table use
+that form by design.
 """
 
 from __future__ import annotations
