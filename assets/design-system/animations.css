@@ -129,22 +129,26 @@
    element enters the viewport. Optional per-element delay via
    style="--reveal-delay:120ms". Fluid easing for a more liquid feel. */
 
+/* Perf note: this used to add `filter: blur(4px)` to the transition and pin
+   `will-change: opacity, transform, filter` on every card permanently. A
+   animated blur forces a full raster of each element on every frame, and a
+   standing `will-change` promotes every one of the ~100 reveal nodes to its
+   own compositor layer for the whole page lifetime — on a phone that is the
+   difference between a smooth catalog scroll and a stuttering one. Opacity
+   and transform alone are composited for free, so the entrance still reads
+   as liquid without the cost. */
 [data-reveal] {
   opacity: 0;
-  transform: translateY(22px) scale(0.985);
-  filter: blur(4px);
+  transform: translateY(18px) scale(0.99);
   transition:
     opacity var(--dur-slow) var(--ease-fluid),
-    transform var(--dur-slow) var(--ease-fluid),
-    filter var(--dur-slow) var(--ease-fluid);
+    transform var(--dur-slow) var(--ease-fluid);
   transition-delay: var(--reveal-delay, 0ms);
-  will-change: opacity, transform, filter;
 }
 
 [data-reveal].is-revealed {
   opacity: 1;
   transform: none;
-  filter: blur(0);
 }
 
 /* Hero choreography: staged, elegant entrances on first paint. */
@@ -328,7 +332,6 @@ dialog.os-dialog::backdrop {
   [data-reveal] {
     opacity: 1;
     transform: none;
-    filter: blur(0);
     transition: none;
   }
   .os-hero > *,

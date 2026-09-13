@@ -156,11 +156,14 @@
   align-items: center;
   gap: 2px;
   /* Overflow safety: the row must never push the controls (search, theme,
-     install, language selector) off the page. The links are the widest
-     element, so they absorb the squeeze first — padding compresses and the
-     text ellipsizes only as a last resort. */
+     install, language picker) off the page. The links absorb the squeeze by
+     *relocating*, not by clipping — js/core.js measures the row and parks
+     the trailing links inside the "More" menu when they no longer fit, then
+     brings them back when room returns. `overflow: hidden` only hides the
+     brief moment before that measurement runs; labels are never ellipsized. */
   flex: 0 1 auto;
   min-width: 0;
+  overflow: hidden;
 }
 .nav-links a {
   text-decoration: none;
@@ -171,9 +174,16 @@
   border-radius: var(--radius-sm);
   transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
   white-space: nowrap;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* A nav label is never squeezed or cut: "Apps", "Collections", "Sources"
+     and "Status" must read in full in every locale, and the translations are
+     considerably wider than the English (German "Sammlungen", Spanish
+     "Colecciones", Japanese "コレクション", Arabic "المجموعات"). `flex: none`
+     keeps each link at its natural width; the overflow guard in core.js
+     decides what stays in the row. */
+  flex: none;
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
 }
 .nav-links a:hover {
   color: var(--text);
@@ -531,13 +541,18 @@ html[data-view="compact"] #viewToggle .icon-grid { display: none; }
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  /* The orbs inside drift forever. Containing them keeps their repaints from
+     invalidating the rest of the page while they animate. */
+  contain: layout paint style;
 }
 .hero-bg .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(110px);
+  /* A radial gradient that already fades to transparent at 70% does not need
+     a 110px blur on top — the radius only multiplies the raster cost of three
+     permanently animating layers. 60px reads the same and is far cheaper. */
+  filter: blur(60px);
   opacity: 0.62;
-  will-change: transform;
   animation: os-drift 26s ease-in-out infinite alternate;
 }
 .hero-bg .o1 {
@@ -571,10 +586,9 @@ html[data-view="compact"] #viewToggle .icon-grid { display: none; }
       color-mix(in srgb, var(--accent-2) 0%, transparent) 55%,
       color-mix(in srgb, var(--accent-2) 18%, transparent) 74%,
       color-mix(in srgb, var(--accent-1) 0%, transparent));
-  filter: blur(60px);
+  filter: blur(40px);
   opacity: 0.8;
   animation: os-aurora 18s ease-in-out infinite;
-  will-change: transform, opacity;
 }
 .hero-bg .hero-grid {
   position: absolute;
@@ -2395,7 +2409,7 @@ button.client-link:hover { color: var(--text); }
 }
 .ap-header-inner .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; text-decoration: none; font-size: 15px; }
 .ap-header-inner .brand img { border-radius: 10px; box-shadow: var(--shadow-sm); }
-.ap-header-inner .nav-links { margin-left: auto; }
+.ap-header-inner .nav-links { margin-left: auto; overflow: hidden; }
 .ap-header-inner .nav-links a {
   padding: 8px 13px;
   border-radius: var(--radius-pill);
@@ -2403,6 +2417,9 @@ button.client-link:hover { color: var(--text); }
   color: var(--muted);
   font-weight: 600;
   font-size: 13.5px;
+  /* Never clip the label — setupNavFit() in js/core.js relocates links into
+     the "More" menu instead. Same contract as the main .nav-links a rule. */
+  flex: none;
   transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease);
 }
 .ap-header-inner .nav-links a:hover { color: var(--text); background: var(--surface-2); }
@@ -3582,7 +3599,7 @@ body.nav-open .nav-backdrop {
 }
 
 /* ── Hero — immersive aurora depth ──────────────────────────────────────── */
-.hero-bg .orb { opacity: 0.82; filter: blur(85px); }
+.hero-bg .orb { opacity: 0.82; filter: blur(58px); }
 .hero-bg .o1 {
   animation-duration: 30s;
 }
@@ -3718,34 +3735,57 @@ body.nav-open .nav-backdrop {
    The app-page header uses its own class but the same row problem, so it
    gets the identical structural rules as .site-header .nav. */
 .ap-header-inner { min-width: 0; }
-.ap-header-inner .nav-links { flex: 0 1 auto; min-width: 0; }
+.ap-header-inner .nav-links { flex: 0 1 auto; min-width: 0; overflow: hidden; }
 .ap-header-inner .nav-links a {
   white-space: nowrap;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* Same rule as the site header: labels are relocated into "More" by the
+     overflow guard rather than ellipsized. */
+  flex: none;
+  max-width: none;
+  overflow: visible;
+  text-overflow: clip;
 }
 
-/* Compress the inline links well before the row gets tight, so on a
-   standard laptop (≥1100px, where links stay inline) the controls —
-   including the language selector — always have room on-page. */
-@media (max-width: 1480px) {
-  .nav-links a { padding: 8px 9px; font-size: 12.5px; }
+/* Progressive compression of the inline nav row. Every step sheds width
+   from something that is *not* a nav label, so labels never shrink, wrap or
+   clip. The drawer takes over at 1180px — wide enough that even the widest
+   locale (German "Sammlungen", Japanese "コレクション", Arabic "المجموعات")
+   still fits inline above it, and js/core.js parks links into "More" if a
+   browser-zoom or large-text setting makes the row tight anyway. */
+@media (max-width: 1400px) {
+  .nav-links a { padding: 8px 10px; font-size: 12.5px; }
+  .brand-badge { display: none; }
 }
-
-/* Phones: the hamburger row (brand + icon controls + toggle) sheds the
-   least essential control first, then the install pill, so nothing —
-   including the language switcher, which lives in the menu here — is
-   ever pushed off the page. */
-@media (max-width: 560px) {
+@media (max-width: 1280px) {
   .nav-controls #viewToggle { display: none; }
+  .install-prompt span { display: none; }
+  .install-prompt { width: 38px; padding: 0; justify-content: center; }
+  .nav-links a { padding: 8px 9px; }
+}
+
+/* Phones: the hamburger row (brand + icon controls + toggle) sheds the least
+   essential control first, then the install pill. The language picker stays —
+   it drops its two-letter code and becomes a plain globe bead, because
+   changing language is a first-class action on the main screen. */
+@media (max-width: 560px) {
+  .lang-toggle .lang-code { display: none; }
+  .lang-toggle { width: 38px; padding: 0; }
+}
+/* Phones drive the hero orbs on the same compositor as the scroll, and three
+   infinitely animating blurred layers is the single biggest source of jank
+   there. They read as a static gradient at this size, so park them. */
+@media (max-width: 760px) {
+  .hero-bg .orb,
+  .hero-bg .spot {
+    animation: none;
+  }
 }
 @media (max-width: 430px) {
   .install-prompt { display: none; }
 }
 
 /* ── Responsive glass ──────────────────────────────────────────────────── */
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .nav-toggle { display: grid; }
   .site-header .nav,
   .ap-header-inner { gap: 8px; }
@@ -3865,7 +3905,7 @@ body.nav-open .nav-backdrop {
 }
 /* In the phone drawer the summary disappears and the menu items join the
    vertical stack directly (details is forced open by js/core.js). */
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .nav-more { width: 100%; }
   .nav-more > summary { display: none; }
   .nav-menu {
@@ -4112,17 +4152,17 @@ body.nav-open .nav-backdrop {
   -webkit-backdrop-filter: var(--blur-fluid);
 }
 
-/* Tinted sections — softer, more diffused */
+/* Tinted sections — softer, more diffused.
+   No backdrop-filter here: these bands span the full viewport width and sit
+   behind scrolling content, so blurring them re-samples the whole page on
+   every scroll frame. The tint alone gives the same separation. */
 .section.tinted {
-  background: color-mix(in srgb, var(--bg-soft) 52%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg-soft) 62%, transparent);
 }
 
-/* Reveal — fluid blur entrance already in animations.css, ensure stagger feels liquid */
-[data-reveal] {
-  will-change: opacity, transform, filter;
-}
+/* Reveal — the entrance itself lives in animations.css. No `will-change`
+   here: promoting ~100 cards to their own layers for the page lifetime costs
+   more than the transition saves. */
 
 /* Skeleton — more liquid shimmer */
 .os-skeleton {
@@ -4231,21 +4271,169 @@ html[data-view="compact"] .card-bottom {
   background: var(--surface-solid);
 }
 
-/* Language selector wrap (features.js injects a <select> inside). */
-.language-selector {
-  display: inline-flex;
-  align-items: center;
+/* ============================================================================
+   Language picker
+   ----------------------------------------------------------------------------
+   features.js injects the markup: a globe button + dropdown in the header
+   row (`.nav-controls`) at *every* breakpoint, and a pill row in the
+   home-page hero (`.hero-lang`) so the choice sits on the main screen with
+   nothing to open. The old implementation was a <select> capped at 110px
+   that was hidden below the drawer breakpoint, which is why changing
+   language on a phone meant digging through the hamburger menu.
+   ========================================================================== */
+.lang-picker {
+  position: relative;
   flex: none;
 }
-.nav-controls .language-selector select {
-  height: 38px;
-  padding: 0 28px 0 12px;
+.lang-toggle {
+  gap: 5px;
+  width: auto;
+  min-width: 38px;
+  padding: 0 11px;
   border-radius: var(--radius-pill);
-  border-color: var(--glass-border);
-  background: var(--glass-subtle);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lang-toggle .icon-globe {
+  width: 17px;
+  height: 17px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.lang-toggle .lang-code {
+  font: 800 10px var(--font-mono);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+.lang-picker.is-open .lang-toggle {
+  border-color: color-mix(in srgb, var(--accent) 34%, var(--glass-border));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 16%, transparent);
+}
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  inset-inline-end: 0;
+  min-width: 214px;
+  max-height: min(62vh, 420px);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 8px;
+  z-index: calc(var(--z-header) + 6);
+  background: var(--glass-heavy);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--glass-shadow-xl);
+  backdrop-filter: var(--blur-liquid);
+  -webkit-backdrop-filter: var(--blur-liquid);
+}
+/* `hidden` must win over the flex display above. */
+.lang-menu[hidden] { display: none; }
+.lang-option {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: none;
+  color: var(--muted);
+  font: 600 13px var(--font-sans);
+  text-align: start;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.lang-option .lang-native { flex: none; }
+.lang-option .lang-name {
+  font: 500 10.5px var(--font-mono);
+  letter-spacing: 0.02em;
+  opacity: 0.62;
+  white-space: nowrap;
+}
+.lang-option:hover,
+.lang-option:focus-visible {
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+  color: var(--text);
+  outline: none;
+}
+.lang-option.is-active {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 13%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 24%, transparent);
 }
 
-@media (max-width: 1100px) {
+/* Hero pill row (home page only). */
+.hero-lang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 22px auto 0;
+  max-width: 760px;
+}
+.hero-lang-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font: 700 10px var(--font-mono);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.hero-lang-label .icon-globe {
+  width: 14px;
+  height: 14px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-lang-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+.lang-pill {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: var(--radius-pill);
+  padding: 6px 12px;
+  font: 600 12px var(--font-sans);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease-spring);
+}
+.lang-pill:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+}
+.lang-pill.is-active {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--accent) 46%, var(--line));
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 18%, transparent);
+}
+@media (max-width: 620px) {
+  .hero-lang { gap: 8px 10px; margin-top: 18px; }
+  .hero-lang-label { width: 100%; justify-content: center; }
+  .lang-pill { padding: 5px 10px; font-size: 11.5px; }
+}
+
+@media (max-width: 1180px) {
   .site-header .nav,
   .ap-header-inner {
     display: flex;
@@ -4308,7 +4496,7 @@ html[data-view="compact"] .card-bottom {
 
 /* Mobile menu readability: nested More links participate in the drawer
    flow instead of remaining an absolutely positioned desktop dropdown. */
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .nav-links .nav-more { width: 100%; }
   .nav-links .nav-more > summary { display: none; }
   .nav-links .nav-more > .nav-menu {
@@ -4326,7 +4514,6 @@ html[data-view="compact"] .card-bottom {
     -webkit-backdrop-filter: none;
   }
   .nav-links .nav-menu a { display: flex; width: 100%; box-sizing: border-box; }
-  .nav-links .nav-lang { width: 100%; box-sizing: border-box; }
 }
 
 /* ==========================================================================
