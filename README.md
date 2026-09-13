@@ -283,7 +283,7 @@ See [docs/API-V3.md](docs/API-V3.md) for the contract and
 
 | Workflow | Schedule | Purpose |
 |---|---:|---|
-| `discovery.yml` | every 12 hours | discover candidates and isolate invalid sources |
+| `discovery.yml` | every 12 hours | discover GitHub, GitLab, Codeberg, Forgejo and feed candidates; isolate invalid sources |
 | `sync.yml` | every 6 hours | resolve releases, build and publish feeds |
 | `validation.yml` / `validate.yml` | PR/push | structural, metadata, translation and regression gates |
 | `monitoring.yml` | every 30 minutes | probes, status, self-healing plans and mirrors |

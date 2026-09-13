@@ -53,6 +53,24 @@ jobs:
           set -euo pipefail
           python3 scripts/discovery/discover_repositories.py
 
+      - name: Run multi-forge iOS release discovery
+        env:
+          GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
+          FORGEJO_HOSTS: ${{ vars.FORGEJO_HOSTS }}
+        run: |
+          set -euo pipefail
+          # GitLab, Codeberg and configured Forgejo instances are searched for
+          # projects that actually publish IPA/TIPA release assets. The pass
+          # writes candidates only; validation/quarantine and catalog review
+          # remain mandatory before publication.
+          python3 scripts/discovery/discover_forges.py
+
+      - name: Inspect FMHY and external catalog pages
+        run: |
+          set -euo pipefail
+          python3 scripts/discovery/discover_web_catalogs.py --file data/discovery_pages.txt
+
       - name: Run discovery passes
         env:
           GITHUB_TOKEN: ${{ github.token }}
