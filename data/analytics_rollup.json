@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-12",
+  "generatedAt": "2026-09-13",
   "totals": {
     "apps": 94,
     "sources": 78,
@@ -14,55 +14,62 @@
     "featuredApps": 6,
     "downloadsReachable": 94,
     "deadLinks": 0,
-    "newAppsThisWeek": 10,
-    "updatedAppsThisWeek": 20,
+    "newAppsThisWeek": 8,
+    "updatedAppsThisWeek": 17,
     "clientsSupported": 5
   },
-  "coverageDays": 1,
+  "coverageDays": 2,
   "daily": [
     {
       "date": "2026-09-12",
+      "metrics": {
+        "sourcesOk": 78.0,
+        "downloadsOk": 94.0
+      }
+    },
+    {
+      "date": "2026-09-13",
       "metrics": {
         "apps": 94.0,
         "sources": 78.0,
         "verified": 93.0,
         "deadLinks": 0.0,
-        "newThisWeek": 10.0,
-        "updatedThisWeek": 20.0,
-        "sourcesOk": 58.0,
-        "downloadsOk": 94.0
+        "newThisWeek": 8.0,
+        "updatedThisWeek": 17.0,
+        "sourcesOk": 78.0,
+        "downloadsOk": 93.0
       }
     }
   ],
   "weekly": [
     {
       "week": "2026-W37",
-      "days": 1,
+      "days": 2,
       "averages": {
-        "apps": 94.0,
+        "apps": 47.0,
         "deadLinks": 0.0,
-        "downloadsOk": 94.0,
-        "newThisWeek": 10.0,
-        "sources": 78.0,
-        "sourcesOk": 58.0,
-        "updatedThisWeek": 20.0,
-        "verified": 93.0
+        "downloadsOk": 93.5,
+        "newThisWeek": 4.0,
+        "sources": 39.0,
+        "sourcesOk": 78.0,
+        "updatedThisWeek": 8.5,
+        "verified": 46.5
       }
     }
   ],
   "monthly": [
     {
       "month": "2026-09",
-      "days": 1,
+      "days": 2,
       "averages": {
-        "apps": 94.0,
+        "apps": 47.0,
         "deadLinks": 0.0,
-        "downloadsOk": 94.0,
-        "newThisWeek": 10.0,
-        "sources": 78.0,
-        "sourcesOk": 58.0,
-        "updatedThisWeek": 20.0,
-        "verified": 93.0
+        "downloadsOk": 93.5,
+        "newThisWeek": 4.0,
+        "sources": 39.0,
+        "sourcesOk": 78.0,
+        "updatedThisWeek": 8.5,
+        "verified": 46.5
       }
     }
   ]
