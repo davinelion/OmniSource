@@ -37,11 +37,12 @@ jobs:
           # create_backup.py's label taxonomy is daily/weekly/monthly/manual —
           # "scheduled" was never a valid choice, so argparse exited 2 and this
           # job failed on every scheduled run (no snapshots were ever taken).
-          # A scheduled run's event payload names the cron that fired it; a
-          # manual dispatch has none. Reading it from $GITHUB_EVENT_PATH keeps
-          # ${{ }} out of the shell entirely (see the hardening rules in
-          # .github/workflows/README.md), and quoting the case patterns keeps
-          # the cron wildcards literal instead of globbing.
+          # A scheduled run's event payload names the cron that fired it,
+          # while a manual dispatch has none. Read the payload from
+          # GITHUB_EVENT_PATH so that no Actions expression has to be
+          # interpolated into the shell (see the hardening rules in
+          # .github/workflows/README.md), and quote the case patterns so the
+          # cron wildcards stay literal instead of globbing.
           schedule=$(jq -r '.schedule // empty' "$GITHUB_EVENT_PATH")
           case "${schedule}" in
             '45 1 * * *') label=daily ;;
