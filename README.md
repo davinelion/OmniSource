@@ -1,30 +1,33 @@
 <div align="center">
 
-<img src="assets/OmniSource.png" width="120" alt="OmniSource">
+<img src="assets/brand/hero.svg" width="100%" alt="OmniSource — an automated, source-first aggregation platform for iOS sideloading clients">
 
-# OmniSource
-
-**An automated, source-first aggregation platform for iOS sideloading clients.**
-
-AltStore · SideStore · Feather · ESign · LiveContainer
+<br>
 
 [![Validate](https://github.com/iamsmmh/OmniSource/actions/workflows/validate.yml/badge.svg)](https://github.com/iamsmmh/OmniSource/actions/workflows/validate.yml)
 [![Security](https://github.com/iamsmmh/OmniSource/actions/workflows/security.yml/badge.svg)](https://github.com/iamsmmh/OmniSource/actions/workflows/security.yml)
 [![Website](https://img.shields.io/website?url=https%3A%2F%2Fiamsmmh.github.io%2FOmniSource%2F)](https://iamsmmh.github.io/OmniSource/)
 [![License](https://img.shields.io/github/license/iamsmmh/OmniSource)](LICENSE)
 
-[Website](https://iamsmmh.github.io/OmniSource/) · [Install](https://iamsmmh.github.io/OmniSource/install/) · [API](docs/API.md) · [Contributing](CONTRIBUTING.md)
+<br>
+
+<a href="https://iamsmmh.github.io/OmniSource/"><img src="assets/brand/btn-website.svg" alt="Website"></a>
+<a href="https://iamsmmh.github.io/OmniSource/install/"><img src="assets/brand/btn-install.svg" alt="Add source"></a>
+<a href="docs/API-V3.md"><img src="assets/brand/btn-api.svg" alt="API v3"></a>
+<a href="docs/"><img src="assets/brand/btn-docs.svg" alt="Documentation"></a>
+<a href="CONTRIBUTING.md"><img src="assets/brand/btn-contribute.svg" alt="Contributing"></a>
+<a href="web/"><img src="assets/brand/btn-webapp.svg" alt="Web app"></a>
 
 </div>
 
----
+<img src="assets/brand/divider.svg" width="100%" alt="">
 
-## What OmniSource does
+## ✦ What OmniSource does
 
 OmniSource discovers and aggregates public iOS sources, validates their feed
 and release metadata, tracks release history, enriches records, verifies
 provenance and hashes, monitors availability, and publishes deterministic
-feeds and machine-readable health reports.
+feeds and machine-readable health reports — fully automated end to end.
 
 It is deliberately **not** a social or marketplace product. There are no
 accounts, comments, reviews, ratings, behavioral profiles, personalized
@@ -32,7 +35,16 @@ recommendation feeds, or marketplace transactions. Catalog collections are
 committed, transparent source groupings; analytics describe repository and
 release observations rather than user activity.
 
-## Add the source
+| Apps catalogued | Sideloading clients | Automated workflows | Monitoring cadence |
+|:---:|:---:|:---:|:---:|
+| **94** | **5** | **15** | **30 min** |
+
+> 🧊 The hero artwork, pill buttons and dividers above are generated from the
+> repo's own **Liquid Glass · Fluid Edition** tokens in
+> [`assets/design-system/`](assets/design-system/) — the same translucent
+> materials, chromatic refraction and aurora diffusion that power the website.
+
+## 🔗 Add the source
 
 The compatibility feed is:
 
@@ -48,13 +60,27 @@ before publication.
 
 | Client | Install link |
 |---|---|
-| AltStore | [Add to AltStore](altstore://source?url=https://iamsmmh.github.io/OmniSource/apps.json) |
-| SideStore | [Add to SideStore](sidestore://source?url=https://iamsmmh.github.io/OmniSource/apps.json) |
-| Feather | [Add to Feather](feather://source/iamsmmh.github.io/OmniSource/apps.json) |
-| ESign | [Add to ESign](esign://addsource?url=https://iamsmmh.github.io/OmniSource/apps.json) |
-| LiveContainer | [Add to LiveContainer](livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/apps.json) |
+| <img src="assets/AltStore.webp" width="20" height="20"> AltStore | [Add to AltStore](altstore://source?url=https://iamsmmh.github.io/OmniSource/apps.json) |
+| <img src="assets/SideStore.webp" width="20" height="20"> SideStore | [Add to SideStore](sidestore://source?url=https://iamsmmh.github.io/OmniSource/apps.json) |
+| <img src="assets/Feather.webp" width="20" height="20"> Feather | [Add to Feather](feather://source/iamsmmh.github.io/OmniSource/apps.json) |
+| <img src="assets/E-Sign.webp" width="20" height="20"> ESign | [Add to ESign](esign://addsource?url=https://iamsmmh.github.io/OmniSource/apps.json) |
+| <img src="assets/LiveContainer.webp" width="20" height="20"> LiveContainer | [Add to LiveContainer](livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/apps.json) |
 
-## Architecture
+## 🗂 Catalog preview
+
+A look inside the validated catalog — every icon opens its published detail
+page with release history, hashes, provenance and install links. Browse all
+**94 apps** on the [website](https://iamsmmh.github.io/OmniSource/).
+
+| | | | | | |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| [<img src="assets/Delta.webp" width="56" alt="Delta">](https://iamsmmh.github.io/OmniSource/apps/delta/) | [<img src="assets/PPSSPP.webp" width="56" alt="PPSSPP">](https://iamsmmh.github.io/OmniSource/apps/ppsspp/) | [<img src="assets/DolphiniOS.webp" width="56" alt="DolphiniOS">](https://iamsmmh.github.io/OmniSource/apps/dolphinish/) | [<img src="assets/MAME4iOS.webp" width="56" alt="MAME4iOS">](https://iamsmmh.github.io/OmniSource/apps/mame4ios/) | [<img src="assets/Provenance.webp" width="56" alt="Provenance">](https://iamsmmh.github.io/OmniSource/apps/provenance/) | [<img src="assets/UTM.webp" width="56" alt="UTM">](https://iamsmmh.github.io/OmniSource/apps/utm/) |
+| [<img src="assets/iTorrent.webp" width="56" alt="iTorrent">](https://iamsmmh.github.io/OmniSource/apps/itorrent/) | [<img src="assets/LiveContainer.webp" width="56" alt="LiveContainer">](https://iamsmmh.github.io/OmniSource/apps/livecontainer/) | [<img src="assets/Feather.webp" width="56" alt="Feather">](https://iamsmmh.github.io/OmniSource/apps/feather/) | [<img src="assets/Apollo.webp" width="56" alt="Apollo">](https://iamsmmh.github.io/OmniSource/apps/apollo/) | [<img src="assets/SpotiFLAC.webp" width="56" alt="SpotiFLAC Mobile">](https://iamsmmh.github.io/OmniSource/apps/spotiflac/) | [<img src="assets/YouTube.webp" width="56" alt="YouTubePlus">](https://iamsmmh.github.io/OmniSource/apps/ytlite/) |
+| [<img src="assets/Instagram.webp" width="56" alt="iNKillerPlus">](https://iamsmmh.github.io/OmniSource/apps/inkillerplus/) | [<img src="assets/TikTok.webp" width="56" alt="TTKillerPlus">](https://iamsmmh.github.io/OmniSource/apps/ttkillerplus/) | [<img src="assets/Telegram.webp" width="56" alt="Telegram MxGram">](https://iamsmmh.github.io/OmniSource/apps/telegram-mxgram/) | [<img src="assets/Discord.webp" width="56" alt="RainTweak">](https://iamsmmh.github.io/OmniSource/apps/raintweak/) | [<img src="assets/Reddit.webp" width="56" alt="RedditFilter">](https://iamsmmh.github.io/OmniSource/apps/redditfilter/) | [<img src="assets/SoundCloud.webp" width="56" alt="NexaSC">](https://iamsmmh.github.io/OmniSource/apps/nexasc/) |
+
+<img src="assets/brand/divider.svg" width="100%" alt="">
+
+## 🏗 Architecture
 
 ```mermaid
 flowchart LR
@@ -92,7 +118,7 @@ operational records. Generated feeds and pages are never hand-edited.
 | Persistence | JSON adapter now; SQLite and generic DB-API adapters ready | `src/omnisource/repository.py` |
 | Extensibility | typed event bus and reviewed plugin ports | `src/omnisource/events.py`, `plugins/` |
 
-## Repository layout
+## 📦 Repository layout
 
 ```text
 catalog.json                  hand-maintained application/source declarations
@@ -111,9 +137,10 @@ js/                            zero-dependency GitHub Pages frontend
 schemas/                       machine-readable contracts
 data/quarantine/              isolated untrusted discovery records
 docs/                          architecture, API and operations guides
+assets/design-system/          Liquid Glass design tokens (theme, motion, glass)
 ```
 
-## Local development
+## 🛠 Local development
 
 Runtime code uses Python's standard library. Python 3.11 or newer is required.
 Node 22 is used for the modern web application.
@@ -140,7 +167,7 @@ Do not put IPA payloads, tokens, or HTTP caches in Git. Use `.env` locally
 (`.env.example` documents supported overrides); credentials are scoped to
 provider API hosts and are never attached to download probes.
 
-## API and website
+## 🌐 API & website
 
 The backward-compatible feed/API surface remains available:
 
@@ -169,7 +196,9 @@ npm run dev
 See [docs/API-V3.md](docs/API-V3.md) for the contract and
 [web/README.md](web/README.md) for deployment.
 
-## Automation
+<img src="assets/brand/divider.svg" width="100%" alt="">
+
+## ⚙️ Automation
 
 | Workflow | Schedule | Purpose |
 |---|---:|---|
@@ -188,7 +217,7 @@ privilege permissions, concurrency controls, and an explicit commit allowlist.
 Untrusted workflow inputs are passed through environment variables and
 validated before use.
 
-## Documentation
+## 📚 Documentation
 
 - [Complete audit](audit-report.md)
 - [Architecture and diagram](docs/ARCHITECTURE.md)
@@ -202,15 +231,17 @@ validated before use.
 - [Final deliverables and known limitations](docs/FINAL-DELIVERABLES.md)
 - [Contributing](CONTRIBUTING.md)
 
-## Contribution policy
+## 🤝 Contributing
 
-Edit `catalog.json`, schemas, source modules, or documentation—not generated
+Edit `catalog.json`, schemas, source modules, or documentation — not generated
 feeds, API copies, app pages, or operational snapshots. Add a test for every
 new validator or provider. Run `make check` and the relevant workflow command
 before opening a pull request. New source formats should use a plugin rather
 than modifying core dispatch code.
 
-## License
+<img src="assets/brand/divider.svg" width="100%" alt="">
+
+## ⚖️ License
 
 OmniSource is GPL-3.0. App names, icons, trademarks, and upstream releases
 belong to their respective owners. OmniSource aggregates metadata and links to
