@@ -43,6 +43,23 @@ where you can scan a QR code with your phone.
 
 <img src="assets/brand/divider.svg" width="100%" alt="">
 
+## 🌐 Website
+
+OmniSource is live on the web — **https://iamsmmh.github.io/OmniSource/**
+
+Browse the full catalog, search for apps, check source health and add the
+source to your client, all from the browser. No app or account needed.
+
+| Quick links | What's there |
+|---|---|
+| [🏠 Website home](https://iamsmmh.github.io/OmniSource/) | trending apps, collections and stats |
+| [⚡ Install center](https://iamsmmh.github.io/OmniSource/install/) | one-tap add links, QR codes and per-client guides |
+| [📱 App explorer](https://iamsmmh.github.io/OmniSource/#catalog) | filter and search every app in the catalog |
+| [🔎 Source explorer](https://iamsmmh.github.io/OmniSource/sources/) | upstreams, maintainers, cadence and reputation |
+| [🧾 Collections](https://iamsmmh.github.io/OmniSource/collections/) | curated shelves — YouTube, music, emulators, utilities |
+| [🩺 Status](https://iamsmmh.github.io/OmniSource/status/) | live health, verification and sync reports |
+| [🔌 API](https://iamsmmh.github.io/OmniSource/api/index.json) | machine-readable feeds and versioned endpoints |
+
 ## ✦ What OmniSource does
 
 OmniSource discovers and aggregates public iOS sources, validates their feed
@@ -73,6 +90,7 @@ release observations rather than user activity.
 
 ## 📑 Contents
 
+- [Website](#-website)
 - [Add the source](#-add-the-source)
 - [Catalog preview](#-catalog-preview)
 - [Architecture](#-architecture)
