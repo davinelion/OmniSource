@@ -66,6 +66,11 @@ jobs:
           # remain mandatory before publication.
           python3 scripts/discovery/discover_forges.py
 
+      - name: Inspect FMHY and external catalog pages
+        run: |
+          set -euo pipefail
+          python3 scripts/discovery/discover_web_catalogs.py --file data/discovery_pages.txt
+
       - name: Run discovery passes
         env:
           GITHUB_TOKEN: ${{ github.token }}

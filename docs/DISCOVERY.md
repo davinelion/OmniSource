@@ -12,7 +12,9 @@ LiveContainer sources without human intervention, on a 12-hour schedule
 | `scripts/discovery/discover_feeds.py` | Probes candidate feed URLs (bare sites expand to likely filenames) and classifies live feeds by client |
 | `scripts/discovery/discover_releases.py` | Flags GitHub `owner/repo`s whose releases ship `.ipa`/`.tipa` assets |
 | `scripts/discovery/discover_forges.py` | Searches GitLab, Codeberg and configured Forgejo instances for projects with actual IPA/TIPA release assets |
-| `scripts/discovery/discover_web_catalogs.py` | Scrapes catalog pages for linked `*.json` feeds and probes each |
+| `scripts/discovery/discover_web_catalogs.py` | Scrapes catalog pages for linked `*.json` feeds and probes each; configured inputs include FMHY's mobile page |
+
+Configured external catalog inputs live in `data/discovery_pages.txt`. FMHY is an index page, not an AltStore feed, so OmniSource only follows linked JSON feeds that pass validation; it does not blindly import or redistribute arbitrary downloads from FMHY.
 | `scripts/discovery/discover_sources.py` | Orchestrator: runs every pass, validates, merges into the store |
 
 Core logic lives in `src/omnisource/autodiscovery.py` (stdlib-only;
