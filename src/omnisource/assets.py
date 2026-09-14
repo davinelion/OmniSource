@@ -90,6 +90,8 @@ class NullCache:
 
 def _looks_like_image_url(url: str) -> bool:
     path = urlparse(url).path.lower()
+    # Strip query strings (e.g. GitHub's ?raw=true) before checking extension.
+    path = path.split("?", 1)[0]
     return any(path.endswith(ext) for ext in IMAGE_EXTENSIONS)
 
 

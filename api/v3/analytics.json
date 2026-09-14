@@ -1,11 +1,11 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "e11321f9c483",
+  "feedVersion": "32a2d08aa7aa",
   "data": {
     "schemaVersion": 1,
-    "generatedAt": "2026-09-13",
-    "lastSync": "2026-09-12",
+    "generatedAt": "2026-09-14",
+    "lastSync": "2026-09-14",
     "totals": {
       "apps": 94,
       "sources": 78,
@@ -19,8 +19,8 @@
       "featuredApps": 6,
       "downloadsReachable": 94,
       "deadLinks": 0,
-      "newAppsThisWeek": 8,
-      "updatedAppsThisWeek": 17,
+      "newAppsThisWeek": 6,
+      "updatedAppsThisWeek": 21,
       "clientsSupported": 5
     },
     "newThisWeek": [
@@ -71,25 +71,41 @@
         "previousVersion": "",
         "date": "2026-09-07",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa"
-      },
-      {
-        "slug": "voyager",
-        "name": "Voyager",
-        "version": "2.49.0",
-        "previousVersion": "",
-        "date": "2026-09-06",
-        "downloadURL": "https://github.com/aeharding/voyager/releases/download/2.49.0/Voyager-iOS-2.49.0.ipa"
-      },
-      {
-        "slug": "synkplay",
-        "name": "Synkplay",
-        "version": "0.24.0",
-        "previousVersion": "",
-        "date": "2026-09-06",
-        "downloadURL": "https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/synkplay-0.24.0-ios.ipa"
       }
     ],
     "updatedThisWeek": [
+      {
+        "slug": "voyager",
+        "name": "Voyager",
+        "version": "2.49.1",
+        "previousVersion": "2.49.0",
+        "date": "2026-09-13",
+        "downloadURL": "https://github.com/aeharding/voyager/releases/download/2.49.1/Voyager-iOS-2.49.1.ipa"
+      },
+      {
+        "slug": "apollo",
+        "name": "Apollo",
+        "version": "3.7.1",
+        "previousVersion": "3.7.0",
+        "date": "2026-09-13",
+        "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa"
+      },
+      {
+        "slug": "ytkace",
+        "name": "YTKACE",
+        "version": "21.36.6",
+        "previousVersion": "21.35.3",
+        "date": "2026-09-12",
+        "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa"
+      },
+      {
+        "slug": "telegram-mxgram",
+        "name": "Telegram MxGram",
+        "version": "12.9.4",
+        "previousVersion": "12.9.3",
+        "date": "2026-09-12",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Telegram-12.9.4-iQTele.ipa"
+      },
       {
         "slug": "dopamine-roothide",
         "name": "Dopamine (RootHide)",
@@ -320,13 +336,13 @@
     ],
     "history": [
       {
-        "date": "2026-09-13",
+        "date": "2026-09-14",
         "apps": 94,
         "sources": 78,
         "verified": 93,
         "deadLinks": 0,
-        "newThisWeek": 8,
-        "updatedThisWeek": 17
+        "newThisWeek": 6,
+        "updatedThisWeek": 21
       }
     ]
   }
