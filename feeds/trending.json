@@ -16,11 +16,11 @@
       "slug": "youpro",
       "name": "YouPro",
       "category": "photo-video",
-      "version": "21.36.6",
-      "releaseDate": "2026-09-10",
-      "score": 0.9733,
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 1.0,
       "signals": {
-        "recency": 0.9333,
+        "recency": 1.0,
         "availability": 1.0,
         "featured": 1.0,
         "verification": 1.0
@@ -34,23 +34,6 @@
       "name": "YouTubePlus",
       "category": "photo-video",
       "version": "21.24.3",
-      "releaseDate": "2026-09-09",
-      "score": 0.9667,
-      "signals": {
-        "recency": 0.9167,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ytmusic",
-      "name": "YTMusicUltimate",
-      "category": "music",
-      "version": "9.36.1",
       "releaseDate": "2026-09-09",
       "score": 0.9667,
       "signals": {
@@ -81,6 +64,40 @@
       "downloadReachable": true
     },
     {
+      "slug": "ytkp",
+      "name": "YTKillerPlus",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "youmod",
+      "name": "YouMod",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "voyager",
       "name": "Voyager",
       "category": "social",
@@ -153,23 +170,6 @@
       "name": "Telegram MxGram",
       "category": "social",
       "version": "12.9.4",
-      "releaseDate": "2026-09-12",
-      "score": 0.7867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "dopamine-roothide",
-      "name": "Dopamine (RootHide)",
-      "category": "utilities",
-      "version": "2.4.9.27",
       "releaseDate": "2026-09-12",
       "score": 0.7867,
       "signals": {
@@ -185,6 +185,57 @@
   ],
   "rising": [
     {
+      "slug": "youpro",
+      "name": "YouPro",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ytkp",
+      "name": "YTKillerPlus",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "youmod",
+      "name": "YouMod",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "voyager",
       "name": "Voyager",
       "category": "social",
@@ -287,61 +338,10 @@
       "downloadReachable": true
     },
     {
-      "slug": "youpro",
-      "name": "YouPro",
-      "category": "photo-video",
-      "version": "21.36.6",
-      "releaseDate": "2026-09-10",
-      "score": 0.9733,
-      "signals": {
-        "recency": 0.9333,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
       "slug": "maxmusic",
       "name": "MaxMusic",
       "category": "music",
       "version": "9.36.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.7733,
-      "signals": {
-        "recency": 0.9333,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ryukgram",
-      "name": "RyukGram",
-      "category": "social",
-      "version": "446.0.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.7733,
-      "signals": {
-        "recency": 0.9333,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "sparkle",
-      "name": "Sparkle",
-      "category": "social",
-      "version": "446.0.0",
       "releaseDate": "2026-09-10",
       "score": 0.7733,
       "signals": {
@@ -357,6 +357,57 @@
   ],
   "recentlyUpdated": [
     {
+      "slug": "youpro",
+      "name": "YouPro",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ytkp",
+      "name": "YTKillerPlus",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "youmod",
+      "name": "YouMod",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "voyager",
       "name": "Voyager",
       "category": "social",
@@ -459,61 +510,10 @@
       "downloadReachable": true
     },
     {
-      "slug": "youpro",
-      "name": "YouPro",
-      "category": "photo-video",
-      "version": "21.36.6",
-      "releaseDate": "2026-09-10",
-      "score": 0.9733,
-      "signals": {
-        "recency": 0.9333,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
       "slug": "maxmusic",
       "name": "MaxMusic",
       "category": "music",
       "version": "9.36.1",
-      "releaseDate": "2026-09-10",
-      "score": 0.7733,
-      "signals": {
-        "recency": 0.9333,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ryukgram",
-      "name": "RyukGram",
-      "category": "social",
-      "version": "446.0.0",
-      "releaseDate": "2026-09-10",
-      "score": 0.7733,
-      "signals": {
-        "recency": 0.9333,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "sparkle",
-      "name": "Sparkle",
-      "category": "social",
-      "version": "446.0.0",
       "releaseDate": "2026-09-10",
       "score": 0.7733,
       "signals": {
@@ -532,11 +532,11 @@
       "slug": "youpro",
       "name": "YouPro",
       "category": "photo-video",
-      "version": "21.36.6",
-      "releaseDate": "2026-09-10",
-      "score": 0.9733,
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 1.0,
       "signals": {
-        "recency": 0.9333,
+        "recency": 1.0,
         "availability": 1.0,
         "featured": 1.0,
         "verification": 1.0
@@ -550,23 +550,6 @@
       "name": "YouTubePlus",
       "category": "photo-video",
       "version": "21.24.3",
-      "releaseDate": "2026-09-09",
-      "score": 0.9667,
-      "signals": {
-        "recency": 0.9167,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ytmusic",
-      "name": "YTMusicUltimate",
-      "category": "music",
-      "version": "9.36.1",
       "releaseDate": "2026-09-09",
       "score": 0.9667,
       "signals": {
@@ -594,6 +577,40 @@
       },
       "verificationLevel": "VERIFIED",
       "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ytkp",
+      "name": "YTKillerPlus",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "youmod",
+      "name": "YouMod",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "releaseDate": "2026-09-14",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
       "downloadReachable": true
     },
     {
@@ -801,40 +818,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "ytkp",
-      "name": "YTKillerPlus",
-      "category": "photo-video",
-      "version": "21.36.6",
-      "releaseDate": "2026-09-09",
-      "score": 0.7667,
-      "signals": {
-        "recency": 0.9167,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "youmod",
-      "name": "YouMod",
-      "category": "photo-video",
-      "version": "21.36.6",
-      "releaseDate": "2026-09-09",
-      "score": 0.7667,
-      "signals": {
-        "recency": 0.9167,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "inkillerplus",
       "name": "iNKillerPlus",
       "category": "social",
@@ -873,6 +856,23 @@
       "name": "SideStore",
       "category": "utilities",
       "version": "0.6.4",
+      "releaseDate": "2026-09-09",
+      "score": 0.7667,
+      "signals": {
+        "recency": 0.9167,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ryukgram-sidebyside",
+      "name": "RyukGram Side by Side",
+      "category": "social",
+      "version": "446.0.0",
       "releaseDate": "2026-09-09",
       "score": 0.7667,
       "signals": {
@@ -1379,6 +1379,23 @@
       "downloadReachable": true
     },
     {
+      "slug": "ytmusic",
+      "name": "YTMusicUltimate",
+      "category": "music",
+      "version": "9.36.1",
+      "releaseDate": "2026-09-09",
+      "score": 0.5667,
+      "signals": {
+        "recency": 0.9167,
+        "availability": 0.0,
+        "featured": 1.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": true,
+      "downloadReachable": false
+    },
+    {
       "slug": "maxtube",
       "name": "MaxTube",
       "category": "photo-video",
@@ -1404,6 +1421,23 @@
       "score": 0.48,
       "signals": {
         "recency": 0.2,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ryukgram-ig410",
+      "name": "RyukGram (IG 410)",
+      "category": "social",
+      "version": "410.1.0",
+      "releaseDate": "2026-07-25",
+      "score": 0.46,
+      "signals": {
+        "recency": 0.15,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -2091,40 +2125,6 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
-    },
-    {
-      "slug": "ryukgram-sidebyside",
-      "name": "RyukGram Side by Side",
-      "category": "social",
-      "version": "446.0.0",
-      "releaseDate": "2026-09-09",
-      "score": 0.3667,
-      "signals": {
-        "recency": 0.9167,
-        "availability": 0.0,
-        "featured": 0.0,
-        "verification": 0.0
-      },
-      "verificationLevel": "UNVERIFIED",
-      "featured": false,
-      "downloadReachable": false
-    },
-    {
-      "slug": "ryukgram-ig410",
-      "name": "RyukGram (IG 410)",
-      "category": "social",
-      "version": "410.1.0",
-      "releaseDate": "2026-07-25",
-      "score": 0.06,
-      "signals": {
-        "recency": 0.15,
-        "availability": 0.0,
-        "featured": 0.0,
-        "verification": 0.0
-      },
-      "verificationLevel": "UNVERIFIED",
-      "featured": false,
-      "downloadReachable": false
     }
   ]
 }

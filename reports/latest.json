@@ -1,28 +1,46 @@
 {
   "generatedAt": "2026-09-14",
-  "feedVersion": "5e5f1c6d8b8a",
+  "feedVersion": "f2e953537c81",
   "apps": {
     "total": 94,
-    "reachable": 92,
-    "unreachable": 2,
-    "verified": 91
+    "reachable": 93,
+    "unreachable": 1,
+    "verified": 92
   },
   "sync": {
-    "synced": 92,
-    "incrementalHits": 0,
-    "updated": 0,
-    "failed": 2,
-    "apiRequests": 97
+    "synced": 94,
+    "incrementalHits": 85,
+    "updated": 3,
+    "failed": 0,
+    "apiRequests": 79
   },
   "unreachable": [
-    "ryukgram-ig410",
-    "ryukgram-sidebyside"
+    "ytmusic"
   ],
-  "updates": [],
-  "errors": [
-    "ryukgram-ig410: all sources failed: altstore:https://source.ryuksign.com/ig410 error: HTTP request failed after 3 attempts: https://source.ryuksign.com/ig410 (<urlopen error timed out>)",
-    "ryukgram-sidebyside: all sources failed: altstore:https://source.ryuksign.com/duplicate error: HTTP request failed after 3 attempts: https://source.ryuksign.com/duplicate (<urlopen error timed out>)"
+  "updates": [
+    {
+      "slug": "youpro",
+      "name": "YouPro",
+      "previousVersion": "21.36.6",
+      "version": "21.37.4",
+      "kind": "updated"
+    },
+    {
+      "slug": "ytkp",
+      "name": "YTKillerPlus",
+      "previousVersion": "21.36.6",
+      "version": "21.37.4",
+      "kind": "updated"
+    },
+    {
+      "slug": "youmod",
+      "name": "YouMod",
+      "previousVersion": "21.36.6",
+      "version": "21.37.4",
+      "kind": "updated"
+    }
   ],
+  "errors": [],
   "translations": {
     "ar": 100,
     "bn": 100,

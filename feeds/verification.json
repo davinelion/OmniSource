@@ -3,13 +3,13 @@
   "generatedAt": "2026-09-14",
   "totals": {
     "apps": 94,
-    "verified": 91,
+    "verified": 92,
     "communityVerified": 1,
-    "unverified": 2,
+    "unverified": 1,
     "hashVerified": 64,
     "official": 75,
     "communityBuilds": 19,
-    "avgTrustScore": 6.95,
+    "avgTrustScore": 6.98,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -540,7 +540,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
-      "trustScore": 5.6,
+      "trustScore": 5.7,
       "trustBadge": "Community"
     },
     {
@@ -792,7 +792,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-      "trustScore": 5.6,
+      "trustScore": 5.7,
       "trustBadge": "Community"
     },
     {
@@ -855,7 +855,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
-      "trustScore": 5.6,
+      "trustScore": 5.7,
       "trustBadge": "Community"
     },
     {
@@ -1212,7 +1212,49 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
-      "trustScore": 5.6,
+      "trustScore": 5.7,
+      "trustBadge": "Community"
+    },
+    {
+      "app": "ryukgram-ig410",
+      "name": "RyukGram (IG 410)",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "altstore",
+      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (altstore)"
+      ],
+      "downloadURL": "https://source.ryuksign.com/ipas/959abf1407579dbd3f46.ipa",
+      "trustScore": 7.4,
+      "trustBadge": "Community"
+    },
+    {
+      "app": "ryukgram-sidebyside",
+      "name": "RyukGram Side by Side",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "altstore",
+      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (altstore)"
+      ],
+      "downloadURL": "https://source.ryuksign.com/ipas/86bd8282219bf3b32dca.ipa",
+      "trustScore": 7.4,
       "trustBadge": "Community"
     },
     {
@@ -1338,7 +1380,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
-      "trustScore": 5.6,
+      "trustScore": 5.7,
       "trustBadge": "Community"
     },
     {
@@ -1548,7 +1590,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
-      "trustScore": 5.6,
+      "trustScore": 5.7,
       "trustBadge": "Community"
     },
     {
@@ -1799,7 +1841,7 @@
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.36.6_2.0.0.ipa",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1820,7 +1862,7 @@
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.36.6_1.3.1.ipa",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1883,28 +1925,7 @@
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.36.6_6.1.ipa",
-      "trustScore": 7.5,
-      "trustBadge": "Trusted"
-    },
-    {
-      "app": "ytmusic",
-      "name": "YTMusicUltimate",
-      "status": "VERIFIED",
-      "provenance": "community",
-      "hash_verified": true,
-      "method": "github-release",
-      "publisher": "mrdrvt99/YTMusicUltimate",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": true,
-        "hashVerified": true
-      },
-      "reasons": [
-        "official upstream (github-release)"
-      ],
-      "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa2/YTKillerPlus_21.37.4_6.1.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1930,48 +1951,6 @@
       "trustBadge": "Trusted"
     },
     {
-      "app": "ryukgram-ig410",
-      "name": "RyukGram (IG 410)",
-      "status": "UNVERIFIED",
-      "provenance": "official",
-      "hash_verified": true,
-      "method": "altstore",
-      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": true
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://source.ryuksign.com/ipas/959abf1407579dbd3f46.ipa",
-      "trustScore": 4.4,
-      "trustBadge": "Experimental"
-    },
-    {
-      "app": "ryukgram-sidebyside",
-      "name": "RyukGram Side by Side",
-      "status": "UNVERIFIED",
-      "provenance": "official",
-      "hash_verified": true,
-      "method": "altstore",
-      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": true
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://source.ryuksign.com/ipas/86bd8282219bf3b32dca.ipa",
-      "trustScore": 4.4,
-      "trustBadge": "Experimental"
-    },
-    {
       "app": "uyouenhanced",
       "name": "uYouEnhanced",
       "status": "COMMUNITY VERIFIED",
@@ -1991,6 +1970,27 @@
       "downloadURL": "https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-21144-305.ipa",
       "trustScore": 5.0,
       "trustBadge": "Community"
+    },
+    {
+      "app": "ytmusic",
+      "name": "YTMusicUltimate",
+      "status": "UNVERIFIED",
+      "provenance": "community",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "mrdrvt99/YTMusicUltimate",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": false,
+        "hashVerified": true
+      },
+      "reasons": [
+        "failed check: fileAvailable"
+      ],
+      "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
+      "trustScore": 4.5,
+      "trustBadge": "Experimental"
     }
   ]
 }
