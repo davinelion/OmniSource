@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-12T17:13:52Z",
+  "generatedAt": "2026-09-14T04:21:48Z",
   "appCount": 94,
-  "releases": 96,
+  "releases": 101,
   "apps": {
     "aidoku": [
       {
@@ -54,13 +54,23 @@
     ],
     "apollo": [
       {
+        "version": "3.7.1",
+        "date": "2026-09-13",
+        "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
+        "size": 96132071,
+        "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
+        "localizedDescription": "Apollo 3.7.1 | Apollo-Reborn-3.7.1\n\n### Features\n\n- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)\n  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row\n  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls\n\n### Fixes\n\n- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)\n- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)\n- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)\n- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)\n  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there\n- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be",
+        "status": "current",
+        "firstSeen": "2026-09-14T04:21:48Z"
+      },
+      {
         "version": "3.7.0",
         "date": "2026-09-11",
         "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.0/Apollo-Reborn-3.7.0.ipa",
         "size": 96105993,
         "sha256": "3435f0c47f299f6f5637600c557ef3790ca75a8fe70d3d456023f97f0fb6ee15",
         "localizedDescription": "Apollo 3.7.0 | Apollo-Reborn-3.7.0\n\n### Features\n\n- Add **Floating Post Tabs** (Posts & Feeds → Floating Tabs, off by default) — keep up to five posts open as draggable bubbles from any post or feed ⋯ menu, and tap one to land exactly where you left off (#984, #1061: @icpryde)\n  - Bubbles snap to the screen edges, tuck away when dragged past them, stack magnetically, and hold-to-preview the post; drop one on the ✕ to close it\n  - Match threads wear the two teams' crests on their bubble, and two text posts from the same subreddit get a big letter each so they don't look like twins\n- Add a **Feed Shortcuts** screen (Features → Subreddits) with Classic, Circle, Tinted, Soft Tile, and Solid Tile icon styles, Rows, Grid, Side-by-Side, and Icon Dock layouts, a live preview, and visibility toggles for Popular, All, and Moderator Posts (#988: @IllIIllIllIllII)\n- Add a **Subreddit Sections** screen (Features → Subreddits) — give followed users their own FOLLOWING section with **Separate Followed Users**, drag Favorites, Multireddits, Moderator, and Following into any order, and watch a pinned live preview follow every change (#997, #1020: @icpryde)\n  - Subreddit List Enhancements, Modern Subreddit Dividers, and Hide Multireddit Descriptions move here, and the A–Z index stays visible and themed with Enhancements off\n- Add **Per-Account Favorites** and **Sort Favorites Alphabetically** (Subreddits → Favorites), so each account can keep its own subreddit favorites and keep them in A–Z order (#1017, #1042: @IllIIllIllIllII)\n- Add Fade, Down, and Off styles to **Hide Bars on Scroll** for the Liquid Glass tab bar alongside Left and Right, plus a **Scroll Behavior** picker that restores Apollo's Classic one-gesture hide next to the Two-Gesture default (#972: @IllIIllIllIllII)\n  - Interface settings regroup into Tab Bar and Display & Navigation, and Profile Layout opens straight from the Apollo Reborn hub\n- Rework **Liquid Glass navigation** around a collapsible action pill — the ⋯ ",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -295,12 +305,22 @@
     "iqface": [
       {
         "version": "578.1",
+        "date": "2026-09-13",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
+        "size": 227299291,
+        "sha256": "",
+        "localizedDescription": "Facebook 578.1 | Facebook-578.1-iQFace\n\nIPA Vault build for Facebook (iQFace), version 578.1",
+        "status": "current",
+        "firstSeen": "2026-09-14T04:21:48Z"
+      },
+      {
+        "version": "578.1",
         "date": "2026-09-10",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
         "size": 227188596,
         "sha256": "",
         "localizedDescription": "Facebook 578.1 | Facebook-578.1-iQFace\n\nIPA Vault build for Facebook (iQFace), version 578.1",
-        "status": "current",
+        "status": "removed",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -882,13 +902,23 @@
     ],
     "telegram-mxgram": [
       {
+        "version": "12.9.4",
+        "date": "2026-09-12",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Telegram-12.9.4-iQTele.ipa",
+        "size": 76892313,
+        "sha256": "",
+        "localizedDescription": "Telegram 12.9.4 | Telegram-12.9.4-iQTele\n\nIPA Vault build for Telegram (iQTele), version 12.9.4",
+        "status": "current",
+        "firstSeen": "2026-09-14T04:21:48Z"
+      },
+      {
         "version": "12.9.3",
         "date": "2026-09-05",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Telegram-12.9.3-iQTele.ipa",
         "size": 71665753,
         "sha256": "",
         "localizedDescription": "Telegram 12.9.3 | Telegram-12.9.3-iQTele\n\nIPA Vault build for Telegram (iQTele), version 12.9.3",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -1002,13 +1032,23 @@
     ],
     "voyager": [
       {
+        "version": "2.49.1",
+        "date": "2026-09-13",
+        "downloadURL": "https://github.com/aeharding/voyager/releases/download/2.49.1/Voyager-iOS-2.49.1.ipa",
+        "size": 8232319,
+        "sha256": "584dae7a9738908def30873c016b1dd5e26f15187cd201a7d95386682c6a46a9",
+        "localizedDescription": "Voyager 2.49.1 | Voyager-iOS-2.49.1\n\n## 🐛 Fixes\n\n- fix: preserve special characters in search\n   - PR: #2358\n\n## 📝 Other Changes\n\n- chore: rust react compiler pipeline\n   - PR: #2357\n- chore: upgrade dependencies\n   - PR: #2359",
+        "status": "current",
+        "firstSeen": "2026-09-14T04:21:48Z"
+      },
+      {
         "version": "2.49.0",
         "date": "2026-09-06",
         "downloadURL": "https://github.com/aeharding/voyager/releases/download/2.49.0/Voyager-iOS-2.49.0.ipa",
         "size": 8216630,
         "sha256": "3e71607b8a945db67ef82adadcb74f087691b8f02ef2cce522f4be9a49865c87",
         "localizedDescription": "Voyager 2.49.0 | Voyager-iOS-2.49.0\n\n## 🚀 Features\n\n- feat: enable rich editor by default\n   - PR: #2352\n\n## 🐛 Fixes\n\n- fix: show two column setting in desktop app\n   - PR: #2346\n- fix: stabilize navigation after ionic v9 upgrade\n   - PR: #2348\n- fix: preserve tab state during route transitions\n   - PR: #2349\n- fix: prevent random community transition flicker\n   - PR: #2353\n\n## 📝 Other Changes\n\n- chore: upgrade to ionic v9\n   - PR: #2347\n- test: expand provider matrix to comment threads, feed and search\n   - PR: #2321\n- chore: upgrade threadiverse to 0.21.2\n   - PR: #2350\n- chore: upgrade dependencies\n   - PR: #2351",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -1074,13 +1114,23 @@
     ],
     "ytkace": [
       {
+        "version": "21.36.6",
+        "date": "2026-09-12",
+        "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa",
+        "size": 134780934,
+        "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
+        "localizedDescription": "YouTube 21.36.6 | YTKACE 0.9.3 | YTKACE_0.9.3_YouTube_21.36.6\n\nby @itzzace0\n\nWhat's new:\n• Updated for YouTube 21.36.6\n• Added a toggle to remove the Save button from Shorts\n\nFixed:\n• Fixed the feed lagging while scrolling with Remove Shorts, Products, Mixes or Community Posts on\n• Fixed the You tab moving to the end of the tab bar after changing other tabs\n• Fixed hold to speed staying stuck at the held speed after letting go\n• Fixed the Save button in Shorts overlapping the other buttons\n• Fixed Block Premium Prompts stopping community post images from opening\n• Fixed Clear Cache saying there was nothing to clear while YouTube's video cache kept growing\n\nYouTube 21.36.6 requires iOS 17, so there are two IPAs:\n• `YTKACE_0.9.3_YouTube_21.36.6.ipa` for iOS 17 and newer\n• `YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+        "status": "current",
+        "firstSeen": "2026-09-14T04:21:48Z"
+      },
+      {
         "version": "21.35.3",
         "date": "2026-08-31",
         "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.2/YTKACE_0.9.2_YouTube_21.35.3.ipa",
         "size": 134278975,
         "sha256": "ca8579d26a89d6b00009df92aa55d08571b0ceca7632eccbb5903c51e803adbd",
         "localizedDescription": "YouTube 21.35.3 | YTKACE 0.9.2 | YTKACE_0.9.2_YouTube_21.35.3\n\nby @itzzace0\n\nWhat’s new:\n• Updated for YouTube 21.35.3\n• Added a save button to community post images, saved at full resolution\n• Added Posts to the tab bar, so it can be shown as a tab or set as the startup tab\n• Added a choice of where downloads are saved, between the YTKACE library, Photos, or asking each time\n• Added a custom hold speed with a slider from 0.25x to 5x, and the speed pill now shows the speed you set\n• Added a toggle to remove the ⋯ button from the action bar\n• Added a toggle to remove the row of buttons under the progress bar in fullscreen\n• Added a toggle to limit gestures to landscape only\n\nFixed:\n• Fixed the app freezing while saving large videos to Photos\n• Fixed tapping an image in the comments opening the share sheet\n• Fixed a crash when rotating the player\n• Fixed a crash when leaving the app while a message was on screen\n\nYouTube 21.35.3 requires iOS 17, so there are two IPAs:\n• `YTKACE_0.9.2_YouTube_21.35.3.ipa` for iOS 17 and newer\n• `YTKACE_0.9.2_YouTube_iOS16_21.33.6.ipa` for iOS 16",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
