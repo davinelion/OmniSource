@@ -4638,3 +4638,294 @@ html[data-view="compact"] .card-bottom {
   .source-metrics { grid-template-columns: 1fr; }
   .sources-tools .sort-select { flex: 1 1 46%; }
 }
+
+/* ============================================================================
+   FINDABILITY — tab bars, scroll progress, back-to-top
+   ----------------------------------------------------------------------------
+   The home page is long: hero, four rails, statistics, source health, the
+   install guide, the catalog and the release feed. Finding an app meant
+   scrolling the whole way down and then scrolling back up to change
+   category, so the page now carries two tab bars and three scroll
+   affordances. Everything pins to --sticky-offset (the bottom edge of the
+   floating glass header, see tokens.css) so a heading can never hide behind
+   the capsule:
+
+     .section-tabs   sticky row under the header — jumps to any section and
+                     reports which one you are in while you scroll;
+     .catalog-tabs   the category filter row promoted to a real tablist and
+                     pinned for the whole height of the grid;
+     .hero-cats      the same categories offered in the hero, so a first-time
+                     visitor can reach a shelf without scrolling at all;
+     .scroll-progress / .to-top  "how far down am I" + "get me back".
+   ========================================================================== */
+
+/* Thin reading-progress line. Fixed, 2px, above the header, never in flow —
+   it cannot shift layout, which is the whole point (js/core.js drives the
+   transform on a rAF-throttled scroll listener). */
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: calc(var(--z-header) + 1);
+  pointer-events: none;
+  background: transparent;
+}
+.scroll-progress i {
+  display: block;
+  height: 100%;
+  background: var(--accent-grad);
+  background-size: 180% 100%;
+  border-radius: 0 2px 2px 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.scroll-progress.is-visible i { opacity: 1; }
+
+/* ── Section tabs ──────────────────────────────────────────────────────── */
+.section-tabs {
+  position: sticky;
+  top: var(--sticky-offset);
+  /* Layering, from the page up: content (auto) < this bar (54) <
+     .nav-backdrop (55) < .site-header (var(--z-header) = 60) < the phone
+     drawer (62). Sitting *under* the backdrop is the point: when the drawer
+     opens the bar dims with the rest of the page instead of floating above
+     it, still clickable, at tablet widths. */
+  z-index: 54;
+  /* The header is a floating capsule: it is 62px in flow but paints from
+     top:12px, so without this margin its bottom edge lands on top of the tab
+     bar at scroll 0. 12px here + 62px of header = --sticky-offset, which is
+     exactly where the bar pins once the page moves. */
+  margin-top: 12px;
+  background: color-mix(in srgb, var(--bg) 84%, transparent);
+  backdrop-filter: blur(18px) saturate(1.6);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  border-bottom: 1px solid var(--line);
+}
+.section-tabs-inner {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: var(--tabbar-h);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  /* The row is a rail, not a wrapped list: a tab that does not fit is one
+     swipe away, and the row height never changes with the translation. */
+  flex-wrap: nowrap;
+}
+.section-tabs-inner::-webkit-scrollbar { display: none; }
+.section-tab {
+  position: relative;
+  flex: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  background: none;
+  color: var(--muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease);
+}
+.section-tab:hover { color: var(--text); background: var(--surface); }
+.section-tab:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.section-tab[aria-current="true"] {
+  color: var(--text);
+  background: var(--accent-soft);
+  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
+}
+.section-tab[aria-current="true"]::after {
+  content: "";
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--accent-grad);
+}
+.section-tab .count {
+  font: 600 10px var(--font-mono);
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+/* ── Catalog tabs (sticky category tablist) ────────────────────────────── */
+.catalog-tabs {
+  position: sticky;
+  /* Stacks directly under the section tabs: one bar height, no guessing. */
+  top: calc(var(--sticky-offset) + var(--tabbar-h));
+  z-index: 18;
+  margin-top: 18px;
+  padding: 6px 0 2px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border-radius: var(--radius-md);
+}
+.catalog-tabs .filter-row {
+  padding-block: 2px 6px;
+  margin: 0;
+}
+/* Edge fades: only painted while the row actually overflows in that
+   direction (js/core.js toggles .can-scroll-*), so they double as the
+   "there are more categories this way" hint. The host is already positioned
+   (both bars are sticky), so these resolve against the bar itself — no
+   `position` here, which would have un-stuck the section tabs. */
+[data-scroll-hint-host] { --hint-inset: 0px; }
+[data-scroll-hint-host]::before,
+[data-scroll-hint-host]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 34px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+  z-index: 1;
+}
+[data-scroll-hint-host]::before {
+  left: var(--hint-inset);
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+[data-scroll-hint-host]::after {
+  right: var(--hint-inset);
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+[data-scroll-hint-host].can-scroll-start::before { opacity: 0.9; }
+[data-scroll-hint-host].can-scroll-end::after { opacity: 0.9; }
+/* The section-tab rail is a .shell, so it clips one shell-padding in from the
+   bar's own edge. On a wide screen the tabs never overflow and the fades stay
+   off; on a phone this lines the hint up with the row that scrolls. */
+.section-tabs { --hint-inset: var(--shell-pad); }
+
+/* The category row is a tablist now: same pill shape as the other filter
+   chips, but the selected one reads as a tab (underline + panel wiring)
+   rather than as one more toggle in a pile. */
+#categoryFilters .chip[aria-selected="true"] { box-shadow: var(--glow-accent); }
+#categoryFilters .chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Hero quick categories ─────────────────────────────────────────────── */
+.hero-cats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
+.hero-cats-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 var(--text-2xs) var(--font-mono);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.hero-cats-label svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-cats .chip { padding: 7px 13px; font-size: 12px; }
+
+/* ── Back to top ───────────────────────────────────────────────────────── */
+.to-top {
+  position: fixed;
+  right: clamp(14px, 3vw, 28px);
+  bottom: clamp(14px, 3vw, 28px);
+  /* Under the nav backdrop (55) for the same reason as the tab bar — and the
+     page cannot scroll while the drawer is open anyway. */
+  z-index: 54;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-nav);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--blur-liquid);
+  -webkit-backdrop-filter: var(--blur-liquid);
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(14px) scale(0.9);
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease-spring);
+}
+.to-top svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.to-top:hover { box-shadow: var(--glass-shadow-lg); }
+.to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ── Anchor clearance ──────────────────────────────────────────────────── */
+/* html { scroll-padding-top } already clears the floating header. On the home
+   page the sticky section-tab bar adds one more row, so section anchors need
+   that much extra clearance or every jump lands with its heading behind the
+   tabs. (scroll-margin on the target and scroll-padding on the scrollport
+   add up, which is exactly what we want here.) */
+body[data-page="home"] main > section[id] {
+  scroll-margin-top: calc(var(--tabbar-h) + 6px);
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 760px) {
+  /* The capsule shrinks to top:8px + 52px + 6px of padding. */
+  :root {
+    --sticky-offset: 66px;
+    --tabbar-h: 42px;
+  }
+  /* A phone gives up ~25% of its viewport to two stacked bars, so only the
+     category tabs stay pinned — they are the ones that matter while the grid
+     scrolls. The section tabs ride along at the top and the hamburger drawer
+     covers jumping from further down. */
+  .section-tabs { position: static; margin-top: 8px; backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .catalog-tabs { top: var(--sticky-offset); }
+  body[data-page="home"] main > section[id] { scroll-margin-top: 0; }
+  .hero-cats { justify-content: flex-start; }
+}
+@media (max-width: 430px) {
+  .to-top { width: 40px; height: 40px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-progress i,
+  .to-top { transition: none; }
+}

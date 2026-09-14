@@ -942,22 +942,91 @@
   /* ============================================================================
      Motion: scroll reveal + count-up (respecting prefers-reduced-motion).
      ========================================================================== */
+  /* [data-reveal] ships at opacity:0 (animations.css) and is only painted once
+     something adds .is-revealed. Two things used to leave whole sections
+     blank when you scrolled down to them:
+
+       • the observer was armed once, over the nodes that existed at boot, and
+         bailed out entirely when there were none — but almost every renderer
+         injects its markup *after* that (the release feed on the home page,
+         the whole grid on /collections/). Those nodes were never observed, so
+         they kept opacity:0 forever: a heading with an empty body under it.
+       • nothing ever re-checked. One missed callback was permanent.
+
+     So: always arm, watch the DOM for late arrivals and hand them to the same
+     observer, and sweep once after load for anything still invisible while
+     actually on screen. */
   function setupReveal() {
-    var nodes = $$('[data-reveal]');
-    if (!nodes.length) return;
+    function show(node) { node.classList.add('is-revealed'); }
+
     if (OS.reducedMotion || !('IntersectionObserver' in window)) {
-      nodes.forEach(function (n) { n.classList.add('is-revealed'); });
+      $$('[data-reveal]').forEach(show);
+      watchRevealAdditions(show);
       return;
     }
+
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('is-revealed');
+          show(entry.target);
           observer.unobserve(entry.target);
         }
       });
     }, { rootMargin: '0px 0px -36px 0px', threshold: 0.08 });
-    nodes.forEach(function (n) { observer.observe(n); });
+
+    function observe(node) {
+      if (!node._omniRevealArmed) {
+        node._omniRevealArmed = true;
+        observer.observe(node);
+      }
+    }
+    $$('[data-reveal]').forEach(observe);
+    watchRevealAdditions(observe);
+
+    /* Safety net: an element that is provably on screen but still transparent
+       is a bug the reader can see, so believe the rect over the observer. */
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        var height = window.innerHeight || document.documentElement.clientHeight;
+        $$('[data-reveal]:not(.is-revealed)').forEach(function (node) {
+          var rect = node.getBoundingClientRect();
+          if (rect.height && rect.top < height && rect.bottom > 0) show(node);
+        });
+      }, 1200);
+    });
+  }
+
+  /* Feed every [data-reveal] node that appears after boot to `handler`
+     (observe it, or reveal it outright when motion is off). Debounced to one
+     pass per frame: a catalog re-render adds a few hundred nodes at once and
+     we only care about the final tree. */
+  function watchRevealAdditions(handler) {
+    if (!('MutationObserver' in window) || !document.body) return;
+    var queued = false;
+    var pending = [];
+    function drain() {
+      queued = false;
+      var batch = pending;
+      pending = [];
+      batch.forEach(function (node) {
+        if (!node.isConnected) return;
+        if (node.matches && node.matches('[data-reveal]')) handler(node);
+        if (node.querySelectorAll) $$('[data-reveal]', node).forEach(handler);
+      });
+    }
+    var observer = new MutationObserver(function (records) {
+      for (var i = 0; i < records.length; i += 1) {
+        var added = records[i].addedNodes;
+        for (var j = 0; j < added.length; j += 1) {
+          if (added[j].nodeType === 1) pending.push(added[j]);
+        }
+      }
+      if (pending.length && !queued) {
+        queued = true;
+        requestAnimationFrame(drain);
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
   }
 
   function animateCount(node, force) {
@@ -1106,6 +1175,366 @@
     });
   }
 
+  /* ============================================================================
+     Scroll stability
+     ----------------------------------------------------------------------------
+     The home page un-hides whole sections as their feeds land (#trending,
+     #featured, #statistics, #sourceHealth, #installGuide …) and every one of
+     them sits *above* the catalog. Chrome absorbs that with native scroll
+     anchoring; iOS Safari — the device this catalog exists for — has no
+     scroll anchoring at all, so a reader halfway down the page was thrown
+     several thousand pixels away each time a feed arrived. "Scrolling from
+     top to bottom" jumped around for the first few seconds of every visit.
+
+     stableScroll() measures a landmark at the top of the viewport, runs the
+     DOM work, then re-pins the scroll offset by however much the landmark
+     moved. Where the browser already anchored (Chromium), the landmark did
+     not move and the correction is zero, so the two never fight.
+     ========================================================================== */
+  function scrollTo(y) {
+    // html { scroll-behavior: smooth } would animate a *correction*, which
+    // reads as a second, slower jump. Snap, always.
+    if ('scrollBehavior' in document.documentElement.style) {
+      window.scrollTo({ top: y, left: 0, behavior: 'auto' });
+    } else {
+      window.scrollTo(0, y);
+    }
+  }
+
+  /* The element a reader is looking at right now: the deepest one under the
+     top edge of the viewport that scrolls with the document (sticky/fixed
+     chrome is skipped — it never moves, so it cannot report a shift). Falls
+     back to the section it belongs to, which survives an innerHTML re-render
+     of its own contents. */
+  function scrollLandmark() {
+    var x = Math.max(2, Math.round((window.innerWidth || 360) / 2));
+    var stack = document.elementsFromPoint ? document.elementsFromPoint(x, 2) : [];
+    for (var i = 0; i < stack.length; i += 1) {
+      var node = stack[i];
+      if (node === document.body || node === document.documentElement) continue;
+      var position = '';
+      try { position = window.getComputedStyle(node).position; } catch (e) { position = ''; }
+      if (position === 'fixed' || position === 'sticky') continue;
+      return node;
+    }
+    return null;
+  }
+
+  function landmarkSection(node) {
+    var section = node && node.closest ? node.closest('main > section[id], main[id]') : null;
+    return section || node;
+  }
+
+  function usable(node) {
+    return Boolean(node) && node.isConnected && !node.hidden && node.getBoundingClientRect().height > 0;
+  }
+
+  OS.stableScroll = function (work) {
+    var y = window.scrollY || window.pageYOffset || 0;
+    // At the top there is nothing to preserve, and measuring costs a layout.
+    if (y < 24) { work(); return; }
+
+    var deep = scrollLandmark();
+    var section = landmarkSection(deep) || $('main');
+    var deepWas = usable(deep);
+    var sectionWas = usable(section);
+    var deepBefore = deepWas ? deep.getBoundingClientRect().top : null;
+    var sectionBefore = sectionWas ? section.getBoundingClientRect().top : null;
+
+    work();
+
+    // Prefer the deep landmark: it also reports growth *inside* a section,
+    // which is what a rail re-rendering its cards does. If it was replaced or
+    // hidden mid-render, fall back to the section around it.
+    var delta = null;
+    if (deepWas && deepBefore !== null && usable(deep)) {
+      delta = deep.getBoundingClientRect().top - deepBefore;
+    } else if (sectionWas && sectionBefore !== null && usable(section)) {
+      delta = section.getBoundingClientRect().top - sectionBefore;
+    }
+    if (delta === null || Math.abs(delta) < 1) return;
+    scrollTo(Math.max(0, y + delta));
+  };
+
+  /* ============================================================================
+     Scroll affordances: reading progress, back-to-top, scroll hints
+     ========================================================================== */
+  function onScroll(handler) {
+    var ticking = false;
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(function () { ticking = false; handler(); });
+      }
+    }, { passive: true });
+    window.addEventListener('resize', function () { handler(); }, { passive: true });
+    handler();
+  }
+
+  /* Document height is read at most a couple of times a second on purpose:
+     scrollHeight forces a layout flush, and reading it on every scrolled
+     frame — right after writing the progress bar's transform — is exactly the
+     read/write thrash that makes a long page feel sticky on a phone. */
+  var docHeight = 0;
+  var docHeightStamp = 0;
+  function measureDocument(now) {
+    if (!docHeight || now - docHeightStamp > 400) {
+      docHeightStamp = now;
+      docHeight = document.documentElement.scrollHeight || 0;
+    }
+    return docHeight;
+  }
+
+  function scrollMetrics() {
+    var y = window.scrollY || window.pageYOffset || 0;
+    var max = Math.max(0, measureDocument(Date.now()) - (window.innerHeight || 0));
+    return { y: y, max: max, ratio: max > 0 ? Math.min(1, y / max) : 0 };
+  }
+
+  /* 2px reading-progress line + the back-to-top bead. Injected, like the
+     mobile nav drawer, so the generated app pages and every hand-written
+     section page get them without touching their markup. Both stay out of
+     the way until there is something to report: the line is invisible at the
+     very top and the bead only appears once a screenful has gone past. */
+  function setupScrollAffordances() {
+    if (!document.body) return;
+
+    var wrap = $('.scroll-progress');
+    if (!wrap) {
+      wrap = document.createElement('div');
+      wrap.className = 'scroll-progress';
+      wrap.id = 'scrollProgress';
+      wrap.setAttribute('aria-hidden', 'true');
+      wrap.innerHTML = '<i id="scrollProgressBar"></i>';
+      document.body.appendChild(wrap);
+    }
+    var bar = wrap.firstElementChild;
+
+    var toTop = $('#backToTop');
+    if (!toTop) {
+      toTop = document.createElement('button');
+      toTop.type = 'button';
+      toTop.id = 'backToTop';
+      toTop.className = 'to-top';
+      toTop.setAttribute('aria-label', 'Back to top');
+      toTop.setAttribute('title', 'Back to top');
+      toTop.setAttribute('data-i18n-aria-label', 'tabs.backToTop');
+      toTop.setAttribute('data-i18n-title', 'tabs.backToTop');
+      toTop.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg>';
+      document.body.appendChild(toTop);
+    }
+
+    var idleTimer = null;
+    // A resize (or a phone rotating) changes the document height; drop the
+    // cached measurement instead of waiting for the throttle to expire.
+    window.addEventListener('resize', function () { docHeight = 0; }, { passive: true });
+    onScroll(function () {
+      var m = scrollMetrics();
+      if (bar) bar.style.transform = 'scaleX(' + m.ratio.toFixed(4) + ')';
+      if (wrap) wrap.classList.toggle('is-visible', m.ratio > 0.004 && m.ratio < 0.999);
+      if (toTop) {
+        toTop.classList.toggle('is-visible', m.y > Math.max(700, (window.innerHeight || 700) * 1.25));
+      }
+      // Pause the ambient body::before drift while a scroll is in flight: it is
+      // a fixed, full-viewport layer, so every frame of it competes with the
+      // scroll itself (see tokens.css).
+      document.body.classList.add('is-scrolling');
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(function () {
+        document.body.classList.remove('is-scrolling');
+      }, 180);
+    });
+
+    if (toTop) {
+      toTop.addEventListener('click', function () {
+        // Deliberate user action, so smooth is right here — unless the reader
+        // asked for less motion, in which case scrollTo() already snapped.
+        if (!OS.reducedMotion && 'scrollBehavior' in document.documentElement.style) {
+          window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+        } else {
+          scrollTo(0);
+        }
+        var top = $('#top') || document.body;
+        if (top && top.focus) {
+          try {
+            if (!top.hasAttribute('tabindex')) top.setAttribute('tabindex', '-1');
+            top.focus({ preventScroll: true });
+          } catch (e) { /* focus is a nicety, not the point */ }
+        }
+      });
+    }
+  }
+
+  /* Horizontal rails (the tab bars) fade their edges only while they actually
+     overflow in that direction — the fade is the "more this way" hint. */
+  function setupScrollHints() {
+    var rails = $$('[data-scroll-hints]');
+    if (!rails.length) return;
+    function sync(rail) {
+      var host = rail.closest('[data-scroll-hint-host]') || rail.parentElement;
+      if (!host) return;
+      var overflow = rail.scrollWidth - rail.clientWidth > 2;
+      host.classList.toggle('can-scroll-start', overflow && rail.scrollLeft > 4);
+      host.classList.toggle('can-scroll-end', overflow && rail.scrollLeft < rail.scrollWidth - rail.clientWidth - 4);
+    }
+    rails.forEach(function (rail) {
+      rail.addEventListener('scroll', function () { sync(rail); }, { passive: true });
+      window.addEventListener('resize', function () { sync(rail); }, { passive: true });
+      sync(rail);
+    });
+    // Labels change width on a language switch, so re-measure then too.
+    window.addEventListener('i18n:changed', function () {
+      rails.forEach(function (rail) { sync(rail); });
+    });
+    OS.syncScrollHints = function () { rails.forEach(sync); };
+  }
+
+  /* ============================================================================
+     Section tabs
+     ----------------------------------------------------------------------------
+     A sticky row of tabs pinned under the header. It is navigation, not a
+     widget: the links are real anchors (so they work with JavaScript off, in
+     a new tab, and for screen readers), the current one is marked with
+     aria-current, and tabs whose section has not arrived yet are dropped
+     rather than left dead. js/core.js owns the scroll-spy; js/site.js calls
+     OS.refreshSectionTabs() once a feed changes which sections exist.
+     ========================================================================== */
+  /* Where the sticky bars pin, read from the same custom property the CSS
+     uses so the two can never drift. Cached: the scroll-spy asks on every
+     frame and getComputedStyle() is not free. */
+  var stickyOffsetCache = null;
+  function stickyOffset() {
+    if (stickyOffsetCache === null) {
+      var raw = '';
+      try {
+        raw = window.getComputedStyle(document.documentElement).getPropertyValue('--sticky-offset');
+      } catch (e) { raw = ''; }
+      var value = parseFloat(raw);
+      stickyOffsetCache = Number.isFinite(value) && value > 0 ? value : 74;
+    }
+    return stickyOffsetCache;
+  }
+
+  function setupSectionTabs() {
+    var bar = $('#sectionTabs');
+    if (!bar) return;
+    var rail = $('.section-tabs-inner', bar);
+    var tabs = $$('.section-tab[data-target]', bar);
+    if (!tabs.length) return;
+
+    function sectionOf(tab) {
+      return document.getElementById(tab.dataset.target);
+    }
+
+    /* Tab/section pairs, rebuilt when a section appears or disappears rather
+       than on every scrolled frame. */
+    var pairs = [];
+    function remeasure() {
+      pairs = tabs
+        .map(function (tab) { return { tab: tab, node: sectionOf(tab) }; })
+        .filter(function (pair) { return pair.node && !pair.node.hidden; });
+    }
+    remeasure();
+    window.addEventListener('resize', function () {
+      stickyOffsetCache = null;
+      remeasure();
+    }, { passive: true });
+
+    function activate(tab) {
+      tabs.forEach(function (other) {
+        var on = other === tab;
+        if (on) other.setAttribute('aria-current', 'true');
+        else other.removeAttribute('aria-current');
+        other.classList.toggle('active', on);
+      });
+      // Keep the chosen tab inside the rail without scrolling the document:
+      // scrollIntoView() would drag the page vertically with it.
+      if (!rail) return;
+      var left = tab.offsetLeft - rail.clientWidth / 2 + tab.offsetWidth / 2;
+      var max = rail.scrollWidth - rail.clientWidth;
+      var want = Math.max(0, Math.min(left, max));
+      if (Math.abs(want - rail.scrollLeft) > 2) rail.scrollLeft = want;
+    }
+
+    function spy() {
+      var line = stickyOffset() + Math.max(80, (window.innerHeight || 600) * 0.28);
+      var current = null;
+      for (var i = 0; i < pairs.length; i += 1) {
+        // A section with no box (still hidden, or laid out by an engine that
+        // reports zeros) cannot be the one the reader is in.
+        var rect = pairs[i].node.getBoundingClientRect();
+        if (!rect.height) continue;
+        if (!current) current = pairs[i];
+        if (rect.top <= line) current = pairs[i];
+      }
+      // Nothing measurable: keep whatever the markup started with.
+      if (!current || current.tab.getAttribute('aria-current')) return;
+      activate(current.tab);
+    }
+
+    /* Drop tabs whose section never arrives (no trending data, say) instead of
+       shipping a button that does nothing. Runs after every render pass. */
+    OS.refreshSectionTabs = function () {
+      var any = 0;
+      tabs.forEach(function (tab) {
+        var node = sectionOf(tab);
+        // #top is <main> itself and always there; the rest are data-driven.
+        var missing = Boolean(node) && node.hidden;
+        tab.hidden = missing;
+        if (!missing) any += 1;
+      });
+      bar.hidden = any === 0;
+      remeasure();
+      spy();
+      if (OS.syncScrollHints) OS.syncScrollHints();
+    };
+
+    bar.addEventListener('click', function (event) {
+      var tab = event.target.closest ? event.target.closest('.section-tab') : null;
+      if (!tab) return;
+      // Let the browser follow the anchor (and let setupDeferredAnchors queue
+      // the jump when the section is still hidden); just paint the state now.
+      activate(tab);
+      /* …except for #top, which is <main> itself. Take that jump over: the
+         target has to be the true top of the document rather than wherever
+         scroll-padding leaves main's border box, and the hash should still
+         read #top afterwards (preventDefault would otherwise drop it). */
+      if (tab.dataset.target !== 'top' || !document.getElementById('top')) return;
+      event.preventDefault();
+      if (!OS.reducedMotion && 'scrollBehavior' in document.documentElement.style) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+      } else {
+        scrollTo(0);
+      }
+      try {
+        history.replaceState(null, '', location.pathname + location.search + '#top');
+      } catch (e) { /* sandboxed frame */ }
+    });
+
+    // Roving arrow-key navigation across the rail, as for any tab strip.
+    bar.addEventListener('keydown', function (event) {
+      if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].indexOf(event.key) === -1) return;
+      var live = tabs.filter(function (tab) { return !tab.hidden; });
+      if (live.length < 2) return;
+      var index = live.indexOf(document.activeElement);
+      if (index === -1) return;
+      event.preventDefault();
+      var next;
+      if (event.key === 'Home') next = live[0];
+      else if (event.key === 'End') next = live[live.length - 1];
+      else {
+        // Arrows follow the reading direction: the site ships Arabic, where
+        // "right" is the previous tab.
+        var forward = (event.key === 'ArrowRight') !== (document.documentElement.dir === 'rtl');
+        next = live[(index + (forward ? 1 : -1) + live.length) % live.length];
+      }
+      if (next && next.focus) next.focus();
+    });
+
+    onScroll(spy);
+    OS.refreshSectionTabs();
+  }
+
   /* ------------------------------------------------------------------ boot */
   function boot() {
     // Theme (also applied pre-paint by the inline bootstrap in <head>).
@@ -1143,6 +1572,9 @@
     setupNavFit();
     setupInstallPrompt();
     setupDeferredAnchors();
+    setupScrollAffordances();
+    setupScrollHints();
+    setupSectionTabs();
     setupReveal();
     setupCounts();
     registerServiceWorker();

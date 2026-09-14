@@ -178,6 +178,14 @@
 
   /* --------------------------------------------------------------- layout */
   --header-h: 72px;
+  /* Sticky findability bars. The header is a *floating* capsule (top: 12px +
+     a 56px nav + 6px of padding), so --sticky-offset is its bottom edge —
+     the line every sticky bar below it pins to. --tabbar-h is the height of
+     one tab row, which lets a second bar stack on the first without either
+     one guessing a pixel value. components.css re-declares both inside the
+     `@media (max-width: 760px)` block that shrinks the capsule. */
+  --sticky-offset: 74px;
+  --tabbar-h: 46px;
   --shell-w: 1200px;
   --shell-pad: 28px;
   --gap-xs: 6px;
@@ -450,6 +458,31 @@ body::after {
   0%   { transform: translate3d(0, 0, 0) scale(1) rotate(0deg); }
   50%  { transform: translate3d(1.5%, -1.2%, 0) scale(1.02) rotate(0.3deg); }
   100% { transform: translate3d(-1%, 1.6%, 0) scale(1.015) rotate(-0.2deg); }
+}
+
+/* ── Scroll cost of the ambient layers ─────────────────────────────────────
+   Both overlays above are `position: fixed` and cover the whole viewport, so
+   they are re-composited on *every* scrolled pixel. The grain layer is the
+   expensive one: `mix-blend-mode: soft-light` forces the engine to read back
+   and blend the entire page beneath it, frame after frame, which is exactly
+   the "scrolling down the page stutters / lags" symptom on phones. Three
+   cheap concessions keep the look on a desktop and keep the frames on a
+   touch device:
+
+     • coarse pointers drop the blend (the grain is 3.5% opacity — invisible
+       at arm's length on a phone) and the fixed background attachment, which
+       iOS Safari re-rasters on scroll instead of pinning;
+     • while a scroll is actually in flight the ambient drift pauses, so the
+       compositor is not chasing a moving target (js/core.js toggles
+       `.is-scrolling` on <body>, rAF-throttled);
+     • `prefers-reduced-motion` parks both, matching animations.css. */
+@media (pointer: coarse) {
+  body { background-attachment: scroll; }
+  body::after { mix-blend-mode: normal; opacity: 0.02; }
+}
+body.is-scrolling::before { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
 }
 
 h1, h2, h3, h4 {

@@ -136,6 +136,54 @@
     return state.apps.find(function (a) { return slugFor(a) === slug; }) || null;
   };
 
+  /* DOM id for a category tab. The category id is catalog data, so anything
+     outside the safe set is dropped rather than escaped — an id with a space
+     or a quote in it would not survive aria-labelledby. */
+  function tabIdFor(categoryId) {
+    return 'catTab-' + String(categoryId || 'all').replace(/[^A-Za-z0-9_-]/g, '');
+  }
+
+  function readCategoryParam() {
+    try {
+      return new URLSearchParams(location.search).get('category') || '';
+    } catch (e) { return ''; }
+  }
+
+  /* The selected shelf lives in the query string (?category=games) so a tab
+     can be shared or bookmarked. The hash is deliberately left alone: on the
+     home page it already deep-links to an app dialog (#slug).
+
+     Read once, at parse time. The deferred feeds repaint the catalog — and
+     therefore rewrite the query string — before boot()'s promise chain
+     resolves, so reading the parameter any later finds the URL this module
+     has already normalised and the shared link silently does nothing. */
+  var categoryDeepLink = readCategoryParam();
+  var categoryDeepLinkApplied = false;
+
+  function writeCategoryParam() {
+    // Never normalise away a deep link that has not been honoured yet.
+    if (!categoryDeepLinkApplied) return;
+    try {
+      var params = new URLSearchParams(location.search);
+      if (state.category && state.category !== 'all') params.set('category', state.category);
+      else params.delete('category');
+      var query = params.toString();
+      history.replaceState(null, '', location.pathname + (query ? '?' + query : '') + location.hash);
+    } catch (e) { /* sandboxed frame: the URL is a nicety, not the point */ }
+  }
+
+  /* ?category=<id> lands the reader on a shelf — applied once, before the
+     first full render, and validated against the catalog so a stale or
+     invented value cannot leave the grid and the tabs disagreeing. */
+  function applyCategoryDeepLink() {
+    if (categoryDeepLinkApplied) return;
+    categoryDeepLinkApplied = true;
+    if (!categoryDeepLink) return;
+    var known = categoryDeepLink === 'all' || categoryDeepLink === 'favorites' ||
+      state.apps.some(function (app) { return (app.category || 'other') === categoryDeepLink; });
+    if (known) state.category = categoryDeepLink;
+  }
+
   /* ------------------------------------------------------------ data load */
   // /apps.json lives at the repository root (installable source URL) and in
   // the deployed site; /discovery.json is only assembled into the deployed
@@ -271,7 +319,12 @@
 
   function refreshPage() {
     var page = (document.body && document.body.dataset.page) || '';
-    try {
+    /* Every deferred feed un-hides a section, and on the home page most of
+       them sit *above* the catalog. Re-rendering from here therefore inserts
+       thousands of pixels over the reader's head — fine on Chromium, which
+       anchors the scroll for us, and a violent jump on iOS Safari, which does
+       not. OS.stableScroll re-pins the viewport around the work. */
+    var render = function () {
       if (page === 'home') {
         Home.renderRails();
         Home.renderMetrics();
@@ -290,8 +343,16 @@
       } else if (page === 'compare') {
         Compare.load();
       }
+    };
+    try {
+      if (OS.stableScroll) OS.stableScroll(render);
+      else render();
     } catch (error) {
       /* renderer not ready on this page */
+    }
+    // A section that just arrived (or just gave up) changes which tabs exist.
+    if (OS.refreshSectionTabs) {
+      try { OS.refreshSectionTabs(); } catch (error) { /* no tab bar here */ }
     }
   }
 
@@ -627,8 +688,25 @@
         return;
       }
 
+      /* Hero shelf pills carry the same category state as the catalog tabs,
+         but they are a shortcut from the top of the page: picking one also
+         takes the reader down to the grid it just filtered. */
+      var shelf = target.closest('[data-hero-category]');
+      if (shelf) {
+        state.category = shelf.dataset.id || 'all';
+        Home.renderFilters();
+        Home.filterAndRender();
+        var catalogSection = $('#catalog');
+        if (catalogSection && catalogSection.scrollIntoView) {
+          catalogSection.scrollIntoView({ behavior: OS.reducedMotion ? 'auto' : 'smooth', block: 'start' });
+        }
+        return;
+      }
+
       var chip = target.closest('[data-kind]');
-      if (chip && chip.closest('.filter-groups')) {
+      // The category row moved out of .filter-groups when it became the
+      // sticky tablist, so both homes count.
+      if (chip && (chip.closest('.filter-groups') || chip.closest('.catalog-tabs'))) {
         if (chip.dataset.kind === 'category') state.category = state.category === chip.dataset.id ? 'all' : chip.dataset.id;
         if (chip.dataset.kind === 'status') state.statusFilter = state.statusFilter === chip.dataset.id ? 'all' : chip.dataset.id;
         if (chip.dataset.kind === 'provenance') state.provenance = state.provenance === chip.dataset.id ? 'all' : chip.dataset.id;
@@ -664,6 +742,33 @@
       event.preventDefault();
       Home.openApp(target.dataset.slug);
     });
+
+    /* Arrow-key navigation for the category tablist. The chips are real
+       buttons, so Enter/Space already activate them, but a tablist also owes
+       its keyboard users Home/End and left/right — and the roving tabindex
+       renderFilters() paints means the whole row is a single tab stop, so
+       without this the only way across it would be to activate every shelf. */
+    document.addEventListener('keydown', function (event) {
+      if (['ArrowRight', 'ArrowLeft', 'Home', 'End'].indexOf(event.key) === -1) return;
+      var current = event.target;
+      if (!current || !current.closest) return;
+      var list = current.closest('#categoryFilters');
+      if (!list) return;
+      var tabs = $$('[role="tab"]', list);
+      var index = tabs.indexOf(current);
+      if (tabs.length < 2 || index === -1) return;
+      event.preventDefault();
+      var next;
+      if (event.key === 'Home') next = tabs[0];
+      else if (event.key === 'End') next = tabs[tabs.length - 1];
+      else {
+        // Arrows follow the reading direction: the site ships Arabic, where
+        // "right" is the previous tab.
+        var forward = (event.key === 'ArrowRight') !== (document.documentElement.dir === 'rtl');
+        next = tabs[(index + (forward ? 1 : -1) + tabs.length) % tabs.length];
+      }
+      if (next && next.focus) next.focus();
+    });
   }
 
   /* Resolve what a click inside the catalog should open: the explicit VIEW
@@ -683,7 +788,7 @@
       // Each section is isolated on purpose: a hero that used to throw took
       // the catalog down with it, and the deferred feeds then repainted a grid
       // nobody had finished wiring.
-      ['renderHero', 'renderRails', 'renderMetrics', 'renderSourceHealth', 'renderInstallGuide',
+      ['renderHero', 'renderHeroCategories', 'renderRails', 'renderMetrics', 'renderSourceHealth', 'renderInstallGuide',
         'renderCatalog', 'renderTimeline', 'renderFooterClients'].forEach(function (name) {
         try {
           this[name]();
@@ -749,6 +854,49 @@
             return clientButton(client, OS.ROOT.replace(/\/$/, '') + '/apps.json');
           }).join('');
       }
+    },
+
+    /* Quick shelves in the hero: the six biggest categories, one tap from the
+       top of the page. A first-time visitor should not have to scroll past
+       four rails to find out what the catalog holds, and tapping a shelf
+       lands on the matching category tab further down, so the two never
+       disagree. */
+    renderHeroCategories: function () {
+      var row = $('#heroCategories');
+      if (!row || !state.apps.length) return;
+      var counts = new Map();
+      state.apps.forEach(function (app) {
+        var cat = app.category || 'other';
+        counts.set(cat, (counts.get(cat) || 0) + 1);
+      });
+      var top = Array.from(counts.entries())
+        .sort(function (a, b) { return b[1] - a[1] || categoryLabel(a[0]).localeCompare(categoryLabel(b[0])); })
+        .slice(0, 6);
+      // Rebuilding on every deferred feed would drop focus and replay the hero
+      // animation for nothing: repaint only when the shelves (or their labels)
+      // actually change.
+      var lang = (window.OmniI18n && window.OmniI18n.language) || 'en';
+      var signature = lang + '|' + top.map(function (pair) { return pair[0] + ':' + pair[1]; }).join('|');
+      if (row.dataset.signature === signature) { this.syncHeroCategories(); return; }
+      row.dataset.signature = signature;
+      row.innerHTML = '<span class="hero-cats-label">' +
+          '<svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>' +
+          '<span data-i18n="tabs.browse">' + OS.esc(OS.t('tabs.browse', null, 'Browse')) + '</span>' +
+        '</span>' +
+        top.map(function (pair) {
+          return '<button type="button" class="chip" data-hero-category data-kind="category" data-id="' + OS.esc(pair[0]) + '">' +
+            '<span>' + OS.esc(categoryLabel(pair[0])) + '</span><span class="count">' + pair[1] + '</span></button>';
+        }).join('');
+      row.hidden = false;
+      this.syncHeroCategories();
+    },
+
+    syncHeroCategories: function () {
+      var row = $('#heroCategories');
+      if (!row) return;
+      $$('[data-hero-category]', row).forEach(function (pill) {
+        pill.classList.toggle('active', pill.dataset.id === state.category);
+      });
     },
 
     renderRails: function () {
@@ -881,6 +1029,11 @@
       var focused = document.activeElement;
       var focusKind = focused && focused.dataset && focused.dataset.kind ? focused.dataset.kind : null;
       var focusId = focusKind ? focused.dataset.id : null;
+      /* Scope the re-focus to the row the chip came from. The hero now offers
+         the same categories as the catalog tabs, and a document-wide scan
+         would hand focus to the top of the page instead of back to the row
+         the reader is actually working in. */
+      var focusScope = (focused && focused.closest && focused.closest('.filter-row')) || document;
 
       var categoryCounts = new Map();
       var statusCounts = new Map();
@@ -917,8 +1070,24 @@
       }));
       var catRow = $('#categoryFilters');
       if (catRow) {
+        /* A tab id is built from catalog data, so it is reduced to a safe
+           character set rather than escaped — an id cannot contain a space or
+           a quote and still round-trip through aria-labelledby. */
+        var selectedId = catFilters.some(function (filter) { return filter.id === state.category; })
+          ? state.category
+          : 'all';
+        // A stale ?category= (or a shelf that emptied out) must not leave the
+        // tablist with no selected tab: the grid and the tabs would disagree
+        // and the row would have no tab stop at all.
+        if (selectedId !== state.category) state.category = selectedId;
         catRow.innerHTML = catFilters.map(function (filter) {
-          return '<button type="button" class="chip' + (state.category === filter.id ? ' active' : '') + '" data-kind="category" data-id="' + OS.esc(filter.id) + '">' +
+          var selected = filter.id === selectedId;
+          return '<button type="button" role="tab" id="' + tabIdFor(filter.id) + '"' +
+            ' class="chip' + (selected ? ' active' : '') + '"' +
+            ' aria-selected="' + (selected ? 'true' : 'false') + '"' +
+            ' aria-controls="catalogPanel"' +
+            ' tabindex="' + (selected ? '0' : '-1') + '"' +
+            ' data-kind="category" data-id="' + OS.esc(filter.id) + '">' +
             '<span>' + OS.esc(filter.label) + '</span><span class="count">' + filter.count + '</span></button>';
         }).join('');
       }
@@ -952,7 +1121,7 @@
            into a selector string would need escaping that is easy to get
            subtly wrong (escaping `"` but not `\` leaves the string breakable)
            — comparing values has no such surface at all. */
-        var chips = document.querySelectorAll('[data-kind][data-id]');
+        var chips = focusScope.querySelectorAll('[data-kind][data-id]');
         for (var ci = 0; ci < chips.length; ci += 1) {
           if (chips[ci].dataset.kind === focusKind && chips[ci].dataset.id === focusId) {
             if (chips[ci].focus) chips[ci].focus();
@@ -1078,6 +1247,16 @@
       // Filter chips are static per catalog; rebuilding them on every
       // keystroke discards nothing but wastes DOM work, so they render once
       // on load and explicitly when favorites change.
+      var panel = $('#catalogPanel');
+      if (panel) {
+        // The grid is the panel the category tablist controls: name it after
+        // the selected tab so a screen reader announces which shelf it is in.
+        var activeTab = $('#categoryFilters [aria-selected="true"]');
+        if (activeTab && activeTab.id) panel.setAttribute('aria-labelledby', activeTab.id);
+        else panel.removeAttribute('aria-labelledby');
+      }
+      Home.syncHeroCategories();
+      writeCategoryParam();
     },
 
     clearFilters: function () {
@@ -2266,9 +2445,15 @@
   window.addEventListener('i18n:changed', function () {
     try {
       if (document.body.dataset.page !== 'home' || !state.apps.length) return;
-      Home.renderHero();
-      Home.renderFilters();
-      Home.filterAndRender();
+      // Translated copy changes heights, so hold the reader's place while the
+      // chrome is rebuilt (same reason refreshPage() goes through this).
+      var render = function () {
+        Home.renderHero();
+        Home.renderHeroCategories();
+        Home.renderFilters();
+        Home.filterAndRender();
+      };
+      if (OS.stableScroll) OS.stableScroll(render); else render();
     } catch (e) { /* home renderers not ready on this page */ }
   });
 
@@ -2290,7 +2475,13 @@
       // A VIEW tap that arrived before the feeds did is replayed here.
       flushPendingOpen();
       if (page === 'home') {
+        applyCategoryDeepLink();
         Home.render();
+        // Sections that arrived with the first-paint feeds change which tabs
+        // the sticky bar should offer.
+        if (OS.refreshSectionTabs) {
+          try { OS.refreshSectionTabs(); } catch (error) { /* tab bar not ready */ }
+        }
         // Deep link: #slug opens the dialog.
         var hash = location.hash.slice(1);
         if (hash) {
