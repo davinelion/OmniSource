@@ -132,6 +132,24 @@
   </header>
 
   <main id="top">
+    <!-- Section tabs: a sticky shortcut row under the header, so reaching the
+         apps never means scrolling the whole page. Real anchors (they work
+         with JS off and in a new tab); js/core.js marks the current one and
+         drops tabs whose section has no data yet.
+
+         First child of <main> on purpose: #top is this element, and a bar
+         sitting *before* it in flow would push the "Home"/"Overview" anchor
+         one bar-height short of the real top of the page. Inside main it also
+         stops pinning at the footer instead of following the whole document. -->
+    <nav class="section-tabs" id="sectionTabs" data-scroll-hint-host aria-label="Jump to a section" data-i18n-aria-label="tabs.label">
+      <div class="shell section-tabs-inner" data-scroll-hints>
+        <a class="section-tab" href="#top" data-target="top" aria-current="true" data-i18n="tabs.overview">Overview</a>
+        <a class="section-tab" href="#trending" data-target="trending" data-i18n="nav.trending">Trending</a>
+        <a class="section-tab" href="#catalog" data-target="catalog" data-i18n="nav.apps">Apps</a>
+        <a class="section-tab" href="#installGuide" data-target="installGuide" data-i18n="nav.install">Install</a>
+        <a class="section-tab" href="#whats-new" data-target="whats-new" data-i18n="nav.whatsNew">What&rsquo;s new</a>
+      </div>
+    </nav>
     <!-- ================================ HERO ================================ -->
     <section class="hero os-hero" aria-label="OmniSource introduction">
       <div class="hero-bg" aria-hidden="true"><i class="spot"></i><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="hero-grid"></i></div>
@@ -157,6 +175,18 @@
             <span style="flex:1;text-align:left;color:var(--faint)" data-i18n="hero.searchPlaceholder">Search apps, bundle IDs, developers…</span>
             <kbd>⌘ K</kbd>
           </button>
+        </div>
+
+        <!-- Quick shelves: the catalog's own categories, offered at the very
+             top of the page. js/site.js fills this from the live catalog; one
+             tap scrolls straight to the filtered grid instead of making a
+             first-time visitor scroll the whole page to find out what is
+             here. Hidden until there is something to show. -->
+        <div class="hero-cats" id="heroCategories" role="group" aria-label="Browse apps by category" data-i18n-aria-label="tabs.browseAria" hidden>
+          <span class="hero-cats-label">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>
+            <span data-i18n="tabs.browse">Browse</span>
+          </span>
         </div>
 
         <div class="source-box" aria-label="OmniSource feed URL">
@@ -395,9 +425,16 @@
           </label>
         </div>
 
+        <!-- Category tabs. Pinned under the section tabs for the whole height
+             of the grid (js/core.js keeps the sticky offsets in sync with the
+             floating header), so switching shelf is one tap from anywhere in
+             the catalog instead of a climb back to the top. -->
+        <div class="catalog-tabs" id="catalogTabs" data-scroll-hint-host>
+          <div class="filter-row" id="categoryFilters" role="tablist" aria-label="Filter apps by category" data-i18n-aria-label="tabs.categoriesAria" data-scroll-hints></div>
+        </div>
+
         <div class="filter-groups">
           <div class="filter-row" id="provenanceFilters" role="group" aria-label="Filter by build provenance"></div>
-          <div class="filter-row" id="categoryFilters" role="group" aria-label="Filter by category"></div>
           <div class="filter-row" id="statusFilters" role="group" aria-label="Filter by release status"></div>
         </div>
 
@@ -409,14 +446,18 @@
           </div>
         </div>
 
-        <div class="apps-grid" id="appsGrid" aria-live="polite" aria-busy="true">
-          <div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div>
-        </div>
-        <div class="empty-state" id="emptyState" hidden>
-          <div class="empty-icon">⌕</div>
-          <h3 data-i18n="catalog.emptyTitle">No apps found</h3>
-          <p data-i18n="catalog.emptyText">Try another keyword or remove your filters.</p>
-          <button class="button" type="button" id="emptyClear" data-i18n="catalog.emptyReset">Reset search</button>
+        <!-- The grid is the tab panel the category tabs above control;
+             js/site.js points aria-labelledby at whichever tab is selected. -->
+        <div class="catalog-panel" id="catalogPanel" role="tabpanel">
+          <div class="apps-grid" id="appsGrid" aria-live="polite" aria-busy="true">
+            <div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div>
+          </div>
+          <div class="empty-state" id="emptyState" hidden>
+            <div class="empty-icon">⌕</div>
+            <h3 data-i18n="catalog.emptyTitle">No apps found</h3>
+            <p data-i18n="catalog.emptyText">Try another keyword or remove your filters.</p>
+            <button class="button" type="button" id="emptyClear" data-i18n="catalog.emptyReset">Reset search</button>
+          </div>
         </div>
       </div>
     </section>
