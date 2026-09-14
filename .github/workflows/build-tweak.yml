@@ -49,10 +49,10 @@ jobs:
     timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -125,7 +125,7 @@ jobs:
           cyan -i base.ipa -o output.ipa -d tweak.deb "${FLAGS[@]}"
 
       - name: Upload Patched IPA Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ${{ steps.sanitize.outputs.safe_name }}-Patched-IPA
           path: workspace/output.ipa

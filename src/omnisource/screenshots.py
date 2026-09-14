@@ -66,8 +66,9 @@ def _filename_for(slug: str, index: int, ext: str) -> str:
     return f"{slug}-{index + 1:02d}{ext.lower()}"
 
 
-def _is_allowed_image(name: str) -> bool:
-    lower = name.lower()
+def _is_allowed_image(url: str) -> bool:
+    # Strip query/fragment (e.g. GitHub's ?raw=true) before checking extension.
+    lower = url.lower().split("?", 1)[0].split("#", 1)[0]
     return any(lower.endswith(ext) for ext in ALLOWED_EXTENSIONS)
 
 
