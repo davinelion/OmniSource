@@ -886,23 +886,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "ryukgram-sidebyside",
-      "name": "RyukGram Side by Side",
-      "category": "social",
-      "version": "446.0.0",
-      "releaseDate": "2026-09-09",
-      "score": 0.7667,
-      "signals": {
-        "recency": 0.9167,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "jellybook",
       "name": "JellyBook",
       "category": "other",
@@ -1421,23 +1404,6 @@
       "score": 0.48,
       "signals": {
         "recency": 0.2,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ryukgram-ig410",
-      "name": "RyukGram (IG 410)",
-      "category": "social",
-      "version": "410.1.0",
-      "releaseDate": "2026-07-25",
-      "score": 0.46,
-      "signals": {
-        "recency": 0.15,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -2125,6 +2091,40 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
+    },
+    {
+      "slug": "ryukgram-sidebyside",
+      "name": "RyukGram Side by Side",
+      "category": "social",
+      "version": "446.0.0",
+      "releaseDate": "2026-09-09",
+      "score": 0.3667,
+      "signals": {
+        "recency": 0.9167,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
+    },
+    {
+      "slug": "ryukgram-ig410",
+      "name": "RyukGram (IG 410)",
+      "category": "social",
+      "version": "410.1.0",
+      "releaseDate": "2026-07-25",
+      "score": 0.06,
+      "signals": {
+        "recency": 0.15,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
     }
   ]
 }
