@@ -70,18 +70,18 @@ jobs:
       changed: ${{ steps.commit.outputs.changed }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
       # Reuse the provider HTTP response cache between runs: stdlib-only runtime,
       # metadata only (never IPA payloads). Cache writes are opaque to the build.
       - name: Cache upstream metadata
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .cache/omnisource
           key: omnisource-http-${{ runner.os }}
@@ -208,7 +208,7 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Upload generated feeds (debug artifact)
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: generated-feeds
           path: |
@@ -229,7 +229,7 @@ jobs:
       # path is used when Pages is set to *GitHub Actions*; while it is set to
       # *Deploy from a branch*, GitHub serves the repository root instead —
       # which the pipeline keeps complete (see scripts/publish_root.py).
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
@@ -281,4 +281,4 @@ jobs:
 
       - id: deployment
         if: steps.pages-mode.outputs.deploy == 'true'
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
