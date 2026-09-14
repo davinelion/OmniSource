@@ -79,4 +79,9 @@ jobs:
         with:
           name: website-build
           path: web/.next
+          # `.next` is a dotted directory: upload-artifact skips hidden files
+          # unless this is set, which produced "No files were found with the
+          # provided path: web/.next" on every otherwise-green run.
+          include-hidden-files: true
+          if-no-files-found: error
           retention-days: 7
