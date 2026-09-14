@@ -229,9 +229,13 @@ jobs:
       # path is used when Pages is set to *GitHub Actions*; while it is set to
       # *Deploy from a branch*, GitHub serves the repository root instead —
       # which the pipeline keeps complete (see scripts/publish_root.py).
-      - uses: actions/upload-pages-artifact@v4
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+          # v5 (unlike v3) drops dotfiles from the tarball unless this is set,
+          # which would ship a Pages artifact without `_site/.nojekyll` — the
+          # marker that stops Jekyll from swallowing underscore/asset paths.
+          include-hidden-files: true
 
   deploy:
     name: Deploy GitHub Pages

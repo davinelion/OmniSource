@@ -75,7 +75,7 @@ OmniSource/
 | Change pipeline defaults | `config/settings.json` | `make check` |
 | Change validation rules | `schemas/` or `src/omnisource/validation.py` | `make check` |
 
-Do not hand-edit `feeds/` or the generated catalog section in `README.md`. The sync pipeline owns them.
+Do not hand-edit `feeds/` or anything the pipeline generates. The sync pipeline owns the whole generated surface; `README.md` is hand-written and the pipeline leaves it alone.
 
 ## Generated outputs
 
@@ -208,7 +208,7 @@ The Pages workflow calls `scripts/build_site.py`, so local and production site a
 
 | Target | What it does |
 | --- | --- |
-| `make build` | Runs the sync + health + build stages, writing everything under `feeds/`, `apps/`, the README blocks, `/apps.json` and the `api/` mirror. |
+| `make build` | Runs the sync + health + build stages, writing everything under `feeds/`, `apps/`, `/apps.json` and the `api/` mirror. |
 | `make publish` | Calls `scripts/publish_root.py` to refresh/repair the repository-root surface (`/apps.json`, `api/`, `sitemap.xml`, `robots.txt`). |
 | `make site` | Calls `scripts/build_site.py` to assemble the deployable site in `_site/`: the root-level site files, every feed at the flat root and `api/` (with `.gz` twins), `sitemap.xml` + `robots.txt` and the home page's live statistics, fresh on every build. |
 | `make check` | Runs the offline validator (`scripts/validate.py`), the jq contract checks (`scripts/validate_jq.sh`) and the unit test suite (`python3 -m unittest discover -s tests`). |

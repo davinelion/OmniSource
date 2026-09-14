@@ -125,5 +125,53 @@ class TestAssetManagement(unittest.TestCase):
             self.assertEqual(report.screenshots_ok, 1)
 
 
+class TestAssetManifest(unittest.TestCase):
+    def _manifest(self, screenshots: list[str]) -> dict:
+        from omnisource.assets import build_asset_manifest_doc
+
+        with tempfile.TemporaryDirectory() as tmpdir:
+            assets_dir = Path(tmpdir)
+            (assets_dir / "TestIcon.png").write_bytes(PNG_MAGIC + b"content")
+            raw_catalog = {
+                "source": {"name": "Test", "identifier": "com.test", "baseURL": "https://test.local"},
+                "clients": [],
+                "apps": [
+                    {
+                        "slug": "test-app",
+                        "name": "Test App",
+                        "bundleIdentifier": "com.test.app",
+                        "developerName": "Tester",
+                        "icon": "TestIcon.png",
+                        "status": "stable",
+                        "screenshots": screenshots,
+                        "compatibility": {"minOSVersion": "16.0", "clients": ["altstore"]},
+                    }
+                ],
+            }
+            return build_asset_manifest_doc(
+                Catalog.from_dict(raw_catalog),
+                assets_dir=assets_dir,
+                base_url="https://test.local",
+            )
+
+    def test_missing_screenshots_are_published_not_hidden(self) -> None:
+        """The per-app build warning was demoted; the manifest carries the list.
+
+        ``stage_assets`` used to log one ``::warning::`` annotation per app
+        without screenshots — over 50 of ~94 on every sync — which buried the
+        annotations that matter. The signal stays actionable here.
+        """
+        doc = self._manifest([])
+        self.assertEqual(doc["screenshotsMissing"], ["test-app"])
+        self.assertEqual(doc["totals"]["screenshotsMissing"], 1)
+        self.assertEqual(doc["totals"]["screenshotsDeclared"], 0)
+
+    def test_declared_screenshots_are_counted(self) -> None:
+        doc = self._manifest(["https://example.com/screen.png"])
+        self.assertEqual(doc["screenshotsMissing"], [])
+        self.assertEqual(doc["totals"]["screenshotsMissing"], 0)
+        self.assertEqual(doc["totals"]["screenshotsDeclared"], 1)
+
+
 if __name__ == "__main__":
     unittest.main()

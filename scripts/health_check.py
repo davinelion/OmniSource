@@ -9,7 +9,9 @@ ranged GET for hosts that reject HEAD, so a probe never downloads a whole IPA.
 A Markdown report is written to stdout and, when running on GitHub Actions, to
 the job summary. With ``--report-issue`` the report is filed as a GitHub Issue
 (created on first failure, appended to the open issue afterwards), giving the
-maintainer a durable, linkable record of every broken download.
+maintainer a durable, linkable record of every broken download. When a later
+run finds every link reachable again, that open issue is commented on and
+closed, so the tracker never keeps an issue that upstream has already fixed.
 
 Exit codes
 ----------
@@ -155,16 +157,22 @@ def ensure_label(gh_bin: str, env: dict[str, str], *, repo: str, label: str) -> 
     )
 
 
-def report_issue(report: str, *, repo: str, label: str, title: str) -> None:
-    """File a new issue, or append to the most recent open one with the label."""
+def _gh_binary() -> str:
     gh_bin = shutil.which("gh")
     if not gh_bin:
         raise SystemExit("health-check: --report-issue requires the 'gh' CLI to be installed")
+    return gh_bin
 
+
+def _gh_env() -> dict[str, str]:
     env = dict(os.environ, GH_TOKEN=os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN", ""))
     if not env["GH_TOKEN"]:
         raise SystemExit("health-check: --report-issue requires GH_TOKEN/GITHUB_TOKEN")
+    return env
 
+
+def open_issue_number(gh_bin: str, env: dict[str, str], *, repo: str, label: str) -> str:
+    """Number of the most recent open issue carrying ``label`` (``""`` when none)."""
     list_proc = subprocess.run(
         [
             gh_bin,
@@ -187,7 +195,15 @@ def report_issue(report: str, *, repo: str, label: str, title: str) -> None:
         check=False,
     )
     number = list_proc.stdout.strip()
-    if number and number.isdigit():
+    return number if number.isdigit() else ""
+
+
+def report_issue(report: str, *, repo: str, label: str, title: str) -> None:
+    """File a new issue, or append to the most recent open one with the label."""
+    gh_bin = _gh_binary()
+    env = _gh_env()
+    number = open_issue_number(gh_bin, env, repo=repo, label=label)
+    if number:
         subprocess.run([gh_bin, "issue", "comment", "--repo", repo, number, "--body", report], env=env, check=True)
         print(f"health-check: appended report to existing issue #{number}")
     else:
@@ -198,6 +214,27 @@ def report_issue(report: str, *, repo: str, label: str, title: str) -> None:
             check=True,
         )
         print("health-check: filed a new broken-link issue")
+
+
+def resolve_issue(report: str, *, repo: str, label: str) -> None:
+    """Close the open broken-link tracker once every link is reachable again.
+
+    The reporter only ever created or appended to the issue, so a link that
+    upstream fixed kept the tracker open forever — the repository's own only
+    open issue was a 404 that had already left the feed. Closing is idempotent:
+    with no open issue the function does nothing.
+    """
+    gh_bin = _gh_binary()
+    env = _gh_env()
+    number = open_issue_number(gh_bin, env, repo=repo, label=label)
+    if not number:
+        print("health-check: no open broken-link issue to close")
+        return
+    footer = "Every download URL in `feeds/` is reachable again, so this tracker is closed automatically."
+    body = f"{report}\n\n---\n\n{footer}"
+    subprocess.run([gh_bin, "issue", "comment", "--repo", repo, number, "--body", body], env=env, check=True)
+    subprocess.run([gh_bin, "issue", "close", "--repo", repo, number, "--reason", "completed"], env=env, check=True)
+    print(f"health-check: closed resolved issue #{number}")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -235,6 +272,11 @@ def main(argv: list[str] | None = None) -> int:
             handle.write(report + "\n")
 
     if not broken:
+        if args.report_issue:
+            if not args.repo:
+                print("health-check: --report-issue requires --repo (or GITHUB_REPOSITORY)")
+                return 2
+            resolve_issue(report, repo=args.repo, label=args.label)
         return 0
 
     if args.report_issue:

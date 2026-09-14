@@ -11,7 +11,7 @@ permissions and opts in to exactly what it needs, never more.
 | [`backup.yml`](backup.yml) | schedule (daily 01:45 · weekly Sun 02:00 · monthly day 1 02:15 UTC) · manual | nothing (artifact) | Metadata-only disaster-recovery snapshot of `catalog.json`, `feeds/`, `data/`, `api/` with SHA-256 verification, labeled with the tier of the cron that fired it and retained 90 days |
 | [`build-tweak.yml`](build-tweak.yml) | manual | Release asset | Inject a `.deb` tweak into a decrypted base IPA; inputs are sanitized and https-only |
 | [`merge.yml`](merge.yml) | `feeds/*.json` changed (PR check · push commit) · manual | `feeds/apps.json` + its published copies | Rebuild the unified master source from modular feeds; on a pull request the same gate runs read-only and fails if `apps.json` is not the merge output |
-| [`health-check.yml`](health-check.yml) | schedule (daily) · manual | GitHub Issue | HEAD-probe every download URL + mirror and report broken links via an issue |
+| [`health-check.yml`](health-check.yml) | schedule (daily) · manual | GitHub Issue | HEAD-probe every download URL + mirror, report broken links via an issue and close it again once every link is reachable |
 | [`verify.yml`](verify.yml) | schedule (weekly, Mon 07:00 UTC) · manual | `feeds/state.json`, `feeds/integrity_report.json` + its `/api/` copies | Stream and hash every published asset (full integrity), record the verdict as `lastFullVerification` and fail on a digest/size mismatch |
 | [`build-uyouenhanced.yml`](build-uyouenhanced.yml) | manual | Release asset | Build and publish the uYouEnhanced IPA, then trigger a feed sync |
 | [`discovery.yml`](discovery.yml) | schedule (12 h) · manual | `data/discovered_sources.json`, `data/quarantine/sources.json`, `data/published_sources.json` | Autonomous discovery (repository + code search, feed probes, release scans, web catalogs), a self-quarantining validation gate, and the explicit verified→published projection |
@@ -40,7 +40,8 @@ build-uyouenhanced.yml   merge.yml (scripts/merge_feeds.py)
   `feeds/apps.json` from the modular feeds and republishes the root mirror with
   `scripts/publish_root.py`, keeping `feeds/` as the single source of truth.
 - **`health-check.yml`** is independent of releases: a broken upstream link is
-  reported even when nothing new has shipped.
+  reported even when nothing new has shipped, and the resulting issue is closed
+  automatically by the first run that finds every link healthy again.
 - **`verify.yml`** is the only job that reads the bytes. `sync.yml` verifies
   metadata on every build (recorded digest format, non-zero size, an installable
   IPA); proving a digest *matches* needs the download, which is too slow for a

@@ -8,8 +8,8 @@ sizes are listed. Budgets are the Lighthouse-95 targets from the modernization b
 
 ## Summary
 
-- Design-system CSS (source): **166 KiB** (deployed copies ship minified)
-- Site JS (deferred, non-blocking): **307 KiB**
+- Design-system CSS (source): **174 KiB** (deployed copies ship minified)
+- Site JS (deferred, non-blocking): **335 KiB**
 - Blocking script tags without defer/async: **0**
 - Images over 40 KiB without an immediate smaller twin: **0**
 
@@ -20,33 +20,33 @@ sizes are listed. Budgets are the Lighthouse-95 targets from the modernization b
 | `feeds/anxreader.json` | 25 KiB | — (root mirror only) |
 | `feeds/anymex.json` | 25 KiB | — (root mirror only) |
 | `feeds/api/v2/updates.json` | 37 KiB | — (root mirror only) |
-| `feeds/apollo.json` | 25 KiB | — (root mirror only) |
-| `feeds/apps.json` | 805 KiB | — (root mirror only) |
-| `feeds/asset-manifest.json` | 35 KiB | — (root mirror only) |
+| `feeds/apps.json` | 797 KiB | — (root mirror only) |
+| `feeds/asset-manifest.json` | 37 KiB | — (root mirror only) |
 | `feeds/bluewallet.json` | 21 KiB | — (root mirror only) |
-| `feeds/clients/altstore.json` | 805 KiB | — (root mirror only) |
-| `feeds/clients/esign.json` | 805 KiB | — (root mirror only) |
-| `feeds/clients/feather.json` | 805 KiB | — (root mirror only) |
-| `feeds/clients/livecontainer.json` | 809 KiB | — (root mirror only) |
-| `feeds/clients/sidestore.json` | 805 KiB | — (root mirror only) |
+| `feeds/clients/altstore.json` | 798 KiB | — (root mirror only) |
+| `feeds/clients/esign.json` | 798 KiB | — (root mirror only) |
+| `feeds/clients/feather.json` | 798 KiB | — (root mirror only) |
+| `feeds/clients/livecontainer.json` | 802 KiB | — (root mirror only) |
+| `feeds/clients/sidestore.json` | 798 KiB | — (root mirror only) |
 | `feeds/collections/emulators.json` | 36 KiB | — (root mirror only) |
 | `feeds/collections/music.json` | 24 KiB | — (root mirror only) |
-| `feeds/collections/utilities.json` | 37 KiB | — (root mirror only) |
-| `feeds/collections/youtube.json` | 61 KiB | — (root mirror only) |
+| `feeds/collections/utilities.json` | 38 KiB | — (root mirror only) |
+| `feeds/collections/youtube.json` | 62 KiB | — (root mirror only) |
 | `feeds/compare.json` | 119 KiB | — (root mirror only) |
-| `feeds/dead_apps.json` | 33 KiB | — (root mirror only) |
+| `feeds/dead_apps.json` | 34 KiB | — (root mirror only) |
 | `feeds/discovery.json` | 161 KiB | — (root mirror only) |
 | `feeds/download-intelligence.json` | 31 KiB | — (root mirror only) |
 | `feeds/fladder.json` | 24 KiB | — (root mirror only) |
 | `feeds/gopeed.json` | 33 KiB | — (root mirror only) |
 | `feeds/health.json` | 54 KiB | — (root mirror only) |
-| `feeds/install.json` | 243 KiB | — (root mirror only) |
+| `feeds/install.json` | 246 KiB | — (root mirror only) |
 | `feeds/integrity_report.json` | 48 KiB | — (root mirror only) |
 | `feeds/related.json` | 184 KiB | — (root mirror only) |
 | `feeds/reputation.json` | 71 KiB | — (root mirror only) |
 | `feeds/ryukgram-ig410.json` | 20 KiB | — (root mirror only) |
 | `feeds/ryukgram-sidebyside.json` | 20 KiB | — (root mirror only) |
-| `feeds/screenshots.json` | 48 KiB | — (root mirror only) |
+| `feeds/screenshots.json` | 63 KiB | — (root mirror only) |
+| `feeds/search-index.json` | 111 KiB | — (root mirror only) |
 
 Every client fetches these through the gzip twin when present; the raw files exist for
 Git diffability and for consumers that request them directly. The home page loads a
@@ -89,9 +89,9 @@ All committed page scripts are `defer`ed or inline bootstrap only — first pain
 
 ## Service worker
 
-- Version: omnisource-v11
+- Version: omnisource-v13
 - Rings: core (precached shell), data (stale-while-revalidate), assets (cache-first).
-- Precache entries: 72; missing from the tree: none.
+- Precache entries: 84; missing from the tree: none.
 
 ## Budgets (Lighthouse 95 targets)
 

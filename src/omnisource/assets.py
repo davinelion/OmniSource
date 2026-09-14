@@ -217,11 +217,14 @@ def build_asset_manifest_doc(catalog: Catalog, *, assets_dir: Path, base_url: st
     base = base_url.rstrip("/")
     icons: dict[str, dict[str, Any]] = {}
     missing: list[str] = []
+    screenshots_missing: list[str] = []
     for app in sorted(catalog.apps, key=lambda item: item.slug):
         fingerprint = _file_fingerprint(assets_dir / app.icon) if app.icon else {"exists": False}
         exists = bool(fingerprint.get("exists"))
         if not exists:
             missing.append(app.slug)
+        if not app.screenshots:
+            screenshots_missing.append(app.slug)
         icons[app.slug] = {
             "file": app.icon,
             "url": f"{base}/assets/{app.icon}" if app.icon else "",
@@ -250,10 +253,17 @@ def build_asset_manifest_doc(catalog: Catalog, *, assets_dir: Path, base_url: st
         "placeholders": placeholders,
         "categories": dict(sorted(categories.items())),
         "missing": sorted(missing),
+        # Apps whose catalog row declares no screenshots: the gallery renders
+        # the app icon instead (feeds/screenshots.json emits an ``iconFallback``
+        # entry for each of them). Published here because the build log only
+        # reports the count — this is the actionable list.
+        "screenshotsMissing": sorted(screenshots_missing),
         "totals": {
             "apps": len(icons),
             "iconsOk": sum(1 for item in icons.values() if item.get("exists")),
             "iconsMissing": len(missing),
             "placeholdersOk": sum(1 for item in placeholders.values() if item.get("exists")),
+            "screenshotsDeclared": len(icons) - len(screenshots_missing),
+            "screenshotsMissing": len(screenshots_missing),
         },
     }
