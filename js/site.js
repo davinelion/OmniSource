@@ -580,6 +580,135 @@
     if (root.dataset.osCatalogBound) return;
     root.dataset.osCatalogBound = '1';
 
+    // New discovery tabs — category + provenance quick filters
+    function syncDiscoveryTabs() {
+      var cat = state.category || 'all';
+      var prov = state.provenance || 'all';
+      // Compute counts for category tabs
+      var counts = {};
+      state.apps.forEach(function (app) {
+        var c = app.category || 'other';
+        counts[c] = (counts[c] || 0) + 1;
+      });
+      counts['all'] = state.apps.length;
+      counts['favorites'] = state.favorites.size;
+      document.querySelectorAll('.catalog-tab[data-tab-category]').forEach(function (btn) {
+        var active = btn.dataset.tabCategory === cat;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-selected', String(active));
+        var count = counts[btn.dataset.tabCategory];
+        if (count != null) {
+          var existing = btn.querySelector('.tab-count');
+          if (existing) {
+            existing.textContent = String(count);
+          } else if (btn.dataset.tabCategory !== 'all') {
+            // Add count badge if not present for non-all tabs
+            var span = document.createElement('span');
+            span.className = 'tab-count';
+            span.textContent = String(count);
+            btn.appendChild(span);
+          }
+        }
+      });
+      document.querySelectorAll('.subtab[data-tab-provenance]').forEach(function (btn) {
+        var active = btn.dataset.tabProvenance === prov;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-selected', String(active));
+      });
+      var countAll = document.getElementById('tabCountAll');
+      if (countAll) countAll.textContent = String(state.apps.length);
+    }
+    // Expose for other renderers
+    Home.syncDiscoveryTabs = syncDiscoveryTabs;
+
+    // Quick section tabs — highlight based on scroll
+    function setupQuickNavScrollSpy() {
+      var quickNav = document.getElementById('quickNav');
+      if (!quickNav) return;
+      var sectionIds = ['trending', 'recent', 'featured', 'catalog', 'whats-new'];
+      var quickTabs = quickNav.querySelectorAll('.quick-tab[data-section]');
+      if (!('IntersectionObserver' in window) || !quickTabs.length) return;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            quickTabs.forEach(function (tab) {
+              var isActive = tab.dataset.section === id;
+              tab.classList.toggle('is-active', isActive);
+              if (isActive) tab.setAttribute('aria-current', 'true');
+              else tab.removeAttribute('aria-current');
+            });
+          }
+        });
+      }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+      sectionIds.forEach(function (sid) {
+        var sec = document.getElementById(sid);
+        if (sec) observer.observe(sec);
+      });
+    }
+    // Run once after DOM ready
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', setupQuickNavScrollSpy);
+    } else {
+      setupQuickNavScrollSpy();
+    }
+
+    document.addEventListener('click', function (event) {
+      var quickTab = event.target.closest ? event.target.closest('.quick-tab[data-section]') : null;
+      if (quickTab) {
+        var secId = quickTab.dataset.section;
+        var sec = document.getElementById(secId);
+        if (sec) {
+          if (sec.hidden) {
+            // Section not yet loaded — scroll to catalog as fallback and show hint
+            // The deferred anchor watcher in core.js will handle the queued jump when it appears
+            return; // let default anchor + deferred watcher handle it
+          }
+          // Smooth scroll with header offset
+          event.preventDefault();
+          try {
+            sec.scrollIntoView({ behavior: OS.reducedMotion ? 'auto' : 'smooth', block: 'start' });
+          } catch (e) {
+            sec.scrollIntoView();
+          }
+          document.querySelectorAll('.quick-tab[data-section]').forEach(function (t) {
+            t.classList.toggle('is-active', t === quickTab);
+          });
+          return;
+        }
+      }
+      var catTab = event.target.closest ? event.target.closest('[data-tab-category]') : null;
+      if (catTab) {
+        var newCat = catTab.dataset.tabCategory;
+        if (newCat === 'favorites') {
+          state.category = 'favorites';
+        } else {
+          state.category = newCat;
+        }
+        Home.renderFilters();
+        syncDiscoveryTabs();
+        Home.filterAndRender();
+        // Scroll to catalog if not already visible
+        var catalog = document.getElementById('catalog');
+        if (catalog) {
+          var rect = catalog.getBoundingClientRect();
+          if (rect.top > window.innerHeight * 0.6 || rect.top < -200) {
+            catalog.scrollIntoView({ behavior: OS.reducedMotion ? 'auto' : 'smooth', block: 'start' });
+          }
+        }
+        return;
+      }
+      var provTab = event.target.closest ? event.target.closest('[data-tab-provenance]') : null;
+      if (provTab) {
+        state.provenance = provTab.dataset.tabProvenance;
+        Home.renderFilters();
+        syncDiscoveryTabs();
+        Home.filterAndRender();
+        return;
+      }
+    });
+
+
     var searchInput = $('#searchInput');
     if (searchInput && !searchInput._osBound) {
       // Debounced: filtering 94 cards is cheap, rebuilding the DOM on every
@@ -960,6 +1089,11 @@
           }
         }
       }
+
+      // Keep new discovery tabs in sync with chip state
+      try {
+        if (Home.syncDiscoveryTabs) Home.syncDiscoveryTabs();
+      } catch (e) { /* ignore */ }
     },
 
     filteredApps: function () {
@@ -1091,6 +1225,7 @@
       var osSelect = $('#osSelect');
       if (osSelect) osSelect.value = 'any';
       this.renderFilters();
+      try { if (this.syncDiscoveryTabs) this.syncDiscoveryTabs(); } catch (e) {}
       this.filterAndRender();
     },
 

@@ -75,6 +75,7 @@
   </script>
 </head>
 <body data-page="home">
+  <div id="top" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:1px;overflow:hidden;pointer-events:none;"></div>
   <a class="skip-link" href="#catalog" data-i18n="a11y.skipLink">Skip to catalog</a>
 
   <header class="site-header">
@@ -131,7 +132,7 @@
     </nav>
   </header>
 
-  <main id="top">
+  <main id="mainContent">
     <!-- ================================ HERO ================================ -->
     <section class="hero os-hero" aria-label="OmniSource introduction">
       <div class="hero-bg" aria-hidden="true"><i class="spot"></i><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="hero-grid"></i></div>
@@ -185,6 +186,38 @@
           <div class="stat-card"><strong id="statVerified" data-count>92/94</strong><span data-i18n="stats.verified">Verified apps</span></div>
         </div>
         <p class="text-mono text-xs text-faint mt-2" id="statSyncLabel" aria-live="polite">last sync 2026-09-14</p>
+      </div>
+    </section>
+
+    <!-- ============================= QUICK TABS ============================= -->
+    <section class="section quick-nav-section" id="quickNav" aria-label="Quick navigation">
+      <div class="shell">
+        <div class="quick-tabs-wrap">
+          <nav class="quick-tabs" aria-label="Quick jump to sections">
+            <a href="#trending" class="quick-tab" data-section="trending">
+              <span class="qt-emoji" aria-hidden="true">🔥</span><span>Trending</span>
+            </a>
+            <a href="#recent" class="quick-tab" data-section="recent">
+              <span class="qt-emoji" aria-hidden="true">✨</span><span>Recent</span>
+            </a>
+            <a href="#featured" class="quick-tab" data-section="featured">
+              <span class="qt-emoji" aria-hidden="true">⭐</span><span>Featured</span>
+            </a>
+            <a href="#catalog" class="quick-tab is-active" data-section="catalog">
+              <span class="qt-emoji" aria-hidden="true">📱</span><span>All Apps</span>
+            </a>
+            <a href="collections/" class="quick-tab">
+              <span class="qt-emoji" aria-hidden="true">📦</span><span>Collections</span>
+            </a>
+            <a href="favorites/" class="quick-tab">
+              <span class="qt-emoji" aria-hidden="true">❤️</span><span>Saved</span>
+            </a>
+            <a href="sources/" class="quick-tab">
+              <span class="qt-emoji" aria-hidden="true">🗂️</span><span>Sources</span>
+            </a>
+          </nav>
+          <div class="quick-tabs-hint" aria-hidden="true">Jump to section • scroll to browse</div>
+        </div>
       </div>
     </section>
 
@@ -369,6 +402,28 @@
           <p class="lead" data-i18n="catalog.lead">Official releases and clearly labeled community builds, with provenance, compatibility and health details.</p>
         </div>
 
+        <!-- App discovery tabs — easy finding for users -->
+        <div class="catalog-tabs" role="tablist" aria-label="Browse apps by category">
+          <button class="catalog-tab active" data-tab-category="all" role="tab" aria-selected="true" type="button">
+            <span>All</span><span class="tab-count" id="tabCountAll">94</span>
+          </button>
+          <button class="catalog-tab" data-tab-category="photo-video" role="tab" aria-selected="false" type="button">Photo & Video</button>
+          <button class="catalog-tab" data-tab-category="music" role="tab" aria-selected="false" type="button">Music</button>
+          <button class="catalog-tab" data-tab-category="social" role="tab" aria-selected="false" type="button">Social</button>
+          <button class="catalog-tab" data-tab-category="utilities" role="tab" aria-selected="false" type="button">Utilities</button>
+          <button class="catalog-tab" data-tab-category="games" role="tab" aria-selected="false" type="button">Games</button>
+          <button class="catalog-tab" data-tab-category="developer-tools" role="tab" aria-selected="false" type="button">Dev Tools</button>
+          <button class="catalog-tab" data-tab-category="entertainment" role="tab" aria-selected="false" type="button">Entertainment</button>
+          <button class="catalog-tab" data-tab-category="networking" role="tab" aria-selected="false" type="button">Networking</button>
+          <button class="catalog-tab" data-tab-category="favorites" role="tab" aria-selected="false" type="button">❤️ Saved</button>
+        </div>
+
+        <div class="catalog-subtabs" role="tablist" aria-label="Filter by build type">
+          <button class="subtab active" data-tab-provenance="all" role="tab" aria-selected="true" type="button">All builds</button>
+          <button class="subtab" data-tab-provenance="official" role="tab" aria-selected="false" type="button">Official</button>
+          <button class="subtab" data-tab-provenance="community" role="tab" aria-selected="false" type="button">Community</button>
+        </div>
+
         <div class="catalog-tools">
           <label class="search-box">
             <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
@@ -516,6 +571,40 @@
       <p class="fine-print"><span data-i18n="footer.finePrint">Independent community project. Apps and trademarks belong to their respective owners. Sideloaded apps may require re-signing every 7 or 90 days depending on your client.</span> © <span id="year"></span> <span data-i18n="footer.contributors">OmniSource contributors</span>.</p>
     </div>
   </footer>
+
+  <!-- Bottom tap navigation — easy thumb access on mobile -->
+  <nav class="bottom-nav" aria-label="Quick tap navigation">
+    <a href="#top" class="bn-item" data-bn="home" aria-label="Home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-5H9v5H4a1 1 0 0 1-1-1v-9.5Z"/></svg>
+      <span>Home</span>
+    </a>
+    <a href="#catalog" class="bn-item" data-bn="apps" aria-label="All apps">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>
+      <span>Apps</span>
+    </a>
+    <button class="bn-item bn-primary" type="button" data-open-palette aria-label="Search apps">
+      <span class="bn-primary-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4"/></svg></span>
+      <span>Search</span>
+    </button>
+    <a href="collections/" class="bn-item" data-bn="collections" aria-label="Collections">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5L21 12"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
+      <span>Stacks</span>
+    </a>
+    <a href="install/" class="bn-item" data-bn="install" aria-label="Install guide">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+      <span>Install</span>
+    </a>
+  </nav>
+
+  <!-- Floating tap buttons — quick actions -->
+  <div class="fab-stack" aria-label="Quick actions">
+    <button class="fab" id="fabTop" type="button" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 5 12l1.4 1.4L11 9v10h2V9l4.6 4.4L19 12 12 5Z"/></svg>
+    </button>
+    <button class="fab fab-primary" id="fabBrowse" type="button" aria-label="Browse all apps" title="Browse apps">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="8" cy="18" r="1.6" fill="currentColor"/></svg>
+    </button>
+  </div>
 
   <!-- App detail dialog -->
   <dialog id="appDialog" class="app-dialog os-dialog" aria-labelledby="dialogTitle">
