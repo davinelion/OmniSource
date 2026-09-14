@@ -1917,7 +1917,20 @@ html[data-view="compact"] .card-mini { display: none; }
    ========================================================================== */
 .app-dialog,
 .qr-dialog {
-  position: relative;
+  /* Modal dialogs render in the top layer, centred by the UA's
+     `dialog:modal { position: fixed; inset: 0; margin: auto }`. An author
+     `position: relative` overrides that, leaving the dialog at its static
+     position (top of the document) — so once the page is scrolled down to the
+     catalog, opening an app pushed the dialog tens of thousands of pixels
+     above the viewport and a tap on VIEW looked like it did nothing. Keep the
+     dialog fixed and centred, and add `height: fit-content` so `inset: 0`
+     sizes it to content (capped by max-height) instead of stretching it. This
+     also centres the non-modal `[open]` fallback used on engines without
+     showModal(). */
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  height: fit-content;
   padding: 0;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-xxl);
