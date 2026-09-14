@@ -3,13 +3,13 @@
   "generatedAt": "2026-09-14",
   "totals": {
     "apps": 94,
-    "verified": 92,
+    "verified": 93,
     "communityVerified": 1,
-    "unverified": 1,
+    "unverified": 0,
     "hashVerified": 64,
     "official": 75,
     "communityBuilds": 19,
-    "avgTrustScore": 6.98,
+    "avgTrustScore": 7.02,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -707,7 +707,7 @@
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.2/Mangayomi-v0.9.2-ios.ipa",
+      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1930,6 +1930,27 @@
       "trustBadge": "Trusted"
     },
     {
+      "app": "ytmusic",
+      "name": "YTMusicUltimate",
+      "status": "VERIFIED",
+      "provenance": "community",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "mrdrvt99/YTMusicUltimate",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
       "app": "zeus",
       "name": "Zeus",
       "status": "VERIFIED",
@@ -1970,27 +1991,6 @@
       "downloadURL": "https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-21144-305.ipa",
       "trustScore": 5.0,
       "trustBadge": "Community"
-    },
-    {
-      "app": "ytmusic",
-      "name": "YTMusicUltimate",
-      "status": "UNVERIFIED",
-      "provenance": "community",
-      "hash_verified": true,
-      "method": "github-release",
-      "publisher": "mrdrvt99/YTMusicUltimate",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": true
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
-      "trustScore": 4.5,
-      "trustBadge": "Experimental"
     }
   ]
 }

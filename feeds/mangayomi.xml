@@ -5,8 +5,46 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
     <description>Release feed for Mangayomi within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/mangayomi.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mangayomi v0.9.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.3</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.3 | Mangayomi-v0.9.3-ios
+
+## What's Changed
+* feat: refresh the library on a schedule by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/975
+* fix(player): persist completed episodes before navigation by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/979
+* fix(downloads): preserve queue and select the next unread chapters by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/978
+* Fixes memory and bugs where it would lag over time by @not-akari in https://github.com/kodjodevf/mangayomi/pull/977
+* fix: keep Discord chapter presence current by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/981
+* fix: decode current VOE video payloads by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/982
+* fix(restore): preserve Kotatsu category assignments by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/983
+* fix(player): retire native video surfaces safely by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/984
+* fix(download): harden workers and HLS recovery by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/985
+* fix(reader): sort local pages naturally by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/986
+* fix(library): keep read titles last in unread sort by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/988
+* fix(reader): make bulk read actions uniform by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/989
+* fix(player): preserve shortcuts when controls hide by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/990
+* fix(linux): fall back when Documents lookup fails by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/994
+* Rework API Sync Server by @not-akari in https://github.com/kodjodevf/mangayomi/pull/976
+* feat: redesign anime player by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/980
+* Add Korean translation by @jang-geon in https://github.com/kodjodevf/mangayomi/pull/1000
+* feat(l10n): complete Korean translation by @Abdellox in https://github.com/kodjodevf/mangayomi/pull/1004
+* fix(player): preserve local file URIs by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/987
+* fix(player): fall back from unsupported audio tracks by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/991
+* fix(repositories): await extension repository writes by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/993
+
+## New Contributors
+* @1Selxo made their first contribution in https://github.com/kodjodevf/mangayomi/pull/979
+* @jang-geon made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1000
+* @Abdellox made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1004
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.2...v0.9.3]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Mangayomi v0.9.2</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>

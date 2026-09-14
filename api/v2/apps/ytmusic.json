@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-14",
-  "feedVersion": "f2e953537c81",
+  "feedVersion": "a22be93c0c36",
   "app": {
     "id": "ytmusic",
     "name": "YTMusicUltimate",
@@ -34,8 +34,8 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/ytmusic/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/ytmusic.json",
     "health": {
-      "reachable": false,
-      "detail": "HTTP 500",
+      "reachable": true,
+      "detail": "HTTP 302",
       "updatedAt": "2026-09-09"
     }
   },
@@ -56,8 +56,8 @@
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "github-release"
   }
 }

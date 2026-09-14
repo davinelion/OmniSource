@@ -81,6 +81,44 @@
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>Mangayomi v0.9.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.3</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.3 | Mangayomi-v0.9.3-ios
+
+## What's Changed
+* feat: refresh the library on a schedule by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/975
+* fix(player): persist completed episodes before navigation by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/979
+* fix(downloads): preserve queue and select the next unread chapters by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/978
+* Fixes memory and bugs where it would lag over time by @not-akari in https://github.com/kodjodevf/mangayomi/pull/977
+* fix: keep Discord chapter presence current by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/981
+* fix: decode current VOE video payloads by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/982
+* fix(restore): preserve Kotatsu category assignments by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/983
+* fix(player): retire native video surfaces safely by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/984
+* fix(download): harden workers and HLS recovery by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/985
+* fix(reader): sort local pages naturally by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/986
+* fix(library): keep read titles last in unread sort by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/988
+* fix(reader): make bulk read actions uniform by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/989
+* fix(player): preserve shortcuts when controls hide by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/990
+* fix(linux): fall back when Documents lookup fails by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/994
+* Rework API Sync Server by @not-akari in https://github.com/kodjodevf/mangayomi/pull/976
+* feat: redesign anime player by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/980
+* Add Korean translation by @jang-geon in https://github.com/kodjodevf/mangayomi/pull/1000
+* feat(l10n): complete Korean translation by @Abdellox in https://github.com/kodjodevf/mangayomi/pull/1004
+* fix(player): preserve local file URIs by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/987
+* fix(player): fall back from unsupported audio tracks by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/991
+* fix(repositories): await extension repository writes by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/993
+
+## New Contributors
+* @1Selxo made their first contribution in https://github.com/kodjodevf/mangayomi/pull/979
+* @jang-geon made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1000
+* @Abdellox made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1004
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.2...v0.9.3]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Voyager v2.49.1</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/voyager.json</link>
       <guid isPermaLink="false">voyager-2.49.1</guid>
@@ -484,40 +522,6 @@ Fixed audiobook generation
 Added fullscreen mode
 UI Fixes]]></description>
       <enclosure url="https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>JellyBook v1.4.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/jellybook.json</link>
-      <guid isPermaLink="false">jellybook-1.4.1</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[JellyBook 1.4.1 | JellyBook-Release
-
-Sorry for the error in the previous version 😅
-## What's Changed
-* chore: clarifications by @Kara-Zor-El in https://github.com/JellyBookOrg/JellyBook/pull/223
-* fix: fix auth headers by @Kara-Zor-El in https://github.com/JellyBookOrg/JellyBook/pull/225
-
-
-**Full Changelog**: https://github.com/JellyBookOrg/JellyBook/compare/v1.4.0...v1.4.1
-
-<details>
-<summary>SHA1</summary>
-<ul>
-<li><code>JellyBook-Debug-arm32.apk</code>: <code>ebbaf6954023d544454e208d0252ac8b677cf2bc</code></li>
-<li><code>JellyBook-Debug-arm64.apk</code>: <code>f89c75aaf7debf647a6862fd401209aee4417110</code></li>
-<li><code>JellyBook-Debug-x86_64.apk</code>: <code>393f2b232e60c20e339be08f2b0fe0311ef06694</code></li>
-<li><code>JellyBook-Debug.aab</code>: <code>924fa1c6f34072205884366522c428e394f62ec7</code></li>
-<li><code>JellyBook-Debug.apk</code>: <code>29f8f3b49a9704745947251d24dfee5ed17eb67e</code></li>
-<li><code>JellyBook-Debug.ipa</code>: <code>2ead28016efc584defd6ea6d7e6c9f9cd9627aa6</code></li>
-<li><code>JellyBook-Release-arm32.apk</code>: <code>0587957d7a109283f0b31cc4bd8d634a6f9cff06</code></li>
-<li><code>JellyBook-Release-arm64.apk</code>: <code>48568af90caa5e67387b35ab7567f356ac8f43cc</code></li>
-<li><code>JellyBook-Release-x86_64.apk</code>: <code>0f3230be1ced4c74f7483e08ec08a247fc3fe650</code></li>
-<li><code>JellyBook-Release.aab</code>: <code>f3256e5c70f8bd09cbadc6f142cbb5949966a2d6</code></li>
-<li><code>JellyBook-Release.apk</code>: <code>030e3ec3aece59a66340f7784c3165650a27d4dc</code></li>
-<li><code>JellyBook-Release.ipa</code>: <code>f3a3c8b10b7538442b65a97f037f6e42a43deba3</code></li>
-</ul>
-</details>]]></description>
-      <enclosure url="https://github.com/JellyBookOrg/JellyBook/releases/download/v1.4.1/JellyBook-Release.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
