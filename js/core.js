@@ -1068,6 +1068,29 @@
      completely dead for the seconds the feeds took: the drawer closed, the
      hash changed, nothing moved. Queue the jump and perform it the moment the
      section is revealed. */
+  // Fix for #top — scrolling to a huge <main> element caused Safari "A problem repeatedly occurred" crash
+  function setupTopAnchorFix() {
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest && event.target.closest('a[href="#top"]');
+      if (!link) return;
+      event.preventDefault();
+      // Scroll to absolute top without relying on element height
+      try {
+        if (OS.reducedMotion) {
+          window.scrollTo(0, 0);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
+      try {
+        history.replaceState(null, '', location.pathname + location.search);
+      } catch (e) {}
+      if (OS.closeNav) OS.closeNav();
+    });
+  }
+
   function setupDeferredAnchors() {
     var pending = null;
     var observer = null;
@@ -1142,6 +1165,7 @@
     setupMobileNav();
     setupNavFit();
     setupInstallPrompt();
+    setupTopAnchorFix();
     setupDeferredAnchors();
     setupReveal();
     setupCounts();
