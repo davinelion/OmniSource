@@ -66,7 +66,11 @@
 // fallbacks), /translation-status/ and the placeholder artwork were missing
 // entirely. Those pages therefore broke on an offline reload. The list is
 // now asserted against the filesystem by tests/test_service_worker.py.
-const VERSION = 'omnisource-v12';
+// v13: components.css no longer sets `position: relative` on the app/QR
+// dialogs (that broke modal centring once the page was scrolled, so VIEW
+// opened the dialog off-screen). Bump so returning clients drop the cached
+// stylesheet and pick up the fixed one.
+const VERSION = 'omnisource-v13';
 const CORE_CACHE = `${VERSION}-core`;
 const DATA_CACHE = `${VERSION}-data`;
 const ASSET_CACHE = `${VERSION}-assets`;
