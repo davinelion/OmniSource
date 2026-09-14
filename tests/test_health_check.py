@@ -64,10 +64,15 @@ class IssueLifecycleTests(unittest.TestCase):
     def _env(self):
         return mock.patch.dict("os.environ", {"GH_TOKEN": "token"}, clear=False)
 
+    def _quiet(self):
+        # The checker narrates to stdout; keep the suite output clean.
+        return mock.patch("sys.stdout", new_callable=io.StringIO)
+
     def test_healthy_run_closes_the_open_tracker(self) -> None:
         fake_run, calls = _run_stub(number="33")
         with (
             self._env(),
+            self._quiet(),
             mock.patch.object(HEALTH.shutil, "which", return_value="/usr/bin/gh"),
             mock.patch.object(HEALTH.subprocess, "run", side_effect=fake_run),
         ):
@@ -85,6 +90,7 @@ class IssueLifecycleTests(unittest.TestCase):
         fake_run, calls = _run_stub(number="")
         with (
             self._env(),
+            self._quiet(),
             mock.patch.object(HEALTH.shutil, "which", return_value="/usr/bin/gh"),
             mock.patch.object(HEALTH.subprocess, "run", side_effect=fake_run),
         ):
@@ -96,6 +102,7 @@ class IssueLifecycleTests(unittest.TestCase):
         fake_run, calls = _run_stub(number="")
         with (
             self._env(),
+            self._quiet(),
             mock.patch.object(HEALTH.shutil, "which", return_value="/usr/bin/gh"),
             mock.patch.object(HEALTH.subprocess, "run", side_effect=fake_run),
         ):
@@ -108,6 +115,7 @@ class IssueLifecycleTests(unittest.TestCase):
         fake_run, _calls = _run_stub(number="not-a-number")
         with (
             self._env(),
+            self._quiet(),
             mock.patch.object(HEALTH.shutil, "which", return_value="/usr/bin/gh"),
             mock.patch.object(HEALTH.subprocess, "run", side_effect=fake_run),
         ):

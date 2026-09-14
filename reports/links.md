@@ -11,7 +11,7 @@ description, canonical, Open Graph, Twitter card.
 - Broken internal link targets: **0**
 - Pages missing SEO metadata: **0** (of 192 HTML files)
 - Sitemap URLs not resolvable in the tree: **0**
-- External references (not resolved offline): 3064
+- External references (not resolved offline): 3105
 
 ## Broken internal links
 

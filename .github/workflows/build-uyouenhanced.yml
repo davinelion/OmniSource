@@ -107,7 +107,7 @@ jobs:
       #    into ./uyouenhanced rather than building this repository.
       # -----------------------------------------------------------------------
       - name: Clone uYouEnhanced
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: arichornlover/uYouEnhanced
           path: uyouenhanced
@@ -159,7 +159,7 @@ jobs:
       # 3. Theos — cross-compilation root for iOS tweaks.
       # -----------------------------------------------------------------------
       - name: Setup Theos
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: theos/theos
           ref: master
@@ -194,7 +194,7 @@ jobs:
       #    no longer maintained and is not used for the primary inject.
       # -----------------------------------------------------------------------
       - name: Setup theos-jailed
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: qnblackcat/theos-jailed
           ref: master

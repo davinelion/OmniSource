@@ -7,33 +7,29 @@ artifact retention, error surface, and whether each workflow's generated outputs
 sync with the repository (commit allowlists). YAML is parsed with a tolerant reader; the
 report never guesses — missing keys are reported as gaps.
 
-## Summary
-
-- ⚠️ PyYAML unavailable — parsed with regex fallback (keys may be approximate).
-
 ## Workflow matrix
 
 | File | Name | Triggers | Permissions | Timeout | Retention | Step summary | shellcheck |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `analytics.yml` | Analytics | schedule, workflow_dispatch, push | declared | yes | **no** | **no** | — |
-| `backup.yml` | Backup and Recovery | schedule, workflow_dispatch | declared | yes | yes | **no** | — |
-| `build-tweak.yml` | Build & Inject Tweak | workflow_dispatch | declared | yes | yes | **no** | — |
-| `build-uyouenhanced.yml` | Build uYouEnhanced | workflow_dispatch | declared | yes | yes | yes | yes |
-| `discovery.yml` | Discovery | schedule, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `health-check.yml` | Health Check | schedule, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `merge.yml` | Merge Feeds | pull_request, push, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `monitoring.yml` | Monitoring | schedule, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `publish.yml` | Publish Derived Artifacts | push, schedule, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `security.yml` | Security | push, pull_request, schedule, workflow_dispatch | declared | yes | yes | **no** | — |
-| `sync.yml` | Sync & Publish | schedule, push, workflow_dispatch | declared | yes | yes | **no** | — |
-| `validate.yml` | Validate | pull_request, push, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `validation.yml` | Validation Engine | pull_request, push, workflow_dispatch | declared | yes | **no** | **no** | — |
-| `website.yml` | Website | push, pull_request, workflow_dispatch | declared | yes | yes | **no** | — |
+| `analytics.yml` | Analytics | push, schedule, workflow_dispatch | {} | yes | — | **no** | — |
+| `backup.yml` | Backup and Recovery | schedule, workflow_dispatch | {"contents": "read"} | yes | yes | **no** | — |
+| `build-tweak.yml` | Build & Inject Tweak | workflow_dispatch | {"contents": "read"} | yes | yes | **no** | — |
+| `build-uyouenhanced.yml` | Build uYouEnhanced | workflow_dispatch | {"contents": "write"} | yes | yes | yes | yes |
+| `discovery.yml` | Discovery | schedule, workflow_dispatch | {} | yes | — | **no** | — |
+| `health-check.yml` | Health Check | schedule, workflow_dispatch | {"contents": "read", "issues": "write"} | yes | — | **no** | — |
+| `merge.yml` | Merge Feeds | pull_request, push, workflow_dispatch | {} | yes | — | **no** | — |
+| `monitoring.yml` | Monitoring | schedule, workflow_dispatch | {} | yes | — | **no** | — |
+| `publish.yml` | Publish Derived Artifacts | push, schedule, workflow_dispatch | {} | yes | — | **no** | — |
+| `security.yml` | Security | pull_request, push, schedule, workflow_dispatch | {} | yes | yes | **no** | — |
+| `sync.yml` | Sync & Publish | push, schedule, workflow_dispatch | {} | yes | yes | **no** | — |
+| `validate.yml` | Validate | pull_request, push, workflow_dispatch | {"contents": "read"} | yes | — | **no** | — |
+| `validation.yml` | Validation Engine | pull_request, push, workflow_dispatch | {"contents": "read"} | yes | — | **no** | — |
+| `verify.yml` | Verify Downloads | schedule, workflow_dispatch | {} | yes | — | **no** | — |
+| `website.yml` | Website | pull_request, push, workflow_dispatch | {"contents": "read"} | yes | yes | **no** | — |
 
 ## Pipeline ↔ workflow drift
 
-- No drift: every directory the pipeline publishes (`feeds/`, `api/`, `apps/`, `collections/`, `compare/`, `reports/`, `sources/`) is covered by the sync commit allowlist.
-- ⚠️ `publish.yml` triggers on `data/published_sources.json` which does not exist in the repository.
+- No drift: every file the pipeline publishes under `feeds/`, `api/`, `apps/`, `collections/`, `compare/`, `reports/` and `sources/` is covered by the sync.yml commit allowlist.
 
 ## Obsolescence review
 
