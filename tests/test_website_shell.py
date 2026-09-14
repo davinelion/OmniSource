@@ -58,8 +58,21 @@ class TestWebsiteShell(unittest.TestCase):
         self.assertIn("overflow-wrap: anywhere", css)
 
     def test_service_worker_version(self) -> None:
+        # The cache version is derived from sw.js instead of being pinned to a
+        # literal: the shell was bumped to v13 (dialog positioning fix) while
+        # this assertion still demanded "omnisource-v12", which failed the
+        # suite — and therefore Sync & Publish and Validate — on every run.
+        # What matters is the *floor*: the v12 schema is the first one that
+        # precaches the whole shell, so anything older must not ship.
         sw = (ROOT / "sw.js").read_text(encoding="utf-8")
-        self.assertIn("omnisource-v12", sw)
+        match = re.search(r"const VERSION\s*=\s*'omnisource-v(\d+)'", sw)
+        self.assertIsNotNone(match, "sw.js must declare const VERSION = 'omnisource-v<N>'")
+        version = int(match.group(1))  # type: ignore[union-attr]
+        self.assertGreaterEqual(version, 12, "the complete-shell cache schema (v12) is the floor")
+        # Every cache ring is derived from VERSION, so a bump invalidates all
+        # three instead of leaving stale entries behind.
+        for ring in ("core", "data", "assets"):
+            self.assertIn("${VERSION}-" + ring, sw)
         # The shell precaches the lightweight WebP logo; the PNG stays for
         # favicons, feed iconURLs and non-WebP fallbacks only.
         self.assertIn("'./assets/OmniSource.webp'", sw)

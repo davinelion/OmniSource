@@ -782,11 +782,31 @@ def stage_readme(
 
 def stage_assets(container: Container, catalog: Catalog) -> None:
     report = inspect_catalog(catalog, assets_dir=container.paths.assets)
+    # "No screenshots declared" is a content gap, not a defect: the gallery
+    # already falls back to the app icon (feeds/screenshots.json carries an
+    # ``iconFallback`` entry) and over 50 of ~94 apps rely on it. Reporting it
+    # per app produced one ``::warning::`` annotation per app on every sync,
+    # burying the annotations that need attention (a missing icon, an
+    # oversized asset, a malformed URL). The list stays machine-readable in
+    # feeds/asset-manifest.json; here it is one informational line.
+    missing_screenshots: list[str] = []
     for issue in report.issues:
+        if issue.kind == "screenshot" and issue.detail == "no screenshots declared":
+            missing_screenshots.append(issue.slug)
+            continue
         if issue.kind in {"missing"}:
             log.error("asset: %s %s", issue.slug or issue.path, issue.detail)
         elif issue.kind in {"oversized", "screenshot", "unused", "icon"}:
             log.warning("asset: %s %s", issue.slug or issue.path, issue.detail)
+    if missing_screenshots:
+        preview = ", ".join(missing_screenshots[:6])
+        if len(missing_screenshots) > 6:
+            preview += f", +{len(missing_screenshots) - 6} more"
+        log.info(
+            "asset: %d app(s) declare no screenshots; their gallery uses the icon fallback (%s)",
+            len(missing_screenshots),
+            preview,
+        )
     # Touch the cache directory so operators know where it will live.
     DirectoryCache(container.paths.cache)
 

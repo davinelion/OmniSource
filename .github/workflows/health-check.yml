@@ -3,10 +3,12 @@
 #
 # Probes every app downloadURL (and every fallbackDownloadURLs mirror) in the
 # distributable feeds with HTTP HEAD requests, and files a GitHub Issue listing
-# any broken links. The issue is created on first failure and appended to on
-# subsequent runs, so there is exactly one durable, linkable record to work
-# from. A green run means "the checker ran and reported" — use the dynamic
-# apps/downloads badges in the README for the live availability signal.
+# any broken links. The issue is created on first failure, appended to on
+# subsequent runs, and closed automatically once every link is reachable again,
+# so there is exactly one durable, linkable record to work from and it never
+# outlives the outage it describes. A green run means "the checker ran and
+# reported" — use the dynamic apps/downloads badges in the README for the live
+# availability signal.
 # -----------------------------------------------------------------------------
 name: Health Check
 
@@ -28,9 +30,9 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 

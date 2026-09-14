@@ -2882,6 +2882,14 @@
             "repo": "ra1ncord/RainTweak"
           }
         ]
+      },
+      "manualRelease": {
+        "version": "0.9.3",
+        "date": "2026-06-19",
+        "localizedDescription": "RainTweak 0.9.3 (Rain 1.1.0)\n\nSnapshot of the last IPA the RainTweak project published, taken from its own GitHub mirror (ra1ncord/RainTweak). Used only when both upstream legs - Codeberg (primary) and that mirror (failover) - are unreachable, so the app stays installable instead of dropping out of the feed. Discord 343+ builds require iOS 16 or newer; shares com.hammerandchisel.discord with any other sideloaded Discord build, so install one at a time.",
+        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+        "size": 107515564,
+        "minOSVersion": "16.0"
       }
     },
     {
