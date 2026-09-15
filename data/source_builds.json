@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "updated": "2026-09-15",
+  "contract": {
+    "scope": "Projects that publish source but no iOS artifact we could attribute and verify. A recipe is a review record — what to fetch, at which revision, with which digest, and which commands.",
+    "provenance": "Every recipe is pinned to a full commit SHA and carries the SHA-256 of the source archive downloaded at that revision, so a reviewer can prove the tree they build is the tree reviewed.",
+    "signing": "OmniSource does not sign, re-host, or distribute the output of a recipe. Signing stays with the builder's own Apple ID or certificate (AltStore, SideStore, Feather, TrollStore, a self-hosted SignTools). No recipe may fetch from, or point a build at, a host rejected by data/source_policy.json.",
+    "excluded": "Recipes that need a decrypted copy of someone else's App Store app as input are not recipes at all — that is the class data/source_policy.json rejects. .github/workflows/build-tweak.yml refuses such a base IPA before downloading it."
+  },
+  "builds": [
+    {
+      "slug": "trollvnc",
+      "name": "TrollVNC",
+      "kind": "app",
+      "summary": "VNC server for iOS devices, exposing remote view and control of the screen.",
+      "forge": "github",
+      "repo": "owngoal-dev/TrollVNC",
+      "url": "https://github.com/owngoal-dev/TrollVNC",
+      "license": "GPL-2.0",
+      "pin": {
+        "ref": "v3.2-272",
+        "type": "tag",
+        "commit": "a3e40816ea5b93a7c80c09625175893d15bd1070",
+        "committedAt": "2026-09-04"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/owngoal-dev/TrollVNC/tar.gz/refs/tags/v3.2-272",
+        "sha256": "510dd3e40e28838ec36bf6b483a4273d433984cd309b0165de4dd1dac229be6e",
+        "bytes": 4774548,
+        "upstreamWorkflow": ".github/workflows/build.yml"
+      },
+      "build": {
+        "system": "theos",
+        "requirements": [
+          "theos (set $THEOS)",
+          "an iOS SDK (Makefile targets iphone:clang:16.5:14.0)",
+          "minica (brew install minica) for the TLS certificate",
+          "vendored devkit/ dependencies (libvncserver, libjpeg-turbo, libpng)"
+        ],
+        "commands": [
+          "make package FINALPACKAGE=1"
+        ],
+        "artifacts": [
+          "packages/*.deb"
+        ]
+      },
+      "signing": {
+        "model": "on-device",
+        "tools": [
+          "trollstore",
+          "sidestore",
+          "feather"
+        ],
+        "notes": "Build the .ipa, then install it with a permanent identity (TrollStore) or a refreshed sideload (SideStore/Feather); a VNC server that loses its identity drops the pairing."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch main head commit confirmed via the forge API (committed 2026-09-04)",
+          "root Makefile exports PACKAGE_VERSION := 3.2-272 and includes $(THEOS)/makefiles/common.mk",
+          "README documents 'Build with GitHub Actions' and 'Build Dependencies'"
+        ]
+      },
+      "notes": "Upstream publishes the tag but no .ipa asset: the installable bundle is produced by its own GitHub Actions workflow (.github/workflows/build.yml), which this recipe mirrors. Pinning v3.2-272 keeps the reviewed source even though upstream moves fast; build with a bundled Managed.plist if you want a managed configuration."
+    },
+    {
+      "slug": "filzaplus",
+      "name": "FilzaPlus",
+      "kind": "tweak",
+      "summary": "Turns Filza into a code editor with themes and extra languages.",
+      "forge": "github",
+      "repo": "Skittyblock/FilzaPlus",
+      "url": "https://github.com/Skittyblock/FilzaPlus",
+      "license": "GPL-3.0",
+      "pin": {
+        "ref": "679f663157dcbf9e6ba3ddead7b6e9e751a5a6f0",
+        "type": "commit",
+        "commit": "679f663157dcbf9e6ba3ddead7b6e9e751a5a6f0",
+        "committedAt": "2019-07-01"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/Skittyblock/FilzaPlus/tar.gz/refs/heads/master",
+        "sha256": "b976461aa4676571d94647ec00394227aace3199f1bb28788b03e112edf66824",
+        "bytes": 227424
+      },
+      "build": {
+        "system": "theos",
+        "requirements": [
+          "theos (set $THEOS)",
+          "an iOS SDK",
+          "Filza installed on the target device to use it"
+        ],
+        "commands": [
+          "make package FINALPACKAGE=1"
+        ],
+        "artifacts": [
+          "packages/com.skittyos.*filzaplus*_iphoneos-*.deb"
+        ]
+      },
+      "signing": {
+        "model": "none",
+        "tools": [],
+        "notes": "A .deb tweak is installed by a package manager, not code-signed; nothing to sign here."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch master head commit confirmed via the forge API (committed 2019-07-01)",
+          "repository has no tags and no GitHub releases (API)",
+          "root Makefile sets PACKAGE_VERSION and includes $(THEOS)/makefiles/common.mk"
+        ]
+      },
+      "notes": "No tags and no releases: upstream ships nothing to publish, so this is recorded as a recipe only. Pinned to a commit because there is no tag to pin."
+    },
+    {
+      "slug": "ersatz",
+      "name": "Ersatz",
+      "kind": "tweak",
+      "summary": "Replaces any string on iOS system-wide with your own text.",
+      "forge": "github",
+      "repo": "Skittyblock/Ersatz",
+      "url": "https://github.com/Skittyblock/Ersatz",
+      "license": "GPL-3.0",
+      "pin": {
+        "ref": "51c342ad4ad5fc97b6cf1764db3055edfcf66b0a",
+        "type": "commit",
+        "commit": "51c342ad4ad5fc97b6cf1764db3055edfcf66b0a",
+        "committedAt": "2023-05-14"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/Skittyblock/Ersatz/tar.gz/refs/heads/master",
+        "sha256": "f0c39641e815e0cee35d7f0cad83cffae07d09aa34a3b19ed3728e512f69052c",
+        "bytes": 30615
+      },
+      "build": {
+        "system": "theos",
+        "requirements": [
+          "theos (set $THEOS)",
+          "an iOS SDK (Makefile target iphone:clang::7.0)"
+        ],
+        "commands": [
+          "make package FINALPACKAGE=1"
+        ],
+        "artifacts": [
+          "packages/com.skittyos.*ersatz*_iphoneos-*.deb"
+        ]
+      },
+      "signing": {
+        "model": "none",
+        "tools": [],
+        "notes": "Tweak .deb only; no code signing involved."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch master head commit confirmed via the forge API (committed 2023-05-14)",
+          "repository has no tags and no GitHub releases (API)",
+          "root Makefile: export TARGET = iphone:clang::7.0"
+        ]
+      },
+      "notes": "Unreleased since 2023 and old-target (iOS 7 baseline): keep it as a recipe, not a promise that it builds cleanly against a current SDK."
+    },
+    {
+      "slug": "sixls",
+      "name": "SixLS",
+      "kind": "tweak",
+      "summary": "Brings back the iOS 6 lock screen.",
+      "forge": "github",
+      "repo": "Skittyblock/SixLS",
+      "url": "https://github.com/Skittyblock/SixLS",
+      "license": "GPL-3.0",
+      "pin": {
+        "ref": "674562e132beaba474efd5f82acef5e16afa6696",
+        "type": "commit",
+        "commit": "674562e132beaba474efd5f82acef5e16afa6696",
+        "committedAt": "2024-02-23"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/Skittyblock/SixLS/tar.gz/refs/heads/master",
+        "sha256": "596fb129a44752867c2b41cdfdac8bfd4cf554b972e3d0876d64e39bb24c79ad",
+        "bytes": 1465514
+      },
+      "build": {
+        "system": "theos",
+        "requirements": [
+          "theos (set $THEOS)",
+          "an iOS SDK",
+          "arm64/arm64e toolchain"
+        ],
+        "commands": [
+          "make package FINALPACKAGE=1"
+        ],
+        "artifacts": [
+          "packages/com.skittyos.*sixls*_iphoneos-*.deb"
+        ]
+      },
+      "signing": {
+        "model": "none",
+        "tools": [],
+        "notes": "Tweak .deb only; no code signing involved."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch master head commit confirmed via the forge API (committed 2024-02-23)",
+          "repository has no tags and no GitHub releases (API)",
+          "root Makefile: export ARCHS = arm64 arm64e"
+        ]
+      },
+      "notes": "No releases upstream. The Makefile pins ARCHS to arm64/arm64e, so a modern-device build is expected but not attested by anyone but you."
+    },
+    {
+      "slug": "autoflex",
+      "name": "AutoFLEX",
+      "kind": "tweak",
+      "summary": "Injects the FLEX debugging tools into any iOS app.",
+      "forge": "github",
+      "repo": "pwnless/AutoFLEX",
+      "url": "https://github.com/pwnless/AutoFLEX",
+      "license": "MIT",
+      "pin": {
+        "ref": "v0.0.1",
+        "type": "tag",
+        "commit": "5099ebc82ae9b83e0145bf28d846533cd74420e2",
+        "committedAt": "2026-03-14"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/pwnless/AutoFLEX/tar.gz/refs/tags/v0.0.1",
+        "sha256": "10e23910dc6d87a77ac059068a34d7330e5104766d02d3e38b61fdc612f600d2",
+        "bytes": 3821
+      },
+      "build": {
+        "system": "theos",
+        "requirements": [
+          "theos (set $THEOS)",
+          "an iOS SDK",
+          "an IPA patcher (or TrollFools on-device)"
+        ],
+        "commands": [
+          "make package FINALPACKAGE=1"
+        ],
+        "artifacts": [
+          "packages/com.hopeless.autoflex_*_iphoneos-arm.deb"
+        ]
+      },
+      "signing": {
+        "model": "on-device",
+        "tools": [
+          "trollfools",
+          "sideloadly"
+        ],
+        "notes": "The .deb is not installable by itself: upstream's README says to patch it into the target app (sideloadly or another IPA patcher), or inject it on-device with TrollFools, then install the patched app with your own signing identity."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch main head commit confirmed via the forge API (committed 2026-03-14)",
+          "released asset is com.hopeless.autoflex_0.0.1_iphoneos-arm.deb (no .ipa)",
+          "root Makefile sets FINALPACKAGE=1 and includes $(THEOS)/makefiles/common.mk",
+          "README 'Install' section: do not install the deb directly, patch the IPA instead"
+        ]
+      },
+      "notes": "Upstream releases only the .deb and its own README forbids installing that deb directly — the patching step is the user's, on their device. This is the legitimate version of 'inject yourself'."
+    },
+    {
+      "slug": "sideloader",
+      "name": "Sideloader",
+      "kind": "signer",
+      "summary": "Open-source cross-platform iOS app installer/signer — runs on Linux, no Mac required.",
+      "forge": "github",
+      "repo": "Dadoum/Sideloader",
+      "url": "https://github.com/Dadoum/Sideloader",
+      "license": "GPL-3.0",
+      "pin": {
+        "ref": "1.0-pre4",
+        "type": "tag",
+        "commit": "a589cf11a3ac7c1c26b2f18aa5acdc8afb6dc915",
+        "committedAt": "2026-02-12"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/Dadoum/Sideloader/tar.gz/refs/tags/1.0-pre4",
+        "sha256": "7af181ced9363402981e51c94d7d3e7218d252b5d1f33154e6651e31fe20222b",
+        "bytes": 231261,
+        "upstreamWorkflow": ".github/workflows"
+      },
+      "build": {
+        "system": "dub (D)",
+        "requirements": [
+          "a D compiler (dmd or ldc)",
+          "libimobiledevice",
+          "libplist",
+          "GTK4 for the graphical frontend"
+        ],
+        "commands": [
+          "dub build",
+          "dub build --single-file=... (see frontends/ for the CLI and GTK variants)"
+        ],
+        "artifacts": [
+          "sideloader (CLI)",
+          "frontends/ (GUI binary)"
+        ]
+      },
+      "signing": {
+        "model": "own-certificate",
+        "tools": [
+          "your own Apple ID"
+        ],
+        "notes": "Signing uses the Apple account you pass to it (README: 'it is still requiring you to have an Apple account ... don't need the Apple ID used with your phone'). Nothing here is delegated to a third-party signing storefront."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch main head commit confirmed via the forge API (committed 2026-02-12)",
+          "latest release at 1.0-pre4 has no assets (API)",
+          "root listing: dub.json, frontends/, source/, keyring/ (no Makefile)"
+        ]
+      },
+      "notes": "The tool you build with the artifacts of the recipes above: it exists precisely so a self-built .ipa never needs a shared certificate. Upstream publishes no release assets for it at the pinned tag."
+    },
+    {
+      "slug": "impactor",
+      "name": "Impactor",
+      "kind": "signer",
+      "summary": "Cross-platform sideloading application for iOS/iPadOS/tvOS (formerly PlumeImpactor).",
+      "forge": "github",
+      "repo": "claration/Impactor",
+      "url": "https://github.com/claration/Impactor",
+      "license": "MIT",
+      "pin": {
+        "ref": "v2.6.3",
+        "type": "tag",
+        "commit": "e5e2a829c424ba024d3441be3a92e51e90dbd439",
+        "committedAt": "2026-09-13"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/claration/Impactor/tar.gz/refs/tags/v2.6.3",
+        "sha256": "ad10a4b85c557f21c0783873a55312023a217975d690a5957668b14f5ee1bfd5",
+        "bytes": 3473284
+      },
+      "build": {
+        "system": "cargo + pnpm (Tauri)",
+        "requirements": [
+          "Rust toolchain",
+          "pnpm/node for the front-end",
+          "the system webkit2gtk stack on Linux"
+        ],
+        "commands": [
+          "pnpm install",
+          "make (the root Makefile wraps cargo + the front-end per OS/ARCH)"
+        ],
+        "artifacts": [
+          "target/*/Impactor",
+          "Impactor-linux-x86_64.appimage"
+        ]
+      },
+      "signing": {
+        "model": "self-hosted",
+        "tools": [
+          "your own Apple ID",
+          "your own certificate"
+        ],
+        "notes": "It signs with the account and certificate you supply; the recipe exists because upstream's published releases are Linux AppImages and per-platform bundles, not an iOS artifact."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch main head commit confirmed via the forge API (committed 2026-09-13)",
+          "root Makefile: ID := dev.khcrysalis.PlumeImpactor, per-OS/ARCH packaging targets",
+          ".github/workflows/release.yml is the canonical build definition"
+        ]
+      },
+      "notes": "Recorded with app id dev.khcrysalis.PlumeImpactor. Included as a *signer*, not an app: OmniSource publishes iOS apps, and this is desktop tooling that happens to install them."
+    },
+    {
+      "slug": "signtools",
+      "name": "SignTools",
+      "kind": "signer",
+      "summary": "Self-hosted platform to sign and install iOS apps without a computer.",
+      "forge": "github",
+      "repo": "SignTools/SignTools",
+      "url": "https://github.com/SignTools/SignTools",
+      "license": "AGPL-3.0",
+      "pin": {
+        "ref": "v3.0.12",
+        "type": "tag",
+        "commit": "243154c0de9e8036bcd667c3264dafac3d8b0b42",
+        "committedAt": "2026-07-16"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/SignTools/SignTools/tar.gz/refs/tags/v3.0.12",
+        "sha256": "b91625cc5355278f93e9953cc7712648724f7cefdd58c2bda77abd4a4780c91b",
+        "bytes": 371450
+      },
+      "build": {
+        "system": "go",
+        "requirements": [
+          "Go toolchain",
+          "a macOS 'builder' host for the signing step (README)",
+          "a TLS certificate + domain for the web service"
+        ],
+        "commands": [
+          "go build -o signtools (see .github/workflows/release.yml for the exact ldflags/targets)"
+        ],
+        "artifacts": [
+          "signtools (service binary)",
+          "web/dist (bundled UI)"
+        ]
+      },
+      "signing": {
+        "model": "self-hosted",
+        "tools": [
+          "your own Apple ID or your own certificate",
+          "a builder you control"
+        ],
+        "notes": "The whole point of self-hosting this: the certificates, the anisette data and the account stay with you. OmniSource neither hosts nor operates a SignTools instance."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch master head commit confirmed via the forge API (committed 2026-07-16)",
+          "latest release v3.0.12 publishes checksums.txt plus per-platform binaries (API)",
+          "README: 'two components — a service and a builder', the builder being a macOS machine"
+        ]
+      },
+      "notes": "The constructive alternative to paying a signing storefront: upstream publishes binaries with a checksums.txt digest, so even the prebuilt service can be verified — and building it from this pinned revision removes the need to trust the digest at all."
+    },
+    {
+      "slug": "theos-toolchain",
+      "name": "Theos",
+      "kind": "toolchain",
+      "summary": "The cross-platform build system every tweak recipe above depends on.",
+      "forge": "github",
+      "repo": "theos/theos",
+      "url": "https://github.com/theos/theos",
+      "license": "see LICENSE.md (GitHub reports NOASSERTION)",
+      "pin": {
+        "ref": "2.5",
+        "type": "tag",
+        "commit": "5280bd038207e14f8bd76f5417aa2fe641c03228",
+        "committedAt": "2026-08-08"
+      },
+      "source": {
+        "archiveURL": "https://codeload.github.com/theos/theos/tar.gz/refs/tags/2.5",
+        "sha256": "20539477e6d517917c93914d1c6f2920c172fb006139863675b8ac23505bede5",
+        "bytes": 95465
+      },
+      "build": {
+        "system": "make (toolchain install)",
+        "requirements": [
+          "git",
+          "clang",
+          "ldid",
+          "an iOS SDK (theos fetches nothing; install the SDK yourself)"
+        ],
+        "commands": [
+          "git clone --recursive https://github.com/theos/theos.git",
+          "export THEOS=\"$PWD/theos\"; export PATH=\"$THEOS/bin:$PATH\""
+        ],
+        "artifacts": [
+          "$(THEOS)/makefiles/common.mk (consumed by every tweak Makefile)"
+        ],
+        "docs": "https://theos.dev/docs/installation"
+      },
+      "signing": {
+        "model": "none",
+        "tools": [],
+        "notes": "A build system: it produces no installable artifact of its own."
+      },
+      "verification": {
+        "method": "source-archive-sha256",
+        "verifiedAt": "2026-09-15",
+        "verifiedBy": "OmniSource review (source archive digested locally)",
+        "evidence": [
+          "archiveURL + sha256 + bytes: computed by downloading this exact archive during the 2026-09-15 review",
+          "upstream default branch master head commit confirmed via the forge API (committed 2026-08-08)",
+          "tag 2.5 exists; releases/latest is 404 (no published build to verify)",
+          "every tweak Makefile in this file includes $(THEOS)/makefiles/common.mk, which is what the $THEOS export above provides"
+        ]
+      },
+      "notes": "Pinned at tag 2.5. GitHub reports its license as NOASSERTION, so read LICENSE.md before redistributing anything you build with it — that obligation sits with the person building, which is exactly why this lane hands over a pinned revision instead of a binary."
+    }
+  ]
+}

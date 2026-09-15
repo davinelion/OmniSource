@@ -1039,6 +1039,57 @@ def validate_source_policy(paths: Paths, catalog: Any) -> Report:
 
 
 # ---------------------------------------------------------------------------
+# Source-build recipes (data/source_builds.json)
+# ---------------------------------------------------------------------------
+def validate_source_builds(paths: Paths, catalog: Any) -> Report:
+    """Offline gate for the source-build lane.
+
+    Recipes are the honest answer to "upstream publishes source, no binary":
+    they carry a pinned revision and the digest of that revision's archive, so
+    the file has to stay parseable and its claims stay checkable. Like the
+    sourcing policy it reuses, a broken file is an error rather than a skip —
+    otherwise a typo would quietly remove the integrity promise.
+    """
+    from omnisource.source_builds import (
+        BUILDS_RELATIVE_PATH,
+        SCHEMA_RELATIVE_PATH,
+        load_builds,
+        recipe_violations,
+        shipped_data_matches_schema,
+        validate_builds,
+    )
+    from omnisource.source_policy import load_policy
+
+    report = Report()
+    builds_path = paths.root / BUILDS_RELATIVE_PATH
+    if not (paths.root / SCHEMA_RELATIVE_PATH).is_file():
+        report.warn(
+            f"{SCHEMA_RELATIVE_PATH}: missing - the recipe shape is no longer schema-checkable, so "
+            "tests/test_source_builds.py cannot prove it"
+        )
+    if not builds_path.is_file():
+        return report
+    document = load_json(builds_path, report, root=paths.root)
+    if document is None:
+        return report
+    for error in validate_builds(document):
+        report.error(error)
+    for error in shipped_data_matches_schema(paths.root):
+        report.error(error)
+
+    builds = load_builds(paths.root)
+    if builds.error:
+        report.error(f"{_rel(builds_path, paths.root)}: {builds.error}")
+        return report
+    errors, warnings = recipe_violations(builds, policy=load_policy(paths.root), catalog=catalog)
+    for error in errors:
+        report.error(error)
+    for warning in warnings:
+        report.warn(warning)
+    return report
+
+
+# ---------------------------------------------------------------------------
 # Entry
 # ---------------------------------------------------------------------------
 def emit(report: Report, *, strict: bool) -> int:
@@ -1078,6 +1129,7 @@ def validate_tree(paths: Paths) -> Report:
     report.extend(validate_catalog(catalog, assets_dir=paths.assets))
     report.extend(validate_assets(catalog, assets_dir=paths.assets))
     report.extend(validate_source_policy(paths, catalog))
+    report.extend(validate_source_builds(paths, catalog))
 
     feed_paths = sorted(p for p in paths.feeds.glob("*.json") if p.name not in ALTSTORE_NON_FEED)
     if not feed_paths:
@@ -1090,7 +1142,10 @@ def validate_tree(paths: Paths) -> Report:
     report.extend(validate_generated_docs(catalog, paths))
     report.extend(validate_published_app_records(catalog, paths))
     report.extend(validate_api_v2(catalog, paths))
-    print(f"Validated catalog.json, {len(feed_paths)} AltStore feed(s) and the derived intelligence documents.")
+    print(
+        f"Validated catalog.json, {len(feed_paths)} AltStore feed(s), the sourcing verdicts and source-build "
+        "recipes, and the derived intelligence documents."
+    )
     return report
 
 

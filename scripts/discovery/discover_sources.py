@@ -100,7 +100,7 @@ def main(argv: list[str] | None = None) -> int:
     for record in stale:
         print(f"discovery: pruned {record.get('url')} from the store — excluded by policy")
     merged = autodiscovery.merge_records(stored, valid)
-    autodiscovery.save_store(store_path, merged)
+    autodiscovery.save_store(store_path, merged, root=ROOT)
     print(
         f"discovery: +{len(valid)} validated, +{len(quarantined)} quarantined, {len(blocked)} excluded by policy, "
         f"{len(stale)} pruned from store, {len(merged)} candidates in {store_path}; quarantine={quarantine.path}"

@@ -10,10 +10,14 @@ on:
       - feeds/**
       - data/quarantine/**
       - data/source_policy.json
+      - data/source_builds.json
+      - schemas/source-builds.schema.json
+      - scripts/build_source.py
       - scripts/validation/**
       - src/omnisource/metadata_validation.py
       - src/omnisource/remote_validation.py
       - src/omnisource/source_policy.py
+      - src/omnisource/source_builds.py
       - .github/workflows/validation.yml
   push:
     branches: [main]
@@ -22,10 +26,14 @@ on:
       - feeds/**
       - data/quarantine/**
       - data/source_policy.json
+      - data/source_builds.json
+      - schemas/source-builds.schema.json
+      - scripts/build_source.py
       - scripts/validation/**
       - src/omnisource/metadata_validation.py
       - src/omnisource/remote_validation.py
       - src/omnisource/source_policy.py
+      - src/omnisource/source_builds.py
       - .github/workflows/validation.yml
   workflow_dispatch:
 
@@ -66,6 +74,10 @@ jobs:
             exit 1
           fi
           echo "sourcing policy: catalog clean, rejected stores still refused"
+          # The source-build lane is checked by the same rules: pinned revision,
+          # recorded digest, and nothing fetched from a source the project rejected.
+          test -s data/source_builds.json
+          python3 -m omnisource.source_builds check
 
       - name: Validate feed structure
         run: |

@@ -29,6 +29,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any
 
 from omnisource.constants import USER_AGENT
@@ -479,9 +480,30 @@ def load_store(path: Any) -> dict[str, Any]:
     return {"schemaVersion": 1, "generatedAt": utcnow(), "count": 0, "sources": []}
 
 
-def save_store(path: Any, sources: list[dict[str, Any]]) -> bool:
-    """Persist ``sources`` to the discovery store."""
+def save_store(path: Any, sources: list[dict[str, Any]], *, root: Any = None) -> bool:
+    """Persist ``sources`` to the discovery store.
+
+    With ``root`` set, the recorded sourcing verdicts (``data/source_policy.json``)
+    are enforced on the way in: a candidate from a rejected source is dropped, and
+    so is any already-stored record for one. Enforcement lives here rather than in
+    each caller, because the store has many writers — GitHub search, the GitLab /
+    Codeberg / Forgejo sweep, feed scraping, web-catalog crawling, manual
+    revalidation — and any one of them forgetting to filter would reintroduce a
+    source the project has already reviewed and refused. An unusable policy file
+    aborts the write instead of silently skipping the check.
+    """
+    kept = list(sources)
+    if root is not None:
+        from omnisource.source_policy import load_policy, partition_by_policy  # local import: no cycle
+
+        policy = load_policy(Path(root))
+        if policy.error:
+            print(f"discovery: sourcing policy is unusable ({policy.error}); store not written")
+            return False
+        kept, blocked = partition_by_policy(kept, policy)
+        for record in blocked:
+            print(f"discovery: not storing {record.get('url')} — excluded by sourcing policy")
     return write_json(
         path,
-        {"schemaVersion": 1, "generatedAt": utcnow(), "count": len(sources), "sources": sources},
+        {"schemaVersion": 1, "generatedAt": utcnow(), "count": len(kept), "sources": kept},
     )

@@ -19,6 +19,7 @@ _SRC = Path(__file__).resolve().parents[1] / "src"
 if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
+from omnisource import autodiscovery
 from omnisource.constants import Paths
 from omnisource.remote_validation import assert_publishable
 from omnisource.source_policy import (
@@ -283,6 +284,66 @@ class PublicationGateTests(unittest.TestCase):
             ok, errors, _warnings = assert_publishable(self._record("https://good.example/apps.json"), root=root)
         self.assertFalse(ok)
         self.assertTrue(any("sourcing policy is unusable" in error for error in errors), errors)
+
+    def test_store_cannot_be_written_with_a_blocked_record(self) -> None:
+        # Every discovery path funnels through save_store, so the enforcement has
+        # to live there: a caller that forgets to filter must not be able to
+        # re-propose a rejected source on the next run.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "data").mkdir(parents=True)
+            (root / "data" / "source_policy.json").write_text(json.dumps(FIXTURE), encoding="utf-8")
+            store = root / "data" / "discovered_sources.json"
+            wrote = autodiscovery.save_store(
+                store,
+                [
+                    {"url": "https://github.com/Good/Project", "name": "Good"},
+                    {"url": "https://armconverter.com/store/us/apps.json", "name": "ARM Store"},
+                ],
+                root=root,
+            )
+            stored = autodiscovery.load_store(store)["sources"]
+        self.assertTrue(wrote)
+        self.assertEqual([record["url"] for record in stored], ["https://github.com/Good/Project"])
+
+    def test_a_stored_record_is_pruned_when_the_policy_blocks_it(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "data").mkdir(parents=True)
+            (root / "data" / "source_policy.json").write_text(json.dumps(FIXTURE), encoding="utf-8")
+            store = root / "data" / "discovered_sources.json"
+            autodiscovery.save_store(store, [{"url": "https://armconverter.com/store/us/apps.json"}], root=root)
+            reloaded = autodiscovery.load_store(store)["sources"]
+            # An empty rewrite is still a rewrite; what matters is that the
+            # blocked record cannot survive it.
+            self.assertEqual(reloaded, [])
+
+    def test_an_unusable_policy_blocks_the_write(self) -> None:
+        # Fail-closed: a policy file that does not parse must not degrade into
+        # "no rules" for a writer that could otherwise publish a rejected source.
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "data").mkdir(parents=True)
+            (root / "data" / "source_policy.json").write_text('{"rules": 3}', encoding="utf-8")
+            store = root / "data" / "discovered_sources.json"
+            wrote = autodiscovery.save_store(store, [{"url": "https://github.com/A/B"}], root=root)
+        self.assertFalse(wrote)
+        self.assertFalse(store.exists())
+
+    def test_every_store_writer_enforces_the_policy(self) -> None:
+        # Structural guard: the store has many writers (GitHub search, the
+        # GitLab/Codeberg/Forgejo sweep, feed scraping, web-catalog crawling,
+        # revalidation). A new one that skips root= would silently undo the gate.
+        writers = sorted((ROOT / "scripts").glob("*/discover*.py")) + sorted(
+            (ROOT / "scripts").glob("*/validate_source.py")
+        )
+        self.assertGreaterEqual(len(writers), 7, writers)
+        for path in writers:
+            with self.subTest(script=str(path.relative_to(ROOT))):
+                text = path.read_text(encoding="utf-8")
+                if "save_store(" not in text:
+                    continue
+                self.assertIn("root=ROOT", text)
 
     def test_shipped_policy_rejects_the_store_it_recorded(self) -> None:
         shipped = load_policy(ROOT)

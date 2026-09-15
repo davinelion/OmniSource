@@ -121,6 +121,42 @@ storefront is not a verdict about an unrelated tool on the same domain). A rule
 matching nothing, or declaring a host without a reason, fails the run rather
 than silently passing.
 
+## Source-build recipes (`data/source_builds.json`)
+
+The companion lane to the catalog: reviewed build-from-source recipes for iOS
+projects whose upstream publishes no artifact to attribute. They are kept out of
+`catalog.json`, feeds and mirrors on purpose — the operator action here is
+integrity, not publication.
+
+```bash
+# shape + policy + catalog cross-links (also runs inside scripts/validate.py)
+python3 scripts/build_source.py check
+# what a recipe will run, including the digest check before the build
+python3 scripts/build_source.py plan trollvnc
+# re-verify the pinned archive when a recipe is suspected stale
+python3 scripts/build_source.py fetch trollvnc
+```
+
+To look for new candidates (drafts only, reviewed by hand — it writes nothing
+unless `--out` is passed, and never touches the discovery store):
+
+```bash
+python3 scripts/discovery/find_source_builds.py --limit 5 --min-stars 200 --hash
+```
+
+A recipe goes **stale** when upstream publishes a real iOS release: then the
+project belongs in `catalog.json` with an `upstream` block, and the recipe either
+disappears or stays only if building from source is still how people get it (that
+overlap is reported as a warning by `check`). A recipe goes **bad** when its
+pinned commit or digest no longer matches what the forge serves — fix the pin and
+re-record the digest from the archive you actually downloaded, never from a
+summary. Nothing here is signed, uploaded or mirrored by this repository;
+`verification.evidence` records who digested what, when.
+
+When triaging a bug report about a "missing" app: if upstream has no release
+assets, a recipe is the right answer, and the report's refusal table explains why
+an aggregator's copy of that app is never the answer.
+
 ## Backups and rollback
 
 Create and verify a metadata-only recovery snapshot before a deployment or

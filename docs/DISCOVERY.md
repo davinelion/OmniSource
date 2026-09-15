@@ -13,6 +13,8 @@ LiveContainer sources without human intervention, on a 12-hour schedule
 | `scripts/discovery/discover_releases.py` | Flags GitHub `owner/repo`s whose releases ship `.ipa`/`.tipa` assets |
 | `scripts/discovery/discover_forges.py` | Searches GitLab, Codeberg and configured Forgejo instances for projects with actual IPA/TIPA release assets |
 | `scripts/discovery/discover_web_catalogs.py` | Scrapes catalog pages for linked `*.json` feeds and probes each; configured inputs include FMHY's mobile page |
+| `scripts/discovery/discover_sources.py` | Orchestrator: applies the sourcing policy, runs every pass, validates, merges into the store |
+| `scripts/discovery/find_source_builds.py` | Source-build finder: repos that publish source but no distributable artifact, drafted as recipes for `data/source_builds.json`; never writes the discovery store |
 
 Configured external catalog inputs live in `data/discovery_pages.txt`. FMHY is an index page, not an
 AltStore feed, so OmniSource only follows linked JSON feeds that pass validation; it does not blindly
@@ -20,7 +22,6 @@ import or redistribute arbitrary downloads from FMHY. Its `iOS Tools` / `iOS iPA
 of storefronts and re-host libraries alongside real projects — those are not merely "not yet promoted",
 they are excluded by the sourcing policy below, which is why feeds such as an aggregator's `cypwn.json`
 that discovery found live are dropped instead of merged.
-| `scripts/discovery/discover_sources.py` | Orchestrator: applies the sourcing policy, runs every pass, validates, merges into the store |
 
 Core logic lives in `src/omnisource/autodiscovery.py` (stdlib-only;
 network isolated in `fetch_*` helpers). `--dry-run` prints without writing.
@@ -79,7 +80,8 @@ otherwise move forward:
 
 | Gate | Effect |
 | --- | --- |
-| `discover_sources.py` | candidate dropped before validation (and pruned from the store if it is already there), logging the rule id |
+| every discovery writer | `autodiscovery.save_store(…, root=ROOT)` filters *and* prunes, so GitHub search, the GitLab/Codeberg/Forgejo sweep, feed probing, web-catalog scraping and manual revalidation all refuse a blocked source — a new pass cannot bypass the verdict by forgetting to filter |
+| `discover_sources.py` | additionally drops candidates before validation, logging the rule id per record |
 | `assert_publishable()` | record can never be verified/published, even if hand-edited into the store with a high reputation |
 | `scripts/validate.py` | `catalog.json` entry that resolves from, or mirrors, a blocked host is a build error |
 | `build-tweak.yml` | the manual patcher refuses to download a base IPA or `.deb` from a blocked host |

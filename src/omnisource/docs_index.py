@@ -35,6 +35,11 @@ DOCUMENTS = (
         "Sourcing verdicts (2026-09-15)",
         "FMHY iOS tools: what was catalogued, and why the decrypted-app storefronts are blocked.",
     ),
+    (
+        "SOURCE-BUILDS.md",
+        "Source builds",
+        "The separate lane for projects that publish source but no binary: recipes, digests, signing.",
+    ),
 )
 
 _HEADING = re.compile(r"^#\s+(.+)$", re.M)

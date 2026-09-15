@@ -48,7 +48,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     store = autodiscovery.load_store(Path(args.store))
     merged = autodiscovery.merge_records(store.get("sources", []), found)
-    autodiscovery.save_store(Path(args.store), merged)
+    autodiscovery.save_store(Path(args.store), merged, root=ROOT)
     print(f"github discovery: +{len(found)}, {len(merged)} total")
     return 0
 

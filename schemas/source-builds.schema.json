@@ -1,0 +1,167 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://iamsmmh.github.io/OmniSource/schemas/source-builds.schema.json",
+  "title": "OmniSource source-build recipes",
+  "description": "Reviewed build-from-source recipes in data/source_builds.json, for iOS projects whose upstream publishes source but no artifact OmniSource could attribute and verify. A recipe records the revision to build, the digest of that revision's source archive, the build commands and what to do about signing. Recipes are never published as feeds or app records, and OmniSource never signs or hosts their output.",
+  "type": "object",
+  "required": ["version", "updated", "contract", "builds"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": { "const": 1 },
+    "updated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "description": "Date of the last review pass over the whole file."
+    },
+    "contract": { "$ref": "#/definitions/contract" },
+    "builds": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/definitions/recipe" }
+    }
+  },
+  "definitions": {
+    "contract": {
+      "type": "object",
+      "required": ["scope", "provenance", "signing"],
+      "additionalProperties": false,
+      "properties": {
+        "scope": { "type": "string", "minLength": 40, "description": "What belongs in this file and what does not." },
+        "provenance": { "type": "string", "minLength": 40, "description": "How a recipe earns trust (pinned revision + digested archive)." },
+        "signing": { "type": "string", "minLength": 40, "description": "Who signs the result, and the rule that this project never does." },
+        "excluded": { "type": "string", "minLength": 40, "description": "The classes deliberately refused here, with the policy rule that refuses them." }
+      }
+    },
+    "recipe": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name",
+        "kind",
+        "summary",
+        "forge",
+        "repo",
+        "url",
+        "license",
+        "pin",
+        "source",
+        "build",
+        "signing",
+        "verification"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{1,31}$",
+          "description": "Stable identifier used by scripts/build_source.py and quoted in errors."
+        },
+        "name": { "type": "string", "minLength": 1 },
+        "kind": {
+          "enum": ["app", "tweak", "toolchain", "signer"],
+          "description": "'app' and 'tweak' produce an on-device artifact; 'toolchain' and 'signer' produce the host-side tools that make that possible."
+        },
+        "summary": { "type": "string", "minLength": 20 },
+        "forge": { "enum": ["github", "gitlab", "codeberg", "forgejo", "gitea"] },
+        "repo": {
+          "type": "string",
+          "pattern": "^[^/]+/[^/]+$",
+          "description": "owner/name on the forge above. A recipe always points at a repository, never at a mirror of someone else's build."
+        },
+        "url": { "type": "string", "pattern": "^https://", "description": "Human-facing project page." },
+        "license": {
+          "type": "string",
+          "minLength": 3,
+          "description": "SPDX id when the forge reports one; otherwise an explicit note such as 'see LICENSE.md'. Building without a readable license is the reviewer's obligation, so it must be stated."
+        },
+        "app": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9-]{1,31}$",
+          "description": "Optional cross-link: the catalog.json slug of the same project, when one exists."
+        },
+        "pin": { "$ref": "#/definitions/pin" },
+        "source": { "$ref": "#/definitions/source" },
+        "build": { "$ref": "#/definitions/build" },
+        "signing": { "$ref": "#/definitions/signing" },
+        "verification": { "$ref": "#/definitions/verification" },
+        "notes": { "type": "string", "description": "Why this is a recipe and not a catalogue entry, and what upstream's own state implies for the build." }
+      }
+    },
+    "pin": {
+      "type": "object",
+      "required": ["ref", "type", "commit", "committedAt"],
+      "additionalProperties": false,
+      "properties": {
+        "ref": { "type": "string", "minLength": 1, "description": "Tag name when one exists, otherwise the commit." },
+        "type": { "enum": ["tag", "commit"], "description": "'branch' is deliberately not allowed: a moving reference cannot be reviewed." },
+        "commit": { "type": "string", "pattern": "^[0-9a-f]{40}$", "description": "Full commit SHA the archive was digested at." },
+        "committedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["archiveURL", "sha256", "bytes"],
+      "additionalProperties": false,
+      "properties": {
+        "archiveURL": {
+          "type": "string",
+          "pattern": "^https://",
+          "description": "The exact archive that was downloaded and hashed, usually the forge's source tarball for that revision."
+        },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+        "bytes": { "type": "integer", "minimum": 1, "description": "Size of the archive that produced the digest, so a truncated download is caught even before hashing." },
+        "upstreamWorkflow": {
+          "type": "string",
+          "description": "Path inside the repo whose own CI proves the commands below are the supported ones."
+        }
+      }
+    },
+    "build": {
+      "type": "object",
+      "required": ["system", "requirements", "commands", "artifacts"],
+      "additionalProperties": false,
+      "properties": {
+        "system": { "type": "string", "minLength": 1, "description": "theos, dub, cargo + pnpm, go, …" },
+        "requirements": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } },
+        "commands": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 3 } },
+        "artifacts": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 3 },
+          "description": "Where the result lands. An 'app' or 'tweak' recipe must name an iOS artifact (.ipa, .tipa or .deb)."
+        },
+        "docs": { "type": "string", "pattern": "^https://", "description": "Upstream documentation for the build, when it publishes any." }
+      }
+    },
+    "signing": {
+      "type": "object",
+      "required": ["model"],
+      "additionalProperties": false,
+      "properties": {
+        "model": {
+          "enum": ["on-device", "self-hosted", "own-certificate", "unsigned", "none"],
+          "description": "'none' is only honest for artifacts nobody signs (a tweak .deb, a build system); an installable app must name a model."
+        },
+        "tools": { "type": "array", "items": { "type": "string" }, "description": "Named installers/signers a builder may use — references, not endorsements or dependencies." },
+        "notes": { "type": "string" }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["method", "verifiedAt", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "method": { "const": "source-archive-sha256" },
+        "verifiedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+        "verifiedBy": { "type": "string" },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 10 },
+          "description": "Every claim in the recipe that was checked, and how. Anything not checked must not be implied."
+        }
+      }
+    }
+  }
+}
