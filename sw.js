@@ -70,7 +70,13 @@
 // dialogs (that broke modal centring once the page was scrolled, so VIEW
 // opened the dialog off-screen). Bump so returning clients drop the cached
 // stylesheet and pick up the fixed one.
-const VERSION = 'omnisource-v13';
+// v14: findability pass — sticky section tabs + category tablist on the home
+// page, reading-progress line and back-to-top injected on every page, scroll
+// position held across the deferred-feed re-renders, and [data-reveal] now
+// self-heals for markup injected after boot (the release feed used to render
+// invisible). index.html, both stylesheets, core.js and site.js all changed,
+// so returning clients must drop the cached shell.
+const VERSION = 'omnisource-v14';
 const CORE_CACHE = `${VERSION}-core`;
 const DATA_CACHE = `${VERSION}-data`;
 const ASSET_CACHE = `${VERSION}-assets`;

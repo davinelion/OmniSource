@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-14",
-  "feedVersion": "f2e953537c81",
+  "generatedAt": "2026-09-15",
+  "feedVersion": "bc174311585c",
   "app": {
     "id": "sidestore",
     "name": "SideStore",
     "developer": "SideStore Team",
     "subtitle": "AltStore fork that refreshes apps without a computer",
     "bundleIdentifier": "com.SideStore.SideStore",
-    "version": "0.6.4",
-    "versionDate": "2026-09-09",
+    "version": "0.7.0",
+    "versionDate": "2026-09-15",
     "description": "SideStore is a fork of AltStore that signs and refreshes sideloaded apps directly on the device. After a one-time pairing-file setup it renews 7-day certificates in the background using your own Apple ID and an anisette server, so apps stop expiring while you are away from a computer. It installs apps from any AltStore-compatible source, keeps them updated, and can back up and restore app data.",
     "shortDescription": "AltStore fork that refreshes apps without a computer",
     "category": "utilities",
@@ -22,11 +22,11 @@
       "https://apps.sidestore.io/apps/sidestore/v0.1.1/apps-dark.png",
       "https://apps.sidestore.io/apps/sidestore/v0.1.1/news-dark.png"
     ],
-    "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa",
-    "size": 27609918,
+    "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+    "size": 27770821,
     "source": "SideStore/SideStore",
     "sourceURL": "https://github.com/SideStore/SideStore",
-    "checksum": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9",
+    "checksum": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
     "checksumPublished": false,
     "minOSVersion": "15.0",
     "status": "stable",
@@ -36,23 +36,23 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "updatedAt": "2026-09-09"
+      "updatedAt": "2026-09-15"
     }
   },
   "newest": {
-    "version": "0.6.4",
-    "date": "2026-09-09",
-    "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa",
-    "size": 27609918,
-    "sha256": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9"
+    "version": "0.7.0",
+    "date": "2026-09-15",
+    "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+    "size": 27770821,
+    "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5"
   },
   "versions": [
     {
-      "version": "0.6.4",
-      "date": "2026-09-09",
-      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa",
-      "size": 27609918,
-      "sha256": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9"
+      "version": "0.7.0",
+      "date": "2026-09-15",
+      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+      "size": 27770821,
+      "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5"
     }
   ],
   "verification": {

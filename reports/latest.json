@@ -1,42 +1,26 @@
 {
-  "generatedAt": "2026-09-14",
-  "feedVersion": "f2e953537c81",
+  "generatedAt": "2026-09-15",
+  "feedVersion": "bc174311585c",
   "apps": {
     "total": 94,
-    "reachable": 93,
-    "unreachable": 1,
-    "verified": 92
+    "reachable": 94,
+    "unreachable": 0,
+    "verified": 93
   },
   "sync": {
     "synced": 94,
-    "incrementalHits": 85,
-    "updated": 3,
+    "incrementalHits": 87,
+    "updated": 1,
     "failed": 0,
-    "apiRequests": 79
+    "apiRequests": 81
   },
-  "unreachable": [
-    "ytmusic"
-  ],
+  "unreachable": [],
   "updates": [
     {
-      "slug": "youpro",
-      "name": "YouPro",
-      "previousVersion": "21.36.6",
-      "version": "21.37.4",
-      "kind": "updated"
-    },
-    {
-      "slug": "ytkp",
-      "name": "YTKillerPlus",
-      "previousVersion": "21.36.6",
-      "version": "21.37.4",
-      "kind": "updated"
-    },
-    {
-      "slug": "youmod",
-      "name": "YouMod",
-      "previousVersion": "21.36.6",
-      "version": "21.37.4",
+      "slug": "sidestore",
+      "name": "SideStore",
+      "previousVersion": "0.6.4",
+      "version": "0.7.0",
       "kind": "updated"
     }
   ],

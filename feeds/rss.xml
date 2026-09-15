@@ -5,8 +5,76 @@
     <link>https://iamsmmh.github.io/OmniSource/</link>
     <description>OmniSource is a curated, automatically maintained AltStore-compatible iOS app source. Every entry is resolved from the app&#x27;s own official upstream project - GitHub Releases or the developer&#x27;s official AltStore feed - and each download link is re-verified automatically.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>YTMusicUltimate v9.37.2</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json</link>
+      <guid isPermaLink="false">ytmusic-9.37.2</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[YTMusicUltimate 9.37.2 | YTMusic 2.4.1 | YTMusicUltimate_9.37.2_2.4.1
+
+> [!NOTE]
+> ### Extra tweaks:
+> - Return YouTubeMusic Dislikes
+> - YTMABConfig
+> - VolumeBoostYT
+- - -
+- YouMusicPiP is only available in custom build
+- iOS14+ build is available in releases page]]></description>
+      <enclosure url="https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>SideStore v0.7.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/sidestore.json</link>
+      <guid isPermaLink="false">sidestore-0.7.0</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[SideStore 0.7.0 | SideStore
+
+## Build Info
+
+Built at (UTC): `Fri Sep 11 21:25:58 2026`
+Built at (UTC date): `2026-09-11`
+Commit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`
+Version: `0.7.0-20260911.328+6032424a`
+
+#### What's Changed:
+- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code
+
+#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)]]></description>
+      <enclosure url="https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Mangayomi v0.9.4</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.4</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios
+
+## What's Changed
+* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009
+
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Conduit v4.1.5</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
+      <guid isPermaLink="false">conduit-4.1.5</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Conduit 4.1.5 | conduit
+
+## What's Changed
+* Fix native toolbar, Apple gating, streaming cadence, and wakelock regressions by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/718
+* Fix ten reported issues and vendor Hermes Agent as an API reference by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/725
+* Support Open WebUI shared folders by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/726
+* Upgrade all packages, add notification settings link and Ollama thinking replay by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/727
+
+
+**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5]]></description>
+      <enclosure url="https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>YTKillerPlus v21.37.4</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/ytkp.json</link>
@@ -54,7 +122,7 @@
 
 > [!WARNING]
 > - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa" length="0" type="application/octet-stream" />
+      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.37.4_1.3.1.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>YouMod v21.37.4</title>
@@ -79,6 +147,44 @@
 > [!WARNING]
 > - 21.34.3+ builds require iOS 17+ now.]]></description>
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Mangayomi v0.9.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.3</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.3 | Mangayomi-v0.9.3-ios
+
+## What's Changed
+* feat: refresh the library on a schedule by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/975
+* fix(player): persist completed episodes before navigation by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/979
+* fix(downloads): preserve queue and select the next unread chapters by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/978
+* Fixes memory and bugs where it would lag over time by @not-akari in https://github.com/kodjodevf/mangayomi/pull/977
+* fix: keep Discord chapter presence current by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/981
+* fix: decode current VOE video payloads by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/982
+* fix(restore): preserve Kotatsu category assignments by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/983
+* fix(player): retire native video surfaces safely by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/984
+* fix(download): harden workers and HLS recovery by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/985
+* fix(reader): sort local pages naturally by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/986
+* fix(library): keep read titles last in unread sort by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/988
+* fix(reader): make bulk read actions uniform by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/989
+* fix(player): preserve shortcuts when controls hide by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/990
+* fix(linux): fall back when Documents lookup fails by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/994
+* Rework API Sync Server by @not-akari in https://github.com/kodjodevf/mangayomi/pull/976
+* feat: redesign anime player by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/980
+* Add Korean translation by @jang-geon in https://github.com/kodjodevf/mangayomi/pull/1000
+* feat(l10n): complete Korean translation by @Abdellox in https://github.com/kodjodevf/mangayomi/pull/1004
+* fix(player): preserve local file URIs by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/987
+* fix(player): fall back from unsupported audio tracks by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/991
+* fix(repositories): await extension repository writes by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/993
+
+## New Contributors
+* @1Selxo made their first contribution in https://github.com/kodjodevf/mangayomi/pull/979
+* @jang-geon made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1000
+* @Abdellox made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1004
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.2...v0.9.3]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>Voyager v2.49.1</title>
@@ -395,129 +501,6 @@ IPA Vault build for Facebook (iQFace), version 578.1]]></description>
 > [!WARNING]
 > - 21.34.3+ builds require iOS 17+ now.]]></description>
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.36.6_6.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YouMod v21.36.6</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/youmod.json</link>
-      <guid isPermaLink="false">youmod-21.36.6</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.36.6 | YouMod_21.36.6_2.0.0
-
-### Latest Release, ENJOY!!
-
-> [!NOTE]
-> - **YTUHD** is not included. 4K is available for A16+ devices.
-> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Extra tweaks that are bundled may be unstable on newer versions.
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.36.6_2.0.0.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>TTKillerPlus v46.8.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json</link>
-      <guid isPermaLink="false">ttkillerplus-46.8.0</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[TikTok 46.8.0 | TikTok_46.8_TTKillerPlus_2.1
-
-• Add v46.0+ compatibility.
-• Fix like confirmation bypass on double tap.
-• Fix post date display format.
-• Fix settings localization & toggles.
-• Fix flag button not tappable.
-• Other fixes & improvements.
-• Update base IPA to TikTok v46.8]]></description>
-      <enclosure url="https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>SideStore v0.6.4</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/sidestore.json</link>
-      <guid isPermaLink="false">sidestore-0.6.4</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[SideStore 0.6.4 | SideStore
-
-## Build Info
-
-Built at (UTC): `Wed Sep 09 17:59:46 2026`
-Built at (UTC date): `2026-09-09`
-Commit SHA: `f93a95c079057090bea355453ef24f6e8668dfa9`
-Version: `0.6.4`
-
-#### What's Changed:
-- **Developer Portal in Settings**: Manage your Apple Developer App IDs, Provisioning Profiles, Certificates, Devices, and App Groups directly inside the app for both paid and free team types.
-- **Manual Profile Creation**: Paid developer accounts can now create manual profiles on app without having to reach developer portal.
-- **Certificate Management**: Certificate CSR + create/revoke in developer portal, export, import, view all data including ASN1, keys, and much more metadata.
-- **Full Two-Factor Authentication**: Added support for SMS verification, Voice phone call in addition to trusted devices during login 2FA Challenge.
-- **Cellular Refresh**: Now one can enable cellular refresh with shortcuts to refresh on the go without waiting for wifi anytime anywhere (credits to @spidy123222)
-- **Health Check**: Newer dedicated Health Check section in settings to diagnose device and network communication issues quickly.
-- **On-Device Anisette**: Switched to on-device anisette data generation as the primary anisette data source of OTP requests during 2FA. No more need for Remote anisette servers.
-- **App & Mach-O Inspector**: Inspect any app's internal files, Mach-O binaries, and embedded provisioning profiles right from App Info.
-- **Storage Explorer**: Full view of all storage managed by the app and its sideloaded apps including caches, appgroups, tmp dirs, private documents dir etc.
-- **Faster VPN peer auto-discovery**: Parallel connection probing discovers your device on the local vpn network much faster by doing a parallel probe for device services like lockdown/rppairing ports.
-- **Dual Connection Modes**: Switch between LocalDevVPN/WireGuard and Remote servers as for loopback as required.
-- **Account Config Export**: Export and import your accounts and sources as `.sideconf` files for quick setup or migration.
-- **Full Liquid-Glass support**: Added smooth pill buttons, improved scroll animations, and fixed UI flickering in the My Apps tab.
-
-#### ⚠️Known Issue
-- iOS 16 users may have difficulty connecting to LocalDevVPN and is being actively worked on.
-
-#### Full Changelog: [0.6.3...0.6.4](https://github.com/SideStore/SideStore/compare/239fc7c2b7f3c319d3608bd49c30d1457216d5df...f93a95c079057090bea355453ef24f6e8668dfa9)]]></description>
-      <enclosure url="https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>PlayTorrio v1.1.5</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json</link>
-      <guid isPermaLink="false">playtorrio-1.1.5</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[PlayTorrio 1.1.5 | PlayTorrio-iOS
-
-Downloader enhancements
-Fixed streaming issues
-Fixed audiobook generation
-Added fullscreen mode
-UI Fixes]]></description>
-      <enclosure url="https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>JellyBook v1.4.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/jellybook.json</link>
-      <guid isPermaLink="false">jellybook-1.4.1</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[JellyBook 1.4.1 | JellyBook-Release
-
-Sorry for the error in the previous version 😅
-## What's Changed
-* chore: clarifications by @Kara-Zor-El in https://github.com/JellyBookOrg/JellyBook/pull/223
-* fix: fix auth headers by @Kara-Zor-El in https://github.com/JellyBookOrg/JellyBook/pull/225
-
-
-**Full Changelog**: https://github.com/JellyBookOrg/JellyBook/compare/v1.4.0...v1.4.1
-
-<details>
-<summary>SHA1</summary>
-<ul>
-<li><code>JellyBook-Debug-arm32.apk</code>: <code>ebbaf6954023d544454e208d0252ac8b677cf2bc</code></li>
-<li><code>JellyBook-Debug-arm64.apk</code>: <code>f89c75aaf7debf647a6862fd401209aee4417110</code></li>
-<li><code>JellyBook-Debug-x86_64.apk</code>: <code>393f2b232e60c20e339be08f2b0fe0311ef06694</code></li>
-<li><code>JellyBook-Debug.aab</code>: <code>924fa1c6f34072205884366522c428e394f62ec7</code></li>
-<li><code>JellyBook-Debug.apk</code>: <code>29f8f3b49a9704745947251d24dfee5ed17eb67e</code></li>
-<li><code>JellyBook-Debug.ipa</code>: <code>2ead28016efc584defd6ea6d7e6c9f9cd9627aa6</code></li>
-<li><code>JellyBook-Release-arm32.apk</code>: <code>0587957d7a109283f0b31cc4bd8d634a6f9cff06</code></li>
-<li><code>JellyBook-Release-arm64.apk</code>: <code>48568af90caa5e67387b35ab7567f356ac8f43cc</code></li>
-<li><code>JellyBook-Release-x86_64.apk</code>: <code>0f3230be1ced4c74f7483e08ec08a247fc3fe650</code></li>
-<li><code>JellyBook-Release.aab</code>: <code>f3256e5c70f8bd09cbadc6f142cbb5949966a2d6</code></li>
-<li><code>JellyBook-Release.apk</code>: <code>030e3ec3aece59a66340f7784c3165650a27d4dc</code></li>
-<li><code>JellyBook-Release.ipa</code>: <code>f3a3c8b10b7538442b65a97f037f6e42a43deba3</code></li>
-</ul>
-</details>]]></description>
-      <enclosure url="https://github.com/JellyBookOrg/JellyBook/releases/download/v1.4.1/JellyBook-Release.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

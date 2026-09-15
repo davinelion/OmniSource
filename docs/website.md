@@ -71,6 +71,56 @@ Sections whose feed has not landed yet stay `hidden`; `setupDeferredAnchors()`
 in `js/core.js` queues navigation to them so the drawer's **Trending** link
 still scrolls once the rail appears instead of doing nothing.
 
+### Finding apps without scrolling the whole page
+
+The home page is long (hero, four rails, statistics, source health, install
+guide, catalog, release feed), so it carries two tab bars plus the scroll
+affordances `js/core.js` injects into *every* page:
+
+* **Section tabs** (`#sectionTabs`, first child of `<main>`) — a sticky row of
+  real anchors under the floating header: Overview, Trending, Apps, Install,
+  What's new. `setupSectionTabs()` marks the current one with `aria-current`
+  while you scroll, drops tabs whose section has no data instead of shipping a
+  dead button, and takes over the `#top` jump so it reaches the true top of the
+  document. The bar lives inside `<main>` on purpose: `#top` *is* `<main>`, and
+  a bar in flow before it would leave every "Home" anchor one bar-height short.
+* **Category tabs** (`#categoryFilters`) — the catalog's category row, promoted
+  to a `role="tablist"` and pinned for the whole height of the grid, so
+  switching shelf never means climbing back to the top. `#catalogPanel` (grid +
+  empty state) is its `role="tabpanel"`, the tabs use a roving tabindex with
+  arrow/Home/End navigation that follows the writing direction, and the
+  selection is shareable as `?category=<id>` — the hash is left alone because
+  the home page already deep-links to an app dialog with `#<slug>`. The six
+  biggest categories are also offered in the hero (`#heroCategories`), which
+  filters the grid *and* scrolls to it in one tap.
+* **Reading progress + back to top** — injected rather than hand-marked, like
+  the mobile nav drawer, so the generated app pages and every section page get
+  them for free. Both are out of flow and can never shift layout.
+
+Sticky bars pin to `--sticky-offset` (the bottom edge of the floating capsule,
+`tokens.css`), and a second stacked bar adds `--tabbar-h` — no pixel value is
+duplicated between the CSS and the scroll-spy, which reads the same custom
+property. Section anchors get matching `scroll-margin-top` so a jump never
+lands with its heading behind a bar.
+
+### Scroll stability
+
+A deferred feed un-hides a section *above* whatever the reader is looking at.
+Chromium absorbs that with native scroll anchoring; iOS Safari — the device
+this catalog exists for — has none, so the page jumped several thousand pixels
+each time a feed landed. `OS.stableScroll(work)` measures the element at the
+top of the viewport, runs the DOM work, then re-pins `scrollY` by however much
+that element moved (instantly: a correction must never animate). Where the
+browser already anchored, the delta is zero, so the two mechanisms compose
+instead of fighting. `refreshPage()` and the language-switch re-render both go
+through it.
+
+`[data-reveal]` self-heals for the same reason: the observer is armed even when
+a page ships no reveal nodes at boot, and a MutationObserver hands late
+arrivals to it. Injected markup — the release feed on the home page, the entire
+`/collections/` grid — used to keep `opacity: 0` forever, which read as a
+section heading with nothing under it.
+
 ## Features
 
 - Auto / light / dark themes, reduced-motion aware, WCAG AA focus states.
@@ -78,8 +128,9 @@ still scrolls once the rail appears instead of doing nothing.
 - Live source health, curated-app stats, client install buttons from
   `catalog.json` (AltStore/SideStore/Feather deep links, paste-to-install
   for ESign/LiveContainer).
-- Catalog: search, category + status filters, iOS-version filter, multiple
-  sorts, grid/compact views, saved apps, bundle-ID conflict warnings.
+- Catalog: sticky category tabs (`?category=` deep links), search, provenance +
+  status filters, iOS-version filter, multiple sorts, grid/compact views, saved
+  apps, bundle-ID conflict warnings.
 - App detail dialog with per-client install actions, QR code, SHA-256,
   bundle identifier copy, provenance info and version history.
 - Compare, Status, Analytics, Install and Search are first-class pages with
