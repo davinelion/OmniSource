@@ -36,16 +36,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 126,
+      "latencyMs": 199,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 78,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -219,6 +213,12 @@
         "reachable": true,
         "latencyMs": 126,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 199,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Aidoku/Aidoku",
@@ -243,7 +243,7 @@
       "verified": 93,
       "deadLinks": 0,
       "newThisWeek": 4,
-      "updatedThisWeek": 25
+      "updatedThisWeek": 28
     }
   ],
   "animegen": {
@@ -282,7 +282,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 166,
+      "latencyMs": 248,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -351,6 +351,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 166,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 248,
         "detail": "HTTP 302"
       }
     ],
@@ -512,7 +518,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 132,
+      "latencyMs": 192,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -689,6 +695,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 132,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 192,
         "detail": "HTTP 302"
       }
     ],
@@ -874,7 +886,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 122,
+      "latencyMs": 189,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -1052,6 +1064,12 @@
         "reachable": true,
         "latencyMs": 122,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 189,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1103,7 +1121,7 @@
             "fileType": "IPA",
             "size": 114471562,
             "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-            "downloads": 738,
+            "downloads": 879,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1115,7 +1133,7 @@
             "fileType": "IPA",
             "size": 124722640,
             "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-            "downloads": 1697,
+            "downloads": 1910,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1127,7 +1145,7 @@
             "fileType": "IPA",
             "size": 114471417,
             "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-            "downloads": 38,
+            "downloads": 45,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1139,7 +1157,7 @@
             "fileType": "IPA",
             "size": 124722495,
             "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-            "downloads": 81,
+            "downloads": 85,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1151,7 +1169,7 @@
             "fileType": "IPA",
             "size": 85880995,
             "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-            "downloads": 197,
+            "downloads": 216,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1163,7 +1181,7 @@
             "fileType": "IPA",
             "size": 96132071,
             "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-            "downloads": 291,
+            "downloads": 322,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1175,7 +1193,7 @@
             "fileType": "DEB",
             "size": 12186352,
             "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-            "downloads": 13,
+            "downloads": 15,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1187,20 +1205,20 @@
             "fileType": "DEB",
             "size": 12187106,
             "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-            "downloads": 20,
+            "downloads": 22,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-        "downloads": 291
+        "downloads": 322
       }
     ],
     "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 92,
+      "latencyMs": 154,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -1378,6 +1396,12 @@
         "reachable": true,
         "latencyMs": 92,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 154,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1465,16 +1489,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 142,
+      "latencyMs": 188,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 129,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -1648,6 +1666,12 @@
         "reachable": true,
         "latencyMs": 142,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 188,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:BandarHL/BHTwitter",
@@ -1737,7 +1761,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 136,
+      "latencyMs": 163,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -1915,6 +1939,12 @@
         "reachable": true,
         "latencyMs": 136,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 163,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1967,7 +1997,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 105,
+      "latencyMs": 139,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -2109,6 +2139,12 @@
         "reachable": true,
         "latencyMs": 105,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 139,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2197,7 +2233,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 145,
+      "latencyMs": 189,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -2267,6 +2303,12 @@
         "reachable": true,
         "latencyMs": 145,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 189,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2331,7 +2373,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 185,
+      "latencyMs": 216,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -2401,6 +2443,12 @@
         "reachable": true,
         "latencyMs": 185,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 216,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2421,87 +2469,86 @@
     "lastResolvedSource": "github:cogwheel0/conduit",
     "versions": [
       {
-        "version": "4.1.4",
-        "date": "2026-09-01",
-        "localizedDescription": "Conduit 4.1.4 | conduit\n\n## What's Changed\n* Support Open WebUI v0.11.3 by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/696\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.3...v4.1.4",
-        "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/conduit.ipa",
-        "size": 35794270,
+        "version": "4.1.5",
+        "date": "2026-09-15",
+        "localizedDescription": "Conduit 4.1.5 | conduit\n\n## What's Changed\n* Fix native toolbar, Apple gating, streaming cadence, and wakelock regressions by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/718\n* Fix ten reported issues and vendor Hermes Agent as an API reference by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/725\n* Support Open WebUI shared folders by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/726\n* Upgrade all packages, add notification settings link and Ollama thinking replay by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/727\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5",
+        "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
+        "size": 35897764,
         "minOSVersion": "16.0",
-        "releaseUrl": "https://github.com/cogwheel0/conduit/releases/tag/v4.1.4",
+        "releaseUrl": "https://github.com/cogwheel0/conduit/releases/tag/v4.1.5",
         "source": "github",
         "isPrerelease": false,
         "isDraft": false,
         "assets": [
           {
             "filename": "app-arm64-v8a-release.apk",
-            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-arm64-v8a-release.apk",
+            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-arm64-v8a-release.apk",
             "platform": "android",
             "architecture": "arm64",
             "fileType": "APK",
-            "size": 77845591,
-            "sha256": "1ff55c963065c4e5ccc1ff8f31e36eacc35f4faf8bf851693199e3bfd1cff356",
-            "downloads": 1697,
+            "size": 77753152,
+            "sha256": "bd5b74263acfe385674cf2cd7b422e5a0c61bc7cd5d4d691a5e068903a0a39e8",
+            "downloads": 348,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
             "filename": "app-armeabi-v7a-release.apk",
-            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-armeabi-v7a-release.apk",
+            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-armeabi-v7a-release.apk",
             "platform": "android",
             "architecture": "armv7",
             "fileType": "APK",
-            "size": 70339387,
-            "sha256": "31d949c6ef86dc8553ce7ab4a794a393096c95dd77c7074a9faaf36e643254ca",
-            "downloads": 21,
+            "size": 70197900,
+            "sha256": "72688c23fa7af11d15b39c38356098fdf6a5e5c9324621b2733c349839036b26",
+            "downloads": 1,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
             "filename": "app-release.aab",
-            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-release.aab",
+            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-release.aab",
             "platform": "android",
             "architecture": null,
             "fileType": "AAB",
-            "size": 172108069,
-            "sha256": "17d0254647ff56e6bf823da9227c7efd929e47af1d907d3267f5d4a48a323f42",
-            "downloads": 7,
+            "size": 171858907,
+            "sha256": "bcd22d86cf63bb1137693b031f34b78c961859417a61293756fb10e2391c8c6d",
+            "downloads": 1,
             "mimeType": "raw",
             "installable": true
           },
           {
             "filename": "app-x86_64-release.apk",
-            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-x86_64-release.apk",
+            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-x86_64-release.apk",
             "platform": "android",
             "architecture": "x86_64",
             "fileType": "APK",
-            "size": 83720927,
-            "sha256": "5a5f0f7c21b936f804e684ff4411a8ee94c3131d6ceb10be9db50922ea69b4c0",
-            "downloads": 15,
+            "size": 83563016,
+            "sha256": "9557e73be2702fbf6c4d2284a13057f89e7a5dca276379b9fca261abf058c14d",
+            "downloads": 0,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
             "filename": "conduit.ipa",
-            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/conduit.ipa",
+            "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 35794270,
-            "sha256": "8657f3cbe68a00f6b965581ccbd417f42ff525823c80335e5e8efdb5e371d811",
-            "downloads": 159,
+            "size": 35897764,
+            "sha256": "4b53fed15852eb3414f23df70dc8012abac6730a241a27e80f488e9be1b8da22",
+            "downloads": 0,
             "mimeType": "raw",
             "installable": true
           }
         ],
-        "sha256": "8657f3cbe68a00f6b965581ccbd417f42ff525823c80335e5e8efdb5e371d811",
-        "downloads": 159
+        "sha256": "4b53fed15852eb3414f23df70dc8012abac6730a241a27e80f488e9be1b8da22"
       }
     ],
-    "syncedAt": "2026-09-14",
+    "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 141,
+      "latencyMs": 212,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -2679,6 +2726,12 @@
         "reachable": true,
         "latencyMs": 141,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 212,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2731,7 +2784,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 152,
+      "latencyMs": 172,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -2801,6 +2854,12 @@
         "reachable": true,
         "latencyMs": 152,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 172,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2852,7 +2911,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 161,
+      "latencyMs": 183,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -3030,6 +3089,12 @@
         "reachable": true,
         "latencyMs": 161,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 183,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3118,7 +3183,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 126,
+      "latencyMs": 194,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -3296,6 +3361,12 @@
         "reachable": true,
         "latencyMs": 126,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 194,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3360,7 +3431,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 115,
+      "latencyMs": 185,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -3502,6 +3573,12 @@
         "reachable": true,
         "latencyMs": 115,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 185,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3566,7 +3643,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 114,
+      "latencyMs": 166,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -3708,6 +3785,12 @@
         "reachable": true,
         "latencyMs": 114,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 166,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3772,16 +3855,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 90,
+      "latencyMs": 167,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 106,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -3954,6 +4031,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 90,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 167,
         "detail": "HTTP 302"
       }
     ],
@@ -4152,7 +4235,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 152,
+      "latencyMs": 166,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -4330,6 +4413,12 @@
         "reachable": true,
         "latencyMs": 152,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 166,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -4380,7 +4469,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 151,
+      "latencyMs": 130,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -4515,6 +4604,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 151,
+        "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 130,
         "detail": "HTTP 200"
       }
     ],
@@ -4916,7 +5011,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 82,
+      "latencyMs": 162,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -5058,6 +5153,12 @@
         "reachable": true,
         "latencyMs": 82,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 162,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5109,7 +5210,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 145,
+      "latencyMs": 208,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -5179,6 +5280,12 @@
         "reachable": true,
         "latencyMs": 145,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 208,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5229,7 +5336,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 130,
+      "latencyMs": 106,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -5365,6 +5472,12 @@
         "reachable": true,
         "latencyMs": 130,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 106,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -5415,7 +5528,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 146,
+      "latencyMs": 124,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -5551,6 +5664,12 @@
         "reachable": true,
         "latencyMs": 146,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 124,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -5601,16 +5720,10 @@
       "reachable": true,
       "detail": "HTTP 200",
       "since": "2026-09-07",
-      "latencyMs": 207,
+      "latencyMs": 262,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 857,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -5784,6 +5897,12 @@
         "reachable": true,
         "latencyMs": 207,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 262,
+        "detail": "HTTP 200"
       }
     ],
     "lastResolvedSource": "altstore:https://repo.ikghd.me/repo.json",
@@ -5835,7 +5954,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 131,
+      "latencyMs": 88,
       "measuredAt": "2026-09-15",
       "since": "2026-09-11"
     },
@@ -5971,6 +6090,12 @@
         "reachable": true,
         "latencyMs": 131,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 88,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -6035,7 +6160,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 136,
+      "latencyMs": 192,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -6213,6 +6338,12 @@
         "reachable": true,
         "latencyMs": 136,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 192,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6289,16 +6420,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 113,
+      "latencyMs": 199,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 107,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -6472,6 +6597,12 @@
         "reachable": true,
         "latencyMs": 113,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 199,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:XITRIX/iTorrent",
@@ -6585,7 +6716,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 111,
+      "latencyMs": 178,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -6763,6 +6894,12 @@
         "reachable": true,
         "latencyMs": 111,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 178,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6814,7 +6951,7 @@
             "fileType": "APK",
             "size": 108612022,
             "sha256": "d89ffb0f4c7d73099b4227f04599fa24fb9fbc85618d72797c8bba6b55921460",
-            "downloads": 27,
+            "downloads": 33,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -6886,7 +7023,7 @@
             "fileType": "APK",
             "size": 31553916,
             "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-            "downloads": 169,
+            "downloads": 185,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -6922,7 +7059,7 @@
             "fileType": "APK",
             "size": 88506651,
             "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-            "downloads": 64,
+            "downloads": 67,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -6934,20 +7071,20 @@
             "fileType": "IPA",
             "size": 14640159,
             "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-            "downloads": 56,
+            "downloads": 60,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-        "downloads": 56
+        "downloads": 60
       }
     ],
     "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 146,
+      "latencyMs": 164,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -7017,6 +7154,12 @@
         "reachable": true,
         "latencyMs": 146,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 164,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -7069,7 +7212,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 110,
+      "latencyMs": 170,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -7139,6 +7282,12 @@
         "reachable": true,
         "latencyMs": 110,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 170,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -7203,16 +7352,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 163,
+      "latencyMs": 162,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 90,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -7386,6 +7529,12 @@
         "reachable": true,
         "latencyMs": 163,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 162,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:LiveContainer/LiveContainer",
@@ -7498,7 +7647,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 119,
+      "latencyMs": 183,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -7676,6 +7825,12 @@
         "reachable": true,
         "latencyMs": 119,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 183,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -7696,195 +7851,195 @@
     "lastResolvedSource": "github:kodjodevf/mangayomi",
     "versions": [
       {
-        "version": "0.9.3",
-        "date": "2026-09-14",
-        "localizedDescription": "Mangayomi 0.9.3 | Mangayomi-v0.9.3-ios\n\n## What's Changed\n* feat: refresh the library on a schedule by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/975\n* fix(player): persist completed episodes before navigation by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/979\n* fix(downloads): preserve queue and select the next unread chapters by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/978\n* Fixes memory and bugs where it would lag over time by @not-akari in https://github.com/kodjodevf/mangayomi/pull/977\n* fix: keep Discord chapter presence current by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/981\n* fix: decode current VOE video payloads by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/982\n* fix(restore): preserve Kotatsu category assignments by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/983\n* fix(player): retire native video surfaces safely by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/984\n* fix(download): harden workers and HLS recovery by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/985\n* fix(reader): sort local pages naturally by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/986\n* fix(library): keep read titles last in unread sort by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/988\n* fix(reader): make bulk read actions uniform by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/989\n* fix(player): preserve shortcuts when controls hide by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/990\n* fix(linux): fall back when Documents lookup fails by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/994\n* Rework API Sync Server by @not-akari in https://github.com/kodjodevf/mangayomi/pull/976\n* feat: redesign anime player by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/980\n* Add Korean translation by @jang-geon in https://github.com/kodjodevf/mangayomi/pull/1000\n* feat(l10n): complete Korean translation by @Abdellox in https://github.com/kodjodevf/mangayomi/pull/1004\n* fix(player): preserve local file URIs by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/987\n* fix(player): fall back from unsupported audio tracks by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/991\n* fix(repositories): await extension repository writes by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/993\n\n## New Contributors\n* @1Selxo made their first contribution in https://github.com/kodjodevf/mangayomi/pull/979\n* @jang-geon made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1000\n* @Abdellox made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1004\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.2...v0.9.3",
-        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
-        "size": 114239272,
+        "version": "0.9.4",
+        "date": "2026-09-15",
+        "localizedDescription": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
+        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
+        "size": 114238780,
         "minOSVersion": "15.0",
-        "releaseUrl": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.3",
+        "releaseUrl": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.4",
         "source": "github",
         "isPrerelease": false,
         "isDraft": false,
         "assets": [
           {
-            "filename": "Mangayomi-v0.9.3-android-arm64-v8a.apk",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-arm64-v8a.apk",
+            "filename": "Mangayomi-v0.9.4-android-arm64-v8a.apk",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-arm64-v8a.apk",
             "platform": "android",
             "architecture": "arm64",
             "fileType": "APK",
-            "size": 55175900,
-            "sha256": "2318d88f3c407da7239b4449ffed844314bb99798652eafdb73dd59afd4f68ac",
-            "downloads": 314,
+            "size": 55175908,
+            "sha256": "24a1309ec897b631b61be5d5b22ed3d222eeb3a2c24a9ee91084aff560ce2a23",
+            "downloads": 65,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-android-armeabi-v7a.apk",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-armeabi-v7a.apk",
+            "filename": "Mangayomi-v0.9.4-android-armeabi-v7a.apk",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-armeabi-v7a.apk",
             "platform": "android",
             "architecture": "armv7",
             "fileType": "APK",
-            "size": 54425118,
-            "sha256": "58099ded3eaeda3153cdf2f8aaed461e47be97beb3cc998946bf3eba3bda6130",
-            "downloads": 19,
+            "size": 54425290,
+            "sha256": "8902b11f6902dc035909538e758959913a68a02dcaf6d75f5a73c352e838ad04",
+            "downloads": 1,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-android-tv-arm64-v8a.apk",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-tv-arm64-v8a.apk",
+            "filename": "Mangayomi-v0.9.4-android-tv-arm64-v8a.apk",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-arm64-v8a.apk",
             "platform": "android",
             "architecture": "arm64",
             "fileType": "APK",
-            "size": 55195072,
-            "sha256": "d77c2ece3cf79644430261f6d22f39ce2b28ce82ed9fbea3c1d359167042b0bb",
-            "downloads": 16,
+            "size": 55195080,
+            "sha256": "72064d6d10286ccdbdfaa81af0a367c458eb9761d8ef12b4c8ef4c52d5fe49c1",
+            "downloads": 2,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-android-tv-armeabi-v7a.apk",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-tv-armeabi-v7a.apk",
+            "filename": "Mangayomi-v0.9.4-android-tv-armeabi-v7a.apk",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-armeabi-v7a.apk",
             "platform": "android",
             "architecture": "armv7",
             "fileType": "APK",
-            "size": 54444290,
-            "sha256": "011938eccc2b0b81c0b4bbe2f11aeb5d3fc3e48c9a94c7f7c746258c0077f7a8",
-            "downloads": 5,
+            "size": 54444462,
+            "sha256": "8c460b816b42c977da3a9ba71fbfb8f9b9dfc3c9558c8d6f691a435ea739dc6e",
+            "downloads": 1,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-android-tv-x86_64.apk",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-tv-x86_64.apk",
+            "filename": "Mangayomi-v0.9.4-android-tv-x86_64.apk",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-x86_64.apk",
             "platform": "android",
             "architecture": "x86_64",
             "fileType": "APK",
-            "size": 57292927,
-            "sha256": "77a069af55ff60a131b65f0b6dab8b20905ad4f31a4430128826e8d1543402bb",
-            "downloads": 3,
+            "size": 57293035,
+            "sha256": "ffd9c27c3e2e3c0991e5d231dc8b6deb692b84b14c3b4a36703bd0c78226e170",
+            "downloads": 0,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-android-x86_64.apk",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-x86_64.apk",
+            "filename": "Mangayomi-v0.9.4-android-x86_64.apk",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-x86_64.apk",
             "platform": "android",
             "architecture": "x86_64",
             "fileType": "APK",
-            "size": 57273755,
-            "sha256": "9301a1d52d3027e86337bea2dfe54952fe8110204cc9bceb5f11c74ed83480a0",
-            "downloads": 5,
+            "size": 57273863,
+            "sha256": "e04e0898171313ee9bb639226f81db8d1af43f16b67ad572d3cbfa6bec2f3665",
+            "downloads": 1,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-ios.ipa",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
+            "filename": "Mangayomi-v0.9.4-ios.ipa",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 114239272,
-            "sha256": "ea39263589ec421f8e21d3466ad0fe5ff51206542b5248707c2ab44984883c6a",
-            "downloads": 58,
+            "size": 114238780,
+            "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
+            "downloads": 8,
             "mimeType": "raw",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-linux.AppImage",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.AppImage",
+            "filename": "Mangayomi-v0.9.4-linux.AppImage",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.AppImage",
             "platform": "linux",
             "architecture": null,
             "fileType": "AppImage",
             "size": 182995448,
-            "sha256": "509dc693294fd9ddc0ded93bf85383a061d26477826b09c0bccf9aeb9c2ab341",
-            "downloads": 5,
+            "sha256": "f8404c44b3f63d14ee73090f13659ef8e4e769833d02218fc5f1d9747128759f",
+            "downloads": 3,
             "mimeType": "raw",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-linux.deb",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.deb",
+            "filename": "Mangayomi-v0.9.4-linux.deb",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.deb",
             "platform": "linux",
             "architecture": null,
             "fileType": "DEB",
-            "size": 34301682,
-            "sha256": "c3cab9eb6004cab4c4f555b230c13ea04592e98112b443c4f0aa8125c3b161f2",
-            "downloads": 3,
+            "size": 34302242,
+            "sha256": "13b13b960610e05e325c42e8c7af853976f135b143adc8b076b9918a72731229",
+            "downloads": 0,
             "mimeType": "raw",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-linux.rpm",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.rpm",
+            "filename": "Mangayomi-v0.9.4-linux.rpm",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.rpm",
             "platform": "linux",
             "architecture": null,
             "fileType": "other",
-            "size": 41787737,
-            "sha256": "f1af28a738451a35bc92920a556bf8d0e18cfc9d0f6d6ec82da7902bf87e02a0",
-            "downloads": 2,
+            "size": 41787386,
+            "sha256": "e8b87eebdf5275dea7ac311a7dca53ec3dfac9dad3a5a63671c8e4c6f0240f48",
+            "downloads": 0,
             "mimeType": "raw",
             "installable": false
           },
           {
-            "filename": "Mangayomi-v0.9.3-linux.zip",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.zip",
+            "filename": "Mangayomi-v0.9.4-linux.zip",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.zip",
             "platform": "linux",
             "architecture": null,
             "fileType": "ZIP",
-            "size": 41981883,
-            "sha256": "fdf08eba488b6f9f140363abe581d5e8145df81d624f42739f07fe2cfe026954",
-            "downloads": 3,
+            "size": 41982342,
+            "sha256": "46ed609c2a680899bbffcd9f4f8cc7655f3e831fb3b2df2fd840543b4b57f026",
+            "downloads": 0,
             "mimeType": "raw",
             "installable": false
           },
           {
-            "filename": "Mangayomi-v0.9.3-macos.dmg",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-macos.dmg",
+            "filename": "Mangayomi-v0.9.4-macos.dmg",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-macos.dmg",
             "platform": "macos",
             "architecture": null,
             "fileType": "DMG",
-            "size": 122087376,
-            "sha256": "3241cb02f9daf3b772ac26aaa01350baef672bf4fef54f4d2c926340e01f283d",
-            "downloads": 6,
+            "size": 122087840,
+            "sha256": "a3b27413d4fadd52cb222415c5d0906a1fd4229e676c24ebab55e8e99332611b",
+            "downloads": 2,
             "mimeType": "raw",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-windows.exe",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-windows.exe",
+            "filename": "Mangayomi-v0.9.4-windows.exe",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-windows.exe",
             "platform": "windows",
             "architecture": null,
             "fileType": "EXE",
-            "size": 69611741,
-            "sha256": "cbac21108e1d3e7ca552b7fff875f50e119bda403c4ec2bad23102ae0c21ac1f",
-            "downloads": 52,
+            "size": 69609569,
+            "sha256": "62cdc446629b7c044412dbb0bf3ba7316a4121ac6f41fb505d52af979027bb2d",
+            "downloads": 9,
             "mimeType": "raw",
             "installable": true
           },
           {
-            "filename": "Mangayomi-v0.9.3-windows.zip",
-            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-windows.zip",
+            "filename": "Mangayomi-v0.9.4-windows.zip",
+            "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-windows.zip",
             "platform": "windows",
             "architecture": null,
             "fileType": "ZIP",
-            "size": 95552088,
-            "sha256": "366ee7bebc01f59bc1ea4d9ef46e2a1190fa3e2434d792ba10a0fd5b9b765acc",
-            "downloads": 27,
+            "size": 95552072,
+            "sha256": "0cbb971c269a4cdfde2a3edcf57e7d0e66b3beaf4a2dde1724309633e0e1ed18",
+            "downloads": 3,
             "mimeType": "raw",
             "installable": false
           }
         ],
-        "sha256": "ea39263589ec421f8e21d3466ad0fe5ff51206542b5248707c2ab44984883c6a",
-        "downloads": 58
+        "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
+        "downloads": 8
       }
     ],
-    "syncedAt": "2026-09-14",
+    "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 124,
+      "latencyMs": 142,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -7954,6 +8109,12 @@
         "reachable": true,
         "latencyMs": 124,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 142,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -8006,7 +8167,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 173,
+      "latencyMs": 190,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -8148,6 +8309,12 @@
         "reachable": true,
         "latencyMs": 173,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 190,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -8186,13 +8353,13 @@
             "fileType": "IPA",
             "size": 106420283,
             "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
-            "downloads": 446,
+            "downloads": 477,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
-        "downloads": 446
+        "downloads": 477
       }
     ],
     "syncedAt": "2026-09-15",
@@ -8200,16 +8367,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 143,
+      "latencyMs": 200,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 105,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -8383,6 +8544,12 @@
         "reachable": true,
         "latencyMs": 143,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 200,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Mark02-2012/MaxMusic",
@@ -8434,13 +8601,13 @@
             "fileType": "IPA",
             "size": 133357787,
             "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-            "downloads": 181,
+            "downloads": 185,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-        "downloads": 181
+        "downloads": 185
       }
     ],
     "syncedAt": "2026-09-15",
@@ -8448,16 +8615,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 162,
+      "latencyMs": 238,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 128,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -8631,6 +8792,12 @@
         "reachable": true,
         "latencyMs": 162,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 238,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Ashreq/ashstore-repo",
@@ -8682,7 +8849,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 133,
+      "latencyMs": 129,
       "measuredAt": "2026-09-15",
       "since": "2026-09-11"
     },
@@ -8818,6 +8985,12 @@
         "reachable": true,
         "latencyMs": 133,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 129,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -8888,7 +9061,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 146,
+      "latencyMs": 193,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -9066,6 +9239,12 @@
         "reachable": true,
         "latencyMs": 146,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 193,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9166,7 +9345,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 161,
+      "latencyMs": 204,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -9236,6 +9415,12 @@
         "reachable": true,
         "latencyMs": 161,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 204,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9286,7 +9471,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 121,
+      "latencyMs": 98,
       "measuredAt": "2026-09-15",
       "since": "2026-09-11"
     },
@@ -9422,6 +9607,12 @@
         "reachable": true,
         "latencyMs": 121,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 98,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -9481,7 +9672,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 145,
+      "latencyMs": 198,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -9551,6 +9742,12 @@
         "reachable": true,
         "latencyMs": 145,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 198,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9615,7 +9812,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 158,
+      "latencyMs": 185,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -9685,6 +9882,12 @@
         "reachable": true,
         "latencyMs": 158,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 185,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9749,7 +9952,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 147,
+      "latencyMs": 202,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -9927,6 +10130,12 @@
         "reachable": true,
         "latencyMs": 147,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 202,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9977,7 +10186,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 135,
+      "latencyMs": 122,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -10113,6 +10322,12 @@
         "reachable": true,
         "latencyMs": 135,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 122,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -10164,7 +10379,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 106,
+      "latencyMs": 210,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -10306,6 +10521,12 @@
         "reachable": true,
         "latencyMs": 106,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 210,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -10406,7 +10627,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 145,
+      "latencyMs": 173,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -10475,6 +10696,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 145,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 173,
         "detail": "HTTP 302"
       }
     ],
@@ -10600,7 +10827,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 172,
+      "latencyMs": 185,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -10669,6 +10896,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 172,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 185,
         "detail": "HTTP 302"
       }
     ],
@@ -10842,7 +11075,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 107,
+      "latencyMs": 182,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -10911,6 +11144,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 107,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 182,
         "detail": "HTTP 302"
       }
     ],
@@ -11072,7 +11311,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 75,
+      "latencyMs": 165,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -11250,6 +11489,12 @@
         "reachable": true,
         "latencyMs": 75,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 165,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -11314,16 +11559,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 166,
+      "latencyMs": 200,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 112,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -11497,6 +11736,12 @@
         "reachable": true,
         "latencyMs": 166,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 200,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Provenance-Emu/Provenance",
@@ -11573,7 +11818,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 115,
+      "latencyMs": 188,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -11642,6 +11887,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 115,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 188,
         "detail": "HTTP 302"
       }
     ],
@@ -11719,7 +11970,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 123,
+      "latencyMs": 214,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -11897,6 +12148,12 @@
         "reachable": true,
         "latencyMs": 123,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 214,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -11949,7 +12206,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 144,
+      "latencyMs": 182,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -12127,6 +12384,12 @@
         "reachable": true,
         "latencyMs": 144,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 182,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12263,7 +12526,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 120,
+      "latencyMs": 225,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -12441,6 +12704,12 @@
         "reachable": true,
         "latencyMs": 120,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 225,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12475,7 +12744,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 98,
+      "latencyMs": 210,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -12611,6 +12880,12 @@
         "reachable": true,
         "latencyMs": 98,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 210,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12687,7 +12962,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 97,
+      "latencyMs": 178,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -12823,6 +13098,12 @@
         "reachable": true,
         "latencyMs": 97,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 178,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12873,7 +13154,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 116,
+      "latencyMs": 112,
       "measuredAt": "2026-09-15",
       "since": "2026-09-11"
     },
@@ -13009,6 +13290,12 @@
         "reachable": true,
         "latencyMs": 116,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 112,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -13067,7 +13354,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 286,
+      "latencyMs": 460,
       "measuredAt": "2026-09-15",
       "since": "2026-09-14"
     },
@@ -13209,6 +13496,12 @@
         "reachable": true,
         "latencyMs": 286,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 460,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -13260,7 +13553,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 317,
+      "latencyMs": 430,
       "measuredAt": "2026-09-15",
       "since": "2026-09-14"
     },
@@ -13401,6 +13694,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 317,
+        "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 430,
         "detail": "HTTP 200"
       }
     ],
@@ -13562,7 +13861,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 142,
+      "latencyMs": 194,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -13740,6 +14039,12 @@
         "reachable": true,
         "latencyMs": 142,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 194,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -13840,7 +14145,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 98,
+      "latencyMs": 179,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -13982,6 +14287,12 @@
         "reachable": true,
         "latencyMs": 98,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 179,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14033,7 +14344,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 151,
+      "latencyMs": 177,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -14175,6 +14486,12 @@
         "reachable": true,
         "latencyMs": 151,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 177,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14251,16 +14568,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 157,
+      "latencyMs": 165,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 134,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -14434,6 +14745,12 @@
         "reachable": true,
         "latencyMs": 157,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 165,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:SideStore/SideStore",
@@ -14487,7 +14804,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 147,
+      "latencyMs": 186,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -14665,6 +14982,12 @@
         "reachable": true,
         "latencyMs": 147,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 186,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14715,7 +15038,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 142,
+      "latencyMs": 117,
       "measuredAt": "2026-09-15",
       "since": "2026-09-11"
     },
@@ -14851,6 +15174,12 @@
         "reachable": true,
         "latencyMs": 142,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 117,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -14934,16 +15263,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 132,
+      "latencyMs": 168,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 82,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -15116,6 +15439,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 132,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 168,
         "detail": "HTTP 302"
       }
     ],
@@ -15338,7 +15667,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 132,
+      "latencyMs": 157,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -15516,6 +15845,12 @@
         "reachable": true,
         "latencyMs": 132,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 157,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -15568,16 +15903,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 117,
+      "latencyMs": 165,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 85,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -15751,6 +16080,12 @@
         "reachable": true,
         "latencyMs": 117,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 165,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:StikDebug/StikDebug",
@@ -15803,7 +16138,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 140,
+      "latencyMs": 215,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -15981,6 +16316,12 @@
         "reachable": true,
         "latencyMs": 140,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 215,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16020,7 +16361,7 @@
             "fileType": "APK",
             "size": 197174334,
             "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-            "downloads": 10743,
+            "downloads": 10756,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -16032,7 +16373,7 @@
             "fileType": "APK",
             "size": 191577143,
             "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-            "downloads": 1429,
+            "downloads": 1432,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -16068,20 +16409,20 @@
             "fileType": "IPA",
             "size": 53931137,
             "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-            "downloads": 181,
+            "downloads": 185,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-        "downloads": 181
+        "downloads": 185
       }
     ],
     "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 104,
+      "latencyMs": 197,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -16259,6 +16600,12 @@
         "reachable": true,
         "latencyMs": 104,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 197,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16309,7 +16656,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 117,
+      "latencyMs": 113,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -16445,6 +16792,12 @@
         "reachable": true,
         "latencyMs": 117,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 113,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -16528,7 +16881,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 141,
+      "latencyMs": 213,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -16598,6 +16951,12 @@
         "reachable": true,
         "latencyMs": 141,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 213,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16649,7 +17008,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 87,
+      "latencyMs": 185,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -16790,6 +17149,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 87,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 185,
         "detail": "HTTP 302"
       }
     ],
@@ -16977,6 +17342,12 @@
         "reachable": true,
         "latencyMs": 108,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -17027,7 +17398,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 137,
+      "latencyMs": 97,
       "measuredAt": "2026-09-15",
       "since": "2026-09-11"
     },
@@ -17163,6 +17534,12 @@
         "reachable": true,
         "latencyMs": 137,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -17258,7 +17635,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 146,
+      "latencyMs": 188,
       "measuredAt": "2026-09-15",
       "since": "2026-09-13"
     },
@@ -17328,6 +17705,12 @@
         "reachable": true,
         "latencyMs": 146,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 188,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -17378,16 +17761,10 @@
       "reachable": true,
       "detail": "HTTP 200",
       "since": "2026-09-07",
-      "latencyMs": 199,
+      "latencyMs": 269,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 163,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -17561,6 +17938,12 @@
         "reachable": true,
         "latencyMs": 199,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 269,
+        "detail": "HTTP 200"
       }
     ],
     "lastResolvedSource": "altstore:https://repo.ikghd.me/repo.json",
@@ -17612,7 +17995,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 115,
+      "latencyMs": 111,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -17748,6 +18131,12 @@
         "reachable": true,
         "latencyMs": 115,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 111,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -17794,7 +18183,7 @@
             "fileType": "IPA",
             "size": 143381478,
             "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-            "downloads": 452,
+            "downloads": 456,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -17806,20 +18195,20 @@
             "fileType": "IPA",
             "size": 152372292,
             "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-            "downloads": 1019,
+            "downloads": 1032,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-        "downloads": 1019
+        "downloads": 1032
       }
     ],
     "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 146,
+      "latencyMs": 219,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -17997,6 +18386,12 @@
         "reachable": true,
         "latencyMs": 146,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 219,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18048,7 +18443,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 147,
+      "latencyMs": 188,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -18190,6 +18585,12 @@
         "reachable": true,
         "latencyMs": 147,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 188,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18207,6 +18608,36 @@
   },
   "updateHistory": [
     {
+      "appId": "ytmusic",
+      "name": "YTMusicUltimate",
+      "version": "9.37.2",
+      "previousVersion": "9.36.1",
+      "releaseDate": "2026-09-15",
+      "downloadUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
+      "changelog": "YTMusicUltimate 9.37.2 | YTMusic 2.4.1 | YTMusicUltimate_9.37.2_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
+      "kind": "updated"
+    },
+    {
+      "appId": "mangayomi",
+      "name": "Mangayomi",
+      "version": "0.9.4",
+      "previousVersion": "0.9.3",
+      "releaseDate": "2026-09-15",
+      "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
+      "changelog": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
+      "kind": "updated"
+    },
+    {
+      "appId": "conduit",
+      "name": "Conduit",
+      "version": "4.1.5",
+      "previousVersion": "4.1.4",
+      "releaseDate": "2026-09-15",
+      "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
+      "changelog": "Conduit 4.1.5 | conduit\n\n## What's Changed\n* Fix native toolbar, Apple gating, streaming cadence, and wakelock regressions by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/718\n* Fix ten reported issues and vendor Hermes Agent as an API reference by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/725\n* Support Open WebUI shared folders by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/726\n* Upgrade all packages, add notification settings link and Ollama thinking replay by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/727\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5",
+      "kind": "updated"
+    },
+    {
       "appId": "ytkp",
       "name": "YTKillerPlus",
       "version": "21.37.4",
@@ -18220,9 +18651,9 @@
       "appId": "youpro",
       "name": "YouPro",
       "version": "21.37.4",
-      "previousVersion": "21.36.6",
+      "previousVersion": "21.37.4",
       "releaseDate": "2026-09-14",
-      "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa",
+      "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.37.4_1.3.1.ipa",
       "changelog": "YouTube 21.37.4 | YouProExtra_21.37.4_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. \n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
       "kind": "updated"
     },
@@ -19175,36 +19606,6 @@
       "downloadUrl": "https://github.com/thunder-app/thunder/releases/download/0.8.6/thunder-v0.8.6.ipa",
       "changelog": "Thunder 0.8.6 | thunder-v0.8.6\n\nHey everyone! Sorry for the back-to-back releases again. This hotfix fixes another issue related to grey screens when navigating to comments from the inbox or user profile. As always, if you encounter any issues or have feedback, please share them with the Thunder community or on GitHub.\n\nIf you're enjoying Thunder and would like to show some support, star this project on GitHub! This helps gain visibility for the project and allows more contributors to help with the continued development of Thunder. If you'd like to show some appreciation, you can sponsor me on [GitHub](https://github.com/sponsors/hjiangsu) or donate via [Liberapay](https://en.liberapay.com/hjiangsu/) or [Ko-fi](https://ko-fi.com/hjiangsu).\n\nWe have a [Matrix space](https://matrix.to/#/#thunderapp:matrix.org) if you would like to join in on discussions!\n\n---\n\n## Fixes\n* Fixed grey screen when navigating to comment by @hjiangsu in #2029\n\n**Full Changelog**: https://github.com/thunder-app/thunder/compare/0.8.5...0.8.6",
       "kind": "new"
-    },
-    {
-      "appId": "utm",
-      "name": "UTM",
-      "version": "4.7.5",
-      "previousVersion": null,
-      "releaseDate": "2026-01-03T17:51:54Z",
-      "downloadUrl": "https://github.com/utmapp/UTM/releases/download/v4.7.5/UTM.ipa",
-      "changelog": "UTM 4.7.5 | Universal IPA\n\n## Highlights\n* **QEMU v10.0.2**: The backend has been updated to the latest upstream QEMU which brings with it a variety of bug fixes and performance improvements.\n* **Liquid Glass**: UTM adopts the Liquid Glass design on *OS 26.\n* **App Intents**: New support for automation with Shortcuts.\n* **Keyboard Shortcuts**: Define custom key combinations (such as Ctrl+Alt+Del) that can be sent to the VM from the new Keyboard menu.\n* **Improved Wizard**: Simplify the creation of emulated machines by selecting from a list of well-supported configurations. The updated wizard can create more working configurations such as RISC-V64 Ubuntu, classic Mac OS 8.x/9.x, and Windows 95/98.\n\n## Changes (v4.7.5)\n* Fixed some rare conditions that could lead to a VM fail to start and spin infinitely\n* Fixed some rare crashes that can happen after a VM stops\n* Fixed parsing of file paths with commas in the name (thanks @nikolan123)\n* ANGLE: Fixed a memory leak issue in the GLES backend (#7546) (thanks @cnnn)\n* ANGLE: Fixed a memory leak issue in the Metal backend (#4958)\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (macOS) Fixed App Intents on macOS 26 (#7412) (thanks @peterneutron)\n* (macOS) Fixed an error when file locking is disabled and a removable drive with no image selected is started (#7527)\n* (macOS) AVF: Fixed shared directory disconnecting when window is resized (#7488) (thanks @evan314159)\n* Hotfix: (1/3/25) An earlier release of v4.7.5 has an issue that prevented VMs from starting. Make sure you are on build 118.\n\n## Changes (v4.7.4)\n* (macOS) Fixed a crash on VM start when a toolbar menu was reinitialized (note v4.7.4 was re-released to address this) (#7408)\n* Home: Fixed layout issue with button titles\n* (macOS) Fixed a crash when VM exits while USB is active\n* (iOS) Support for StikDebug on iOS 26 (non-SE only)\n\n## Changes (v4.7.3)\n* Fixed a crash when starting a VM results in a block device error\n* Stop button can now be used a second time to force kill a VM if it is unresponsive after stopping for the first time\n* libusb: Fixed multiple race conditions that caused crashes when using USB capture\n* CocoaSpice: Fixed multiple race conditions that caused crashes during VM start\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (macOS) Scripting: Fixed broken commands due to name collision (#7360)\n* (macOS) Fixed crash when exiting full screen (#7377)\n\n## Changes (v4.7.2)\n* (macOS) AVF: Fixed a crash when starting any Apple Virtualization VM (#7355) (We are re-releasing v4.7.2 with build 112 due to this critical bug.)\n* Home: Display network details and active IP addresses on the home details screen (thanks @gabefair)\n* Home: Show a security warning message when importing a .utm with custom arguments (#6252)\n* Config: Option to reset UEFI without pre-loading Secure Boot keys (useful for custom TPM configurations) (#7005)\n* Config: Pre-loading Secure Boot keys will now install Microsoft UEFI 2023 certificates (#7257)\n* Config: When PS/2 device is enabled, no longer create USB mouse and keyboard devices. This allows older Windows install to work out of the box.\n* Config: Quotes in custom arguments are no longer stripped (unless the only quotes wrap the entire argument) (#6343)\n* Config: Provide a fixed serial number for VirtIO block devices (#7332)\n* QEMU: Fixed an issue which causes Windows 98 to BSoD (#7342)\n* QEMU: Do not create a default floppy drive when -nodefaults is used. UTM configuration will set up a FDC device and this is the only way to set up bootindex for floppy.\n* Wizard: Legacy Windows configurations will now use PS/2 controller by default\n* Wizard: Update OS logos to be consistent with other icons\n* Wizard: Windows + i440fx hardware will now instantiate default devices (sound, VGA, networking) that should work with Windows 95/98\n* Wizard: Add additional supported hardware configurations for running older Windows\n* Wizard: Support floppy boot for Windows configuration\n* Scripting: New input automation suite for sending keyboard and mouse input (#6462)\n* USB: Fixed a rare crash when initializing the USB devices list (#5811)\n* SPICE: Fixed an issue where monitor configuration sent to spice-vdagent contains an invalid size (#5832)\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (iOS) Toolbar: Fix foreground issue on iOS 26 beta 5 and higher\n* (macOS) Added ability to auto-connect USB devices on start (#3400)\n* (macOS) Fixed connecting USB devices from secondary windows\n* (macOS) New \"Virtual Machine\" menu which mirrors the actions accessible through the toolbar\n* (macOS) Keyboard Shortcuts toolbar icon is no longer shown by default (it can be placed on the toolbar through View -> Customize Toolbar). It is also accessible through the \"Virtual Machine\" menu.\n* (macOS) Fixed sending simultaneous mouse button presses (#7068)\n* (macOS) utmctl: Add `version` command to detect current UTM version\n* (macOS) Settings: New option to disable key swapping on ISO keyboards (#6976)\n* (macOS) Settings: New option to randomize network MAC addresses on clone (#7035)\n\n## Changes (v4.7.1)\n* New Liquid Glass icon thanks to @forcequitOS\n* Added App Intents for VM operations (#6245)\n* Added UEFI boot support for RISC-V64 and LoongArch64. This allows Ubuntu for RISC-V64 to work out of the box. (#7183)\n* QEMU PPC: Disable `bootindex` when `boot-device` is used in prom-env. This allows Yellow Dog Linux for PPC to work out of the box. (#6436)\n* QEMU x86_64: Fixed floppy boot order configuration for other PC models (isapc, i440fx) (#7166)\n* QEMU PPC/M68K: Includes classicvirtio drivers to support cursor input without capture and directory sharing (#6520)\n* QEMU M68K: Fixed virtio drive config (#7008)\n* Fixed a rare crash after stopping VM due to a race condition in libusb\n* Home: improve screenshot contrast in Dark Mode (#6894)\n* Config: Fixed a crash when trying to enter a large size value when creating a new drive (#7295)\n* Config: Corrected the default host IP address in port forwarding config to \"0.0.0.0\" when it incorrectly displayed \"127.0.0.1\" (#7132)\n* Keyboard Shortcuts: Create custom combinations of keyboard shortcuts from either Settings -> Input or via the Keyboard icon in the VM (press and hold on iOS/visionOS). This will allow you to easily send key commands such as Ctrl+Alt+Del or Stop+A to the VM. (#5698, #6310, #6757)\n* Wizard: New option to import an existing drive image when setting up a Linux VM. This allows Ubuntu for RISC-V64 to work out of the box. (#7183)\n* Wizard: New option to create a serial port only Linux VM. This allows Ubuntu for RISC-V64 to work out of the box. (#7183)\n* Wizard: Removed VHDX import option because Microsoft now provides ARM64 ISO images. Note: You can still create manually import an VHDX after creating a new VM.\n* Wizard: New template to create classic Mac OS VMs for M68K and PPC (#3504, #6890)\n* Wizard: Most common and supported machines for emulation are now listed prominently with the full list of supported QEMU architectures/targets hidden behind an \"Expert\" mode. This is necessary because most of the QEMU targets are not properly supported by the wizard anyways and does not generate a bootable config. They usually require a lot more manual tinkering. The page order of the wizard is also tweaked so the hardware config comes before the boot config now.\n* Localization: Updated Chinese (Hong Kong, Simplified) (thanks @changanmoon)\n* (iOS SE) Fixed a crash when launching ArchLinux due to mis-handling of REV32\n* (iOS SE) Fixed a crash when the first instruction executed is a goto\n* (iOS SE) Removed ARM32, RISC-V32, and added M68K. There is little use for ARM32 and RISC-V32 as they cannot boot anything useful that cannot also be booted by the 64-bit variant (which is still included). If you have a counter example of this, please open an issue on GitHub and we can consider re-adding it back in the future. However, removing these will …",
-      "kind": "new"
-    },
-    {
-      "appId": "neofreebird",
-      "name": "NeoFreeBird",
-      "version": "2.2",
-      "previousVersion": null,
-      "releaseDate": "2025-11-03",
-      "downloadUrl": "https://github.com/NeoFreeBird/app/releases/download/2.2/NeoFreeBird-2.2-Twitter-11.35-noFixTwitterLogin.ipa",
-      "changelog": "Twitter 2.2 | NeoFreeBird-2.2-Twitter-11.35-noFixTwitterLogin\n\nNeoFreeBird is a modified Twitter app with branding reverts, BHTwitter and other QoL modifications. It also seems to be faster compared to the official Twitter app, which says something.\n\n### Change log:\n\n**Twitter, version 11.35:**\n- Updated the Twitter build to 11.35\n\n**NeoFreeBird, version 2.2:**\n- Fixed log in issues using new sign in flow (you can only sign in to one account at once but better than nothing) [#78]\n- Localized the Post > Tweet replacer\n- Improved the Open in Twitter extension\n- Minor bug fixes and other minor improvements\n\nThere are two versions, one with FixTwitterLogin dylib (standard) and one without. Try the regular one first, and if you’re unable to install it, try the one without. Both have the new sign in flow, the one with FixTwitterLogin just has the same dylib injected as 2.1 rev 2 to trick Attestation in some cases, allowing some users to sign in to multiple accounts. It works for some and not for others.\n\nIf you are already signed in to two accounts, you will still stay signed in to them, you just can't add more.",
-      "kind": "new"
-    },
-    {
-      "appId": "qbitconnect",
-      "name": "qBitConnect",
-      "version": "1.6.6",
-      "previousVersion": null,
-      "releaseDate": "2025-11-02",
-      "downloadUrl": "https://github.com/RajnishOne/qbitconnect/releases/download/v1.6.6/qBitConnect.ipa",
-      "changelog": "qBitConnect 1.6.6 | qBitConnect\n\nThis release includes:\n• Minor improvements and bug fixes\n• UI Enhancements",
-      "kind": "new"
     }
   ],
   "utm": {
@@ -19340,16 +19741,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 90,
+      "latencyMs": 140,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 68,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -19523,6 +19918,12 @@
         "reachable": true,
         "latencyMs": 90,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 140,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:utmapp/UTM",
@@ -19559,16 +19960,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 471,
+      "latencyMs": 425,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 450,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -19741,6 +20136,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 471,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 425,
         "detail": "HTTP 302"
       }
     ],
@@ -19975,7 +20376,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 149,
+      "latencyMs": 221,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -20153,6 +20554,12 @@
         "reachable": true,
         "latencyMs": 149,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 221,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20325,7 +20732,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 125,
+      "latencyMs": 197,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -20503,6 +20910,12 @@
         "reachable": true,
         "latencyMs": 125,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 197,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20554,16 +20967,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 128,
+      "latencyMs": 195,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 110,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -20737,6 +21144,12 @@
         "reachable": true,
         "latencyMs": 128,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 195,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:lo-cafe/winston",
@@ -20826,7 +21239,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 78,
+      "latencyMs": 197,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -20968,6 +21381,12 @@
         "reachable": true,
         "latencyMs": 78,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 197,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -21043,7 +21462,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 187,
+      "latencyMs": 173,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -21221,6 +21640,12 @@
         "reachable": true,
         "latencyMs": 187,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 173,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -21259,13 +21684,13 @@
             "fileType": "IPA",
             "size": 129607592,
             "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-            "downloads": 74,
+            "downloads": 100,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-        "downloads": 74
+        "downloads": 100
       }
     ],
     "syncedAt": "2026-09-15",
@@ -21273,16 +21698,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 187,
+      "latencyMs": 213,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 118,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -21456,6 +21875,12 @@
         "reachable": true,
         "latencyMs": 187,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 213,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -21479,29 +21904,29 @@
         "version": "21.37.4",
         "date": "2026-09-14",
         "localizedDescription": "YouTube 21.37.4 | YouProExtra_21.37.4_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. \n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.37.4_1.3.1.ipa",
         "size": 129769811,
         "minOSVersion": "16.0",
-        "releaseUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa0",
+        "releaseUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2",
         "source": "github",
         "isPrerelease": false,
         "isDraft": false,
         "assets": [
           {
             "filename": "YouProExtra_21.37.4_1.3.1.ipa",
-            "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa",
+            "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.37.4_1.3.1.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
             "size": 129769811,
             "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-            "downloads": 20,
+            "downloads": 35,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-        "downloads": 20
+        "downloads": 35
       }
     ],
     "syncedAt": "2026-09-15",
@@ -21509,16 +21934,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 108,
+      "latencyMs": 168,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 118,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -21692,6 +22111,12 @@
         "reachable": true,
         "latencyMs": 108,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 168,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -21781,16 +22206,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 139,
+      "latencyMs": 181,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 93,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -21964,6 +22383,12 @@
         "reachable": true,
         "latencyMs": 139,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 181,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:itzzace/ytkace",
@@ -22003,13 +22428,13 @@
             "fileType": "IPA",
             "size": 143259058,
             "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-            "downloads": 42,
+            "downloads": 64,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-        "downloads": 42
+        "downloads": 64
       }
     ],
     "syncedAt": "2026-09-15",
@@ -22017,16 +22442,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 102,
+      "latencyMs": 181,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 207,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -22200,6 +22619,12 @@
         "reachable": true,
         "latencyMs": 102,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 181,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -22309,16 +22734,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 114,
+      "latencyMs": 165,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 99,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -22492,6 +22911,12 @@
         "reachable": true,
         "latencyMs": 114,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 165,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -22512,49 +22937,43 @@
     "retryCount": 0,
     "versions": [
       {
-        "version": "9.36.1",
-        "date": "2026-09-09",
-        "localizedDescription": "YTMusicUltimate 9.36.1 | YTMusic 2.4.1 | YTMusicUltimate_9.36.1_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
-        "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
-        "size": 104992686,
+        "version": "9.37.2",
+        "date": "2026-09-15",
+        "localizedDescription": "YTMusicUltimate 9.37.2 | YTMusic 2.4.1 | YTMusicUltimate_9.37.2_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
+        "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
+        "size": 105090579,
         "minOSVersion": "16.0",
-        "releaseUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/tag/ytmu-ipa29",
+        "releaseUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/tag/ytmu-ipa30",
         "source": "github",
         "isPrerelease": false,
         "isDraft": false,
         "assets": [
           {
-            "filename": "YTMusicUltimate_9.36.1_2.4.1.ipa",
-            "downloadUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
+            "filename": "YTMusicUltimate_9.37.2_2.4.1.ipa",
+            "downloadUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 104992686,
-            "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-            "downloads": 252,
+            "size": 105090579,
+            "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
+            "downloads": 6,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-        "downloads": 252
+        "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
+        "downloads": 6
       }
     ],
-    "syncedAt": "2026-09-14",
+    "syncedAt": "2026-09-15",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-14",
-      "latencyMs": 145,
+      "latencyMs": 203,
       "measuredAt": "2026-09-15"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 116,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -22728,6 +23147,12 @@
         "reachable": true,
         "latencyMs": 145,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 203,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YTMusicUltimate",
@@ -22865,7 +23290,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 138,
+      "latencyMs": 191,
       "measuredAt": "2026-09-15",
       "since": "2026-09-10"
     },
@@ -23042,6 +23467,12 @@
         "at": "2026-09-15",
         "reachable": true,
         "latencyMs": 138,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-15",
+        "reachable": true,
+        "latencyMs": 191,
         "detail": "HTTP 302"
       }
     ],

@@ -5,8 +5,25 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
     <description>Release feed for Conduit within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/conduit.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Conduit v4.1.5</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
+      <guid isPermaLink="false">conduit-4.1.5</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Conduit 4.1.5 | conduit
+
+## What's Changed
+* Fix native toolbar, Apple gating, streaming cadence, and wakelock regressions by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/718
+* Fix ten reported issues and vendor Hermes Agent as an API reference by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/725
+* Support Open WebUI shared folders by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/726
+* Upgrade all packages, add notification settings link and Ollama thinking replay by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/727
+
+
+**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5]]></description>
+      <enclosure url="https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Conduit v4.1.4</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>

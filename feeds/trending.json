@@ -13,6 +13,23 @@
   },
   "trending": [
     {
+      "slug": "ytmusic",
+      "name": "YTMusicUltimate",
+      "category": "music",
+      "version": "9.37.2",
+      "releaseDate": "2026-09-15",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
       "slug": "youpro",
       "name": "YouPro",
       "category": "photo-video",
@@ -47,23 +64,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "ytmusic",
-      "name": "YTMusicUltimate",
-      "category": "music",
-      "version": "9.36.1",
-      "releaseDate": "2026-09-09",
-      "score": 0.96,
-      "signals": {
-        "recency": 0.9,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
       "slug": "spotiflac",
       "name": "SpotiFLAC Mobile",
       "category": "music",
@@ -78,6 +78,40 @@
       },
       "verificationLevel": "VERIFIED",
       "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "conduit",
+      "name": "Conduit",
+      "category": "utilities",
+      "version": "4.1.5",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "mangayomi",
+      "name": "Mangayomi",
+      "category": "other",
+      "version": "0.9.4",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
       "downloadReachable": true
     },
     {
@@ -115,23 +149,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "mangayomi",
-      "name": "Mangayomi",
-      "category": "other",
-      "version": "0.9.3",
-      "releaseDate": "2026-09-14",
-      "score": 0.7933,
-      "signals": {
-        "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "voyager",
       "name": "Voyager",
       "category": "social",
@@ -153,23 +170,6 @@
       "name": "Apollo",
       "category": "social",
       "version": "3.7.1",
-      "releaseDate": "2026-09-13",
-      "score": 0.7867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "iqface",
-      "name": "iQFace",
-      "category": "social",
-      "version": "578.1",
       "releaseDate": "2026-09-13",
       "score": 0.7867,
       "signals": {
@@ -185,6 +185,57 @@
   ],
   "rising": [
     {
+      "slug": "ytmusic",
+      "name": "YTMusicUltimate",
+      "category": "music",
+      "version": "9.37.2",
+      "releaseDate": "2026-09-15",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "conduit",
+      "name": "Conduit",
+      "category": "utilities",
+      "version": "4.1.5",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "mangayomi",
+      "name": "Mangayomi",
+      "category": "other",
+      "version": "0.9.4",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "youpro",
       "name": "YouPro",
       "category": "photo-video",
@@ -223,23 +274,6 @@
       "name": "YouMod",
       "category": "photo-video",
       "version": "21.37.4",
-      "releaseDate": "2026-09-14",
-      "score": 0.7933,
-      "signals": {
-        "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "mangayomi",
-      "name": "Mangayomi",
-      "category": "other",
-      "version": "0.9.3",
       "releaseDate": "2026-09-14",
       "score": 0.7933,
       "signals": {
@@ -308,40 +342,6 @@
       "name": "YTKACE",
       "category": "photo-video",
       "version": "21.36.6",
-      "releaseDate": "2026-09-12",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "telegram-mxgram",
-      "name": "Telegram MxGram",
-      "category": "social",
-      "version": "12.9.4",
-      "releaseDate": "2026-09-12",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "dopamine-roothide",
-      "name": "Dopamine (RootHide)",
-      "category": "utilities",
-      "version": "2.4.9.27",
       "releaseDate": "2026-09-12",
       "score": 0.78,
       "signals": {
@@ -357,6 +357,57 @@
   ],
   "recentlyUpdated": [
     {
+      "slug": "ytmusic",
+      "name": "YTMusicUltimate",
+      "category": "music",
+      "version": "9.37.2",
+      "releaseDate": "2026-09-15",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "conduit",
+      "name": "Conduit",
+      "category": "utilities",
+      "version": "4.1.5",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "mangayomi",
+      "name": "Mangayomi",
+      "category": "other",
+      "version": "0.9.4",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "youpro",
       "name": "YouPro",
       "category": "photo-video",
@@ -395,23 +446,6 @@
       "name": "YouMod",
       "category": "photo-video",
       "version": "21.37.4",
-      "releaseDate": "2026-09-14",
-      "score": 0.7933,
-      "signals": {
-        "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "mangayomi",
-      "name": "Mangayomi",
-      "category": "other",
-      "version": "0.9.3",
       "releaseDate": "2026-09-14",
       "score": 0.7933,
       "signals": {
@@ -491,43 +525,26 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
-    },
-    {
-      "slug": "telegram-mxgram",
-      "name": "Telegram MxGram",
-      "category": "social",
-      "version": "12.9.4",
-      "releaseDate": "2026-09-12",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "dopamine-roothide",
-      "name": "Dopamine (RootHide)",
-      "category": "utilities",
-      "version": "2.4.9.27",
-      "releaseDate": "2026-09-12",
-      "score": 0.78,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
     }
   ],
   "all": [
+    {
+      "slug": "ytmusic",
+      "name": "YTMusicUltimate",
+      "category": "music",
+      "version": "9.37.2",
+      "releaseDate": "2026-09-15",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
     {
       "slug": "youpro",
       "name": "YouPro",
@@ -563,23 +580,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "ytmusic",
-      "name": "YTMusicUltimate",
-      "category": "music",
-      "version": "9.36.1",
-      "releaseDate": "2026-09-09",
-      "score": 0.96,
-      "signals": {
-        "recency": 0.9,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
       "slug": "spotiflac",
       "name": "SpotiFLAC Mobile",
       "category": "music",
@@ -594,6 +594,40 @@
       },
       "verificationLevel": "VERIFIED",
       "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "conduit",
+      "name": "Conduit",
+      "category": "utilities",
+      "version": "4.1.5",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "mangayomi",
+      "name": "Mangayomi",
+      "category": "other",
+      "version": "0.9.4",
+      "releaseDate": "2026-09-15",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
       "downloadReachable": true
     },
     {
@@ -618,23 +652,6 @@
       "name": "YouMod",
       "category": "photo-video",
       "version": "21.37.4",
-      "releaseDate": "2026-09-14",
-      "score": 0.7933,
-      "signals": {
-        "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "mangayomi",
-      "name": "Mangayomi",
-      "category": "other",
-      "version": "0.9.3",
       "releaseDate": "2026-09-14",
       "score": 0.7933,
       "signals": {
@@ -1132,23 +1149,6 @@
       "score": 0.7133,
       "signals": {
         "recency": 0.7833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "conduit",
-      "name": "Conduit",
-      "category": "utilities",
-      "version": "4.1.4",
-      "releaseDate": "2026-09-01",
-      "score": 0.7067,
-      "signals": {
-        "recency": 0.7667,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
