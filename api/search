@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-15",
-  "count": 94,
+  "count": 101,
   "fuse": {
     "keys": [
       {
@@ -3510,6 +3510,275 @@
       "icon": "assets/Chatsen.webp",
       "pageURL": "apps/chatsen/",
       "version": "1.1.107",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "trollfools",
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "subtitle": "Inject tweaks into installed apps on-device",
+      "shortDescription": "Inject tweaks into installed apps on-device",
+      "description": "TrollFools injects tweaks into apps that are already installed, straight on the device: it performs in-place dylib injection with insert_dylib and ChOma, so no computer and no jailbreak is involved. Upstream documents removable system applications, decrypted App Store apps installed through TrollStore, and encrypted App Store apps patched with a bare dynamic library, plus .deb and .zip tweak packages. Written in SwiftUI, and built on ChOma, MachOKit and insert_dylib.",
+      "category": "utilities",
+      "tags": [
+        "utilities"
+      ],
+      "keywords": [
+        "apps",
+        "device",
+        "inject",
+        "installed",
+        "into",
+        "lessica",
+        "on",
+        "trollfools",
+        "tweaks",
+        "utilities"
+      ],
+      "developer": "Lessica",
+      "bundleId": "wiki.qaq.TrollFools",
+      "icon": "assets/TrollFools.webp",
+      "pageURL": "apps/trollfools/",
+      "version": "4.3-253",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "lara",
+      "slug": "lara",
+      "name": "Lara",
+      "subtitle": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+      "shortDescription": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+      "description": "lara is a jailed customization toolbox that uses the DarkSword exploit to reach the parts of the system iOS keeps locked: a full read/write file manager, a MobileGestalt editor, font / card / custom overwrites, status-bar tweaks, hidden icon labels, an upside-down mode, a five-icon dock, a grid app switcher, a performance HUD, DirtyZero 2, a three-app bypass and a JIT enabler for apps that carry get-task-allow. It is published as its own unsigned IPA for sideloading from the open-source repository.",
+      "category": "utilities",
+      "tags": [
+        "utilities"
+      ],
+      "keywords": [
+        "17",
+        "26",
+        "customization",
+        "darksword",
+        "for",
+        "ios",
+        "lara",
+        "rooootdev",
+        "toolbox",
+        "utilities"
+      ],
+      "developer": "rooootdev",
+      "bundleId": "com.roooot.lara",
+      "icon": "assets/Lara.webp",
+      "pageURL": "apps/lara/",
+      "version": "0.2",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "onionbrowser",
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "subtitle": "Tor browser that routes web traffic through Tor",
+      "shortDescription": "Tor browser that routes web traffic through Tor",
+      "description": "Onion Browser is a free web browser for iPhone and iPad that encrypts and tunnels its traffic through the Tor network with the help of Orbot for iOS. The 3.x branch renders pages with WKWebView instead of the old UIWebView stack, and the project publishes its own sideloadable build next to the App Store release. Open source, with the repository's LICENSE file governing usage and redistribution.",
+      "category": "networking",
+      "tags": [
+        "networking"
+      ],
+      "keywords": [
+        "browser",
+        "mike",
+        "networking",
+        "onion",
+        "routes",
+        "that",
+        "through",
+        "tigas",
+        "tor",
+        "traffic",
+        "web"
+      ],
+      "developer": "Mike Tigas",
+      "bundleId": "com.miketigas.OnionBrowser",
+      "icon": "assets/OnionBrowser.webp",
+      "pageURL": "apps/onionbrowser/",
+      "version": "3.4.1",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "orbot",
+      "slug": "orbot",
+      "name": "Orbot",
+      "subtitle": "Tor network tunnel for iOS and iPadOS",
+      "shortDescription": "Tor network tunnel for iOS and iPadOS",
+      "description": "Orbot puts an iPhone, iPad or Mac behind the Tor network: it installs a local packet-tunnel configuration so device traffic leaves through Tor instead of the plain network. Obfs4 and Snowflake bridges are supported and fully configurable, Tor v3 onion-service authentication works, and Tor's EntryNodes, ExitNodes, ExcludeNodes and StrictNodes options can all be set. The sideloadable build is published from the project's own GitHub releases, which list the bundled Tor, OpenSSL, Lyrebird and Snowflake versions per app release.",
+      "category": "networking",
+      "tags": [
+        "networking"
+      ],
+      "keywords": [
+        "and",
+        "for",
+        "ios",
+        "ipados",
+        "network",
+        "networking",
+        "orbot",
+        "project",
+        "the",
+        "tor",
+        "tunnel"
+      ],
+      "developer": "The Tor Project",
+      "bundleId": "org.torproject.orbot",
+      "icon": "assets/Orbot.webp",
+      "pageURL": "apps/orbot/",
+      "version": "1.12.0",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "tablehabit",
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "subtitle": "Open-source micro-habit tracker with WebDAV sync",
+      "shortDescription": "Open-source micro-habit tracker with WebDAV sync",
+      "description": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
+      "category": "utilities",
+      "tags": [
+        "utilities"
+      ],
+      "keywords": [
+        "friesi23",
+        "habit",
+        "micro",
+        "open",
+        "source",
+        "sync",
+        "table",
+        "tracker",
+        "utilities",
+        "webdav",
+        "with"
+      ],
+      "developer": "FriesI23",
+      "bundleId": "io.github.friesi23.mhabit",
+      "icon": "assets/TableHabit.webp",
+      "pageURL": "apps/tablehabit/",
+      "version": "1.27.6",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "byetunes",
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "subtitle": "Add music to the iOS library without a computer",
+      "shortDescription": "Add music to the iOS library without a computer",
+      "description": "ByeTunes writes MP3, M4A, FLAC and WAV files straight into the iOS media library by talking to the media database directly, so adding a song no longer needs a cable and a desktop sync session. You can create and manage playlists in the app, and import metadata is fetched from iTunes or Deezer. The ringtone injector is disabled upstream for now, so treat ringtones as not working yet. Open source under the MIT license, with the iOS build published from the project's own GitHub releases.",
+      "category": "music",
+      "tags": [
+        "music"
+      ],
+      "keywords": [
+        "add",
+        "byetunes",
+        "computer",
+        "edualexxis",
+        "ios",
+        "library",
+        "music",
+        "the",
+        "to",
+        "without"
+      ],
+      "developer": "EduAlexxis",
+      "bundleId": "com.EduAlexxis.MusicManager",
+      "icon": "assets/ByeTunes.webp",
+      "pageURL": "apps/byetunes/",
+      "version": "2.5",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "snmessenger",
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "subtitle": "Messenger tweak with its own sideloaded build",
+      "shortDescription": "Messenger tweak with its own sideloaded build",
+      "description": "SNMessenger is a full-featured tweak for Facebook Messenger by NguyenASang, published as a ready-to-sideload IPA built from the official tweak source. Its settings live behind the gear icon in the top-left corner of the Messenger profile screen, which is where every switch is flipped. Upstream documents rootless, rootful and sideload support (Roothide is listed as not supported), iOS 12.4 and newer, and Messenger versions from 458.0.0 up to the latest at release time. Open source under the MIT license.",
+      "category": "social",
+      "tags": [
+        "social"
+      ],
+      "keywords": [
+        "build",
+        "its",
+        "messenger",
+        "nguyenasang",
+        "own",
+        "sideloaded",
+        "snmessenger",
+        "social",
+        "tweak",
+        "with"
+      ],
+      "developer": "NguyenASang",
+      "bundleId": "com.facebook.Messenger",
+      "icon": "assets/Messenger.webp",
+      "pageURL": "apps/snmessenger/",
+      "version": "517.0.0",
       "verificationLevel": "VERIFIED",
       "downloadReachable": true,
       "clientCompatibility": [

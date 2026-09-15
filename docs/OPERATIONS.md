@@ -90,6 +90,37 @@ verified JSON feed stays quarantined. Scores below 25 are also retained as
 quarantine evidence; no missing hash or mirror is fabricated. Weights and
 signals are documented in `src/omnisource/reputation.py`.
 
+## Sourcing verdicts (`data/source_policy.json`)
+
+A source that has been reviewed and rejected is recorded as a rule instead of
+being argued again on every discovery run. Rules are the only automated way a
+host can be *permanently* excluded, so they carry the same weight as the
+catalog: three gates enforce them (discovery merge, `assert_publishable()`,
+`scripts/validate.py` over `catalog.json`), and
+`.github/workflows/build-tweak.yml` refuses to download an input from one.
+
+```bash
+# why is this URL refused?
+PYTHONPATH=src python3 -m omnisource.source_policy check-url https://example.com/apps.json
+# every verdict, with its evidence
+PYTHONPATH=src python3 -m omnisource.source_policy explain --json | head -40
+# nothing in the catalog points at a blocked source
+PYTHONPATH=src python3 -m omnisource.source_policy check-catalog
+```
+
+To **add** a verdict: write the rule (id, description, reason, at least one HTTPS
+reference, `decidedAt`), add the same reasoning to a `docs/SOURCING-REPORT*.md`,
+and re-run `python3 scripts/validation/validate_source.py` plus the discovery
+pass so the store is pruned. To **reverse** one: delete the rule and the report
+row that justified it — never a per-run exception, or the next merge re-adds the
+record.
+
+Host entries are `host` (blocks the site and its subdomains) or `host/prefix`
+(only that subtree — used for `armconverter.com/store` so a verdict about a
+storefront is not a verdict about an unrelated tool on the same domain). A rule
+matching nothing, or declaring a host without a reason, fails the run rather
+than silently passing.
+
 ## Backups and rollback
 
 Create and verify a metadata-only recovery snapshot before a deployment or

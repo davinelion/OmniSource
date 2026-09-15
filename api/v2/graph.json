@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-15",
-  "count": 254,
-  "edgeCount": 748,
+  "count": 275,
+  "edgeCount": 811,
   "nodes": [
     {
       "id": "app:spotiflac",
@@ -1726,6 +1726,146 @@
       "type": "source",
       "label": "chatsen/chatsen",
       "url": "https://github.com/chatsen/chatsen"
+    },
+    {
+      "id": "app:trollfools",
+      "type": "app",
+      "label": "TrollFools",
+      "slug": "trollfools",
+      "bundleId": "wiki.qaq.TrollFools",
+      "category": "utilities",
+      "version": "4.3-253"
+    },
+    {
+      "id": "dev:lessica",
+      "type": "developer",
+      "label": "Lessica"
+    },
+    {
+      "id": "source:lessicatrollfools",
+      "type": "source",
+      "label": "Lessica/TrollFools",
+      "url": "https://github.com/Lessica/TrollFools"
+    },
+    {
+      "id": "app:lara",
+      "type": "app",
+      "label": "Lara",
+      "slug": "lara",
+      "bundleId": "com.roooot.lara",
+      "category": "utilities",
+      "version": "0.2"
+    },
+    {
+      "id": "dev:rooootdev",
+      "type": "developer",
+      "label": "rooootdev"
+    },
+    {
+      "id": "source:rooootdevlara",
+      "type": "source",
+      "label": "rooootdev/lara",
+      "url": "https://github.com/rooootdev/lara"
+    },
+    {
+      "id": "app:onionbrowser",
+      "type": "app",
+      "label": "Onion Browser",
+      "slug": "onionbrowser",
+      "bundleId": "com.miketigas.OnionBrowser",
+      "category": "networking",
+      "version": "3.4.1"
+    },
+    {
+      "id": "dev:mike-tigas",
+      "type": "developer",
+      "label": "Mike Tigas"
+    },
+    {
+      "id": "source:onionbrowseronionbrowser",
+      "type": "source",
+      "label": "OnionBrowser/OnionBrowser",
+      "url": "https://github.com/OnionBrowser/OnionBrowser"
+    },
+    {
+      "id": "app:orbot",
+      "type": "app",
+      "label": "Orbot",
+      "slug": "orbot",
+      "bundleId": "org.torproject.orbot",
+      "category": "networking",
+      "version": "1.12.0"
+    },
+    {
+      "id": "dev:the-tor-project",
+      "type": "developer",
+      "label": "The Tor Project"
+    },
+    {
+      "id": "source:guardianprojectorbotios",
+      "type": "source",
+      "label": "guardianproject/orbot-ios",
+      "url": "https://github.com/guardianproject/orbot-ios"
+    },
+    {
+      "id": "app:tablehabit",
+      "type": "app",
+      "label": "Table Habit",
+      "slug": "tablehabit",
+      "bundleId": "io.github.friesi23.mhabit",
+      "category": "utilities",
+      "version": "1.27.6"
+    },
+    {
+      "id": "dev:friesi23",
+      "type": "developer",
+      "label": "FriesI23"
+    },
+    {
+      "id": "source:friesi23mhabit",
+      "type": "source",
+      "label": "FriesI23/mhabit",
+      "url": "https://github.com/FriesI23/mhabit"
+    },
+    {
+      "id": "app:byetunes",
+      "type": "app",
+      "label": "ByeTunes",
+      "slug": "byetunes",
+      "bundleId": "com.EduAlexxis.MusicManager",
+      "category": "music",
+      "version": "2.5"
+    },
+    {
+      "id": "dev:edualexxis",
+      "type": "developer",
+      "label": "EduAlexxis"
+    },
+    {
+      "id": "source:edualexxisbyetunes",
+      "type": "source",
+      "label": "EduAlexxis/ByeTunes",
+      "url": "https://github.com/EduAlexxis/ByeTunes"
+    },
+    {
+      "id": "app:snmessenger",
+      "type": "app",
+      "label": "SNMessenger",
+      "slug": "snmessenger",
+      "bundleId": "com.facebook.Messenger",
+      "category": "social",
+      "version": "517.0.0"
+    },
+    {
+      "id": "dev:nguyenasang",
+      "type": "developer",
+      "label": "NguyenASang"
+    },
+    {
+      "id": "source:nguyenasangsnmessenger",
+      "type": "source",
+      "label": "NguyenASang/SNMessenger",
+      "url": "https://github.com/NguyenASang/SNMessenger"
     }
   ],
   "edges": [
@@ -2670,6 +2810,76 @@
       "type": "source"
     },
     {
+      "source": "app:trollfools",
+      "target": "dev:lessica",
+      "type": "developer"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "source:lessicatrollfools",
+      "type": "source"
+    },
+    {
+      "source": "app:lara",
+      "target": "dev:rooootdev",
+      "type": "developer"
+    },
+    {
+      "source": "app:lara",
+      "target": "source:rooootdevlara",
+      "type": "source"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "dev:mike-tigas",
+      "type": "developer"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "source:onionbrowseronionbrowser",
+      "type": "source"
+    },
+    {
+      "source": "app:orbot",
+      "target": "dev:the-tor-project",
+      "type": "developer"
+    },
+    {
+      "source": "app:orbot",
+      "target": "source:guardianprojectorbotios",
+      "type": "source"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "dev:friesi23",
+      "type": "developer"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "source:friesi23mhabit",
+      "type": "source"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "dev:edualexxis",
+      "type": "developer"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "source:edualexxisbyetunes",
+      "type": "source"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "dev:nguyenasang",
+      "type": "developer"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "source:nguyenasangsnmessenger",
+      "type": "source"
+    },
+    {
       "source": "app:uyouenhanced",
       "target": "app:ytlite",
       "type": "bundle",
@@ -2838,6 +3048,12 @@
       "bundleId": "com.atebits.Tweetie2"
     },
     {
+      "source": "app:msgplusx",
+      "target": "app:snmessenger",
+      "type": "bundle",
+      "bundleId": "com.facebook.Messenger"
+    },
+    {
       "source": "app:spotiflac",
       "target": "app:ytmusic",
       "type": "related"
@@ -2860,6 +3076,11 @@
     {
       "source": "app:spotiflac",
       "target": "app:cosmos",
+      "type": "related"
+    },
+    {
+      "source": "app:spotiflac",
+      "target": "app:byetunes",
       "type": "related"
     },
     {
@@ -3099,7 +3320,7 @@
     },
     {
       "source": "app:ytmusic",
-      "target": "app:ytlite",
+      "target": "app:byetunes",
       "type": "related"
     },
     {
@@ -3129,7 +3350,7 @@
     },
     {
       "source": "app:maxmusic",
-      "target": "app:maxtube",
+      "target": "app:byetunes",
       "type": "related"
     },
     {
@@ -3144,22 +3365,22 @@
     },
     {
       "source": "app:utm",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:utm",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:utm",
+      "target": "app:tablehabit",
+      "type": "related"
+    },
+    {
+      "source": "app:utm",
       "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:utm",
-      "target": "app:serotonin",
-      "type": "related"
-    },
-    {
-      "source": "app:utm",
-      "target": "app:saber",
       "type": "related"
     },
     {
@@ -3259,6 +3480,16 @@
     },
     {
       "source": "app:itorrent",
+      "target": "app:orbot",
+      "type": "related"
+    },
+    {
+      "source": "app:itorrent",
+      "target": "app:onionbrowser",
+      "type": "related"
+    },
+    {
+      "source": "app:itorrent",
       "target": "app:gopeed",
       "type": "related"
     },
@@ -3314,17 +3545,17 @@
     },
     {
       "source": "app:livecontainer",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:livecontainer",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:livecontainer",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:livecontainer",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3344,17 +3575,17 @@
     },
     {
       "source": "app:feather",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:feather",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:feather",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:feather",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3374,17 +3605,17 @@
     },
     {
       "source": "app:sidestore",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:sidestore",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:sidestore",
-      "target": "app:serotonin",
-      "type": "related"
-    },
-    {
-      "source": "app:sidestore",
-      "target": "app:saber",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3588,6 +3819,11 @@
       "type": "related"
     },
     {
+      "source": "app:spotube",
+      "target": "app:byetunes",
+      "type": "related"
+    },
+    {
       "source": "app:jellify",
       "target": "app:ytmusic",
       "type": "related"
@@ -3613,6 +3849,11 @@
       "type": "related"
     },
     {
+      "source": "app:jellify",
+      "target": "app:byetunes",
+      "type": "related"
+    },
+    {
       "source": "app:zeus",
       "target": "app:utm",
       "type": "related"
@@ -3624,22 +3865,22 @@
     },
     {
       "source": "app:zeus",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:zeus",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:zeus",
+      "target": "app:tablehabit",
+      "type": "related"
+    },
+    {
+      "source": "app:zeus",
       "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:zeus",
-      "target": "app:serotonin",
-      "type": "related"
-    },
-    {
-      "source": "app:zeus",
-      "target": "app:saber",
       "type": "related"
     },
     {
@@ -3659,17 +3900,17 @@
     },
     {
       "source": "app:bluewallet",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:bluewallet",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:bluewallet",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:bluewallet",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3719,17 +3960,17 @@
     },
     {
       "source": "app:saber",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:saber",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:saber",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:saber",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3749,17 +3990,17 @@
     },
     {
       "source": "app:anxreader",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:anxreader",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:anxreader",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:anxreader",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3844,17 +4085,17 @@
     },
     {
       "source": "app:qbitcontrol",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontrol",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:qbitcontrol",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontrol",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3874,17 +4115,17 @@
     },
     {
       "source": "app:qbitconnect",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitconnect",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:qbitconnect",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitconnect",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -3964,17 +4205,17 @@
     },
     {
       "source": "app:qbitcontroller",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontroller",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:qbitcontroller",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontroller",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -4114,17 +4355,17 @@
     },
     {
       "source": "app:conduit",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:conduit",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:conduit",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:conduit",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -4544,6 +4785,11 @@
     },
     {
       "source": "app:msgplusx",
+      "target": "app:snmessenger",
+      "type": "related"
+    },
+    {
+      "source": "app:msgplusx",
       "target": "app:winston",
       "type": "related"
     },
@@ -4565,11 +4811,6 @@
     {
       "source": "app:msgplusx",
       "target": "app:ttkillerplus",
-      "type": "related"
-    },
-    {
-      "source": "app:msgplusx",
-      "target": "app:thunder",
       "type": "related"
     },
     {
@@ -4739,17 +4980,17 @@
     },
     {
       "source": "app:dopamine",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:dopamine",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -4774,12 +5015,12 @@
     },
     {
       "source": "app:dopamine-roothide",
-      "target": "app:taurine",
+      "target": "app:trollfools",
       "type": "related"
     },
     {
       "source": "app:dopamine-roothide",
-      "target": "app:sidestore",
+      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -4804,12 +5045,12 @@
     },
     {
       "source": "app:bootstrap",
-      "target": "app:taurine",
+      "target": "app:trollfools",
       "type": "related"
     },
     {
       "source": "app:bootstrap",
-      "target": "app:sidestore",
+      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -4834,12 +5075,12 @@
     },
     {
       "source": "app:serotonin",
-      "target": "app:taurine",
+      "target": "app:trollfools",
       "type": "related"
     },
     {
       "source": "app:serotonin",
-      "target": "app:sidestore",
+      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -4864,12 +5105,12 @@
     },
     {
       "source": "app:taurine",
-      "target": "app:sidestore",
+      "target": "app:trollfools",
       "type": "related"
     },
     {
       "source": "app:taurine",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -4894,12 +5135,12 @@
     },
     {
       "source": "app:odyssey",
-      "target": "app:sidestore",
+      "target": "app:trollfools",
       "type": "related"
     },
     {
       "source": "app:odyssey",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -4914,22 +5155,22 @@
     },
     {
       "source": "app:unc0ver",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:unc0ver",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:unc0ver",
+      "target": "app:tablehabit",
+      "type": "related"
+    },
+    {
+      "source": "app:unc0ver",
       "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:unc0ver",
-      "target": "app:serotonin",
-      "type": "related"
-    },
-    {
-      "source": "app:unc0ver",
-      "target": "app:saber",
       "type": "related"
     },
     {
@@ -4965,6 +5206,16 @@
     {
       "source": "app:gopeed",
       "target": "app:pikatorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:gopeed",
+      "target": "app:orbot",
+      "type": "related"
+    },
+    {
+      "source": "app:gopeed",
+      "target": "app:onionbrowser",
       "type": "related"
     },
     {
@@ -5030,6 +5281,16 @@
     {
       "source": "app:xenios",
       "target": "app:minivmac",
+      "type": "related"
+    },
+    {
+      "source": "app:pikatorrent",
+      "target": "app:orbot",
+      "type": "related"
+    },
+    {
+      "source": "app:pikatorrent",
+      "target": "app:onionbrowser",
       "type": "related"
     },
     {
@@ -5224,17 +5485,17 @@
     },
     {
       "source": "app:purekfd",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:purekfd",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:purekfd",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:purekfd",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -5284,17 +5545,17 @@
     },
     {
       "source": "app:ksign",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:ksign",
       "target": "app:taurine",
       "type": "related"
     },
     {
       "source": "app:ksign",
-      "target": "app:sidestore",
-      "type": "related"
-    },
-    {
-      "source": "app:ksign",
-      "target": "app:serotonin",
+      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -5323,6 +5584,11 @@
       "type": "related"
     },
     {
+      "source": "app:cosmos",
+      "target": "app:byetunes",
+      "type": "related"
+    },
+    {
       "source": "app:animegen",
       "target": "app:ytkp",
       "type": "related"
@@ -5374,12 +5640,12 @@
     },
     {
       "source": "app:muffinstore",
-      "target": "app:taurine",
+      "target": "app:trollfools",
       "type": "related"
     },
     {
       "source": "app:muffinstore",
-      "target": "app:sidestore",
+      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -5495,6 +5761,196 @@
     {
       "source": "app:chatsen",
       "target": "app:thunder",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:taurine",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:tablehabit",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:sidestore",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:taurine",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:tablehabit",
+      "type": "related"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "app:pikatorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "app:orbot",
+      "type": "related"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "app:itorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "app:gopeed",
+      "type": "related"
+    },
+    {
+      "source": "app:orbot",
+      "target": "app:pikatorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:orbot",
+      "target": "app:onionbrowser",
+      "type": "related"
+    },
+    {
+      "source": "app:orbot",
+      "target": "app:itorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:orbot",
+      "target": "app:gopeed",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:taurine",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:sidestore",
+      "type": "related"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "app:ytmusic",
+      "type": "related"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "app:spotube",
+      "type": "related"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "app:spotiflac",
+      "type": "related"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "app:maxmusic",
+      "type": "related"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "app:jellify",
+      "type": "related"
+    },
+    {
+      "source": "app:byetunes",
+      "target": "app:cosmos",
+      "type": "related"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "app:msgplusx",
+      "type": "related"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "app:winston",
+      "type": "related"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "app:voyager",
+      "type": "related"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "app:twitchadblock",
+      "type": "related"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "app:turrit-mxgram",
+      "type": "related"
+    },
+    {
+      "source": "app:snmessenger",
+      "target": "app:ttkillerplus",
       "type": "related"
     }
   ]

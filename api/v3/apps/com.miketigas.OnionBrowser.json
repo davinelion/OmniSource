@@ -1,0 +1,91 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d60d6763a4a1",
+  "data": {
+    "name": "Onion Browser",
+    "bundleIdentifier": "com.miketigas.OnionBrowser",
+    "developerName": "Mike Tigas",
+    "subtitle": "Tor browser that routes web traffic through Tor",
+    "localizedDescription": "Onion Browser is a free web browser for iPhone and iPad that encrypts and tunnels its traffic through the Tor network with the help of Orbot for iOS. The 3.x branch renders pages with WKWebView instead of the old UIWebView stack, and the project publishes its own sideloadable build next to the App Store release. Open source, with the repository's LICENSE file governing usage and redistribution.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+    "tintColor": "6D4C9F",
+    "category": "networking",
+    "version": "3.4.1",
+    "versionDate": "2026-08-11",
+    "versionDescription": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
+    "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+    "size": 39611914,
+    "versions": [
+      {
+        "version": "3.4.1",
+        "date": "2026-08-11",
+        "localizedDescription": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
+        "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+        "size": 39611914,
+        "minOSVersion": "15.0",
+        "releaseUrl": "https://github.com/OnionBrowser/OnionBrowser/releases/tag/v3.4.1",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "OnionBrowser.ipa",
+            "downloadUrl": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 39611914,
+            "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+            "downloads": 517,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+        "downloads": 517
+      }
+    ],
+    "screenshotURLs": [
+      "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/1_iphone65_1.1.png",
+      "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/2_iphone65_2.2.png",
+      "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/3_iphone65_3.3.png"
+    ],
+    "omnisource": {
+      "slug": "onionbrowser",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/OnionBrowser/OnionBrowser",
+      "sourceURL": "https://github.com/OnionBrowser/OnionBrowser",
+      "verification": {
+        "method": "github-release",
+        "publisher": "OnionBrowser/OnionBrowser",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from the project's own GitHub releases. Tor circuits, bridges and exit policy live in Orbot, so install Orbot from this source too if you need Obfs4 or Snowflake bridges instead of the defaults."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "not probed",
+        "statusSince": "2026-08-11",
+        "lastUpdatedAt": "2026-08-11"
+      }
+    },
+    "id": "com.miketigas.OnionBrowser"
+  }
+}

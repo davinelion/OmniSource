@@ -1,7 +1,7 @@
 """Curated collections (Phase 10).
 
 A small set of hand-curated app groups — currently *YouTube*, *Music*,
-*Emulators*, *Utilities* and *Productivity* — rendered as
+*Emulators*, *Utilities*, *Productivity* and *Tweaks* — rendered as
 ``feeds/collections.json`` and turned into static collection pages
 (``collections/<slug>/index.html``) by the site builder.
 
@@ -37,8 +37,11 @@ COLLECTIONS: tuple[dict[str, Any], ...] = (
         "slug": "music",
         "title": "Music",
         "subtitle": "Music streaming and playback",
-        "description": "Tweaked and alternative music clients: lossless Spotify playback and ad-free YouTube Music.",
-        "appSlugs": ("spotiflac", "ytmusic", "maxmusic"),
+        "description": (
+            "Tweaked and alternative music clients: lossless Spotify playback, ad-free YouTube Music and a library "
+            "importer that skips the desktop sync entirely."
+        ),
+        "appSlugs": ("spotiflac", "ytmusic", "maxmusic", "cosmos", "byetunes"),
     },
     {
         "slug": "emulators",
@@ -59,7 +62,48 @@ COLLECTIONS: tuple[dict[str, Any], ...] = (
         "title": "Productivity",
         "subtitle": "Tools for creators and developers",
         "description": "Developer tooling and client apps that keep your workflow moving.",
-        "appSlugs": ("stikdebug", "bhtwitter", "aidoku"),
+        "appSlugs": ("stikdebug", "bhtwitter", "aidoku", "tablehabit"),
+    },
+    {
+        # The tweak family was scattered across YouTube/Music/Social and only
+        # reachable through search, even though it is the single biggest group in
+        # the catalog and the one people ask for. Membership is the *tweak's own*
+        # published build: OmniSource never patches an IPA itself, so anything not
+        # released installable by its own project is not here (see
+        # docs/SOURCING-REPORT.md for the skipped .deb-only tweaks).
+        "slug": "tweaks",
+        "title": "Tweaks",
+        "subtitle": "Tweaked apps and on-device tweak injectors",
+        "description": (
+            "Tweaked builds of YouTube, music, X, Instagram, Messenger, Discord and Twitch apps, plus the tools "
+            "that inject tweaks into an app on the device. Every entry is published installable by the tweak "
+            "project itself — OmniSource tracks and re-verifies that release, it does not patch binaries."
+        ),
+        "appSlugs": (
+            "trollfools",
+            "bootstrap",
+            "lara",
+            "purekfd",
+            "uyouenhanced",
+            "ytlite",
+            "youpro",
+            "ytkp",
+            "ytkace",
+            "youmod",
+            "maxtube",
+            "ytmusic",
+            "maxmusic",
+            "bhtwitter",
+            "neofreebird",
+            "redditfilter",
+            "inkillerplus",
+            "ryukgram",
+            "ttkillerplus",
+            "snmessenger",
+            "twitchadblock",
+            "raintweak",
+            "infuseplus",
+        ),
     },
 )
 

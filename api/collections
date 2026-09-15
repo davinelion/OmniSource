@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-09-15",
-  "count": 5,
+  "count": 6,
   "collections": [
     {
       "slug": "youtube",
@@ -126,12 +126,14 @@
       "slug": "music",
       "title": "Music",
       "subtitle": "Music streaming and playback",
-      "description": "Tweaked and alternative music clients: lossless Spotify playback and ad-free YouTube Music.",
-      "appCount": 3,
+      "description": "Tweaked and alternative music clients: lossless Spotify playback, ad-free YouTube Music and a library importer that skips the desktop sync entirely.",
+      "appCount": 5,
       "appSlugs": [
         "spotiflac",
         "ytmusic",
-        "maxmusic"
+        "maxmusic",
+        "cosmos",
+        "byetunes"
       ],
       "apps": [
         {
@@ -165,6 +167,28 @@
           "shortDescription": "YTMusicUltimate with extra tweaks",
           "latestVersion": "9.36.1",
           "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
+          "category": "music"
+        },
+        {
+          "slug": "cosmos",
+          "name": "Cosmos Music Player",
+          "developer": "clquwu",
+          "icon": "Cosmos.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Cosmos.webp",
+          "shortDescription": "Music player",
+          "latestVersion": "1.2.5",
+          "downloadURL": "https://github.com/clquwu/Cosmos-Music-Player/releases/download/1.2.5/Cosmos-Music-Player.ipa",
+          "category": "music"
+        },
+        {
+          "slug": "byetunes",
+          "name": "ByeTunes",
+          "developer": "EduAlexxis",
+          "icon": "ByeTunes.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+          "shortDescription": "Add music to the iOS library without a computer",
+          "latestVersion": "2.5",
+          "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
           "category": "music"
         }
       ]
@@ -268,11 +292,12 @@
       "title": "Productivity",
       "subtitle": "Tools for creators and developers",
       "description": "Developer tooling and client apps that keep your workflow moving.",
-      "appCount": 3,
+      "appCount": 4,
       "appSlugs": [
         "stikdebug",
         "bhtwitter",
-        "aidoku"
+        "aidoku",
+        "tablehabit"
       ],
       "apps": [
         {
@@ -307,6 +332,304 @@
           "latestVersion": "0.9",
           "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9/Aidoku.ipa",
           "category": "other"
+        },
+        {
+          "slug": "tablehabit",
+          "name": "Table Habit",
+          "developer": "FriesI23",
+          "icon": "TableHabit.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+          "shortDescription": "Open-source micro-habit tracker with WebDAV sync",
+          "latestVersion": "1.27.6",
+          "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+          "category": "utilities"
+        }
+      ]
+    },
+    {
+      "slug": "tweaks",
+      "title": "Tweaks",
+      "subtitle": "Tweaked apps and on-device tweak injectors",
+      "description": "Tweaked builds of YouTube, music, X, Instagram, Messenger, Discord and Twitch apps, plus the tools that inject tweaks into an app on the device. Every entry is published installable by the tweak project itself — OmniSource tracks and re-verifies that release, it does not patch binaries.",
+      "appCount": 23,
+      "appSlugs": [
+        "trollfools",
+        "bootstrap",
+        "lara",
+        "purekfd",
+        "uyouenhanced",
+        "ytlite",
+        "youpro",
+        "ytkp",
+        "ytkace",
+        "youmod",
+        "maxtube",
+        "ytmusic",
+        "maxmusic",
+        "bhtwitter",
+        "neofreebird",
+        "redditfilter",
+        "inkillerplus",
+        "ryukgram",
+        "ttkillerplus",
+        "snmessenger",
+        "twitchadblock",
+        "raintweak",
+        "infuseplus"
+      ],
+      "apps": [
+        {
+          "slug": "trollfools",
+          "name": "TrollFools",
+          "developer": "Lessica",
+          "icon": "TrollFools.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp",
+          "shortDescription": "Inject tweaks into installed apps on-device",
+          "latestVersion": "4.3-253",
+          "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+          "category": "utilities"
+        },
+        {
+          "slug": "bootstrap",
+          "name": "Bootstrap",
+          "developer": "roothide",
+          "icon": "Bootstrap.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Bootstrap.webp",
+          "shortDescription": "RootHide bootstrap for iOS 15 – 17",
+          "latestVersion": "2.2.1",
+          "downloadURL": "https://github.com/roothide/Bootstrap/releases/download/2.2.1/Bootstrap.tipa",
+          "category": "utilities"
+        },
+        {
+          "slug": "lara",
+          "name": "Lara",
+          "developer": "rooootdev",
+          "icon": "Lara.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+          "shortDescription": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+          "latestVersion": "0.2",
+          "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+          "category": "utilities"
+        },
+        {
+          "slug": "purekfd",
+          "name": "PureKFD",
+          "developer": "Lrdsnow",
+          "icon": "PureKFD.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/PureKFD.webp",
+          "shortDescription": "Jailed package manager",
+          "latestVersion": "6.0.2",
+          "downloadURL": "https://github.com/Lrdsnow/PureKFD/releases/download/6.0.2/PureKFD.ipa",
+          "category": "utilities"
+        },
+        {
+          "slug": "uyouenhanced",
+          "name": "uYouEnhanced",
+          "developer": "arichornlover",
+          "icon": "uYouEnhanced.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/uYouEnhanced.webp",
+          "shortDescription": "uYouPlus with even more features!",
+          "latestVersion": "21.14.4",
+          "downloadURL": "https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-21144-305.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "ytlite",
+          "name": "YouTubePlus",
+          "developer": "dayanch96",
+          "icon": "YouTube.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+          "shortDescription": "Lightweight YouTube tweak with no ads and PiP",
+          "latestVersion": "21.24.3",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytl-ipa5/YouTubePlus_21.24.3_5.2.2.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "youpro",
+          "name": "YouPro",
+          "developer": "alibusut",
+          "icon": "YouTube.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+          "shortDescription": "Feature-rich YouTube tweak by alibusut",
+          "latestVersion": "21.37.4",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "ytkp",
+          "name": "YTKillerPlus",
+          "developer": "iKarwan",
+          "icon": "YouTube.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+          "shortDescription": "Advanced YouTube tweak with extensive controls",
+          "latestVersion": "21.37.4",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa2/YTKillerPlus_21.37.4_6.1.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "ytkace",
+          "name": "YTKACE",
+          "developer": "itzzace",
+          "icon": "YouTube.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+          "shortDescription": "YTKACE",
+          "latestVersion": "21.36.6",
+          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "youmod",
+          "name": "YouMod",
+          "developer": "Tonwalter888",
+          "icon": "YouTube.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+          "shortDescription": "All-in-one YouTube enhancement tweak",
+          "latestVersion": "21.37.4",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "maxtube",
+          "name": "MaxTube",
+          "developer": "Mark02-2012",
+          "icon": "MaxTube.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/MaxTube.webp",
+          "shortDescription": "YTPlus with ten extra tweaks",
+          "latestVersion": "21.31.3",
+          "downloadURL": "https://github.com/Ashreq/ashstore-repo/releases/download/v1.0.8/YTPlusM_21.31.3_5.2.2.tg%40tubevault.ipa",
+          "category": "photo-video"
+        },
+        {
+          "slug": "ytmusic",
+          "name": "YTMusicUltimate",
+          "developer": "dayanch96",
+          "icon": "YouTubeMusic.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTubeMusic.webp",
+          "shortDescription": "Lightweight YouTube Music tweak",
+          "latestVersion": "9.36.1",
+          "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
+          "category": "music"
+        },
+        {
+          "slug": "maxmusic",
+          "name": "MaxMusic",
+          "developer": "Mark02-2012",
+          "icon": "MaxMusic.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/MaxMusic.webp",
+          "shortDescription": "YTMusicUltimate with extra tweaks",
+          "latestVersion": "9.36.1",
+          "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
+          "category": "music"
+        },
+        {
+          "slug": "bhtwitter",
+          "name": "BHTwitter",
+          "developer": "BandarHL",
+          "icon": "X.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/X.webp",
+          "shortDescription": "X (Twitter) with no ads, downloads and the chronological timeline",
+          "latestVersion": "4.4",
+          "downloadURL": "https://github.com/BandarHL/BHTwitter/releases/download/4.4/BHTwitter-sideloaded.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "neofreebird",
+          "name": "NeoFreeBird",
+          "developer": "NeoFreeBird contributors",
+          "icon": "NeoFreeBird.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/NeoFreeBird.webp",
+          "shortDescription": "Modified Twitter with QoL fixes and reverts",
+          "latestVersion": "2.2",
+          "downloadURL": "https://github.com/NeoFreeBird/app/releases/download/2.2/NeoFreeBird-2.2-Twitter-11.35-noFixTwitterLogin.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "redditfilter",
+          "name": "RedditFilter",
+          "developer": "level3tjg",
+          "icon": "Reddit.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Reddit.webp",
+          "shortDescription": "Filter unwanted content from your Reddit feed",
+          "latestVersion": "2025.37.0",
+          "downloadURL": "https://github.com/level3tjg/RedditFilter/releases/download/v2025.37.0-1.1.8/RedditFilter_2025.37.0-1.1.8.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "inkillerplus",
+          "name": "iNKillerPlus",
+          "developer": "iKarwan",
+          "icon": "Instagram.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
+          "shortDescription": "Instagram with downloads, ghost mode and no ads",
+          "latestVersion": "446.0.0",
+          "downloadURL": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "ryukgram",
+          "name": "RyukGram",
+          "developer": "faroukbmiled & IPA Vault",
+          "icon": "Instagram.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
+          "shortDescription": "Instagram tweak for power users by faroukbmiled",
+          "latestVersion": "446.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "ttkillerplus",
+          "name": "TTKillerPlus",
+          "developer": "iKarwan",
+          "icon": "TikTok.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TikTok.webp",
+          "shortDescription": "TikTok with downloads, no ads and region switch",
+          "latestVersion": "46.8.0",
+          "downloadURL": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "snmessenger",
+          "name": "SNMessenger",
+          "developer": "NguyenASang",
+          "icon": "Messenger.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+          "shortDescription": "Messenger tweak with its own sideloaded build",
+          "latestVersion": "517.0.0",
+          "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "twitchadblock",
+          "name": "TwitchAdBlock",
+          "developer": "gunnerkidBT (original by dayanch96)",
+          "icon": "TAB.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TAB.webp",
+          "shortDescription": "Ad blocker for the Twitch app on iOS",
+          "latestVersion": "30.7",
+          "downloadURL": "https://github.com/gunnerkidBT/TwitchAdBlock/releases/download/v30.7-0.1.13/tv.twitch-30.7-TwitchAdBlock-0.1.13.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "raintweak",
+          "name": "RainTweak",
+          "developer": "raincord & IPA Vault",
+          "icon": "Discord.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Discord.webp",
+          "shortDescription": "Discord client mod with themes and QoL fixes",
+          "latestVersion": "0.9.3",
+          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+          "category": "social"
+        },
+        {
+          "slug": "infuseplus",
+          "name": "Infuse Plus",
+          "developer": "dayanch96 & IPA Vault",
+          "icon": "Infuse.webp",
+          "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Infuse.webp",
+          "shortDescription": "Enhancer tweak for the Infuse video player",
+          "latestVersion": "8.5.3",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
+          "category": "photo-video"
         }
       ]
     }

@@ -3629,7 +3629,7 @@
       "screenshots": [],
       "featured": false,
       "status": "stable",
-      "alternativeTo": "messenger-flow",
+      "alternativeTo": "snmessenger",
       "verification": {
         "method": "altstore",
         "publisher": "927tx/IPA-Vault",
@@ -3650,7 +3650,7 @@
           "esign",
           "livecontainer"
         ],
-        "notes": "UNOFFICIAL BUILD. MSGPlusX has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Messenger bundle identifier, so installing it REPLACES the App Store Messenger on device."
+        "notes": "UNOFFICIAL BUILD. MSGPlusX has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Messenger bundle identifier, so installing it REPLACES the App Store Messenger on device. SNMessenger shares the same stock Messenger bundle id, so those two install over each other one at a time; Messenger Flow keeps its own id and can stay installed."
       },
       "appPermissions": {
         "entitlements": [
@@ -5473,6 +5473,352 @@
         "keepVersions": 1,
         "minOSVersion": "13.0",
         "descriptionTemplate": "Chatsen {version} | {label}"
+      }
+    },
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "subtitle": "Inject tweaks into installed apps on-device",
+      "bundleIdentifier": "wiki.qaq.TrollFools",
+      "developerName": "Lessica",
+      "category": "utilities",
+      "tintColor": "6C5CE7",
+      "icon": "TrollFools.webp",
+      "localizedDescription": "TrollFools injects tweaks into apps that are already installed, straight on the device: it performs in-place dylib injection with insert_dylib and ChOma, so no computer and no jailbreak is involved. Upstream documents removable system applications, decrypted App Store apps installed through TrollStore, and encrypted App Store apps patched with a bare dynamic library, plus .deb and .zip tweak packages. Written in SwiftUI, and built on ChOma, MachOKit and insert_dylib.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/Lessica/TrollFools",
+      "verification": {
+        "method": "github-release",
+        "publisher": "Lessica/TrollFools",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": "17.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official .tipa from the project's GitHub releases - a .tipa is byte-identical to an .ipa, so AltStore, SideStore, Feather and ESign install it after re-signing it with your certificate. The injection itself only works where TrollStore exists (upstream states iOS 14.0 - 17.0), so on newer firmware the app installs but cannot patch anything."
+      },
+      "upstream": {
+        "repo": "Lessica/TrollFools",
+        "assetNamePattern": "^TrollFools_",
+        "assetSuffixes": [
+          ".tipa",
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "versionPattern": "^TrollFools_(\\d+\\.\\d+(?:\\.\\d+)?(?:-\\d+)?)\\.tipa$",
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "TrollFools {version} | {label}"
+      }
+    },
+    {
+      "slug": "lara",
+      "name": "Lara",
+      "subtitle": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+      "bundleIdentifier": "com.roooot.lara",
+      "developerName": "rooootdev",
+      "category": "utilities",
+      "tintColor": "22C55E",
+      "icon": "Lara.webp",
+      "localizedDescription": "lara is a jailed customization toolbox that uses the DarkSword exploit to reach the parts of the system iOS keeps locked: a full read/write file manager, a MobileGestalt editor, font / card / custom overwrites, status-bar tweaks, hidden icon labels, an upside-down mode, a five-icon dock, a grid app switcher, a performance HUD, DirtyZero 2, a three-app bypass and a JIT enabler for apps that carry get-task-allow. It is published as its own unsigned IPA for sideloading from the open-source repository.",
+      "screenshots": [],
+      "featured": false,
+      "status": "beta",
+      "upstreamURL": "https://github.com/rooootdev/lara",
+      "verification": {
+        "method": "github-release",
+        "publisher": "rooootdev/lara",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "17.0",
+        "maxOSVersion": "26.0.1",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Firmware support as documented by upstream: iOS/iPadOS 17.0 - 18.7.1 and 26.0 - 26.0.1. iOS 16.x is technically affected by the exploit but has no offsets, and 18.7.2+ / 26.1+ are unsupported. Does not work on M5 or A19 (Pro) devices; on M-series CPUs upstream suggests setting t1sz_boot to 0x11 under Modify Offsets. Early-stage tool (0.x releases), so keep expectations modest."
+      },
+      "upstream": {
+        "repo": "rooootdev/lara",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "versionFromTag": true,
+        "minOSVersion": "17.0",
+        "descriptionTemplate": "lara {version} | {label}"
+      }
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "subtitle": "Tor browser that routes web traffic through Tor",
+      "bundleIdentifier": "com.miketigas.OnionBrowser",
+      "developerName": "Mike Tigas",
+      "category": "networking",
+      "tintColor": "6D4C9F",
+      "icon": "OnionBrowser.webp",
+      "localizedDescription": "Onion Browser is a free web browser for iPhone and iPad that encrypts and tunnels its traffic through the Tor network with the help of Orbot for iOS. The 3.x branch renders pages with WKWebView instead of the old UIWebView stack, and the project publishes its own sideloadable build next to the App Store release. Open source, with the repository's LICENSE file governing usage and redistribution.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/1_iphone65_1.1.png",
+        "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/2_iphone65_2.2.png",
+        "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/3_iphone65_3.3.png"
+      ],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/OnionBrowser/OnionBrowser",
+      "verification": {
+        "method": "github-release",
+        "publisher": "OnionBrowser/OnionBrowser",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from the project's own GitHub releases. Tor circuits, bridges and exit policy live in Orbot, so install Orbot from this source too if you need Obfs4 or Snowflake bridges instead of the defaults."
+      },
+      "upstream": {
+        "repo": "OnionBrowser/OnionBrowser",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "versionFromTag": true,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "Onion Browser {version} | {label}"
+      }
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "subtitle": "Tor network tunnel for iOS and iPadOS",
+      "bundleIdentifier": "org.torproject.orbot",
+      "developerName": "The Tor Project",
+      "category": "networking",
+      "tintColor": "7D4698",
+      "icon": "Orbot.webp",
+      "localizedDescription": "Orbot puts an iPhone, iPad or Mac behind the Tor network: it installs a local packet-tunnel configuration so device traffic leaves through Tor instead of the plain network. Obfs4 and Snowflake bridges are supported and fully configurable, Tor v3 onion-service authentication works, and Tor's EntryNodes, ExitNodes, ExcludeNodes and StrictNodes options can all be set. The sideloadable build is published from the project's own GitHub releases, which list the bundled Tor, OpenSSL, Lyrebird and Snowflake versions per app release.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/guardianproject/orbot-ios",
+      "verification": {
+        "method": "github-release",
+        "publisher": "guardianproject/orbot-ios",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Uses the Network Extension (packet tunnel) entitlement, which a free personal Apple ID cannot sign: expect it to run only where your certificate allows network-extension configurations (AltStore or SideStore with a paid developer account, Feather/ESign with a developer certificate). Network extensions do not run in simulators."
+      },
+      "upstream": {
+        "repo": "guardianproject/orbot-ios",
+        "assetNamePattern": "^Orbot\\.ipa$",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "versionFromTag": true,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "Orbot {version} | {label}"
+      }
+    },
+    {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "subtitle": "Open-source micro-habit tracker with WebDAV sync",
+      "bundleIdentifier": "io.github.friesi23.mhabit",
+      "developerName": "FriesI23",
+      "category": "utilities",
+      "tintColor": "3DDC97",
+      "icon": "TableHabit.webp",
+      "localizedDescription": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/FriesI23/mhabit",
+      "verification": {
+        "method": "github-release",
+        "publisher": "FriesI23/mhabit",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "The release ships one unsigned iOS IPA next to Android APKs, flatpaks, a dmg and an msix; only mhabit-unsigned.ipa is distributed here, so the app must be re-signed by a client and cannot run as downloaded."
+      },
+      "upstream": {
+        "repo": "FriesI23/mhabit",
+        "assetNamePattern": "^mhabit-.*\\.ipa$",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "versionFromTag": true,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "Table Habit {version} | {label}"
+      }
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "subtitle": "Add music to the iOS library without a computer",
+      "bundleIdentifier": "com.EduAlexxis.MusicManager",
+      "developerName": "EduAlexxis",
+      "category": "music",
+      "tintColor": "FA243C",
+      "icon": "ByeTunes.webp",
+      "localizedDescription": "ByeTunes writes MP3, M4A, FLAC and WAV files straight into the iOS media library by talking to the media database directly, so adding a song no longer needs a cable and a desktop sync session. You can create and manage playlists in the app, and import metadata is fetched from iTunes or Deezer. The ringtone injector is disabled upstream for now, so treat ringtones as not working yet. Open source under the MIT license, with the iOS build published from the project's own GitHub releases.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/EduAlexxis/ByeTunes",
+      "verification": {
+        "method": "github-release",
+        "publisher": "EduAlexxis/ByeTunes",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "16.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Upstream documents iOS 16.0 or later. Writing into the media database is an unofficial flow: back up anything you cannot lose before mass-importing, and re-run the import after a major iOS update."
+      },
+      "upstream": {
+        "repo": "EduAlexxis/ByeTunes",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "versionFromTag": true,
+        "minOSVersion": "16.0",
+        "descriptionTemplate": "ByeTunes {version} | {label}"
+      }
+    },
+    {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "subtitle": "Messenger tweak with its own sideloaded build",
+      "bundleIdentifier": "com.facebook.Messenger",
+      "developerName": "NguyenASang",
+      "category": "social",
+      "tintColor": "0084FF",
+      "icon": "Messenger.webp",
+      "localizedDescription": "SNMessenger is a full-featured tweak for Facebook Messenger by NguyenASang, published as a ready-to-sideload IPA built from the official tweak source. Its settings live behind the gear icon in the top-left corner of the Messenger profile screen, which is where every switch is flipped. Upstream documents rootless, rootful and sideload support (Roothide is listed as not supported), iOS 12.4 and newer, and Messenger versions from 458.0.0 up to the latest at release time. Open source under the MIT license.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/NguyenASang/SNMessenger/v2.0.0/images/Access_Settings.png"
+      ],
+      "featured": false,
+      "alternativeTo": "msgplusx",
+      "status": "stable",
+      "upstreamURL": "https://github.com/NguyenASang/SNMessenger",
+      "verification": {
+        "method": "github-release",
+        "publisher": "NguyenASang/SNMessenger",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "12.4",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official project: NguyenASang/SNMessenger. The repository publishes the tweak as a .deb for jailbroken devices plus one ready-to-sideload IPA built from it; that IPA carries whichever Messenger build the maintainer patched for the release, so the version shown here is that build's. Uses the stock com.facebook.Messenger bundle id, so it REPLACES the App Store Messenger."
+      },
+      "upstream": {
+        "repo": "NguyenASang/SNMessenger",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "12.4",
+        "descriptionTemplate": "Messenger {version} | SNMessenger {secondary} | {label}"
       }
     }
   ]

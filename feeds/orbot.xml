@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Orbot — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/orbot.json</link>
+    <description>Release feed for Orbot within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/orbot.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Orbot v1.12.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/orbot.json</link>
+      <guid isPermaLink="false">orbot-1.12.0</guid>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Orbot 1.12.0 | Orbot
+
+- Updated Tor to 0.4.9.11.
+- Updated Snowflake to 2.14.1.
+- Improved explanation of Kindness Mode and its test implications. 
+- Slightly improved status error display.
+- Added simplified Chinese translation.
+
+**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.]]></description>
+      <enclosure url="https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa" length="0" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

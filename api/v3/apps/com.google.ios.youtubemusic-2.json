@@ -1,7 +1,7 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "32a2d08aa7aa",
+  "feedVersion": "d60d6763a4a1",
   "data": {
     "name": "YTMusicUltimate",
     "bundleIdentifier": "com.google.ios.youtubemusic",
@@ -37,13 +37,13 @@
             "fileType": "IPA",
             "size": 104992686,
             "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-            "downloads": 222,
+            "downloads": 252,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-        "downloads": 222
+        "downloads": 252
       }
     ],
     "screenshotURLs": [
@@ -96,8 +96,8 @@
         "notes": "Official project: dayanch96/YTMusicUltimate. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by the mrdrvt99/YTMusicUltimate build fork. Shares com.google.ios.youtubemusic with MaxMusic: install one at a time."
       },
       "health": {
-        "downloadReachable": false,
-        "detail": "HTTP 500",
+        "downloadReachable": true,
+        "detail": "HTTP 302",
         "statusSince": "2026-09-14",
         "lastUpdatedAt": "2026-09-09"
       }

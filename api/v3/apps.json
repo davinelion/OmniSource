@@ -1,12 +1,12 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "32a2d08aa7aa",
+  "feedVersion": "d60d6763a4a1",
   "pagination": {
     "page": 1,
     "per_page": 50,
-    "total": 94,
-    "pages": 2
+    "total": 101,
+    "pages": 3
   },
   "data": [
     {
@@ -104,6 +104,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Bootstrap.webp",
       "downloadURL": "https://github.com/roothide/Bootstrap/releases/download/2.2.1/Bootstrap.tipa",
       "size": 55704386
+    },
+    {
+      "id": "com.EduAlexxis.MusicManager",
+      "name": "ByeTunes",
+      "bundleIdentifier": "com.EduAlexxis.MusicManager",
+      "developerName": "EduAlexxis",
+      "category": "music",
+      "version": "2.5",
+      "versionDate": "2026-08-31",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+      "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+      "size": 16815108
     },
     {
       "id": "com.moffatman.chan",
@@ -370,6 +382,18 @@
       "size": 16394645
     },
     {
+      "id": "com.roooot.lara",
+      "name": "Lara",
+      "bundleIdentifier": "com.roooot.lara",
+      "developerName": "rooootdev",
+      "category": "utilities",
+      "version": "0.2",
+      "versionDate": "2026-05-22",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+      "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+      "size": 5474210
+    },
+    {
       "id": "com.kdt.livecontainer",
       "name": "LiveContainer",
       "bundleIdentifier": "com.kdt.livecontainer",
@@ -399,11 +423,11 @@
       "bundleIdentifier": "com.kodjodevf.mangayomi",
       "developerName": "kodjodevf",
       "category": "other",
-      "version": "0.9.2",
-      "versionDate": "2026-09-03",
+      "version": "0.9.3",
+      "versionDate": "2026-09-14",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
-      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.2/Mangayomi-v0.9.2-ios.ipa",
-      "size": 114010180
+      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
+      "size": 114239272
     },
     {
       "id": "com.aoshuang.manicemu",
@@ -550,6 +574,30 @@
       "size": 27204395
     },
     {
+      "id": "com.miketigas.OnionBrowser",
+      "name": "Onion Browser",
+      "bundleIdentifier": "com.miketigas.OnionBrowser",
+      "developerName": "Mike Tigas",
+      "category": "networking",
+      "version": "3.4.1",
+      "versionDate": "2026-08-11",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+      "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+      "size": 39611914
+    },
+    {
+      "id": "org.torproject.orbot",
+      "name": "Orbot",
+      "bundleIdentifier": "org.torproject.orbot",
+      "developerName": "The Tor Project",
+      "category": "networking",
+      "version": "1.12.0",
+      "versionDate": "2026-06-30",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+      "size": 48820768
+    },
+    {
       "id": "com.otraku.app",
       "name": "Otraku",
       "bundleIdentifier": "com.otraku.app",
@@ -560,54 +608,6 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Otraku.webp",
       "downloadURL": "https://github.com/lotusprey/otraku/releases/download/v.1.12.1/Otraku-v.1.12.1-ios15%2B.ipa",
       "size": 9414861
-    },
-    {
-      "id": "com.pikatorrent.PikaTorrent",
-      "name": "PikaTorrent",
-      "bundleIdentifier": "com.pikatorrent.PikaTorrent",
-      "developerName": "G-Ray",
-      "category": "networking",
-      "version": "0.15.0",
-      "versionDate": "2026-01-11",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/PikaTorrent.webp",
-      "downloadURL": "https://github.com/G-Ray/pikatorrent/releases/download/v0.15.0/PikaTorrent-v0.15.0-ios.ipa",
-      "size": 38053348
-    },
-    {
-      "id": "com.example.playtorrio",
-      "name": "PlayTorrio",
-      "bundleIdentifier": "com.example.playtorrio",
-      "developerName": "ayman708",
-      "category": "photo-video",
-      "version": "1.1.5",
-      "versionDate": "2026-09-09",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/PlayTorrio.webp",
-      "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa",
-      "size": 48421258
-    },
-    {
-      "id": "org.ppsspp.ppsspp",
-      "name": "PPSSPP",
-      "bundleIdentifier": "org.ppsspp.ppsspp",
-      "developerName": "Henrik Rydgård",
-      "category": "games",
-      "version": "1.20.4",
-      "versionDate": "2026-05-16",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/PPSSPP.webp",
-      "downloadURL": "https://github.com/hrydgard/ppsspp/releases/download/v1.20.4/PPSSPP-iOS-v1.20.4.ipa",
-      "size": 31124277
-    },
-    {
-      "id": "org.provenance-emu.provenance",
-      "name": "Provenance",
-      "bundleIdentifier": "org.provenance-emu.provenance",
-      "developerName": "Provenance Emu",
-      "category": "games",
-      "version": "3.3.0",
-      "versionDate": "2026-03-14",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Provenance.webp",
-      "downloadURL": "https://github.com/Provenance-Emu/Provenance/releases/download/3.3.0/Provenance-3.3.0-iOS.ipa",
-      "size": 1076407494
     }
   ]
 }

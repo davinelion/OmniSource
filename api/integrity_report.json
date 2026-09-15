@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-15",
   "totals": {
-    "apps": 94,
-    "pass": 64,
+    "apps": 101,
+    "pass": 71,
     "warn": 30,
     "fail": 0,
     "rejected": 0
@@ -249,6 +249,24 @@
         "at": "2026-09-14",
         "durationMs": 405
       }
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "asset": {
+        "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+        "size": 16815108,
+        "releaseId": "2.5",
+        "source": "github",
+        "downloadUrl": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "chan",
@@ -911,6 +929,24 @@
       }
     },
     {
+      "slug": "lara",
+      "name": "Lara",
+      "asset": {
+        "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+        "size": 5474210,
+        "releaseId": "0.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
       "slug": "livecontainer",
       "name": "LiveContainer",
       "asset": {
@@ -1359,6 +1395,42 @@
         "at": "2026-09-14",
         "durationMs": 299
       }
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "asset": {
+        "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+        "size": 39611914,
+        "releaseId": "3.4.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "asset": {
+        "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+        "size": 48820768,
+        "releaseId": "1.12.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "otraku",
@@ -1901,6 +1973,24 @@
       }
     },
     {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "asset": {
+        "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+        "size": 74865911,
+        "releaseId": "517.0.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
       "slug": "sora",
       "name": "Sora",
       "asset": {
@@ -2171,6 +2261,24 @@
       }
     },
     {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "asset": {
+        "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+        "size": 14790504,
+        "releaseId": "1.27.6",
+        "source": "github",
+        "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
       "slug": "taurine",
       "name": "Taurine",
       "asset": {
@@ -2289,6 +2397,24 @@
         "at": "2026-09-14",
         "durationMs": 437
       }
+    },
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "asset": {
+        "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+        "size": 6214108,
+        "releaseId": "4.3-253",
+        "source": "github",
+        "downloadUrl": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "ttkillerplus",

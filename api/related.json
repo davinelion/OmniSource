@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-09-15",
-  "count": 94,
+  "count": 101,
   "weights": {
     "bundle": 0.55,
     "category": 0.2,
@@ -69,6 +69,19 @@
         "developer": "clquwu",
         "bundleId": "dev.clq.Cosmos-Music-Player",
         "version": "1.2.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "byetunes",
+        "name": "ByeTunes",
+        "category": "music",
+        "developer": "EduAlexxis",
+        "bundleId": "com.EduAlexxis.MusicManager",
+        "version": "2.5",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -746,15 +759,16 @@
         ]
       },
       {
-        "slug": "ytlite",
-        "name": "YouTubePlus",
-        "category": "photo-video",
-        "developer": "dayanch96",
-        "bundleId": "com.google.ios.youtube",
-        "version": "21.24.3",
-        "score": 0.15,
+        "slug": "byetunes",
+        "name": "ByeTunes",
+        "category": "music",
+        "developer": "EduAlexxis",
+        "bundleId": "com.EduAlexxis.MusicManager",
+        "version": "2.5",
+        "score": 0.2333,
         "reasons": [
-          "Same developer (dayanch96)"
+          "Same category (music)",
+          "Shared tags: music"
         ]
       }
     ],
@@ -826,15 +840,16 @@
         ]
       },
       {
-        "slug": "maxtube",
-        "name": "MaxTube",
-        "category": "photo-video",
-        "developer": "Mark02-2012",
-        "bundleId": "com.google.ios.youtube",
-        "version": "21.31.3",
-        "score": 0.15,
+        "slug": "byetunes",
+        "name": "ByeTunes",
+        "category": "music",
+        "developer": "EduAlexxis",
+        "bundleId": "com.EduAlexxis.MusicManager",
+        "version": "2.5",
+        "score": 0.2333,
         "reasons": [
-          "Same developer (Mark02-2012)"
+          "Same category (music)",
+          "Shared tags: music"
         ]
       }
     ],
@@ -866,6 +881,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -879,38 +907,25 @@
         ]
       },
       {
+        "slug": "tablehabit",
+        "name": "Table Habit",
+        "category": "utilities",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "sidestore",
         "name": "SideStore",
         "category": "utilities",
         "developer": "SideStore Team",
         "bundleId": "com.SideStore.SideStore",
         "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "saber",
-        "name": "Saber",
-        "category": "utilities",
-        "developer": "Adil Hanney",
-        "bundleId": "com.adilhanney.saber",
-        "version": "1.36.1",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1177,6 +1192,32 @@
         ]
       },
       {
+        "slug": "orbot",
+        "name": "Orbot",
+        "category": "networking",
+        "developer": "The Tor Project",
+        "bundleId": "org.torproject.orbot",
+        "version": "1.12.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "onionbrowser",
+        "name": "Onion Browser",
+        "category": "networking",
+        "developer": "Mike Tigas",
+        "bundleId": "com.miketigas.OnionBrowser",
+        "version": "3.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
         "slug": "gopeed",
         "name": "Gopeed",
         "category": "networking",
@@ -1328,6 +1369,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -1341,25 +1395,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1408,6 +1449,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -1421,25 +1475,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1488,6 +1529,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -1501,25 +1555,12 @@
         ]
       },
       {
-        "slug": "serotonin",
-        "name": "Serotonin",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "saber",
-        "name": "Saber",
-        "category": "utilities",
-        "developer": "Adil Hanney",
-        "bundleId": "com.adilhanney.saber",
-        "version": "1.36.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2059,6 +2100,19 @@
           "Same category (music)",
           "Shared tags: music"
         ]
+      },
+      {
+        "slug": "byetunes",
+        "name": "ByeTunes",
+        "category": "music",
+        "developer": "EduAlexxis",
+        "bundleId": "com.EduAlexxis.MusicManager",
+        "version": "2.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
       }
     ],
     "jellify": [
@@ -2126,6 +2180,19 @@
           "Same category (music)",
           "Shared tags: music"
         ]
+      },
+      {
+        "slug": "byetunes",
+        "name": "ByeTunes",
+        "category": "music",
+        "developer": "EduAlexxis",
+        "bundleId": "com.EduAlexxis.MusicManager",
+        "version": "2.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
       }
     ],
     "zeus": [
@@ -2156,6 +2223,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -2169,38 +2249,25 @@
         ]
       },
       {
+        "slug": "tablehabit",
+        "name": "Table Habit",
+        "category": "utilities",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "sidestore",
         "name": "SideStore",
         "category": "utilities",
         "developer": "SideStore Team",
         "bundleId": "com.SideStore.SideStore",
         "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "saber",
-        "name": "Saber",
-        "category": "utilities",
-        "developer": "Adil Hanney",
-        "bundleId": "com.adilhanney.saber",
-        "version": "1.36.1",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2249,6 +2316,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -2262,25 +2342,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2409,6 +2476,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -2422,25 +2502,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2489,6 +2556,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -2502,25 +2582,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2744,6 +2811,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -2757,25 +2837,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2824,6 +2891,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -2837,25 +2917,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -3064,6 +3131,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -3077,25 +3157,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -3466,6 +3533,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -3479,25 +3559,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -4620,6 +4687,20 @@
     ],
     "msgplusx": [
       {
+        "slug": "snmessenger",
+        "name": "SNMessenger",
+        "category": "social",
+        "developer": "NguyenASang",
+        "bundleId": "com.facebook.Messenger",
+        "version": "517.0.0",
+        "score": 0.7833,
+        "reasons": [
+          "Same bundle identifier",
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
         "slug": "winston",
         "name": "Winston",
         "category": "social",
@@ -4678,19 +4759,6 @@
         "developer": "iKarwan",
         "bundleId": "com.zhiliaoapp.musically",
         "version": "46.8.0",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (social)",
-          "Shared tags: social"
-        ]
-      },
-      {
-        "slug": "thunder",
-        "name": "Thunder",
-        "category": "social",
-        "developer": "Thunder App",
-        "bundleId": "com.hjiangsu.thunder",
-        "version": "0.8.6",
         "score": 0.2333,
         "reasons": [
           "Same category (social)",
@@ -5147,6 +5215,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -5160,25 +5241,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5241,12 +5309,12 @@
         ]
       },
       {
-        "slug": "taurine",
-        "name": "Taurine",
+        "slug": "trollfools",
+        "name": "TrollFools",
         "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5254,12 +5322,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "taurine",
+        "name": "Taurine",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5322,12 +5390,12 @@
         ]
       },
       {
-        "slug": "taurine",
-        "name": "Taurine",
+        "slug": "trollfools",
+        "name": "TrollFools",
         "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5335,12 +5403,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "taurine",
+        "name": "Taurine",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5403,12 +5471,12 @@
         ]
       },
       {
-        "slug": "taurine",
-        "name": "Taurine",
+        "slug": "trollfools",
+        "name": "TrollFools",
         "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5416,12 +5484,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "taurine",
+        "name": "Taurine",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5484,12 +5552,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "trollfools",
+        "name": "TrollFools",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5497,12 +5565,12 @@
         ]
       },
       {
-        "slug": "serotonin",
-        "name": "Serotonin",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5565,12 +5633,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "trollfools",
+        "name": "TrollFools",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5578,12 +5646,12 @@
         ]
       },
       {
-        "slug": "serotonin",
-        "name": "Serotonin",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5619,6 +5687,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -5632,38 +5713,25 @@
         ]
       },
       {
+        "slug": "tablehabit",
+        "name": "Table Habit",
+        "category": "utilities",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "sidestore",
         "name": "SideStore",
         "category": "utilities",
         "developer": "SideStore Team",
         "bundleId": "com.SideStore.SideStore",
         "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "saber",
-        "name": "Saber",
-        "category": "utilities",
-        "developer": "Adil Hanney",
-        "bundleId": "com.adilhanney.saber",
-        "version": "1.36.1",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5759,6 +5827,32 @@
         "developer": "G-Ray",
         "bundleId": "com.pikatorrent.PikaTorrent",
         "version": "0.15.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "orbot",
+        "name": "Orbot",
+        "category": "networking",
+        "developer": "The Tor Project",
+        "bundleId": "org.torproject.orbot",
+        "version": "1.12.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "onionbrowser",
+        "name": "Onion Browser",
+        "category": "networking",
+        "developer": "Mike Tigas",
+        "bundleId": "com.miketigas.OnionBrowser",
+        "version": "3.4.1",
         "score": 0.2333,
         "reasons": [
           "Same category (networking)",
@@ -5940,6 +6034,32 @@
       }
     ],
     "pikatorrent": [
+      {
+        "slug": "orbot",
+        "name": "Orbot",
+        "category": "networking",
+        "developer": "The Tor Project",
+        "bundleId": "org.torproject.orbot",
+        "version": "1.12.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "onionbrowser",
+        "name": "Onion Browser",
+        "category": "networking",
+        "developer": "Mike Tigas",
+        "bundleId": "com.miketigas.OnionBrowser",
+        "version": "3.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
       {
         "slug": "itorrent",
         "name": "iTorrent",
@@ -6449,6 +6569,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -6462,25 +6595,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -6609,6 +6729,19 @@
         ]
       },
       {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "taurine",
         "name": "Taurine",
         "category": "utilities",
@@ -6622,25 +6755,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "tablehabit",
+        "name": "Table Habit",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "serotonin",
-        "name": "Serotonin",
-        "category": "utilities",
-        "developer": "mineek",
-        "bundleId": "pisshill.usprebooter",
-        "version": "1.2.1",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -6708,6 +6828,19 @@
         "developer": "anultravioletaurora",
         "bundleId": "com.cosmonautical.jellify",
         "version": "1.2.10",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "byetunes",
+        "name": "ByeTunes",
+        "category": "music",
+        "developer": "EduAlexxis",
+        "bundleId": "com.EduAlexxis.MusicManager",
+        "version": "2.5",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -6850,12 +6983,12 @@
         ]
       },
       {
-        "slug": "taurine",
-        "name": "Taurine",
+        "slug": "trollfools",
+        "name": "TrollFools",
         "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -6863,12 +6996,12 @@
         ]
       },
       {
-        "slug": "sidestore",
-        "name": "SideStore",
+        "slug": "taurine",
+        "name": "Taurine",
         "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.6.4",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -7176,6 +7309,515 @@
         "developer": "Thunder App",
         "bundleId": "com.hjiangsu.thunder",
         "version": "0.8.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      }
+    ],
+    "trollfools": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "taurine",
+        "name": "Taurine",
+        "category": "utilities",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "tablehabit",
+        "name": "Table Habit",
+        "category": "utilities",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "sidestore",
+        "name": "SideStore",
+        "category": "utilities",
+        "developer": "SideStore Team",
+        "bundleId": "com.SideStore.SideStore",
+        "version": "0.6.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "lara": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "taurine",
+        "name": "Taurine",
+        "category": "utilities",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "tablehabit",
+        "name": "Table Habit",
+        "category": "utilities",
+        "developer": "FriesI23",
+        "bundleId": "io.github.friesi23.mhabit",
+        "version": "1.27.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "onionbrowser": [
+      {
+        "slug": "pikatorrent",
+        "name": "PikaTorrent",
+        "category": "networking",
+        "developer": "G-Ray",
+        "bundleId": "com.pikatorrent.PikaTorrent",
+        "version": "0.15.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "orbot",
+        "name": "Orbot",
+        "category": "networking",
+        "developer": "The Tor Project",
+        "bundleId": "org.torproject.orbot",
+        "version": "1.12.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "itorrent",
+        "name": "iTorrent",
+        "category": "networking",
+        "developer": "XITRIX",
+        "bundleId": "com.xitrix.iTorrent2",
+        "version": "2.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "gopeed",
+        "name": "Gopeed",
+        "category": "networking",
+        "developer": "GopeedLab",
+        "bundleId": "com.gopeed.gopeed",
+        "version": "1.9.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      }
+    ],
+    "orbot": [
+      {
+        "slug": "pikatorrent",
+        "name": "PikaTorrent",
+        "category": "networking",
+        "developer": "G-Ray",
+        "bundleId": "com.pikatorrent.PikaTorrent",
+        "version": "0.15.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "onionbrowser",
+        "name": "Onion Browser",
+        "category": "networking",
+        "developer": "Mike Tigas",
+        "bundleId": "com.miketigas.OnionBrowser",
+        "version": "3.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "itorrent",
+        "name": "iTorrent",
+        "category": "networking",
+        "developer": "XITRIX",
+        "bundleId": "com.xitrix.iTorrent2",
+        "version": "2.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "gopeed",
+        "name": "Gopeed",
+        "category": "networking",
+        "developer": "GopeedLab",
+        "bundleId": "com.gopeed.gopeed",
+        "version": "1.9.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      }
+    ],
+    "tablehabit": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "taurine",
+        "name": "Taurine",
+        "category": "utilities",
+        "developer": "Odyssey Team (coolstar)",
+        "bundleId": "org.coolstar.taurine",
+        "version": "1.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "sidestore",
+        "name": "SideStore",
+        "category": "utilities",
+        "developer": "SideStore Team",
+        "bundleId": "com.SideStore.SideStore",
+        "version": "0.6.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "byetunes": [
+      {
+        "slug": "ytmusic",
+        "name": "YTMusicUltimate",
+        "category": "music",
+        "developer": "dayanch96",
+        "bundleId": "com.google.ios.youtubemusic",
+        "version": "9.36.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "spotube",
+        "name": "Spotube",
+        "category": "music",
+        "developer": "KRTirtho",
+        "bundleId": "oss.krtirtho.spotube.stable",
+        "version": "5.1.2",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "spotiflac",
+        "name": "SpotiFLAC Mobile",
+        "category": "music",
+        "developer": "zarzet",
+        "bundleId": "com.zarz.spotiflacAndroid",
+        "version": "4.9.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "maxmusic",
+        "name": "MaxMusic",
+        "category": "music",
+        "developer": "Mark02-2012",
+        "bundleId": "com.google.ios.youtubemusic",
+        "version": "9.36.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "jellify",
+        "name": "Jellify",
+        "category": "music",
+        "developer": "anultravioletaurora",
+        "bundleId": "com.cosmonautical.jellify",
+        "version": "1.2.10",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      },
+      {
+        "slug": "cosmos",
+        "name": "Cosmos Music Player",
+        "category": "music",
+        "developer": "clquwu",
+        "bundleId": "dev.clq.Cosmos-Music-Player",
+        "version": "1.2.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (music)",
+          "Shared tags: music"
+        ]
+      }
+    ],
+    "snmessenger": [
+      {
+        "slug": "msgplusx",
+        "name": "MSGPlusX",
+        "category": "social",
+        "developer": "Dens0r & IPA Vault & lucaspedrosa",
+        "bundleId": "com.facebook.Messenger",
+        "version": "578.1.0",
+        "score": 0.7833,
+        "reasons": [
+          "Same bundle identifier",
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "winston",
+        "name": "Winston",
+        "category": "social",
+        "developer": "lo.cafe",
+        "bundleId": "lo.cafe.winston",
+        "version": "1.1.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "voyager",
+        "name": "Voyager",
+        "category": "social",
+        "developer": "aeharding",
+        "bundleId": "app.vger.voyager",
+        "version": "2.49.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "twitchadblock",
+        "name": "TwitchAdBlock",
+        "category": "social",
+        "developer": "gunnerkidBT (original by dayanch96)",
+        "bundleId": "tv.twitch",
+        "version": "30.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "turrit-mxgram",
+        "name": "Turrit MxGram",
+        "category": "social",
+        "developer": "m1ronx1412 & IPA Vault",
+        "bundleId": "com.seastar.turrit",
+        "version": "1.5.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "ttkillerplus",
+        "name": "TTKillerPlus",
+        "category": "social",
+        "developer": "iKarwan",
+        "bundleId": "com.zhiliaoapp.musically",
+        "version": "46.8.0",
         "score": 0.2333,
         "reasons": [
           "Same category (social)",

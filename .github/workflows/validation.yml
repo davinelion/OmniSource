@@ -9,9 +9,11 @@ on:
       - catalog.json
       - feeds/**
       - data/quarantine/**
+      - data/source_policy.json
       - scripts/validation/**
       - src/omnisource/metadata_validation.py
       - src/omnisource/remote_validation.py
+      - src/omnisource/source_policy.py
       - .github/workflows/validation.yml
   push:
     branches: [main]
@@ -19,9 +21,11 @@ on:
       - catalog.json
       - feeds/**
       - data/quarantine/**
+      - data/source_policy.json
       - scripts/validation/**
       - src/omnisource/metadata_validation.py
       - src/omnisource/remote_validation.py
+      - src/omnisource/source_policy.py
       - .github/workflows/validation.yml
   workflow_dispatch:
 
@@ -46,10 +50,22 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate discovery registry
+      # Recorded sourcing verdicts (data/source_policy.json) are enforced here, not
+      # only inside discovery: an entry that resolves from a rejected host must fail
+      # the publication gate even if it was authored straight into catalog.json.
+      - name: Enforce sourcing policy
         run: |
           set -euo pipefail
-          python3 scripts/validation/validate_source.py
+          export PYTHONPATH=src
+          test -s data/source_policy.json
+          python3 -m omnisource.source_policy check-catalog
+          # Canary: a store this project already rejected must still be refused.
+          # check-url exits 1 on a blocked URL, so "succeeded" is the failure here.
+          if python3 -m omnisource.source_policy check-url https://armconverter.com/store/us >/dev/null; then
+            echo "::error::the sourcing policy no longer blocks the store rejected on 2026-09-15"
+            exit 1
+          fi
+          echo "sourcing policy: catalog clean, rejected stores still refused"
 
       - name: Validate feed structure
         run: |

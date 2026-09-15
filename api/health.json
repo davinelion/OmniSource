@@ -2,11 +2,11 @@
   "generatedAt": "2026-09-15",
   "lastEventAt": "2026-09-14",
   "totals": {
-    "apps": 94,
-    "reachable": 94,
+    "apps": 101,
+    "reachable": 101,
     "unreachable": 0,
     "featured": 6,
-    "healthy": 94,
+    "healthy": 101,
     "warning": 0,
     "critical": 0
   },
@@ -2076,6 +2076,160 @@
         "updateFrequency": 0.5,
         "releaseAvailability": 1.0,
         "metadataCompleteness": 0.625,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "status": "stable",
+      "version": "4.3-253",
+      "updatedAt": "2026-04-23",
+      "sizeBytes": 6214108,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-04-23",
+      "updatedDaysAgo": 145,
+      "stale": true,
+      "healthScore": 77,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.625,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "lara",
+      "name": "Lara",
+      "status": "beta",
+      "version": "0.2",
+      "updatedAt": "2026-05-22",
+      "sizeBytes": 5474210,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-05-22",
+      "updatedDaysAgo": 116,
+      "stale": true,
+      "healthScore": 77,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.625,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "status": "stable",
+      "version": "3.4.1",
+      "updatedAt": "2026-08-11",
+      "sizeBytes": 39611914,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-08-11",
+      "updatedDaysAgo": 35,
+      "stale": false,
+      "healthScore": 79,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.75,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "status": "stable",
+      "version": "1.12.0",
+      "updatedAt": "2026-06-30",
+      "sizeBytes": 48820768,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-06-30",
+      "updatedDaysAgo": 77,
+      "stale": false,
+      "healthScore": 77,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.625,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "status": "stable",
+      "version": "1.27.6",
+      "updatedAt": "2026-09-07",
+      "sizeBytes": 14790504,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-09-07",
+      "updatedDaysAgo": 8,
+      "stale": false,
+      "healthScore": 77,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.625,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "status": "stable",
+      "version": "2.5",
+      "updatedAt": "2026-08-31",
+      "sizeBytes": 16815108,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-08-31",
+      "updatedDaysAgo": 15,
+      "stale": false,
+      "healthScore": 77,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.625,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "status": "stable",
+      "version": "517.0.0",
+      "updatedAt": "2025-07-29",
+      "sizeBytes": 74865911,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2025-07-29",
+      "updatedDaysAgo": 413,
+      "stale": true,
+      "healthScore": 79,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.75,
         "sourceReliability": 0.5
       }
     }

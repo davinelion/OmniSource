@@ -1,0 +1,134 @@
+{
+  "name": "OmniSource - SNMessenger",
+  "identifier": "com.iamsmmh.omnisource.snmessenger",
+  "apiVersion": "v2",
+  "subtitle": "Messenger tweak with its own sideloaded build",
+  "description": "Standalone distribution feed for SNMessenger, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/snmessenger.json",
+  "apps": [
+    {
+      "name": "SNMessenger",
+      "bundleIdentifier": "com.facebook.Messenger",
+      "developerName": "NguyenASang",
+      "subtitle": "Messenger tweak with its own sideloaded build",
+      "localizedDescription": "SNMessenger is a full-featured tweak for Facebook Messenger by NguyenASang, published as a ready-to-sideload IPA built from the official tweak source. Its settings live behind the gear icon in the top-left corner of the Messenger profile screen, which is where every switch is flipped. Upstream documents rootless, rootful and sideload support (Roothide is listed as not supported), iOS 12.4 and newer, and Messenger versions from 458.0.0 up to the latest at release time. Open source under the MIT license.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+      "tintColor": "0084FF",
+      "category": "social",
+      "version": "517.0.0",
+      "versionDate": "2025-07-29",
+      "versionDescription": "Messenger 517.0.0 | SNMessenger 2.0.0 | Messenger_517.0.0.SNMessenger.v2.0.0-2\n\n# Changelog:\n- A new way to access tweak's settings (it looks more _native_ now)\n- Add option to prevent others knowing when you're typing\n- Add option to hide floating AI button\n- Improvements and fix other minor issues\n- **Add ability to sideload on non-jailbroken devices!!!** \n- ... (I forgot lol)",
+      "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+      "size": 74865911,
+      "versions": [
+        {
+          "version": "517.0.0",
+          "date": "2025-07-29",
+          "localizedDescription": "Messenger 517.0.0 | SNMessenger 2.0.0 | Messenger_517.0.0.SNMessenger.v2.0.0-2\n\n# Changelog:\n- A new way to access tweak's settings (it looks more _native_ now)\n- Add option to prevent others knowing when you're typing\n- Add option to hide floating AI button\n- Improvements and fix other minor issues\n- **Add ability to sideload on non-jailbroken devices!!!** \n- ... (I forgot lol)",
+          "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+          "size": 74865911,
+          "minOSVersion": "12.4",
+          "releaseUrl": "https://github.com/NguyenASang/SNMessenger/releases/tag/v2.0.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "com.nguyenasang.snmessenger_2.0.0_iphoneos-arm.deb",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/com.nguyenasang.snmessenger_2.0.0_iphoneos-arm.deb",
+              "platform": "linux",
+              "architecture": null,
+              "fileType": "DEB",
+              "size": 420364,
+              "sha256": "6f480032c25f644682f9d5be9e4e4dff985856074495d9bd9552045235da1c6c",
+              "downloads": 378,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64.deb",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 419368,
+              "sha256": "aa9b0636b3d1b8539b471b7d7c72bc8f2b707f0ae66e0ee42ad5f5678d36d431",
+              "downloads": 275,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64e.deb",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64e.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 419052,
+              "sha256": "8471daa3c136cfd6e781a177e0c466aff8ae46837b56e0fe21c98177afd95d21",
+              "downloads": 214,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 74865911,
+              "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+              "downloads": 732,
+              "mimeType": "application/x-itunes-ipa",
+              "installable": true
+            }
+          ],
+          "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+          "downloads": 732
+        }
+      ],
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/NguyenASang/SNMessenger/v2.0.0/images/Access_Settings.png"
+      ],
+      "omnisource": {
+        "slug": "snmessenger",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/NguyenASang/SNMessenger",
+        "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+        "verification": {
+          "method": "github-release",
+          "publisher": "NguyenASang/SNMessenger",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "12.4",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official project: NguyenASang/SNMessenger. The repository publishes the tweak as a .deb for jailbroken devices plus one ready-to-sideload IPA built from it; that IPA carries whichever Messenger build the maintainer patched for the release, so the version shown here is that build's. Uses the stock com.facebook.Messenger bundle id, so it REPLACES the App Store Messenger."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2025-07-29",
+          "lastUpdatedAt": "2025-07-29"
+        }
+      }
+    }
+  ],
+  "news": []
+}

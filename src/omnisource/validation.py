@@ -992,6 +992,53 @@ def validate_published_app_records(catalog: Any, paths: Paths) -> Report:
 
 
 # ---------------------------------------------------------------------------
+# Sourcing policy (data/source_policy.json)
+# ---------------------------------------------------------------------------
+def validate_source_policy(paths: Paths, catalog: Any) -> Report:
+    """Offline gate for the recorded sourcing verdicts.
+
+    Two directions are checked, because both matter:
+
+    * the policy file itself has to stay parseable and narrow (an unparseable
+      rule would silently stop blocking anything); and
+    * no ``catalog.json`` entry may resolve from, or mirror, a blocked source.
+      Discovery can keep re-proposing a blocked feed - the catalog is the only
+      thing that reaches a client, so that is where the decision is enforced.
+    """
+    from omnisource.source_policy import (
+        POLICY_RELATIVE_PATH,
+        SCHEMA_RELATIVE_PATH,
+        catalog_violations,
+        load_policy,
+        validate_policy,
+    )
+
+    report = Report()
+    policy_path = paths.root / POLICY_RELATIVE_PATH
+    if not (paths.root / SCHEMA_RELATIVE_PATH).is_file():
+        report.warn(
+            f"{SCHEMA_RELATIVE_PATH}: missing - the sourcing policy is no longer schema-checkable, "
+            "so tests/test_source_policy.py cannot prove its shape"
+        )
+    if not policy_path.is_file():
+        report.warn(f"{_rel(policy_path, paths.root)}: missing - sourcing verdicts are not enforced this run")
+        return report
+    document = load_json(policy_path, report, root=paths.root)
+    if document is None:
+        return report
+    for error in validate_policy(document):
+        report.error(error)
+
+    policy = load_policy(paths.root)
+    if policy.error:
+        report.error(f"{_rel(policy_path, paths.root)}: {policy.error}")
+        return report
+    for violation in catalog_violations(catalog, policy):
+        report.error(violation)
+    return report
+
+
+# ---------------------------------------------------------------------------
 # Entry
 # ---------------------------------------------------------------------------
 def emit(report: Report, *, strict: bool) -> int:
@@ -1030,6 +1077,7 @@ def validate_tree(paths: Paths) -> Report:
 
     report.extend(validate_catalog(catalog, assets_dir=paths.assets))
     report.extend(validate_assets(catalog, assets_dir=paths.assets))
+    report.extend(validate_source_policy(paths, catalog))
 
     feed_paths = sorted(p for p in paths.feeds.glob("*.json") if p.name not in ALTSTORE_NON_FEED)
     if not feed_paths:

@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15",
+  "feedVersion": "0dc9e6cd4147",
+  "app": {
+    "id": "tablehabit",
+    "name": "Table Habit",
+    "developer": "FriesI23",
+    "subtitle": "Open-source micro-habit tracker with WebDAV sync",
+    "bundleIdentifier": "io.github.friesi23.mhabit",
+    "version": "1.27.6",
+    "versionDate": "2026-09-07",
+    "description": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
+    "shortDescription": "Open-source micro-habit tracker with WebDAV sync",
+    "category": "utilities",
+    "tags": [
+      "utilities"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+    "screenshots": [],
+    "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+    "size": 14790504,
+    "source": "FriesI23/mhabit",
+    "sourceURL": "https://github.com/FriesI23/mhabit",
+    "checksum": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+    "checksumPublished": false,
+    "minOSVersion": "15.0",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/tablehabit/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/tablehabit.json",
+    "health": {
+      "reachable": true,
+      "detail": "not probed",
+      "updatedAt": "2026-09-07"
+    }
+  },
+  "newest": {
+    "version": "1.27.6",
+    "date": "2026-09-07",
+    "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+    "size": 14790504,
+    "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560"
+  },
+  "versions": [
+    {
+      "version": "1.27.6",
+      "date": "2026-09-07",
+      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+      "size": 14790504,
+      "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

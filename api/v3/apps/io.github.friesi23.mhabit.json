@@ -1,0 +1,183 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d60d6763a4a1",
+  "data": {
+    "name": "Table Habit",
+    "bundleIdentifier": "io.github.friesi23.mhabit",
+    "developerName": "FriesI23",
+    "subtitle": "Open-source micro-habit tracker with WebDAV sync",
+    "localizedDescription": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+    "tintColor": "3DDC97",
+    "category": "utilities",
+    "version": "1.27.6",
+    "versionDate": "2026-09-07",
+    "versionDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+    "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+    "size": 14790504,
+    "versions": [
+      {
+        "version": "1.27.6",
+        "date": "2026-09-07",
+        "localizedDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+        "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+        "size": 14790504,
+        "minOSVersion": "15.0",
+        "releaseUrl": "https://github.com/FriesI23/mhabit/releases/tag/v1.27.6%2B195",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "app-arm64-v8a-release.apk",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-arm64-v8a-release.apk",
+            "platform": "android",
+            "architecture": "arm64",
+            "fileType": "APK",
+            "size": 33482969,
+            "sha256": "75871d7eaf689160a38a9e12e0ff6424a119f58a92bc955249fa7a396aa5f9f1",
+            "downloads": 1137,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "app-armeabi-v7a-release.apk",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-armeabi-v7a-release.apk",
+            "platform": "android",
+            "architecture": "armv7",
+            "fileType": "APK",
+            "size": 32071715,
+            "sha256": "cc444d2b55524353430454d17dba66c23bf3227f69b9312f49d5db013099824a",
+            "downloads": 3,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "app-release.apk",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-release.apk",
+            "platform": "android",
+            "architecture": null,
+            "fileType": "APK",
+            "size": 94393000,
+            "sha256": "41545a363c1861db51e8dd274696301090689a880153dfdbaa984c519657b805",
+            "downloads": 30,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "app-x86_64-release.apk",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-x86_64-release.apk",
+            "platform": "android",
+            "architecture": "x86_64",
+            "fileType": "APK",
+            "size": 34983850,
+            "sha256": "9b90eb8e2ce7c8b9d50d87386cafb9ea3c6bdd7d6dcca88555237f93730f9762",
+            "downloads": 11,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "mhabit-aarch64.flatpak",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-aarch64.flatpak",
+            "platform": "unknown",
+            "architecture": "arm64",
+            "fileType": "other",
+            "size": 22757976,
+            "sha256": "14f9883a2d6c1238bec38beeb016e51360212a030cefa76710b92fac5b0c1e2e",
+            "downloads": 2,
+            "mimeType": "raw",
+            "installable": false
+          },
+          {
+            "filename": "mhabit-unsigned.ipa",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 14790504,
+            "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+            "downloads": 12,
+            "mimeType": "raw",
+            "installable": true
+          },
+          {
+            "filename": "mhabit-x86_64.flatpak",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-x86_64.flatpak",
+            "platform": "unknown",
+            "architecture": "x86_64",
+            "fileType": "other",
+            "size": 23616064,
+            "sha256": "292035474d44ee40474a5df19bba6668b33de83220f50729dd00b1fc5a67f620",
+            "downloads": 7,
+            "mimeType": "raw",
+            "installable": false
+          },
+          {
+            "filename": "mhabit.dmg",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit.dmg",
+            "platform": "macos",
+            "architecture": null,
+            "fileType": "DMG",
+            "size": 30203158,
+            "sha256": "2de165866dfcd2fd751eb831ade79f39cab5f8a4c4fd4927d8cb72c95c31dd90",
+            "downloads": 38,
+            "mimeType": "raw",
+            "installable": true
+          },
+          {
+            "filename": "mhabit_x64.msix",
+            "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit_x64.msix",
+            "platform": "unknown",
+            "architecture": null,
+            "fileType": "other",
+            "size": 23543364,
+            "sha256": "42ae38660c879d5df2eec257078d83de1d7fc102634d2e33df75058a43c76f62",
+            "downloads": 39,
+            "mimeType": "raw",
+            "installable": false
+          }
+        ],
+        "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+        "downloads": 12
+      }
+    ],
+    "screenshotURLs": [],
+    "omnisource": {
+      "slug": "tablehabit",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/FriesI23/mhabit",
+      "sourceURL": "https://github.com/FriesI23/mhabit",
+      "verification": {
+        "method": "github-release",
+        "publisher": "FriesI23/mhabit",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "The release ships one unsigned iOS IPA next to Android APKs, flatpaks, a dmg and an msix; only mhabit-unsigned.ipa is distributed here, so the app must be re-signed by a client and cannot run as downloaded."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "not probed",
+        "statusSince": "2026-09-07",
+        "lastUpdatedAt": "2026-09-07"
+      }
+    },
+    "id": "io.github.friesi23.mhabit"
+  }
+}

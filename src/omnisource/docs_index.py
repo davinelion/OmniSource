@@ -30,6 +30,11 @@ DOCUMENTS = (
     ("AUDIT.md", "Audit log", "Findings and fixes from the repository audit."),
     ("CHANGES.md", "Changelog", "Notable changes between builds."),
     ("SOURCING-REPORT.md", "Sourcing report", "How upstream sources were selected and validated."),
+    (
+        "SOURCING-REPORT-2026-09-15.md",
+        "Sourcing verdicts (2026-09-15)",
+        "FMHY iOS tools: what was catalogued, and why the decrypted-app storefronts are blocked.",
+    ),
 )
 
 _HEADING = re.compile(r"^#\s+(.+)$", re.M)

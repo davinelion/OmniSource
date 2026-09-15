@@ -66,6 +66,14 @@
       "bytes": 5960,
       "sha256": "e0829d46551836cb14d189875b2f80cc5029d8633f17387f584c48a5330ffffb"
     },
+    "byetunes": {
+      "file": "ByeTunes.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 7274,
+      "sha256": "dcd7c763a69db594292b57acffb15d6bb70c7c3c278122c25a0b70bf8cb0a837"
+    },
     "chan": {
       "file": "Chan.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/Chan.webp",
@@ -242,6 +250,14 @@
       "bytes": 16838,
       "sha256": "d06a593e272119963a9ce838107d0f9b0d2bd271e54ee8840b08aa1f3ce7d200"
     },
+    "lara": {
+      "file": "Lara.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 6538,
+      "sha256": "869d351aaf471fe5dc4af10a169ed40d49831370011e719f9f71e4d296f5d6fa"
+    },
     "livecontainer": {
       "file": "LiveContainer.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/LiveContainer.webp",
@@ -361,6 +377,22 @@
       "exists": true,
       "bytes": 8242,
       "sha256": "0fe2e7f7001fff67009d02f8c2d776e8019b9d960bd59c23796e74cb5205118a"
+    },
+    "onionbrowser": {
+      "file": "OnionBrowser.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 4326,
+      "sha256": "8be73da72bd532c8c2b6aa02b8e858ae1d165e1cbd1c4304a9c0961b3a65546c"
+    },
+    "orbot": {
+      "file": "Orbot.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 4834,
+      "sha256": "ee71fcdfabaa5f1021f279259b2d4001db9d84ee8736ac9e473b77b9812647d8"
     },
     "otraku": {
       "file": "Otraku.webp",
@@ -506,6 +538,14 @@
       "bytes": 11410,
       "sha256": "b4d0d7696df7c04524446db7490e24c3fb3774222b1bd4ded1354e65f8192d9a"
     },
+    "snmessenger": {
+      "file": "Messenger.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 8834,
+      "sha256": "598aa32803e64e1f85663f188634dff19c93d2da0dda13e269c0b709457d3667"
+    },
     "sora": {
       "file": "Sora.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/Sora.webp",
@@ -578,6 +618,14 @@
       "bytes": 7020,
       "sha256": "c7488f1723a50ca6e221725f9a1954280c120530eb297d0406552e9b80767339"
     },
+    "tablehabit": {
+      "file": "TableHabit.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 5314,
+      "sha256": "e519ee85599478ae1bb9d4a7b88d7e71b1cbf29c1a5aa4e423f28b30a306a296"
+    },
     "taurine": {
       "file": "Taurine.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/Taurine.webp",
@@ -609,6 +657,14 @@
       "exists": true,
       "bytes": 1266,
       "sha256": "89382ace71f755d58ff19235e156d0286438c62157c6f7f007bd8af6a74bc43f"
+    },
+    "trollfools": {
+      "file": "TrollFools.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 5152,
+      "sha256": "748b8c119df89dbfc5d9edbf9648825c9948a612dc14e92062133071d9e538b0"
     },
     "ttkillerplus": {
       "file": "TikTok.webp",
@@ -804,6 +860,7 @@
     "music": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
       "apps": [
+        "byetunes",
         "cosmos",
         "jellify",
         "maxmusic",
@@ -811,16 +868,18 @@
         "spotube",
         "ytmusic"
       ],
-      "count": 6
+      "count": 7
     },
     "networking": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
       "apps": [
         "gopeed",
         "itorrent",
+        "onionbrowser",
+        "orbot",
         "pikatorrent"
       ],
-      "count": 3
+      "count": 5
     },
     "other": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
@@ -877,6 +936,7 @@
         "ryukgram",
         "ryukgram-ig410",
         "ryukgram-sidebyside",
+        "snmessenger",
         "sparkle",
         "swiftgram",
         "telegram-mxgram",
@@ -888,7 +948,7 @@
         "voyager",
         "winston"
       ],
-      "count": 28
+      "count": 29
     },
     "utilities": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
@@ -901,6 +961,7 @@
         "dopamine-roothide",
         "feather",
         "ksign",
+        "lara",
         "livecontainer",
         "muffinstore",
         "odyssey",
@@ -911,12 +972,14 @@
         "saber",
         "serotonin",
         "sidestore",
+        "tablehabit",
         "taurine",
+        "trollfools",
         "unc0ver",
         "utm",
         "zeus"
       ],
-      "count": 22
+      "count": 25
     }
   },
   "missing": [],
@@ -927,6 +990,7 @@
     "apollo",
     "bluewallet",
     "bootstrap",
+    "byetunes",
     "chan",
     "chatsen",
     "conduit",
@@ -946,6 +1010,7 @@
     "jellify",
     "jellybook",
     "ksign",
+    "lara",
     "mame4ios",
     "mangayomi",
     "manicemu",
@@ -958,6 +1023,7 @@
     "neofreebird",
     "nexasc",
     "odyssey",
+    "orbot",
     "otraku",
     "pikatorrent",
     "playtorrio",
@@ -981,10 +1047,12 @@
     "streamyfin",
     "swiftgram",
     "synkplay",
+    "tablehabit",
     "taurine",
     "telegram-mxgram",
     "threadsaver",
     "thunder",
+    "trollfools",
     "turrit-mxgram",
     "twitchadblock",
     "unc0ver",
@@ -995,11 +1063,11 @@
     "zeus"
   ],
   "totals": {
-    "apps": 94,
-    "iconsOk": 94,
+    "apps": 101,
+    "iconsOk": 101,
     "iconsMissing": 0,
     "placeholdersOk": 3,
-    "screenshotsDeclared": 22,
-    "screenshotsMissing": 72
+    "screenshotsDeclared": 24,
+    "screenshotsMissing": 77
   }
 }

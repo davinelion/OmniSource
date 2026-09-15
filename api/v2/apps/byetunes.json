@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15",
+  "feedVersion": "0dc9e6cd4147",
+  "app": {
+    "id": "byetunes",
+    "name": "ByeTunes",
+    "developer": "EduAlexxis",
+    "subtitle": "Add music to the iOS library without a computer",
+    "bundleIdentifier": "com.EduAlexxis.MusicManager",
+    "version": "2.5",
+    "versionDate": "2026-08-31",
+    "description": "ByeTunes writes MP3, M4A, FLAC and WAV files straight into the iOS media library by talking to the media database directly, so adding a song no longer needs a cable and a desktop sync session. You can create and manage playlists in the app, and import metadata is fetched from iTunes or Deezer. The ringtone injector is disabled upstream for now, so treat ringtones as not working yet. Open source under the MIT license, with the iOS build published from the project's own GitHub releases.",
+    "shortDescription": "Add music to the iOS library without a computer",
+    "category": "music",
+    "tags": [
+      "music"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+    "screenshots": [],
+    "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+    "size": 16815108,
+    "source": "EduAlexxis/ByeTunes",
+    "sourceURL": "https://github.com/EduAlexxis/ByeTunes",
+    "checksum": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+    "checksumPublished": false,
+    "minOSVersion": "16.0",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/byetunes/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/byetunes.json",
+    "health": {
+      "reachable": true,
+      "detail": "not probed",
+      "updatedAt": "2026-08-31"
+    }
+  },
+  "newest": {
+    "version": "2.5",
+    "date": "2026-08-31",
+    "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+    "size": 16815108,
+    "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa"
+  },
+  "versions": [
+    {
+      "version": "2.5",
+      "date": "2026-08-31",
+      "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+      "size": 16815108,
+      "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

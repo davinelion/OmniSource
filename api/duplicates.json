@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-09-15",
-  "count": 4,
-  "appsAffected": 15,
+  "count": 5,
+  "appsAffected": 17,
   "groups": [
     {
       "key": "com.google.ios.youtube",
@@ -190,6 +190,42 @@
       "replacementRisk": true
     },
     {
+      "key": "com.facebook.Messenger",
+      "type": "bundle-id",
+      "reason": "2 apps share bundle identifier 'com.facebook.Messenger'",
+      "apps": [
+        {
+          "app": "msgplusx",
+          "name": "MSGPlusX",
+          "version": "578.1.0",
+          "releaseDate": "2026-09-10",
+          "source": "927tx/IPA-Vault",
+          "developer": "Dens0r & IPA Vault & lucaspedrosa",
+          "category": "social",
+          "status": "stable",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa"
+        },
+        {
+          "app": "snmessenger",
+          "name": "SNMessenger",
+          "version": "517.0.0",
+          "releaseDate": "2025-07-29",
+          "source": "NguyenASang/SNMessenger",
+          "developer": "NguyenASang",
+          "category": "social",
+          "status": "stable",
+          "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa"
+        }
+      ],
+      "recommended": {
+        "app": "msgplusx",
+        "name": "MSGPlusX",
+        "version": "578.1.0",
+        "reason": "Newest version available (578.1.0, released 2026-09-10)"
+      },
+      "replacementRisk": true
+    },
+    {
       "key": "com.google.ios.youtubemusic",
       "type": "bundle-id",
       "reason": "2 apps share bundle identifier 'com.google.ios.youtubemusic'",
@@ -369,6 +405,28 @@
         "reason": "Newest version available (446.0.0, released 2026-09-10)"
       },
       "reason": "3 apps share bundle identifier 'com.burbn.instagram' · similar names (RyukGram / RyukGram (IG 410))"
+    },
+    "msgplusx": {
+      "groupKey": "com.facebook.Messenger",
+      "type": "bundle-id",
+      "recommended": {
+        "app": "msgplusx",
+        "name": "MSGPlusX",
+        "version": "578.1.0",
+        "reason": "Newest version available (578.1.0, released 2026-09-10)"
+      },
+      "reason": "2 apps share bundle identifier 'com.facebook.Messenger'"
+    },
+    "snmessenger": {
+      "groupKey": "com.facebook.Messenger",
+      "type": "bundle-id",
+      "recommended": {
+        "app": "msgplusx",
+        "name": "MSGPlusX",
+        "version": "578.1.0",
+        "reason": "Newest version available (578.1.0, released 2026-09-10)"
+      },
+      "reason": "2 apps share bundle identifier 'com.facebook.Messenger'"
     },
     "ytmusic": {
       "groupKey": "com.google.ios.youtubemusic",

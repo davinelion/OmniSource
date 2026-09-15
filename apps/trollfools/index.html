@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#e8eef8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#07070f" id="themeColor">
+  <title>TrollFools — OmniSource</title>
+  <meta name="description" content="Inject tweaks into installed apps on-device">
+  <link rel="canonical" href="https://iamsmmh.github.io/OmniSource/apps/trollfools/">
+  <meta property="og:site_name" content="OmniSource">
+  <meta property="og:title" content="TrollFools — OmniSource">
+  <meta property="og:description" content="Inject tweaks into installed apps on-device">
+  <meta property="og:image" content="https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iamsmmh.github.io/OmniSource/apps/trollfools/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TrollFools — OmniSource">
+  <meta name="twitter:description" content="Inject tweaks into installed apps on-device">
+  <meta name="twitter:image" content="https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp">
+  <link rel="icon" type="image/png" href="../../assets/OmniSource.png">
+  <link rel="apple-touch-icon" href="../../assets/OmniSource.png">
+  <link rel="alternate" type="application/rss+xml" title="TrollFools releases" href="https://iamsmmh.github.io/OmniSource/feeds/trollfools.xml">
+  <!-- Content Security Policy: same-origin scripts/styles (inline allowed for the
+       theme bootstrap), images/data from self + https, API calls to self + https.
+       All dynamic markup is escaped via OS.esc. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; media-src 'self' data:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; form-action 'self'">
+  <link rel="preload" href="../../assets/design-system/tokens.css" as="style">
+  <link rel="preload" href="../../assets/design-system/components.css" as="style">
+  <link rel="stylesheet" href="../../assets/design-system/tokens.css">
+  <link rel="stylesheet" href="../../assets/design-system/utilities.css">
+  <link rel="stylesheet" href="../../assets/design-system/animations.css">
+  <link rel="stylesheet" href="../../assets/design-system/components.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('omnisource-theme');
+        if (t !== 'light' && t !== 'dark') t = 'auto';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "TrollFools",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS",
+      "softwareVersion": "4.3-253",
+      "url": "https://iamsmmh.github.io/OmniSource/apps/trollfools/",
+      "downloadUrl": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+      "screenshot": "https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp",
+      "author": { "@type": "Organization", "name": "Lessica/TrollFools" }
+    }
+  </script>
+</head>
+<body class="app-page">
+  <a class="skip-link" href="#main">Skip to app details</a>
+  <header class="ap-header">
+    <nav class="ap-header-inner" aria-label="App navigation">
+      <a class="brand" href="../../" aria-label="OmniSource home">
+        <img src="../../assets/OmniSource.png" alt="" width="32" height="32">
+        <span>OmniSource</span>
+      </a>
+      <div class="nav-links">
+        <a href="../../" data-i18n="nav.home">Home</a>
+        <a href="../../#catalog" data-i18n="nav.apps">Apps</a>
+        <a href="../../collections/" data-i18n="nav.collections">Collections</a>
+        <a href="../../sources/" data-i18n="nav.sources">Sources</a>
+        <a href="../../status/" data-i18n="nav.health">Status</a>
+        <a href="../../docs/" data-i18n="nav.docs">Docs</a>
+        <details class="nav-more">
+          <summary aria-haspopup="menu" aria-label="More pages"><span data-i18n="nav.more">More</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="nav-menu" role="menu">
+            <a href="../../#trending" role="menuitem" data-i18n="nav.trending">Trending</a>
+            <a href="../../analytics/" role="menuitem" data-i18n="nav.analytics">Analytics</a>
+            <a href="../../compare/" role="menuitem" data-i18n="nav.compare">Compare</a>
+            <a href="../../favorites/" role="menuitem" data-i18n="nav.favorites">Favorites</a>
+            <a href="../../discover/" role="menuitem" data-i18n="nav.discover">Discover</a>
+            <a href="../../api/community.json" role="menuitem" data-i18n="nav.community">Community</a>
+            <a href="../../search/" role="menuitem" data-i18n="nav.search">Search</a>
+            <a href="https://iamsmmh.github.io/OmniSource/feeds/trollfools.xml" target="_blank" rel="noopener" role="menuitem">RSS</a>
+            <a href="https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" target="_blank" rel="noopener" role="menuitem">This app&rsquo;s feed</a>
+            <a href="https://github.com/iamsmmh/OmniSource" target="_blank" rel="noopener" class="nav-gh" role="menuitem" data-i18n="nav.github">GitHub ↗</a>
+          </div>
+        </details>
+      </div>
+      <button class="icon-button theme-toggle" id="themeButton" type="button" aria-label="Change color theme" title="Theme: system" data-i18n-aria-label="a11y.theme" data-i18n-title="a11y.theme">
+        <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.8v2M12 19.2v2M2.8 12h2M19.2 12h2M5.4 5.4l1.4 1.4M17.2 17.2l1.4 1.4M18.6 5.4l-1.4 1.4M6.8 17.2l1.4 1.4"/></svg>
+        <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.4 14.2A8.6 8.6 0 0 1 9.8 3.6a8.6 8.6 0 1 0 10.6 10.6Z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="ap-main" id="main">
+    <nav class="ap-breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Home</a> <span aria-hidden="true">/</span> <span>TrollFools</span>
+    </nav>
+    <section class="ap-hero" style="--tint:#6C5CE7">
+      <div class="ap-hero-tint" aria-hidden="true"></div>
+      <img class="ap-icon" src="https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp" alt="TrollFools icon" width="112" height="112" fetchpriority="high">
+      <div>
+        <span class="ap-kicker">Utilities</span>
+        <h1 class="ap-title">TrollFools</h1>
+        <p class="ap-sub">Inject tweaks into installed apps on-device</p>
+        <p class="ap-dev">by Lessica</p>
+        <div class="ap-badges">
+<span class="badge stable">Stable</span><span class="badge verified" title="IPA published by the project&#39;s own upstream release channel">Official build</span><span class="badge ok"><span class="dot"></span>Online</span><span class="badge verified">✓ Verified</span><span class="badge warn">Stale release</span></div>
+      </div>
+      <div class="ap-install">
+        <a class="get-capsule" href="https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa" target="_blank" rel="noopener">Get · v4.3-253<span class="capsule-size">5.9 MB</span></a>
+<a class="button client-button" href="altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Add to AltStore"><img src="../../assets/AltStore.webp" alt="" width="20" height="20" loading="lazy">AltStore</a><a class="button client-button" href="sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Add to SideStore"><img src="../../assets/SideStore.webp" alt="" width="20" height="20" loading="lazy">SideStore</a><a class="button client-button" href="feather://source/iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Add to Feather"><img src="../../assets/Feather.webp" alt="" width="20" height="20" loading="lazy">Feather</a><a class="button client-button" href="esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Add to ESign"><img src="../../assets/E-Sign.webp" alt="" width="20" height="20" loading="lazy">ESign</a><a class="button client-button" href="livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Add to LiveContainer"><img src="../../assets/LiveContainer.webp" alt="" width="20" height="20" loading="lazy">LiveContainer</a>        <button class="button ap-copy" type="button" data-copy="https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" data-copy-msg="Source URL copied">Copy source URL</button>
+        <button class="button square" type="button" id="qrButton" data-qr-feed="https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Show QR code" aria-label="Show QR code for the source URL">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M15 14h2v2h-2zM19 14h1.4v3.4H19zM14 19h3.4v1.4H14zM20 19.6V20h-1.4"/></svg>
+        </button>
+      </div>
+    </section>
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">01</span> About</h2>
+      <p class="ap-desc">TrollFools injects tweaks into apps that are already installed, straight on the device: it performs in-place dylib injection with insert_dylib and ChOma, so no computer and no jailbreak is involved. Upstream documents removable system applications, decrypted App Store apps installed through TrollStore, and encrypted App Store apps patched with a bare dynamic library, plus .deb and .zip tweak packages. Written in SwiftUI, and built on ChOma, MachOKit and insert_dylib.</p>
+      <div class="ap-screenshots"></div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">02</span> Install with</h2>
+      <p class="ap-desc">Pick your client. Links are generated from the catalog on every build — never hard-coded.</p>
+<div class="ap-install-grid"><a class="ap-install-card" href="altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Open in AltStore"><img src="../../assets/AltStore.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>AltStore</b><span class="card-flag flag-recommended">Recommended</span><small>Tap to add the source to AltStore.</small></div></a><a class="ap-install-card" href="sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Open in SideStore"><img src="../../assets/SideStore.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>SideStore</b><span class="card-flag flag-recommended">Recommended</span><small>Tap to add the source to SideStore.</small></div></a><a class="ap-install-card" href="feather://source/iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Open in Feather"><img src="../../assets/Feather.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>Feather</b><span class="card-flag flag-compatible">Compatible</span><small>Tap to add the source to Feather.</small></div></a><a class="ap-install-card" href="esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Open in ESign"><img src="../../assets/E-Sign.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>ESign</b><span class="card-flag flag-compatible">Compatible</span><small>Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL.</small></div></a><a class="ap-install-card" href="livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" title="Open in LiveContainer"><img src="../../assets/LiveContainer.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>LiveContainer</b><span class="card-flag flag-compatible">Compatible</span><small>Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL.</small></div></a></div>      <p class="mt-3"><a class="button small" href="../../install/">Open the installation center →</a></p>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">03</span> Release notes</h2>
+      <div class="ap-version-list"><article class="ap-version">
+  <div class="ap-version-head"><span class="v">v4.3-253</span><span class="tag">Current</span>
+    <span class="d">Apr 23, 2026</span></div>
+  <div class="meta"><span>5.9 MB</span><code title="SHA-256">a823203994b3f48b…</code><a class="button small" href="https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa" target="_blank" rel="noopener">Download</a></div>
+  <details class="ap-changelog"><summary>Release notes</summary><pre class="ap-notes">TrollFools 4.3-253 | TrollFools_4.3-253.tipa
+
+# Changelog
+
+## 4.3 Build 253 (2026-04-23)
+
+修复与 MachOKit 有关的一处断言崩溃。
+
+------
+
+## 4.3 Build 253 (2026-04-23) [EN]
+
+Fixed an assertion crash related to MachOKit.
+
+------
+
+## 4.3 Build 246 (2026-04-16)
+
+修复二次注入时可能误选已注入动态库作为目标 Mach-O 的问题。
+
+### 修复
+
+- 注入目标选取：修复追加注入时，上次注入的动态库可能被误选为注入目标的问题。  
+  新增三层防御：从注入前备份读取原始 Load Commands 以还原真实依赖链；枚举阶段跳过 `.troll-fools.bak` 备份文件；通过备份差分精确识别并排除已注入的动态库。
+
+------
+
+## 4.3 Build 246 (2026-04-16) [EN]
+
+Fixed an issue where re-injection could incorrectly select a previously-injected dylib as the target Mach-O.
+
+### Fixed
+
+- Target selection: Fixed re-injection potentially picking a previously-injected dylib as the injection target.  
+  Added three-layer defense: read original load commands from pre-injection backup to restore the true dependency chain; skip `.troll-fools.bak` backup files during enumeration; use backup-diff to precisely identify and exclude previously-injected dylibs.
+
+------
+
+## 4.3 (2026-04-13)
+
+本次版本聚焦于“动态加载框架兼容性”和“页面说明可理解性”，并包含插件管理流程调整与资源清理。
+
+### 修复
+
+- 注入兼容性：修复部分 Unity/运行时 `dlopen` 场景下无法命中可注入目标的问题。  
+  当主程序静态链接交集为空时，改为回退扫描 `Frameworks/` 中可用 Mach-O（含一级目录下 `.dylib`）。
+- 插件管理：调整“移除插件”流程，区分已启用与已禁用插件：  
+  已启用插件执行卸载；已禁用插件执行标记清理，降低批量处理风险。
+
+### 新增
+
+- 高级选项：新增“启用兼容模式回退”开关（默认开启），可控制是否在无静态链接命中时启用回退候选。
+- 结果页提示：当本次注入通过兼容模式完成时，在“已完成”下方显示额外提示。
+
+### 优化
+
+- 候选筛选：回退候选新增过滤，排除 `libswift*` 与已忽略注入相关动态库/框架，并统一大小写处理。
+- 诊断日志：增强 Mach-O 扫描日志，输出候选数量、文件大小、加密/不可读统计与最终选择结果，便于定位“无可用目标”问题。
+- 设置说明：优化高级选项页面结构与说明文案，减少非技术用户理解成本。
+- 广告与资源：移除内置广告位 `Letterpress` 及相关本地化词条/图标资源；更新营销图素材。
+
+### 本地化
+
+- 更新 `en/zh-Hans/it/vi` 词条，补充兼容模式与设置说明相关文案，并清理移除条目对应文案。
+
+------
+
+## 4.3 (2026-04-13) [EN]
+
+This release focuses on dynamic-framework injection compatibility and clearer user guidance, plus plugin-management flow adjustments and resource cleanup.
+
+### Fixed
+
+- Injection compatibility: Fixed cases (notably Unity/runtime `dlopen` flows) where no injectable target could be selected.  
+  When the static-link intersection is empty, TrollFools now falls back to scanning eligible Mach-O files under `Frameworks/` (including top-level `.dylib`).
+- Plugin management: Updated plugin removal flow to handle enabled vs disabled plugins separately:  
+  enabled plugins are ejected, while disabled plugins are cleaned via desist/marker path handling.
+
+### Added
+
+- Advanced Settings: Added **Enable Compatibility Fallback** (default ON) to control fallback candidate behavior when no static-link match is found.
+- Result-page notice: Added a subtitle under **Completed** when injection succeeds through compatibility fallback.
+
+### Improved
+
+- Candidate filtering: Fallback candidates now exclude `libswift*` and ignored injection-related dylib/framework names, with consistent case-insensitive handling.
+- Diagnostics: Expanded Mach-O scan logs with candidate counts, file sizes, encrypted/unreadable stats, and final target selection.
+- Settings clarity: Refined Advanced Settings layout and explanatory copy for better non-technical readability.
+- Ads/assets: Removed built-in `Letterpress` ad entry and related localization/icon assets; refreshed marketing artwork.
+
+### Localization
+
+- Updated `en/zh-Hans/it/vi` strings for compatibility-fallback and settings guidance, and removed strings for deleted entries.</pre></details>
+</article></div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">04</span> Details</h2>
+      <div class="ap-detail-grid">
+<div class="ap-cell"><span>Version</span><strong>v4.3-253</strong></div><div class="ap-cell"><span>Updated</span><strong>Apr 23, 2026</strong></div><div class="ap-cell"><span>Size</span><strong>5.9 MB</strong></div><div class="ap-cell"><span>Requires iOS</span><strong>14.0</strong></div><div class="ap-cell"><span>Category</span><strong>Utilities</strong></div><div class="ap-cell"><span>Developer</span><strong>Lessica</strong></div><div class="ap-cell"><span>Bundle ID</span><strong><code>wiki.qaq.TrollFools</code></strong></div><div class="ap-cell"><span>Verification</span><strong>VERIFIED</strong></div><div class="ap-cell"><span>Build</span><strong>Official build</strong></div><div class="ap-cell"><span>Checksum</span><strong><code>a823203994b3f48b5c13</code></strong></div><div class="ap-cell"><span>Health</span><strong>Online</strong></div><div class="ap-cell"><span>Version history</span><strong>1</strong></div><div class="ap-cell"><span>Source</span><strong><a class="ap-source-link" href="https://github.com/Lessica/TrollFools" target="_blank" rel="noopener">Lessica/TrollFools</a></strong></div></div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">05</span> Trust &amp; provenance</h2>
+      <ul class="ap-checks"><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>metadata</span><small>pass</small></li><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>urls</span><small>pass</small></li><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>fileAvailable</span><small>pass</small></li><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>hashVerified</span><small>pass</small></li></ul>
+      <p class="ap-desc mt-3"><b>Official build.</b> The IPA is published by the project&rsquo;s own upstream release channel.</p>
+      <p class="ap-desc">Published by Lessica/TrollFools · github release.</p>
+      <ul><li>official upstream (github-release)</li></ul>
+      <div class="detail-note mt-3"><b>Compatibility notes:</b> Official .tipa from the project&#x27;s GitHub releases - a .tipa is byte-identical to an .ipa, so AltStore, SideStore, Feather and ESign install it after re-signing it with your certificate. The injection itself only works where TrollStore exists (upstream states iOS 14.0 - 17.0), so on newer firmware the app installs but cannot patch anything.</div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">06</span> Related apps</h2>
+      <p class="ap-desc">Apps that share a bundle, category or developer with TrollFools.</p>
+<div class="ap-related-grid"><a class="ap-related-card" href="../zeus/" title="Same category (utilities), Shared tags: utilities"><span class="score-pill">23</span><div class="ap-related-name">Zeus</div><div class="ap-related-reason">Same category (utilities), Shared tags: utilities</div></a><a class="ap-related-card" href="../utm/" title="Same category (utilities), Shared tags: utilities"><span class="score-pill">23</span><div class="ap-related-name">UTM</div><div class="ap-related-reason">Same category (utilities), Shared tags: utilities</div></a><a class="ap-related-card" href="../unc0ver/" title="Same category (utilities), Shared tags: utilities"><span class="score-pill">23</span><div class="ap-related-name">unc0ver</div><div class="ap-related-reason">Same category (utilities), Shared tags: utilities</div></a><a class="ap-related-card" href="../taurine/" title="Same category (utilities), Shared tags: utilities"><span class="score-pill">23</span><div class="ap-related-name">Taurine</div><div class="ap-related-reason">Same category (utilities), Shared tags: utilities</div></a><a class="ap-related-card" href="../tablehabit/" title="Same category (utilities), Shared tags: utilities"><span class="score-pill">23</span><div class="ap-related-name">Table Habit</div><div class="ap-related-reason">Same category (utilities), Shared tags: utilities</div></a></div>    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">07</span> Downloads</h2>
+      <div class="ap-links">
+        <a class="button primary" href="https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa" target="_blank" rel="noopener">Primary IPA</a>
+        
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/trollfools.json" target="_blank" rel="noopener">App feed</a>
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/trollfools.xml" target="_blank" rel="noopener">App RSS</a>
+        <a class="button" href="https://github.com/Lessica/TrollFools" target="_blank" rel="noopener">Upstream</a>
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/discovery.json" target="_blank" rel="noopener">Discovery catalog</a>
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/compare/?left=trollfools" target="_blank" rel="noopener">Compare with another app</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ap-footer">
+    <div class="ap-footer-inner">
+      <span>v4.3-253 of TrollFools · refreshed automatically.</span>
+      <a href="../../#catalog">← Back to catalog</a>
+      <span>Independent community project. Apps and trademarks belong to their respective owners.</span>
+    </div>
+  </footer>
+
+  <dialog id="qrDialog" class="qr-dialog os-dialog" aria-labelledby="qrTitle">
+    <button class="dialog-close" type="button" data-close aria-label="Close" data-i18n-aria-label="common.close"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <span class="kicker" data-i18n="dialog.scanToAdd">SCAN TO ADD</span>
+    <h2 id="qrTitle">TrollFools — source feed</h2>
+    <div class="qr-image"><img id="qrImage" width="240" height="240" alt="QR code for the app feed" loading="lazy" decoding="async" data-i18n-alt="dialog.qrAlt"></div>
+    <code>https://iamsmmh.github.io/OmniSource/feeds/trollfools.json</code>
+    <button class="button primary full" type="button" data-i18n="dialog.copyUrl" data-copy="https://iamsmmh.github.io/OmniSource/feeds/trollfools.json">Copy URL</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span></span>
+  </div>
+
+  <script src="../../js/core.js" defer></script>
+  <script src="../../src/js/i18n.js" defer></script>
+  <script src="../../js/features.js" defer></script>
+  <script src="../../website/assets/AssetManager.js" defer></script>
+</body>
+</html>

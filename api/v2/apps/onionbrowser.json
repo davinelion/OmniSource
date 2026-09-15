@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-15",
+  "feedVersion": "0dc9e6cd4147",
+  "app": {
+    "id": "onionbrowser",
+    "name": "Onion Browser",
+    "developer": "Mike Tigas",
+    "subtitle": "Tor browser that routes web traffic through Tor",
+    "bundleIdentifier": "com.miketigas.OnionBrowser",
+    "version": "3.4.1",
+    "versionDate": "2026-08-11",
+    "description": "Onion Browser is a free web browser for iPhone and iPad that encrypts and tunnels its traffic through the Tor network with the help of Orbot for iOS. The 3.x branch renders pages with WKWebView instead of the old UIWebView stack, and the project publishes its own sideloadable build next to the App Store release. Open source, with the repository's LICENSE file governing usage and redistribution.",
+    "shortDescription": "Tor browser that routes web traffic through Tor",
+    "category": "networking",
+    "tags": [
+      "networking"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+    "screenshots": [
+      "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/1_iphone65_1.1.png",
+      "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/2_iphone65_2.2.png",
+      "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/3_iphone65_3.3.png"
+    ],
+    "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+    "size": 39611914,
+    "source": "OnionBrowser/OnionBrowser",
+    "sourceURL": "https://github.com/OnionBrowser/OnionBrowser",
+    "checksum": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+    "checksumPublished": false,
+    "minOSVersion": "15.0",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/onionbrowser/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/onionbrowser.json",
+    "health": {
+      "reachable": true,
+      "detail": "not probed",
+      "updatedAt": "2026-08-11"
+    }
+  },
+  "newest": {
+    "version": "3.4.1",
+    "date": "2026-08-11",
+    "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+    "size": 39611914,
+    "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3"
+  },
+  "versions": [
+    {
+      "version": "3.4.1",
+      "date": "2026-08-11",
+      "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+      "size": 39611914,
+      "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

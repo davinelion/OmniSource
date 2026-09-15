@@ -1,21 +1,71 @@
 {
   "generatedAt": "2026-09-15",
-  "feedVersion": "a22be93c0c36",
+  "feedVersion": "0dc9e6cd4147",
   "apps": {
-    "total": 94,
-    "reachable": 94,
+    "total": 101,
+    "reachable": 101,
     "unreachable": 0,
-    "verified": 93
+    "verified": 100
   },
   "sync": {
-    "synced": 94,
-    "incrementalHits": 85,
-    "updated": 0,
+    "synced": 7,
+    "incrementalHits": 0,
+    "updated": 7,
     "failed": 0,
-    "apiRequests": 79
+    "apiRequests": 8
   },
   "unreachable": [],
-  "updates": [],
+  "updates": [
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "previousVersion": null,
+      "version": "4.3-253",
+      "kind": "new"
+    },
+    {
+      "slug": "lara",
+      "name": "Lara",
+      "previousVersion": null,
+      "version": "0.2",
+      "kind": "new"
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "previousVersion": null,
+      "version": "3.4.1",
+      "kind": "new"
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "previousVersion": null,
+      "version": "1.12.0",
+      "kind": "new"
+    },
+    {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "previousVersion": null,
+      "version": "1.27.6",
+      "kind": "new"
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "previousVersion": null,
+      "version": "2.5",
+      "kind": "new"
+    },
+    {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "previousVersion": null,
+      "version": "517.0.0",
+      "kind": "new"
+    }
+  ],
   "errors": [],
   "translations": {
     "ar": 100,
