@@ -214,7 +214,7 @@ def load_policy(root: Path) -> Policy:
 def validate_policy(document: Any) -> list[str]:
     """Schema-ish checks for the policy file itself (used by the validator)."""
     policy = parse_policy(document)
-    errors = [] if policy.error else []
+    errors: list[str] = []
     if policy.error:
         errors.append(f"{POLICY_RELATIVE_PATH}: {policy.error}")
     for rule in policy.rules:
