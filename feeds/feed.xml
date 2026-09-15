@@ -25,6 +25,26 @@
       <enclosure url="https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>SideStore v0.7.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/sidestore.json</link>
+      <guid isPermaLink="false">sidestore-0.7.0</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[SideStore 0.7.0 | SideStore
+
+## Build Info
+
+Built at (UTC): `Fri Sep 11 21:25:58 2026`
+Built at (UTC date): `2026-09-11`
+Commit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`
+Version: `0.7.0-20260911.328+6032424a`
+
+#### What's Changed:
+- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code
+
+#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)]]></description>
+      <enclosure url="https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Mangayomi v0.9.4</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
       <guid isPermaLink="false">mangayomi-0.9.4</guid>
@@ -481,30 +501,6 @@ IPA Vault build for Facebook (iQFace), version 578.1]]></description>
 > [!WARNING]
 > - 21.34.3+ builds require iOS 17+ now.]]></description>
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.36.6_6.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YouMod v21.36.6</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/youmod.json</link>
-      <guid isPermaLink="false">youmod-21.36.6</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.36.6 | YouMod_21.36.6_2.0.0
-
-### Latest Release, ENJOY!!
-
-> [!NOTE]
-> - **YTUHD** is not included. 4K is available for A16+ devices.
-> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Extra tweaks that are bundled may be unstable on newer versions.
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.36.6_2.0.0.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

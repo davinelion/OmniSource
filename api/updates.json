@@ -19,6 +19,21 @@
       "shortDescription": "Lightweight YouTube Music tweak"
     },
     {
+      "slug": "sidestore",
+      "name": "SideStore",
+      "version": "0.7.0",
+      "previousVersion": "0.6.4",
+      "date": "2026-09-15",
+      "kind": "updated",
+      "changelog": "SideStore 0.7.0 | SideStore\n\n## Build Info\n\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\nBuilt at (UTC date): `2026-09-11`\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\nVersion: `0.7.0-20260911.328+6032424a`\n\n#### What's Changed:\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\n\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
+      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/SideStore.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/sidestore.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/sidestore.xml",
+      "status": "stable",
+      "shortDescription": "AltStore fork that refreshes apps without a computer"
+    },
+    {
       "slug": "mangayomi",
       "name": "Mangayomi",
       "version": "0.9.4",
@@ -1412,21 +1427,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/pikatorrent.xml",
       "status": "stable",
       "shortDescription": "BitTorrent client"
-    },
-    {
-      "slug": "thunder",
-      "name": "Thunder",
-      "version": "0.8.6",
-      "previousVersion": "",
-      "date": "2026-01-07",
-      "kind": "new",
-      "changelog": "Thunder 0.8.6 | thunder-v0.8.6\n\nHey everyone! Sorry for the back-to-back releases again. This hotfix fixes another issue related to grey screens when navigating to comments from the inbox or user profile. As always, if you encounter any issues or have feedback, please share them with the Thunder community or on GitHub.\n\nIf you're enjoying Thunder and would like to show some support, star this project on GitHub! This helps gain visibility for the project and allows more contributors to help with the continued development of Thunder. If you'd like to show some appreciation, you can sponsor me on [GitHub](https://github.com/sponsors/hjiangsu) or donate via [Liberapay](https://en.liberapay.com/hjiangsu/) or [Ko-fi](https://ko-fi.com/hjiangsu).\n\nWe have a [Matrix space](https://matrix.to/#/#thunderapp:matrix.org) if you would like to join in on discussions!\n\n---\n\n## Fixes\n* Fixed grey screen when navigating to comment by @hjiangsu in #2029\n\n**Full Changelog**: https://github.com/thunder-app/thunder/compare/0.8.5...0.8.6",
-      "downloadURL": "https://github.com/thunder-app/thunder/releases/download/0.8.6/thunder-v0.8.6.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Thunder.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/thunder.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/thunder.xml",
-      "status": "stable",
-      "shortDescription": "Lemmy & PieFed client"
     },
     {
       "slug": "utm",
