@@ -1137,6 +1137,140 @@
      completely dead for the seconds the feeds took: the drawer closed, the
      hash changed, nothing moved. Queue the jump and perform it the moment the
      section is revealed. */
+  // Fix for #top — scrolling to a huge <main> element caused Safari "A problem repeatedly occurred" crash
+  function setupTopAnchorFix() {
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest && event.target.closest('a[href="#top"]');
+      if (!link) return;
+      event.preventDefault();
+      // Scroll to absolute top without relying on element height
+      try {
+        if (OS.reducedMotion) {
+          window.scrollTo(0, 0);
+        } else {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      } catch (e) {
+        window.scrollTo(0, 0);
+      }
+      try {
+        history.replaceState(null, '', location.pathname + location.search);
+      } catch (e) {}
+      if (OS.closeNav) OS.closeNav();
+    });
+  }
+
+  function setupTapButtons() {
+    // Inject bottom nav + FABs on any page that doesn't have them (collections, sources, etc.)
+    function ensureTapUI() {
+      if (!document.querySelector('.bottom-nav')) {
+        var nav = document.createElement('nav');
+        nav.className = 'bottom-nav';
+        nav.setAttribute('aria-label', 'Quick tap navigation');
+        var root = (typeof ROOT !== 'undefined' ? ROOT : '') || '';
+        // Use OS.url for proper base path handling if available
+        function u(path) {
+          try { return (window.OS && OS.url ? OS.url(path) : path); } catch(e) { return path; }
+        }
+        nav.innerHTML =
+          '<a href="' + (window.OS ? OS.url('#top') : '#top') + '" class="bn-item" data-bn="home" aria-label="Home">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-5H9v5H4a1 1 0 0 1-1-1v-9.5Z"/></svg><span>Home</span></a>' +
+          '<a href="' + u('#catalog') + '" class="bn-item" data-bn="apps" aria-label="All apps">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span>Apps</span></a>' +
+          '<button class="bn-item bn-primary" type="button" data-open-palette aria-label="Search apps">' +
+            '<span class="bn-primary-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4"/></svg></span><span>Search</span></button>' +
+          '<a href="' + u('collections/') + '" class="bn-item" data-bn="collections" aria-label="Collections">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5L21 12"/><path d="m3 16.5 9 4.5 9-4.5"/></svg><span>Stacks</span></a>' +
+          '<a href="' + u('install/') + '" class="bn-item" data-bn="install" aria-label="Install guide">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span>Install</span></a>';
+        document.body.appendChild(nav);
+      }
+      if (!document.getElementById('fabTop')) {
+        var stack = document.createElement('div');
+        stack.className = 'fab-stack';
+        stack.setAttribute('aria-label', 'Quick actions');
+        stack.innerHTML =
+          '<button class="fab" id="fabTop" type="button" aria-label="Back to top" title="Back to top">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 5 12l1.4 1.4L11 9v10h2V9l4.6 4.4L19 12 12 5Z"/></svg></button>' +
+          '<button class="fab fab-primary" id="fabBrowse" type="button" aria-label="Browse all apps" title="Browse apps">' +
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="8" cy="18" r="1.6" fill="currentColor"/></svg></button>';
+        document.body.appendChild(stack);
+      }
+    }
+    try { ensureTapUI(); } catch(e) {}
+    var fabTop = document.getElementById('fabTop');
+    var fabBrowse = document.getElementById('fabBrowse');
+    var bottomNav = document.querySelector('.bottom-nav');
+    var ticking = false;
+
+    function updateFabs() {
+      ticking = false;
+      var y = window.scrollY || window.pageYOffset || 0;
+      var showTop = y > 400;
+      var showBrowse = y > 200;
+      if (fabTop) fabTop.classList.toggle('is-visible', showTop);
+      if (fabBrowse) fabBrowse.classList.toggle('is-visible', showBrowse);
+      // Bottom nav active state based on scroll
+      if (bottomNav) {
+        var items = bottomNav.querySelectorAll('.bn-item[data-bn]');
+        var catalog = document.getElementById('catalog');
+        var homeActive = true;
+        if (catalog) {
+          var rect = catalog.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.5) homeActive = false;
+        }
+        items.forEach(function (it) {
+          var active = false;
+          if (it.dataset.bn === 'home') active = homeActive;
+          if (it.dataset.bn === 'apps') active = !homeActive;
+          it.classList.toggle('is-active', active);
+          if (active) it.setAttribute('aria-current', 'page');
+          else it.removeAttribute('aria-current');
+        });
+      }
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateFabs);
+      }
+    }, { passive: true });
+
+    if (fabTop) {
+      fabTop.addEventListener('click', function () {
+        try {
+          if (OS.reducedMotion) window.scrollTo(0, 0);
+          else window.scrollTo({ top: 0, behavior: 'smooth' });
+        } catch (e) { window.scrollTo(0, 0); }
+      });
+    }
+    if (fabBrowse) {
+      fabBrowse.addEventListener('click', function () {
+        var catalog = document.getElementById('catalog');
+        if (catalog) {
+          try {
+            catalog.scrollIntoView({ behavior: OS.reducedMotion ? 'auto' : 'smooth', block: 'start' });
+          } catch (e) { catalog.scrollIntoView(); }
+        } else {
+          // On other pages, go to home catalog
+          try {
+            var target = (window.OS && OS.url ? OS.url('#catalog') : '/#catalog');
+            // If already on home, use hash; else navigate
+            if (document.body && document.body.dataset.page === 'home') {
+              location.hash = 'catalog';
+            } else {
+              location.href = target;
+            }
+          } catch (e) {
+            location.href = '/#catalog';
+          }
+        }
+      });
+    }
+    updateFabs();
+  }
+
   function setupDeferredAnchors() {
     var pending = null;
     var observer = null;
@@ -1571,6 +1705,8 @@
     setupMobileNav();
     setupNavFit();
     setupInstallPrompt();
+    setupTopAnchorFix();
+    setupTapButtons();
     setupDeferredAnchors();
     setupScrollAffordances();
     setupScrollHints();

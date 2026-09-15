@@ -4640,292 +4640,661 @@ html[data-view="compact"] .card-bottom {
 }
 
 /* ============================================================================
-   FINDABILITY — tab bars, scroll progress, back-to-top
-   ----------------------------------------------------------------------------
-   The home page is long: hero, four rails, statistics, source health, the
-   install guide, the catalog and the release feed. Finding an app meant
-   scrolling the whole way down and then scrolling back up to change
-   category, so the page now carries two tab bars and three scroll
-   affordances. Everything pins to --sticky-offset (the bottom edge of the
-   floating glass header, see tokens.css) so a heading can never hide behind
-   the capsule:
-
-     .section-tabs   sticky row under the header — jumps to any section and
-                     reports which one you are in while you scroll;
-     .catalog-tabs   the category filter row promoted to a real tablist and
-                     pinned for the whole height of the grid;
-     .hero-cats      the same categories offered in the hero, so a first-time
-                     visitor can reach a shelf without scrolling at all;
-     .scroll-progress / .to-top  "how far down am I" + "get me back".
+   Quick navigation tabs — sticky section jump bar (new)
+   Makes app discovery easy: one tap to Trending / Recent / Catalog / etc.
    ========================================================================== */
-
-/* Thin reading-progress line. Fixed, 2px, above the header, never in flow —
-   it cannot shift layout, which is the whole point (js/core.js drives the
-   transform on a rAF-throttled scroll listener). */
-.scroll-progress {
-  position: fixed;
-  inset: 0 0 auto 0;
-  height: 2px;
-  z-index: calc(var(--z-header) + 1);
-  pointer-events: none;
-  background: transparent;
-}
-.scroll-progress i {
-  display: block;
-  height: 100%;
-  background: var(--accent-grad);
-  background-size: 180% 100%;
-  border-radius: 0 2px 2px 0;
-  transform: scaleX(0);
-  transform-origin: 0 50%;
-  opacity: 0;
-  transition: opacity var(--dur) var(--ease);
-}
-.scroll-progress.is-visible i { opacity: 1; }
-
-/* ── Section tabs ──────────────────────────────────────────────────────── */
-.section-tabs {
+.quick-nav-section {
+  padding-block: 14px 10px;
   position: sticky;
-  top: var(--sticky-offset);
-  /* Layering, from the page up: content (auto) < this bar (54) <
-     .nav-backdrop (55) < .site-header (var(--z-header) = 60) < the phone
-     drawer (62). Sitting *under* the backdrop is the point: when the drawer
-     opens the bar dims with the rest of the page instead of floating above
-     it, still clickable, at tablet widths. */
-  z-index: 54;
-  /* The header is a floating capsule: it is 62px in flow but paints from
-     top:12px, so without this margin its bottom edge lands on top of the tab
-     bar at scroll 0. 12px here + 62px of header = --sticky-offset, which is
-     exactly where the bar pins once the page moves. */
-  margin-top: 12px;
-  background: color-mix(in srgb, var(--bg) 84%, transparent);
-  backdrop-filter: blur(18px) saturate(1.6);
-  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  top: 78px;
+  z-index: 55;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
   border-bottom: 1px solid var(--line);
+  /* Performance isolation without paint containment which breaks sticky */
+  contain: layout style;
 }
-.section-tabs-inner {
+.quick-tabs-wrap {
   display: flex;
   align-items: center;
-  gap: 4px;
-  min-height: var(--tabbar-h);
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  /* The row is a rail, not a wrapped list: a tab that does not fit is one
-     swipe away, and the row height never changes with the translation. */
-  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 16px;
 }
-.section-tabs-inner::-webkit-scrollbar { display: none; }
-.section-tab {
-  position: relative;
-  flex: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  border: 1px solid transparent;
-  background: none;
-  color: var(--muted);
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-decoration: none;
-  white-space: nowrap;
-  cursor: pointer;
-  transition: color var(--dur-fast) var(--ease),
-    background var(--dur-fast) var(--ease),
-    border-color var(--dur-fast) var(--ease);
-}
-.section-tab:hover { color: var(--text); background: var(--surface); }
-.section-tab:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-.section-tab[aria-current="true"] {
-  color: var(--text);
-  background: var(--accent-soft);
-  border-color: color-mix(in srgb, var(--accent) 30%, transparent);
-}
-.section-tab[aria-current="true"]::after {
-  content: "";
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: 2px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--accent-grad);
-}
-.section-tab .count {
-  font: 600 10px var(--font-mono);
-  color: var(--muted);
-  opacity: 0.8;
-}
-
-/* ── Catalog tabs (sticky category tablist) ────────────────────────────── */
-.catalog-tabs {
-  position: sticky;
-  /* Stacks directly under the section tabs: one bar height, no guessing. */
-  top: calc(var(--sticky-offset) + var(--tabbar-h));
-  z-index: 18;
-  margin-top: 18px;
-  padding: 6px 0 2px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(16px) saturate(1.5);
-  -webkit-backdrop-filter: blur(16px) saturate(1.5);
-  border-radius: var(--radius-md);
-}
-.catalog-tabs .filter-row {
-  padding-block: 2px 6px;
-  margin: 0;
-}
-/* Edge fades: only painted while the row actually overflows in that
-   direction (js/core.js toggles .can-scroll-*), so they double as the
-   "there are more categories this way" hint. The host is already positioned
-   (both bars are sticky), so these resolve against the bar itself — no
-   `position` here, which would have un-stuck the section tabs. */
-[data-scroll-hint-host] { --hint-inset: 0px; }
-[data-scroll-hint-host]::before,
-[data-scroll-hint-host]::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 34px;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity var(--dur) var(--ease);
-  z-index: 1;
-}
-[data-scroll-hint-host]::before {
-  left: var(--hint-inset);
-  background: linear-gradient(to right, var(--bg), transparent);
-}
-[data-scroll-hint-host]::after {
-  right: var(--hint-inset);
-  background: linear-gradient(to left, var(--bg), transparent);
-}
-[data-scroll-hint-host].can-scroll-start::before { opacity: 0.9; }
-[data-scroll-hint-host].can-scroll-end::after { opacity: 0.9; }
-/* The section-tab rail is a .shell, so it clips one shell-padding in from the
-   bar's own edge. On a wide screen the tabs never overflow and the fades stay
-   off; on a phone this lines the hint up with the row that scrolls. */
-.section-tabs { --hint-inset: var(--shell-pad); }
-
-/* The category row is a tablist now: same pill shape as the other filter
-   chips, but the selected one reads as a tab (underline + panel wiring)
-   rather than as one more toggle in a pile. */
-#categoryFilters .chip[aria-selected="true"] { box-shadow: var(--glow-accent); }
-#categoryFilters .chip:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* ── Hero quick categories ─────────────────────────────────────────────── */
-.hero-cats {
+.quick-tabs {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 18px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 2px;
 }
-.hero-cats-label {
+.quick-tabs::-webkit-scrollbar { display: none; }
+.quick-tab {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  font: 700 var(--text-2xs) var(--font-mono);
-  letter-spacing: var(--track-widest);
+  gap: 7px;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex: none;
+  transition: all var(--dur-fast) var(--ease);
+  box-shadow: var(--shadow-sm);
+}
+.quick-tab .qt-emoji { font-size: 14px; line-height: 1; }
+.quick-tab:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.quick-tab.is-active,
+.quick-tab[aria-current="page"],
+.quick-tab.active {
+  background: var(--accent-grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--glow-accent);
+}
+.quick-tabs-hint {
+  font: 600 10.5px var(--font-mono);
+  color: var(--faint);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .quick-nav-section {
+    top: 60px;
+    padding-block: 12px 10px;
+  }
+  .quick-tabs-hint { display: none; }
+  .quick-tab { padding: 9px 13px; font-size: 12.5px; }
+}
+
+/* ============================================================================
+   Catalog discovery tabs — category + build type (new)
+   Primary way to find apps easily. Sticky below quick-nav.
+   ========================================================================== */
+.catalog-tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 4px 2px 12px;
+  margin-bottom: 8px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+  position: sticky;
+  top: 142px;
+  z-index: 40;
+  background: color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter: blur(16px) saturate(1.5);
+  -webkit-backdrop-filter: blur(16px) saturate(1.5);
+  border-bottom: 1px solid var(--line);
+  /* Performance isolation without paint containment which breaks sticky */
+  contain: layout style;
+}
+.catalog-tabs::-webkit-scrollbar { display: none; }
+.catalog-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: var(--surface-solid);
+  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex: none;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  box-shadow: var(--shadow-sm);
+}
+.catalog-tab .tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  font: 700 10.5px var(--font-mono);
   color: var(--faint);
 }
-.hero-cats-label svg {
-  width: 13px;
-  height: 13px;
+.catalog-tab:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.catalog-tab.active,
+.catalog-tab[aria-selected="true"] {
+  background: var(--accent-grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--glow-accent);
+}
+.catalog-tab.active .tab-count,
+.catalog-tab[aria-selected="true"] .tab-count {
+  background: rgba(255,255,255,0.22);
+  color: #fff;
+}
+
+.catalog-subtabs {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 0 2px 16px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.catalog-subtabs::-webkit-scrollbar { display: none; }
+.subtab {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex: none;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+.subtab:hover {
+  color: var(--text);
+  border-color: var(--line-strong);
+  background: var(--surface);
+}
+.subtab.active,
+.subtab[aria-selected="true"] {
+  background: var(--text);
+  color: var(--bg);
+  border-color: var(--text);
+}
+
+@media (max-width: 760px) {
+  .catalog-tabs {
+    top: 112px;
+    padding: 6px 2px 10px;
+    margin-inline: -15px;
+    padding-inline: 15px;
+    gap: 6px;
+  }
+  .catalog-tab { padding: 9px 14px; font-size: 12.5px; }
+  .catalog-subtabs {
+    margin-inline: -15px;
+    padding-inline: 15px;
+  }
+}
+
+/* ============================================================================
+   Performance fixes for \"A problem repeatedly occurred\" on scroll
+   - Reduce backdrop-filter layers on mobile (major memory saver)
+   - Disable heavy blur orbs on low-end devices
+   - Add content-visibility for long app grid
+   ========================================================================== */
+@media (max-width: 1024px) {
+  /* Reduce hero blur intensity */
+  .hero-bg .orb {
+    filter: blur(40px) !important;
+    opacity: 0.5 !important;
+  }
+  .hero-bg .spot {
+    filter: blur(30px) !important;
+    opacity: 0.5 !important;
+  }
+  /* Remove backdrop-filter from cards — biggest win for iOS memory */
+  .app-card,
+  .rail-card,
+  .stat-card,
+  .source-card,
+  .metric-card,
+  .kpi-card,
+  .status-tile,
+  .client-card,
+  .install-step,
+  .feature-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: var(--surface-solid) !important;
+  }
+  .app-card::before,
+  .rail-card::before,
+  .stat-card::before,
+  .source-card::before,
+  .metric-card::before,
+  .featured-card::before {
+    opacity: 0.25 !important;
+  }
+  .app-card::after,
+  .rail-card::after,
+  .stat-card::after {
+    display: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  /* Hide orbs entirely on phones — they cause compositor overload */
+  .hero-bg .orb,
+  .hero-bg .spot {
+    display: none !important;
+  }
+  .hero-bg .hero-grid {
+    opacity: 0.3;
+  }
+  /* Further reduce glass effects */
+  .site-header .nav {
+    backdrop-filter: blur(16px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(1.4) !important;
+  }
+  .quick-nav-section,
+  .catalog-tabs {
+    backdrop-filter: blur(12px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(1.3) !important;
+  }
+  /* Content-visibility for app grid — renders only visible cards */
+  .apps-grid {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 800px;
+  }
+  .app-card {
+    contain: layout paint style;
+  }
+}
+
+/* Fix for #top anchor — ensure main doesn't cause scroll jump with padding */
+#top {
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+/* Smooth scroll but disable on mobile to prevent jank */
+@media (max-width: 760px) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Ensure sections don't trigger layout thrashing on scroll */
+.section {
+  contain: layout style;
+  /* Don't use paint containment for sections with sticky children */
+}
+.hero {
+  contain: layout style;
+}
+
+/* Reduce motion for users who prefer it — also helps performance */
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg .orb,
+  .hero-bg .spot,
+  body::before {
+    animation: none !important;
+    display: none !important;
+  }
+}
+
+/* iOS-specific: disable fixed backgrounds and heavy filters */
+@supports (-webkit-touch-callout: none) {
+  .hero-bg .orb,
+  .hero-bg .spot {
+    animation: none !important;
+  }
+  body::before {
+    animation: none !important;
+    opacity: 0.4 !important;
+  }
+}
+
+/* ============================================================================
+   Bottom tap navigation + FABs — easy thumb access (new)
+   ========================================================================== */
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: max(14px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 75;
+  display: none;
+  align-items: center;
+  gap: 4px;
+  padding: 6px;
+  background: var(--glass-heavy);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--glass-shadow-xl), 0 8px 32px rgba(0,0,0,0.18);
+  backdrop-filter: blur(28px) saturate(1.8);
+  -webkit-backdrop-filter: blur(28px) saturate(1.8);
+  max-width: calc(100% - 20px);
+}
+.bottom-nav::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: var(--refraction-edge);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.45;
+  pointer-events: none;
+}
+.bn-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 56px;
+  min-height: 56px;
+  padding: 6px 10px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font: 700 9.5px var(--font-mono);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+.bn-item svg {
+  width: 22px;
+  height: 22px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.9;
+  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.hero-cats .chip { padding: 7px 13px; font-size: 12px; }
-
-/* ── Back to top ───────────────────────────────────────────────────────── */
-.to-top {
-  position: fixed;
-  right: clamp(14px, 3vw, 28px);
-  bottom: clamp(14px, 3vw, 28px);
-  /* Under the nav backdrop (55) for the same reason as the tab bar — and the
-     page cannot scroll while the drawer is open anyway. */
-  z-index: 54;
-  width: 44px;
-  height: 44px;
+.bn-item svg path { fill: currentColor; stroke: none; }
+.bn-item svg rect { fill: none; stroke: currentColor; }
+.bn-item svg circle { fill: none; stroke: currentColor; }
+.bn-item:hover,
+.bn-item:focus-visible {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+  outline: none;
+}
+.bn-item.is-active,
+.bn-item[aria-current="page"] {
+  color: var(--text);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+.bn-primary {
+  min-width: 64px;
+  min-height: 64px;
+  background: var(--accent-grad) !important;
+  color: #fff !important;
+  box-shadow: var(--glow-accent);
+  transform: translateY(-8px);
+  border: 3px solid var(--surface-solid);
+}
+.bn-primary:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 14px 40px color-mix(in srgb, var(--accent) 45%, transparent);
+}
+.bn-primary-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   display: grid;
   place-items: center;
+  background: rgba(255,255,255,0.18);
+}
+.bn-primary-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.2;
+}
+
+/* FAB stack — right side, above bottom nav */
+.fab-stack {
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(90px, calc(env(safe-area-inset-bottom) + 76px));
+  z-index: 74;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+.fab {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   border: 1px solid var(--glass-border);
-  background: var(--glass-nav);
-  box-shadow: var(--glass-shadow);
-  backdrop-filter: var(--blur-liquid);
-  -webkit-backdrop-filter: var(--blur-liquid);
+  background: var(--surface-solid);
   color: var(--text);
+  display: grid;
+  place-items: center;
+  box-shadow: var(--glass-shadow), var(--shadow-md);
+  backdrop-filter: blur(20px) saturate(1.6);
+  -webkit-backdrop-filter: blur(20px) saturate(1.6);
   cursor: pointer;
+  pointer-events: auto;
   opacity: 0;
-  transform: translateY(14px) scale(0.9);
-  pointer-events: none;
-  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease-spring);
+  transform: translateY(12px) scale(0.9);
+  transition: all var(--dur) var(--ease-spring);
+  -webkit-tap-highlight-color: transparent;
 }
-.to-top svg {
-  width: 19px;
-  height: 19px;
+.fab.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.fab:hover {
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: var(--glass-shadow-lg), var(--shadow-md);
+  border-color: color-mix(in srgb, var(--accent) 30%, var(--glass-border));
+}
+.fab:active { transform: scale(0.94); }
+.fab svg {
+  width: 22px;
+  height: 22px;
   fill: none;
   stroke: currentColor;
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
-.to-top.is-visible {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
+.fab svg path { fill: currentColor; stroke: none; }
+.fab-primary {
+  background: var(--accent-grad);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--glow-accent);
+  width: 56px;
+  height: 56px;
 }
-.to-top:hover { box-shadow: var(--glass-shadow-lg); }
-.to-top:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
-}
-
-/* ── Anchor clearance ──────────────────────────────────────────────────── */
-/* html { scroll-padding-top } already clears the floating header. On the home
-   page the sticky section-tab bar adds one more row, so section anchors need
-   that much extra clearance or every jump lands with its heading behind the
-   tabs. (scroll-margin on the target and scroll-padding on the scrollport
-   add up, which is exactly what we want here.) */
-body[data-page="home"] main > section[id] {
-  scroll-margin-top: calc(var(--tabbar-h) + 6px);
+.fab-primary:hover {
+  box-shadow: 0 16px 48px color-mix(in srgb, var(--accent) 45%, transparent);
 }
 
-/* ── Responsive ────────────────────────────────────────────────────────── */
-@media (max-width: 760px) {
-  /* The capsule shrinks to top:8px + 52px + 6px of padding. */
-  :root {
-    --sticky-offset: 66px;
-    --tabbar-h: 42px;
+/* Show bottom nav only on mobile / touch — easy tap access */
+@media (max-width: 900px) {
+  .bottom-nav { display: inline-flex; }
+  .fab-stack { bottom: max(90px, calc(env(safe-area-inset-bottom) + 84px)); }
+  /* Add bottom padding to main so content not hidden behind nav */
+  body { padding-bottom: 90px; }
+  .footer { padding-bottom: 110px; }
+}
+
+@media (max-width: 560px) {
+  .bottom-nav {
+    gap: 2px;
+    padding: 5px;
   }
-  /* A phone gives up ~25% of its viewport to two stacked bars, so only the
-     category tabs stay pinned — they are the ones that matter while the grid
-     scrolls. The section tabs ride along at the top and the hamburger drawer
-     covers jumping from further down. */
-  .section-tabs { position: static; margin-top: 8px; backdrop-filter: none; -webkit-backdrop-filter: none; }
-  .catalog-tabs { top: var(--sticky-offset); }
-  body[data-page="home"] main > section[id] { scroll-margin-top: 0; }
-  .hero-cats { justify-content: flex-start; }
+  .bn-item {
+    min-width: 52px;
+    min-height: 52px;
+    padding: 5px 8px;
+    font-size: 8.5px;
+  }
+  .bn-item svg { width: 20px; height: 20px; }
+  .bn-primary {
+    min-width: 60px;
+    min-height: 60px;
+  }
 }
-@media (max-width: 430px) {
-  .to-top { width: 40px; height: 40px; }
+
+/* Ensure tap targets are at least 44px (WCAG) */
+.button,
+.chip,
+.catalog-tab,
+.subtab,
+.quick-tab,
+.icon-button,
+.client-button,
+.get-button {
+  min-height: 44px;
+  min-width: 44px;
 }
+.chip,
+.catalog-tab,
+.subtab,
+.quick-tab {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Fix filter-groups horizontal scroll — prevent body scroll lock */
+.filter-groups {
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix app-card tap area — entire card is tappable, but buttons keep priority */
+.app-card {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.app-card .favorite,
+.app-card .get-button,
+.app-card .page-link {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fix hero search box tap */
+.hero-search .search-box {
+  cursor: pointer;
+  touch-action: manipulation;
+  min-height: 56px;
+}
+
+/* Fix source-box buttons stacking on mobile */
+@media (max-width: 620px) {
+  .source-box .button {
+    min-height: 48px;
+  }
+}
+
+/* Fix dialog close button tap size */
+.dialog-close {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Fix nav drawer — ensure it doesn't overlap quick-nav */
+@media (max-width: 1180px) {
+  body.nav-open .quick-nav-section,
+  body.nav-open .bottom-nav,
+  body.nav-open .fab-stack {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+/* Fix trust grid border on dark */
+.trust-section .trust-grid article {
+  min-height: auto;
+}
+
+/* Fix empty state button */
+.empty-state .button {
+  min-height: 48px;
+  padding: 0 24px;
+}
+
+/* Fix footer tap targets */
+.footer-col a,
+.client-link {
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 0;
+}
+
+/* Fix skeleton animation performance — disable on mobile */
+@media (max-width: 760px) {
+  .os-skeleton {
+    animation: none !important;
+    background: var(--surface-2) !important;
+  }
+}
+
+/* Fix for iOS safe area in header */
+.site-header .nav {
+  padding-left: max(10px, env(safe-area-inset-left));
+  padding-right: max(10px, env(safe-area-inset-right));
+}
+
+/* Ensure quick-nav and catalog tabs have proper safe area */
+.quick-nav-section .shell,
+#catalog .shell {
+  padding-left: max(var(--shell-pad), env(safe-area-inset-left));
+  padding-right: max(var(--shell-pad), env(safe-area-inset-right));
+}
+
+/* Fix for #mainContent scroll margin */
+#mainContent {
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+/* Performance polish — will-change for sticky */
+.quick-nav-section,
+.catalog-tabs {
+  will-change: transform;
+  transform: translateZ(0);
+}
+.bottom-nav,
+.fab-stack {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Reduce motion: disable FAB/bottom-nav transitions if user prefers */
 @media (prefers-reduced-motion: reduce) {
-  .scroll-progress i,
-  .to-top { transition: none; }
+  .bottom-nav,
+  .fab,
+  .bn-item,
+  .quick-tab,
+  .catalog-tab {
+    transition: none !important;
+    animation: none !important;
+  }
+  .fab {
+    transform: none !important;
+  }
 }
