@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-15",
-  "count": 94,
+  "generatedAt": "2026-09-16",
+  "count": 101,
   "apps": [
     {
       "slug": "spotiflac",
@@ -1882,6 +1882,146 @@
           "ipad"
         ]
       }
+    },
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "icon": "assets/TrollFools.webp",
+      "category": "utilities",
+      "version": "4.3-253",
+      "releaseDate": "2026-04-23",
+      "source": "Lessica/TrollFools",
+      "sourceURL": "https://github.com/Lessica/TrollFools",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "lara",
+      "name": "Lara",
+      "icon": "assets/Lara.webp",
+      "category": "utilities",
+      "version": "0.2",
+      "releaseDate": "2026-05-22",
+      "source": "rooootdev/lara",
+      "sourceURL": "https://github.com/rooootdev/lara",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "17.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "icon": "assets/OnionBrowser.webp",
+      "category": "networking",
+      "version": "3.4.1",
+      "releaseDate": "2026-08-11",
+      "source": "OnionBrowser/OnionBrowser",
+      "sourceURL": "https://github.com/OnionBrowser/OnionBrowser",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "icon": "assets/Orbot.webp",
+      "category": "networking",
+      "version": "1.12.0",
+      "releaseDate": "2026-06-30",
+      "source": "guardianproject/orbot-ios",
+      "sourceURL": "https://github.com/guardianproject/orbot-ios",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "icon": "assets/TableHabit.webp",
+      "category": "utilities",
+      "version": "1.27.6",
+      "releaseDate": "2026-09-07",
+      "source": "FriesI23/mhabit",
+      "sourceURL": "https://github.com/FriesI23/mhabit",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "icon": "assets/ByeTunes.webp",
+      "category": "music",
+      "version": "2.5",
+      "releaseDate": "2026-08-31",
+      "source": "EduAlexxis/ByeTunes",
+      "sourceURL": "https://github.com/EduAlexxis/ByeTunes",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "16.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "icon": "assets/Messenger.webp",
+      "category": "social",
+      "version": "517.0.0",
+      "releaseDate": "2025-07-29",
+      "source": "NguyenASang/SNMessenger",
+      "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "12.4",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
     }
   ],
   "bundlePairs": [
@@ -2062,6 +2202,51 @@
         }
       },
       "winner": "inkillerplus",
+      "shareBundle": true,
+      "shareCategory": true
+    },
+    {
+      "left": {
+        "slug": "msgplusx",
+        "name": "MSGPlusX",
+        "icon": "assets/Messenger.webp",
+        "category": "social",
+        "version": "578.1.0",
+        "releaseDate": "2026-09-10",
+        "source": "927tx/IPA-Vault",
+        "sourceURL": "https://raw.githubusercontent.com",
+        "verificationLevel": "VERIFIED",
+        "updateFrequencyDays": 0.0,
+        "downloadReachable": true,
+        "compatibility": {
+          "minOSVersion": "15.1",
+          "devices": [
+            "iphone",
+            "ipad"
+          ]
+        }
+      },
+      "right": {
+        "slug": "snmessenger",
+        "name": "SNMessenger",
+        "icon": "assets/Messenger.webp",
+        "category": "social",
+        "version": "517.0.0",
+        "releaseDate": "2025-07-29",
+        "source": "NguyenASang/SNMessenger",
+        "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+        "verificationLevel": "VERIFIED",
+        "updateFrequencyDays": 0.0,
+        "downloadReachable": true,
+        "compatibility": {
+          "minOSVersion": "12.4",
+          "devices": [
+            "iphone",
+            "ipad"
+          ]
+        }
+      },
+      "winner": "msgplusx",
       "shareBundle": true,
       "shareCategory": true
     },
@@ -3324,6 +3509,51 @@
         }
       },
       "winner": "inkillerplus",
+      "shareBundle": true,
+      "shareCategory": true
+    },
+    {
+      "left": {
+        "slug": "msgplusx",
+        "name": "MSGPlusX",
+        "icon": "assets/Messenger.webp",
+        "category": "social",
+        "version": "578.1.0",
+        "releaseDate": "2026-09-10",
+        "source": "927tx/IPA-Vault",
+        "sourceURL": "https://raw.githubusercontent.com",
+        "verificationLevel": "VERIFIED",
+        "updateFrequencyDays": 0.0,
+        "downloadReachable": true,
+        "compatibility": {
+          "minOSVersion": "15.1",
+          "devices": [
+            "iphone",
+            "ipad"
+          ]
+        }
+      },
+      "right": {
+        "slug": "snmessenger",
+        "name": "SNMessenger",
+        "icon": "assets/Messenger.webp",
+        "category": "social",
+        "version": "517.0.0",
+        "releaseDate": "2025-07-29",
+        "source": "NguyenASang/SNMessenger",
+        "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+        "verificationLevel": "VERIFIED",
+        "updateFrequencyDays": 0.0,
+        "downloadReachable": true,
+        "compatibility": {
+          "minOSVersion": "12.4",
+          "devices": [
+            "iphone",
+            "ipad"
+          ]
+        }
+      },
+      "winner": "msgplusx",
       "shareBundle": true,
       "shareCategory": true
     },

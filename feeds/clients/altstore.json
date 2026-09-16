@@ -1082,6 +1082,87 @@
       ]
     },
     {
+      "bundleIdentifier": "com.EduAlexxis.MusicManager",
+      "category": "music",
+      "developerName": "EduAlexxis",
+      "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+      "localizedDescription": "ByeTunes writes MP3, M4A, FLAC and WAV files straight into the iOS media library by talking to the media database directly, so adding a song no longer needs a cable and a desktop sync session. You can create and manage playlists in the app, and import metadata is fetched from iTunes or Deezer. The ringtone injector is disabled upstream for now, so treat ringtones as not working yet. Open source under the MIT license, with the iOS build published from the project's own GitHub releases.",
+      "name": "ByeTunes",
+      "omnisource": {
+        "slug": "byetunes",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/EduAlexxis/ByeTunes",
+        "sourceURL": "https://github.com/EduAlexxis/ByeTunes",
+        "verification": {
+          "method": "github-release",
+          "publisher": "EduAlexxis/ByeTunes",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "16.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Upstream documents iOS 16.0 or later. Writing into the media database is an unofficial flow: back up anything you cannot lose before mass-importing, and re-run the import after a major iOS update."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-08-31",
+          "lastUpdatedAt": "2026-08-31"
+        }
+      },
+      "screenshotURLs": [],
+      "size": 16815108,
+      "subtitle": "Add music to the iOS library without a computer",
+      "tintColor": "FA243C",
+      "version": "2.5",
+      "versionDate": "2026-08-31",
+      "versionDescription": "ByeTunes 2.5 | ByeTunes\n\nHi guys, here's the 2.5 update for ByeTunes. This one adds full Deezer support and real parallel downloads for way faster queues, plus a brand new Smart Playlists feature with custom cover art. On top of that, a bunch of reliability fixes across downloads, backups, and repair tools — including a crash fix for the download queue.\n\n**Quick recommendation:** for the best speed and match accuracy while searching, set Deezer as your Search Provider. And to keep full Apple Music compatibility (animated artwork, richer info), keep Apple Music as your Metadata Source.\n\n**Deezer — full provider support**\n\n- Deezer is now a full first-class search source alongside Apple Music/iTunes, with its own tab (\"Search or paste a Deezer link\")\n- Paste a Deezer track/album/artist/playlist link and it resolves directly — same one-tap flow Apple Music/Spotify links already had\n- Deezer artist pages now show real top tracks + full discography (up to 100 each), not just a flat track list\n- Deezer search results paginate (\"load more\"), merged into the same song/album results as other providers\n- \"Find on Deezer\" added alongside \"Find on Spotify\" as an in-app browser shortcut for failed downloads\n\n**Download Engine — real concurrency & speed**\n\n- Downloads used to run one at a time through a single sequential task; now use a real worker-pool so multiple tracks download in parallel\n- Concurrency is format-aware: 3 simultaneous downloads for lossy formats, capped to 2 for lossless (FLAC/ALAC), since lossless generation is much more expensive on the backend\n- Added a start-pacer that spaces out when new downloads begin (wider gap for lossless) on top of the concurrency cap — bursts of simultaneous requests were triggering backend 429/500 errors even within the concurrency limit\n- Fixed the download engine getting silently recreated from scratch whenever the Download tab's view was torn down (older iOS layout) — was orphaning in-flight downloads and losing queue state; now backed by a shared instance that survives it\n- Aggregate download speed now tracked and shown live across all active downloads\n\n**Background Downloads**\n\n- Fixed isAppActive defaulting to true on a silent background relaunch, which routed transfers through the short-lived foreground path instead of the durable background session (caused FLAC→MP3 downgrades and stalls)\n- Fixed the candidate fallback loop not checking cancellation, which let a cancelled foreground download silently complete via the MP3 fallback instead of aborting\n- Completed-but-unclaimed background download results now persist to disk so a killed/relaunched app recovers them instead of re-downloading\n- Finished tracks now persist their own .done state so a relaunch mid-queue doesn't drop them from Queue Details\n- Added a genuine background-processing task (registered at launch) so metadata fetching can run even when the app isn't open, instead of only opportunistically while active\n- Each backend candidate now uses its own requested format for its file-extension fallback instead of a hardcoded \"flac\" default\n- Plain-language failure messages in the download queue instead of raw HTTP/backend error bodies\n- Fixed link.deezer.com short links not resolving\n- Fixed a crash: removing a failed download could resurrect it (and crash on the second removal) because a stray background-session completion callback fired after removal and wrote the state back. Removal now properly cancels the underlying background task too.\n\n**Smart Playlists**\n\n- Create playlists by rule: Genre, Artist, Decade, Format, or Explicit Rating\n- Multi-select across all rule types with combined naming (e.g. \"Rock, Pop\" or \"1990s, 2000s\")\n- Live match counts, search within Genre/Artist lists, lossless-format badges\n- Artist grouping splits collab credits (\"A & B\") into separate artists, matching the on-device Artists tab\n- \"Refresh Smart Playlist\" — remembers its rule and can re-sync to catch newly matching songs\n\n**Playlists**\n\n- New naming screen matches Apple Music: photo picker, large title field, X/checkmark controls — used for manual and smart playlist creation alike\n- Custom playlist cover photos: pick a photo, it's auto-cropped to a square and uploaded using the same on-device artwork system Apple Music itself uses; persists across relaunch\n- In-playlist rename\n- Playlist restore now lists which specific tracks failed to match instead of just a count\n\n**On-Device Library**\n\n- Select/Select All controls pinned so they stay visible while scrolling\n- Select/Select All/Add to Playlist/Add to Album/Export restricted to the Songs tab; Playlists tab gets Select/Select All/Export/Delete\n- Removed redundant header title/count and Export Folder picker from non-Songs tabs\n- Audio Quality Analysis (new): tapping a song shows a verdict flagging mislabeled files (e.g. an MP3 renamed .flac), suspiciously over-compressed \"lossless\" files, and low-bitrate lossy files\n- On-device album metadata editing\n- In-place device audio file replacement\n- Content Rating redesigned from a cramped segmented control to a compact menu row, with a new \"No Rating\" option\n- Fixed the explicit/clean rating editor: a binary toggle could only ever write explicit/none, silently flipping \"clean\" tracks to explicit\n\n**Reliability Fixes**\n\n- Injection failures no longer silently drop songs from the queue — unconfirmed songs are put back\n- Repair operations (artwork fix, database doctor, alphabetical order) use per-operation cancellation tokens instead of one shared flag, so cancelling one can no longer kill an unrelated one\n- Background metadata fetch no longer double-imports a song if the process is killed mid-drain\n- Artwork upload failures during metadata edits are now reported instead of silently swallowed\n- A failed database integrity check now aborts the library merge instead of writing on top of a known-corrupt database\n- Fixed the large-batch injection safeguard checking the wrong count\n- Fixed byetunes://download deep links opening the wrong tab on iOS 16–18\n- Fixed a Live Activity race that could resurrect it right after ending; orphaned Live Activities from a killed session now clean up on cold launch\n- Removed dead Tidal/Qobuz code and a broken last-resort Spotify mapping fallback\n\n**Backup & Restore**\n\n- Merged Light/Full Backup toggle and \"Export Full Library\" into two direct-action rows; Full Backup always bundles per-playlist files\n\n**Settings**\n\n- Store Region picker upgraded from a simple inline row to a full searchable, alphabetically-grouped screen with flags\n- About/Credits moved to its own section, separate from actionable controls\n- Added \"Keep Local Metadata\" to skip the fetch pipeline for imported local files",
+      "versions": [
+        {
+          "version": "2.5",
+          "date": "2026-08-31",
+          "localizedDescription": "ByeTunes 2.5 | ByeTunes\n\nHi guys, here's the 2.5 update for ByeTunes. This one adds full Deezer support and real parallel downloads for way faster queues, plus a brand new Smart Playlists feature with custom cover art. On top of that, a bunch of reliability fixes across downloads, backups, and repair tools — including a crash fix for the download queue.\n\n**Quick recommendation:** for the best speed and match accuracy while searching, set Deezer as your Search Provider. And to keep full Apple Music compatibility (animated artwork, richer info), keep Apple Music as your Metadata Source.\n\n**Deezer — full provider support**\n\n- Deezer is now a full first-class search source alongside Apple Music/iTunes, with its own tab (\"Search or paste a Deezer link\")\n- Paste a Deezer track/album/artist/playlist link and it resolves directly — same one-tap flow Apple Music/Spotify links already had\n- Deezer artist pages now show real top tracks + full discography (up to 100 each), not just a flat track list\n- Deezer search results paginate (\"load more\"), merged into the same song/album results as other providers\n- \"Find on Deezer\" added alongside \"Find on Spotify\" as an in-app browser shortcut for failed downloads\n\n**Download Engine — real concurrency & speed**\n\n- Downloads used to run one at a time through a single sequential task; now use a real worker-pool so multiple tracks download in parallel\n- Concurrency is format-aware: 3 simultaneous downloads for lossy formats, capped to 2 for lossless (FLAC/ALAC), since lossless generation is much more expensive on the backend\n- Added a start-pacer that spaces out when new downloads begin (wider gap for lossless) on top of the concurrency cap — bursts of simultaneous requests were triggering backend 429/500 errors even within the concurrency limit\n- Fixed the download engine getting silently recreated from scratch whenever the Download tab's view was torn down (older iOS layout) — was orphaning in-flight downloads and losing queue state; now backed by a shared instance that survives it\n- Aggregate download speed now tracked and shown live across all active downloads\n\n**Background Downloads**\n\n- Fixed isAppActive defaulting to true on a silent background relaunch, which routed transfers through the short-lived foreground path instead of the durable background session (caused FLAC→MP3 downgrades and stalls)\n- Fixed the candidate fallback loop not checking cancellation, which let a cancelled foreground download silently complete via the MP3 fallback instead of aborting\n- Completed-but-unclaimed background download results now persist to disk so a killed/relaunched app recovers them instead of re-downloading\n- Finished tracks now persist their own .done state so a relaunch mid-queue doesn't drop them from Queue Details\n- Added a genuine background-processing task (registered at launch) so metadata fetching can run even when the app isn't open, instead of only opportunistically while active\n- Each backend candidate now uses its own requested format for its file-extension fallback instead of a hardcoded \"flac\" default\n- Plain-language failure messages in the download queue instead of raw HTTP/backend error bodies\n- Fixed link.deezer.com short links not resolving\n- Fixed a crash: removing a failed download could resurrect it (and crash on the second removal) because a stray background-session completion callback fired after removal and wrote the state back. Removal now properly cancels the underlying background task too.\n\n**Smart Playlists**\n\n- Create playlists by rule: Genre, Artist, Decade, Format, or Explicit Rating\n- Multi-select across all rule types with combined naming (e.g. \"Rock, Pop\" or \"1990s, 2000s\")\n- Live match counts, search within Genre/Artist lists, lossless-format badges\n- Artist grouping splits collab credits (\"A & B\") into separate artists, matching the on-device Artists tab\n- \"Refresh Smart Playlist\" — remembers its rule and can re-sync to catch newly matching songs\n\n**Playlists**\n\n- New naming screen matches Apple Music: photo picker, large title field, X/checkmark controls — used for manual and smart playlist creation alike\n- Custom playlist cover photos: pick a photo, it's auto-cropped to a square and uploaded using the same on-device artwork system Apple Music itself uses; persists across relaunch\n- In-playlist rename\n- Playlist restore now lists which specific tracks failed to match instead of just a count\n\n**On-Device Library**\n\n- Select/Select All controls pinned so they stay visible while scrolling\n- Select/Select All/Add to Playlist/Add to Album/Export restricted to the Songs tab; Playlists tab gets Select/Select All/Export/Delete\n- Removed redundant header title/count and Export Folder picker from non-Songs tabs\n- Audio Quality Analysis (new): tapping a song shows a verdict flagging mislabeled files (e.g. an MP3 renamed .flac), suspiciously over-compressed \"lossless\" files, and low-bitrate lossy files\n- On-device album metadata editing\n- In-place device audio file replacement\n- Content Rating redesigned from a cramped segmented control to a compact menu row, with a new \"No Rating\" option\n- Fixed the explicit/clean rating editor: a binary toggle could only ever write explicit/none, silently flipping \"clean\" tracks to explicit\n\n**Reliability Fixes**\n\n- Injection failures no longer silently drop songs from the queue — unconfirmed songs are put back\n- Repair operations (artwork fix, database doctor, alphabetical order) use per-operation cancellation tokens instead of one shared flag, so cancelling one can no longer kill an unrelated one\n- Background metadata fetch no longer double-imports a song if the process is killed mid-drain\n- Artwork upload failures during metadata edits are now reported instead of silently swallowed\n- A failed database integrity check now aborts the library merge instead of writing on top of a known-corrupt database\n- Fixed the large-batch injection safeguard checking the wrong count\n- Fixed byetunes://download deep links opening the wrong tab on iOS 16–18\n- Fixed a Live Activity race that could resurrect it right after ending; orphaned Live Activities from a killed session now clean up on cold launch\n- Removed dead Tidal/Qobuz code and a broken last-resort Spotify mapping fallback\n\n**Backup & Restore**\n\n- Merged Light/Full Backup toggle and \"Export Full Library\" into two direct-action rows; Full Backup always bundles per-playlist files\n\n**Settings**\n\n- Store Region picker upgraded from a simple inline row to a full searchable, alphabetically-grouped screen with flags\n- About/Credits moved to its own section, separate from actionable controls\n- Added \"Keep Local Metadata\" to skip the fetch pipeline for imported local files",
+          "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+          "size": 16815108,
+          "minOSVersion": "16.0",
+          "releaseUrl": "https://github.com/EduAlexxis/ByeTunes/releases/tag/v2.5",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "ByeTunes.ipa",
+              "downloadUrl": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 16815108,
+              "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+              "downloads": 480,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+          "downloads": 480
+        }
+      ]
+    },
+    {
       "appPermissions": {
         "entitlements": [],
         "privacy": {}
@@ -3379,11 +3460,7 @@
           "lastUpdatedAt": "2026-07-19"
         }
       },
-      "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/itorrent/itorrent-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/itorrent/itorrent-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/itorrent/itorrent-03.png"
-      ],
+      "screenshotURLs": [],
       "size": 24288935,
       "subtitle": "Torrent client with a built-in player",
       "tintColor": "0A6CFF",
@@ -3885,6 +3962,87 @@
           ],
           "sha256": "57fbab135bdcd584faf095099f0913df634ce17081bc164ce82f3d91e3978483",
           "downloads": 87255
+        }
+      ]
+    },
+    {
+      "bundleIdentifier": "com.roooot.lara",
+      "category": "utilities",
+      "developerName": "rooootdev",
+      "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+      "localizedDescription": "lara is a jailed customization toolbox that uses the DarkSword exploit to reach the parts of the system iOS keeps locked: a full read/write file manager, a MobileGestalt editor, font / card / custom overwrites, status-bar tweaks, hidden icon labels, an upside-down mode, a five-icon dock, a grid app switcher, a performance HUD, DirtyZero 2, a three-app bypass and a JIT enabler for apps that carry get-task-allow. It is published as its own unsigned IPA for sideloading from the open-source repository.",
+      "name": "Lara",
+      "omnisource": {
+        "slug": "lara",
+        "status": "beta",
+        "featured": false,
+        "upstreamURL": "https://github.com/rooootdev/lara",
+        "sourceURL": "https://github.com/rooootdev/lara",
+        "verification": {
+          "method": "github-release",
+          "publisher": "rooootdev/lara",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "17.0",
+          "maxOSVersion": "26.0.1",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Firmware support as documented by upstream: iOS/iPadOS 17.0 - 18.7.1 and 26.0 - 26.0.1. iOS 16.x is technically affected by the exploit but has no offsets, and 18.7.2+ / 26.1+ are unsupported. Does not work on M5 or A19 (Pro) devices; on M-series CPUs upstream suggests setting t1sz_boot to 0x11 under Modify Offsets. Early-stage tool (0.x releases), so keep expectations modest."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-05-22",
+          "lastUpdatedAt": "2026-05-22"
+        }
+      },
+      "screenshotURLs": [],
+      "size": 5474210,
+      "subtitle": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+      "tintColor": "22C55E",
+      "version": "0.2",
+      "versionDate": "2026-05-22",
+      "versionDescription": "lara 0.2 | lara_v0.2\n\n## UX Changes\n- Moved tweaks into its own accessible section, and put Tools there at the bottom.\n- Moved logs out of the tab bar and into a toolbar item at the top of the primary views (you can change this back in settings).\n- Settings has been completed reorganized, with some new customization toggles for the app itself.\n\n## Applying/Handling\n- Fixed kernelcache weirdness (kernelcache is now fetched locally)\n- Hybrid will now be used by default.\n\n## Tweaks\n- Rewrote MobileGestalt View + Added a ton of tweaks! (thanks @jurre111)\n- Rewrote Liquid Glass View with nice previewer.\n- Fixed Passcode + Add repo viewer (thanks @neonmodder123)\n- Add SpringBoard Customizer (thanks @leminlimez and Cowabunga, as well as @jurre111 for fixing the view)\n- Add SystemColor patcher.",
+      "versions": [
+        {
+          "version": "0.2",
+          "date": "2026-05-22",
+          "localizedDescription": "lara 0.2 | lara_v0.2\n\n## UX Changes\n- Moved tweaks into its own accessible section, and put Tools there at the bottom.\n- Moved logs out of the tab bar and into a toolbar item at the top of the primary views (you can change this back in settings).\n- Settings has been completed reorganized, with some new customization toggles for the app itself.\n\n## Applying/Handling\n- Fixed kernelcache weirdness (kernelcache is now fetched locally)\n- Hybrid will now be used by default.\n\n## Tweaks\n- Rewrote MobileGestalt View + Added a ton of tweaks! (thanks @jurre111)\n- Rewrote Liquid Glass View with nice previewer.\n- Fixed Passcode + Add repo viewer (thanks @neonmodder123)\n- Add SpringBoard Customizer (thanks @leminlimez and Cowabunga, as well as @jurre111 for fixing the view)\n- Add SystemColor patcher.",
+          "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+          "size": 5474210,
+          "minOSVersion": "17.0",
+          "releaseUrl": "https://github.com/rooootdev/lara/releases/tag/0.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "lara_v0.2.ipa",
+              "downloadUrl": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 5474210,
+              "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+              "downloads": 15599,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+          "downloads": 15599
         }
       ]
     },
@@ -5071,7 +5229,7 @@
             "esign",
             "livecontainer"
           ],
-          "notes": "UNOFFICIAL BUILD. MSGPlusX has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Messenger bundle identifier, so installing it REPLACES the App Store Messenger on device."
+          "notes": "UNOFFICIAL BUILD. MSGPlusX has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Messenger bundle identifier, so installing it REPLACES the App Store Messenger on device. SNMessenger shares the same stock Messenger bundle id, so those two install over each other one at a time; Messenger Flow keeps its own id and can stay installed."
         },
         "health": {
           "downloadReachable": true,
@@ -5576,6 +5734,184 @@
             }
           ],
           "downloads": 563297
+        }
+      ]
+    },
+    {
+      "bundleIdentifier": "com.miketigas.OnionBrowser",
+      "category": "networking",
+      "developerName": "Mike Tigas",
+      "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+      "localizedDescription": "Onion Browser is a free web browser for iPhone and iPad that encrypts and tunnels its traffic through the Tor network with the help of Orbot for iOS. The 3.x branch renders pages with WKWebView instead of the old UIWebView stack, and the project publishes its own sideloadable build next to the App Store release. Open source, with the repository's LICENSE file governing usage and redistribution.",
+      "name": "Onion Browser",
+      "omnisource": {
+        "slug": "onionbrowser",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/OnionBrowser/OnionBrowser",
+        "sourceURL": "https://github.com/OnionBrowser/OnionBrowser",
+        "verification": {
+          "method": "github-release",
+          "publisher": "OnionBrowser/OnionBrowser",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from the project's own GitHub releases. Tor circuits, bridges and exit policy live in Orbot, so install Orbot from this source too if you need Obfs4 or Snowflake bridges instead of the defaults."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-08-11",
+          "lastUpdatedAt": "2026-08-11"
+        }
+      },
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/1_iphone65_1.1.png",
+        "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/2_iphone65_2.2.png",
+        "https://raw.githubusercontent.com/OnionBrowser/OnionBrowser/v3.4.1/fastlane/screenshots/en-US/3_iphone65_3.3.png"
+      ],
+      "size": 39611914,
+      "subtitle": "Tor browser that routes web traffic through Tor",
+      "tintColor": "6D4C9F",
+      "version": "3.4.1",
+      "versionDate": "2026-08-11",
+      "versionDescription": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
+      "versions": [
+        {
+          "version": "3.4.1",
+          "date": "2026-08-11",
+          "localizedDescription": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
+          "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+          "size": 39611914,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/OnionBrowser/OnionBrowser/releases/tag/v3.4.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "OnionBrowser.ipa",
+              "downloadUrl": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 39611914,
+              "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+              "downloads": 517,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+          "downloads": 517
+        }
+      ]
+    },
+    {
+      "bundleIdentifier": "org.torproject.orbot",
+      "category": "networking",
+      "developerName": "The Tor Project",
+      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+      "localizedDescription": "Orbot puts an iPhone, iPad or Mac behind the Tor network: it installs a local packet-tunnel configuration so device traffic leaves through Tor instead of the plain network. Obfs4 and Snowflake bridges are supported and fully configurable, Tor v3 onion-service authentication works, and Tor's EntryNodes, ExitNodes, ExcludeNodes and StrictNodes options can all be set. The sideloadable build is published from the project's own GitHub releases, which list the bundled Tor, OpenSSL, Lyrebird and Snowflake versions per app release.",
+      "name": "Orbot",
+      "omnisource": {
+        "slug": "orbot",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/guardianproject/orbot-ios",
+        "sourceURL": "https://github.com/guardianproject/orbot-ios",
+        "verification": {
+          "method": "github-release",
+          "publisher": "guardianproject/orbot-ios",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Uses the Network Extension (packet tunnel) entitlement, which a free personal Apple ID cannot sign: expect it to run only where your certificate allows network-extension configurations (AltStore or SideStore with a paid developer account, Feather/ESign with a developer certificate). Network extensions do not run in simulators."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-06-30",
+          "lastUpdatedAt": "2026-06-30"
+        }
+      },
+      "screenshotURLs": [],
+      "size": 48820768,
+      "subtitle": "Tor network tunnel for iOS and iPadOS",
+      "tintColor": "7D4698",
+      "version": "1.12.0",
+      "versionDate": "2026-06-30",
+      "versionDescription": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
+      "versions": [
+        {
+          "version": "1.12.0",
+          "date": "2026-06-30",
+          "localizedDescription": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
+          "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+          "size": 48820768,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/guardianproject/orbot-apple/releases/tag/v1.12.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Orbot.ipa",
+              "downloadUrl": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 48820768,
+              "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+              "downloads": 786,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Orbot.pkg",
+              "downloadUrl": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.pkg",
+              "platform": "unknown",
+              "architecture": null,
+              "fileType": "other",
+              "size": 68472868,
+              "sha256": "43719f3713c5d39c0dbc21ccae0c18d4b215c7e2b90167628df6f94a42b550ef",
+              "downloads": 479,
+              "mimeType": "application/octet-stream",
+              "installable": false
+            }
+          ],
+          "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+          "downloads": 786
         }
       ]
     },
@@ -6883,11 +7219,7 @@
           "lastUpdatedAt": "2026-06-19"
         }
       },
-      "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/raintweak/raintweak-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/raintweak/raintweak-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/raintweak/raintweak-03.png"
-      ],
+      "screenshotURLs": [],
       "size": 107515564,
       "subtitle": "Discord client mod with themes and QoL fixes",
       "tintColor": "5865F2",
@@ -7813,6 +8145,125 @@
       ]
     },
     {
+      "bundleIdentifier": "com.facebook.Messenger",
+      "category": "social",
+      "developerName": "NguyenASang",
+      "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+      "localizedDescription": "SNMessenger is a full-featured tweak for Facebook Messenger by NguyenASang, published as a ready-to-sideload IPA built from the official tweak source. Its settings live behind the gear icon in the top-left corner of the Messenger profile screen, which is where every switch is flipped. Upstream documents rootless, rootful and sideload support (Roothide is listed as not supported), iOS 12.4 and newer, and Messenger versions from 458.0.0 up to the latest at release time. Open source under the MIT license.",
+      "name": "SNMessenger",
+      "omnisource": {
+        "slug": "snmessenger",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/NguyenASang/SNMessenger",
+        "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+        "verification": {
+          "method": "github-release",
+          "publisher": "NguyenASang/SNMessenger",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "12.4",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official project: NguyenASang/SNMessenger. The repository publishes the tweak as a .deb for jailbroken devices plus one ready-to-sideload IPA built from it; that IPA carries whichever Messenger build the maintainer patched for the release, so the version shown here is that build's. Uses the stock com.facebook.Messenger bundle id, so it REPLACES the App Store Messenger."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2025-07-29",
+          "lastUpdatedAt": "2025-07-29"
+        }
+      },
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/NguyenASang/SNMessenger/v2.0.0/images/Access_Settings.png"
+      ],
+      "size": 74865911,
+      "subtitle": "Messenger tweak with its own sideloaded build",
+      "tintColor": "0084FF",
+      "version": "517.0.0",
+      "versionDate": "2025-07-29",
+      "versionDescription": "Messenger 517.0.0 | SNMessenger 2.0.0 | Messenger_517.0.0.SNMessenger.v2.0.0-2\n\n# Changelog:\n- A new way to access tweak's settings (it looks more _native_ now)\n- Add option to prevent others knowing when you're typing\n- Add option to hide floating AI button\n- Improvements and fix other minor issues\n- **Add ability to sideload on non-jailbroken devices!!!** \n- ... (I forgot lol)",
+      "versions": [
+        {
+          "version": "517.0.0",
+          "date": "2025-07-29",
+          "localizedDescription": "Messenger 517.0.0 | SNMessenger 2.0.0 | Messenger_517.0.0.SNMessenger.v2.0.0-2\n\n# Changelog:\n- A new way to access tweak's settings (it looks more _native_ now)\n- Add option to prevent others knowing when you're typing\n- Add option to hide floating AI button\n- Improvements and fix other minor issues\n- **Add ability to sideload on non-jailbroken devices!!!** \n- ... (I forgot lol)",
+          "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+          "size": 74865911,
+          "minOSVersion": "12.4",
+          "releaseUrl": "https://github.com/NguyenASang/SNMessenger/releases/tag/v2.0.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "com.nguyenasang.snmessenger_2.0.0_iphoneos-arm.deb",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/com.nguyenasang.snmessenger_2.0.0_iphoneos-arm.deb",
+              "platform": "linux",
+              "architecture": null,
+              "fileType": "DEB",
+              "size": 420364,
+              "sha256": "6f480032c25f644682f9d5be9e4e4dff985856074495d9bd9552045235da1c6c",
+              "downloads": 378,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64.deb",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 419368,
+              "sha256": "aa9b0636b3d1b8539b471b7d7c72bc8f2b707f0ae66e0ee42ad5f5678d36d431",
+              "downloads": 275,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64e.deb",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/com.nguyenasang.snmessenger_2.0.0_iphoneos-arm64e.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 419052,
+              "sha256": "8471daa3c136cfd6e781a177e0c466aff8ae46837b56e0fe21c98177afd95d21",
+              "downloads": 214,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+              "downloadUrl": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 74865911,
+              "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+              "downloads": 732,
+              "mimeType": "application/x-itunes-ipa",
+              "installable": true
+            }
+          ],
+          "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+          "downloads": 732
+        }
+      ]
+    },
+    {
       "bundleIdentifier": "me.cranci.sulfur",
       "category": "photo-video",
       "developerName": "cranci",
@@ -8041,9 +8492,9 @@
         }
       },
       "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/spotiflac/spotiflac-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/spotiflac/spotiflac-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/spotiflac/spotiflac-03.png"
+        "https://raw.githubusercontent.com/spotiflacapp/SpotiFLAC-Mobile/main/assets/readme/1.jpg",
+        "https://raw.githubusercontent.com/spotiflacapp/SpotiFLAC-Mobile/main/assets/readme/2.jpg",
+        "https://raw.githubusercontent.com/spotiflacapp/SpotiFLAC-Mobile/main/assets/readme/3.jpg"
       ],
       "size": 34171700,
       "subtitle": "FLAC Downloader for iOS",
@@ -8863,6 +9314,183 @@
       ]
     },
     {
+      "bundleIdentifier": "io.github.friesi23.mhabit",
+      "category": "utilities",
+      "developerName": "FriesI23",
+      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+      "localizedDescription": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
+      "name": "Table Habit",
+      "omnisource": {
+        "slug": "tablehabit",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/FriesI23/mhabit",
+        "sourceURL": "https://github.com/FriesI23/mhabit",
+        "verification": {
+          "method": "github-release",
+          "publisher": "FriesI23/mhabit",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "The release ships one unsigned iOS IPA next to Android APKs, flatpaks, a dmg and an msix; only mhabit-unsigned.ipa is distributed here, so the app must be re-signed by a client and cannot run as downloaded."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-09-07",
+          "lastUpdatedAt": "2026-09-07"
+        }
+      },
+      "screenshotURLs": [],
+      "size": 14790504,
+      "subtitle": "Open-source micro-habit tracker with WebDAV sync",
+      "tintColor": "3DDC97",
+      "version": "1.27.6",
+      "versionDate": "2026-09-07",
+      "versionDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+      "versions": [
+        {
+          "version": "1.27.6",
+          "date": "2026-09-07",
+          "localizedDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+          "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+          "size": 14790504,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/FriesI23/mhabit/releases/tag/v1.27.6%2B195",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "app-arm64-v8a-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-arm64-v8a-release.apk",
+              "platform": "android",
+              "architecture": "arm64",
+              "fileType": "APK",
+              "size": 33482969,
+              "sha256": "75871d7eaf689160a38a9e12e0ff6424a119f58a92bc955249fa7a396aa5f9f1",
+              "downloads": 1137,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
+              "filename": "app-armeabi-v7a-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-armeabi-v7a-release.apk",
+              "platform": "android",
+              "architecture": "armv7",
+              "fileType": "APK",
+              "size": 32071715,
+              "sha256": "cc444d2b55524353430454d17dba66c23bf3227f69b9312f49d5db013099824a",
+              "downloads": 3,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
+              "filename": "app-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-release.apk",
+              "platform": "android",
+              "architecture": null,
+              "fileType": "APK",
+              "size": 94393000,
+              "sha256": "41545a363c1861db51e8dd274696301090689a880153dfdbaa984c519657b805",
+              "downloads": 30,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
+              "filename": "app-x86_64-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-x86_64-release.apk",
+              "platform": "android",
+              "architecture": "x86_64",
+              "fileType": "APK",
+              "size": 34983850,
+              "sha256": "9b90eb8e2ce7c8b9d50d87386cafb9ea3c6bdd7d6dcca88555237f93730f9762",
+              "downloads": 11,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
+              "filename": "mhabit-aarch64.flatpak",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-aarch64.flatpak",
+              "platform": "unknown",
+              "architecture": "arm64",
+              "fileType": "other",
+              "size": 22757976,
+              "sha256": "14f9883a2d6c1238bec38beeb016e51360212a030cefa76710b92fac5b0c1e2e",
+              "downloads": 2,
+              "mimeType": "raw",
+              "installable": false
+            },
+            {
+              "filename": "mhabit-unsigned.ipa",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 14790504,
+              "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+              "downloads": 12,
+              "mimeType": "raw",
+              "installable": true
+            },
+            {
+              "filename": "mhabit-x86_64.flatpak",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-x86_64.flatpak",
+              "platform": "unknown",
+              "architecture": "x86_64",
+              "fileType": "other",
+              "size": 23616064,
+              "sha256": "292035474d44ee40474a5df19bba6668b33de83220f50729dd00b1fc5a67f620",
+              "downloads": 7,
+              "mimeType": "raw",
+              "installable": false
+            },
+            {
+              "filename": "mhabit.dmg",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit.dmg",
+              "platform": "macos",
+              "architecture": null,
+              "fileType": "DMG",
+              "size": 30203158,
+              "sha256": "2de165866dfcd2fd751eb831ade79f39cab5f8a4c4fd4927d8cb72c95c31dd90",
+              "downloads": 38,
+              "mimeType": "raw",
+              "installable": true
+            },
+            {
+              "filename": "mhabit_x64.msix",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit_x64.msix",
+              "platform": "unknown",
+              "architecture": null,
+              "fileType": "other",
+              "size": 23543364,
+              "sha256": "42ae38660c879d5df2eec257078d83de1d7fc102634d2e33df75058a43c76f62",
+              "downloads": 39,
+              "mimeType": "raw",
+              "installable": false
+            }
+          ],
+          "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+          "downloads": 12
+        }
+      ]
+    },
+    {
       "appPermissions": {
         "entitlements": [],
         "privacy": {}
@@ -9272,6 +9900,87 @@
           ],
           "sha256": "d5f28944d00224afc600ce8a34bdcb8503c380d5b0ec891d98ef71dec4e8541d",
           "downloads": 137
+        }
+      ]
+    },
+    {
+      "bundleIdentifier": "wiki.qaq.TrollFools",
+      "category": "utilities",
+      "developerName": "Lessica",
+      "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp",
+      "localizedDescription": "TrollFools injects tweaks into apps that are already installed, straight on the device: it performs in-place dylib injection with insert_dylib and ChOma, so no computer and no jailbreak is involved. Upstream documents removable system applications, decrypted App Store apps installed through TrollStore, and encrypted App Store apps patched with a bare dynamic library, plus .deb and .zip tweak packages. Written in SwiftUI, and built on ChOma, MachOKit and insert_dylib.",
+      "name": "TrollFools",
+      "omnisource": {
+        "slug": "trollfools",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/Lessica/TrollFools",
+        "sourceURL": "https://github.com/Lessica/TrollFools",
+        "verification": {
+          "method": "github-release",
+          "publisher": "Lessica/TrollFools",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": "17.0",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official .tipa from the project's GitHub releases - a .tipa is byte-identical to an .ipa, so AltStore, SideStore, Feather and ESign install it after re-signing it with your certificate. The injection itself only works where TrollStore exists (upstream states iOS 14.0 - 17.0), so on newer firmware the app installs but cannot patch anything."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-04-23",
+          "lastUpdatedAt": "2026-04-23"
+        }
+      },
+      "screenshotURLs": [],
+      "size": 6214108,
+      "subtitle": "Inject tweaks into installed apps on-device",
+      "tintColor": "6C5CE7",
+      "version": "4.3-253",
+      "versionDate": "2026-04-23",
+      "versionDescription": "TrollFools 4.3-253 | TrollFools_4.3-253.tipa\n\n# Changelog\n\n## 4.3 Build 253 (2026-04-23)\n\n修复与 MachOKit 有关的一处断言崩溃。\n\n------\n\n## 4.3 Build 253 (2026-04-23) [EN]\n\nFixed an assertion crash related to MachOKit.\n\n------\n\n## 4.3 Build 246 (2026-04-16)\n\n修复二次注入时可能误选已注入动态库作为目标 Mach-O 的问题。\n\n### 修复\n\n- 注入目标选取：修复追加注入时，上次注入的动态库可能被误选为注入目标的问题。  \n  新增三层防御：从注入前备份读取原始 Load Commands 以还原真实依赖链；枚举阶段跳过 `.troll-fools.bak` 备份文件；通过备份差分精确识别并排除已注入的动态库。\n\n------\n\n## 4.3 Build 246 (2026-04-16) [EN]\n\nFixed an issue where re-injection could incorrectly select a previously-injected dylib as the target Mach-O.\n\n### Fixed\n\n- Target selection: Fixed re-injection potentially picking a previously-injected dylib as the injection target.  \n  Added three-layer defense: read original load commands from pre-injection backup to restore the true dependency chain; skip `.troll-fools.bak` backup files during enumeration; use backup-diff to precisely identify and exclude previously-injected dylibs.\n\n------\n\n## 4.3 (2026-04-13)\n\n本次版本聚焦于“动态加载框架兼容性”和“页面说明可理解性”，并包含插件管理流程调整与资源清理。\n\n### 修复\n\n- 注入兼容性：修复部分 Unity/运行时 `dlopen` 场景下无法命中可注入目标的问题。  \n  当主程序静态链接交集为空时，改为回退扫描 `Frameworks/` 中可用 Mach-O（含一级目录下 `.dylib`）。\n- 插件管理：调整“移除插件”流程，区分已启用与已禁用插件：  \n  已启用插件执行卸载；已禁用插件执行标记清理，降低批量处理风险。\n\n### 新增\n\n- 高级选项：新增“启用兼容模式回退”开关（默认开启），可控制是否在无静态链接命中时启用回退候选。\n- 结果页提示：当本次注入通过兼容模式完成时，在“已完成”下方显示额外提示。\n\n### 优化\n\n- 候选筛选：回退候选新增过滤，排除 `libswift*` 与已忽略注入相关动态库/框架，并统一大小写处理。\n- 诊断日志：增强 Mach-O 扫描日志，输出候选数量、文件大小、加密/不可读统计与最终选择结果，便于定位“无可用目标”问题。\n- 设置说明：优化高级选项页面结构与说明文案，减少非技术用户理解成本。\n- 广告与资源：移除内置广告位 `Letterpress` 及相关本地化词条/图标资源；更新营销图素材。\n\n### 本地化\n\n- 更新 `en/zh-Hans/it/vi` 词条，补充兼容模式与设置说明相关文案，并清理移除条目对应文案。\n\n------\n\n## 4.3 (2026-04-13) [EN]\n\nThis release focuses on dynamic-framework injection compatibility and clearer user guidance, plus plugin-management flow adjustments and resource cleanup.\n\n### Fixed\n\n- Injection compatibility: Fixed cases (notably Unity/runtime `dlopen` flows) where no injectable target could be selected.  \n  When the static-link intersection is empty, TrollFools now falls back to scanning eligible Mach-O files under `Frameworks/` (including top-level `.dylib`).\n- Plugin management: Updated plugin removal flow to handle enabled vs disabled plugins separately:  \n  enabled plugins are ejected, while disabled plugins are cleaned via desist/marker path handling.\n\n### Added\n\n- Advanced Settings: Added **Enable Compatibility Fallback** (default ON) to control fallback candidate behavior when no static-link match is found.\n- Result-page notice: Added a subtitle under **Completed** when injection succeeds through compatibility fallback.\n\n### Improved\n\n- Candidate filtering: Fallback candidates now exclude `libswift*` and ignored injection-related dylib/framework names, with consistent case-insensitive handling.\n- Diagnostics: Expanded Mach-O scan logs with candidate counts, file sizes, encrypted/unreadable stats, and final target selection.\n- Settings clarity: Refined Advanced Settings layout and explanatory copy for better non-technical readability.\n- Ads/assets: Removed built-in `Letterpress` ad entry and related localization/icon assets; refreshed marketing artwork.\n\n### Localization\n\n- Updated `en/zh-Hans/it/vi` strings for compatibility-fallback and settings guidance, and removed strings for deleted entries.",
+      "versions": [
+        {
+          "version": "4.3-253",
+          "date": "2026-04-23",
+          "localizedDescription": "TrollFools 4.3-253 | TrollFools_4.3-253.tipa\n\n# Changelog\n\n## 4.3 Build 253 (2026-04-23)\n\n修复与 MachOKit 有关的一处断言崩溃。\n\n------\n\n## 4.3 Build 253 (2026-04-23) [EN]\n\nFixed an assertion crash related to MachOKit.\n\n------\n\n## 4.3 Build 246 (2026-04-16)\n\n修复二次注入时可能误选已注入动态库作为目标 Mach-O 的问题。\n\n### 修复\n\n- 注入目标选取：修复追加注入时，上次注入的动态库可能被误选为注入目标的问题。  \n  新增三层防御：从注入前备份读取原始 Load Commands 以还原真实依赖链；枚举阶段跳过 `.troll-fools.bak` 备份文件；通过备份差分精确识别并排除已注入的动态库。\n\n------\n\n## 4.3 Build 246 (2026-04-16) [EN]\n\nFixed an issue where re-injection could incorrectly select a previously-injected dylib as the target Mach-O.\n\n### Fixed\n\n- Target selection: Fixed re-injection potentially picking a previously-injected dylib as the injection target.  \n  Added three-layer defense: read original load commands from pre-injection backup to restore the true dependency chain; skip `.troll-fools.bak` backup files during enumeration; use backup-diff to precisely identify and exclude previously-injected dylibs.\n\n------\n\n## 4.3 (2026-04-13)\n\n本次版本聚焦于“动态加载框架兼容性”和“页面说明可理解性”，并包含插件管理流程调整与资源清理。\n\n### 修复\n\n- 注入兼容性：修复部分 Unity/运行时 `dlopen` 场景下无法命中可注入目标的问题。  \n  当主程序静态链接交集为空时，改为回退扫描 `Frameworks/` 中可用 Mach-O（含一级目录下 `.dylib`）。\n- 插件管理：调整“移除插件”流程，区分已启用与已禁用插件：  \n  已启用插件执行卸载；已禁用插件执行标记清理，降低批量处理风险。\n\n### 新增\n\n- 高级选项：新增“启用兼容模式回退”开关（默认开启），可控制是否在无静态链接命中时启用回退候选。\n- 结果页提示：当本次注入通过兼容模式完成时，在“已完成”下方显示额外提示。\n\n### 优化\n\n- 候选筛选：回退候选新增过滤，排除 `libswift*` 与已忽略注入相关动态库/框架，并统一大小写处理。\n- 诊断日志：增强 Mach-O 扫描日志，输出候选数量、文件大小、加密/不可读统计与最终选择结果，便于定位“无可用目标”问题。\n- 设置说明：优化高级选项页面结构与说明文案，减少非技术用户理解成本。\n- 广告与资源：移除内置广告位 `Letterpress` 及相关本地化词条/图标资源；更新营销图素材。\n\n### 本地化\n\n- 更新 `en/zh-Hans/it/vi` 词条，补充兼容模式与设置说明相关文案，并清理移除条目对应文案。\n\n------\n\n## 4.3 (2026-04-13) [EN]\n\nThis release focuses on dynamic-framework injection compatibility and clearer user guidance, plus plugin-management flow adjustments and resource cleanup.\n\n### Fixed\n\n- Injection compatibility: Fixed cases (notably Unity/runtime `dlopen` flows) where no injectable target could be selected.  \n  When the static-link intersection is empty, TrollFools now falls back to scanning eligible Mach-O files under `Frameworks/` (including top-level `.dylib`).\n- Plugin management: Updated plugin removal flow to handle enabled vs disabled plugins separately:  \n  enabled plugins are ejected, while disabled plugins are cleaned via desist/marker path handling.\n\n### Added\n\n- Advanced Settings: Added **Enable Compatibility Fallback** (default ON) to control fallback candidate behavior when no static-link match is found.\n- Result-page notice: Added a subtitle under **Completed** when injection succeeds through compatibility fallback.\n\n### Improved\n\n- Candidate filtering: Fallback candidates now exclude `libswift*` and ignored injection-related dylib/framework names, with consistent case-insensitive handling.\n- Diagnostics: Expanded Mach-O scan logs with candidate counts, file sizes, encrypted/unreadable stats, and final target selection.\n- Settings clarity: Refined Advanced Settings layout and explanatory copy for better non-technical readability.\n- Ads/assets: Removed built-in `Letterpress` ad entry and related localization/icon assets; refreshed marketing artwork.\n\n### Localization\n\n- Updated `en/zh-Hans/it/vi` strings for compatibility-fallback and settings guidance, and removed strings for deleted entries.",
+          "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+          "size": 6214108,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/Lessica/TrollFools/releases/tag/v4.3-253",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "TrollFools_4.3-253.tipa",
+              "downloadUrl": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 6214108,
+              "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+              "downloads": 24503,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+          "downloads": 24503
         }
       ]
     },
@@ -9725,9 +10434,8 @@
         }
       ],
       "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/utm/utm-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/utm/utm-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/utm/utm-03.png"
+        "https://raw.githubusercontent.com/utmapp/UTM/main/screen.png",
+        "https://raw.githubusercontent.com/utmapp/UTM/main/screenmac.png"
       ],
       "size": 130058389,
       "subtitle": "Virtual machines for iOS",
@@ -9935,14 +10643,7 @@
           "lastUpdatedAt": "2026-08-22"
         }
       },
-      "screenshotURLs": [
-        "https://github.com/therealFoxster/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus1.jpeg?raw=true",
-        "https://github.com/therealFoxster/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus2.jpeg?raw=true",
-        "https://github.com/therealFoxster/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus3.jpeg?raw=true",
-        "https://github.com/therealFoxster/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus4.jpeg?raw=true",
-        "https://github.com/therealFoxster/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus5.jpeg?raw=true",
-        "https://github.com/therealFoxster/AltSource/blob/master/assets/screenshots/uYouPlus/uyouplus6.jpeg?raw=true"
-      ],
+      "screenshotURLs": [],
       "size": 135840058,
       "subtitle": "uYouPlus with even more features!",
       "tintColor": "E81E8A",
@@ -10468,11 +11169,7 @@
           "lastUpdatedAt": "2024-06-24"
         }
       },
-      "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/winston/winston-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/winston/winston-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/winston/winston-03.png"
-      ],
+      "screenshotURLs": [],
       "size": 50003343,
       "subtitle": "Open-source Reddit client",
       "tintColor": "FF4500",
@@ -10802,11 +11499,7 @@
           "lastUpdatedAt": "2026-09-14"
         }
       },
-      "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/youmod/youmod-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/youmod/youmod-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/youmod/youmod-03.png"
-      ],
+      "screenshotURLs": [],
       "size": 129607592,
       "subtitle": "All-in-one YouTube enhancement tweak",
       "tintColor": "FF0000",
@@ -10912,11 +11605,7 @@
           "lastUpdatedAt": "2026-09-14"
         }
       },
-      "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/youpro/youpro-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/youpro/youpro-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/youpro/youpro-03.png"
-      ],
+      "screenshotURLs": [],
       "size": 129769811,
       "subtitle": "Feature-rich YouTube tweak by alibusut",
       "tintColor": "FF0000",
@@ -11023,9 +11712,9 @@
         }
       },
       "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytlite/ytlite-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytlite/ytlite-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytlite/ytlite-03.png"
+        "https://raw.githubusercontent.com/Dayanch96/ytlite/main/Resources/scr1.jpg",
+        "https://raw.githubusercontent.com/Dayanch96/ytlite/main/Resources/scr2.jpg",
+        "https://raw.githubusercontent.com/Dayanch96/ytlite/main/Resources/scr3.jpg"
       ],
       "size": 129031075,
       "subtitle": "Lightweight YouTube tweak with no ads and PiP",
@@ -11189,9 +11878,9 @@
         }
       },
       "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytkace/ytkace-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytkace/ytkace-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytkace/ytkace-03.png"
+        "https://raw.githubusercontent.com/itzzace/ytkace/main/screenshots/framed/audio-player.png",
+        "https://raw.githubusercontent.com/itzzace/ytkace/main/screenshots/framed/audio-queue.png",
+        "https://raw.githubusercontent.com/itzzace/ytkace/main/screenshots/framed/download-library.png"
       ],
       "size": 134780934,
       "subtitle": "YTKACE",
@@ -11436,9 +12125,9 @@
         }
       },
       "screenshotURLs": [
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytmusic/ytmusic-01.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytmusic/ytmusic-02.png",
-        "https://raw.githubusercontent.com/iamsmmh/OmniSource/main/assets/screenshots/ytmusic/ytmusic-03.png"
+        "https://raw.githubusercontent.com/Dayanch96/YTMusicUltimate/main/Resources/scrn1.png",
+        "https://raw.githubusercontent.com/Dayanch96/YTMusicUltimate/main/Resources/scrn2.png",
+        "https://raw.githubusercontent.com/Dayanch96/YTMusicUltimate/main/Resources/scrn3.png"
       ],
       "size": 105090579,
       "subtitle": "Lightweight YouTube Music tweak",

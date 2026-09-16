@@ -66,6 +66,26 @@ jobs:
           # remain mandatory before publication.
           python3 scripts/discovery/discover_forges.py
 
+      # Advisory only, and deliberately non-blocking: data/source_builds.json is
+      # curated by hand, so this run lists what *could* join that lane in the job
+      # summary. Nothing is written, hashed or promoted - a reviewer decides, and
+      # scripts/build_source.py check is the gate that keeps the lane honest.
+      - name: List source-build candidates (report only)
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 scripts/discovery/find_source_builds.py --limit 3 --min-stars 300 \
+            | tee /tmp/source-build-candidates.txt
+          {
+            echo "## Source-build candidates"
+            echo
+            echo '```'
+            cat /tmp/source-build-candidates.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
       - name: Inspect FMHY and external catalog pages
         run: |
           set -euo pipefail

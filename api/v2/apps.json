@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15",
-  "count": 94,
+  "generatedAt": "2026-09-16",
+  "count": 101,
   "baseURL": "https://iamsmmh.github.io/OmniSource",
   "apps": [
     {
@@ -3856,6 +3856,293 @@
         "reachable": true,
         "detail": "HTTP 302",
         "updatedAt": "2026-08-12"
+      }
+    },
+    {
+      "id": "trollfools",
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "developer": "Lessica",
+      "version": "4.3-253",
+      "releaseDate": "2026-04-23",
+      "category": "utilities",
+      "categories": [
+        "utilities"
+      ],
+      "tags": [
+        "utilities"
+      ],
+      "source": "Lessica/TrollFools",
+      "sourceURL": "https://github.com/Lessica/TrollFools",
+      "bundleId": "wiki.qaq.TrollFools",
+      "bundleIdentifier": "wiki.qaq.TrollFools",
+      "description": "TrollFools injects tweaks into apps that are already installed, straight on the device: it performs in-place dylib injection with insert_dylib and ChOma, so no computer and no jailbreak is involved. Upstream documents removable system applications, decrypted App Store apps installed through TrollStore, and encrypted App Store apps patched with a bare dynamic library, plus .deb and .zip tweak packages. Written in SwiftUI, and built on ChOma, MachOKit and insert_dylib.",
+      "shortDescription": "Inject tweaks into installed apps on-device",
+      "icon": "TrollFools.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/trollfools/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/trollfools.json",
+      "homepage": "https://github.com/Lessica/TrollFools",
+      "status": "stable",
+      "featured": false,
+      "size": 6214108,
+      "downloads": 24503,
+      "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+      "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+      "minOSVersion": "14.0",
+      "verificationMethod": "github-release",
+      "publisher": "Lessica/TrollFools",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2026-04-23"
+      }
+    },
+    {
+      "id": "lara",
+      "slug": "lara",
+      "name": "Lara",
+      "developer": "rooootdev",
+      "version": "0.2",
+      "releaseDate": "2026-05-22",
+      "category": "utilities",
+      "categories": [
+        "utilities"
+      ],
+      "tags": [
+        "utilities"
+      ],
+      "source": "rooootdev/lara",
+      "sourceURL": "https://github.com/rooootdev/lara",
+      "bundleId": "com.roooot.lara",
+      "bundleIdentifier": "com.roooot.lara",
+      "description": "lara is a jailed customization toolbox that uses the DarkSword exploit to reach the parts of the system iOS keeps locked: a full read/write file manager, a MobileGestalt editor, font / card / custom overwrites, status-bar tweaks, hidden icon labels, an upside-down mode, a five-icon dock, a grid app switcher, a performance HUD, DirtyZero 2, a three-app bypass and a JIT enabler for apps that carry get-task-allow. It is published as its own unsigned IPA for sideloading from the open-source repository.",
+      "shortDescription": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+      "icon": "Lara.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/lara/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/lara.json",
+      "homepage": "https://github.com/rooootdev/lara",
+      "status": "beta",
+      "featured": false,
+      "size": 5474210,
+      "downloads": 15599,
+      "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+      "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+      "minOSVersion": "17.0",
+      "verificationMethod": "github-release",
+      "publisher": "rooootdev/lara",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2026-05-22"
+      }
+    },
+    {
+      "id": "onionbrowser",
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "developer": "Mike Tigas",
+      "version": "3.4.1",
+      "releaseDate": "2026-08-11",
+      "category": "networking",
+      "categories": [
+        "networking"
+      ],
+      "tags": [
+        "networking"
+      ],
+      "source": "OnionBrowser/OnionBrowser",
+      "sourceURL": "https://github.com/OnionBrowser/OnionBrowser",
+      "bundleId": "com.miketigas.OnionBrowser",
+      "bundleIdentifier": "com.miketigas.OnionBrowser",
+      "description": "Onion Browser is a free web browser for iPhone and iPad that encrypts and tunnels its traffic through the Tor network with the help of Orbot for iOS. The 3.x branch renders pages with WKWebView instead of the old UIWebView stack, and the project publishes its own sideloadable build next to the App Store release. Open source, with the repository's LICENSE file governing usage and redistribution.",
+      "shortDescription": "Tor browser that routes web traffic through Tor",
+      "icon": "OnionBrowser.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/onionbrowser/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/onionbrowser.json",
+      "homepage": "https://github.com/OnionBrowser/OnionBrowser",
+      "status": "stable",
+      "featured": false,
+      "size": 39611914,
+      "downloads": 517,
+      "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+      "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+      "minOSVersion": "15.0",
+      "verificationMethod": "github-release",
+      "publisher": "OnionBrowser/OnionBrowser",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2026-08-11"
+      }
+    },
+    {
+      "id": "orbot",
+      "slug": "orbot",
+      "name": "Orbot",
+      "developer": "The Tor Project",
+      "version": "1.12.0",
+      "releaseDate": "2026-06-30",
+      "category": "networking",
+      "categories": [
+        "networking"
+      ],
+      "tags": [
+        "networking"
+      ],
+      "source": "guardianproject/orbot-ios",
+      "sourceURL": "https://github.com/guardianproject/orbot-ios",
+      "bundleId": "org.torproject.orbot",
+      "bundleIdentifier": "org.torproject.orbot",
+      "description": "Orbot puts an iPhone, iPad or Mac behind the Tor network: it installs a local packet-tunnel configuration so device traffic leaves through Tor instead of the plain network. Obfs4 and Snowflake bridges are supported and fully configurable, Tor v3 onion-service authentication works, and Tor's EntryNodes, ExitNodes, ExcludeNodes and StrictNodes options can all be set. The sideloadable build is published from the project's own GitHub releases, which list the bundled Tor, OpenSSL, Lyrebird and Snowflake versions per app release.",
+      "shortDescription": "Tor network tunnel for iOS and iPadOS",
+      "icon": "Orbot.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/orbot/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/orbot.json",
+      "homepage": "https://github.com/guardianproject/orbot-ios",
+      "status": "stable",
+      "featured": false,
+      "size": 48820768,
+      "downloads": 786,
+      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+      "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+      "minOSVersion": "15.0",
+      "verificationMethod": "github-release",
+      "publisher": "guardianproject/orbot-ios",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2026-06-30"
+      }
+    },
+    {
+      "id": "tablehabit",
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "developer": "FriesI23",
+      "version": "1.27.6",
+      "releaseDate": "2026-09-07",
+      "category": "utilities",
+      "categories": [
+        "utilities"
+      ],
+      "tags": [
+        "utilities"
+      ],
+      "source": "FriesI23/mhabit",
+      "sourceURL": "https://github.com/FriesI23/mhabit",
+      "bundleId": "io.github.friesi23.mhabit",
+      "bundleIdentifier": "io.github.friesi23.mhabit",
+      "description": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
+      "shortDescription": "Open-source micro-habit tracker with WebDAV sync",
+      "icon": "TableHabit.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/tablehabit/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/tablehabit.json",
+      "homepage": "https://github.com/FriesI23/mhabit",
+      "status": "stable",
+      "featured": false,
+      "size": 14790504,
+      "downloads": 12,
+      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+      "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+      "minOSVersion": "15.0",
+      "verificationMethod": "github-release",
+      "publisher": "FriesI23/mhabit",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2026-09-07"
+      }
+    },
+    {
+      "id": "byetunes",
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "developer": "EduAlexxis",
+      "version": "2.5",
+      "releaseDate": "2026-08-31",
+      "category": "music",
+      "categories": [
+        "music"
+      ],
+      "tags": [
+        "music"
+      ],
+      "source": "EduAlexxis/ByeTunes",
+      "sourceURL": "https://github.com/EduAlexxis/ByeTunes",
+      "bundleId": "com.EduAlexxis.MusicManager",
+      "bundleIdentifier": "com.EduAlexxis.MusicManager",
+      "description": "ByeTunes writes MP3, M4A, FLAC and WAV files straight into the iOS media library by talking to the media database directly, so adding a song no longer needs a cable and a desktop sync session. You can create and manage playlists in the app, and import metadata is fetched from iTunes or Deezer. The ringtone injector is disabled upstream for now, so treat ringtones as not working yet. Open source under the MIT license, with the iOS build published from the project's own GitHub releases.",
+      "shortDescription": "Add music to the iOS library without a computer",
+      "icon": "ByeTunes.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/byetunes/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/byetunes.json",
+      "homepage": "https://github.com/EduAlexxis/ByeTunes",
+      "status": "stable",
+      "featured": false,
+      "size": 16815108,
+      "downloads": 480,
+      "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+      "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+      "minOSVersion": "16.0",
+      "verificationMethod": "github-release",
+      "publisher": "EduAlexxis/ByeTunes",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2026-08-31"
+      }
+    },
+    {
+      "id": "snmessenger",
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "developer": "NguyenASang",
+      "version": "517.0.0",
+      "releaseDate": "2025-07-29",
+      "category": "social",
+      "categories": [
+        "social"
+      ],
+      "tags": [
+        "social"
+      ],
+      "source": "NguyenASang/SNMessenger",
+      "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+      "bundleId": "com.facebook.Messenger",
+      "bundleIdentifier": "com.facebook.Messenger",
+      "description": "SNMessenger is a full-featured tweak for Facebook Messenger by NguyenASang, published as a ready-to-sideload IPA built from the official tweak source. Its settings live behind the gear icon in the top-left corner of the Messenger profile screen, which is where every switch is flipped. Upstream documents rootless, rootful and sideload support (Roothide is listed as not supported), iOS 12.4 and newer, and Messenger versions from 458.0.0 up to the latest at release time. Open source under the MIT license.",
+      "shortDescription": "Messenger tweak with its own sideloaded build",
+      "icon": "Messenger.webp",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+      "pageURL": "https://iamsmmh.github.io/OmniSource/apps/snmessenger/",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/snmessenger.json",
+      "homepage": "https://github.com/NguyenASang/SNMessenger",
+      "status": "stable",
+      "featured": false,
+      "size": 74865911,
+      "downloads": 732,
+      "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+      "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+      "minOSVersion": "12.4",
+      "verificationMethod": "github-release",
+      "publisher": "NguyenASang/SNMessenger",
+      "checksumPublished": false,
+      "health": {
+        "reachable": true,
+        "detail": "not probed",
+        "updatedAt": "2025-07-29"
       }
     }
   ]

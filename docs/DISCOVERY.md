@@ -13,9 +13,15 @@ LiveContainer sources without human intervention, on a 12-hour schedule
 | `scripts/discovery/discover_releases.py` | Flags GitHub `owner/repo`s whose releases ship `.ipa`/`.tipa` assets |
 | `scripts/discovery/discover_forges.py` | Searches GitLab, Codeberg and configured Forgejo instances for projects with actual IPA/TIPA release assets |
 | `scripts/discovery/discover_web_catalogs.py` | Scrapes catalog pages for linked `*.json` feeds and probes each; configured inputs include FMHY's mobile page |
+| `scripts/discovery/discover_sources.py` | Orchestrator: applies the sourcing policy, runs every pass, validates, merges into the store |
+| `scripts/discovery/find_source_builds.py` | Source-build finder: repos that publish source but no distributable artifact, drafted as recipes for `data/source_builds.json`; never writes the discovery store |
 
-Configured external catalog inputs live in `data/discovery_pages.txt`. FMHY is an index page, not an AltStore feed, so OmniSource only follows linked JSON feeds that pass validation; it does not blindly import or redistribute arbitrary downloads from FMHY.
-| `scripts/discovery/discover_sources.py` | Orchestrator: runs every pass, validates, merges into the store |
+Configured external catalog inputs live in `data/discovery_pages.txt`. FMHY is an index page, not an
+AltStore feed, so OmniSource only follows linked JSON feeds that pass validation; it does not blindly
+import or redistribute arbitrary downloads from FMHY. Its `iOS Tools` / `iOS iPAs` sections list a lot
+of storefronts and re-host libraries alongside real projects — those are not merely "not yet promoted",
+they are excluded by the sourcing policy below, which is why feeds such as an aggregator's `cypwn.json`
+that discovery found live are dropped instead of merged.
 
 Core logic lives in `src/omnisource/autodiscovery.py` (stdlib-only;
 network isolated in `fetch_*` helpers). `--dry-run` prints without writing.
@@ -63,6 +69,27 @@ Merges are keyed by URL: re-discovery refreshes `last_checked` (and
 errors is quarantined in `data/quarantine/sources.json` and never merged
 toward a feed. Every discovery pass validates its candidates with the same
 rules this gate applies, so a record a pass accepted cannot fail the gate.
+
+## Sourcing policy (`data/source_policy.json`)
+
+A reviewed rejection is data, not prose. Each rule names a host (`host` or
+`host/path-prefix`), a forge repository, or a name keyword, and carries the reason
+plus at least one HTTPS reference. `src/omnisource/source_policy.py` is the single
+place that reads it, and it is consulted at every point where a blocked source could
+otherwise move forward:
+
+| Gate | Effect |
+| --- | --- |
+| every discovery writer | `autodiscovery.save_store(…, root=ROOT)` filters *and* prunes, so GitHub search, the GitLab/Codeberg/Forgejo sweep, feed probing, web-catalog scraping and manual revalidation all refuse a blocked source — a new pass cannot bypass the verdict by forgetting to filter |
+| `discover_sources.py` | additionally drops candidates before validation, logging the rule id per record |
+| `assert_publishable()` | record can never be verified/published, even if hand-edited into the store with a high reputation |
+| `scripts/validate.py` | `catalog.json` entry that resolves from, or mirrors, a blocked host is a build error |
+| `build-tweak.yml` | the manual patcher refuses to download a base IPA or `.deb` from a blocked host |
+
+The list is one-directional: no rule means "no automated verdict", never "approved".
+An unusable policy file fails the run (fail-closed) rather than disabling the check.
+`PYTHONPATH=src python3 -m omnisource.source_policy explain` prints the rules;
+`check-url` answers "is this allowed, and if not, why".
 
 ## Promotion path
 

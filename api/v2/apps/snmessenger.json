@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16",
+  "feedVersion": "a39e5acb1b3a",
+  "app": {
+    "id": "snmessenger",
+    "name": "SNMessenger",
+    "developer": "NguyenASang",
+    "subtitle": "Messenger tweak with its own sideloaded build",
+    "bundleIdentifier": "com.facebook.Messenger",
+    "version": "517.0.0",
+    "versionDate": "2025-07-29",
+    "description": "SNMessenger is a full-featured tweak for Facebook Messenger by NguyenASang, published as a ready-to-sideload IPA built from the official tweak source. Its settings live behind the gear icon in the top-left corner of the Messenger profile screen, which is where every switch is flipped. Upstream documents rootless, rootful and sideload support (Roothide is listed as not supported), iOS 12.4 and newer, and Messenger versions from 458.0.0 up to the latest at release time. Open source under the MIT license.",
+    "shortDescription": "Messenger tweak with its own sideloaded build",
+    "category": "social",
+    "tags": [
+      "social"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+    "screenshots": [
+      "https://raw.githubusercontent.com/NguyenASang/SNMessenger/v2.0.0/images/Access_Settings.png"
+    ],
+    "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+    "size": 74865911,
+    "source": "NguyenASang/SNMessenger",
+    "sourceURL": "https://github.com/NguyenASang/SNMessenger",
+    "checksum": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+    "checksumPublished": false,
+    "minOSVersion": "12.4",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/snmessenger/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/snmessenger.json",
+    "health": {
+      "reachable": true,
+      "detail": "not probed",
+      "updatedAt": "2025-07-29"
+    }
+  },
+  "newest": {
+    "version": "517.0.0",
+    "date": "2025-07-29",
+    "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+    "size": 74865911,
+    "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834"
+  },
+  "versions": [
+    {
+      "version": "517.0.0",
+      "date": "2025-07-29",
+      "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+      "size": 74865911,
+      "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

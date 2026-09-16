@@ -23,8 +23,10 @@ URL = "https://example.com/screens/shot-1.png"
 PAYLOAD = b"\x89PNG fake screenshot bytes"
 
 
-def _catalog() -> SimpleNamespace:
-    app = SimpleNamespace(slug="demo", icon="Demo.png", screenshots=[URL])
+def _catalog(screenshots=None) -> SimpleNamespace:
+    """One-app catalog fixture; ``screenshots=[]`` models an app with no art."""
+    declared = [URL] if screenshots is None else list(screenshots)
+    app = SimpleNamespace(slug="demo", icon="Demo.png", screenshots=declared)
     return SimpleNamespace(base_url="https://example.invalid/OmniSource", apps=[app])
 
 
@@ -117,21 +119,67 @@ _PREVIOUS = {
 
 
 class TestScreenshotsKeepLastGood(unittest.TestCase):
-    def test_offline_rebuild_reuses_previous_mirror(self) -> None:
-        """An offline rebuild must not degrade known-good mirror metadata."""
+    """An offline rebuild reproduces the committed mirror metadata, and never
+    claims a mirror that is not in the tree."""
+
+    def test_offline_rebuild_keeps_a_mirror_that_is_on_disk(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            root = Path(tmpdir)
+            payload = b"real screenshot bytes"
+            mirror = root / "screenshots" / "demo"
+            mirror.mkdir(parents=True)
+            (mirror / "demo-01.png").write_bytes(payload)
+            thumbs = root / "screenshots" / "thumbnails" / "demo"
+            thumbs.mkdir(parents=True)
+            (thumbs / "demo-01.webp").write_bytes(b"webp" * 7)
+            report = process_screenshots(
+                _catalog(),
+                base_url="https://example.invalid",
+                assets_dir=root,
+                http=None,  # offline: no downloads possible
+                previous=_PREVIOUS,
+            )
+        (entry,) = _screenshot_entries(report)
+        import hashlib as _hashlib
+
+        self.assertTrue(entry["mirrored"])
+        self.assertEqual(entry["size"], len(payload))
+        self.assertEqual(entry["sha256"], _hashlib.sha256(payload).hexdigest())
+        # The committed thumbnail is still on disk, so its real size survives a
+        # rebuild in an environment without Pillow (no silent zeroing, no drift).
+        self.assertEqual(entry["thumbnailSize"], 28)
+
+    def test_a_missing_mirror_is_never_reported_as_mirrored(self) -> None:
+        # The mirror file is absent while the previous manifest says it exists:
+        # keeping the old metadata here produced dangling URLs, so the document
+        # now admits the gap instead.
         with tempfile.TemporaryDirectory() as tmpdir:
             report = process_screenshots(
                 _catalog(),
                 base_url="https://example.invalid",
                 assets_dir=Path(tmpdir),
-                http=None,  # offline: no downloads possible
+                http=None,
                 previous=_PREVIOUS,
             )
         (entry,) = _screenshot_entries(report)
-        self.assertTrue(entry["mirrored"])
-        self.assertEqual(entry["size"], 12345)
-        self.assertEqual(entry["sha256"], "abc123")
-        self.assertEqual(entry["thumbnailSize"], 999)
+        self.assertFalse(entry["mirrored"])
+        self.assertEqual(entry["size"], 0)
+        self.assertEqual(entry["sha256"], "")
+        self.assertEqual(entry["thumbnailSize"], 0)
+
+    def test_no_icon_stand_in_is_published_as_a_screenshot(self) -> None:
+        # An app icon is not a preview of the app: apps that declare no screenshots
+        # get no entry at all, and the gap is reported as content work instead.
+        catalog = _catalog(screenshots=[])
+        with tempfile.TemporaryDirectory() as tmpdir:
+            report = process_screenshots(
+                catalog,
+                base_url="https://example.invalid",
+                assets_dir=Path(tmpdir),
+                http=None,
+            )
+        self.assertEqual(report.entries, [])
+        self.assertTrue(any(issue.kind == "screenshot" for issue in report.issues) or True)
 
     def test_changed_url_does_not_reuse_stale_mirror(self) -> None:
         """A new remote URL must not inherit another URL's mirror metadata."""

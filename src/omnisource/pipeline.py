@@ -782,11 +782,10 @@ def stage_readme(
 
 def stage_assets(container: Container, catalog: Catalog) -> None:
     report = inspect_catalog(catalog, assets_dir=container.paths.assets)
-    # "No screenshots declared" is a content gap, not a defect: the gallery
-    # already falls back to the app icon (feeds/screenshots.json carries an
-    # ``iconFallback`` entry) and over 50 of ~94 apps rely on it. Reporting it
-    # per app produced one ``::warning::`` annotation per app on every sync,
-    # burying the annotations that need attention (a missing icon, an
+    # "No screenshots declared" is a content gap, not a defect: the app page says
+    # so plainly and nothing is invented in its place (no icon-as-preview entry).
+    # Reporting it per app produced one ``::warning::`` annotation per app on every
+    # sync, burying the annotations that need attention (a missing icon, an
     # oversized asset, a malformed URL). The list stays machine-readable in
     # feeds/asset-manifest.json; here it is one informational line.
     missing_screenshots: list[str] = []

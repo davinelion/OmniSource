@@ -168,7 +168,7 @@ def main(argv: list[str] | None = None) -> int:
     existing = read_json(Path(args.store))
     old = existing.get("sources", []) if isinstance(existing, dict) else []
     merged = autodiscovery.merge_records([item for item in old if isinstance(item, dict)], result.accepted)
-    autodiscovery.save_store(Path(args.store), merged)
+    autodiscovery.save_store(Path(args.store), merged, root=ROOT)
     print(
         f"forge discovery: {len(result.accepted)} accepted, {len(result.quarantined)} quarantined, {len(merged)} total"
     )

@@ -34,44 +34,53 @@ class TestSectionTabs(unittest.TestCase):
 
     def test_bar_ships_on_the_home_page(self) -> None:
         self.assertIn('id="sectionTabs"', HOME)
-        self.assertRegex(HOME, r'<nav class="section-tabs" id="sectionTabs"[^>]*aria-label=')
+        # PR #72 renamed the visual row (.quick-tabs); the section-tabs id and
+        # class survive on the same element, as the contract js/core.js binds to.
+        self.assertRegex(HOME, r'<nav class="[^"]*section-tabs[^"]*" id="sectionTabs"[^>]*aria-label=')
         self.assertIn('data-i18n-aria-label="tabs.label"', HOME)
 
     def test_tabs_are_real_anchors_to_real_sections(self) -> None:
         # A tab is a link, not a button: it has to survive JS being off, open
         # in a new tab, and be announced as a destination.
-        tabs = re.findall(r'<a class="section-tab" href="#([\w-]+)" data-target="([\w-]+)"', HOME)
+        tabs = re.findall(r'<a[^>]*class="[^"]*section-tab[^"]*"[^>]*href="#([\w-]+)"[^>]*data-target="([\w-]+)"', HOME)
         self.assertGreaterEqual(len(tabs), 4, "expected a tab per major section")
         for href, target in tabs:
             self.assertEqual(href, target, "href and data-target must agree")
             self.assertRegex(HOME, rf'id="{re.escape(target)}"', f"#{target} does not exist on the page")
 
     def test_bar_lives_inside_main_so_top_reaches_the_real_top(self) -> None:
-        # #top is <main>. With the bar in flow *before* main, the "Overview"
+        # #top used to *be* <main>. PR #72 moved it to a zero-size sentinel ahead of
+        # the header and named main #mainContent, which satisfies the same invariant
+        # more directly: the anchor is the first box in the body. The bar still has to
+        # live inside <main> and sit above the hero, or the "Home"/"Overview" jump
+        # lands one bar-height short of the real top.
         # and header "Home" anchors stopped one bar-height short of the top of
         # the page. Inside main, main's border box is where it always was.
-        main_at = HOME.index('<main id="top">')
+        top_at = HOME.index('<div id="top"')
+        main_at = HOME.index('<main id="mainContent">')
         bar_at = HOME.index('id="sectionTabs"')
         header_at = HOME.index("</header>")
-        self.assertGreater(bar_at, main_at, "the tab bar must be the first child of <main>")
+        self.assertGreater(bar_at, main_at, "the tab bar must be inside <main>")
+        self.assertLess(top_at, header_at, "#top must precede the header to be the true top")
         self.assertLess(header_at, main_at)
-        self.assertLess(
-            bar_at - main_at,
-            1200,
-            "the tab bar must come before the hero, not somewhere further down",
-        )
+        # Not a distance-from-<main> bound: PR #72 deliberately put the row under
+        # the hero. What has to hold is that it sits *above* the content it links
+        # to, and inside <main> so it stops pinning at the footer.
+        catalog_at = HOME.index('id="catalog"')
+        self.assertLess(bar_at, catalog_at, "the bar must precede the sections it links to")
 
     def test_bar_is_styled_by_the_design_system(self) -> None:
-        for selector in (".section-tabs", ".section-tabs-inner", ".section-tab"):
+        for selector in (".quick-nav-section", ".quick-tabs", ".quick-tab"):
             self.assertIn(selector, CSS, selector + " is not styled")
-        self.assertRegex(CSS, r"\.section-tabs \{[^}]*position: sticky;")
-        self.assertRegex(CSS, r"\.section-tabs \{[^}]*top: var\(--sticky-offset\);")
+        self.assertRegex(CSS, r"\.quick-nav-section \{[^}]*position: sticky;")
+        self.assertRegex(CSS, r"\.quick-nav-section \{[^}]*top: var\(--sticky-offset\);")
         # Layered under the nav backdrop (55) and the header capsule (60), so
         # the bar dims with the page when the phone drawer opens instead of
         # floating above it, still clickable.
-        self.assertRegex(CSS, r"\.section-tabs \{[^}]*z-index: 54;")
+        self.assertRegex(CSS, r"\.quick-nav-section \{[^}]*z-index: 54;")
         self.assertRegex(CSS, r"\.to-top \{[^}]*z-index: 54;")
-        self.assertRegex(CSS, r'\.section-tab\[aria-current="true"\]')
+        # The attribute the scroll-spy sets has to be the one that styles the tab.
+        self.assertRegex(CSS, r'\.quick-tab\[aria-current="true"\]')
 
     def test_sticky_offsets_track_the_floating_header(self) -> None:
         # --sticky-offset is the header's bottom edge: top:12px + a 56px
@@ -80,7 +89,9 @@ class TestSectionTabs(unittest.TestCase):
         self.assertIn("--sticky-offset: 74px;", TOKENS)
         self.assertIn("--tabbar-h: 46px;", TOKENS)
         self.assertRegex(CSS, r"@media \(max-width: 760px\) \{[^}]*--sticky-offset: 66px;")
-        self.assertRegex(CSS, r"\.section-tabs \{[^}]*margin-top: 12px;")
+        # Base pinned the bar with margin-top: 12px; PR #72's bar pads its own
+        # section instead. Either is fine - a bar floating off the header is not.
+        self.assertRegex(CSS, r"\.quick-nav-section \{[^}]*padding-block:")
 
     def test_scroll_spy_marks_the_current_tab(self) -> None:
         self.assertIn("function setupSectionTabs()", CORE)
@@ -100,7 +111,9 @@ class TestCategoryTabs(unittest.TestCase):
     """The catalog's category row, promoted to a real tablist."""
 
     def test_row_is_a_tablist_controlling_a_panel(self) -> None:
-        self.assertRegex(HOME, r'<div class="filter-row" id="categoryFilters" role="tablist"')
+        # PR #72 promoted its own category row (.catalog-tabs) to the tablist;
+        # #categoryFilters is the chip row the panel renders into.
+        self.assertRegex(HOME, r'<div class="catalog-tabs" role="tablist"')
         self.assertRegex(HOME, r'<div class="catalog-panel" id="catalogPanel" role="tabpanel">')
         # The grid and its empty state both belong to the panel: an empty
         # result is an answer, not the absence of one.
@@ -147,7 +160,7 @@ class TestCategoryTabs(unittest.TestCase):
         # bottom edge. The click handler has to know about both homes.
         self.assertNotRegex(
             HOME,
-            r'<div class="filter-groups">\s*(?:<div[^>]*>\s*)*<div class="filter-row" id="categoryFilters"',
+            r'<div class="filter-groups">\s*(?:<div[^>]*>\s*)*<div class="catalog-tabs"',
         )
         self.assertIn("chip.closest('.catalog-tabs')", SITE)
         self.assertIn("chip.closest('.filter-groups')", SITE)
@@ -218,7 +231,9 @@ class TestScrollStability(unittest.TestCase):
     def test_sections_clear_the_sticky_bars_on_anchor_jumps(self) -> None:
         # scroll-padding (html) clears the floating capsule; the home page
         # needs one more bar for the sticky tabs.
-        self.assertIn("scroll-padding-top: calc(var(--header-h) + 20px);", TOKENS)
+        # PR #72 widened the header clearance 20px -> 24px; what this pins is that a
+        # token drives it, so the sticky bars keep moving with the header.
+        self.assertIn("scroll-padding-top: calc(var(--header-h) + 24px);", TOKENS)
         self.assertRegex(
             CSS,
             r'body\[data-page="home"\] main > section\[id\] \{\s*scroll-margin-top: calc\(var\(--tabbar-h\) \+ 6px\);',

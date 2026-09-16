@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import sys
 from pathlib import Path
 
@@ -11,7 +12,7 @@ if str(_SRC) not in sys.path:
 
 import unittest
 
-from omnisource.collections import build_collection_pages, build_collections_doc
+from omnisource.collections import COLLECTIONS, build_collection_pages, build_collections_doc, collection_slugs
 from omnisource.compare import build_compare_pages, render_compare_page, render_compare_redirect
 from omnisource.dead_apps import build_dead_apps_doc, classify_age
 from omnisource.domain import App, Catalog
@@ -272,13 +273,31 @@ class CollectionsTests(unittest.TestCase):
     def test_build_doc_shape(self) -> None:
         catalog = _catalog(_app("ytlite"), _app("utm"))
         doc = build_collections_doc(catalog, {})
-        self.assertEqual(doc["count"], 5)
-        slugs = {c["slug"] for c in doc["collections"]}
-        self.assertEqual(slugs, {"youtube", "music", "emulators", "utilities", "productivity"})
-        # Only apps present in the catalog are referenced.
+        self.assertEqual(doc["count"], len(COLLECTIONS))
+        self.assertEqual({c["slug"] for c in doc["collections"]}, set(collection_slugs()))
+        # Only apps present in the catalog are referenced: curated membership is
+        # filtered against the catalog, so a renamed slug cannot linger in a page.
         for collection in doc["collections"]:
             for slug in collection["appSlugs"]:
                 self.assertIn(slug, {"ytlite", "utm"})
+
+    def test_curated_membership_exists_in_the_shipped_catalog(self) -> None:
+        # Collections are hand-curated data, so the one real check is that every
+        # shipped slug still resolves: the validator cross-checks this in CI, and
+        # a curated typo would otherwise render a silently shorter page.
+        catalog_path = Path(__file__).resolve().parents[1] / "catalog.json"
+        slugs = {app["slug"] for app in json.loads(catalog_path.read_text(encoding="utf-8"))["apps"]}
+        for definition in COLLECTIONS:
+            self.assertTrue(definition["appSlugs"], f"collection {definition['slug']} curates nothing")
+            for slug in definition["appSlugs"]:
+                self.assertIn(slug, slugs, f"{definition['slug']} curates unknown app {slug}")
+
+    def test_tweaks_collection_groups_the_tweak_family(self) -> None:
+        tweaks = next(definition for definition in COLLECTIONS if definition["slug"] == "tweaks")
+        # The injector tools and the tweaked builds are curated together so the
+        # family is findable as one page instead of only through search.
+        for slug in ("trollfools", "bootstrap", "ytlite", "bhtwitter"):
+            self.assertIn(slug, tweaks["appSlugs"])
 
     def test_pages_generated(self) -> None:
         import tempfile
@@ -287,7 +306,7 @@ class CollectionsTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             changed = build_collection_pages(catalog, {}, pages_dir=Path(tmp))
             names = {p.parent.name for p in changed}
-            self.assertEqual(len(changed), 5)
+            self.assertEqual(len(changed), len(COLLECTIONS))
             self.assertIn("emulators", names)
             content = (Path(tmp) / "emulators" / "index.html").read_text(encoding="utf-8")
             self.assertIn("App Utm", content)

@@ -342,8 +342,14 @@ def _head(
     newest: dict[str, Any],
     download_url: str,
     publisher: str,
+    screenshots: tuple[str, ...] = (),
 ) -> str:
     version_text = html.escape(str(newest.get("version") or ""))
+    # schema.org wants a *screenshot* here. The app icon is not one, and emitting it
+    # as if it were puts a rendered stand-in into every search index that reads this
+    # page - so the field is present only when upstream actually publishes art.
+    shots = ", ".join(json_quote(url) for url in screenshots)
+    screenshot_field = f'"screenshot": [{shots}],' + "\n      " if screenshots else ""
     return f"""<!doctype html>
 <html lang="en" data-theme="auto">
 <head>
@@ -398,8 +404,7 @@ def _head(
       "softwareVersion": {json_quote(version_text)},
       "url": {json_quote(page_url)},
       "downloadUrl": {json_quote(download_url)},
-      "screenshot": {json_quote(icon_url)},
-      "author": {{ "@type": "Organization", "name": {json_quote(publisher)} }}
+      {screenshot_field}      "author": {{ "@type": "Organization", "name": {json_quote(publisher)} }}
     }}
   </script>
 </head>
@@ -476,6 +481,15 @@ def render_app_page(
         f'<img src="{html.escape(url)}" alt="{title} screenshot {index}" loading="lazy">'
         for index, url in enumerate(screenshots, start=1)
     )
+    if screenshots:
+        screenshots_block = f'<div class="ap-screenshots">{screenshots_html}</div>\n'
+    else:
+        # An honest gap beats a stand-in: these apps publish no screenshots upstream,
+        # and a mockup rendered from the icon is not information about the app.
+        screenshots_block = (
+            '<p class="ap-no-screenshots">Upstream publishes no screenshots for this '
+            "app, and OmniSource does not invent them.</p>\n"
+        )
     fallback_html = "".join(
         f'<a class="button" href="{html.escape(url)}" target="_blank" rel="noopener">Mirror {index}</a>'
         for index, url in enumerate(fallbacks, start=1)
@@ -494,7 +508,7 @@ def render_app_page(
         else ""
     )
 
-    head = _head(title, sub, icon_url, page_url, rss_url, app, newest, download_url, publisher)
+    head = _head(title, sub, icon_url, page_url, rss_url, app, newest, download_url, publisher, screenshots)
 
     hero = [
         '<body class="app-page">\n',
@@ -595,7 +609,7 @@ def render_app_page(
         '    <section class="ap-section" data-reveal>\n',
         '      <h2><span class="num">01</span> About</h2>\n',
         f'      <p class="ap-desc">{description}</p>\n',
-        f'      <div class="ap-screenshots">{screenshots_html}</div>\n',
+        f"      {screenshots_block}",
         "    </section>\n\n",
         '    <section class="ap-section" data-reveal>\n',
         '      <h2><span class="num">02</span> Install with</h2>\n',

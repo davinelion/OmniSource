@@ -124,7 +124,7 @@ def main(argv: list[str] | None = None) -> int:
             for record in sources
             if isinstance(record, dict) and str(record.get("source_id", "")) not in isolated_ids
         ]
-        if autodiscovery.save_store(store_path, retained):
+        if autodiscovery.save_store(store_path, retained, root=ROOT):
             print(f"validate_source: quarantined {isolated} invalid record(s); {len(retained)} remain in the store")
         else:
             errors.append(f"{store_path}: cannot rewrite the discovery store")

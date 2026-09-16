@@ -9,6 +9,8 @@ engine finds *before* it may enter the pipeline:
 * :func:`validate_remote_app` — one app entry (metadata + URLs).
 * :func:`validate_remote_release` — one upstream release object.
 * :func:`check_url_reachable` — optional live HEAD/GET reachability probe.
+* the sourcing policy in ``data/source_policy.json`` — verdicts on whole sources,
+  enforced here so a rejected one cannot be published even if it is well-formed.
 
 Invalid feeds must never be published: :func:`assert_publishable` aggregates
 every rule and returns ``(ok, errors, warnings)`` so callers can quarantine
@@ -55,6 +57,27 @@ REQUIRED_RELEASE_FIELDS = ("tag", "assets")
 
 def _is_https(url: Any) -> bool:
     return isinstance(url, str) and url.startswith("https://") and is_http_url(url)
+
+
+def _sourcing_policy(policy: Any = None, root: Any = None) -> tuple[Any, list[str]]:
+    """Resolve the sourcing policy a publication decision must respect.
+
+    Callers pass an already-loaded policy when they have one. When they do not,
+    it is read from the repository so the recorded verdicts cannot be skipped by
+    forgetting to wire them up; a policy file that does not parse is reported as
+    an error, which keeps the gate fail-closed.
+    """
+    from pathlib import Path
+
+    from omnisource.source_policy import load_policy
+
+    if policy is not None:
+        return policy, []
+    base = Path(root) if root is not None else Path(__file__).resolve().parents[2]
+    loaded = load_policy(base)
+    if loaded.error:
+        return None, [f"sourcing policy is unusable: {loaded.error}"]
+    return loaded, []
 
 
 def validate_source_record(record: Any) -> list[str]:
@@ -222,14 +245,29 @@ def assert_publishable(
     *,
     feed_payload: Any = None,
     check_downloads: bool = False,
+    policy: Any = None,
+    root: Any = None,
 ) -> tuple[bool, list[str], list[str]]:
     """Decide whether a discovered source may enter the pipeline.
 
     Returns ``(ok, errors, warnings)``. ``ok`` is False whenever ``errors``
     is non-empty; warnings never block publication.
+
+    ``policy`` is the parsed sourcing policy (:mod:`omnisource.source_policy`).
+    When it is omitted the gate loads it from ``root`` itself: the verdicts in
+    ``data/source_policy.json`` are a *rejection* list, so an unusable or
+    missing policy must not quietly turn the check off in production.
     """
     errors = validate_source_record(record)
     warnings: list[str] = []
+    applied, policy_errors = _sourcing_policy(policy, root)
+    errors.extend(policy_errors)
+    if applied is not None and applied.rules:
+        from omnisource.source_policy import decide
+
+        decision = decide(str(record.get("url") or ""), name=str(record.get("name") or ""), policy=applied)
+        if decision.blocked:
+            errors.append(f"{record.get('url', '?')}: {decision.detail}")
     if feed_payload is not None:
         errors.extend(validate_remote_feed(feed_payload, url=str(record.get("url", ""))))
     if check_downloads and isinstance(feed_payload, dict):

@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource — Lara",
+  "identifier": "com.iamsmmh.omnisource.lara",
+  "apiVersion": "v2",
+  "subtitle": "Single-app source",
+  "description": "Single-app feed for Lara.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
+  "apps": [
+    {
+      "name": "Lara",
+      "bundleIdentifier": "com.roooot.lara",
+      "developerName": "rooootdev",
+      "subtitle": "DarkSword customization toolbox for iOS 17 - 26.0.1",
+      "localizedDescription": "lara is a jailed customization toolbox that uses the DarkSword exploit to reach the parts of the system iOS keeps locked: a full read/write file manager, a MobileGestalt editor, font / card / custom overwrites, status-bar tweaks, hidden icon labels, an upside-down mode, a five-icon dock, a grid app switcher, a performance HUD, DirtyZero 2, a three-app bypass and a JIT enabler for apps that carry get-task-allow. It is published as its own unsigned IPA for sideloading from the open-source repository.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+      "tintColor": "22C55E",
+      "category": "utilities",
+      "version": "0.2",
+      "versionDate": "2026-05-22",
+      "versionDescription": "lara 0.2 | lara_v0.2\n\n## UX Changes\n- Moved tweaks into its own accessible section, and put Tools there at the bottom.\n- Moved logs out of the tab bar and into a toolbar item at the top of the primary views (you can change this back in settings).\n- Settings has been completed reorganized, with some new customization toggles for the app itself.\n\n## Applying/Handling\n- Fixed kernelcache weirdness (kernelcache is now fetched locally)\n- Hybrid will now be used by default.\n\n## Tweaks\n- Rewrote MobileGestalt View + Added a ton of tweaks! (thanks @jurre111)\n- Rewrote Liquid Glass View with nice previewer.\n- Fixed Passcode + Add repo viewer (thanks @neonmodder123)\n- Add SpringBoard Customizer (thanks @leminlimez and Cowabunga, as well as @jurre111 for fixing the view)\n- Add SystemColor patcher.",
+      "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+      "size": 5474210,
+      "versions": [
+        {
+          "version": "0.2",
+          "date": "2026-05-22",
+          "localizedDescription": "lara 0.2 | lara_v0.2\n\n## UX Changes\n- Moved tweaks into its own accessible section, and put Tools there at the bottom.\n- Moved logs out of the tab bar and into a toolbar item at the top of the primary views (you can change this back in settings).\n- Settings has been completed reorganized, with some new customization toggles for the app itself.\n\n## Applying/Handling\n- Fixed kernelcache weirdness (kernelcache is now fetched locally)\n- Hybrid will now be used by default.\n\n## Tweaks\n- Rewrote MobileGestalt View + Added a ton of tweaks! (thanks @jurre111)\n- Rewrote Liquid Glass View with nice previewer.\n- Fixed Passcode + Add repo viewer (thanks @neonmodder123)\n- Add SpringBoard Customizer (thanks @leminlimez and Cowabunga, as well as @jurre111 for fixing the view)\n- Add SystemColor patcher.",
+          "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+          "size": 5474210,
+          "minOSVersion": "17.0",
+          "releaseUrl": "https://github.com/rooootdev/lara/releases/tag/0.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "lara_v0.2.ipa",
+              "downloadUrl": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 5474210,
+              "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+              "downloads": 15599,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+          "downloads": 15599
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "lara",
+        "status": "beta",
+        "featured": false,
+        "upstreamURL": "https://github.com/rooootdev/lara",
+        "sourceURL": "https://github.com/rooootdev/lara",
+        "verification": {
+          "method": "github-release",
+          "publisher": "rooootdev/lara",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "17.0",
+          "maxOSVersion": "26.0.1",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Firmware support as documented by upstream: iOS/iPadOS 17.0 - 18.7.1 and 26.0 - 26.0.1. iOS 16.x is technically affected by the exploit but has no offsets, and 18.7.2+ / 26.1+ are unsupported. Does not work on M5 or A19 (Pro) devices; on M-series CPUs upstream suggests setting t1sz_boot to 0x11 under Modify Offsets. Early-stage tool (0.x releases), so keep expectations modest."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-05-22",
+          "lastUpdatedAt": "2026-05-22"
+        }
+      }
+    }
+  ],
+  "news": []
+}

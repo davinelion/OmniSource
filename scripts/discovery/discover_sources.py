@@ -26,6 +26,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "src"))
 from omnisource import autodiscovery
 from omnisource.quarantine import QuarantineStore, validate_candidates
 from omnisource.remote_validation import validate_source_record
+from omnisource.source_policy import decide, load_policy, partition_by_policy
 
 ROOT = Path(__file__).resolve().parents[2]
 STORE = ROOT / "data" / "discovered_sources.json"
@@ -70,23 +71,39 @@ def main(argv: list[str] | None = None) -> int:
     if pages:
         found.extend(autodiscovery.discover_web_catalogs(pages))
 
+    # Sourcing verdicts first: a host that has already been reviewed and
+    # rejected (data/source_policy.json) is dropped instead of being validated,
+    # re-validated and re-dropped on every run. They are *not* quarantined —
+    # quarantine means "malformed, look at this", which is a different signal.
+    policy = load_policy(ROOT)
+    candidates, blocked = partition_by_policy(found, policy)
+    for record in blocked:
+        decision = decide(str(record.get("url") or ""), name=str(record.get("name") or ""), policy=policy)
+        print(f"discovery: excluded {record.get('url')} — {decision.rule_id}")
+
     quarantine = QuarantineStore(ROOT / "data" / "quarantine")
-    result = validate_candidates(found, validate_source_record, quarantine)
+    result = validate_candidates(candidates, validate_source_record, quarantine)
     valid, quarantined = result.accepted, result.quarantined
 
     store_path = Path(args.store)
     if args.dry_run:
-        print(f"discovery: {len(valid)} validated, {len(quarantined)} quarantined (dry run, stores untouched)")
+        print(
+            f"discovery: {len(valid)} validated, {len(quarantined)} quarantined, {len(blocked)} excluded by "
+            "policy (dry run, stores untouched)"
+        )
         return 0
     store = autodiscovery.load_store(store_path)
     # Only structurally valid candidates enter the discovery registry. Invalid
     # payloads are isolated in data/quarantine/sources.json and cannot reach
     # feed generation through an accidental merge.
-    merged = autodiscovery.merge_records(store.get("sources", []), valid)
-    autodiscovery.save_store(store_path, merged)
+    stored, stale = partition_by_policy(store.get("sources", []), policy)
+    for record in stale:
+        print(f"discovery: pruned {record.get('url')} from the store — excluded by policy")
+    merged = autodiscovery.merge_records(stored, valid)
+    autodiscovery.save_store(store_path, merged, root=ROOT)
     print(
-        f"discovery: +{len(valid)} validated, +{len(quarantined)} quarantined, "
-        f"{len(merged)} candidates in {store_path}; quarantine={quarantine.path}"
+        f"discovery: +{len(valid)} validated, +{len(quarantined)} quarantined, {len(blocked)} excluded by policy, "
+        f"{len(stale)} pruned from store, {len(merged)} candidates in {store_path}; quarantine={quarantine.path}"
     )
     return 0
 

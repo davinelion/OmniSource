@@ -1,27 +1,69 @@
 {
-  "generatedAt": "2026-09-15",
-  "feedVersion": "bc174311585c",
+  "generatedAt": "2026-09-16",
+  "feedVersion": "a39e5acb1b3a",
   "apps": {
-    "total": 94,
-    "reachable": 94,
+    "total": 101,
+    "reachable": 101,
     "unreachable": 0,
-    "verified": 93
+    "verified": 100
   },
   "sync": {
-    "synced": 94,
-    "incrementalHits": 87,
-    "updated": 1,
+    "synced": 7,
+    "incrementalHits": 0,
+    "updated": 7,
     "failed": 0,
-    "apiRequests": 81
+    "apiRequests": 8
   },
   "unreachable": [],
   "updates": [
     {
-      "slug": "sidestore",
-      "name": "SideStore",
-      "previousVersion": "0.6.4",
-      "version": "0.7.0",
-      "kind": "updated"
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "previousVersion": null,
+      "version": "4.3-253",
+      "kind": "new"
+    },
+    {
+      "slug": "lara",
+      "name": "Lara",
+      "previousVersion": null,
+      "version": "0.2",
+      "kind": "new"
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "previousVersion": null,
+      "version": "3.4.1",
+      "kind": "new"
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "previousVersion": null,
+      "version": "1.12.0",
+      "kind": "new"
+    },
+    {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "previousVersion": null,
+      "version": "1.27.6",
+      "kind": "new"
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "previousVersion": null,
+      "version": "2.5",
+      "kind": "new"
+    },
+    {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "previousVersion": null,
+      "version": "517.0.0",
+      "kind": "new"
     }
   ],
   "errors": [],

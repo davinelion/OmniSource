@@ -499,6 +499,21 @@
       "shortDescription": "Music player"
     },
     {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "version": "1.27.6",
+      "previousVersion": "",
+      "date": "2026-09-07",
+      "kind": "new",
+      "changelog": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/tablehabit.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/tablehabit.xml",
+      "status": "stable",
+      "shortDescription": "Open-source micro-habit tracker with WebDAV sync"
+    },
+    {
       "slug": "spotiflac",
       "name": "SpotiFLAC Mobile",
       "version": "4.9.6",
@@ -904,6 +919,21 @@
       "shortDescription": "YTKACE"
     },
     {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "version": "2.5",
+      "previousVersion": "",
+      "date": "2026-08-31",
+      "kind": "new",
+      "changelog": "ByeTunes 2.5 | ByeTunes\n\nHi guys, here's the 2.5 update for ByeTunes. This one adds full Deezer support and real parallel downloads for way faster queues, plus a brand new Smart Playlists feature with custom cover art. On top of that, a bunch of reliability fixes across downloads, backups, and repair tools — including a crash fix for the download queue.\n\n**Quick recommendation:** for the best speed and match accuracy while searching, set Deezer as your Search Provider. And to keep full Apple Music compatibility (animated artwork, richer info), keep Apple Music as your Metadata Source.\n\n**Deezer — full provider support**\n\n- Deezer is now a full first-class search source alongside Apple Music/iTunes, with its own tab (\"Search or paste a Deezer link\")\n- Paste a Deezer track/album/artist/playlist link and it resolves directly — same one-tap flow Apple Music/Spotify links already had\n- Deezer artist pages now show real top tracks + full discography (up to 100 each), not just a flat track list\n- Deezer search results paginate (\"load more\"), merged into the same song/album results as other providers\n- \"Find on Deezer\" added alongside \"Find on Spotify\" as an in-app browser shortcut for failed downloads\n\n**Download Engine — real concurrency & speed**\n\n- Downloads used to run one at a time through a single sequential task; now use a real worker-pool so multiple tracks download in parallel\n- Concurrency is format-aware: 3 simultaneous downloads for lossy formats, capped to 2 for lossless (FLAC/ALAC), since lossless generation is much more expensive on the backend\n- Added a start-pacer that spaces out when new downloads begin (wider gap for lossless) on top of the concurrency cap — bursts of simultaneous requests were triggering backend 429/500 errors even within the concurrency limit\n- Fixed the download engine getting silently recreated from scratch whenever the Download tab's view was torn down (older iOS layout) — was orphaning in-flight downloads and losing queue state; now backed by a shared instance that survives it\n- Aggregate download speed now tracked and shown live across all active downloads\n\n**Background Downloads**\n\n- Fixed isAppActive defaulting to true on a silent background relaunch, which routed transfers through the short-lived foreground path instead of the durable background session (caused FLAC→MP3 downgrades and stalls)\n- Fixed the candidate fallback loop not checking cancellation, which let a cancelled foreground download silently complete via the MP3 fallback instead of aborting\n- Completed-but-unclaimed background download results now persist to disk so a killed/relaunched app recovers them instead of re-downloading\n- Finished tracks now persist their own .done state so a relaunch mid-queue doesn't drop them from Queue Details\n- Added a genuine background-processing task (registered at launch) so metadata fetching can run even when the app isn't open, instead of only opportunistically while active\n- Each backend candidate now uses its own requested format for its file-extension fallback instead of a hardcoded \"flac\" default\n- Plain-language failure messages in the download queue instead of raw HTTP/backend error bodies\n- Fixed link.deezer.com short links not resolving\n- Fixed a crash: removing a failed download could resurrect it (and crash on the second removal) because a stray background-session completion callback fired after removal and wrote the state back. Removal now properly cancels the underlying background task too.\n\n**Smart Playlists**\n\n- Create playlists by rule: Genre, Artist, Decade, Format, or Explicit Rating\n- Multi-select across all rule types with combined naming (e.g. \"Rock, Pop\" or \"1990s, 2000s\")\n- Live match counts, search within Genre/Artist lists, lossless-format badges\n- Artist grouping splits collab credits (\"A & B\") into separate artists, matching the on-device Artists tab\n- \"Refresh Smart Playlist\" — remembers its rule and can re-sync to catch newly matching songs\n\n**Playlists**\n\n- New naming screen matches Apple Music: photo picker, large title field, X/checkmark controls — used for manual and smart playlist creation alike\n- Custom playlist cover photos: pick a photo, it's auto-cropped to a square and uploaded using the same on-device artwork system Apple Music itself uses; persists across relaunch\n- In-playlist rename\n- Playlist restore now lists which specific tracks failed to match instead of just a count\n\n**On-Device Library**\n\n- Select/Select All controls pinned so they stay visible while scrolling\n- Select/Select All/Add to Playlist/Add to Album/Export restricted to the Songs tab; Playlists tab gets Select/Select All/Export/Delete\n- Removed redundant header title/count and Export Folder picker from non-Songs tabs\n- Audio Quality Analysis (new): tapping a song shows a verdict flagging mislabeled files (e.g. an MP3 renamed .flac), suspiciously over-compressed \"lossless\" files, and low-bitrate lossy files\n- On-device album metadata editing\n- In-place device audio file replacement\n- Content Rating redesigned from a cramped segmented control to a compact menu row, with a new \"No Rating\" option\n- Fixed the explicit/clean rating editor: a binary toggle could only ever write explicit/none, silently flipping \"clean\" tracks to explicit\n\n**Reliability Fixes**\n\n- Injection failures no longer silently drop songs from the queue — unconfirmed songs are put back\n- Repair operations (artwork fix, database doctor, alphabetical order) use per-operation cancellation tokens instead of one shared flag, so cancelling one can no longer kill an unrelated one\n- Background metadata fetch no longer double-imports a song if the process is killed mid-drain\n- Artwork upload failures during metadata edits are now reported instead of silently swallowed\n- A failed database integrity check now aborts the library merge instead of writing on top of a known-corrupt database\n- Fixed the large-batch injection safeguard checking the wrong count\n- Fixed byetunes://download deep links opening the wrong tab on iOS 16–18\n- Fixed a Live Activity race that could resurrect it right after ending; orphaned Live Activities from a killed session now clean up on cold launch\n- Removed dead Tidal/Qobuz code and a broken last-resort Spotify mapping fallback\n\n**Backup & Restore**\n\n- Merged Light/Full Backup toggle and \"Export Full Library\" into two direct-action rows; Full Backup always bundles per-playlist files\n\n**Settings**\n\n- Store Region picker upgraded from a simple inline row to a full searchable, alphabetically-grouped screen with flags\n- About/Credits moved to its own section, separate from actionable controls\n- Added \"Keep Local Metadata\" to skip the fetch pipeline for imported local files",
+      "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/ByeTunes.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/byetunes.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/byetunes.xml",
+      "status": "stable",
+      "shortDescription": "Add music to the iOS library without a computer"
+    },
+    {
       "slug": "youmod",
       "name": "YouMod",
       "version": "21.35.3",
@@ -1099,6 +1129,21 @@
       "shortDescription": "Twitch chat client"
     },
     {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "version": "3.4.1",
+      "previousVersion": "",
+      "date": "2026-08-11",
+      "kind": "new",
+      "changelog": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
+      "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OnionBrowser.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/onionbrowser.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/onionbrowser.xml",
+      "status": "stable",
+      "shortDescription": "Tor browser that routes web traffic through Tor"
+    },
+    {
       "slug": "maxtube",
       "name": "MaxTube",
       "version": "21.31.3",
@@ -1219,6 +1264,21 @@
       "shortDescription": "On-device app manager, signer and installer"
     },
     {
+      "slug": "orbot",
+      "name": "Orbot",
+      "version": "1.12.0",
+      "previousVersion": "",
+      "date": "2026-06-30",
+      "kind": "new",
+      "changelog": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
+      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/orbot.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/orbot.xml",
+      "status": "stable",
+      "shortDescription": "Tor network tunnel for iOS and iPadOS"
+    },
+    {
       "slug": "dolphinish",
       "name": "DolphiniOS",
       "version": "5.0.0",
@@ -1309,6 +1369,21 @@
       "shortDescription": "ESign-style app signer"
     },
     {
+      "slug": "lara",
+      "name": "Lara",
+      "version": "0.2",
+      "previousVersion": "",
+      "date": "2026-05-22",
+      "kind": "new",
+      "changelog": "lara 0.2 | lara_v0.2\n\n## UX Changes\n- Moved tweaks into its own accessible section, and put Tools there at the bottom.\n- Moved logs out of the tab bar and into a toolbar item at the top of the primary views (you can change this back in settings).\n- Settings has been completed reorganized, with some new customization toggles for the app itself.\n\n## Applying/Handling\n- Fixed kernelcache weirdness (kernelcache is now fetched locally)\n- Hybrid will now be used by default.\n\n## Tweaks\n- Rewrote MobileGestalt View + Added a ton of tweaks! (thanks @jurre111)\n- Rewrote Liquid Glass View with nice previewer.\n- Fixed Passcode + Add repo viewer (thanks @neonmodder123)\n- Add SpringBoard Customizer (thanks @leminlimez and Cowabunga, as well as @jurre111 for fixing the view)\n- Add SystemColor patcher.",
+      "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Lara.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/lara.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/lara.xml",
+      "status": "beta",
+      "shortDescription": "DarkSword customization toolbox for iOS 17 - 26.0.1"
+    },
+    {
       "slug": "twitchadblock",
       "name": "TwitchAdBlock",
       "version": "29.4.2",
@@ -1352,6 +1427,21 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/sidestore.xml",
       "status": "stable",
       "shortDescription": "AltStore fork that refreshes apps without a computer"
+    },
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "version": "4.3-253",
+      "previousVersion": "",
+      "date": "2026-04-23",
+      "kind": "new",
+      "changelog": "TrollFools 4.3-253 | TrollFools_4.3-253.tipa\n\n# Changelog\n\n## 4.3 Build 253 (2026-04-23)\n\n修复与 MachOKit 有关的一处断言崩溃。\n\n------\n\n## 4.3 Build 253 (2026-04-23) [EN]\n\nFixed an assertion crash related to MachOKit.\n\n------\n\n## 4.3 Build 246 (2026-04-16)\n\n修复二次注入时可能误选已注入动态库作为目标 Mach-O 的问题。\n\n### 修复\n\n- 注入目标选取：修复追加注入时，上次注入的动态库可能被误选为注入目标的问题。  \n  新增三层防御：从注入前备份读取原始 Load Commands 以还原真实依赖链；枚举阶段跳过 `.troll-fools.bak` 备份文件；通过备份差分精确识别并排除已注入的动态库。\n\n------\n\n## 4.3 Build 246 (2026-04-16) [EN]\n\nFixed an issue where re-injection could incorrectly select a previously-injected dylib as the target Mach-O.\n\n### Fixed\n\n- Target selection: Fixed re-injection potentially picking a previously-injected dylib as the injection target.  \n  Added three-layer defense: read original load commands from pre-injection backup to restore the true dependency chain; skip `.troll-fools.bak` backup files during enumeration; use backup-diff to precisely identify and exclude previously-injected dylibs.\n\n------\n\n## 4.3 (2026-04-13)\n\n本次版本聚焦于“动态加载框架兼容性”和“页面说明可理解性”，并包含插件管理流程调整与资源清理。\n\n### 修复\n\n- 注入兼容性：修复部分 Unity/运行时 `dlopen` 场景下无法命中可注入目标的问题。  \n  当主程序静态链接交集为空时，改为回退扫描 `Frameworks/` 中可用 Mach-O（含一级目录下 `.dylib`）。\n- 插件管理：调整“移除插件”流程，区分已启用与已禁用插件：  \n  已启用插件执行卸载；已禁用插件执行标记清理，降低批量处理风险。\n\n### 新增\n\n- 高级选项：新增“启用兼容模式回退”开关（默认开启），可控制是否在无静态链接命中时启用回退候选。\n- 结果页提示：当本次注入通过兼容模式完成时，在“已完成”下方显示额外提示。\n\n### 优化\n\n- 候选筛选：回退候选新增过滤，排除 `libswift*` 与已忽略注入相关动态库/框架，并统一大小写处理。\n- 诊断日志：增强 Mach-O 扫描日志，输出候选数量、文件大小、加密/不可读统计与最终选择结果，便于定位“无可用目标”问题。\n- 设置说明：优化高级选项页面结构与说明文案，减少非技术用户理解成本。\n- 广告与资源：移除内置广告位 `Letterpress` 及相关本地化词条/图标资源；更新营销图素材。\n\n### 本地化\n\n- 更新 `en/zh-Hans/it/vi` 词条，补充兼容模式与设置说明相关文案，并清理移除条目对应文案。\n\n------\n\n## 4.3 (2026-04-13) [EN]\n\nThis release focuses on dynamic-framework injection compatibility and clearer user guidance, plus plugin-management flow adjustments and resource cleanup.\n\n### Fixed\n\n- Injection compatibility: Fixed cases (notably Unity/runtime `dlopen` flows) where no injectable target could be selected.  \n  When the static-link intersection is empty, TrollFools now falls back to scanning eligible Mach-O files under `Frameworks/` (including top-level `.dylib`).\n- Plugin management: Updated plugin removal flow to handle enabled vs disabled plugins separately:  \n  enabled plugins are ejected, while disabled plugins are cleaned via desist/marker path handling.\n\n### Added\n\n- Advanced Settings: Added **Enable Compatibility Fallback** (default ON) to control fallback candidate behavior when no static-link match is found.\n- Result-page notice: Added a subtitle under **Completed** when injection succeeds through compatibility fallback.\n\n### Improved\n\n- Candidate filtering: Fallback candidates now exclude `libswift*` and ignored injection-related dylib/framework names, with consistent case-insensitive handling.\n- Diagnostics: Expanded Mach-O scan logs with candidate counts, file sizes, encrypted/unreadable stats, and final target selection.\n- Settings clarity: Refined Advanced Settings layout and explanatory copy for better non-technical readability.\n- Ads/assets: Removed built-in `Letterpress` ad entry and related localization/icon assets; refreshed marketing artwork.\n\n### Localization\n\n- Updated `en/zh-Hans/it/vi` strings for compatibility-fallback and settings guidance, and removed strings for deleted entries.",
+      "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/trollfools.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/trollfools.xml",
+      "status": "stable",
+      "shortDescription": "Inject tweaks into installed apps on-device"
     },
     {
       "slug": "otraku",
@@ -1399,36 +1489,6 @@
       "shortDescription": "Multi-system retro game emulator"
     },
     {
-      "slug": "nebuloiptv",
-      "name": "Nebulo",
-      "version": "2.3",
-      "previousVersion": "",
-      "date": "2026-02-01",
-      "kind": "new",
-      "changelog": "Nebulo 2.3 | Nebulo_V2.3\n\n### **What's New in V2.3?**\n\n### **If the main ipa does is unable to be verified, try the backup it will work with users using signing apps**\n\n### **Major Improvements**\n- **Expanded Sports Section:** New categories for soccer and more sports added\n       - Settings to customize sports tabs, press and hold on a game for more options, language and resolution tags added, improved the searching for game.\n\n- **Stronger recording abilities:** The user can now record in the background when the phone is off, can now watch another stream while one is recording, recording will start again if app is force quit, replaced the recording function with one that can fill in any gaps leading to a much more stable experience.\n\n- **Fixed KSPlayer bug:** KSPlayer is much more reliable now with some bug fixes.\n\n- **Increased Multi-view reliability:** Multi-view should now work smoother with bug fixed. Made the layout much cleaner and more optimized\n\n### **UI/UX Improvements**\n- **Significantly Quicker Startup:** After logging in for the first time, loading is much faster and the epg updates either manually or once every 24 hours.\n\n- **Smart Progress Bar:** Progress bar is accurate after the first time it loads.\n\n- **Settings Upgrades:** \n       - Added a \"System Up to Date\" confirmation for manual update checks.\n       - Consolidated EPG loading status into the main overlay.\n       - Added a \"System Up to Date\" confirmation for manual update checks.\n\n### **Bug Fixes and Stability**\n- **EPG Parsing:** EPG parsing is faster and more efficient.\n- **KSPlayer Stalling:** KSPlayer would stop working after 30 seconds but it is much more stable now\n- **Memory Optimization:** Fixed memory leaks in the recording manager that would mess things up and crash app.\n\n### **Under the Hood**\n- **Update Checker Connected to GitHub:** Checks github to see if any updates have been released.\n- **FFmpegKit:** Switched to a more stable and up to date version of FFmpegKit which helped to fix KSPlayer's stability issues.",
-      "downloadURL": "https://github.com/mongoosemonke504/NebuloIPTV/releases/download/V2.3/Nebulo_V2.3.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nebulo.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/nebuloiptv.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/nebuloiptv.xml",
-      "status": "stable",
-      "shortDescription": "IPTV player"
-    },
-    {
-      "slug": "pikatorrent",
-      "name": "PikaTorrent",
-      "version": "0.15.0",
-      "previousVersion": "",
-      "date": "2026-01-11",
-      "kind": "new",
-      "changelog": "PikaTorrent 0.15.0 | PikaTorrent-v0.15.0-ios\n\n- Improved streaming performance and reliability\n- Added playable files filter\n- Multi-selection support for bulk torrent deletion\n- Initial translations and localization support\n- Support for 16KB page sizes for Android\n- Bug fixes\n\n**Full Changelog**: https://github.com/G-Ray/pikatorrent/compare/v0.14.0...v0.15.0",
-      "downloadURL": "https://github.com/G-Ray/pikatorrent/releases/download/v0.15.0/PikaTorrent-v0.15.0-ios.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/PikaTorrent.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/pikatorrent.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/pikatorrent.xml",
-      "status": "stable",
-      "shortDescription": "BitTorrent client"
-    },
-    {
       "slug": "utm",
       "name": "UTM",
       "version": "4.7.5",
@@ -1442,66 +1502,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/utm.xml",
       "status": "stable",
       "shortDescription": "Virtual machines for iOS"
-    },
-    {
-      "slug": "bhtwitter",
-      "name": "BHTwitter",
-      "version": "4.4",
-      "previousVersion": "",
-      "date": "2025-05-13",
-      "kind": "available",
-      "changelog": "BHTwitter 4.4 | BHTwitter-sideloaded\n\nUpdate BHTwitter 4.4:\n- Fix all the crashes in the newer versions.\n- Add the new tabs to the hide page.\n- New feature: DM replay later page and tags.\n- New feature: Upload 4K media.\n- New feature: Voice feature in posts and replies.\n- Update the localizations.\n- Remove unnecessary options.\n\nThanks for:\n- @actuallyaridan\n- @Tulugaak",
-      "downloadURL": "https://github.com/BandarHL/BHTwitter/releases/download/4.4/BHTwitter-sideloaded.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/X.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/bhtwitter.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/bhtwitter.xml",
-      "status": "stable",
-      "shortDescription": "X (Twitter) with no ads, downloads and the chronological timeline"
-    },
-    {
-      "slug": "delta",
-      "name": "Delta",
-      "version": "1.6",
-      "previousVersion": "",
-      "date": "2024-07-11",
-      "kind": "available",
-      "changelog": "Delta 1.6 | Delta_1_6\n\n## New\n\nApp Icon\n* Brand new legally-compliant app icon (thanks Caroline Moore!)\n* Includes alternative app icons designed by community members:\n* \"Halogenide\" by Sebastiaan de With\n* \"Ketchup\" by Ben McCarthy\n* \"Microchip\" by Sean Fletcher\n\niPad Support\n* Play games full screen on iPad's beautiful display\n* Brand new controller skins designed specifically for iPad (thanks Caroline Moore!)\n* Supports multiple windows in Stage Manager and Split View\n* Automatically pauses games when switching windows (optional)\n\nHandoff\n* Seamlessly switch between iPhone and iPad\n* Continues playing exactly where you left off\n* Also supports Delta on Apple Silicon Macs via Mac App Store\n\nmelonDS 0.9.5\n* Improves DS game compatibility & performance\n* BIOS files are now optional!\n* Supports \"inserting\" GBA games into DS dual-slot\n* Increased Fast Forward speed to 3x (A15 processor or later)\n\nMenu Button Gestures\n* Use gestures while holding menu button to perform quick actions\n* Menu + Horizontal Swipe: Fast Forward\n* Menu + Any Button: Hold Button\n* Menu + Double-Tap: Quick Save\n* Menu + Long-Press: Quick Load\n\nExperimental Features\n* New section in Settings for features by third-party contributors\n* Features are WIP and should be used at user’s discretion\n* Available for Patrons on \"Beta Access\" tier or higher\n\nSave States\n* Sort save states by name\n* View all incompatible screenshots on a separate screen\n* Export save states to import into other emulators\n\n“Display Full Screen” AirPlay Setting\n* Control whether Delta shows games full screen on external displays\n* Disable to use multiple windows on external display with Stage Manager\n\nMisc.\n* Supports Game Mode on iOS 18+\n* Increased DS screen size for default edge-to-edge iPhone landscape skin\n\n## Fixed\n\n* Fixed exporting save file without file extension\n* Fixed interface rotating when playing WarioWare: Twisted!\n* Fixed Pokemon Black & White (2) freezing with C-Gear enabled",
-      "downloadURL": "https://github.com/rileytestut/Delta/releases/download/v1.6/Delta_1_6.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Delta.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/delta.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/delta.xml",
-      "status": "stable",
-      "shortDescription": "All-in-one retro emulator by Riley Testut"
-    },
-    {
-      "slug": "winston",
-      "name": "Winston",
-      "version": "1.1.5",
-      "previousVersion": "",
-      "date": "2024-06-24",
-      "kind": "available",
-      "changelog": "Winston 1.1.5 | winston\n\n- Fixed placeholder message alignment\n- Fixed Reddit API preferences page\n- Added localization support\n- Cleaned unused code and replaced glitchy book Lottie\n- Removed old, unused TipJar component\n- Added back GlobalLoaderProvider\n- Fixed broken build\n- Improved RedditListingFeed component and cleaned up some files\n- Fixed many UI bugs and stutters; added new NukeUI Opt components\n- Removed redundant code calling setAudioToMixWithOthers three times\n- Provided RedditListingFeed with a force refresh handler; fixed UserView issues\n- Fixed blur flash on app open\n- Fixed cache clear button not working\n- Added support for inline image within comments\n- Improved spoiler handling in selftext\n- Corrected tab bar hit detection in Split View on iPad",
-      "downloadURL": "https://github.com/lo-cafe/winston/releases/download/v1.1.5/winston.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Winston.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/winston.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/winston.xml",
-      "status": "unmaintained",
-      "shortDescription": "Open-source Reddit client"
-    },
-    {
-      "slug": "yattee",
-      "name": "Yattee",
-      "version": "1.5.1",
-      "previousVersion": "",
-      "date": "2024-01-28",
-      "kind": "available",
-      "changelog": "Yattee 1.5.1 | Yattee-1.5.1-iOS\n\n## What's Changed\n\n* support for private instances by @stonerl in https://github.com/yattee/yattee/pull/565\n* honour the aspect ratio when resizing by @stonerl in https://github.com/yattee/yattee/pull/562\n* make links in description clickable by @stonerl in https://github.com/yattee/yattee/pull/560\n* make description collapsible by @stonerl in https://github.com/yattee/yattee/pull/559\n* macOS: disable hit testing when not expanded by @stonerl in https://github.com/yattee/yattee/pull/578\n* disable portraitUpsideDown on iPhones by @stonerl in https://github.com/yattee/yattee/pull/569\n* make chapters collapsible and highlight current chapter by @stonerl in https://github.com/yattee/yattee/pull/564\n* more robust regex for chapters from description by @stonerl in https://github.com/yattee/yattee/pull/597\n* Translations update from Weblate\n* Added Persian, Spanish, Turkish and Russian localizations\n* Other changes and improvements\n## New Contributors\n* @stonerl made their first contribution in https://github.com/yattee/yattee/pull/565\n\n**Full Changelog**: https://github.com/yattee/yattee/compare/v1.5...v1.5.1",
-      "downloadURL": "https://github.com/yattee/yattee/releases/download/v1.5.1/Yattee-1.5.1-iOS.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Yattee.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/yattee.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/yattee.xml",
-      "status": "stable",
-      "shortDescription": "Privacy-oriented native video player"
     }
   ]
 }

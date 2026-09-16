@@ -1,0 +1,107 @@
+{
+  "name": "OmniSource — Orbot",
+  "identifier": "com.iamsmmh.omnisource.orbot",
+  "apiVersion": "v2",
+  "subtitle": "Single-app source",
+  "description": "Single-app feed for Orbot.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
+  "apps": [
+    {
+      "name": "Orbot",
+      "bundleIdentifier": "org.torproject.orbot",
+      "developerName": "The Tor Project",
+      "subtitle": "Tor network tunnel for iOS and iPadOS",
+      "localizedDescription": "Orbot puts an iPhone, iPad or Mac behind the Tor network: it installs a local packet-tunnel configuration so device traffic leaves through Tor instead of the plain network. Obfs4 and Snowflake bridges are supported and fully configurable, Tor v3 onion-service authentication works, and Tor's EntryNodes, ExitNodes, ExcludeNodes and StrictNodes options can all be set. The sideloadable build is published from the project's own GitHub releases, which list the bundled Tor, OpenSSL, Lyrebird and Snowflake versions per app release.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
+      "tintColor": "7D4698",
+      "category": "networking",
+      "version": "1.12.0",
+      "versionDate": "2026-06-30",
+      "versionDescription": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
+      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+      "size": 48820768,
+      "versions": [
+        {
+          "version": "1.12.0",
+          "date": "2026-06-30",
+          "localizedDescription": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
+          "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+          "size": 48820768,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/guardianproject/orbot-apple/releases/tag/v1.12.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Orbot.ipa",
+              "downloadUrl": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 48820768,
+              "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+              "downloads": 786,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Orbot.pkg",
+              "downloadUrl": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.pkg",
+              "platform": "unknown",
+              "architecture": null,
+              "fileType": "other",
+              "size": 68472868,
+              "sha256": "43719f3713c5d39c0dbc21ccae0c18d4b215c7e2b90167628df6f94a42b550ef",
+              "downloads": 479,
+              "mimeType": "application/octet-stream",
+              "installable": false
+            }
+          ],
+          "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+          "downloads": 786
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "orbot",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/guardianproject/orbot-ios",
+        "sourceURL": "https://github.com/guardianproject/orbot-ios",
+        "verification": {
+          "method": "github-release",
+          "publisher": "guardianproject/orbot-ios",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Uses the Network Extension (packet tunnel) entitlement, which a free personal Apple ID cannot sign: expect it to run only where your certificate allows network-extension configurations (AltStore or SideStore with a paid developer account, Feather/ESign with a developer certificate). Network extensions do not run in simulators."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-06-30",
+          "lastUpdatedAt": "2026-06-30"
+        }
+      }
+    }
+  ],
+  "news": []
+}

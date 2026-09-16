@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16T11:57:01Z",
-  "appCount": 94,
-  "releases": 109,
+  "generatedAt": "2026-09-15T22:43:23Z",
+  "appCount": 101,
+  "releases": 117,
   "apps": {
     "aidoku": [
       {
@@ -108,6 +108,18 @@
         "localizedDescription": "Bootstrap 2.2.1 | Bootstrap.tipa\n\n1: add procursus(alt) repo by default\n\n2: hide more jailbreak traces",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "byetunes": [
+      {
+        "version": "2.5",
+        "date": "2026-08-31",
+        "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
+        "size": 16815108,
+        "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+        "localizedDescription": "ByeTunes 2.5 | ByeTunes\n\nHi guys, here's the 2.5 update for ByeTunes. This one adds full Deezer support and real parallel downloads for way faster queues, plus a brand new Smart Playlists feature with custom cover art. On top of that, a bunch of reliability fixes across downloads, backups, and repair tools — including a crash fix for the download queue.\n\n**Quick recommendation:** for the best speed and match accuracy while searching, set Deezer as your Search Provider. And to keep full Apple Music compatibility (animated artwork, richer info), keep Apple Music as your Metadata Source.\n\n**Deezer — full provider support**\n\n- Deezer is now a full first-class search source alongside Apple Music/iTunes, with its own tab (\"Search or paste a Deezer link\")\n- Paste a Deezer track/album/artist/playlist link and it resolves directly — same one-tap flow Apple Music/Spotify links already had\n- Deezer artist pages now show real top tracks + full discography (up to 100 each), not just a flat track list\n- Deezer search results paginate (\"load more\"), merged into the same song/album results as other providers\n- \"Find on Deezer\" added alongside \"Find on Spotify\" as an in-app browser shortcut for failed downloads\n\n**Download Engine — real concurrency & speed**\n\n- Downloads used to run one at a time through a single sequential task; now use a real worker-pool so multiple tracks download in parallel\n- Concurrency is format-aware: 3 simultaneous downloads for lossy formats, capped to 2 for lossless (FLAC/ALAC), since lossless generation is much more expensive on the backend\n- Added a start-pacer that spaces out when new downloads begin (wider gap for lossless) on top of the concurrency cap — bursts of simultaneous requests were triggering backend 429/500 errors even within the concurrency limit\n- Fixed the download engine getting silently recreated from scratch whenever the Download tab's view was torn down (older iOS layout) — was orphaning in-flight downloads and losing queue state; no",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
       }
     ],
     "chan": [
@@ -394,6 +406,18 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "lara": [
+      {
+        "version": "0.2",
+        "date": "2026-05-22",
+        "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+        "size": 5474210,
+        "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+        "localizedDescription": "lara 0.2 | lara_v0.2\n\n## UX Changes\n- Moved tweaks into its own accessible section, and put Tools there at the bottom.\n- Moved logs out of the tab bar and into a toolbar item at the top of the primary views (you can change this back in settings).\n- Settings has been completed reorganized, with some new customization toggles for the app itself.\n\n## Applying/Handling\n- Fixed kernelcache weirdness (kernelcache is now fetched locally)\n- Hybrid will now be used by default.\n\n## Tweaks\n- Rewrote MobileGestalt View + Added a ton of tweaks! (thanks @jurre111)\n- Rewrote Liquid Glass View with nice previewer.\n- Fixed Passcode + Add repo viewer (thanks @neonmodder123)\n- Add SpringBoard Customizer (thanks @leminlimez and Cowabunga, as well as @jurre111 for fixing the view)\n- Add SystemColor patcher.",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
+      }
+    ],
     "livecontainer": [
       {
         "version": "3.8.0",
@@ -427,7 +451,17 @@
         "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
         "localizedDescription": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
         "status": "current",
-        "firstSeen": "2026-09-15T12:00:00Z"
+        "firstSeen": "2026-09-15T22:43:23Z"
+      },
+      {
+        "version": "0.9.3",
+        "date": "2026-09-14",
+        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
+        "size": 114239272,
+        "sha256": "ea39263589ec421f8e21d3466ad0fe5ff51206542b5248707c2ab44984883c6a",
+        "localizedDescription": "Mangayomi 0.9.3 | Mangayomi-v0.9.3-ios\n\n## What's Changed\n* feat: refresh the library on a schedule by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/975\n* fix(player): persist completed episodes before navigation by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/979\n* fix(downloads): preserve queue and select the next unread chapters by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/978\n* Fixes memory and bugs where it would lag over time by @not-akari in https://github.com/kodjodevf/mangayomi/pull/977\n* fix: keep Discord chapter presence current by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/981\n* fix: decode current VOE video payloads by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/982\n* fix(restore): preserve Kotatsu category assignments by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/983\n* fix(player): retire native video surfaces safely by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/984\n* fix(download): harden workers and HLS recovery by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/985\n* fix(reader): sort local pages naturally by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/986\n* fix(library): keep read titles last in unread sort by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/988\n* fix(reader): make bulk read actions uniform by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/989\n* fix(player): preserve shortcuts when controls hide by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/990\n* fix(linux): fall back when Documents lookup fails by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/994\n* Rework API Sync Server by @not-akari in https://github.com/kodjodevf/mangayomi/pull/976\n* feat: redesign anime player by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/980\n* Add Korean translation by @jang-geon in https://github.com/kodjodevf/mangayomi/pull/1000\n* feat(l10n): complete Korean translation by @Abdellox in https:/",
+        "status": "superseded",
+        "firstSeen": "2026-09-15T06:46:35Z"
       },
       {
         "version": "0.9.2",
@@ -582,6 +616,30 @@
         "localizedDescription": "Odyssey 1.4.3 | Odyssey-1.4.3\n\n- Update Sileo to 2.3-1",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "onionbrowser": [
+      {
+        "version": "3.4.1",
+        "date": "2026-08-11",
+        "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+        "size": 39611914,
+        "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+        "localizedDescription": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
+      }
+    ],
+    "orbot": [
+      {
+        "version": "1.12.0",
+        "date": "2026-06-30",
+        "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+        "size": 48820768,
+        "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+        "localizedDescription": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
       }
     ],
     "otraku": [
@@ -797,7 +855,7 @@
         "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
         "localizedDescription": "SideStore 0.7.0 | SideStore\n\n## Build Info\n\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\nBuilt at (UTC date): `2026-09-11`\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\nVersion: `0.7.0-20260911.328+6032424a`\n\n#### What's Changed:\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\n\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
         "status": "current",
-        "firstSeen": "2026-09-16T11:57:01Z"
+        "firstSeen": "2026-09-15T22:43:23Z"
       },
       {
         "version": "0.6.4",
@@ -808,6 +866,18 @@
         "localizedDescription": "SideStore 0.6.4 | SideStore\n\n## Build Info\n\nBuilt at (UTC): `Wed Sep 09 17:59:46 2026`\nBuilt at (UTC date): `2026-09-09`\nCommit SHA: `f93a95c079057090bea355453ef24f6e8668dfa9`\nVersion: `0.6.4`\n\n#### What's Changed:\n- **Developer Portal in Settings**: Manage your Apple Developer App IDs, Provisioning Profiles, Certificates, Devices, and App Groups directly inside the app for both paid and free team types.\n- **Manual Profile Creation**: Paid developer accounts can now create manual profiles on app without having to reach developer portal.\n- **Certificate Management**: Certificate CSR + create/revoke in developer portal, export, import, view all data including ASN1, keys, and much more metadata.\n- **Full Two-Factor Authentication**: Added support for SMS verification, Voice phone call in addition to trusted devices during login 2FA Challenge.\n- **Cellular Refresh**: Now one can enable cellular refresh with shortcuts to refresh on the go without waiting for wifi anytime anywhere (credits to @spidy123222)\n- **Health Check**: Newer dedicated Health Check section in settings to diagnose device and network communication issues quickly.\n- **On-Device Anisette**: Switched to on-device anisette data generation as the primary anisette data source of OTP requests during 2FA. No more need for Remote anisette servers.\n- **App & Mach-O Inspector**: Inspect any app's internal files, Mach-O binaries, and embedded provisioning profiles right from App Info.\n- **Storage Explorer**: Full view of all storage managed by the app and its sideloaded apps including caches, appgroups, tmp dirs, private documents dir etc.\n- **Faster VPN peer auto-discovery**: Parallel connection probing discovers your device on the local vpn network much faster by doing a parallel probe for device services like lockdown/rppairing ports.\n- **Dual Connection Modes**: Switch between LocalDevVPN/WireGuard and Remote servers as for loopback as required.\n- **Account Config Export**: Export and import your accounts and",
         "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "snmessenger": [
+      {
+        "version": "517.0.0",
+        "date": "2025-07-29",
+        "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+        "size": 74865911,
+        "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+        "localizedDescription": "Messenger 517.0.0 | SNMessenger 2.0.0 | Messenger_517.0.0.SNMessenger.v2.0.0-2\n\n# Changelog:\n- A new way to access tweak's settings (it looks more _native_ now)\n- Add option to prevent others knowing when you're typing\n- Add option to hide floating AI button\n- Improvements and fix other minor issues\n- **Add ability to sideload on non-jailbroken devices!!!** \n- ... (I forgot lol)",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
       }
     ],
     "sora": [
@@ -918,6 +988,18 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "tablehabit": [
+      {
+        "version": "1.27.6",
+        "date": "2026-09-07",
+        "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+        "size": 14790504,
+        "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
+        "localizedDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
+      }
+    ],
     "taurine": [
       {
         "version": "1.1.7",
@@ -974,6 +1056,18 @@
         "localizedDescription": "Thunder 0.8.6 | thunder-v0.8.6\n\nHey everyone! Sorry for the back-to-back releases again. This hotfix fixes another issue related to grey screens when navigating to comments from the inbox or user profile. As always, if you encounter any issues or have feedback, please share them with the Thunder community or on GitHub.\n\nIf you're enjoying Thunder and would like to show some support, star this project on GitHub! This helps gain visibility for the project and allows more contributors to help with the continued development of Thunder. If you'd like to show some appreciation, you can sponsor me on [GitHub](https://github.com/sponsors/hjiangsu) or donate via [Liberapay](https://en.liberapay.com/hjiangsu/) or [Ko-fi](https://ko-fi.com/hjiangsu).\n\nWe have a [Matrix space](https://matrix.to/#/#thunderapp:matrix.org) if you would like to join in on discussions!\n\n---\n\n## Fixes\n* Fixed grey screen when navigating to comment by @hjiangsu in #2029\n\n**Full Changelog**: https://github.com/thunder-app/thunder/compare/0.8.5...0.8.6",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "trollfools": [
+      {
+        "version": "4.3-253",
+        "date": "2026-04-23",
+        "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
+        "size": 6214108,
+        "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+        "localizedDescription": "TrollFools 4.3-253 | TrollFools_4.3-253.tipa\n\n# Changelog\n\n## 4.3 Build 253 (2026-04-23)\n\n修复与 MachOKit 有关的一处断言崩溃。\n\n------\n\n## 4.3 Build 253 (2026-04-23) [EN]\n\nFixed an assertion crash related to MachOKit.\n\n------\n\n## 4.3 Build 246 (2026-04-16)\n\n修复二次注入时可能误选已注入动态库作为目标 Mach-O 的问题。\n\n### 修复\n\n- 注入目标选取：修复追加注入时，上次注入的动态库可能被误选为注入目标的问题。  \n  新增三层防御：从注入前备份读取原始 Load Commands 以还原真实依赖链；枚举阶段跳过 `.troll-fools.bak` 备份文件；通过备份差分精确识别并排除已注入的动态库。\n\n------\n\n## 4.3 Build 246 (2026-04-16) [EN]\n\nFixed an issue where re-injection could incorrectly select a previously-injected dylib as the target Mach-O.\n\n### Fixed\n\n- Target selection: Fixed re-injection potentially picking a previously-injected dylib as the injection target.  \n  Added three-layer defense: read original load commands from pre-injection backup to restore the true dependency chain; skip `.troll-fools.bak` backup files during enumeration; use backup-diff to precisely identify and exclude previously-injected dylibs.\n\n------\n\n## 4.3 (2026-04-13)\n\n本次版本聚焦于“动态加载框架兼容性”和“页面说明可理解性”，并包含插件管理流程调整与资源清理。\n\n### 修复\n\n- 注入兼容性：修复部分 Unity/运行时 `dlopen` 场景下无法命中可注入目标的问题。  \n  当主程序静态链接交集为空时，改为回退扫描 `Frameworks/` 中可用 Mach-O（含一级目录下 `.dylib`）。\n- 插件管理：调整“移除插件”流程，区分已启用与已禁用插件：  \n  已启用插件执行卸载；已禁用插件执行标记清理，降低批量处理风险。\n\n### 新增\n\n- 高级选项：新增“启用兼容模式回退”开关（默认开启），可控制是否在无静态链接命中时启用回退候选。\n- 结果页提示：当本次注入通过兼容模式完成时，在“已完成”下方显示额外提示。\n\n### 优化\n\n- 候选筛选：回退候选新增过滤，排除 `libswift*` 与已忽略注入相关动态库/框架，并统一大小写处理。\n- 诊断日志：增强 Mach-O 扫描日志，输出候选数量、文件大小、加密/不可读统计与最终选择结果，便于定位“无可用目标”问题。\n- 设置说明：优化高级选项页面结构与说明文案，减少非技术用户理解成本。\n- 广告与资源：移除内置广告位 `Letterpress` 及相关本地化词条/图标资源；更新营销图素材。\n\n### 本地化\n\n- 更新 `en/zh-Hans/it/vi` 词条，补充兼容模式与设置说明相关文案，并清理移除条目对应文案。\n\n------\n\n## 4.3 (2026-04-13) [EN]\n\nThis release focuses on dynamic-framework injection compatibility and clearer user guidance, plus plugin-management flow adjustments and resource cleanup.\n\n### Fixed\n\n- Injection compatibility: Fixed cases (notably Unity/runtime `dlopen` flows) where no injectable target could be selected.  \n  When the static-link intersection is empty, TrollFools",
+        "status": "current",
+        "firstSeen": "2026-09-15T06:46:35Z"
       }
     ],
     "ttkillerplus": [

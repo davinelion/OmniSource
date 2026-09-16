@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15",
+  "generatedAt": "2026-09-16",
   "totals": {
-    "apps": 94,
-    "verified": 93,
+    "apps": 101,
+    "verified": 100,
     "communityVerified": 1,
     "unverified": 0,
-    "hashVerified": 64,
-    "official": 75,
+    "hashVerified": 71,
+    "official": 82,
     "communityBuilds": 19,
-    "avgTrustScore": 7.02,
+    "avgTrustScore": 7.06,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -183,6 +183,27 @@
         "official upstream (github-release)"
       ],
       "downloadURL": "https://github.com/roothide/Bootstrap/releases/download/2.2.1/Bootstrap.tipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
+      "app": "byetunes",
+      "name": "ByeTunes",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "EduAlexxis/ByeTunes",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/EduAlexxis/ByeTunes/releases/download/v2.5/ByeTunes.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -649,6 +670,27 @@
       "trustBadge": "Trusted"
     },
     {
+      "app": "lara",
+      "name": "Lara",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "rooootdev/lara",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/rooootdev/lara/releases/download/0.2/lara_v0.2.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
       "app": "livecontainer",
       "name": "LiveContainer",
       "status": "VERIFIED",
@@ -962,6 +1004,48 @@
       "downloadURL": "https://github.com/Odyssey-Team/Odyssey/releases/download/v1.4.3/Odyssey-1.4.3.ipa",
       "trustScore": 6.0,
       "trustBadge": "Community"
+    },
+    {
+      "app": "onionbrowser",
+      "name": "Onion Browser",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "OnionBrowser/OnionBrowser",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
+      "app": "orbot",
+      "name": "Orbot",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "guardianproject/orbot-ios",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
     },
     {
       "app": "otraku",
@@ -1342,6 +1426,27 @@
       "trustBadge": "Trusted"
     },
     {
+      "app": "snmessenger",
+      "name": "SNMessenger",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "NguyenASang/SNMessenger",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/NguyenASang/SNMessenger/releases/download/v2.0.0/Messenger_517.0.0.SNMessenger.v2.0.0-2.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
       "app": "sora",
       "name": "Sora",
       "status": "VERIFIED",
@@ -1531,6 +1636,27 @@
       "trustBadge": "Trusted"
     },
     {
+      "app": "tablehabit",
+      "name": "Table Habit",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "FriesI23/mhabit",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
       "app": "taurine",
       "name": "Taurine",
       "status": "VERIFIED",
@@ -1611,6 +1737,27 @@
         "official upstream (github-release)"
       ],
       "downloadURL": "https://github.com/thunder-app/thunder/releases/download/0.8.6/thunder-v0.8.6.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
+      "app": "trollfools",
+      "name": "TrollFools",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "Lessica/TrollFools",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/Lessica/TrollFools/releases/download/v4.3-253/TrollFools_4.3-253.tipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },

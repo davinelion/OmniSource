@@ -4646,8 +4646,12 @@ html[data-view="compact"] .card-bottom {
 .quick-nav-section {
   padding-block: 14px 10px;
   position: sticky;
-  top: 78px;
-  z-index: 55;
+  /* --sticky-offset is the header capsule's bottom edge (tokens.css), so the row
+     follows the header instead of drifting 4px below it when the header changes.
+     z-index 54 keeps it *under* the nav backdrop (55) and the capsule (60), so
+     the bar dims with the page when the phone drawer opens. */
+  top: var(--sticky-offset);
+  z-index: 54;
   background: color-mix(in srgb, var(--bg) 82%, transparent);
   backdrop-filter: blur(20px) saturate(1.6);
   -webkit-backdrop-filter: blur(20px) saturate(1.6);
@@ -4697,6 +4701,8 @@ html[data-view="compact"] .card-bottom {
 }
 .quick-tab.is-active,
 .quick-tab[aria-current="page"],
+/* js/core.js' scroll-spy marks the current section with aria-current="true". */
+.quick-tab[aria-current="true"],
 .quick-tab.active {
   background: var(--accent-grad);
   color: #fff;
@@ -4733,7 +4739,8 @@ html[data-view="compact"] .card-bottom {
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x proximity;
   position: sticky;
-  top: 142px;
+  /* Under the quick-nav row: one token each, no stacked magic numbers. */
+  top: calc(var(--sticky-offset) + var(--tabbar-h));
   z-index: 40;
   background: color-mix(in srgb, var(--bg) 86%, transparent);
   backdrop-filter: blur(16px) saturate(1.5);
@@ -5297,4 +5304,137 @@ html[data-view="compact"] .card-bottom {
   .fab {
     transform: none !important;
   }
+}
+
+/* ============================================================================
+   Restored after PR #72's shell redesign (2026-09-15)
+   ========================================================================== */
+/* PR #72 rewrote the home shell around .quick-nav-section / .catalog-tabs and
+   dropped these rules while leaving the code that *creates* the nodes in place:
+   js/core.js still injects the scroll-progress line and the back-to-top bead
+   (setupScrollAffordances), js/site.js still fills #heroCategories, and the
+   scroll-hint fades are still toggled by class. Without their CSS those
+   affordances rendered unstyled or invisible, so the rules come back verbatim. */
+
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 2px;
+  z-index: calc(var(--z-header) + 1);
+  pointer-events: none;
+  background: transparent;
+}
+.scroll-progress i {
+  display: block;
+  height: 100%;
+  background: var(--accent-grad);
+  background-size: 180% 100%;
+  border-radius: 0 2px 2px 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.scroll-progress.is-visible i { opacity: 1; }
+.to-top {
+  position: fixed;
+  right: clamp(14px, 3vw, 28px);
+  bottom: clamp(14px, 3vw, 28px);
+  /* Under the nav backdrop (55) for the same reason as the tab bar — and the
+     page cannot scroll while the drawer is open anyway. */
+  z-index: 54;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-nav);
+  box-shadow: var(--glass-shadow);
+  backdrop-filter: var(--blur-liquid);
+  -webkit-backdrop-filter: var(--blur-liquid);
+  color: var(--text);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(14px) scale(0.9);
+  pointer-events: none;
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease-spring);
+}
+.to-top svg {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.to-top.is-visible {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.to-top:hover { box-shadow: var(--glass-shadow-lg); }
+.to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.hero-cats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 18px;
+}
+.hero-cats-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 700 var(--text-2xs) var(--font-mono);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.hero-cats-label svg {
+  width: 13px;
+  height: 13px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hero-cats .chip { padding: 7px 13px; font-size: 12px; }
+[data-scroll-hint-host] { --hint-inset: 0px; }
+[data-scroll-hint-host]::before,
+[data-scroll-hint-host]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 34px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+  z-index: 1;
+}
+[data-scroll-hint-host].can-scroll-start::before { opacity: 0.9; }
+[data-scroll-hint-host].can-scroll-end::after { opacity: 0.9; }
+/* Anchor jumps have to clear both sticky bars: html's scroll-padding covers the
+   header capsule, this covers the tab row (js/core.js reads --tabbar-h for the
+   scroll-spy line, so the clearance is the same token, not a second magic
+   number). */
+
+body[data-page="home"] main > section[id] {
+  scroll-margin-top: calc(var(--tabbar-h) + 6px);
+}
+
+/* On a phone only the category row pins (the quick-nav row un-sticks), so the
+   extra clearance would leave a gap under the anchor target. --sticky-offset
+   shrinks with the shorter phone header (PR #72's mobile block carried this). */
+@media (max-width: 760px) {
+  :root { --sticky-offset: 66px; }
+  body[data-page="home"] main > section[id] { scroll-margin-top: 0; }
+  .catalog-tabs { top: var(--sticky-offset); }
 }

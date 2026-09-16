@@ -137,7 +137,7 @@
     <section class="hero os-hero" aria-label="OmniSource introduction">
       <div class="hero-bg" aria-hidden="true"><i class="spot"></i><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="hero-grid"></i></div>
       <div class="shell hero-inner">
-        <span class="eyebrow" id="healthPill"><span class="live-dot" id="healthDot"></span><span id="healthLabel">93 of 94 downloads online</span></span>
+        <span class="eyebrow" id="healthPill"><span class="live-dot" id="healthDot"></span><span id="healthLabel">All 101 downloads verified online</span></span>
         <picture class="hero-logo-wrap">
           <source srcset="assets/OmniSource.webp" type="image/webp">
           <img class="hero-logo" src="assets/OmniSource.png" alt="OmniSource logo" width="88" height="88" fetchpriority="high">
@@ -160,6 +160,18 @@
           </button>
         </div>
 
+        <!-- Quick shelves: the catalog's own categories, offered at the very
+             top of the page. js/site.js fills this from the live catalog; one
+             tap scrolls straight to the filtered grid instead of making a
+             first-time visitor scroll the whole page to find out what is
+             here. Hidden until there is something to show. -->
+        <div class="hero-cats" id="heroCategories" role="group" aria-label="Browse apps by category" data-i18n-aria-label="tabs.browseAria" hidden>
+          <span class="hero-cats-label">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/></svg>
+            <span data-i18n="tabs.browse">Browse</span>
+          </span>
+        </div>
+
         <div class="source-box" aria-label="OmniSource feed URL">
           <span class="source-glow" aria-hidden="true"></span>
           <div class="source-address">
@@ -180,30 +192,36 @@
         </div>
 
         <div class="stats-grid" id="statCards" aria-label="Live catalog statistics">
-          <div class="stat-card"><strong id="statApps" data-count>94</strong><span data-i18n="stats.apps">Total apps</span></div>
-          <div class="stat-card"><strong id="statSources" data-count>78</strong><span data-i18n="stats.sources">Upstream sources</span></div>
-          <div class="stat-card"><strong id="statOnline" data-count>93/94</strong><span data-i18n="stats.online">Downloads online</span></div>
-          <div class="stat-card"><strong id="statVerified" data-count>92/94</strong><span data-i18n="stats.verified">Verified apps</span></div>
+          <div class="stat-card"><strong id="statApps" data-count>101</strong><span data-i18n="stats.apps">Total apps</span></div>
+          <div class="stat-card"><strong id="statSources" data-count>85</strong><span data-i18n="stats.sources">Upstream sources</span></div>
+          <div class="stat-card"><strong id="statOnline" data-count>101/101</strong><span data-i18n="stats.online">Downloads online</span></div>
+          <div class="stat-card"><strong id="statVerified" data-count>100/101</strong><span data-i18n="stats.verified">Verified apps</span></div>
         </div>
-        <p class="text-mono text-xs text-faint mt-2" id="statSyncLabel" aria-live="polite">last sync 2026-09-14</p>
+        <p class="text-mono text-xs text-faint mt-2" id="statSyncLabel" aria-live="polite">last sync 2026-09-15</p>
       </div>
     </section>
 
     <!-- ============================= QUICK TABS ============================= -->
     <section class="section quick-nav-section" id="quickNav" aria-label="Quick navigation">
       <div class="shell">
-        <div class="quick-tabs-wrap">
-          <nav class="quick-tabs" aria-label="Quick jump to sections">
-            <a href="#trending" class="quick-tab" data-section="trending">
+        <div class="quick-tabs-wrap" data-scroll-hint-host>
+          <!-- One row, two contracts: .quick-tabs is PR #72's visual language, the
+               section-tabs id/class/data-target pair is what js/core.js' scroll-spy
+               (setupSectionTabs) marks as current and prunes when a section has no
+               data. The rail itself carries data-scroll-hints so the fade hints know
+               what is overflowing. -->
+          <nav class="quick-tabs section-tabs" id="sectionTabs" aria-label="Jump to a section" data-i18n-aria-label="tabs.label" data-scroll-hints>
+            <a class="quick-tab section-tab" href="#top" data-section="top" data-target="top" aria-current="true" data-i18n="tabs.overview">Overview</a>
+            <a class="quick-tab section-tab" href="#trending" data-section="trending" data-target="trending">
               <span class="qt-emoji" aria-hidden="true">🔥</span><span>Trending</span>
             </a>
-            <a href="#recent" class="quick-tab" data-section="recent">
+            <a class="quick-tab section-tab" href="#recent" data-section="recent" data-target="recent">
               <span class="qt-emoji" aria-hidden="true">✨</span><span>Recent</span>
             </a>
-            <a href="#featured" class="quick-tab" data-section="featured">
+            <a class="quick-tab section-tab" href="#featured" data-section="featured" data-target="featured">
               <span class="qt-emoji" aria-hidden="true">⭐</span><span>Featured</span>
             </a>
-            <a href="#catalog" class="quick-tab is-active" data-section="catalog">
+            <a class="quick-tab section-tab is-active" href="#catalog" data-section="catalog" data-target="catalog">
               <span class="qt-emoji" aria-hidden="true">📱</span><span>All Apps</span>
             </a>
             <a href="collections/" class="quick-tab">
@@ -405,7 +423,7 @@
         <!-- App discovery tabs — easy finding for users -->
         <div class="catalog-tabs" role="tablist" aria-label="Browse apps by category">
           <button class="catalog-tab active" data-tab-category="all" role="tab" aria-selected="true" type="button">
-            <span>All</span><span class="tab-count" id="tabCountAll">94</span>
+            <span>All</span><span class="tab-count" id="tabCountAll">101</span>
           </button>
           <button class="catalog-tab" data-tab-category="photo-video" role="tab" aria-selected="false" type="button">Photo & Video</button>
           <button class="catalog-tab" data-tab-category="music" role="tab" aria-selected="false" type="button">Music</button>
@@ -452,7 +470,7 @@
 
         <div class="filter-groups">
           <div class="filter-row" id="provenanceFilters" role="group" aria-label="Filter by build provenance"></div>
-          <div class="filter-row" id="categoryFilters" role="group" aria-label="Filter by category"></div>
+          <div class="filter-row" id="categoryFilters" role="group" aria-label="Filter apps by category" data-i18n-aria-label="tabs.categoriesAria"></div>
           <div class="filter-row" id="statusFilters" role="group" aria-label="Filter by release status"></div>
         </div>
 
@@ -464,6 +482,7 @@
           </div>
         </div>
 
+        <div class="catalog-panel" id="catalogPanel" role="tabpanel">
         <div class="apps-grid" id="appsGrid" aria-live="polite" aria-busy="true">
           <div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div><div class="os-skeleton skeleton-card"></div>
         </div>
@@ -473,6 +492,7 @@
           <p data-i18n="catalog.emptyText">Try another keyword or remove your filters.</p>
           <button class="button" type="button" id="emptyClear" data-i18n="catalog.emptyReset">Reset search</button>
         </div>
+        </div><!-- /#catalogPanel -->
       </div>
     </section>
 

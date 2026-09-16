@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "$schema": "../schemas/source-policy.schema.json",
+  "description": "Sourcing verdicts for third-party sources. A rule here is a decision that has already been made and argued in a docs/SOURCING-REPORT*.md: it blocks a host (or a repository, or a feed name) from becoming an OmniSource source, from being promoted out of the discovery store, and from being referenced by catalog.json. It does not mark anything as safe: a source with no rule is still reviewed by a human, exactly as before.",
+  "rules": [
+    {
+      "id": "account-gated-decrypted-store",
+      "description": "Account-gated 'decrypted app store' frontpages that redistribute FairPlay-stripped copies of App Store apps (ARM Store and the other FMHY 'Decrypted App Store' links).",
+      "reason": "no machine-readable AltStore/Feather feed, no developer-published download link or digest, sign-in required to reach any catalogue, and the binaries are re-released copies of other people's apps rather than the publisher's own build - so nothing about them can be attributed, verified or re-verified.",
+      "hosts": [
+        "armconverter.com/store",
+        "armconverter.com/decryptedappstore",
+        "decrypt.34306.lol",
+        "anyipa.me"
+      ],
+      "references": [
+        "https://armconverter.com/store/us",
+        "https://fmhy.net/mobile",
+        "https://github.com/iamsmmh/OmniSource/blob/main/docs/SOURCING-REPORT.md"
+      ],
+      "decidedAt": "2026-09-15"
+    },
+    {
+      "id": "tweaked-app-aggregator",
+      "description": "Aggregator feeds and IPA libraries that re-host tweaked or decrypted builds collected from elsewhere, including GitHub repositories whose only content is other people's .ipa files.",
+      "reason": "an aggregator is not the developer's release channel: the build, its version and its signature are chosen by whoever re-uploaded it, so provenance cannot be established or maintained from here. Where the same app has a real upstream, catalog that upstream instead.",
+      "hosts": [
+        "ipa.cypwn.xyz",
+        "ipalibrary.me",
+        "iosvizor.com",
+        "repository.apptesters.org",
+        "fastsign.dev"
+      ],
+      "repos": [
+        "Neoncat-OG/TrollStore-IPAs",
+        "baretsky/baretsky-tweaked-ipas-library",
+        "Win98Plus/signed_apple-apps",
+        "Stuffed18/ipa-archive-updated",
+        "2nkn0w/ipalibrary.me-source",
+        "Ja77Man/fastsign-full-sidestore",
+        "driftywinds/driftywinds.github.io"
+      ],
+      "references": [
+        "https://fmhy.net/mobile",
+        "https://github.com/iamsmmh/OmniSource/blob/main/docs/DISCOVERY.md"
+      ],
+      "decidedAt": "2026-09-15"
+    },
+    {
+      "id": "cracked-package-repository",
+      "description": "Repositories and archives whose purpose is distributing cracked, paid-for-free or abandoned commercial software rather than their own builds.",
+      "reason": "distributing paid software without the developer's consent is out of scope for this project, and a catalogue built on it could not survive the first takedown; these feeds are also where injected adware historically shows up.",
+      "hosts": [
+        "rejail.ru",
+        "platinmods.com",
+        "pdalife.com",
+        "4pda.to",
+        "archive.org/details/iosobscura"
+      ],
+      "nameKeywords": [
+        "cracked",
+        "paid ipa",
+        "iosgods",
+        "appvalley",
+        "tutubox",
+        "tutuapp",
+        "panda helper",
+        "coolstore",
+        "scarlet",
+        "cydia 2"
+      ],
+      "references": [
+        "https://fmhy.net/mobile",
+        "https://github.com/iamsmmh/OmniSource/blob/main/docs/SOURCING-REPORT.md"
+      ],
+      "decidedAt": "2026-09-15"
+    }
+  ]
+}

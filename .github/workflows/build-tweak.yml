@@ -6,6 +6,16 @@
 #
 # How to run:
 #   Actions → "Build & Inject Tweak" → Run workflow → provide IPA URL & Deb URL.
+#
+# Scope limits, enforced below rather than left to goodwill:
+#   * both inputs must be HTTPS and must not come from a host recorded in
+#     data/source_policy.json (account-gated "decrypted app store" frontpages,
+#     cracked-package repos, aggregator IPA libraries). OmniSource publishes
+#     what an upstream project releases; it does not become a repackaging
+#     service for somebody else's paid app, and the artifact of this workflow is
+#     deliberately a workflow artifact — never a catalog release.
+#   * the patcher is manual-dispatch only. It is not scheduled, and nothing
+#     promotes its output into feeds/apps.json or catalog.json.
 # =============================================================================
 
 name: Build & Inject Tweak
@@ -87,6 +97,20 @@ jobs:
             exit 1
           fi
           echo "safe_name=${SAFE_NAME}" >> "${GITHUB_OUTPUT}"
+
+      # Recorded sourcing verdicts apply here as well: a base IPA pulled from an
+      # account-gated cracked-app storefront, or a .deb from a cracked-package
+      # repository, is refused before anything is downloaded. The run prints the
+      # rule id and its reason so the operator reads a decision instead of a
+      # generic network failure.
+      - name: Sourcing policy gate
+        env:
+          BASE_IPA_URL: ${{ inputs.base_ipa_url }}
+          TWEAK_DEB_URL: ${{ inputs.tweak_deb_url }}
+        run: |
+          set -euo pipefail
+          export PYTHONPATH=src
+          python3 -m omnisource.source_policy check-url "${BASE_IPA_URL}" "${TWEAK_DEB_URL}"
 
       - name: Download Base IPA & Deb Tweak
         env:

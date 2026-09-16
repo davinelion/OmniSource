@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15",
+  "generatedAt": "2026-09-16",
   "baseURL": "https://iamsmmh.github.io/OmniSource",
   "clients": [
     {
@@ -5970,6 +5970,440 @@
           "manualSetup": false,
           "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/chatsen.json",
           "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/chatsen.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "trollfools",
+      "name": "TrollFools",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "lara",
+      "name": "Lara",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "onionbrowser",
+      "name": "Onion Browser",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "orbot",
+      "name": "Orbot",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "tablehabit",
+      "name": "Table Habit",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "byetunes",
+      "name": "ByeTunes",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
+          "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
+        }
+      ]
+    },
+    {
+      "slug": "snmessenger",
+      "name": "SNMessenger",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+      "cards": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "icon": "AltStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "instructions": "Tap to add the source to AltStore."
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "icon": "SideStore.webp",
+          "compatible": true,
+          "recommended": true,
+          "manualSetup": false,
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "instructions": "Tap to add the source to SideStore."
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "icon": "Feather.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "instructions": "Tap to add the source to Feather."
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "icon": "E-Sign.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "instructions": "Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL."
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "icon": "LiveContainer.webp",
+          "compatible": true,
+          "recommended": false,
+          "manualSetup": false,
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
+          "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
           "instructions": "Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL."
         }
       ]

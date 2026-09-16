@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#e8eef8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#07070f" id="themeColor">
+  <title>Tweaks — OmniSource</title>
+  <meta name="description" content="Tweaked apps and on-device tweak injectors">
+  <link rel="canonical" href="https://iamsmmh.github.io/OmniSource/collections/tweaks/">
+  <meta property="og:site_name" content="OmniSource">
+  <meta property="og:title" content="Tweaks — OmniSource">
+  <meta property="og:description" content="Tweaked apps and on-device tweak injectors">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iamsmmh.github.io/OmniSource/collections/tweaks/">
+  <meta property="og:image" content="https://iamsmmh.github.io/OmniSource/assets/OmniSource.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tweaks — OmniSource">
+  <meta name="twitter:description" content="Tweaked apps and on-device tweak injectors">
+  <meta name="twitter:image" content="https://iamsmmh.github.io/OmniSource/assets/OmniSource.png">
+  <link rel="icon" type="image/png" href="../../assets/OmniSource.png">
+  <link rel="apple-touch-icon" href="../../assets/OmniSource.png">
+  <link rel="preload" href="../../assets/design-system/tokens.css" as="style">
+  <link rel="preload" href="../../assets/design-system/components.css" as="style">
+  <link rel="stylesheet" href="../../assets/design-system/tokens.css">
+  <link rel="stylesheet" href="../../assets/design-system/utilities.css">
+  <link rel="stylesheet" href="../../assets/design-system/animations.css">
+  <link rel="stylesheet" href="../../assets/design-system/components.css">
+  <style>
+    .col-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem;margin-top:1rem}
+    .col-app{display:flex;gap:.9rem;padding:1rem;border-radius:14px;text-decoration:none;color:inherit;
+      background:var(--surface-2,rgba(128,128,150,.07))}
+    .col-app img{width:64px;height:64px;border-radius:14px;object-fit:cover;flex-shrink:0}
+    .col-app-body{display:flex;flex-direction:column;gap:.15rem;min-width:0}
+    .col-app-name{font-weight:700}
+    .col-app-meta{font-size:.8rem;opacity:.65}
+    .col-app-desc{font-size:.85rem;opacity:.8;display:-webkit-box;-webkit-line-clamp:3;
+      -webkit-box-orient:vertical;overflow:hidden}
+  </style>
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('omnisource-theme');
+        if (t !== 'light' && t !== 'dark') t = 'auto';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-page="collections">
+  <main class="shell" id="main" style="padding-top:1.5rem;padding-bottom:3rem">
+    <p><a href="../../collections/">← All collections</a> · <a href="../../">Home</a></p>
+    <h1 style="font-size:1.7rem">Tweaks</h1>
+    <p style="opacity:.8">Tweaked apps and on-device tweak injectors</p>
+    <p style="opacity:.7">Tweaked builds of YouTube, music, X, Instagram, Messenger, Discord and Twitch apps, plus the tools that inject tweaks into an app on the device. Every entry is published installable by the tweak project itself — OmniSource tracks and re-verifies that release, it does not patch binaries.</p>
+    <div class="col-grid">
+      <a class="col-app" href="../../apps/trollfools/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/TrollFools.webp" alt="TrollFools icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">TrollFools</span>
+  <span class="col-app-meta">4.3-253</span>
+  <span class="col-app-desc">Inject tweaks into installed apps on-device</span></span>
+</a><a class="col-app" href="../../apps/bootstrap/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Bootstrap.webp" alt="Bootstrap icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">Bootstrap</span>
+  <span class="col-app-meta">2.2.1</span>
+  <span class="col-app-desc">RootHide bootstrap for iOS 15 – 17</span></span>
+</a><a class="col-app" href="../../apps/lara/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Lara.webp" alt="Lara icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">Lara</span>
+  <span class="col-app-meta">0.2</span>
+  <span class="col-app-desc">DarkSword customization toolbox for iOS 17 - 26.0.1</span></span>
+</a><a class="col-app" href="../../apps/purekfd/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/PureKFD.webp" alt="PureKFD icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">PureKFD</span>
+  <span class="col-app-meta">6.0.2</span>
+  <span class="col-app-desc">Jailed package manager</span></span>
+</a><a class="col-app" href="../../apps/uyouenhanced/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/uYouEnhanced.webp" alt="uYouEnhanced icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">uYouEnhanced</span>
+  <span class="col-app-meta">21.14.4</span>
+  <span class="col-app-desc">uYouPlus with even more features!</span></span>
+</a><a class="col-app" href="../../apps/ytlite/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/YouTube.webp" alt="YouTubePlus icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">YouTubePlus</span>
+  <span class="col-app-meta">21.24.3</span>
+  <span class="col-app-desc">Lightweight YouTube tweak with no ads and PiP</span></span>
+</a><a class="col-app" href="../../apps/youpro/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/YouTube.webp" alt="YouPro icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">YouPro</span>
+  <span class="col-app-meta">21.37.4</span>
+  <span class="col-app-desc">Feature-rich YouTube tweak by alibusut</span></span>
+</a><a class="col-app" href="../../apps/ytkp/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/YouTube.webp" alt="YTKillerPlus icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">YTKillerPlus</span>
+  <span class="col-app-meta">21.37.4</span>
+  <span class="col-app-desc">Advanced YouTube tweak with extensive controls</span></span>
+</a><a class="col-app" href="../../apps/ytkace/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/YouTube.webp" alt="YTKACE icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">YTKACE</span>
+  <span class="col-app-meta">21.36.6</span>
+  <span class="col-app-desc">YTKACE</span></span>
+</a><a class="col-app" href="../../apps/youmod/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/YouTube.webp" alt="YouMod icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">YouMod</span>
+  <span class="col-app-meta">21.37.4</span>
+  <span class="col-app-desc">All-in-one YouTube enhancement tweak</span></span>
+</a><a class="col-app" href="../../apps/maxtube/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/MaxTube.webp" alt="MaxTube icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">MaxTube</span>
+  <span class="col-app-meta">21.31.3</span>
+  <span class="col-app-desc">YTPlus with ten extra tweaks</span></span>
+</a><a class="col-app" href="../../apps/ytmusic/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/YouTubeMusic.webp" alt="YTMusicUltimate icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">YTMusicUltimate</span>
+  <span class="col-app-meta">9.37.2</span>
+  <span class="col-app-desc">Lightweight YouTube Music tweak</span></span>
+</a><a class="col-app" href="../../apps/maxmusic/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/MaxMusic.webp" alt="MaxMusic icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">MaxMusic</span>
+  <span class="col-app-meta">9.36.1</span>
+  <span class="col-app-desc">YTMusicUltimate with extra tweaks</span></span>
+</a><a class="col-app" href="../../apps/bhtwitter/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/X.webp" alt="BHTwitter icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">BHTwitter</span>
+  <span class="col-app-meta">4.4</span>
+  <span class="col-app-desc">X (Twitter) with no ads, downloads and the chronological timeline</span></span>
+</a><a class="col-app" href="../../apps/neofreebird/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/NeoFreeBird.webp" alt="NeoFreeBird icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">NeoFreeBird</span>
+  <span class="col-app-meta">2.2</span>
+  <span class="col-app-desc">Modified Twitter with QoL fixes and reverts</span></span>
+</a><a class="col-app" href="../../apps/redditfilter/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Reddit.webp" alt="RedditFilter icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">RedditFilter</span>
+  <span class="col-app-meta">2025.37.0</span>
+  <span class="col-app-desc">Filter unwanted content from your Reddit feed</span></span>
+</a><a class="col-app" href="../../apps/inkillerplus/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Instagram.webp" alt="iNKillerPlus icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">iNKillerPlus</span>
+  <span class="col-app-meta">446.0.0</span>
+  <span class="col-app-desc">Instagram with downloads, ghost mode and no ads</span></span>
+</a><a class="col-app" href="../../apps/ryukgram/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Instagram.webp" alt="RyukGram icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">RyukGram</span>
+  <span class="col-app-meta">446.0.0</span>
+  <span class="col-app-desc">Instagram tweak for power users by faroukbmiled</span></span>
+</a><a class="col-app" href="../../apps/ttkillerplus/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/TikTok.webp" alt="TTKillerPlus icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">TTKillerPlus</span>
+  <span class="col-app-meta">46.8.0</span>
+  <span class="col-app-desc">TikTok with downloads, no ads and region switch</span></span>
+</a><a class="col-app" href="../../apps/snmessenger/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Messenger.webp" alt="SNMessenger icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">SNMessenger</span>
+  <span class="col-app-meta">517.0.0</span>
+  <span class="col-app-desc">Messenger tweak with its own sideloaded build</span></span>
+</a><a class="col-app" href="../../apps/twitchadblock/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/TAB.webp" alt="TwitchAdBlock icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">TwitchAdBlock</span>
+  <span class="col-app-meta">30.7</span>
+  <span class="col-app-desc">Ad blocker for the Twitch app on iOS</span></span>
+</a><a class="col-app" href="../../apps/raintweak/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Discord.webp" alt="RainTweak icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">RainTweak</span>
+  <span class="col-app-meta">0.9.3</span>
+  <span class="col-app-desc">Discord client mod with themes and QoL fixes</span></span>
+</a><a class="col-app" href="../../apps/infuseplus/">
+  <img src="https://iamsmmh.github.io/OmniSource/assets/Infuse.webp" alt="Infuse Plus icon" width="64" height="64" loading="lazy">
+  <span class="col-app-body"><span class="col-app-name">Infuse Plus</span>
+  <span class="col-app-meta">8.5.3</span>
+  <span class="col-app-desc">Enhancer tweak for the Infuse video player</span></span>
+</a>
+    </div>
+  </main>
+</body>
+</html>

@@ -707,6 +707,10 @@ def _homepage_stat_values(health_doc: dict[str, Any], analytics_doc: dict[str, A
         "statVerified": f"{verified}/{total}",
         "healthLabel": banner,
         "statSyncLabel": f"last sync {last_sync}" if last_sync else "",
+        # PR #72's category row shows an "All" count. It is catalog data, so the
+        # committed copy must carry the real number: no-JS readers and crawlers
+        # would otherwise read whatever was typed when the row was drafted.
+        "tabCountAll": str(total),
     }
 
 
@@ -730,6 +734,8 @@ def _inject_homepage_stats(path: Path, health_doc: dict[str, Any], analytics_doc
             pattern = re.compile(r'(<span id="healthLabel">)[^<]*(</span>)')
         elif key == "statSyncLabel":
             pattern = re.compile(r'(<p[^>]*id="statSyncLabel"[^>]*>)[^<]*(</p>)')
+        elif key == "tabCountAll":
+            pattern = re.compile(r'(<span class="tab-count" id="tabCountAll">)[^<]*(</span>)')
         else:
             pattern = re.compile(rf'(<strong id="{re.escape(key)}" data-count>)[^<]*(</strong>)')
         safe = escape(value)

@@ -90,6 +90,73 @@ verified JSON feed stays quarantined. Scores below 25 are also retained as
 quarantine evidence; no missing hash or mirror is fabricated. Weights and
 signals are documented in `src/omnisource/reputation.py`.
 
+## Sourcing verdicts (`data/source_policy.json`)
+
+A source that has been reviewed and rejected is recorded as a rule instead of
+being argued again on every discovery run. Rules are the only automated way a
+host can be *permanently* excluded, so they carry the same weight as the
+catalog: three gates enforce them (discovery merge, `assert_publishable()`,
+`scripts/validate.py` over `catalog.json`), and
+`.github/workflows/build-tweak.yml` refuses to download an input from one.
+
+```bash
+# why is this URL refused?
+PYTHONPATH=src python3 -m omnisource.source_policy check-url https://example.com/apps.json
+# every verdict, with its evidence
+PYTHONPATH=src python3 -m omnisource.source_policy explain --json | head -40
+# nothing in the catalog points at a blocked source
+PYTHONPATH=src python3 -m omnisource.source_policy check-catalog
+```
+
+To **add** a verdict: write the rule (id, description, reason, at least one HTTPS
+reference, `decidedAt`), add the same reasoning to a `docs/SOURCING-REPORT*.md`,
+and re-run `python3 scripts/validation/validate_source.py` plus the discovery
+pass so the store is pruned. To **reverse** one: delete the rule and the report
+row that justified it — never a per-run exception, or the next merge re-adds the
+record.
+
+Host entries are `host` (blocks the site and its subdomains) or `host/prefix`
+(only that subtree — used for `armconverter.com/store` so a verdict about a
+storefront is not a verdict about an unrelated tool on the same domain). A rule
+matching nothing, or declaring a host without a reason, fails the run rather
+than silently passing.
+
+## Source-build recipes (`data/source_builds.json`)
+
+The companion lane to the catalog: reviewed build-from-source recipes for iOS
+projects whose upstream publishes no artifact to attribute. They are kept out of
+`catalog.json`, feeds and mirrors on purpose — the operator action here is
+integrity, not publication.
+
+```bash
+# shape + policy + catalog cross-links (also runs inside scripts/validate.py)
+python3 scripts/build_source.py check
+# what a recipe will run, including the digest check before the build
+python3 scripts/build_source.py plan trollvnc
+# re-verify the pinned archive when a recipe is suspected stale
+python3 scripts/build_source.py fetch trollvnc
+```
+
+To look for new candidates (drafts only, reviewed by hand — it writes nothing
+unless `--out` is passed, and never touches the discovery store):
+
+```bash
+python3 scripts/discovery/find_source_builds.py --limit 5 --min-stars 200 --hash
+```
+
+A recipe goes **stale** when upstream publishes a real iOS release: then the
+project belongs in `catalog.json` with an `upstream` block, and the recipe either
+disappears or stays only if building from source is still how people get it (that
+overlap is reported as a warning by `check`). A recipe goes **bad** when its
+pinned commit or digest no longer matches what the forge serves — fix the pin and
+re-record the digest from the archive you actually downloaded, never from a
+summary. Nothing here is signed, uploaded or mirrored by this repository;
+`verification.evidence` records who digested what, when.
+
+When triaging a bug report about a "missing" app: if upstream has no release
+assets, a recipe is the right answer, and the report's refusal table explains why
+an aggregator's copy of that app is never the answer.
+
 ## Backups and rollback
 
 Create and verify a metadata-only recovery snapshot before a deployment or
