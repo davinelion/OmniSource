@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T06:46:35Z",
+  "generatedAt": "2026-09-15T22:43:23Z",
   "count": 78,
   "inputRecords": 101,
   "mergedDuplicates": 23,
@@ -504,7 +504,7 @@
               "fileType": "ZIP",
               "size": 20365290,
               "sha256": "3852fb61c3f2294359cca0683719d51ea4b57d97c8f79467f4d0cd4c163f45fc",
-              "downloads": 15,
+              "downloads": 16,
               "mimeType": "application/zip",
               "installable": false
             },
@@ -516,7 +516,7 @@
               "fileType": "IPA",
               "size": 114471562,
               "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 738,
+              "downloads": 926,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -528,7 +528,7 @@
               "fileType": "IPA",
               "size": 124722640,
               "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 1697,
+              "downloads": 2037,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -540,7 +540,7 @@
               "fileType": "IPA",
               "size": 114471417,
               "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-              "downloads": 38,
+              "downloads": 47,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -552,7 +552,7 @@
               "fileType": "IPA",
               "size": 124722495,
               "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 81,
+              "downloads": 87,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -564,7 +564,7 @@
               "fileType": "IPA",
               "size": 85880995,
               "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 197,
+              "downloads": 227,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -576,7 +576,7 @@
               "fileType": "IPA",
               "size": 96132071,
               "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 291,
+              "downloads": 335,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -588,7 +588,7 @@
               "fileType": "DEB",
               "size": 12186352,
               "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-              "downloads": 13,
+              "downloads": 15,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -600,13 +600,13 @@
               "fileType": "DEB",
               "size": 12187106,
               "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-              "downloads": 20,
+              "downloads": 22,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 291
+          "downloads": 335
         }
       ]
     },
@@ -970,16 +970,16 @@
       "bundleIdentifier": "app.cogwheel.conduit",
       "developerName": "cogwheel0",
       "category": "utilities",
-      "version": "4.1.4",
-      "versionDate": "2026-09-01",
-      "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/conduit.ipa",
-      "size": 35794270,
+      "version": "4.1.5",
+      "versionDate": "2026-09-15",
+      "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
+      "size": 35897764,
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Conduit.webp",
       "matchKeys": [
         "bundle:app.cogwheel.conduit",
         "github:cogwheel0/conduit",
         "url:github.com/cogwheel0/conduit",
-        "binary:github.com/cogwheel0/conduit/releases/download/v4.1.4/conduit.ipa"
+        "binary:github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa"
       ],
       "repositoryURLs": [],
       "sources": [
@@ -989,80 +989,79 @@
       "duplicates": 1,
       "versions": [
         {
-          "version": "4.1.4",
-          "date": "2026-09-01",
-          "localizedDescription": "Conduit 4.1.4 | conduit\n\n## What's Changed\n* Support Open WebUI v0.11.3 by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/696\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.3...v4.1.4",
-          "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/conduit.ipa",
-          "size": 35794270,
+          "version": "4.1.5",
+          "date": "2026-09-15",
+          "localizedDescription": "Conduit 4.1.5 | conduit\n\n## What's Changed\n* Fix native toolbar, Apple gating, streaming cadence, and wakelock regressions by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/718\n* Fix ten reported issues and vendor Hermes Agent as an API reference by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/725\n* Support Open WebUI shared folders by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/726\n* Upgrade all packages, add notification settings link and Ollama thinking replay by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/727\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5",
+          "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
+          "size": 35897764,
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/cogwheel0/conduit/releases/tag/v4.1.4",
+          "releaseUrl": "https://github.com/cogwheel0/conduit/releases/tag/v4.1.5",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "app-arm64-v8a-release.apk",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-arm64-v8a-release.apk",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-arm64-v8a-release.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 77845591,
-              "sha256": "1ff55c963065c4e5ccc1ff8f31e36eacc35f4faf8bf851693199e3bfd1cff356",
-              "downloads": 1697,
+              "size": 77753152,
+              "sha256": "bd5b74263acfe385674cf2cd7b422e5a0c61bc7cd5d4d691a5e068903a0a39e8",
+              "downloads": 348,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-armeabi-v7a-release.apk",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-armeabi-v7a-release.apk",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-armeabi-v7a-release.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 70339387,
-              "sha256": "31d949c6ef86dc8553ce7ab4a794a393096c95dd77c7074a9faaf36e643254ca",
-              "downloads": 21,
+              "size": 70197900,
+              "sha256": "72688c23fa7af11d15b39c38356098fdf6a5e5c9324621b2733c349839036b26",
+              "downloads": 1,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-release.aab",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-release.aab",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-release.aab",
               "platform": "android",
               "architecture": null,
               "fileType": "AAB",
-              "size": 172108069,
-              "sha256": "17d0254647ff56e6bf823da9227c7efd929e47af1d907d3267f5d4a48a323f42",
-              "downloads": 7,
+              "size": 171858907,
+              "sha256": "bcd22d86cf63bb1137693b031f34b78c961859417a61293756fb10e2391c8c6d",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "app-x86_64-release.apk",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/app-x86_64-release.apk",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/app-x86_64-release.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 83720927,
-              "sha256": "5a5f0f7c21b936f804e684ff4411a8ee94c3131d6ceb10be9db50922ea69b4c0",
-              "downloads": 15,
+              "size": 83563016,
+              "sha256": "9557e73be2702fbf6c4d2284a13057f89e7a5dca276379b9fca261abf058c14d",
+              "downloads": 0,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "conduit.ipa",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.4/conduit.ipa",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 35794270,
-              "sha256": "8657f3cbe68a00f6b965581ccbd417f42ff525823c80335e5e8efdb5e371d811",
-              "downloads": 159,
+              "size": 35897764,
+              "sha256": "4b53fed15852eb3414f23df70dc8012abac6730a241a27e80f488e9be1b8da22",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": true
             }
           ],
-          "sha256": "8657f3cbe68a00f6b965581ccbd417f42ff525823c80335e5e8efdb5e371d811",
-          "downloads": 159
+          "sha256": "4b53fed15852eb3414f23df70dc8012abac6730a241a27e80f488e9be1b8da22"
         }
       ]
     },
@@ -2739,7 +2738,7 @@
               "fileType": "APK",
               "size": 108612022,
               "sha256": "d89ffb0f4c7d73099b4227f04599fa24fb9fbc85618d72797c8bba6b55921460",
-              "downloads": 27,
+              "downloads": 34,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -2787,7 +2786,7 @@
               "fileType": "IPA",
               "size": 56199092,
               "sha256": "2418b6a4c8648bcad63a7b818dd017e7756953d7b5aa8e0f261f37b11e687d67",
-              "downloads": 3,
+              "downloads": 4,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -2811,7 +2810,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 169,
+              "downloads": 191,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -2847,7 +2846,7 @@
               "fileType": "APK",
               "size": 88506651,
               "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-              "downloads": 64,
+              "downloads": 69,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -2859,13 +2858,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 56,
+              "downloads": 63,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 56
+          "downloads": 63
         }
       ]
     },
@@ -3162,16 +3161,16 @@
       "bundleIdentifier": "com.kodjodevf.mangayomi",
       "developerName": "kodjodevf",
       "category": "other",
-      "version": "0.9.3",
-      "versionDate": "2026-09-14",
-      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
-      "size": 114239272,
+      "version": "0.9.4",
+      "versionDate": "2026-09-15",
+      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
+      "size": 114238780,
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
       "matchKeys": [
         "bundle:com.kodjodevf.mangayomi",
         "github:kodjodevf/mangayomi",
         "url:github.com/kodjodevf/mangayomi",
-        "binary:github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa"
+        "binary:github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa"
       ],
       "repositoryURLs": [],
       "sources": [
@@ -3181,188 +3180,188 @@
       "duplicates": 1,
       "versions": [
         {
-          "version": "0.9.3",
-          "date": "2026-09-14",
-          "localizedDescription": "Mangayomi 0.9.3 | Mangayomi-v0.9.3-ios\n\n## What's Changed\n* feat: refresh the library on a schedule by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/975\n* fix(player): persist completed episodes before navigation by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/979\n* fix(downloads): preserve queue and select the next unread chapters by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/978\n* Fixes memory and bugs where it would lag over time by @not-akari in https://github.com/kodjodevf/mangayomi/pull/977\n* fix: keep Discord chapter presence current by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/981\n* fix: decode current VOE video payloads by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/982\n* fix(restore): preserve Kotatsu category assignments by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/983\n* fix(player): retire native video surfaces safely by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/984\n* fix(download): harden workers and HLS recovery by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/985\n* fix(reader): sort local pages naturally by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/986\n* fix(library): keep read titles last in unread sort by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/988\n* fix(reader): make bulk read actions uniform by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/989\n* fix(player): preserve shortcuts when controls hide by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/990\n* fix(linux): fall back when Documents lookup fails by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/994\n* Rework API Sync Server by @not-akari in https://github.com/kodjodevf/mangayomi/pull/976\n* feat: redesign anime player by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/980\n* Add Korean translation by @jang-geon in https://github.com/kodjodevf/mangayomi/pull/1000\n* feat(l10n): complete Korean translation by @Abdellox in https://github.com/kodjodevf/mangayomi/pull/1004\n* fix(player): preserve local file URIs by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/987\n* fix(player): fall back from unsupported audio tracks by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/991\n* fix(repositories): await extension repository writes by @1Selxo in https://github.com/kodjodevf/mangayomi/pull/993\n\n## New Contributors\n* @1Selxo made their first contribution in https://github.com/kodjodevf/mangayomi/pull/979\n* @jang-geon made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1000\n* @Abdellox made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1004\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.2...v0.9.3",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
-          "size": 114239272,
+          "version": "0.9.4",
+          "date": "2026-09-15",
+          "localizedDescription": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
+          "size": 114238780,
           "minOSVersion": "15.0",
-          "releaseUrl": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.3",
+          "releaseUrl": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.4",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "Mangayomi-v0.9.3-android-arm64-v8a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-arm64-v8a.apk",
+              "filename": "Mangayomi-v0.9.4-android-arm64-v8a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-arm64-v8a.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 55175900,
-              "sha256": "2318d88f3c407da7239b4449ffed844314bb99798652eafdb73dd59afd4f68ac",
-              "downloads": 314,
+              "size": 55175908,
+              "sha256": "24a1309ec897b631b61be5d5b22ed3d222eeb3a2c24a9ee91084aff560ce2a23",
+              "downloads": 65,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-android-armeabi-v7a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-armeabi-v7a.apk",
+              "filename": "Mangayomi-v0.9.4-android-armeabi-v7a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-armeabi-v7a.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 54425118,
-              "sha256": "58099ded3eaeda3153cdf2f8aaed461e47be97beb3cc998946bf3eba3bda6130",
-              "downloads": 19,
+              "size": 54425290,
+              "sha256": "8902b11f6902dc035909538e758959913a68a02dcaf6d75f5a73c352e838ad04",
+              "downloads": 1,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-android-tv-arm64-v8a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-tv-arm64-v8a.apk",
+              "filename": "Mangayomi-v0.9.4-android-tv-arm64-v8a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-arm64-v8a.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 55195072,
-              "sha256": "d77c2ece3cf79644430261f6d22f39ce2b28ce82ed9fbea3c1d359167042b0bb",
-              "downloads": 16,
+              "size": 55195080,
+              "sha256": "72064d6d10286ccdbdfaa81af0a367c458eb9761d8ef12b4c8ef4c52d5fe49c1",
+              "downloads": 2,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-android-tv-armeabi-v7a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-tv-armeabi-v7a.apk",
+              "filename": "Mangayomi-v0.9.4-android-tv-armeabi-v7a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-armeabi-v7a.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 54444290,
-              "sha256": "011938eccc2b0b81c0b4bbe2f11aeb5d3fc3e48c9a94c7f7c746258c0077f7a8",
-              "downloads": 5,
+              "size": 54444462,
+              "sha256": "8c460b816b42c977da3a9ba71fbfb8f9b9dfc3c9558c8d6f691a435ea739dc6e",
+              "downloads": 1,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-android-tv-x86_64.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-tv-x86_64.apk",
+              "filename": "Mangayomi-v0.9.4-android-tv-x86_64.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-x86_64.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 57292927,
-              "sha256": "77a069af55ff60a131b65f0b6dab8b20905ad4f31a4430128826e8d1543402bb",
-              "downloads": 3,
+              "size": 57293035,
+              "sha256": "ffd9c27c3e2e3c0991e5d231dc8b6deb692b84b14c3b4a36703bd0c78226e170",
+              "downloads": 0,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-android-x86_64.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-android-x86_64.apk",
+              "filename": "Mangayomi-v0.9.4-android-x86_64.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-x86_64.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 57273755,
-              "sha256": "9301a1d52d3027e86337bea2dfe54952fe8110204cc9bceb5f11c74ed83480a0",
-              "downloads": 5,
+              "size": 57273863,
+              "sha256": "e04e0898171313ee9bb639226f81db8d1af43f16b67ad572d3cbfa6bec2f3665",
+              "downloads": 1,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-ios.ipa",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa",
+              "filename": "Mangayomi-v0.9.4-ios.ipa",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 114239272,
-              "sha256": "ea39263589ec421f8e21d3466ad0fe5ff51206542b5248707c2ab44984883c6a",
-              "downloads": 58,
+              "size": 114238780,
+              "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
+              "downloads": 8,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-linux.AppImage",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.AppImage",
+              "filename": "Mangayomi-v0.9.4-linux.AppImage",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.AppImage",
               "platform": "linux",
               "architecture": null,
               "fileType": "AppImage",
               "size": 182995448,
-              "sha256": "509dc693294fd9ddc0ded93bf85383a061d26477826b09c0bccf9aeb9c2ab341",
-              "downloads": 5,
+              "sha256": "f8404c44b3f63d14ee73090f13659ef8e4e769833d02218fc5f1d9747128759f",
+              "downloads": 3,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-linux.deb",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.deb",
+              "filename": "Mangayomi-v0.9.4-linux.deb",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.deb",
               "platform": "linux",
               "architecture": null,
               "fileType": "DEB",
-              "size": 34301682,
-              "sha256": "c3cab9eb6004cab4c4f555b230c13ea04592e98112b443c4f0aa8125c3b161f2",
-              "downloads": 3,
+              "size": 34302242,
+              "sha256": "13b13b960610e05e325c42e8c7af853976f135b143adc8b076b9918a72731229",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-linux.rpm",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.rpm",
+              "filename": "Mangayomi-v0.9.4-linux.rpm",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.rpm",
               "platform": "linux",
               "architecture": null,
               "fileType": "other",
-              "size": 41787737,
-              "sha256": "f1af28a738451a35bc92920a556bf8d0e18cfc9d0f6d6ec82da7902bf87e02a0",
-              "downloads": 2,
+              "size": 41787386,
+              "sha256": "e8b87eebdf5275dea7ac311a7dca53ec3dfac9dad3a5a63671c8e4c6f0240f48",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": false
             },
             {
-              "filename": "Mangayomi-v0.9.3-linux.zip",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-linux.zip",
+              "filename": "Mangayomi-v0.9.4-linux.zip",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.zip",
               "platform": "linux",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 41981883,
-              "sha256": "fdf08eba488b6f9f140363abe581d5e8145df81d624f42739f07fe2cfe026954",
-              "downloads": 3,
+              "size": 41982342,
+              "sha256": "46ed609c2a680899bbffcd9f4f8cc7655f3e831fb3b2df2fd840543b4b57f026",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": false
             },
             {
-              "filename": "Mangayomi-v0.9.3-macos.dmg",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-macos.dmg",
+              "filename": "Mangayomi-v0.9.4-macos.dmg",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-macos.dmg",
               "platform": "macos",
               "architecture": null,
               "fileType": "DMG",
-              "size": 122087376,
-              "sha256": "3241cb02f9daf3b772ac26aaa01350baef672bf4fef54f4d2c926340e01f283d",
-              "downloads": 6,
+              "size": 122087840,
+              "sha256": "a3b27413d4fadd52cb222415c5d0906a1fd4229e676c24ebab55e8e99332611b",
+              "downloads": 2,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-windows.exe",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-windows.exe",
+              "filename": "Mangayomi-v0.9.4-windows.exe",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-windows.exe",
               "platform": "windows",
               "architecture": null,
               "fileType": "EXE",
-              "size": 69611741,
-              "sha256": "cbac21108e1d3e7ca552b7fff875f50e119bda403c4ec2bad23102ae0c21ac1f",
-              "downloads": 52,
+              "size": 69609569,
+              "sha256": "62cdc446629b7c044412dbb0bf3ba7316a4121ac6f41fb505d52af979027bb2d",
+              "downloads": 9,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.3-windows.zip",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-windows.zip",
+              "filename": "Mangayomi-v0.9.4-windows.zip",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-windows.zip",
               "platform": "windows",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 95552088,
-              "sha256": "366ee7bebc01f59bc1ea4d9ef46e2a1190fa3e2434d792ba10a0fd5b9b765acc",
-              "downloads": 27,
+              "size": 95552072,
+              "sha256": "0cbb971c269a4cdfde2a3edcf57e7d0e66b3beaf4a2dde1724309633e0e1ed18",
+              "downloads": 3,
               "mimeType": "raw",
               "installable": false
             }
           ],
-          "sha256": "ea39263589ec421f8e21d3466ad0fe5ff51206542b5248707c2ab44984883c6a",
-          "downloads": 58
+          "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
+          "downloads": 8
         }
       ]
     },
@@ -3417,61 +3416,6 @@
           ],
           "sha256": "7f2adf280dba286ef1374fac874b87af9be535bae39f62139e0e68b4ae324a9f",
           "downloads": 6864
-        }
-      ]
-    },
-    {
-      "id": "com.google.ios.youtubemusic",
-      "name": "MaxMusic",
-      "bundleIdentifier": "com.google.ios.youtubemusic",
-      "developerName": "Mark02-2012",
-      "category": "music",
-      "version": "9.36.1",
-      "versionDate": "2026-09-10",
-      "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
-      "size": 106420283,
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/MaxMusic.webp",
-      "matchKeys": [
-        "bundle:com.google.ios.youtubemusic",
-        "github:mark02-2012/maxmusic",
-        "url:github.com/Mark02-2012/MaxMusic",
-        "binary:github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa"
-      ],
-      "repositoryURLs": [],
-      "sources": [
-        "https://github.com/mrdrvt99/YTMusicUltimate",
-        "https://github.com/Mark02-2012/MaxMusic"
-      ],
-      "sourceCount": 2,
-      "duplicates": 2,
-      "versions": [
-        {
-          "version": "9.36.1",
-          "date": "2026-09-09",
-          "localizedDescription": "YTMusicUltimate 9.36.1 | YTMusic 2.4.1 | YTMusicUltimate_9.36.1_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
-          "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
-          "size": 104992686,
-          "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/tag/ytmu-ipa29",
-          "source": "github",
-          "isPrerelease": false,
-          "isDraft": false,
-          "assets": [
-            {
-              "filename": "YTMusicUltimate_9.36.1_2.4.1.ipa",
-              "downloadUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa",
-              "platform": "ios",
-              "architecture": null,
-              "fileType": "IPA",
-              "size": 104992686,
-              "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-              "downloads": 252,
-              "mimeType": "application/octet-stream",
-              "installable": true
-            }
-          ],
-          "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-          "downloads": 252
         }
       ]
     },
@@ -5611,16 +5555,16 @@
       "bundleIdentifier": "com.SideStore.SideStore",
       "developerName": "SideStore Team",
       "category": "utilities",
-      "version": "0.6.4",
-      "versionDate": "2026-09-09",
-      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa",
-      "size": 27609918,
+      "version": "0.7.0",
+      "versionDate": "2026-09-15",
+      "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+      "size": 27770821,
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/SideStore.webp",
       "matchKeys": [
         "bundle:com.SideStore.SideStore",
         "github:sidestore/sidestore",
         "url:github.com/SideStore/SideStore",
-        "binary:github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa"
+        "binary:github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa"
       ],
       "repositoryURLs": [],
       "sources": [
@@ -5630,56 +5574,32 @@
       "duplicates": 1,
       "versions": [
         {
-          "version": "0.6.4",
-          "date": "2026-09-09",
-          "localizedDescription": "SideStore 0.6.4 | SideStore\n\n## Build Info\n\nBuilt at (UTC): `Wed Sep 09 17:59:46 2026`\nBuilt at (UTC date): `2026-09-09`\nCommit SHA: `f93a95c079057090bea355453ef24f6e8668dfa9`\nVersion: `0.6.4`\n\n#### What's Changed:\n- **Developer Portal in Settings**: Manage your Apple Developer App IDs, Provisioning Profiles, Certificates, Devices, and App Groups directly inside the app for both paid and free team types.\n- **Manual Profile Creation**: Paid developer accounts can now create manual profiles on app without having to reach developer portal.\n- **Certificate Management**: Certificate CSR + create/revoke in developer portal, export, import, view all data including ASN1, keys, and much more metadata.\n- **Full Two-Factor Authentication**: Added support for SMS verification, Voice phone call in addition to trusted devices during login 2FA Challenge.\n- **Cellular Refresh**: Now one can enable cellular refresh with shortcuts to refresh on the go without waiting for wifi anytime anywhere (credits to @spidy123222)\n- **Health Check**: Newer dedicated Health Check section in settings to diagnose device and network communication issues quickly.\n- **On-Device Anisette**: Switched to on-device anisette data generation as the primary anisette data source of OTP requests during 2FA. No more need for Remote anisette servers.\n- **App & Mach-O Inspector**: Inspect any app's internal files, Mach-O binaries, and embedded provisioning profiles right from App Info.\n- **Storage Explorer**: Full view of all storage managed by the app and its sideloaded apps including caches, appgroups, tmp dirs, private documents dir etc.\n- **Faster VPN peer auto-discovery**: Parallel connection probing discovers your device on the local vpn network much faster by doing a parallel probe for device services like lockdown/rppairing ports.\n- **Dual Connection Modes**: Switch between LocalDevVPN/WireGuard and Remote servers as for loopback as required.\n- **Account Config Export**: Export and import your accounts and sources as `.sideconf` files for quick setup or migration.\n- **Full Liquid-Glass support**: Added smooth pill buttons, improved scroll animations, and fixed UI flickering in the My Apps tab.\n\n#### ⚠️Known Issue\n- iOS 16 users may have difficulty connecting to LocalDevVPN and is being actively worked on.\n\n#### Full Changelog: [0.6.3...0.6.4](https://github.com/SideStore/SideStore/compare/239fc7c2b7f3c319d3608bd49c30d1457216d5df...f93a95c079057090bea355453ef24f6e8668dfa9)",
-          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa",
-          "size": 27609918,
+          "version": "0.7.0",
+          "date": "2026-09-15",
+          "localizedDescription": "SideStore 0.7.0 | SideStore\n\n## Build Info\n\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\nBuilt at (UTC date): `2026-09-11`\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\nVersion: `0.7.0-20260911.328+6032424a`\n\n#### What's Changed:\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\n\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+          "size": 27770821,
           "minOSVersion": "15.0",
-          "releaseUrl": "https://github.com/SideStore/SideStore/releases/tag/0.6.4",
+          "releaseUrl": "https://github.com/SideStore/SideStore/releases/tag/0.7.0-alpha",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "build-logs.zip",
-              "downloadUrl": "https://github.com/SideStore/SideStore/releases/download/0.6.4/build-logs.zip",
-              "platform": "unknown",
-              "architecture": null,
-              "fileType": "ZIP",
-              "size": 144448,
-              "sha256": "e4b288da3464fd2374480cd395fcce46433e3173007c787e9d38c129051cc180",
-              "downloads": 129,
-              "mimeType": "application/zip",
-              "installable": false
-            },
-            {
-              "filename": "SideStore.dSYMs.zip",
-              "downloadUrl": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.dSYMs.zip",
-              "platform": "unknown",
-              "architecture": null,
-              "fileType": "ZIP",
-              "size": 25011698,
-              "sha256": "5c6f16defae96e41a86a5df185d6a6a1de82977ecb5665ffd354ea019dbe2bd8",
-              "downloads": 297,
-              "mimeType": "application/zip",
-              "installable": false
-            },
-            {
               "filename": "SideStore.ipa",
-              "downloadUrl": "https://github.com/SideStore/SideStore/releases/download/0.6.4/SideStore.ipa",
+              "downloadUrl": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 27609918,
-              "sha256": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9",
-              "downloads": 45714,
+              "size": 27770821,
+              "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
+              "downloads": 2587,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9",
-          "downloads": 45714
+          "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
+          "downloads": 2587
         }
       ]
     },
@@ -6278,7 +6198,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 10743,
+              "downloads": 10763,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -6290,7 +6210,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1429,
+              "downloads": 1434,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -6326,13 +6246,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 181,
+              "downloads": 189,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 181
+          "downloads": 189
         }
       ]
     },
@@ -6805,7 +6725,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 452,
+              "downloads": 463,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -6817,13 +6737,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1019,
+              "downloads": 1042,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1019
+          "downloads": 1042
         }
       ]
     },
@@ -7705,13 +7625,13 @@
               "fileType": "IPA",
               "size": 129607592,
               "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-              "downloads": 74,
+              "downloads": 100,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-          "downloads": 74
+          "downloads": 100
         },
         {
           "version": "21.36.6",
@@ -7809,13 +7729,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 181,
+              "downloads": 187,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 181
+          "downloads": 187
         },
         {
           "version": "21.24.3",
@@ -7911,6 +7831,89 @@
           ],
           "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
           "downloads": 26
+        }
+      ]
+    },
+    {
+      "id": "com.google.ios.youtubemusic",
+      "name": "YTMusicUltimate",
+      "bundleIdentifier": "com.google.ios.youtubemusic",
+      "developerName": "dayanch96",
+      "category": "music",
+      "version": "9.37.2",
+      "versionDate": "2026-09-15",
+      "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
+      "size": 105090579,
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTubeMusic.webp",
+      "matchKeys": [
+        "bundle:com.google.ios.youtubemusic",
+        "github:mrdrvt99/ytmusicultimate",
+        "url:github.com/mrdrvt99/YTMusicUltimate",
+        "binary:github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa"
+      ],
+      "repositoryURLs": [],
+      "sources": [
+        "https://github.com/Mark02-2012/MaxMusic",
+        "https://github.com/mrdrvt99/YTMusicUltimate"
+      ],
+      "sourceCount": 2,
+      "duplicates": 2,
+      "versions": [
+        {
+          "version": "9.37.2",
+          "date": "2026-09-15",
+          "localizedDescription": "YTMusicUltimate 9.37.2 | YTMusic 2.4.1 | YTMusicUltimate_9.37.2_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
+          "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
+          "size": 105090579,
+          "minOSVersion": "16.0",
+          "releaseUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/tag/ytmu-ipa30",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "YTMusicUltimate_9.37.2_2.4.1.ipa",
+              "downloadUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 105090579,
+              "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
+              "downloads": 6,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
+          "downloads": 6
+        },
+        {
+          "version": "9.36.1",
+          "date": "2026-09-10",
+          "localizedDescription": "MaxMusic 9.36.1 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.36.1\n\n**Changed**\nYouTube Music version",
+          "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
+          "size": 106420283,
+          "minOSVersion": "16.0",
+          "releaseUrl": "https://github.com/Mark02-2012/MaxMusic/releases/tag/MaxMusic_9.36.1_2.4.1_(90)",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "MaxMusic_2.4.1_9.36.1.ipa",
+              "downloadUrl": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 106420283,
+              "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
+              "downloads": 509,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
+          "downloads": 509
         }
       ]
     },

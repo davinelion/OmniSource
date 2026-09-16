@@ -40,6 +40,9 @@ $ python3 scripts/build_source.py verify autoflex --archive ./file.tar.gz
 $ python3 scripts/build_source.py hash ./file.tar.gz   # when authoring a recipe
 ```
 
+`make recipes` runs the gate and the list together, and `make recipes-find` runs the
+candidate finder at the thresholds a review pass usually wants.
+
 `plan` prints a transcript you can paste into a shell. It deliberately ends with
 a comment about signing rather than a signing command, and it verifies the digest
 *before* anything is compiled, so a silently updated or mirrored archive cannot

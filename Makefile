@@ -1,4 +1,4 @@
-.PHONY: all build publish site serve smoke validate metadata test format lint check audit clean version discovery monitoring security analytics derived registry intelligence backup web
+.PHONY: all build publish site serve smoke validate metadata test format lint check audit clean version discovery monitoring security analytics derived registry intelligence backup web recipes recipes-find
 
 PYTHON ?= python3
 PORT ?= 8000
@@ -100,6 +100,15 @@ derived:
 	$(PYTHON) scripts/build_api_v3.py
 	$(PYTHON) scripts/registry/build_registry.py
 	$(PYTHON) scripts/intelligence/build_intelligence.py
+
+# Source-build lane (data/source_builds.json): recipes for iOS projects whose
+# upstream publishes source but no artifact this project could attribute.
+recipes:
+	$(PYTHON) scripts/build_source.py check
+	$(PYTHON) scripts/build_source.py list
+
+recipes-find:
+	$(PYTHON) scripts/discovery/find_source_builds.py --limit 10 --min-stars 100
 
 # Modern website (Next.js): install, typecheck, lint, production build.
 web:

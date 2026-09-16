@@ -108,6 +108,7 @@ class TestWebsiteShell(unittest.TestCase):
             'id="statVerified" data-count>',
             'id="healthLabel">',
             'id="statSyncLabel"',
+            'id="tabCountAll">',
         ):
             self.assertIn(marker, home, f"home page stat marker missing: {marker}")
         # The committed home page carries the real values from the last build,

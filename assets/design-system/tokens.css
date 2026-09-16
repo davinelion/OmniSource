@@ -403,8 +403,10 @@ html[data-theme="dark"] {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 20px);
+  scroll-padding-top: calc(var(--header-h) + 24px);
   -webkit-text-size-adjust: 100%;
+  /* Prevent horizontal scroll without using clip which breaks sticky on iOS */
+  overflow-x: hidden;
 }
 
 body {
@@ -416,7 +418,8 @@ body {
     radial-gradient(ellipse 900px 480px at 16% 52%, color-mix(in srgb, var(--blue) 4%, transparent), transparent 58%),
     radial-gradient(ellipse 720px 420px at 78% 42%, color-mix(in srgb, var(--accent-1) 3%, transparent), transparent 58%),
     var(--bg);
-  background-attachment: fixed;
+  /* Fixed attachment causes Safari \"A problem repeatedly occurred\" crash with large blurs */
+  background-attachment: scroll;
   color: var(--text);
   font-family: var(--font-sans);
   font-size: var(--text-base);
@@ -424,7 +427,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: clip;
+  overflow-x: hidden;
+  /* Isolate scrolling to avoid backdrop-filter repainting entire page */
+  position: relative;
+}
+
+/* iOS Safari specific performance fixes — reduce blur layers that cause memory pressure */
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-attachment: scroll !important;
+  }
+  body::before {
+    /* Disable fixed aurora on iOS — major cause of repeated crash */
+    display: none !important;
+  }
 }
 
 /* Ambient aurora — slow fluid drift */

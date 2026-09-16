@@ -230,8 +230,11 @@ def main(argv: list[str] | None = None) -> int:
     seen: set[str] = set()
     found: list[dict[str, Any]] = []
     notes: list[str] = []
+    searched = 0
     for term in terms:
-        for entry in _search(args.forge, term, args.limit, token):
+        results = _search(args.forge, term, args.limit, token)
+        searched += len(results)
+        for entry in results:
             stars = int(entry.get("stargazers_count") or entry.get("star_count") or 0)
             if stars < args.min_stars:
                 continue
@@ -253,7 +256,15 @@ def main(argv: list[str] | None = None) -> int:
             f"  draft {skeleton['repo']:<38} {skeleton['build']['system']:<9} "
             f"pin={skeleton['pin']['ref']:<16} digest={digest}"
         )
-    print(f"find_source_builds: {len(found)} draft recipe(s), {len(notes)} note(s)")
+    if not searched:
+        # "No candidates" and "the forge told us nothing" are different facts, and
+        # only one of them means the lane is already covered.
+        print(
+            f"::warning::find_source_builds: {args.forge} returned no repositories for any term "
+            "(rate-limited, unreachable, or a token without search scope) - this run proves nothing",
+            file=sys.stderr,
+        )
+    print(f"find_source_builds: {len(found)} draft recipe(s), {len(notes)} note(s), {searched} result(s) searched")
     print("review each one, fill the blank fields, then add to data/source_builds.json and run:")
     print("    python3 scripts/build_source.py check")
     if args.out:
