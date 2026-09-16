@@ -41,6 +41,16 @@ jobs:
           set -euo pipefail
           python3 scripts/validate.py
 
+      # The suite belongs here, not only in the path-filtered workflows: PR #72
+      # changed index.html, js/ and CSS - files that validation.yml/merge.yml do not
+      # list in their `paths:` - so its shell rename reached main with 14 tests
+      # failing and nothing on the merge path ever ran them. validate.yml is the
+      # broad gate (every PR, every push to main, no path filter), so it does.
+      - name: Run unit tests
+        run: |
+          set -euo pipefail
+          PYTHONPATH=src python3 -m unittest discover -s tests
+
       - name: Validate translations
         run: |
           set -euo pipefail

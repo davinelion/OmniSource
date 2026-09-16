@@ -13,6 +13,7 @@ from argparse import ArgumentParser, RawDescriptionHelpFormatter
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 from omnisource.constants import (
     ALTSTORE_NON_FEED,
@@ -174,6 +175,7 @@ def validate_catalog(catalog: Any, *, assets_dir: Path) -> Report:
         report.extend(_validate_verification(prefix, app.get("verification")))
         report.extend(_validate_compatibility(prefix, app.get("compatibility")))
         report.extend(_validate_upstream(prefix, app))
+        report.extend(_validate_screenshots(prefix, app, catalog))
         report.extend(_validate_fallback_urls(prefix, app.get("fallbackDownloadURLs")))
         manual = app.get("manualRelease")
         if isinstance(manual, dict):
@@ -184,6 +186,102 @@ def validate_catalog(catalog: Any, *, assets_dir: Path) -> Report:
             )
         report.extend(_validate_permissions(prefix, app.get("appPermissions"), app.get("permissions")))
 
+    return report
+
+
+_FORGE_HOSTS = frozenset({"github.com", "codeberg.org", "gitlab.com", "gitea.com"})
+
+
+def _screenshot_source(app: dict[str, Any]) -> tuple[set[str], set[str]]:
+    """Owners and hosts this app's own project publishes from."""
+    owners: set[str] = set()
+    hosts: set[str] = set()
+    upstream = app.get("upstream") if isinstance(app.get("upstream"), dict) else {}
+    legs = [upstream, *(upstream.get("mirrors") or [])] if isinstance(upstream.get("mirrors"), list) else [upstream]
+    for leg in legs:
+        if not isinstance(leg, dict):
+            continue
+        repo = str(leg.get("repo") or "")
+        if "/" in repo:
+            owners.add(repo.split("/", 1)[0].lower())
+    for key in ("upstreamURL", "sourceURL"):
+        url = str(app.get(key) or "")
+        parsed = urlparse(url)
+        host = parsed.netloc.lower()
+        if not host:
+            continue
+        hosts.add(host)
+        # Only a forge path has an owner as its first segment. Treating
+        # archive.org/details/… or aidoku.app/images/… as "the owner is details"
+        # would invent a source the project never claimed.
+        if host.split("://")[-1] in _FORGE_HOSTS or host.removeprefix("raw.") in _FORGE_HOSTS:
+            path = parsed.path.strip("/")
+            if path.count("/") >= 1:
+                owners.add(path.split("/", 1)[0].lower())
+    return owners, hosts
+
+
+def _validate_screenshots(prefix: str, app: dict[str, Any], catalog: dict[str, Any]) -> Report:
+    """A screenshot must come from the app's own upstream, never from us.
+
+    Screenshots are the one catalogue field that can be invented without anyone
+    noticing - a rendered mockup looks exactly like the app it describes. So the
+    rule here is provenance rather than taste: the URL has to live in the project's
+    own repository, or on the host that project publishes from.
+
+    The self-loop case is an error because ``source.baseURL`` makes OmniSource's raw
+    URL resolvable forever: pointing ``screenshots`` at our own ``assets/`` mirror
+    records no origin at all, and that is how fabricated 390x844 "screenshots"
+    (fake status bar, app icon, skeleton rows) passed review for so long. Mirrors of
+    genuine upstream art are still produced - by the build, into
+    ``feeds/screenshots.json``, with a digest - they are simply not the declaration.
+    """
+    report = Report()
+    shots = app.get("screenshots")
+    if shots is None:
+        return report
+    if not isinstance(shots, list):
+        report.error(f"{prefix}: screenshots must be an array of URLs")
+        return report
+    owners, hosts = _screenshot_source(app)
+    self_repo = ""
+    source = catalog.get("source") if isinstance(catalog.get("source"), dict) else {}
+    repo_url = str(source.get("repository") or "")
+    parsed_repo = urlparse(repo_url)
+    if parsed_repo.path.count("/") >= 2:
+        self_repo = parsed_repo.path.strip("/").lower()
+    for entry in shots:
+        url = entry if isinstance(entry, str) else (entry.get("url") if isinstance(entry, dict) else "")
+        if not isinstance(url, str) or not is_http_url(url):
+            report.error(f"{prefix}: screenshots entries must be HTTP(S) URLs")
+            continue
+        parsed = urlparse(url)
+        host = parsed.netloc.lower()
+        path = parsed.path.strip("/").lower()
+        if self_repo and (path == self_repo or path.startswith(self_repo + "/")):
+            report.error(
+                f"{prefix}: screenshot {url!r} points back at OmniSource's own assets - declare "
+                "the image in the app's upstream repository (the build mirrors it, with a digest, "
+                "into feeds/screenshots.json)"
+            )
+            continue
+        repo_host = host in {"raw.githubusercontent.com", "gist.githubusercontent.com"} or (
+            host == "github.com" and path.count("/") >= 2
+        )
+        if repo_host:
+            owner = path.split("/", 1)[0].lower()
+            if owners and owner not in owners:
+                report.error(
+                    f"{prefix}: screenshot is hosted in '{owner}/…' but this app's upstream is "
+                    f"{', '.join(sorted(owners))} - use the developer's own image, not a copy in "
+                    "someone else's repository"
+                )
+                continue
+        elif hosts and host not in hosts:
+            report.warn(
+                f"{prefix}: screenshot host {host!r} is not the app's upstream host "
+                f"({', '.join(sorted(hosts))}) - confirm it is the developer's own hosting"
+            )
     return report
 
 
@@ -570,7 +668,14 @@ def validate_generated_docs(catalog: Any, paths: Paths) -> Report:
         if not doc.get("generatedAt"):
             report.error(f"feeds/{name}: missing generatedAt")
         validate_doc_shape(name, doc, catalog, report, root=paths.root, apps_count=len(apps))
+        if name == "screenshots.json":
+            _validate_screenshot_manifest(doc, paths, report)
 
+    shots_by_slug = {
+        str(item.get("slug")): [s for s in (item.get("screenshots") or []) if isinstance(s, str)]
+        for item in apps
+        if isinstance(item, dict) and item.get("slug")
+    }
     pages_dir = paths.root / "apps"
     for slug in sorted(slugs):
         page = pages_dir / slug / "index.html"
@@ -584,7 +689,45 @@ def validate_generated_docs(catalog: Any, paths: Paths) -> Report:
             continue
         if "og:title" not in content or "assets/design-system/tokens.css" not in content:
             report.error(f"apps/{slug}/index.html: looks incomplete (missing page shell)")
+        # The page's structured data may only claim screenshots the catalog declares
+        # from the app's own upstream. Claiming the icon as a screenshot is what put
+        # fabricated previews into search results.
+        claims = '"screenshot":' in content
+        if claims and not shots_by_slug.get(slug):
+            report.error(f"apps/{slug}/index.html: JSON-LD claims a screenshot the catalog does not declare")
+        if not claims and shots_by_slug.get(slug):
+            report.error(f"apps/{slug}/index.html: {len(shots_by_slug[slug])} screenshot(s) declared but not published")
     return report
+
+
+def _validate_screenshot_manifest(doc: dict[str, Any], paths: Paths, report: Report) -> None:
+    """``feeds/screenshots.json`` describes this repository, so its claims must hold.
+
+    ``mirrored: true`` promises the bytes are checked in beside the manifest; a
+    dangling mirror URL is what a reader, the site, or a future rebuild then 404
+    on. And an app icon is not a screenshot: apps whose upstream publishes no art
+    are simply absent from this document, which is why they are listed as a content
+    gap in ``feeds/asset-manifest.json`` instead.
+    """
+    for entry in doc.get("screenshots") or []:
+        if not isinstance(entry, dict):
+            continue
+        slug = str(entry.get("slug") or "?")
+        if entry.get("iconFallback"):
+            report.error(
+                f"feeds/screenshots.json: {slug} publishes the app icon as a screenshot - "
+                "declare the upstream image, or nothing"
+            )
+            continue
+        if not entry.get("mirrored"):
+            continue
+        url = str(entry.get("mirroredURL") or "")
+        if "/assets/" not in url:
+            report.error(f"feeds/screenshots.json: {slug} mirrors to a URL outside the repository: {url!r}")
+            continue
+        relative = url.split("/assets/", 1)[1]
+        if not (paths.root / "assets" / relative).is_file():
+            report.error(f"feeds/screenshots.json: {slug} claims a mirror at assets/{relative} that is not in the tree")
 
 
 def _catalog_slugs(catalog: Any) -> set[str] | None:

@@ -253,10 +253,10 @@ def build_asset_manifest_doc(catalog: Catalog, *, assets_dir: Path, base_url: st
         "placeholders": placeholders,
         "categories": dict(sorted(categories.items())),
         "missing": sorted(missing),
-        # Apps whose catalog row declares no screenshots: the gallery renders
-        # the app icon instead (feeds/screenshots.json emits an ``iconFallback``
-        # entry for each of them). Published here because the build log only
-        # reports the count — this is the actionable list.
+        # Apps whose catalog row declares no screenshots. Nothing is invented for
+        # them - no icon-as-preview entry in feeds/screenshots.json, no stand-in in
+        # the gallery - so this is the actionable list of content gaps: fetch real
+        # art from the project's own upstream, or leave the app without a gallery.
         "screenshotsMissing": sorted(screenshots_missing),
         "totals": {
             "apps": len(icons),

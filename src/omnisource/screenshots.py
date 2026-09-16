@@ -168,10 +168,10 @@ def process_screenshots(
     mirror (``feeds/screenshots.json`` must be reproducible offline).
 
     ``previous`` is the last committed ``screenshots.json`` document, when
-    available. When no mirror is on disk and no fresh bytes arrive (offline
-    rebuilds, unreachable hosts), entries whose remote URL is unchanged
-    keep their last known mirror metadata instead of degrading to
-    ``mirrored: false`` — the pipeline's keep-last-good contract.
+    available, and supplies the recorded digest for a mirror that is still on
+    disk. ``mirrored`` describes this repository: an entry is only ever marked
+    mirrored when the file exists, because a manifest that points at a deleted
+    artifact is worse than one that admits the mirror has to be fetched again.
     """
     report = ScreenshotReport()
     prior: dict[tuple[str, int, str], dict[str, Any]] = {}
@@ -230,16 +230,13 @@ def process_screenshots(
                         entry["size"] = size
                         entry["sha256"] = digest
                 else:
-                    # No fresh bytes (offline rebuild or unreachable host):
-                    # reuse the last known mirror metadata for this exact URL.
-                    old = prior.get((app.slug, index, url))
-                    if old and old.get("mirrored"):
-                        reused = True
-                        entry["mirrored"] = True
-                        entry["size"] = old.get("size", 0)
-                        entry["sha256"] = old.get("sha256", "")
-                        if "thumbnailSize" in old:
-                            entry["thumbnailSize"] = old.get("thumbnailSize", 0)
+                    # No fresh bytes (unreachable host, offline rebuild, or the
+                    # mirror was removed from the tree). ``mirrored`` describes this
+                    # repository, so it is only ever true while the file is here:
+                    # a manifest that advertises a mirror which no longer exists is
+                    # worse than one that admits it still has to be fetched, and
+                    # scripts/validate.py now rejects exactly that mismatch.
+                    reused = False
             # Thumbnail generation requires Pillow. The build environment
             # may not have it; if it is missing we record a transparent
             # placeholder and the website falls back to the full image.
@@ -263,26 +260,18 @@ def process_screenshots(
                     # Pillow is optional. The website gracefully falls back to
                     # the full-size mirrored image.
                     entry["thumbnailSize"] = 0
+            if not entry.get("thumbnailSize") and thumbnail_path.exists():
+                # The thumbnail on disk is the truth whether or not this run could
+                # measure it with Pillow - reporting its real size keeps an offline
+                # rebuild byte-identical instead of quietly zeroing the field.
+                entry["thumbnailSize"] = thumbnail_path.stat().st_size
             report.entries.append(entry)
-        # Always emit a "icon gallery" fallback entry when there are no
-        # screenshots so the website can render *something* visual.
-        if not valid:
-            icon = getattr(app, "icon", "")
-            if icon:
-                report.entries.append(
-                    {
-                        "slug": app.slug,
-                        "index": 0,
-                        "originalURL": "",
-                        "mirroredURL": f"{base}/assets/{icon}",
-                        "thumbnailURL": f"{base}/assets/{icon}",
-                        "thumbnailWidth": 108,
-                        "mirrored": False,
-                        "size": 0,
-                        "sha256": "",
-                        "iconFallback": True,
-                    }
-                )
+        # No screenshots declared: publish *nothing* for this app rather than an
+        # icon-as-screenshot entry. A rendered stand-in in a machine-readable
+        # manifest is indistinguishable from real art one consumer away, and an
+        # app icon is not a preview of the app. The honest absence is already
+        # reported: ``feeds/asset-manifest.json`` lists these slugs, and the app
+        # page says upstream publishes none.
     # Hint the file system that this directory exists even on empty runs
     # so the website can probe ``/assets/screenshots/index.json`` later.
     (assets_dir / "screenshots" / "_manifest").mkdir(parents=True, exist_ok=True)
