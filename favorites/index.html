@@ -259,7 +259,7 @@
             gridHtml = favApps.map(function (a) { return OS.Favorites._renderAppCard(a); }).join('');
           } else {
             gridHtml = favApps.map(function (a) {
-              var icon = (a.iconURL || a.icon || '../assets/OmniSource.png');
+              var icon = (window.OS && OS.icon) ? OS.icon(a.iconURL || a.icon) : (a.iconURL || a.icon || '../assets/OmniSource.png');
               var name = a.name || a.localizedDescription || a.slug;
               var dev = a.developerName || a.developer || '';
               var ver = a.version || (a.versions && a.versions[0] && a.versions[0].version) || '';

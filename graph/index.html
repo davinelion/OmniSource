@@ -282,8 +282,7 @@
             g.setAttribute('transform','translate('+n.x+','+n.y+')');
             if (n.type === 'app') {
               var app = n.app;
-              var icon = app.iconURL || app.icon || '../assets/OmniSource.png';
-              if (icon.indexOf('http')!==0 && icon.charAt(0)!=='.' && icon.charAt(0)!=='/') icon = '../' + icon;
+              var icon = OS.icon(app.iconURL || app.icon);
               var c = document.createElementNS(ns,'circle');
               c.setAttribute('r', n.r); c.setAttribute('fill', 'var(--accent)');
               var clip = document.createElementNS(ns,'clipPath');
@@ -330,8 +329,7 @@
           function showInfo(n) {
             if (n.type !== 'app') return;
             var app = n.app;
-            var icon = app.iconURL || app.icon || '../assets/OmniSource.png';
-            if (icon.indexOf('http')!==0 && icon.charAt(0)!=='.' && icon.charAt(0)!=='/') icon = '../' + icon;
+              var icon = OS.icon(app.iconURL || app.icon);
             info.innerHTML = '<h3>' + app.name + '</h3><p>' + (app.developerName||'') + ' · ' + (app.category||'') + ' · v' + (app.version||'—') + '</p>' +
               '<div class="graph-info-links">' +
               `<a href="../apps/${app.slug}/">Open</a>` +

@@ -54,6 +54,19 @@
     var file = String(name || 'OmniSource.png').replace(/^assets\//, '');
     return url('assets/' + file);
   }
+  /* Icon fields arrive in three shapes: absolute URLs (the generated feeds
+     write https://site/assets/X.webp), root-relative ones (feeds/compare.json
+     stores "assets/X.webp") and bare file names (api/catalog.json stores
+     "X.webp"). Resolving the relative shapes with `cleanUrl` is wrong away
+     from the site root — `new URL('assets/X.webp', location.href)` on
+     /compare/ answers "http://…/compare/assets/X.webp", a 404 for every icon
+     on the page — so resolve them against the detected ROOT instead. */
+  function icon(value, fallback) {
+    var raw = String(value == null ? '' : value).trim();
+    if (!raw || raw === '#') return url(fallback || 'assets/OmniSource.png');
+    if (/^data:/i.test(raw) || /^(?:https?:)?\/\//i.test(raw)) return raw;
+    return asset(raw.replace(/^(?:\.\.?\/)+/, '').replace(/^\/+/, ''));
+  }
 
   /* --------------------------------------------------------------- helpers */
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
@@ -73,6 +86,7 @@
     ROOT: ROOT,
     url: url,
     asset: asset,
+    icon: icon,
     $: $,
     $$: $$,
     animateCount: animateCount,

@@ -212,8 +212,9 @@
       }
 
       function card(app, score) {
-        var icon = app.iconURL || app.icon || '../assets/OmniSource.png';
-        if (icon.indexOf('http') !== 0 && icon.charAt(0) !== '.' && icon.charAt(0) !== '/') icon = '../' + icon;
+        // OS.icon resolves every icon shape (absolute, "assets/X.webp", bare
+        // "X.webp") against the site root instead of this page's directory.
+        var icon = OS.icon(app.iconURL || app.icon);
         var badges = [];
         if (app.featured) badges.push('<span class="badge verified">Featured</span>');
         if (app.status) badges.push('<span class="badge ' + (app.status==='stable'?'stable':app.status) + '">' + statusLabel(app.status) + '</span>');
