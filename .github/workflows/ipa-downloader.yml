@@ -102,6 +102,13 @@ jobs:
 
       - name: Commit downloader artifacts
         if: github.event_name != 'pull_request'
+        env:
+          # Defined here as well as on the build step: under `set -euo pipefail`
+          # this script must see the variable even on push/schedule events,
+          # where the workflow input is empty. (A previous version read
+          # ${FULL_SYNC} without an env: block and died with
+          # "FULL_SYNC: unbound variable" on every non-dispatch run.)
+          FULL_SYNC: ${{ inputs.full_sync }}
         run: |
           set -euo pipefail
           git config user.name  "github-actions[bot]"

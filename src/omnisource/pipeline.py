@@ -972,7 +972,17 @@ def run(
         )
 
     unreachable = health_doc["totals"]["unreachable"]
-    if unreachable:
+    if unreachable and no_health:
+        # --no-health replays the stored results verbatim, so this count says
+        # nothing about the current run: a warning annotation here would fire
+        # on every offline rebuild (the daily downloader workflow) from data
+        # a previous live probe recorded, however stale. Live probes keep the
+        # warning so a genuinely dead link is still flagged the run it is seen.
+        log.info(
+            "%d app(s) have an unreachable stored download URL (--no-health; last probe results replayed)",
+            unreachable,
+        )
+    elif unreachable:
         log.warning("%d app(s) currently have an unreachable download URL", unreachable)
     if verify_failed:
         log.warning("%d app(s) FAILED full integrity verification", len(verify_failed))
