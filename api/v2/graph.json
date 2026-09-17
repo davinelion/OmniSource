@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 325,
-  "edgeCount": 971,
+  "count": 340,
+  "edgeCount": 1011,
   "nodes": [
     {
       "id": "app:spotiflac",
@@ -2211,6 +2211,106 @@
       "type": "source",
       "label": "CokePokes/AppStorePlus-TrollStore",
       "url": "https://github.com/CokePokes/AppStorePlus-TrollStore"
+    },
+    {
+      "id": "app:nuvio",
+      "type": "app",
+      "label": "Nuvio",
+      "slug": "nuvio",
+      "bundleId": "com.nuvio.app",
+      "category": "photo-video",
+      "version": "0.4.23"
+    },
+    {
+      "id": "dev:nuvio-media",
+      "type": "developer",
+      "label": "Nuvio Media"
+    },
+    {
+      "id": "source:nuviomedianuviomobile",
+      "type": "source",
+      "label": "NuvioMedia/NuvioMobile",
+      "url": "https://github.com/NuvioMedia/NuvioMobile"
+    },
+    {
+      "id": "app:escapeos",
+      "type": "app",
+      "label": "EscapeOS",
+      "slug": "escapeos",
+      "bundleId": "com.ipaside.escapeos",
+      "category": "utilities",
+      "version": "0.1.5"
+    },
+    {
+      "id": "dev:pwnapplehat",
+      "type": "developer",
+      "label": "pwnapplehat"
+    },
+    {
+      "id": "source:pwnapplehatescapeos",
+      "type": "source",
+      "label": "pwnapplehat/EscapeOS",
+      "url": "https://github.com/pwnapplehat/EscapeOS"
+    },
+    {
+      "id": "app:3105",
+      "type": "app",
+      "label": "3105",
+      "slug": "3105",
+      "bundleId": "com.apple.mobile.MobileHouseArrest",
+      "category": "utilities",
+      "version": "2.0"
+    },
+    {
+      "id": "dev:yangjiii",
+      "type": "developer",
+      "label": "YangJiii"
+    },
+    {
+      "id": "source:yangjiiii3105",
+      "type": "source",
+      "label": "YangJiiii/3105",
+      "url": "https://github.com/YangJiiii/3105"
+    },
+    {
+      "id": "app:vibecontainers",
+      "type": "app",
+      "label": "VibeContainers",
+      "slug": "vibecontainers",
+      "bundleId": "com.genericcoding.vibecontainers",
+      "category": "utilities",
+      "version": "1.0"
+    },
+    {
+      "id": "dev:genericcoding",
+      "type": "developer",
+      "label": "GenericCoding"
+    },
+    {
+      "id": "source:genericcodingvibecontainers",
+      "type": "source",
+      "label": "GenericCoding/VibeContainers",
+      "url": "https://github.com/GenericCoding/VibeContainers"
+    },
+    {
+      "id": "app:battman",
+      "type": "app",
+      "label": "Battman",
+      "slug": "battman",
+      "bundleId": "com.torrekie.Battman",
+      "category": "utilities",
+      "version": "1.0.3"
+    },
+    {
+      "id": "dev:torrekie-gen",
+      "type": "developer",
+      "label": "Torrekie Gen"
+    },
+    {
+      "id": "source:torrekiebattman",
+      "type": "source",
+      "label": "Torrekie/Battman",
+      "url": "https://github.com/Torrekie/Battman"
     }
   ],
   "edges": [
@@ -3415,6 +3515,56 @@
       "type": "source"
     },
     {
+      "source": "app:nuvio",
+      "target": "dev:nuvio-media",
+      "type": "developer"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "source:nuviomedianuviomobile",
+      "type": "source"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "dev:pwnapplehat",
+      "type": "developer"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "source:pwnapplehatescapeos",
+      "type": "source"
+    },
+    {
+      "source": "app:3105",
+      "target": "dev:yangjiii",
+      "type": "developer"
+    },
+    {
+      "source": "app:3105",
+      "target": "source:yangjiiii3105",
+      "type": "source"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "dev:genericcoding",
+      "type": "developer"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "source:genericcodingvibecontainers",
+      "type": "source"
+    },
+    {
+      "source": "app:battman",
+      "target": "dev:torrekie-gen",
+      "type": "developer"
+    },
+    {
+      "source": "app:battman",
+      "target": "source:torrekiebattman",
+      "type": "source"
+    },
+    {
       "source": "app:uyouenhanced",
       "target": "app:ytlite",
       "type": "bundle",
@@ -3900,6 +4050,11 @@
     },
     {
       "source": "app:utm",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:utm",
       "target": "app:unc0ver",
       "type": "related"
     },
@@ -3911,11 +4066,6 @@
     {
       "source": "app:utm",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:utm",
-      "target": "app:trollboard-reborn",
       "type": "related"
     },
     {
@@ -4085,6 +4235,11 @@
     },
     {
       "source": "app:livecontainer",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:livecontainer",
       "target": "app:utm",
       "type": "related"
     },
@@ -4096,11 +4251,6 @@
     {
       "source": "app:livecontainer",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:livecontainer",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4115,6 +4265,11 @@
     },
     {
       "source": "app:feather",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:feather",
       "target": "app:utm",
       "type": "related"
     },
@@ -4126,11 +4281,6 @@
     {
       "source": "app:feather",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:feather",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4145,6 +4295,11 @@
     },
     {
       "source": "app:sidestore",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:sidestore",
       "target": "app:utm",
       "type": "related"
     },
@@ -4156,11 +4311,6 @@
     {
       "source": "app:sidestore",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:sidestore",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4410,6 +4560,11 @@
     },
     {
       "source": "app:zeus",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:zeus",
       "target": "app:utm",
       "type": "related"
     },
@@ -4426,11 +4581,6 @@
     {
       "source": "app:zeus",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:zeus",
-      "target": "app:trollboard-reborn",
       "type": "related"
     },
     {
@@ -4445,6 +4595,11 @@
     },
     {
       "source": "app:bluewallet",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:bluewallet",
       "target": "app:utm",
       "type": "related"
     },
@@ -4456,11 +4611,6 @@
     {
       "source": "app:bluewallet",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:bluewallet",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4505,6 +4655,11 @@
     },
     {
       "source": "app:saber",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:saber",
       "target": "app:utm",
       "type": "related"
     },
@@ -4516,11 +4671,6 @@
     {
       "source": "app:saber",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:saber",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4535,6 +4685,11 @@
     },
     {
       "source": "app:anxreader",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:anxreader",
       "target": "app:utm",
       "type": "related"
     },
@@ -4546,11 +4701,6 @@
     {
       "source": "app:anxreader",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:anxreader",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4635,6 +4785,11 @@
     },
     {
       "source": "app:qbitcontrol",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontrol",
       "target": "app:utm",
       "type": "related"
     },
@@ -4646,11 +4801,6 @@
     {
       "source": "app:qbitcontrol",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontrol",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4665,6 +4815,11 @@
     },
     {
       "source": "app:qbitconnect",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitconnect",
       "target": "app:utm",
       "type": "related"
     },
@@ -4676,11 +4831,6 @@
     {
       "source": "app:qbitconnect",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitconnect",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4755,6 +4905,11 @@
     },
     {
       "source": "app:qbitcontroller",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontroller",
       "target": "app:utm",
       "type": "related"
     },
@@ -4766,11 +4921,6 @@
     {
       "source": "app:qbitcontroller",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontroller",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -4905,6 +5055,11 @@
     },
     {
       "source": "app:conduit",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:conduit",
       "target": "app:utm",
       "type": "related"
     },
@@ -4916,11 +5071,6 @@
     {
       "source": "app:conduit",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:conduit",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -5535,6 +5685,11 @@
     },
     {
       "source": "app:dopamine",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine",
       "target": "app:utm",
       "type": "related"
     },
@@ -5546,11 +5701,6 @@
     {
       "source": "app:dopamine",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -5570,17 +5720,17 @@
     },
     {
       "source": "app:dopamine-roothide",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine-roothide",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:dopamine-roothide",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine-roothide",
-      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5600,17 +5750,17 @@
     },
     {
       "source": "app:bootstrap",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:bootstrap",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:bootstrap",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:bootstrap",
-      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5630,17 +5780,17 @@
     },
     {
       "source": "app:serotonin",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:serotonin",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:serotonin",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:serotonin",
-      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5660,17 +5810,17 @@
     },
     {
       "source": "app:taurine",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:taurine",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:taurine",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:taurine",
-      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5690,17 +5840,17 @@
     },
     {
       "source": "app:odyssey",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:odyssey",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:odyssey",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:odyssey",
-      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5711,6 +5861,11 @@
     {
       "source": "app:unc0ver",
       "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:unc0ver",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -5726,11 +5881,6 @@
     {
       "source": "app:unc0ver",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:unc0ver",
-      "target": "app:trollboard-reborn",
       "type": "related"
     },
     {
@@ -6065,6 +6215,11 @@
     },
     {
       "source": "app:purekfd",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:purekfd",
       "target": "app:utm",
       "type": "related"
     },
@@ -6076,11 +6231,6 @@
     {
       "source": "app:purekfd",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:purekfd",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6125,6 +6275,11 @@
     },
     {
       "source": "app:ksign",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:ksign",
       "target": "app:utm",
       "type": "related"
     },
@@ -6136,11 +6291,6 @@
     {
       "source": "app:ksign",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:ksign",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6220,17 +6370,17 @@
     },
     {
       "source": "app:muffinstore",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:muffinstore",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:muffinstore",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:muffinstore",
-      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -6365,6 +6515,11 @@
     },
     {
       "source": "app:trollfools",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
       "target": "app:utm",
       "type": "related"
     },
@@ -6376,11 +6531,6 @@
     {
       "source": "app:trollfools",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:trollfools",
-      "target": "app:trollboard-reborn",
       "type": "related"
     },
     {
@@ -6395,6 +6545,11 @@
     },
     {
       "source": "app:lara",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
       "target": "app:utm",
       "type": "related"
     },
@@ -6406,11 +6561,6 @@
     {
       "source": "app:lara",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:lara",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6475,6 +6625,11 @@
     },
     {
       "source": "app:tablehabit",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
       "target": "app:utm",
       "type": "related"
     },
@@ -6486,11 +6641,6 @@
     {
       "source": "app:tablehabit",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:tablehabit",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6595,6 +6745,11 @@
     },
     {
       "source": "app:reynard",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
       "target": "app:utm",
       "type": "related"
     },
@@ -6606,11 +6761,6 @@
     {
       "source": "app:reynard",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:reynard",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6655,6 +6805,11 @@
     },
     {
       "source": "app:mugunghwa",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
       "target": "app:utm",
       "type": "related"
     },
@@ -6666,11 +6821,6 @@
     {
       "source": "app:mugunghwa",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:mugunghwa",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6680,6 +6830,11 @@
     },
     {
       "source": "app:wdbfontoverwrite",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
       "target": "app:utm",
       "type": "related"
     },
@@ -6696,11 +6851,6 @@
     {
       "source": "app:wdbfontoverwrite",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:wdbfontoverwrite",
-      "target": "app:trollboard-reborn",
       "type": "related"
     },
     {
@@ -6725,12 +6875,12 @@
     },
     {
       "source": "app:jaility",
-      "target": "app:utm",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
       "source": "app:jaility",
-      "target": "app:unc0ver",
+      "target": "app:utm",
       "type": "related"
     },
     {
@@ -6755,12 +6905,12 @@
     },
     {
       "source": "app:killmyota",
-      "target": "app:utm",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
       "source": "app:killmyota",
-      "target": "app:unc0ver",
+      "target": "app:utm",
       "type": "related"
     },
     {
@@ -6771,6 +6921,11 @@
     {
       "source": "app:trollinstallerx",
       "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -6786,11 +6941,6 @@
     {
       "source": "app:trollinstallerx",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:trollinstallerx",
-      "target": "app:trollboard-reborn",
       "type": "related"
     },
     {
@@ -6815,12 +6965,12 @@
     },
     {
       "source": "app:trollboard-reborn",
-      "target": "app:utm",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
       "source": "app:trollboard-reborn",
-      "target": "app:unc0ver",
+      "target": "app:utm",
       "type": "related"
     },
     {
@@ -6831,6 +6981,11 @@
     {
       "source": "app:statusmagic",
       "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -6846,11 +7001,6 @@
     {
       "source": "app:statusmagic",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:statusmagic",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6895,6 +7045,11 @@
     },
     {
       "source": "app:dynamiccow",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
       "target": "app:utm",
       "type": "related"
     },
@@ -6906,11 +7061,6 @@
     {
       "source": "app:dynamiccow",
       "target": "app:trollinstallerx",
-      "type": "related"
-    },
-    {
-      "source": "app:dynamiccow",
-      "target": "app:trollfools",
       "type": "related"
     },
     {
@@ -6960,12 +7110,12 @@
     },
     {
       "source": "app:cowabunga",
-      "target": "app:utm",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
       "source": "app:cowabunga",
-      "target": "app:unc0ver",
+      "target": "app:utm",
       "type": "related"
     },
     {
@@ -7020,12 +7170,12 @@
     },
     {
       "source": "app:helium",
-      "target": "app:utm",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
       "source": "app:helium",
-      "target": "app:unc0ver",
+      "target": "app:utm",
       "type": "related"
     },
     {
@@ -7050,12 +7200,12 @@
     },
     {
       "source": "app:secondhand",
-      "target": "app:utm",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
       "source": "app:secondhand",
-      "target": "app:unc0ver",
+      "target": "app:utm",
       "type": "related"
     },
     {
@@ -7080,6 +7230,11 @@
     },
     {
       "source": "app:appstoreplusplus",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
       "target": "app:utm",
       "type": "related"
     },
@@ -7094,8 +7249,153 @@
       "type": "related"
     },
     {
-      "source": "app:appstoreplusplus",
+      "source": "app:nuvio",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:yattee",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
       "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:trollinstallerx",
       "type": "related"
     }
   ]

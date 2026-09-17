@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17",
+  "feedVersion": "fdb05a7be7ac",
+  "app": {
+    "id": "battman",
+    "name": "Battman",
+    "developer": "Torrekie Gen",
+    "subtitle": "Battery health and charge management",
+    "bundleIdentifier": "com.torrekie.Battman",
+    "version": "1.0.3",
+    "versionDate": "2026-01-19",
+    "description": "Battman is a battery manager for TrollStore and jailbroken iOS devices - battery health, cycle count and temperature, charging limits and a live gas gauge, with a plugin SDK for extra cards.",
+    "shortDescription": "Battery health and charge management",
+    "category": "utilities",
+    "tags": [
+      "utilities"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/Battman.webp",
+    "screenshots": [
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Main.png",
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Gas%20Gauge.png",
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/ChargingMgmt.png",
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Adapter.png"
+    ],
+    "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+    "size": 675573,
+    "source": "Torrekie/Battman",
+    "sourceURL": "https://github.com/Torrekie/Battman",
+    "checksum": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+    "checksumPublished": false,
+    "minOSVersion": "12.0",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/battman/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/battman.json",
+    "health": {
+      "reachable": true,
+      "detail": "HTTP 302",
+      "updatedAt": "2026-01-19"
+    }
+  },
+  "newest": {
+    "version": "1.0.3",
+    "date": "2026-01-19",
+    "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+    "size": 675573,
+    "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060"
+  },
+  "versions": [
+    {
+      "version": "1.0.3",
+      "date": "2026-01-19",
+      "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+      "size": 675573,
+      "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

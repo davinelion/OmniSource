@@ -6,10 +6,10 @@
     "stale": 180,
     "archived": 365
   },
-  "count": 53,
+  "count": 54,
   "summary": {
     "warning": 9,
-    "stale": 12,
+    "stale": 13,
     "archived": 32,
     "critical": 0
   },
@@ -408,6 +408,18 @@
       "supersededReleases": 0,
       "reasons": [
         "no update for 182 days (threshold 180)"
+      ]
+    },
+    {
+      "slug": "battman",
+      "name": "Battman",
+      "lastUpdate": "2026-01-19",
+      "daysSinceUpdate": 241,
+      "classification": "stale",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 241 days (threshold 180)"
       ]
     },
     {
@@ -1957,6 +1969,58 @@
       "removedReleases": 0,
       "supersededReleases": 0,
       "reasons": []
+    },
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "lastUpdate": "2026-09-17",
+      "daysSinceUpdate": 0,
+      "classification": "healthy",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": []
+    },
+    {
+      "slug": "escapeos",
+      "name": "EscapeOS",
+      "lastUpdate": "2026-08-17",
+      "daysSinceUpdate": 31,
+      "classification": "healthy",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": []
+    },
+    {
+      "slug": "3105",
+      "name": "3105",
+      "lastUpdate": "2026-09-14",
+      "daysSinceUpdate": 3,
+      "classification": "healthy",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": []
+    },
+    {
+      "slug": "vibecontainers",
+      "name": "VibeContainers",
+      "lastUpdate": "2026-08-28",
+      "daysSinceUpdate": 20,
+      "classification": "healthy",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": []
+    },
+    {
+      "slug": "battman",
+      "name": "Battman",
+      "lastUpdate": "2026-01-19",
+      "daysSinceUpdate": 241,
+      "classification": "stale",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 241 days (threshold 180)"
+      ]
     }
   ]
 }

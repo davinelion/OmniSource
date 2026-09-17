@@ -6729,6 +6729,264 @@
         "minOSVersion": "14.0",
         "descriptionTemplate": "AppStore++ {version} | TrollStore"
       }
+    },
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "subtitle": "Open-source media player, bring your own sources",
+      "bundleIdentifier": "com.nuvio.app",
+      "developerName": "Nuvio Media",
+      "category": "photo-video",
+      "tintColor": "5B5FE8",
+      "icon": "Nuvio.webp",
+      "localizedDescription": "Nuvio is a free, open-source media app for your phone, desktop and the TV you already own. Bring your own sources - Nuvio turns them into a library with artwork, ratings, subtitles and your place saved on every screen.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/NuvioMedia/NuvioMobile",
+      "verification": {
+        "method": "github-release",
+        "publisher": "NuvioMedia/NuvioMobile",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "16.1",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from NuvioMedia/NuvioMobile. The upstream also publishes a companion store.json source for AltStore and SideStore. Android and TV builds are separate releases not tracked here."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "NuvioMedia/NuvioMobile",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^nuvio-.*-full-release\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "16.1",
+        "descriptionTemplate": "Nuvio {version} | {label}"
+      }
+    },
+    {
+      "slug": "escapeos",
+      "name": "EscapeOS",
+      "subtitle": "App-data browser and backup for sideloaded apps",
+      "bundleIdentifier": "com.ipaside.escapeos",
+      "developerName": "pwnapplehat",
+      "category": "utilities",
+      "tintColor": "3D9A97",
+      "icon": "EscapeOS.webp",
+      "localizedDescription": "EscapeOS is an on-device file browser and app-data backup/restore tool for sideloaded iOS, using a path-scoped container sandbox escape. No jailbreak, no Keychain. Browse an app's Documents, Library and tmp folders, edit or compress files, back up to an archive with a SHA-256 manifest, or reclaim cache space.",
+      "screenshots": [],
+      "featured": false,
+      "status": "beta",
+      "upstreamURL": "https://github.com/pwnapplehat/EscapeOS",
+      "verification": {
+        "method": "github-release",
+        "publisher": "pwnapplehat/EscapeOS",
+        "codeSigned": false,
+        "checksumPublished": true
+      },
+      "compatibility": {
+        "minOSVersion": "18.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from pwnapplehat/EscapeOS; each release publishes a SHA256SUMS.txt. After install, import a pairing file from iPASide or iLoader so the PC is no longer required."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "pwnapplehat/EscapeOS",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^EscapeOS-[0-9.]+\\.ipa$",
+        "tagPrefix": "v",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "18.0",
+        "descriptionTemplate": "EscapeOS {version} | {label}"
+      }
+    },
+    {
+      "slug": "3105",
+      "name": "3105",
+      "subtitle": "App-data browser, patch manager and wallpaper lab",
+      "bundleIdentifier": "com.apple.mobile.MobileHouseArrest",
+      "developerName": "YangJiii",
+      "category": "utilities",
+      "tintColor": "ED5F0F",
+      "icon": "3105.webp",
+      "localizedDescription": "3105 is a native iOS app-data browser, portable patch manager, limited cleaner and Poster Board wallpaper lab. It intentionally ships under the com.apple.mobile.MobileHouseArrest bundle identifier - the upstream documents that changing it breaks the MHA-C2 app-container workflow.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/YangJiiii/3105/main/docs/images/home-2.0.png",
+        "https://raw.githubusercontent.com/YangJiiii/3105/main/docs/images/installed-2.0.png",
+        "https://raw.githubusercontent.com/YangJiiii/3105/main/docs/images/cleaner.png"
+      ],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/YangJiiii/3105",
+      "verification": {
+        "method": "github-release",
+        "publisher": "YangJiiii/3105",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "16.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official unsigned IPA from YangJiiii/3105. Keep the original bundle identifier when re-signing - it is load-bearing for the app's app-container workflow."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "YangJiiii/3105",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^3105.*\\.ipa$",
+        "tagPrefix": "v",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "16.0",
+        "descriptionTemplate": "3105 {version} | {label}"
+      }
+    },
+    {
+      "slug": "vibecontainers",
+      "name": "VibeContainers",
+      "subtitle": "Jailbreak app runner, a LiveContainer fork",
+      "bundleIdentifier": "com.genericcoding.vibecontainers",
+      "developerName": "GenericCoding",
+      "category": "utilities",
+      "tintColor": "E0218A",
+      "icon": "VibeContainers.webp",
+      "localizedDescription": "VibeContainers is a fork of Live Containers that runs jailbroken and tweaked apps on a non-jailbroken iOS 17 or newer device using the LiveContainer JIT. The published release is unsigned - sign it with a tool like AltStore or SideStore before installing.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/GenericCoding/VibeContainers",
+      "verification": {
+        "method": "github-release",
+        "publisher": "GenericCoding/VibeContainers",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "17.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official unsigned IPA from GenericCoding/VibeContainers; the build script assigns com.genericcoding.vibecontainers to unsigned builds. Fork of the LiveContainer project."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "GenericCoding/VibeContainers",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^VibeContainers-.*\\.ipa$",
+        "tagPrefix": "v",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "17.0",
+        "descriptionTemplate": "VibeContainers {version} | {label}"
+      }
+    },
+    {
+      "slug": "battman",
+      "name": "Battman",
+      "subtitle": "Battery health and charge management",
+      "bundleIdentifier": "com.torrekie.Battman",
+      "developerName": "Torrekie Gen",
+      "category": "utilities",
+      "tintColor": "4CD964",
+      "icon": "Battman.webp",
+      "localizedDescription": "Battman is a battery manager for TrollStore and jailbroken iOS devices - battery health, cycle count and temperature, charging limits and a live gas gauge, with a plugin SDK for extra cards.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Main.png",
+        "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Gas%20Gauge.png",
+        "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/ChargingMgmt.png",
+        "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Adapter.png"
+      ],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/Torrekie/Battman",
+      "verification": {
+        "method": "github-release",
+        "publisher": "Torrekie/Battman",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "12.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from Torrekie/Battman; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "Torrekie/Battman",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "assetNamePattern": "^Battman\\.tipa$",
+        "tagPrefix": "v",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "12.0",
+        "descriptionTemplate": "Battman {version} | TrollStore"
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 120,
+  "count": 125,
   "apps": [
     {
       "slug": "spotiflac",
@@ -2397,6 +2397,106 @@
       "downloadReachable": true,
       "compatibility": {
         "minOSVersion": "14.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "icon": "assets/Nuvio.webp",
+      "category": "photo-video",
+      "version": "0.4.23",
+      "releaseDate": "2026-09-17",
+      "source": "NuvioMedia/NuvioMobile",
+      "sourceURL": "https://github.com/NuvioMedia/NuvioMobile",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "16.1",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "escapeos",
+      "name": "EscapeOS",
+      "icon": "assets/EscapeOS.webp",
+      "category": "utilities",
+      "version": "0.1.5",
+      "releaseDate": "2026-08-17",
+      "source": "pwnapplehat/EscapeOS",
+      "sourceURL": "https://github.com/pwnapplehat/EscapeOS",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "18.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "3105",
+      "name": "3105",
+      "icon": "assets/3105.webp",
+      "category": "utilities",
+      "version": "2.0",
+      "releaseDate": "2026-09-14",
+      "source": "YangJiiii/3105",
+      "sourceURL": "https://github.com/YangJiiii/3105",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "16.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "vibecontainers",
+      "name": "VibeContainers",
+      "icon": "assets/VibeContainers.webp",
+      "category": "utilities",
+      "version": "1.0",
+      "releaseDate": "2026-08-28",
+      "source": "GenericCoding/VibeContainers",
+      "sourceURL": "https://github.com/GenericCoding/VibeContainers",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "17.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "battman",
+      "name": "Battman",
+      "icon": "assets/Battman.webp",
+      "category": "utilities",
+      "version": "1.0.3",
+      "releaseDate": "2026-01-19",
+      "source": "Torrekie/Battman",
+      "sourceURL": "https://github.com/Torrekie/Battman",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "12.0",
         "devices": [
           "iphone",
           "ipad"

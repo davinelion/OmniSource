@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17",
+  "feedVersion": "fdb05a7be7ac",
+  "app": {
+    "id": "3105",
+    "name": "3105",
+    "developer": "YangJiii",
+    "subtitle": "App-data browser, patch manager and wallpaper lab",
+    "bundleIdentifier": "com.apple.mobile.MobileHouseArrest",
+    "version": "2.0",
+    "versionDate": "2026-09-14",
+    "description": "3105 is a native iOS app-data browser, portable patch manager, limited cleaner and Poster Board wallpaper lab. It intentionally ships under the com.apple.mobile.MobileHouseArrest bundle identifier - the upstream documents that changing it breaks the MHA-C2 app-container workflow.",
+    "shortDescription": "App-data browser, patch manager and wallpaper lab",
+    "category": "utilities",
+    "tags": [
+      "utilities"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/3105.webp",
+    "screenshots": [
+      "https://raw.githubusercontent.com/YangJiiii/3105/main/docs/images/home-2.0.png",
+      "https://raw.githubusercontent.com/YangJiiii/3105/main/docs/images/installed-2.0.png",
+      "https://raw.githubusercontent.com/YangJiiii/3105/main/docs/images/cleaner.png"
+    ],
+    "downloadURL": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa",
+    "size": 4604223,
+    "source": "YangJiiii/3105",
+    "sourceURL": "https://github.com/YangJiiii/3105",
+    "checksum": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991",
+    "checksumPublished": false,
+    "minOSVersion": "16.0",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/3105/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/3105.json",
+    "health": {
+      "reachable": true,
+      "detail": "HTTP 302",
+      "updatedAt": "2026-09-14"
+    }
+  },
+  "newest": {
+    "version": "2.0",
+    "date": "2026-09-14",
+    "downloadURL": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa",
+    "size": 4604223,
+    "sha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991"
+  },
+  "versions": [
+    {
+      "version": "2.0",
+      "date": "2026-09-14",
+      "downloadURL": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa",
+      "size": 4604223,
+      "sha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

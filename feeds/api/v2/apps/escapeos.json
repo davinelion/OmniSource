@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17",
+  "feedVersion": "fdb05a7be7ac",
+  "app": {
+    "id": "escapeos",
+    "name": "EscapeOS",
+    "developer": "pwnapplehat",
+    "subtitle": "App-data browser and backup for sideloaded apps",
+    "bundleIdentifier": "com.ipaside.escapeos",
+    "version": "0.1.5",
+    "versionDate": "2026-08-17",
+    "description": "EscapeOS is an on-device file browser and app-data backup/restore tool for sideloaded iOS, using a path-scoped container sandbox escape. No jailbreak, no Keychain. Browse an app's Documents, Library and tmp folders, edit or compress files, back up to an archive with a SHA-256 manifest, or reclaim cache space.",
+    "shortDescription": "App-data browser and backup for sideloaded apps",
+    "category": "utilities",
+    "tags": [
+      "utilities"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/EscapeOS.webp",
+    "screenshots": [],
+    "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
+    "size": 7259448,
+    "source": "pwnapplehat/EscapeOS",
+    "sourceURL": "https://github.com/pwnapplehat/EscapeOS",
+    "checksum": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02",
+    "checksumPublished": true,
+    "minOSVersion": "18.0",
+    "status": "beta",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/escapeos/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/escapeos.json",
+    "health": {
+      "reachable": true,
+      "detail": "HTTP 302",
+      "updatedAt": "2026-08-17"
+    }
+  },
+  "newest": {
+    "version": "0.1.5",
+    "date": "2026-08-17",
+    "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
+    "size": 7259448,
+    "sha256": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02"
+  },
+  "versions": [
+    {
+      "version": "0.1.5",
+      "date": "2026-08-17",
+      "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
+      "size": 7259448,
+      "sha256": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-17",
   "totals": {
-    "apps": 120,
-    "verified": 102,
+    "apps": 125,
+    "verified": 107,
     "communityVerified": 0,
     "unverified": 18,
-    "hashVerified": 74,
-    "official": 101,
+    "hashVerified": 79,
+    "official": 106,
     "communityBuilds": 19,
-    "avgTrustScore": 6.47,
+    "avgTrustScore": 6.5,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -18,6 +18,27 @@
     ]
   },
   "apps": [
+    {
+      "app": "3105",
+      "name": "3105",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "YangJiiii/3105",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
     {
       "app": "aidoku",
       "name": "Aidoku",
@@ -162,6 +183,27 @@
         "official upstream (github-release)"
       ],
       "downloadURL": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
+      "app": "battman",
+      "name": "Battman",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "Torrekie/Battman",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -521,6 +563,27 @@
       "downloadURL": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa",
       "trustScore": 6.0,
       "trustBadge": "Community"
+    },
+    {
+      "app": "escapeos",
+      "name": "EscapeOS",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "pwnapplehat/EscapeOS",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
     },
     {
       "app": "feather",
@@ -1065,6 +1128,27 @@
         "official upstream (github-release)"
       ],
       "downloadURL": "https://github.com/NeoFreeBird/app/releases/download/2.2/NeoFreeBird-2.2-Twitter-11.35-noFixTwitterLogin.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
+      "app": "nuvio",
+      "name": "Nuvio",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "NuvioMedia/NuvioMobile",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1909,6 +1993,27 @@
       "trustBadge": "Trusted"
     },
     {
+      "app": "vibecontainers",
+      "name": "VibeContainers",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "GenericCoding/VibeContainers",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
+    },
+    {
       "app": "voyager",
       "name": "Voyager",
       "status": "VERIFIED",
@@ -2178,7 +2283,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2199,7 +2304,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/iMe-12.8.1-MxGram.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2220,7 +2325,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2241,7 +2346,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2262,7 +2367,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
-      "trustScore": 2.7,
+      "trustScore": 2.6,
       "trustBadge": "Experimental"
     },
     {
@@ -2283,7 +2388,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-      "trustScore": 2.7,
+      "trustScore": 2.6,
       "trustBadge": "Experimental"
     },
     {
@@ -2304,7 +2409,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
-      "trustScore": 2.7,
+      "trustScore": 2.6,
       "trustBadge": "Experimental"
     },
     {
@@ -2325,7 +2430,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2346,7 +2451,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
-      "trustScore": 2.7,
+      "trustScore": 2.6,
       "trustBadge": "Experimental"
     },
     {
@@ -2367,7 +2472,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://source.ryuksign.com/ipas/959abf1407579dbd3f46.ipa",
-      "trustScore": 4.3,
+      "trustScore": 4.2,
       "trustBadge": "Experimental"
     },
     {
@@ -2388,7 +2493,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://source.ryuksign.com/ipas/86bd8282219bf3b32dca.ipa",
-      "trustScore": 4.3,
+      "trustScore": 4.2,
       "trustBadge": "Experimental"
     },
     {
@@ -2409,7 +2514,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
-      "trustScore": 2.7,
+      "trustScore": 2.6,
       "trustBadge": "Experimental"
     },
     {
@@ -2430,7 +2535,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.2-iQTele.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2451,7 +2556,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Telegram-12.9.4-iQTele.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2472,7 +2577,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
-      "trustScore": 2.7,
+      "trustScore": 2.6,
       "trustBadge": "Experimental"
     },
     {
@@ -2493,7 +2598,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2514,7 +2619,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.3-iQTele.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     },
     {
@@ -2535,7 +2640,7 @@
         "failed check: fileAvailable"
       ],
       "downloadURL": "https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-21144-305.ipa",
-      "trustScore": 2.9,
+      "trustScore": 2.8,
       "trustBadge": "Experimental"
     }
   ]

@@ -2,14 +2,32 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-17",
   "totals": {
-    "apps": 120,
-    "pass": 74,
+    "apps": 125,
+    "pass": 79,
     "warn": 46,
     "fail": 0,
     "rejected": 0
   },
   "rejected": [],
   "apps": [
+    {
+      "slug": "3105",
+      "name": "3105",
+      "asset": {
+        "sha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991",
+        "size": 4604223,
+        "releaseId": "2.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
     {
       "slug": "aidoku",
       "name": "Aidoku",
@@ -187,6 +205,24 @@
         "releaseId": "2.3.15",
         "source": "github",
         "downloadUrl": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "battman",
+      "name": "Battman",
+      "asset": {
+        "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+        "size": 675573,
+        "releaseId": "1.0.3",
+        "source": "github",
+        "downloadUrl": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa"
       },
       "checks": {
         "sizePositive": true,
@@ -633,6 +669,24 @@
         "reachable": true
       },
       "status": "warn"
+    },
+    {
+      "slug": "escapeos",
+      "name": "EscapeOS",
+      "asset": {
+        "sha256": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02",
+        "size": 7259448,
+        "releaseId": "0.1.5",
+        "source": "github",
+        "downloadUrl": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "feather",
@@ -1581,6 +1635,24 @@
         "at": "2026-09-14",
         "durationMs": 3172
       }
+    },
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "asset": {
+        "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
+        "size": 51420909,
+        "releaseId": "0.4.23",
+        "source": "github",
+        "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "odyssey",
@@ -2949,6 +3021,24 @@
         "at": "2026-09-14",
         "durationMs": 325
       }
+    },
+    {
+      "slug": "vibecontainers",
+      "name": "VibeContainers",
+      "asset": {
+        "sha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+        "size": 8948447,
+        "releaseId": "1.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "voyager",

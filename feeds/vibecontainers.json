@@ -1,0 +1,96 @@
+{
+  "name": "OmniSource - VibeContainers",
+  "identifier": "com.iamsmmh.omnisource.vibecontainers",
+  "apiVersion": "v2",
+  "subtitle": "Jailbreak app runner, a LiveContainer fork",
+  "description": "Standalone distribution feed for VibeContainers, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/vibecontainers.json",
+  "apps": [
+    {
+      "name": "VibeContainers",
+      "bundleIdentifier": "com.genericcoding.vibecontainers",
+      "developerName": "GenericCoding",
+      "subtitle": "Jailbreak app runner, a LiveContainer fork",
+      "localizedDescription": "VibeContainers is a fork of Live Containers that runs jailbroken and tweaked apps on a non-jailbroken iOS 17 or newer device using the LiveContainer JIT. The published release is unsigned - sign it with a tool like AltStore or SideStore before installing.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/VibeContainers.webp",
+      "tintColor": "E0218A",
+      "category": "utilities",
+      "version": "1.0",
+      "versionDate": "2026-08-28",
+      "versionDescription": "VibeContainers 1.0 | VibeContainers-1.0-unsigned\n\nInitial release.",
+      "downloadURL": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa",
+      "size": 8948447,
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2026-08-28",
+          "localizedDescription": "VibeContainers 1.0 | VibeContainers-1.0-unsigned\n\nInitial release.",
+          "downloadURL": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa",
+          "size": 8948447,
+          "minOSVersion": "17.0",
+          "releaseUrl": "https://github.com/GenericCoding/VibeContainers/releases/tag/v1.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "VibeContainers-1.0-unsigned.ipa",
+              "downloadUrl": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 8948447,
+              "sha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+              "downloads": 421,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+          "downloads": 421
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "vibecontainers",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/GenericCoding/VibeContainers",
+        "sourceURL": "https://github.com/GenericCoding/VibeContainers",
+        "verification": {
+          "method": "github-release",
+          "publisher": "GenericCoding/VibeContainers",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "17.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official unsigned IPA from GenericCoding/VibeContainers; the build script assigns com.genericcoding.vibecontainers to unsigned builds. Fork of the LiveContainer project."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2026-08-28"
+        }
+      }
+    }
+  ],
+  "news": []
+}

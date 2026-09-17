@@ -2,6 +2,14 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-17",
   "icons": {
+    "3105": {
+      "file": "3105.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/3105.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 12298,
+      "sha256": "31bed13789c844fe1a41f1259d52802d9a3a3cd78e8ff5b24619b0d4d7128d58"
+    },
     "aidoku": {
       "file": "Aidoku.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/Aidoku.webp",
@@ -57,6 +65,14 @@
       "exists": true,
       "bytes": 4204,
       "sha256": "8b14cdd0bd28dbb1d16bf22a6143bd85c878b6ae24867b0dc0c9cad178b5fc46"
+    },
+    "battman": {
+      "file": "Battman.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/Battman.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 3544,
+      "sha256": "460605d3c1382d916328b4e1c13887ca80f5d2de51ed6e5160813a67806af360"
     },
     "bhinstagram": {
       "file": "Instagram.webp",
@@ -193,6 +209,14 @@
       "exists": true,
       "bytes": 19490,
       "sha256": "43b2470fa236c5d45f2c26b00d36b454b89560222d52b8bba501445fc5d83f0d"
+    },
+    "escapeos": {
+      "file": "EscapeOS.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/EscapeOS.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 8598,
+      "sha256": "0f60ffa1b0d561e7f7b4d53e7b134d62191bc27968f1c94520a779d237874300"
     },
     "feather": {
       "file": "Feather.webp",
@@ -465,6 +489,14 @@
       "exists": true,
       "bytes": 6320,
       "sha256": "5c9cc7fb769dd70d17944646eb99df20b182a8a9469d0a06c25c24a71304c44b"
+    },
+    "nuvio": {
+      "file": "Nuvio.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 7070,
+      "sha256": "dc66aca0a4f4e650d0325537d2e48594a340db82f638a91ed0b3b95eb36c3504"
     },
     "odyssey": {
       "file": "Odyssey.webp",
@@ -866,6 +898,14 @@
       "bytes": 21706,
       "sha256": "0187ab2877cc8e78c411d1eee8ddd6c14efa2c537a969e1561c55fcfa347e35b"
     },
+    "vibecontainers": {
+      "file": "VibeContainers.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/VibeContainers.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 21030,
+      "sha256": "850a1700e7e426cdf78073db9b14b8ebd4bee62f832a91d8ca6077173127c1dc"
+    },
     "voyager": {
       "file": "Voyager.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/Voyager.webp",
@@ -1057,6 +1097,7 @@
         "infuseplus",
         "maxtube",
         "nebuloiptv",
+        "nuvio",
         "playtorrio",
         "pocketposter",
         "sora",
@@ -1070,7 +1111,7 @@
         "ytkp",
         "ytlite"
       ],
-      "count": 18
+      "count": 19
     },
     "social": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
@@ -1111,8 +1152,10 @@
     "utilities": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
       "apps": [
+        "3105",
         "anxreader",
         "appstoreplusplus",
+        "battman",
         "bluewallet",
         "bootstrap",
         "conduit",
@@ -1120,6 +1163,7 @@
         "dopamine",
         "dopamine-roothide",
         "dynamiccow",
+        "escapeos",
         "feather",
         "helium",
         "jaility",
@@ -1147,10 +1191,11 @@
         "trollinstallerx",
         "unc0ver",
         "utm",
+        "vibecontainers",
         "wdbfontoverwrite",
         "zeus"
       ],
-      "count": 38
+      "count": 42
     }
   },
   "missing": [],
@@ -1175,6 +1220,7 @@
     "dolphinish",
     "dopamine",
     "dopamine-roothide",
+    "escapeos",
     "fladder",
     "glow",
     "gopeed",
@@ -1204,6 +1250,7 @@
     "nebuloiptv",
     "neofreebird",
     "nexasc",
+    "nuvio",
     "odyssey",
     "orbot",
     "otraku",
@@ -1244,6 +1291,7 @@
     "unc0ver",
     "uyouenhanced",
     "vcmi",
+    "vibecontainers",
     "voyager",
     "wdbfontoverwrite",
     "winston",
@@ -1254,11 +1302,11 @@
     "zeus"
   ],
   "totals": {
-    "apps": 120,
-    "iconsOk": 120,
+    "apps": 125,
+    "iconsOk": 125,
     "iconsMissing": 0,
     "placeholdersOk": 3,
-    "screenshotsDeclared": 23,
-    "screenshotsMissing": 97
+    "screenshotsDeclared": 25,
+    "screenshotsMissing": 100
   }
 }

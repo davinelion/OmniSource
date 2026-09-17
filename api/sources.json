@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 104,
+  "count": 109,
   "feed": {
     "name": "OmniSource",
     "identifier": "com.iamsmmh.omnisource",
@@ -134,8 +134,8 @@
       ],
       "appCount": 13,
       "verifiedApps": 0,
-      "healthScore": 52.1,
-      "score": 90.7,
+      "healthScore": 50.1,
+      "score": 89.2,
       "status": "Warning",
       "level": "TRUSTED",
       "updateFrequencyDays": 6.5,
@@ -742,10 +742,10 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 55.0,
-      "score": 71.0,
+      "healthScore": 53.0,
+      "score": 69.3,
       "status": "Warning",
-      "level": "RELIABLE",
+      "level": "AVERAGE",
       "updateFrequencyDays": null,
       "lastUpdate": "2026-08-22",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
@@ -952,6 +952,35 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2026-01-11",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
+    },
+    {
+      "id": "GenericCoding/VibeContainers",
+      "source": "GenericCoding/VibeContainers",
+      "type": "github",
+      "homepage": "https://github.com/GenericCoding/VibeContainers",
+      "sourceURL": "https://github.com/GenericCoding/VibeContainers",
+      "publisher": "GenericCoding/VibeContainers",
+      "apps": [
+        {
+          "slug": "vibecontainers",
+          "name": "VibeContainers",
+          "version": "1.0"
+        }
+      ],
+      "slug": "genericcoding-vibecontainers",
+      "page": "/sources/genericcoding-vibecontainers/",
+      "appSlugs": [
+        "vibecontainers"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-08-28",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/vibecontainers.json"
     },
     {
       "id": "ginsudev/WDBFontOverwrite",
@@ -1212,8 +1241,8 @@
       ],
       "appCount": 2,
       "verifiedApps": 0,
-      "healthScore": 57.0,
-      "score": 88.2,
+      "healthScore": 55.0,
+      "score": 86.6,
       "status": "Warning",
       "level": "TRUSTED",
       "updateFrequencyDays": 8.0,
@@ -2136,6 +2165,35 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
     },
     {
+      "id": "NuvioMedia/NuvioMobile",
+      "source": "NuvioMedia/NuvioMobile",
+      "type": "github",
+      "homepage": "https://github.com/NuvioMedia/NuvioMobile",
+      "sourceURL": "https://github.com/NuvioMedia/NuvioMobile",
+      "publisher": "NuvioMedia/NuvioMobile",
+      "apps": [
+        {
+          "slug": "nuvio",
+          "name": "Nuvio",
+          "version": "0.4.23"
+        }
+      ],
+      "slug": "nuviomedia-nuviomobile",
+      "page": "/sources/nuviomedia-nuviomobile/",
+      "appSlugs": [
+        "nuvio"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-09-17",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/nuvio.json"
+    },
+    {
       "id": "Nyasami/Ksign",
       "source": "Nyasami/Ksign",
       "type": "github",
@@ -2397,6 +2455,35 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/unc0ver.json"
     },
     {
+      "id": "pwnapplehat/EscapeOS",
+      "source": "pwnapplehat/EscapeOS",
+      "type": "github",
+      "homepage": "https://github.com/pwnapplehat/EscapeOS",
+      "sourceURL": "https://github.com/pwnapplehat/EscapeOS",
+      "publisher": "pwnapplehat/EscapeOS",
+      "apps": [
+        {
+          "slug": "escapeos",
+          "name": "EscapeOS",
+          "version": "0.1.5"
+        }
+      ],
+      "slug": "pwnapplehat-escapeos",
+      "page": "/sources/pwnapplehat-escapeos/",
+      "appSlugs": [
+        "escapeos"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-08-17",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/escapeos.json"
+    },
+    {
       "id": "raincord/RainTweak",
       "source": "raincord/RainTweak (Codeberg)",
       "type": "codeberg",
@@ -2418,10 +2505,10 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 83.4,
+      "score": 73.9,
       "status": "Community Verified",
       "level": "RELIABLE",
-      "updateFrequencyDays": 90.0,
+      "updateFrequencyDays": null,
       "lastUpdate": "2026-09-17",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/raintweak.json"
     },
@@ -2620,8 +2707,8 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 54.0,
-      "score": 69.9,
+      "healthScore": 52.0,
+      "score": 68.3,
       "status": "Warning",
       "level": "AVERAGE",
       "updateFrequencyDays": null,
@@ -2649,8 +2736,8 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 54.0,
-      "score": 69.9,
+      "healthScore": 52.0,
+      "score": 68.3,
       "status": "Warning",
       "level": "AVERAGE",
       "updateFrequencyDays": null,
@@ -2890,6 +2977,35 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/thunder.json"
     },
     {
+      "id": "Torrekie/Battman",
+      "source": "Torrekie/Battman",
+      "type": "github",
+      "homepage": "https://github.com/Torrekie/Battman",
+      "sourceURL": "https://github.com/Torrekie/Battman",
+      "publisher": "Torrekie/Battman",
+      "apps": [
+        {
+          "slug": "battman",
+          "name": "Battman",
+          "version": "1.0.3"
+        }
+      ],
+      "slug": "torrekie-battman",
+      "page": "/sources/torrekie-battman/",
+      "appSlugs": [
+        "battman"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-01-19",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/battman.json"
+    },
+    {
       "id": "utmapp/UTM",
       "source": "utmapp/UTM",
       "type": "github",
@@ -3004,6 +3120,35 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2026-07-19",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/itorrent.json"
+    },
+    {
+      "id": "YangJiiii/3105",
+      "source": "YangJiiii/3105",
+      "type": "github",
+      "homepage": "https://github.com/YangJiiii/3105",
+      "sourceURL": "https://github.com/YangJiiii/3105",
+      "publisher": "YangJiiii/3105",
+      "apps": [
+        {
+          "slug": "3105",
+          "name": "3105",
+          "version": "2.0"
+        }
+      ],
+      "slug": "yangjiiii-3105",
+      "page": "/sources/yangjiiii-3105/",
+      "appSlugs": [
+        "3105"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-09-14",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/3105.json"
     },
     {
       "id": "yattee/yattee",
@@ -3154,7 +3299,7 @@
   "statuses": {
     "Warning": 6,
     "Verified": 9,
-    "Community Verified": 57,
+    "Community Verified": 62,
     "Inactive": 17,
     "Deprecated": 15
   }

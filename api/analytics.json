@@ -3,23 +3,31 @@
   "generatedAt": "2026-09-17",
   "lastSync": "2026-09-17",
   "totals": {
-    "apps": 120,
-    "sources": 104,
-    "verifiedApps": 102,
+    "apps": 125,
+    "sources": 109,
+    "verifiedApps": 107,
     "communityVerifiedApps": 0,
     "unverifiedApps": 18,
-    "hashVerifiedApps": 74,
-    "verified": 102,
+    "hashVerifiedApps": 79,
+    "verified": 107,
     "community_verified": 0,
     "unverified": 18,
     "featuredApps": 6,
-    "downloadsReachable": 102,
+    "downloadsReachable": 107,
     "deadLinks": 18,
-    "newAppsThisWeek": 2,
+    "newAppsThisWeek": 4,
     "updatedAppsThisWeek": 26,
     "clientsSupported": 5
   },
   "newThisWeek": [
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "version": "0.4.23",
+      "previousVersion": "",
+      "date": "2026-09-17",
+      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa"
+    },
     {
       "slug": "appstoreplusplus",
       "name": "AppStore++",
@@ -35,6 +43,14 @@
       "previousVersion": "",
       "date": "2026-09-14",
       "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa"
+    },
+    {
+      "slug": "3105",
+      "name": "3105",
+      "version": "2.0",
+      "previousVersion": "",
+      "date": "2026-09-14",
+      "downloadURL": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa"
     }
   ],
   "updatedThisWeek": [
@@ -250,7 +266,7 @@
   "topCategories": [
     {
       "category": "utilities",
-      "count": 38
+      "count": 42
     },
     {
       "category": "social",
@@ -258,7 +274,7 @@
     },
     {
       "category": "photo-video",
-      "count": 18
+      "count": 19
     },
     {
       "category": "games",
@@ -282,11 +298,16 @@
     }
   ],
   "verification": {
-    "VERIFIED": 102,
+    "VERIFIED": 107,
     "COMMUNITY VERIFIED": 0,
     "UNVERIFIED": 18
   },
   "recentUpdates": [
+    {
+      "slug": "3105",
+      "name": "3105",
+      "status": "VERIFIED"
+    },
     {
       "slug": "aidoku",
       "name": "Aidoku",
@@ -323,29 +344,24 @@
       "status": "VERIFIED"
     },
     {
+      "slug": "battman",
+      "name": "Battman",
+      "status": "VERIFIED"
+    },
+    {
       "slug": "bhinstagram",
       "name": "BHInstagram",
-      "status": "VERIFIED"
-    },
-    {
-      "slug": "bhtwitter",
-      "name": "BHTwitter",
-      "status": "VERIFIED"
-    },
-    {
-      "slug": "bluewallet",
-      "name": "BlueWallet",
       "status": "VERIFIED"
     }
   ],
   "history": [
     {
       "date": "2026-09-17",
-      "apps": 120,
-      "sources": 104,
-      "verified": 102,
+      "apps": 125,
+      "sources": 109,
+      "verified": 107,
       "deadLinks": 18,
-      "newThisWeek": 2,
+      "newThisWeek": 4,
       "updatedThisWeek": 26
     }
   ]
