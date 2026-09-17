@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16",
-  "count": 275,
-  "edgeCount": 811,
+  "generatedAt": "2026-09-17",
+  "count": 353,
+  "edgeCount": 1051,
   "nodes": [
     {
       "id": "app:spotiflac",
@@ -168,7 +168,7 @@
       "slug": "maxmusic",
       "bundleId": "com.google.ios.youtubemusic",
       "category": "music",
-      "version": "9.36.1"
+      "version": "9.37.2"
     },
     {
       "id": "source:mark022012maxmusic",
@@ -867,7 +867,7 @@
       "slug": "conduit",
       "bundleId": "app.cogwheel.conduit",
       "category": "utilities",
-      "version": "4.1.5"
+      "version": "4.1.6"
     },
     {
       "id": "dev:cogwheel0",
@@ -947,7 +947,7 @@
       "slug": "raintweak",
       "bundleId": "com.hammerandchisel.discord",
       "category": "social",
-      "version": "0.9.3"
+      "version": "1.2.0"
     },
     {
       "id": "dev:raincord-&-ipa-vault",
@@ -1654,7 +1654,7 @@
       "slug": "playtorrio",
       "bundleId": "com.example.playtorrio",
       "category": "photo-video",
-      "version": "1.1.5"
+      "version": "1.1.6"
     },
     {
       "id": "dev:ayman708",
@@ -1866,6 +1866,541 @@
       "type": "source",
       "label": "NguyenASang/SNMessenger",
       "url": "https://github.com/NguyenASang/SNMessenger"
+    },
+    {
+      "id": "app:bhinstagram",
+      "type": "app",
+      "label": "BHInstagram",
+      "slug": "bhinstagram",
+      "bundleId": "com.bandarhl.bhinsta",
+      "category": "social",
+      "version": "1.2"
+    },
+    {
+      "id": "source:bandarhlbhinstagram",
+      "type": "source",
+      "label": "BandarHL/BHInstagram",
+      "url": "https://github.com/BandarHL/BHInstagram"
+    },
+    {
+      "id": "app:reynard",
+      "type": "app",
+      "label": "Reynard",
+      "slug": "reynard",
+      "bundleId": "com.minh-ton.Reynard",
+      "category": "utilities",
+      "version": "0.13.1"
+    },
+    {
+      "id": "dev:minh-ton",
+      "type": "developer",
+      "label": "Minh Ton"
+    },
+    {
+      "id": "source:minhtonreynardbrowser",
+      "type": "source",
+      "label": "minh-ton/reynard-browser",
+      "url": "https://github.com/minh-ton/reynard-browser"
+    },
+    {
+      "id": "app:pocketposter",
+      "type": "app",
+      "label": "Pocket Poster",
+      "slug": "pocketposter",
+      "bundleId": "com.lemin.Pocket-Poster",
+      "category": "photo-video",
+      "version": "3.0"
+    },
+    {
+      "id": "dev:leminlimez",
+      "type": "developer",
+      "label": "leminlimez"
+    },
+    {
+      "id": "source:leminlimezpocketposter",
+      "type": "source",
+      "label": "leminlimez/Pocket-Poster",
+      "url": "https://github.com/leminlimez/Pocket-Poster"
+    },
+    {
+      "id": "app:mugunghwa",
+      "type": "app",
+      "label": "Mugunghwa",
+      "slug": "mugunghwa",
+      "bundleId": "me.soongyu.mugunghwautil",
+      "category": "utilities",
+      "version": "3.0.2"
+    },
+    {
+      "id": "dev:soongyu-kwon",
+      "type": "developer",
+      "label": "Soongyu Kwon"
+    },
+    {
+      "id": "source:s8ngyumugunghwa",
+      "type": "source",
+      "label": "s8ngyu/Mugunghwa",
+      "url": "https://github.com/s8ngyu/Mugunghwa"
+    },
+    {
+      "id": "app:wdbfontoverwrite",
+      "type": "app",
+      "label": "WDBFontOverwrite",
+      "slug": "wdbfontoverwrite",
+      "bundleId": "com.ginsudev.WDBFontOverwrite",
+      "category": "utilities",
+      "version": "1.10.8"
+    },
+    {
+      "id": "dev:ginsu",
+      "type": "developer",
+      "label": "Ginsu"
+    },
+    {
+      "id": "source:ginsudevwdbfontoverwrite",
+      "type": "source",
+      "label": "ginsudev/WDBFontOverwrite",
+      "url": "https://github.com/ginsudev/WDBFontOverwrite"
+    },
+    {
+      "id": "app:jaility",
+      "type": "app",
+      "label": "Jaility",
+      "slug": "jaility",
+      "bundleId": "org.haxi0.Jaility",
+      "category": "utilities",
+      "version": "3.1.1"
+    },
+    {
+      "id": "dev:haxi0",
+      "type": "developer",
+      "label": "haxi0"
+    },
+    {
+      "id": "source:haxi0jaility",
+      "type": "source",
+      "label": "haxi0/Jaility",
+      "url": "https://github.com/haxi0/Jaility"
+    },
+    {
+      "id": "app:killmyota",
+      "type": "app",
+      "label": "KillMyOTA",
+      "slug": "killmyota",
+      "bundleId": "org.haxi0.KillMyOTA",
+      "category": "utilities",
+      "version": "1.1"
+    },
+    {
+      "id": "source:haxi0killmyota",
+      "type": "source",
+      "label": "haxi0/KillMyOTA",
+      "url": "https://github.com/haxi0/KillMyOTA"
+    },
+    {
+      "id": "app:trollinstallerx",
+      "type": "app",
+      "label": "TrollInstallerX",
+      "slug": "trollinstallerx",
+      "bundleId": "com.Alfie.TrollInstallerX",
+      "category": "utilities",
+      "version": "1.0.3"
+    },
+    {
+      "id": "dev:alfie-cg",
+      "type": "developer",
+      "label": "Alfie CG"
+    },
+    {
+      "id": "source:alfiecg24trollinstallerx",
+      "type": "source",
+      "label": "alfiecg24/TrollInstallerX",
+      "url": "https://github.com/alfiecg24/TrollInstallerX"
+    },
+    {
+      "id": "app:trollboard-reborn",
+      "type": "app",
+      "label": "TrollBoard Reborn",
+      "slug": "trollboard-reborn",
+      "bundleId": "com.haxi0.TrollBoard-Reborn",
+      "category": "utilities",
+      "version": "1.0"
+    },
+    {
+      "id": "source:haxi0trollboardreborn",
+      "type": "source",
+      "label": "haxi0/TrollBoard-Reborn",
+      "url": "https://github.com/haxi0/TrollBoard-Reborn"
+    },
+    {
+      "id": "app:statusmagic",
+      "type": "app",
+      "label": "StatusMagic",
+      "slug": "statusmagic",
+      "bundleId": "com.avangelista.StatusMagic",
+      "category": "utilities",
+      "version": "1.0.2"
+    },
+    {
+      "id": "dev:avangelista",
+      "type": "developer",
+      "label": "Avangelista"
+    },
+    {
+      "id": "source:avangelistastatusmagic",
+      "type": "source",
+      "label": "Avangelista/StatusMagic",
+      "url": "https://github.com/Avangelista/StatusMagic"
+    },
+    {
+      "id": "app:cartube",
+      "type": "app",
+      "label": "CarTube",
+      "slug": "cartube",
+      "bundleId": "com.avangelista.CarTube",
+      "category": "photo-video",
+      "version": "1.3"
+    },
+    {
+      "id": "source:avangelistacartube",
+      "type": "source",
+      "label": "Avangelista/CarTube",
+      "url": "https://github.com/Avangelista/CarTube"
+    },
+    {
+      "id": "app:dynamiccow",
+      "type": "app",
+      "label": "DynamicCow",
+      "slug": "dynamiccow",
+      "bundleId": "com.zeph.DynamicCoww",
+      "category": "utilities",
+      "version": "1.1"
+    },
+    {
+      "id": "dev:matteo-zappia",
+      "type": "developer",
+      "label": "matteo zappia"
+    },
+    {
+      "id": "source:matteozappiadynamiccow",
+      "type": "source",
+      "label": "matteozappia/DynamicCow",
+      "url": "https://github.com/matteozappia/DynamicCow"
+    },
+    {
+      "id": "app:itransmission",
+      "type": "app",
+      "label": "iTransmission",
+      "slug": "itransmission",
+      "bundleId": "com.plusmediapps.itransmission",
+      "category": "networking",
+      "version": "1.0.0"
+    },
+    {
+      "id": "dev:alexsvitlov",
+      "type": "developer",
+      "label": "alexsvitlov"
+    },
+    {
+      "id": "source:alexsvitlovitransmission",
+      "type": "source",
+      "label": "alexsvitlov/iTransmission",
+      "url": "https://github.com/alexsvitlov/iTransmission"
+    },
+    {
+      "id": "app:cowabunga",
+      "type": "app",
+      "label": "Cowabunga",
+      "slug": "cowabunga",
+      "bundleId": "com.leemin.Cowabunga",
+      "category": "utilities",
+      "version": "10.3.2"
+    },
+    {
+      "id": "source:leminlimezcowabunga",
+      "type": "source",
+      "label": "leminlimez/Cowabunga",
+      "url": "https://github.com/leminlimez/Cowabunga"
+    },
+    {
+      "id": "app:airtroller",
+      "type": "app",
+      "label": "AirTroller",
+      "slug": "airtroller",
+      "bundleId": "net.sourceloc.AirTroller",
+      "category": "other",
+      "version": "1.1.1"
+    },
+    {
+      "id": "dev:matthew-anisovich",
+      "type": "developer",
+      "label": "Matthew Anisovich"
+    },
+    {
+      "id": "source:sourcelocationairtroller",
+      "type": "source",
+      "label": "sourcelocation/AirTroller",
+      "url": "https://github.com/sourcelocation/AirTroller"
+    },
+    {
+      "id": "app:helium",
+      "type": "app",
+      "label": "Helium",
+      "slug": "helium",
+      "bundleId": "com.leemin.helium",
+      "category": "utilities",
+      "version": "3.2.5"
+    },
+    {
+      "id": "source:leminlimezhelium",
+      "type": "source",
+      "label": "leminlimez/Helium",
+      "url": "https://github.com/leminlimez/Helium"
+    },
+    {
+      "id": "app:secondhand",
+      "type": "app",
+      "label": "SecondHand",
+      "slug": "secondhand",
+      "bundleId": "com.leemin.SecondHand",
+      "category": "utilities",
+      "version": "1.3.1"
+    },
+    {
+      "id": "source:leminlimezsecondhand",
+      "type": "source",
+      "label": "leminlimez/SecondHand",
+      "url": "https://github.com/leminlimez/SecondHand"
+    },
+    {
+      "id": "app:caperfhud",
+      "type": "app",
+      "label": "CAPerfHUD",
+      "slug": "caperfhud",
+      "bundleId": "ca.bomberfish.CAPerfHudSwift",
+      "category": "developer-tools",
+      "version": "1.0.2"
+    },
+    {
+      "id": "dev:hariz-s.",
+      "type": "developer",
+      "label": "Hariz S."
+    },
+    {
+      "id": "source:bomberfishcaperfhudswift",
+      "type": "source",
+      "label": "bomberfish/CAPerfHUDSwift",
+      "url": "https://github.com/bomberfish/CAPerfHUDSwift"
+    },
+    {
+      "id": "app:appstoreplusplus",
+      "type": "app",
+      "label": "AppStore++",
+      "slug": "appstoreplusplus",
+      "bundleId": "com.cokepokes.AppStorePlus",
+      "category": "utilities",
+      "version": "2.3.15"
+    },
+    {
+      "id": "dev:cokepokes",
+      "type": "developer",
+      "label": "CokePokes"
+    },
+    {
+      "id": "source:cokepokesappstoreplustrollstor",
+      "type": "source",
+      "label": "CokePokes/AppStorePlus-TrollStore",
+      "url": "https://github.com/CokePokes/AppStorePlus-TrollStore"
+    },
+    {
+      "id": "app:nuvio",
+      "type": "app",
+      "label": "Nuvio",
+      "slug": "nuvio",
+      "bundleId": "com.nuvio.app",
+      "category": "photo-video",
+      "version": "0.4.23"
+    },
+    {
+      "id": "dev:nuvio-media",
+      "type": "developer",
+      "label": "Nuvio Media"
+    },
+    {
+      "id": "source:nuviomedianuviomobile",
+      "type": "source",
+      "label": "NuvioMedia/NuvioMobile",
+      "url": "https://github.com/NuvioMedia/NuvioMobile"
+    },
+    {
+      "id": "app:escapeos",
+      "type": "app",
+      "label": "EscapeOS",
+      "slug": "escapeos",
+      "bundleId": "com.ipaside.escapeos",
+      "category": "utilities",
+      "version": "0.1.5"
+    },
+    {
+      "id": "dev:pwnapplehat",
+      "type": "developer",
+      "label": "pwnapplehat"
+    },
+    {
+      "id": "source:pwnapplehatescapeos",
+      "type": "source",
+      "label": "pwnapplehat/EscapeOS",
+      "url": "https://github.com/pwnapplehat/EscapeOS"
+    },
+    {
+      "id": "app:3105",
+      "type": "app",
+      "label": "3105",
+      "slug": "3105",
+      "bundleId": "com.apple.mobile.MobileHouseArrest",
+      "category": "utilities",
+      "version": "2.0"
+    },
+    {
+      "id": "dev:yangjiii",
+      "type": "developer",
+      "label": "YangJiii"
+    },
+    {
+      "id": "source:yangjiiii3105",
+      "type": "source",
+      "label": "YangJiiii/3105",
+      "url": "https://github.com/YangJiiii/3105"
+    },
+    {
+      "id": "app:vibecontainers",
+      "type": "app",
+      "label": "VibeContainers",
+      "slug": "vibecontainers",
+      "bundleId": "com.genericcoding.vibecontainers",
+      "category": "utilities",
+      "version": "1.0"
+    },
+    {
+      "id": "dev:genericcoding",
+      "type": "developer",
+      "label": "GenericCoding"
+    },
+    {
+      "id": "source:genericcodingvibecontainers",
+      "type": "source",
+      "label": "GenericCoding/VibeContainers",
+      "url": "https://github.com/GenericCoding/VibeContainers"
+    },
+    {
+      "id": "app:battman",
+      "type": "app",
+      "label": "Battman",
+      "slug": "battman",
+      "bundleId": "com.torrekie.Battman",
+      "category": "utilities",
+      "version": "1.0.3"
+    },
+    {
+      "id": "dev:torrekie-gen",
+      "type": "developer",
+      "label": "Torrekie Gen"
+    },
+    {
+      "id": "source:torrekiebattman",
+      "type": "source",
+      "label": "Torrekie/Battman",
+      "url": "https://github.com/Torrekie/Battman"
+    },
+    {
+      "id": "app:cercube",
+      "type": "app",
+      "label": "Cercube for YouTube",
+      "slug": "cercube",
+      "bundleId": "com.cercube.ios",
+      "category": "photo-video",
+      "version": "6.1.3"
+    },
+    {
+      "id": "dev:cercube",
+      "type": "developer",
+      "label": "Cercube"
+    },
+    {
+      "id": "source:cercubecercubecomofficialsidel",
+      "type": "source",
+      "label": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "url": "https://cercube.com"
+    },
+    {
+      "id": "app:nicegram",
+      "type": "app",
+      "label": "Nicegram",
+      "slug": "nicegram",
+      "bundleId": "app.nicegram",
+      "category": "social",
+      "version": "2.6.1"
+    },
+    {
+      "id": "dev:nicegram-(appvillis-uab)",
+      "type": "developer",
+      "label": "Nicegram (Appvillis UAB)"
+    },
+    {
+      "id": "source:nicegramnicegramios",
+      "type": "source",
+      "label": "nicegram/Nicegram-iOS",
+      "url": "https://github.com/nicegram/Nicegram-iOS"
+    },
+    {
+      "id": "app:batteryinfo",
+      "type": "app",
+      "label": "Battery Info",
+      "slug": "batteryinfo",
+      "bundleId": "com.developlab.BatteryInfo",
+      "category": "utilities",
+      "version": "1.2.2"
+    },
+    {
+      "id": "dev:developcubelab",
+      "type": "developer",
+      "label": "DevelopCubeLab"
+    },
+    {
+      "id": "source:developcubelabbatteryinfo",
+      "type": "source",
+      "label": "DevelopCubeLab/BatteryInfo",
+      "url": "https://github.com/DevelopCubeLab/BatteryInfo"
+    },
+    {
+      "id": "app:enablequic",
+      "type": "app",
+      "label": "EnableQUIC",
+      "slug": "enablequic",
+      "bundleId": "com.developlab.EnableQUIC",
+      "category": "utilities",
+      "version": "1.2.4"
+    },
+    {
+      "id": "source:developcubelabenablequic",
+      "type": "source",
+      "label": "DevelopCubeLab/EnableQUIC",
+      "url": "https://github.com/DevelopCubeLab/EnableQUIC"
+    },
+    {
+      "id": "app:animationspeed",
+      "type": "app",
+      "label": "Animation Speed",
+      "slug": "animationspeed",
+      "bundleId": "com.developlab.AnimationSpeed",
+      "category": "utilities",
+      "version": "1.0.1"
+    },
+    {
+      "id": "source:developcubelabanimationspeed",
+      "type": "source",
+      "label": "DevelopCubeLab/AnimationSpeed",
+      "url": "https://github.com/DevelopCubeLab/AnimationSpeed"
     }
   ],
   "edges": [
@@ -2880,6 +3415,296 @@
       "type": "source"
     },
     {
+      "source": "app:bhinstagram",
+      "target": "dev:bandarhl",
+      "type": "developer"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "source:bandarhlbhinstagram",
+      "type": "source"
+    },
+    {
+      "source": "app:reynard",
+      "target": "dev:minh-ton",
+      "type": "developer"
+    },
+    {
+      "source": "app:reynard",
+      "target": "source:minhtonreynardbrowser",
+      "type": "source"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "dev:leminlimez",
+      "type": "developer"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "source:leminlimezpocketposter",
+      "type": "source"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "dev:soongyu-kwon",
+      "type": "developer"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "source:s8ngyumugunghwa",
+      "type": "source"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "dev:ginsu",
+      "type": "developer"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "source:ginsudevwdbfontoverwrite",
+      "type": "source"
+    },
+    {
+      "source": "app:jaility",
+      "target": "dev:haxi0",
+      "type": "developer"
+    },
+    {
+      "source": "app:jaility",
+      "target": "source:haxi0jaility",
+      "type": "source"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "dev:haxi0",
+      "type": "developer"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "source:haxi0killmyota",
+      "type": "source"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "dev:alfie-cg",
+      "type": "developer"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "source:alfiecg24trollinstallerx",
+      "type": "source"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "dev:haxi0",
+      "type": "developer"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "source:haxi0trollboardreborn",
+      "type": "source"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "dev:avangelista",
+      "type": "developer"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "source:avangelistastatusmagic",
+      "type": "source"
+    },
+    {
+      "source": "app:cartube",
+      "target": "dev:avangelista",
+      "type": "developer"
+    },
+    {
+      "source": "app:cartube",
+      "target": "source:avangelistacartube",
+      "type": "source"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "dev:matteo-zappia",
+      "type": "developer"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "source:matteozappiadynamiccow",
+      "type": "source"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "dev:alexsvitlov",
+      "type": "developer"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "source:alexsvitlovitransmission",
+      "type": "source"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "dev:leminlimez",
+      "type": "developer"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "source:leminlimezcowabunga",
+      "type": "source"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "dev:matthew-anisovich",
+      "type": "developer"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "source:sourcelocationairtroller",
+      "type": "source"
+    },
+    {
+      "source": "app:helium",
+      "target": "dev:leminlimez",
+      "type": "developer"
+    },
+    {
+      "source": "app:helium",
+      "target": "source:leminlimezhelium",
+      "type": "source"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "dev:leminlimez",
+      "type": "developer"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "source:leminlimezsecondhand",
+      "type": "source"
+    },
+    {
+      "source": "app:caperfhud",
+      "target": "dev:hariz-s.",
+      "type": "developer"
+    },
+    {
+      "source": "app:caperfhud",
+      "target": "source:bomberfishcaperfhudswift",
+      "type": "source"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "dev:cokepokes",
+      "type": "developer"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "source:cokepokesappstoreplustrollstor",
+      "type": "source"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "dev:nuvio-media",
+      "type": "developer"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "source:nuviomedianuviomobile",
+      "type": "source"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "dev:pwnapplehat",
+      "type": "developer"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "source:pwnapplehatescapeos",
+      "type": "source"
+    },
+    {
+      "source": "app:3105",
+      "target": "dev:yangjiii",
+      "type": "developer"
+    },
+    {
+      "source": "app:3105",
+      "target": "source:yangjiiii3105",
+      "type": "source"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "dev:genericcoding",
+      "type": "developer"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "source:genericcodingvibecontainers",
+      "type": "source"
+    },
+    {
+      "source": "app:battman",
+      "target": "dev:torrekie-gen",
+      "type": "developer"
+    },
+    {
+      "source": "app:battman",
+      "target": "source:torrekiebattman",
+      "type": "source"
+    },
+    {
+      "source": "app:cercube",
+      "target": "dev:cercube",
+      "type": "developer"
+    },
+    {
+      "source": "app:cercube",
+      "target": "source:cercubecercubecomofficialsidel",
+      "type": "source"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "dev:nicegram-(appvillis-uab)",
+      "type": "developer"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "source:nicegramnicegramios",
+      "type": "source"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "dev:developcubelab",
+      "type": "developer"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "source:developcubelabbatteryinfo",
+      "type": "source"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "dev:developcubelab",
+      "type": "developer"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "source:developcubelabenablequic",
+      "type": "source"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "dev:developcubelab",
+      "type": "developer"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "source:developcubelabanimationspeed",
+      "type": "source"
+    },
+    {
       "source": "app:uyouenhanced",
       "target": "app:ytlite",
       "type": "bundle",
@@ -3360,27 +4185,27 @@
     },
     {
       "source": "app:utm",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:utm",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:utm",
       "target": "app:unc0ver",
       "type": "related"
     },
     {
       "source": "app:utm",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:utm",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:utm",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:utm",
-      "target": "app:tablehabit",
-      "type": "related"
-    },
-    {
-      "source": "app:utm",
-      "target": "app:sidestore",
       "type": "related"
     },
     {
@@ -3490,12 +4315,22 @@
     },
     {
       "source": "app:itorrent",
+      "target": "app:itransmission",
+      "type": "related"
+    },
+    {
+      "source": "app:itorrent",
       "target": "app:gopeed",
       "type": "related"
     },
     {
       "source": "app:stikdebug",
       "target": "app:ish",
+      "type": "related"
+    },
+    {
+      "source": "app:stikdebug",
+      "target": "app:caperfhud",
       "type": "related"
     },
     {
@@ -3506,6 +4341,11 @@
     {
       "source": "app:bhtwitter",
       "target": "app:neofreebird",
+      "type": "related"
+    },
+    {
+      "source": "app:bhtwitter",
+      "target": "app:bhinstagram",
       "type": "related"
     },
     {
@@ -3524,13 +4364,18 @@
       "type": "related"
     },
     {
-      "source": "app:bhtwitter",
-      "target": "app:turrit-mxgram",
+      "source": "app:livecontainer",
+      "target": "app:zeus",
       "type": "related"
     },
     {
       "source": "app:livecontainer",
-      "target": "app:zeus",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:livecontainer",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -3545,22 +4390,22 @@
     },
     {
       "source": "app:livecontainer",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:livecontainer",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:livecontainer",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
       "source": "app:feather",
       "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:feather",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:feather",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -3575,22 +4420,22 @@
     },
     {
       "source": "app:feather",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:feather",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:feather",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
       "source": "app:sidestore",
       "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:sidestore",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:sidestore",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -3605,17 +4450,7 @@
     },
     {
       "source": "app:sidestore",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:sidestore",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:sidestore",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -3641,6 +4476,11 @@
     {
       "source": "app:aidoku",
       "target": "app:anymex",
+      "type": "related"
+    },
+    {
+      "source": "app:aidoku",
+      "target": "app:airtroller",
       "type": "related"
     },
     {
@@ -3855,6 +4695,16 @@
     },
     {
       "source": "app:zeus",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:zeus",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:zeus",
       "target": "app:utm",
       "type": "related"
     },
@@ -3865,22 +4715,12 @@
     },
     {
       "source": "app:zeus",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:zeus",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:zeus",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:zeus",
-      "target": "app:tablehabit",
-      "type": "related"
-    },
-    {
-      "source": "app:zeus",
-      "target": "app:sidestore",
       "type": "related"
     },
     {
@@ -3890,6 +4730,16 @@
     },
     {
       "source": "app:bluewallet",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:bluewallet",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:bluewallet",
       "target": "app:utm",
       "type": "related"
     },
@@ -3900,17 +4750,7 @@
     },
     {
       "source": "app:bluewallet",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:bluewallet",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:bluewallet",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -3950,6 +4790,16 @@
     },
     {
       "source": "app:saber",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:saber",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:saber",
       "target": "app:utm",
       "type": "related"
     },
@@ -3960,17 +4810,7 @@
     },
     {
       "source": "app:saber",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:saber",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:saber",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -3980,6 +4820,16 @@
     },
     {
       "source": "app:anxreader",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:anxreader",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:anxreader",
       "target": "app:utm",
       "type": "related"
     },
@@ -3990,17 +4840,7 @@
     },
     {
       "source": "app:anxreader",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:anxreader",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:anxreader",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -4069,8 +4909,23 @@
       "type": "related"
     },
     {
+      "source": "app:ish",
+      "target": "app:caperfhud",
+      "type": "related"
+    },
+    {
       "source": "app:qbitcontrol",
       "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontrol",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontrol",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -4085,22 +4940,22 @@
     },
     {
       "source": "app:qbitcontrol",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontrol",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontrol",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
       "source": "app:qbitconnect",
       "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitconnect",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitconnect",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -4115,17 +4970,7 @@
     },
     {
       "source": "app:qbitconnect",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitconnect",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitconnect",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -4195,6 +5040,16 @@
     },
     {
       "source": "app:qbitcontroller",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontroller",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:qbitcontroller",
       "target": "app:utm",
       "type": "related"
     },
@@ -4205,17 +5060,7 @@
     },
     {
       "source": "app:qbitcontroller",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontroller",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:qbitcontroller",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -4345,6 +5190,16 @@
     },
     {
       "source": "app:conduit",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:conduit",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:conduit",
       "target": "app:utm",
       "type": "related"
     },
@@ -4355,17 +5210,7 @@
     },
     {
       "source": "app:conduit",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:conduit",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:conduit",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -4416,6 +5261,11 @@
     {
       "source": "app:anymex",
       "target": "app:hanami",
+      "type": "related"
+    },
+    {
+      "source": "app:anymex",
+      "target": "app:airtroller",
       "type": "related"
     },
     {
@@ -4970,6 +5820,16 @@
     },
     {
       "source": "app:dopamine",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine",
       "target": "app:utm",
       "type": "related"
     },
@@ -4980,17 +5840,7 @@
     },
     {
       "source": "app:dopamine",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5005,22 +5855,22 @@
     },
     {
       "source": "app:dopamine-roothide",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine-roothide",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:dopamine-roothide",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:dopamine-roothide",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine-roothide",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:dopamine-roothide",
-      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -5035,22 +5885,22 @@
     },
     {
       "source": "app:bootstrap",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:bootstrap",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:bootstrap",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:bootstrap",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:bootstrap",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:bootstrap",
-      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -5065,22 +5915,22 @@
     },
     {
       "source": "app:serotonin",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:serotonin",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:serotonin",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:serotonin",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:serotonin",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:serotonin",
-      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -5095,22 +5945,22 @@
     },
     {
       "source": "app:taurine",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:taurine",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:taurine",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:taurine",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:taurine",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:taurine",
-      "target": "app:tablehabit",
       "type": "related"
     },
     {
@@ -5125,6 +5975,16 @@
     },
     {
       "source": "app:odyssey",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:odyssey",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:odyssey",
       "target": "app:utm",
       "type": "related"
     },
@@ -5134,18 +5994,18 @@
       "type": "related"
     },
     {
-      "source": "app:odyssey",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:odyssey",
-      "target": "app:tablehabit",
+      "source": "app:unc0ver",
+      "target": "app:zeus",
       "type": "related"
     },
     {
       "source": "app:unc0ver",
-      "target": "app:zeus",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:unc0ver",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -5155,22 +6015,12 @@
     },
     {
       "source": "app:unc0ver",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:unc0ver",
       "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:unc0ver",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:unc0ver",
-      "target": "app:tablehabit",
-      "type": "related"
-    },
-    {
-      "source": "app:unc0ver",
-      "target": "app:sidestore",
       "type": "related"
     },
     {
@@ -5216,6 +6066,11 @@
     {
       "source": "app:gopeed",
       "target": "app:onionbrowser",
+      "type": "related"
+    },
+    {
+      "source": "app:gopeed",
+      "target": "app:itransmission",
       "type": "related"
     },
     {
@@ -5291,6 +6146,11 @@
     {
       "source": "app:pikatorrent",
       "target": "app:onionbrowser",
+      "type": "related"
+    },
+    {
+      "source": "app:pikatorrent",
+      "target": "app:itransmission",
       "type": "related"
     },
     {
@@ -5415,6 +6275,11 @@
     },
     {
       "source": "app:jellybook",
+      "target": "app:airtroller",
+      "type": "related"
+    },
+    {
+      "source": "app:jellybook",
       "target": "app:aidoku",
       "type": "related"
     },
@@ -5436,6 +6301,11 @@
     {
       "source": "app:hanami",
       "target": "app:anymex",
+      "type": "related"
+    },
+    {
+      "source": "app:hanami",
+      "target": "app:airtroller",
       "type": "related"
     },
     {
@@ -5465,12 +6335,27 @@
     },
     {
       "source": "app:otraku",
+      "target": "app:airtroller",
+      "type": "related"
+    },
+    {
+      "source": "app:otraku",
       "target": "app:aidoku",
       "type": "related"
     },
     {
       "source": "app:purekfd",
       "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:purekfd",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:purekfd",
+      "target": "app:vibecontainers",
       "type": "related"
     },
     {
@@ -5485,17 +6370,7 @@
     },
     {
       "source": "app:purekfd",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:purekfd",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:purekfd",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5535,6 +6410,16 @@
     },
     {
       "source": "app:ksign",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:ksign",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:ksign",
       "target": "app:utm",
       "type": "related"
     },
@@ -5545,17 +6430,7 @@
     },
     {
       "source": "app:ksign",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:ksign",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:ksign",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5630,22 +6505,22 @@
     },
     {
       "source": "app:muffinstore",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:muffinstore",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:muffinstore",
       "target": "app:utm",
       "type": "related"
     },
     {
       "source": "app:muffinstore",
       "target": "app:unc0ver",
-      "type": "related"
-    },
-    {
-      "source": "app:muffinstore",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:muffinstore",
-      "target": "app:taurine",
       "type": "related"
     },
     {
@@ -5696,6 +6571,11 @@
     {
       "source": "app:mangayomi",
       "target": "app:anymex",
+      "type": "related"
+    },
+    {
+      "source": "app:mangayomi",
+      "target": "app:airtroller",
       "type": "related"
     },
     {
@@ -5770,6 +6650,16 @@
     },
     {
       "source": "app:trollfools",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:trollfools",
       "target": "app:utm",
       "type": "related"
     },
@@ -5780,17 +6670,7 @@
     },
     {
       "source": "app:trollfools",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:trollfools",
-      "target": "app:tablehabit",
-      "type": "related"
-    },
-    {
-      "source": "app:trollfools",
-      "target": "app:sidestore",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5800,6 +6680,16 @@
     },
     {
       "source": "app:lara",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:lara",
       "target": "app:utm",
       "type": "related"
     },
@@ -5810,17 +6700,7 @@
     },
     {
       "source": "app:lara",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:lara",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:lara",
-      "target": "app:tablehabit",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5831,6 +6711,11 @@
     {
       "source": "app:onionbrowser",
       "target": "app:orbot",
+      "type": "related"
+    },
+    {
+      "source": "app:onionbrowser",
+      "target": "app:itransmission",
       "type": "related"
     },
     {
@@ -5855,6 +6740,11 @@
     },
     {
       "source": "app:orbot",
+      "target": "app:itransmission",
+      "type": "related"
+    },
+    {
+      "source": "app:orbot",
       "target": "app:itorrent",
       "type": "related"
     },
@@ -5870,6 +6760,16 @@
     },
     {
       "source": "app:tablehabit",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:tablehabit",
       "target": "app:utm",
       "type": "related"
     },
@@ -5880,17 +6780,7 @@
     },
     {
       "source": "app:tablehabit",
-      "target": "app:trollfools",
-      "type": "related"
-    },
-    {
-      "source": "app:tablehabit",
-      "target": "app:taurine",
-      "type": "related"
-    },
-    {
-      "source": "app:tablehabit",
-      "target": "app:sidestore",
+      "target": "app:trollinstallerx",
       "type": "related"
     },
     {
@@ -5951,6 +6841,851 @@
     {
       "source": "app:snmessenger",
       "target": "app:ttkillerplus",
+      "type": "related"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "app:bhtwitter",
+      "type": "related"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "app:winston",
+      "type": "related"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "app:voyager",
+      "type": "related"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "app:twitchadblock",
+      "type": "related"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "app:turrit-mxgram",
+      "type": "related"
+    },
+    {
+      "source": "app:bhinstagram",
+      "target": "app:ttkillerplus",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:reynard",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:pocketposter",
+      "target": "app:yattee",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:mugunghwa",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:wdbfontoverwrite",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:jaility",
+      "target": "app:trollboard-reborn",
+      "type": "related"
+    },
+    {
+      "source": "app:jaility",
+      "target": "app:killmyota",
+      "type": "related"
+    },
+    {
+      "source": "app:jaility",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:jaility",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:jaility",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:jaility",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "app:trollboard-reborn",
+      "type": "related"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "app:jaility",
+      "type": "related"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:killmyota",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:trollinstallerx",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "app:killmyota",
+      "type": "related"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "app:jaility",
+      "type": "related"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:trollboard-reborn",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:statusmagic",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:cartube",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:cartube",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:cartube",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:cartube",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:cartube",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:cartube",
+      "target": "app:yattee",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:dynamiccow",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "app:pikatorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "app:orbot",
+      "type": "related"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "app:onionbrowser",
+      "type": "related"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "app:itorrent",
+      "type": "related"
+    },
+    {
+      "source": "app:itransmission",
+      "target": "app:gopeed",
+      "type": "related"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "app:secondhand",
+      "type": "related"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "app:helium",
+      "type": "related"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:cowabunga",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "app:otraku",
+      "type": "related"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "app:mangayomi",
+      "type": "related"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "app:jellybook",
+      "type": "related"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "app:hanami",
+      "type": "related"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "app:anymex",
+      "type": "related"
+    },
+    {
+      "source": "app:airtroller",
+      "target": "app:aidoku",
+      "type": "related"
+    },
+    {
+      "source": "app:helium",
+      "target": "app:secondhand",
+      "type": "related"
+    },
+    {
+      "source": "app:helium",
+      "target": "app:cowabunga",
+      "type": "related"
+    },
+    {
+      "source": "app:helium",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:helium",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:helium",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:helium",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "app:helium",
+      "type": "related"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "app:cowabunga",
+      "type": "related"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:secondhand",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:caperfhud",
+      "target": "app:stikdebug",
+      "type": "related"
+    },
+    {
+      "source": "app:caperfhud",
+      "target": "app:ish",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:appstoreplusplus",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:nuvio",
+      "target": "app:yattee",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:escapeos",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:3105",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:vibecontainers",
+      "target": "app:trollfools",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:unc0ver",
+      "type": "related"
+    },
+    {
+      "source": "app:battman",
+      "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:yattee",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:winston",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:voyager",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:twitchadblock",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:turrit-mxgram",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:ttkillerplus",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:thunder",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:enablequic",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:animationspeed",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:batteryinfo",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:animationspeed",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:enablequic",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:batteryinfo",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:utm",
       "type": "related"
     }
   ]

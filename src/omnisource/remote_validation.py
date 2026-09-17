@@ -30,7 +30,7 @@ from omnisource.validation import BUNDLE_RE, DATE_RE, SHA_RE, SOURCE_ID_RE, TINT
 
 ALLOWED_TYPES = frozenset(KNOWN_TYPES)
 ALLOWED_HEALTH = frozenset({"unknown", "online", "degraded", "offline"})
-INSTALLABLE_SUFFIXES = (".ipa", ".tipa")
+INSTALLABLE_SUFFIXES = (".ipa", ".tipa", ".deb")
 
 REQUIRED_RECORD_FIELDS = (
     "source_id",

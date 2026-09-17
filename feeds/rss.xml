@@ -5,8 +5,92 @@
     <link>https://iamsmmh.github.io/OmniSource/</link>
     <description>OmniSource is a curated, automatically maintained AltStore-compatible iOS app source. Every entry is resolved from the app&#x27;s own official upstream project - GitHub Releases or the developer&#x27;s official AltStore feed - and each download link is re-verified automatically.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Cercube for YouTube v6.1.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/cercube.json</link>
+      <guid isPermaLink="false">cercube-6.1.3</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Cercube for YouTube 6.1.3 - the current official release (verified against apt.cercube.com on 2026-09-18).
+
+This release improves caching, ad blocking, and compatibility with older iOS versions.
+- Added compatibility for iOS 15-16
+- Minor bug fixes and improvements
+
+Previously: 6.1.2 added dislike counts, sponsored segment skipping and 14 languages; 6.0.1 added compatibility for recent iOS versions.]]></description>
+      <enclosure url="https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>RainTweak v1.2.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/raintweak.json</link>
+      <guid isPermaLink="false">raintweak-1.2.0</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Discord 1.2.0 | RainTweak]]></description>
+      <enclosure url="https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Nuvio v0.4.23</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.4.23</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.4.23 | nuvio-0.4.23-full-release
+
+- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  
+- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  
+- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  
+- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  
+- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>AppStore++ v2.3.15</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json</link>
+      <guid isPermaLink="false">appstoreplusplus-2.3.15</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[AppStore++ 2.3.15 | TrollStore
+
+# AppStore++ — What’s New in v2.3.15-7
+
+- Added a delete all/trashcan button for ipa library
+- Fixed bug when an ipa download is cancelled when packaging & becoming corrupted
+- Run ipa packaging on background thread so the UI isn't lagged]]></description>
+      <enclosure url="https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>PlayTorrio v1.1.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json</link>
+      <guid isPermaLink="false">playtorrio-1.1.6</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[PlayTorrio 1.1.6 | PlayTorrio-iOS
+
+Cloudstream extenstion support added
+UI Fixes
+Multistream added in iptv
+Custom channels added in iptv
+new sources
+Player fixes
+MacOS Torrent streaming fixed
+Mobile player audio, brightness control and screen lock added
+General fixes and improvements]]></description>
+      <enclosure url="https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Conduit v4.1.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
+      <guid isPermaLink="false">conduit-4.1.6</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Conduit 4.1.6 | conduit
+
+## What's Changed
+* Collapse raw reasoning tags client-side and stop re-escaping stored content by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/731
+* Fix attachments, STT, TTS, citations, proxy re-auth, and Hermes probe by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/732
+* Keep chat scrollbar thumb stable and inset it from the composer by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/734
+
+
+**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.5...v4.1.6]]></description>
+      <enclosure url="https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>YTMusicUltimate v9.37.2</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json</link>
@@ -43,6 +127,17 @@ Version: `0.7.0-20260911.328+6032424a`
 
 #### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)]]></description>
       <enclosure url="https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>MaxMusic v9.37.2</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json</link>
+      <guid isPermaLink="false">maxmusic-9.37.2</guid>
+      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[MaxMusic 9.37.2 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.37.2
+
+**Changed**
+YouTube Music version]]></description>
+      <enclosure url="https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>Mangayomi v0.9.4</title>
@@ -149,6 +244,24 @@ Version: `0.7.0-20260911.328+6032424a`
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>Reynard v0.13.1</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
+      <guid isPermaLink="false">reynard-0.13.1</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Reynard 0.13.1 | Reynard
+
+## Changes
+
+**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1
+
+This is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).
+
+### Bug Fixes & Improvements
+- Improved the reliability of text input fields repositioning above the software keyboard when editing.
+- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.]]></description>
+      <enclosure url="https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Mangayomi v0.9.3</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
       <guid isPermaLink="false">mangayomi-0.9.3</guid>
@@ -185,6 +298,44 @@ Version: `0.7.0-20260911.328+6032424a`
 
 **Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.2...v0.9.3]]></description>
       <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.3/Mangayomi-v0.9.3-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>3105 v2.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/3105.json</link>
+      <guid isPermaLink="false">3105-2.0</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[3105 2.0 | 3105-2.0-build8-20260914-125906-unsigned
+
+# 3105 2.0
+
+Bản 2.0 chuyển 3105 thành một nơi thống nhất để tìm, cài đặt và quản lý Patch, hình nền, Dialer và các tính năng dành cho thiết bị.
+
+## Điểm mới
+
+- Kho nội dung mới với Dành cho bạn, Mới cập nhật và nhiều nguồn.
+- Mục Đã cài quản lý mọi loại nội dung, có biểu tượng, phân loại và thông báo cập nhật.
+- Patch hỗ trợ nhiều ứng dụng và App Group trong cùng một gói, tùy chỉnh trước khi áp dụng và mật khẩu tùy chọn.
+- Cải thiện sao lưu, đặt lại, khôi phục và xóa Patch đang hoạt động.
+- Hỗ trợ giao diện Dialer dạng .3105pass và hình nền .tendies từ kho.
+- Trình quản lý Tệp mới có Workspace, Application, App Group, tệp ẩn, thẻ, yêu thích và trình sửa plist.
+- Dọn dẹp trở thành tính năng có thể cài hoặc gỡ; các bản iOS 27 được hỗ trợ có thêm Footnote và Supervised.
+- Thiết kế lại trang chủ, nguồn, chi tiết gói và mục Đã cài; tiến trình tải và kết quả thao tác rõ ràng hơn.
+
+## Cài đặt
+
+- Asset đính kèm là IPA unsigned dành cho việc ký lại bằng chứng chỉ doanh nghiệp.
+- Bundle đích: com.apple.mobile.MobileHouseArrest.
+- Không hỗ trợ SideStore, AltStore, 3uTools hoặc LiveContainer.
+- Chỉ tiếp tục trên các phiên bản iOS được ứng dụng xác nhận hỗ trợ và luôn sao lưu dữ liệu trước khi áp dụng Patch.
+
+---
+
+## English summary
+
+3105 2.0 adds a repository marketplace, a unified Installed library, multi-app and App Group patches, configurable plist/JSON edits, dialer themes, repository wallpapers, installable 3105 features, a redesigned Files experience, and safer restore flows.
+
+The attached IPA is unsigned and intended for enterprise-certificate signing. Bundle: com.apple.mobile.MobileHouseArrest.]]></description>
+      <enclosure url="https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>Voyager v2.49.1</title>
@@ -370,137 +521,6 @@ IPA Vault build for Telegram (iQTele), version 12.9.4]]></description>
 
 IPA Vault build for Threads (ThreadSaver), version 446.1]]></description>
       <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Sparkle v446.0.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/sparkle.json</link>
-      <guid isPermaLink="false">sparkle-446.0.0</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Instagram 446.0.0 | Instagram-446.0.0-Sparkle
-
-IPA Vault build for Instagram (Sparkle), version 446.0.0]]></description>
-      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>RyukGram v446.0.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ryukgram.json</link>
-      <guid isPermaLink="false">ryukgram-446.0.0</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Instagram 446.0.0 | Instagram-446.0.0-RyukGram
-
-IPA Vault build for Instagram (RyukGram), version 446.0.0]]></description>
-      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>MSGPlusX v578.1.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/msgplusx.json</link>
-      <guid isPermaLink="false">msgplusx-578.1.0</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Messenger 578.1.0 | Messenger-578.1.0-MSGPlusX
-
-IPA Vault build for Messenger (MSGPlusX), version 578.1.0]]></description>
-      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Messenger Flow v578.1.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/messenger-flow.json</link>
-      <guid isPermaLink="false">messenger-flow-578.1.0</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Messenger 578.1.0 | Messenger-578.1.0-Flow
-
-IPA Vault build for Messenger (Flow), version 578.1.0]]></description>
-      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>MaxMusic v9.36.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json</link>
-      <guid isPermaLink="false">maxmusic-9.36.1</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[MaxMusic 9.36.1 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.36.1
-
-**Changed**
-YouTube Music version]]></description>
-      <enclosure url="https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>iQFace v578.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/iqface.json</link>
-      <guid isPermaLink="false">iqface-578.1</guid>
-      <pubDate>Thu, 10 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Facebook 578.1 | Facebook-578.1-iQFace
-
-IPA Vault build for Facebook (iQFace), version 578.1]]></description>
-      <enclosure url="https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YTMusicUltimate v9.36.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json</link>
-      <guid isPermaLink="false">ytmusic-9.36.1</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YTMusicUltimate 9.36.1 | YTMusic 2.4.1 | YTMusicUltimate_9.36.1_2.4.1
-
-> [!NOTE]
-> ### Extra tweaks:
-> - Return YouTubeMusic Dislikes
-> - YTMABConfig
-> - VolumeBoostYT
-- - -
-- YouMusicPiP is only available in custom build
-- iOS14+ build is available in releases page]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa29/YTMusicUltimate_9.36.1_2.4.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YouTubePlus v21.24.3</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ytlite.json</link>
-      <guid isPermaLink="false">ytlite-21.24.3</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.24.3 | YouTubePlus_21.24.3_5.2.2
-
-### Latest Stable Release, ENJOY!!
-##### Cracked by [zarzelworkshop](https://t.me/zarzelworkshop)
-
-> [!NOTE]
-> - :key: no subscription required
-> - ✅ Working Download Manager, switch to overlay button before downloading.
-> - 🎥 Bundled with **YTUHD**. it is broken in +21.25.5 versions as of now. max resolution is 1080p60. devices with native AV1 can still see 4K.
-> - 🔧 Updated Gonerino and YT Headers
-> - Enable "**Both** Download button placement" under Downloading setting
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTUHD` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Versions **+21.25.5 and newer** are **not recommended** right now.  
-> - Extra tweaks that are bundled with main tweak are currently unstable on newer versions.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytl-ipa5/YouTubePlus_21.24.3_5.2.2.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YTKillerPlus v21.36.6</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ytkp.json</link>
-      <guid isPermaLink="false">ytkp-21.36.6</guid>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.36.6 | YTKillerPlus_21.36.6_6.1
-
-### Latest Release, ENJOY!!
-
-- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)
-
-> [!NOTE]
-> - **Sidestore is no longer supported!!.**
-> - **YTUHD** is not included. 4K is available for A16+ devices.
-> - use **YTKACE** for downloading. dev intentionally broke download feature.
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Extra tweaks that are bundled may be unstable on newer versions.
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.36.6_6.1.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

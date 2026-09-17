@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EnableQUIC — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/enablequic.json</link>
+    <description>Release feed for EnableQUIC within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/enablequic.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>EnableQUIC v1.2.4</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/enablequic.json</link>
+      <guid isPermaLink="false">enablequic-1.2.4</guid>
+      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[EnableQUIC 1.2.4 | TrollStore
+
+1. Bug fix #4, Improve the process of 'Restore default settings'. Firstly, restore the default configuration from the backup after improvement. If the backup configuration file does not exist, use the built-in rules to restore the default settings.
+
+Advanced settings to enable:
+Click the icon at the top of the app 5 times, then shake the device to open Advanced Mode.  
+
+Zh:
+1. 修复#4，改进恢复默认设置流程，改进后先从备份中恢复默认配置，如果备份的配置文件不存在，则使用内置规则恢复默认设置。  
+
+开启流程（普通用户）：启用->注销  
+关闭流程（普通用户）：恢复默认->注销  
+**App无需保留后台，设置成功后即可关闭App**  
+
+高级设置仅供了解原理的用户使用，您可以自定义每一项的设置，如果您不知道这些开关的含义，请使用默认设置  
+高级设置开启方法：
+点击App顶部的图标5次，然后摇晃下设备，即可打开高级模式  
+开启流程（高级用户）：启用->注销(可省略)->锁定文件权限->注销  
+关闭流程（高级用户）：解锁文件权限->恢复默认->注销  
+**卸载App或抹除/升级设备系统之前请解锁文件权限，以防止出现未知错误**]]></description>
+      <enclosure url="https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa" length="362372" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

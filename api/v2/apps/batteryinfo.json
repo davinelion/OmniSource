@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17",
+  "feedVersion": "a391f6e0b2d4",
+  "app": {
+    "id": "batteryinfo",
+    "name": "Battery Info",
+    "developer": "DevelopCubeLab",
+    "subtitle": "Battery health, cycles and charge telemetry",
+    "bundleIdentifier": "com.developlab.BatteryInfo",
+    "version": "1.2.2",
+    "versionDate": "2025-07-09",
+    "description": "Battery Info is a TrollStore utility from DevelopCubeLab: live charge voltage and current, full capacity, cycle count, temperature and a persistent charging-history database (QMax and limit voltage per charge). The developer also distributes it through the Havoc sideload store (havoc.app/package/batteryinfo).",
+    "shortDescription": "Battery health, cycles and charge telemetry",
+    "category": "utilities",
+    "tags": [
+      "utilities"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/BatteryInfo.webp",
+    "screenshots": [],
+    "downloadURL": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+    "size": 346882,
+    "source": "DevelopCubeLab/BatteryInfo",
+    "sourceURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+    "checksum": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+    "checksumPublished": false,
+    "minOSVersion": "12.2",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/batteryinfo/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/batteryinfo.json",
+    "health": {
+      "reachable": true,
+      "detail": "HTTP 302",
+      "updatedAt": "2025-07-09"
+    }
+  },
+  "newest": {
+    "version": "1.2.2",
+    "date": "2025-07-09",
+    "downloadURL": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+    "size": 346882,
+    "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905"
+  },
+  "versions": [
+    {
+      "version": "1.2.2",
+      "date": "2025-07-09",
+      "downloadURL": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+      "size": 346882,
+      "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905"
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

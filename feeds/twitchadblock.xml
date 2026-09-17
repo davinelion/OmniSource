@@ -32,47 +32,5 @@ Install with **AltStore / SideStore** (drag in the IPA) or **TrollStore** (tap +
 Full plain-language changelog: [`CHANGELOG.md`](https://github.com/gunnerkidBT/TwitchAdBlock/blob/master/CHANGELOG.md)]]></description>
       <enclosure url="https://github.com/gunnerkidBT/TwitchAdBlock/releases/download/v30.7-0.1.13/tv.twitch-30.7-TwitchAdBlock-0.1.13.ipa" length="0" type="application/octet-stream" />
     </item>
-    <item>
-      <title>TwitchAdBlock v29.4.2</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json</link>
-      <guid isPermaLink="false">twitchadblock-29.4.2</guid>
-      <pubDate>Sat, 16 May 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Twitch 29.4.2 | tv.twitch-29.4.2-TwitchAdBlock
-
-## Highlights
-
-- **Launch Screen picker** — choose which tab Twitch opens to. Includes Home sub-tabs (Following / Live / Clips) and Browse sub-tabs (Categories / Live Channels), plus Activity and Profile.
-- **Hide Twitch Stories** — toggle to remove the horizontal Stories strip at the top of Home.
-- **Default-proxy reachability indicator** in TwitchMods settings — live Online / Offline / Checking status.
-- **New banner blocking** — McDonalds-style brand offers (`OfferPromotion`, `PromotionDisplay`) and the in-app "buy Bits" prompt (`BitsProductPromotion`) are removed from Following / Home responses.
-- **TwitchMods rebrand** — user-facing strings (settings entry, screen title, version footer) now read "TwitchMods". Internal symbols, keys, and dylib filename unchanged.
-- **AdBlock proxy on by default** for fresh installs.
-
-## Bug fixes
-
-- **Live & Clips tabs broken** after the previous release — the recursive GraphQL strip was orphaning edges in `feedItems.edges`. Now edge-aware (removes the whole edge when `edge.node.__typename` matches), and skips response re-serialization when nothing was actually stripped (was confusing Apollo's cache).
-- Speculative ad typenames (`AdProperties`, `PromotedContent`, `SponsoredContent`, etc.) removed from the blocklist — several were appearing as metadata fields on legitimate `Stream` / `Clip` objects.
-
-## Robustness / quality
-
-- Subdomain-aware ad host matching (now blocks `*.amazon-adsystem.com`).
-- LRU eviction for the emote registry (capped at 50 channels).
-- IRC emote positions counted as Unicode grapheme clusters instead of UTF-16 units — emoji no longer shift the rendered offsets.
-- Recursive `__typename` scan logs unknown ad-like values once per `(operation, typename)`, so new banners surface in logs without code archaeology.
-- `twab_warnIfClassMissing` runs at startup for every Swift hook target — silent feature regressions on a Twitch version bump now produce a visible warning.
-- Typed `TWABKey*` constants instead of `@"..."` literals — typos become compile errors.
-- Atomic synthetic-emote-ID generator (one less queue hop per registration).
-- WebSocket handler idempotent (associated-object marker) + non-IRC frames short-circuit before parsing.
-- Settings cells properly reuse via `dequeueReusableCellWithIdentifier:`.
-- Proxy address field saves on every keystroke (not just end-editing).
-- Deprecated `[tweakDefaults synchronize]` calls removed.
-
-## Install
-
-Sideload the attached IPA via AltStore / SideStore (drag in) or TrollStore (`ldid -S` the inner binary first).
-
-Full diff: [v0.1.7...v0.1.8](https://github.com/gunnerkidBT/TwitchAdBlock/compare/ee614b7...v0.1.8)]]></description>
-      <enclosure url="https://github.com/gunnerkidBT/TwitchAdBlock/releases/download/v0.1.8/tv.twitch-29.4.2-TwitchAdBlock.ipa" length="0" type="application/octet-stream" />
-    </item>
   </channel>
 </rss>

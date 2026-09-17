@@ -1,0 +1,131 @@
+{
+  "name": "OmniSource - BHInstagram",
+  "identifier": "com.iamsmmh.omnisource.bhinstagram",
+  "apiVersion": "v2",
+  "subtitle": "Instagram with no ads, downloads and more tweaks",
+  "description": "Standalone distribution feed for BHInstagram, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/bhinstagram.json",
+  "apps": [
+    {
+      "name": "BHInstagram",
+      "bundleIdentifier": "com.bandarhl.bhinsta",
+      "developerName": "BandarHL",
+      "subtitle": "Instagram with no ads, downloads and more tweaks",
+      "localizedDescription": "BHInstagram is an open-source tweak for Instagram from the developer of BHTwitter, published as a ready-to-sideload IPA. It hides ads and suggested posts, asks for confirmation before likes, shows like counts, lets you copy captions and download videos, save profile pictures, keep deleted messages, and turn off last-seen, screenshot alerts and story view receipts.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
+      "tintColor": "E1306C",
+      "category": "social",
+      "version": "1.2",
+      "versionDate": "2025-05-14",
+      "versionDescription": "BHInstagram 1.2 | bhinsta_sideloaded\n\nUpdate 2.1:\n- Fix downloading Reels in lasted versions.\n- Fix Removing Ads in Reels.",
+      "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa",
+      "size": 228416558,
+      "versions": [
+        {
+          "version": "1.2",
+          "date": "2025-05-14",
+          "localizedDescription": "BHInstagram 1.2 | bhinsta_sideloaded\n\nUpdate 2.1:\n- Fix downloading Reels in lasted versions.\n- Fix Removing Ads in Reels.",
+          "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa",
+          "size": 228416558,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/BandarHL/BHInstagram/releases/tag/1.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "bhinsta_sideloaded.ipa",
+              "downloadUrl": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 228416558,
+              "sha256": null,
+              "downloads": 10932,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "bhinsta_trollstore.tipa",
+              "downloadUrl": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_trollstore.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 228415394,
+              "sha256": null,
+              "downloads": 2331,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "com.bandarhl.bhinsta_1.2_iphoneos-arm.deb",
+              "downloadUrl": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/com.bandarhl.bhinsta_1.2_iphoneos-arm.deb",
+              "platform": "linux",
+              "architecture": null,
+              "fileType": "DEB",
+              "size": 69502,
+              "sha256": null,
+              "downloads": 1143,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "com.bandarhl.bhinsta_1.2_iphoneos-arm64.deb",
+              "downloadUrl": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/com.bandarhl.bhinsta_1.2_iphoneos-arm64.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 69604,
+              "sha256": null,
+              "downloads": 1181,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 10932
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "bhinstagram",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/BandarHL/BHInstagram",
+        "sourceURL": "https://github.com/BandarHL/BHInstagram",
+        "verification": {
+          "method": "github-release",
+          "publisher": "BandarHL/BHInstagram",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official sideloaded build from BandarHL/BHInstagram. The release also ships a TrollStore .tipa, which OmniSource skips - only the sideloaded .ipa is tracked."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2025-05-14"
+        }
+      }
+    }
+  ],
+  "news": []
+}

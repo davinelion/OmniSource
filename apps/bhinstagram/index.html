@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#e8eef8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#07070f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#07070f" id="themeColor">
+  <title>BHInstagram — OmniSource</title>
+  <meta name="description" content="Instagram with no ads, downloads and more tweaks">
+  <link rel="canonical" href="https://iamsmmh.github.io/OmniSource/apps/bhinstagram/">
+  <meta property="og:site_name" content="OmniSource">
+  <meta property="og:title" content="BHInstagram — OmniSource">
+  <meta property="og:description" content="Instagram with no ads, downloads and more tweaks">
+  <meta property="og:image" content="https://iamsmmh.github.io/OmniSource/assets/Instagram.webp">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iamsmmh.github.io/OmniSource/apps/bhinstagram/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BHInstagram — OmniSource">
+  <meta name="twitter:description" content="Instagram with no ads, downloads and more tweaks">
+  <meta name="twitter:image" content="https://iamsmmh.github.io/OmniSource/assets/Instagram.webp">
+  <link rel="icon" type="image/png" href="../../assets/OmniSource.png">
+  <link rel="apple-touch-icon" href="../../assets/OmniSource.png">
+  <link rel="alternate" type="application/rss+xml" title="BHInstagram releases" href="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.xml">
+  <!-- Content Security Policy: same-origin scripts/styles (inline allowed for the
+       theme bootstrap), images/data from self + https, API calls to self + https.
+       All dynamic markup is escaped via OS.esc. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; media-src 'self' data:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; form-action 'self'">
+  <link rel="preload" href="../../assets/design-system/tokens.css" as="style">
+  <link rel="preload" href="../../assets/design-system/components.css" as="style">
+  <link rel="stylesheet" href="../../assets/design-system/tokens.css">
+  <link rel="stylesheet" href="../../assets/design-system/utilities.css">
+  <link rel="stylesheet" href="../../assets/design-system/animations.css">
+  <link rel="stylesheet" href="../../assets/design-system/components.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('omnisource-theme');
+        if (t !== 'light' && t !== 'dark') t = 'auto';
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "BHInstagram",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "iOS",
+      "softwareVersion": "1.2",
+      "url": "https://iamsmmh.github.io/OmniSource/apps/bhinstagram/",
+      "downloadUrl": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa",
+            "author": { "@type": "Organization", "name": "BandarHL/BHInstagram" }
+    }
+  </script>
+</head>
+<body class="app-page">
+  <a class="skip-link" href="#main">Skip to app details</a>
+  <header class="ap-header">
+    <nav class="ap-header-inner" aria-label="App navigation">
+      <a class="brand" href="../../" aria-label="OmniSource home">
+        <img src="../../assets/OmniSource.png" alt="" width="32" height="32">
+        <span>OmniSource</span>
+      </a>
+      <div class="nav-links">
+        <a href="../../" data-i18n="nav.home">Home</a>
+        <a href="../../#catalog" data-i18n="nav.apps">Apps</a>
+        <a href="../../collections/" data-i18n="nav.collections">Collections</a>
+        <a href="../../sources/" data-i18n="nav.sources">Sources</a>
+        <a href="../../status/" data-i18n="nav.health">Status</a>
+        <a href="../../docs/" data-i18n="nav.docs">Docs</a>
+        <details class="nav-more">
+          <summary aria-haspopup="menu" aria-label="More pages"><span data-i18n="nav.more">More</span>
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
+          </summary>
+          <div class="nav-menu" role="menu">
+            <a href="../../#trending" role="menuitem" data-i18n="nav.trending">Trending</a>
+            <a href="../../analytics/" role="menuitem" data-i18n="nav.analytics">Analytics</a>
+            <a href="../../compare/" role="menuitem" data-i18n="nav.compare">Compare</a>
+            <a href="../../favorites/" role="menuitem" data-i18n="nav.favorites">Favorites</a>
+            <a href="../../discover/" role="menuitem" data-i18n="nav.discover">Discover</a>
+            <a href="../../api/community.json" role="menuitem" data-i18n="nav.community">Community</a>
+            <a href="../../search/" role="menuitem" data-i18n="nav.search">Search</a>
+            <a href="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.xml" target="_blank" rel="noopener" role="menuitem">RSS</a>
+            <a href="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" target="_blank" rel="noopener" role="menuitem">This app&rsquo;s feed</a>
+            <a href="https://github.com/iamsmmh/OmniSource" target="_blank" rel="noopener" class="nav-gh" role="menuitem" data-i18n="nav.github">GitHub ↗</a>
+          </div>
+        </details>
+      </div>
+      <button class="icon-button theme-toggle" id="themeButton" type="button" aria-label="Change color theme" title="Theme: system" data-i18n-aria-label="a11y.theme" data-i18n-title="a11y.theme">
+        <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.8v2M12 19.2v2M2.8 12h2M19.2 12h2M5.4 5.4l1.4 1.4M17.2 17.2l1.4 1.4M18.6 5.4l-1.4 1.4M6.8 17.2l1.4 1.4"/></svg>
+        <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20.4 14.2A8.6 8.6 0 0 1 9.8 3.6a8.6 8.6 0 1 0 10.6 10.6Z"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="ap-main" id="main">
+    <nav class="ap-breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Home</a> <span aria-hidden="true">/</span> <span>BHInstagram</span>
+    </nav>
+    <section class="ap-hero" style="--tint:#E1306C">
+      <div class="ap-hero-tint" aria-hidden="true"></div>
+      <img class="ap-icon" src="https://iamsmmh.github.io/OmniSource/assets/Instagram.webp" alt="BHInstagram icon" width="112" height="112" fetchpriority="high">
+      <div>
+        <span class="ap-kicker">Social</span>
+        <h1 class="ap-title">BHInstagram</h1>
+        <p class="ap-sub">Instagram with no ads, downloads and more tweaks</p>
+        <p class="ap-dev">by BandarHL</p>
+        <div class="ap-badges">
+<span class="badge stable">Stable</span><span class="badge verified" title="IPA published by the project&#39;s own upstream release channel">Official build</span><span class="badge ok"><span class="dot"></span>Online</span><span class="badge verified">✓ Verified</span><span class="badge warn">Stale release</span></div>
+      </div>
+      <div class="ap-install">
+        <a class="get-capsule" href="https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa" target="_blank" rel="noopener">Get · v1.2<span class="capsule-size">217.8 MB</span></a>
+<a class="button client-button" href="altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Add to AltStore"><img src="../../assets/AltStore.webp" alt="" width="20" height="20" loading="lazy">AltStore</a><a class="button client-button" href="sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Add to SideStore"><img src="../../assets/SideStore.webp" alt="" width="20" height="20" loading="lazy">SideStore</a><a class="button client-button" href="feather://source/iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Add to Feather"><img src="../../assets/Feather.webp" alt="" width="20" height="20" loading="lazy">Feather</a><a class="button client-button" href="esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Add to ESign"><img src="../../assets/E-Sign.webp" alt="" width="20" height="20" loading="lazy">ESign</a><a class="button client-button" href="livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Add to LiveContainer"><img src="../../assets/LiveContainer.webp" alt="" width="20" height="20" loading="lazy">LiveContainer</a>        <button class="button ap-copy" type="button" data-copy="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" data-copy-msg="Source URL copied">Copy source URL</button>
+        <button class="button square" type="button" id="qrButton" data-qr-feed="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Show QR code" aria-label="Show QR code for the source URL">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M15 14h2v2h-2zM19 14h1.4v3.4H19zM14 19h3.4v1.4H14zM20 19.6V20h-1.4"/></svg>
+        </button>
+      </div>
+    </section>
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">01</span> About</h2>
+      <p class="ap-desc">BHInstagram is an open-source tweak for Instagram from the developer of BHTwitter, published as a ready-to-sideload IPA. It hides ads and suggested posts, asks for confirmation before likes, shows like counts, lets you copy captions and download videos, save profile pictures, keep deleted messages, and turn off last-seen, screenshot alerts and story view receipts.</p>
+      <p class="ap-no-screenshots">Upstream publishes no screenshots for this app, and OmniSource does not invent them.</p>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">02</span> Install with</h2>
+      <p class="ap-desc">Pick your client. Links are generated from the catalog on every build — never hard-coded.</p>
+<div class="ap-install-grid"><a class="ap-install-card" href="altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Open in AltStore"><img src="../../assets/AltStore.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>AltStore</b><span class="card-flag flag-recommended">Recommended</span><small>Tap to add the source to AltStore.</small></div></a><a class="ap-install-card" href="sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Open in SideStore"><img src="../../assets/SideStore.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>SideStore</b><span class="card-flag flag-recommended">Recommended</span><small>Tap to add the source to SideStore.</small></div></a><a class="ap-install-card" href="feather://source/iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Open in Feather"><img src="../../assets/Feather.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>Feather</b><span class="card-flag flag-compatible">Compatible</span><small>Tap to add the source to Feather.</small></div></a><a class="ap-install-card" href="esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Open in ESign"><img src="../../assets/E-Sign.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>ESign</b><span class="card-flag flag-compatible">Compatible</span><small>Tap to add the source to ESign. If nothing happens, open ESign → App Sources → + and paste the URL.</small></div></a><a class="ap-install-card" href="livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" title="Open in LiveContainer"><img src="../../assets/LiveContainer.webp" alt="" width="30" height="30" loading="lazy"><div style="min-width:0"><b>LiveContainer</b><span class="card-flag flag-compatible">Compatible</span><small>Tap to add the source to LiveContainer. If nothing happens, open LiveContainer → Settings → Sources and paste the URL.</small></div></a></div>      <p class="mt-3"><a class="button small" href="../../install/">Open the installation center →</a></p>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">03</span> Release notes</h2>
+      <div class="ap-version-list"><article class="ap-version">
+  <div class="ap-version-head"><span class="v">v1.2</span><span class="tag">Current</span>
+    <span class="d">May 14, 2025</span></div>
+  <div class="meta"><span>217.8 MB</span><span>No checksum published</span><a class="button small" href="https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa" target="_blank" rel="noopener">Download</a></div>
+  <details class="ap-changelog"><summary>Release notes</summary><pre class="ap-notes">BHInstagram 1.2 | bhinsta_sideloaded
+
+Update 2.1:
+- Fix downloading Reels in lasted versions.
+- Fix Removing Ads in Reels.</pre></details>
+</article></div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">04</span> Details</h2>
+      <div class="ap-detail-grid">
+<div class="ap-cell"><span>Version</span><strong>v1.2</strong></div><div class="ap-cell"><span>Updated</span><strong>May 14, 2025</strong></div><div class="ap-cell"><span>Size</span><strong>217.8 MB</strong></div><div class="ap-cell"><span>Requires iOS</span><strong>15.0</strong></div><div class="ap-cell"><span>Category</span><strong>Social</strong></div><div class="ap-cell"><span>Developer</span><strong>BandarHL</strong></div><div class="ap-cell"><span>Bundle ID</span><strong><code>com.bandarhl.bhinsta</code></strong></div><div class="ap-cell"><span>Verification</span><strong>VERIFIED</strong></div><div class="ap-cell"><span>Build</span><strong>Official build</strong></div><div class="ap-cell"><span>Checksum</span><strong><code>Not published</code></strong></div><div class="ap-cell"><span>Health</span><strong>Online</strong></div><div class="ap-cell"><span>Version history</span><strong>1</strong></div><div class="ap-cell"><span>Source</span><strong><a class="ap-source-link" href="https://github.com/BandarHL/BHInstagram" target="_blank" rel="noopener">BandarHL/BHInstagram</a></strong></div></div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">05</span> Trust &amp; provenance</h2>
+      <ul class="ap-checks"><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>metadata</span><small>pass</small></li><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>urls</span><small>pass</small></li><li class="ap-check pass"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg></span><span>fileAvailable</span><small>pass</small></li><li class="ap-check fail"><span class="check-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 9 6 6m0-6-6 6"/></svg></span><span>hashVerified</span><small>fail</small></li></ul>
+      <p class="ap-desc mt-3"><b>Official build.</b> The IPA is published by the project&rsquo;s own upstream release channel.</p>
+      <p class="ap-desc">Published by BandarHL/BHInstagram · github release.</p>
+      <ul><li>official upstream (github-release)</li></ul>
+      <div class="detail-note mt-3"><b>Compatibility notes:</b> Official sideloaded build from BandarHL/BHInstagram. The release also ships a TrollStore .tipa, which OmniSource skips - only the sideloaded .ipa is tracked.</div>
+    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">06</span> Related apps</h2>
+      <p class="ap-desc">Apps that share a bundle, category or developer with BHInstagram.</p>
+<div class="ap-related-grid"><a class="ap-related-card" href="../bhtwitter/" title="Same category (social), Same developer (BandarHL), Shared tags: social"><span class="score-pill">38</span><div class="ap-related-name">BHTwitter</div><div class="ap-related-reason">Same category (social), Same developer (BandarHL), Shared tags: social</div></a><a class="ap-related-card" href="../winston/" title="Same category (social), Shared tags: social"><span class="score-pill">23</span><div class="ap-related-name">Winston</div><div class="ap-related-reason">Same category (social), Shared tags: social</div></a><a class="ap-related-card" href="../voyager/" title="Same category (social), Shared tags: social"><span class="score-pill">23</span><div class="ap-related-name">Voyager</div><div class="ap-related-reason">Same category (social), Shared tags: social</div></a><a class="ap-related-card" href="../twitchadblock/" title="Same category (social), Shared tags: social"><span class="score-pill">23</span><div class="ap-related-name">TwitchAdBlock</div><div class="ap-related-reason">Same category (social), Shared tags: social</div></a><a class="ap-related-card" href="../turrit-mxgram/" title="Same category (social), Shared tags: social"><span class="score-pill">23</span><div class="ap-related-name">Turrit MxGram</div><div class="ap-related-reason">Same category (social), Shared tags: social</div></a></div>    </section>
+
+    <section class="ap-section" data-reveal>
+      <h2><span class="num">07</span> Downloads</h2>
+      <div class="ap-links">
+        <a class="button primary" href="https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa" target="_blank" rel="noopener">Primary IPA</a>
+        
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json" target="_blank" rel="noopener">App feed</a>
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.xml" target="_blank" rel="noopener">App RSS</a>
+        <a class="button" href="https://github.com/BandarHL/BHInstagram" target="_blank" rel="noopener">Upstream</a>
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/discovery.json" target="_blank" rel="noopener">Discovery catalog</a>
+        <a class="button" href="https://iamsmmh.github.io/OmniSource/compare/?left=bhinstagram" target="_blank" rel="noopener">Compare with another app</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ap-footer">
+    <div class="ap-footer-inner">
+      <span>v1.2 of BHInstagram · refreshed automatically.</span>
+      <a href="../../#catalog">← Back to catalog</a>
+      <span>Independent community project. Apps and trademarks belong to their respective owners.</span>
+    </div>
+  </footer>
+
+  <dialog id="qrDialog" class="qr-dialog os-dialog" aria-labelledby="qrTitle">
+    <button class="dialog-close" type="button" data-close aria-label="Close" data-i18n-aria-label="common.close"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+    <span class="kicker" data-i18n="dialog.scanToAdd">SCAN TO ADD</span>
+    <h2 id="qrTitle">BHInstagram — source feed</h2>
+    <div class="qr-image"><img id="qrImage" width="240" height="240" alt="QR code for the app feed" loading="lazy" decoding="async" data-i18n-alt="dialog.qrAlt"></div>
+    <code>https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json</code>
+    <button class="button primary full" type="button" data-i18n="dialog.copyUrl" data-copy="https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json">Copy URL</button>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span></span>
+  </div>
+
+  <script src="../../js/core.js" defer></script>
+  <script src="../../src/js/i18n.js" defer></script>
+  <script src="../../js/features.js" defer></script>
+  <script src="../../website/assets/AssetManager.js" defer></script>
+</body>
+</html>

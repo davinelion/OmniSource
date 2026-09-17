@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16",
-  "count": 101,
+  "generatedAt": "2026-09-17",
+  "count": 130,
   "weights": {
     "bundle": 0.55,
     "category": 0.2,
@@ -42,7 +42,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1",
+        "version": "9.37.2",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -698,7 +698,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1",
+        "version": "9.37.2",
         "score": 0.7833,
         "reasons": [
           "Same bundle identifier",
@@ -868,6 +868,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "unc0ver",
         "name": "unc0ver",
         "category": "utilities",
@@ -881,51 +907,25 @@
         ]
       },
       {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "trollfools",
         "name": "TrollFools",
         "category": "utilities",
         "developer": "Lessica",
         "bundleId": "wiki.qaq.TrollFools",
         "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "sidestore",
-        "name": "SideStore",
-        "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.7.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1218,6 +1218,19 @@
         ]
       },
       {
+        "slug": "itransmission",
+        "name": "iTransmission",
+        "category": "networking",
+        "developer": "alexsvitlov",
+        "bundleId": "com.plusmediapps.itransmission",
+        "version": "1.0.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
         "slug": "gopeed",
         "name": "Gopeed",
         "category": "networking",
@@ -1239,6 +1252,19 @@
         "developer": "Theodore Dubois and contributors",
         "bundleId": "app.ish.iSH",
         "version": "813",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (developer-tools)",
+          "Shared tags: developer-tools"
+        ]
+      },
+      {
+        "slug": "caperfhud",
+        "name": "CAPerfHUD",
+        "category": "developer-tools",
+        "developer": "Hariz S.",
+        "bundleId": "ca.bomberfish.CAPerfHudSwift",
+        "version": "1.0.2",
         "score": 0.2333,
         "reasons": [
           "Same category (developer-tools)",
@@ -1272,6 +1298,20 @@
         "reasons": [
           "Same bundle identifier",
           "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "bhinstagram",
+        "name": "BHInstagram",
+        "category": "social",
+        "developer": "BandarHL",
+        "bundleId": "com.bandarhl.bhinsta",
+        "version": "1.2",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (social)",
+          "Same developer (BandarHL)",
           "Shared tags: social"
         ]
       },
@@ -1313,19 +1353,6 @@
           "Same category (social)",
           "Shared tags: social"
         ]
-      },
-      {
-        "slug": "turrit-mxgram",
-        "name": "Turrit MxGram",
-        "category": "social",
-        "developer": "m1ronx1412 & IPA Vault",
-        "bundleId": "com.seastar.turrit",
-        "version": "1.5.3",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (social)",
-          "Shared tags: social"
-        ]
       }
     ],
     "livecontainer": [
@@ -1336,6 +1363,32 @@
         "developer": "Zeus LN",
         "bundleId": "com.zeusln.zeus",
         "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1369,38 +1422,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1423,6 +1450,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -1449,38 +1502,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1503,6 +1530,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -1529,38 +1582,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -1628,6 +1655,19 @@
         "developer": "RyanYuuki",
         "bundleId": "com.ryan.anymex",
         "version": "3.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "airtroller",
+        "name": "AirTroller",
+        "category": "other",
+        "developer": "Matthew Anisovich",
+        "bundleId": "net.sourceloc.AirTroller",
+        "version": "1.1.1",
         "score": 0.2333,
         "reasons": [
           "Same category (other)",
@@ -2068,7 +2108,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1",
+        "version": "9.37.2",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -2161,7 +2201,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1",
+        "version": "9.37.2",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -2197,6 +2237,32 @@
     ],
     "zeus": [
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -2223,51 +2289,25 @@
         ]
       },
       {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "trollfools",
         "name": "TrollFools",
         "category": "utilities",
         "developer": "Lessica",
         "bundleId": "wiki.qaq.TrollFools",
         "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "sidestore",
-        "name": "SideStore",
-        "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.7.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2290,6 +2330,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -2316,38 +2382,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2450,6 +2490,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -2476,38 +2542,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2530,6 +2570,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -2556,38 +2622,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2768,6 +2808,19 @@
           "Same category (developer-tools)",
           "Shared tags: developer-tools"
         ]
+      },
+      {
+        "slug": "caperfhud",
+        "name": "CAPerfHUD",
+        "category": "developer-tools",
+        "developer": "Hariz S.",
+        "bundleId": "ca.bomberfish.CAPerfHudSwift",
+        "version": "1.0.2",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (developer-tools)",
+          "Shared tags: developer-tools"
+        ]
       }
     ],
     "qbitcontrol": [
@@ -2778,6 +2831,32 @@
         "developer": "Zeus LN",
         "bundleId": "com.zeusln.zeus",
         "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2811,38 +2890,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -2865,6 +2918,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -2891,38 +2970,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -3105,6 +3158,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -3131,38 +3210,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -3507,6 +3560,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -3533,38 +3612,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -3699,6 +3752,19 @@
         "developer": "oolxg",
         "bundleId": "moe.mkpwnz.Hanami",
         "version": "0.28.2",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "airtroller",
+        "name": "AirTroller",
+        "category": "other",
+        "developer": "Matthew Anisovich",
+        "bundleId": "net.sourceloc.AirTroller",
+        "version": "1.1.1",
         "score": 0.2333,
         "reasons": [
           "Same category (other)",
@@ -5189,6 +5255,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -5215,38 +5307,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5283,6 +5349,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -5302,32 +5394,6 @@
         "developer": "pwn20wnd",
         "bundleId": "science.xnu.undecimus",
         "version": "5.2.0",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "trollfools",
-        "name": "TrollFools",
-        "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5364,6 +5430,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -5383,32 +5475,6 @@
         "developer": "pwn20wnd",
         "bundleId": "science.xnu.undecimus",
         "version": "5.2.0",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "trollfools",
-        "name": "TrollFools",
-        "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5445,6 +5511,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -5464,32 +5556,6 @@
         "developer": "pwn20wnd",
         "bundleId": "science.xnu.undecimus",
         "version": "5.2.0",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "trollfools",
-        "name": "TrollFools",
-        "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5526,6 +5592,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -5545,32 +5637,6 @@
         "developer": "pwn20wnd",
         "bundleId": "science.xnu.undecimus",
         "version": "5.2.0",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "trollfools",
-        "name": "TrollFools",
-        "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5607,6 +5673,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -5631,32 +5723,6 @@
           "Same category (utilities)",
           "Shared tags: utilities"
         ]
-      },
-      {
-        "slug": "trollfools",
-        "name": "TrollFools",
-        "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
       }
     ],
     "unc0ver": [
@@ -5667,6 +5733,32 @@
         "developer": "Zeus LN",
         "bundleId": "com.zeusln.zeus",
         "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5687,51 +5779,25 @@
         ]
       },
       {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "trollfools",
         "name": "TrollFools",
         "category": "utilities",
         "developer": "Lessica",
         "bundleId": "wiki.qaq.TrollFools",
         "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "sidestore",
-        "name": "SideStore",
-        "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.7.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -5853,6 +5919,19 @@
         "developer": "Mike Tigas",
         "bundleId": "com.miketigas.OnionBrowser",
         "version": "3.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "itransmission",
+        "name": "iTransmission",
+        "category": "networking",
+        "developer": "alexsvitlov",
+        "bundleId": "com.plusmediapps.itransmission",
+        "version": "1.0.0",
         "score": 0.2333,
         "reasons": [
           "Same category (networking)",
@@ -6054,6 +6133,19 @@
         "developer": "Mike Tigas",
         "bundleId": "com.miketigas.OnionBrowser",
         "version": "3.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "itransmission",
+        "name": "iTransmission",
+        "category": "networking",
+        "developer": "alexsvitlov",
+        "bundleId": "com.plusmediapps.itransmission",
+        "version": "1.0.0",
         "score": 0.2333,
         "reasons": [
           "Same category (networking)",
@@ -6381,6 +6473,19 @@
         ]
       },
       {
+        "slug": "airtroller",
+        "name": "AirTroller",
+        "category": "other",
+        "developer": "Matthew Anisovich",
+        "bundleId": "net.sourceloc.AirTroller",
+        "version": "1.1.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
         "slug": "aidoku",
         "name": "Aidoku",
         "category": "other",
@@ -6441,6 +6546,19 @@
         "developer": "RyanYuuki",
         "bundleId": "com.ryan.anymex",
         "version": "3.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "airtroller",
+        "name": "AirTroller",
+        "category": "other",
+        "developer": "Matthew Anisovich",
+        "bundleId": "net.sourceloc.AirTroller",
+        "version": "1.1.1",
         "score": 0.2333,
         "reasons": [
           "Same category (other)",
@@ -6515,6 +6633,19 @@
         ]
       },
       {
+        "slug": "airtroller",
+        "name": "AirTroller",
+        "category": "other",
+        "developer": "Matthew Anisovich",
+        "bundleId": "net.sourceloc.AirTroller",
+        "version": "1.1.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
         "slug": "aidoku",
         "name": "Aidoku",
         "category": "other",
@@ -6536,6 +6667,32 @@
         "developer": "Zeus LN",
         "bundleId": "com.zeusln.zeus",
         "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -6569,38 +6726,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -6703,6 +6834,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -6729,38 +6886,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -6814,7 +6945,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1",
+        "version": "9.37.2",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -6957,6 +7088,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -6976,32 +7133,6 @@
         "developer": "pwn20wnd",
         "bundleId": "science.xnu.undecimus",
         "version": "5.2.0",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "trollfools",
-        "name": "TrollFools",
-        "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -7136,6 +7267,19 @@
         "developer": "RyanYuuki",
         "bundleId": "com.ryan.anymex",
         "version": "3.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "airtroller",
+        "name": "AirTroller",
+        "category": "other",
+        "developer": "Matthew Anisovich",
+        "bundleId": "net.sourceloc.AirTroller",
+        "version": "1.1.1",
         "score": 0.2333,
         "reasons": [
           "Same category (other)",
@@ -7331,6 +7475,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -7357,38 +7527,12 @@
         ]
       },
       {
-        "slug": "taurine",
-        "name": "Taurine",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "sidestore",
-        "name": "SideStore",
-        "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.7.0",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -7411,6 +7555,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -7437,38 +7607,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "tablehabit",
-        "name": "Table Habit",
-        "category": "utilities",
-        "developer": "FriesI23",
-        "bundleId": "io.github.friesi23.mhabit",
-        "version": "1.27.6",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -7497,6 +7641,19 @@
         "developer": "The Tor Project",
         "bundleId": "org.torproject.orbot",
         "version": "1.12.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "itransmission",
+        "name": "iTransmission",
+        "category": "networking",
+        "developer": "alexsvitlov",
+        "bundleId": "com.plusmediapps.itransmission",
+        "version": "1.0.0",
         "score": 0.2333,
         "reasons": [
           "Same category (networking)",
@@ -7558,6 +7715,19 @@
         ]
       },
       {
+        "slug": "itransmission",
+        "name": "iTransmission",
+        "category": "networking",
+        "developer": "alexsvitlov",
+        "bundleId": "com.plusmediapps.itransmission",
+        "version": "1.0.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
         "slug": "itorrent",
         "name": "iTorrent",
         "category": "networking",
@@ -7599,6 +7769,32 @@
         ]
       },
       {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
         "slug": "utm",
         "name": "UTM",
         "category": "utilities",
@@ -7625,38 +7821,12 @@
         ]
       },
       {
-        "slug": "trollfools",
-        "name": "TrollFools",
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
         "category": "utilities",
-        "developer": "Lessica",
-        "bundleId": "wiki.qaq.TrollFools",
-        "version": "4.3-253",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "taurine",
-        "name": "Taurine",
-        "category": "utilities",
-        "developer": "Odyssey Team (coolstar)",
-        "bundleId": "org.coolstar.taurine",
-        "version": "1.1.7",
-        "score": 0.2333,
-        "reasons": [
-          "Same category (utilities)",
-          "Shared tags: utilities"
-        ]
-      },
-      {
-        "slug": "sidestore",
-        "name": "SideStore",
-        "category": "utilities",
-        "developer": "SideStore Team",
-        "bundleId": "com.SideStore.SideStore",
-        "version": "0.7.0",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
         "score": 0.2333,
         "reasons": [
           "Same category (utilities)",
@@ -7710,7 +7880,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1",
+        "version": "9.37.2",
         "score": 0.2333,
         "reasons": [
           "Same category (music)",
@@ -7824,6 +7994,2280 @@
           "Shared tags: social"
         ]
       }
+    ],
+    "bhinstagram": [
+      {
+        "slug": "bhtwitter",
+        "name": "BHTwitter",
+        "category": "social",
+        "developer": "BandarHL",
+        "bundleId": "com.atebits.Tweetie2",
+        "version": "4.4",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (social)",
+          "Same developer (BandarHL)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "winston",
+        "name": "Winston",
+        "category": "social",
+        "developer": "lo.cafe",
+        "bundleId": "lo.cafe.winston",
+        "version": "1.1.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "voyager",
+        "name": "Voyager",
+        "category": "social",
+        "developer": "aeharding",
+        "bundleId": "app.vger.voyager",
+        "version": "2.49.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "twitchadblock",
+        "name": "TwitchAdBlock",
+        "category": "social",
+        "developer": "gunnerkidBT (original by dayanch96)",
+        "bundleId": "tv.twitch",
+        "version": "30.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "turrit-mxgram",
+        "name": "Turrit MxGram",
+        "category": "social",
+        "developer": "m1ronx1412 & IPA Vault",
+        "bundleId": "com.seastar.turrit",
+        "version": "1.5.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "ttkillerplus",
+        "name": "TTKillerPlus",
+        "category": "social",
+        "developer": "iKarwan",
+        "bundleId": "com.zhiliaoapp.musically",
+        "version": "46.8.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      }
+    ],
+    "reynard": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "pocketposter": [
+      {
+        "slug": "ytkp",
+        "name": "YTKillerPlus",
+        "category": "photo-video",
+        "developer": "iKarwan",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytkace",
+        "name": "YTKACE",
+        "category": "photo-video",
+        "developer": "itzzace",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.36.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytlite",
+        "name": "YouTubePlus",
+        "category": "photo-video",
+        "developer": "dayanch96",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.24.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youpro",
+        "name": "YouPro",
+        "category": "photo-video",
+        "developer": "alibusut",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youmod",
+        "name": "YouMod",
+        "category": "photo-video",
+        "developer": "Tonwalter888",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "yattee",
+        "name": "Yattee",
+        "category": "photo-video",
+        "developer": "Yattee",
+        "bundleId": "stream.yattee.app",
+        "version": "1.5.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      }
+    ],
+    "mugunghwa": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "wdbfontoverwrite": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "jaility": [
+      {
+        "slug": "trollboard-reborn",
+        "name": "TrollBoard Reborn",
+        "category": "utilities",
+        "developer": "haxi0",
+        "bundleId": "com.haxi0.TrollBoard-Reborn",
+        "version": "1.0",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (haxi0)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "killmyota",
+        "name": "KillMyOTA",
+        "category": "utilities",
+        "developer": "haxi0",
+        "bundleId": "org.haxi0.KillMyOTA",
+        "version": "1.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (haxi0)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "killmyota": [
+      {
+        "slug": "trollboard-reborn",
+        "name": "TrollBoard Reborn",
+        "category": "utilities",
+        "developer": "haxi0",
+        "bundleId": "com.haxi0.TrollBoard-Reborn",
+        "version": "1.0",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (haxi0)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "jaility",
+        "name": "Jaility",
+        "category": "utilities",
+        "developer": "haxi0",
+        "bundleId": "org.haxi0.Jaility",
+        "version": "3.1.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (haxi0)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "trollinstallerx": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "trollboard-reborn": [
+      {
+        "slug": "killmyota",
+        "name": "KillMyOTA",
+        "category": "utilities",
+        "developer": "haxi0",
+        "bundleId": "org.haxi0.KillMyOTA",
+        "version": "1.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (haxi0)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "jaility",
+        "name": "Jaility",
+        "category": "utilities",
+        "developer": "haxi0",
+        "bundleId": "org.haxi0.Jaility",
+        "version": "3.1.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (haxi0)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "statusmagic": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "cartube": [
+      {
+        "slug": "ytkp",
+        "name": "YTKillerPlus",
+        "category": "photo-video",
+        "developer": "iKarwan",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytkace",
+        "name": "YTKACE",
+        "category": "photo-video",
+        "developer": "itzzace",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.36.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytlite",
+        "name": "YouTubePlus",
+        "category": "photo-video",
+        "developer": "dayanch96",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.24.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youpro",
+        "name": "YouPro",
+        "category": "photo-video",
+        "developer": "alibusut",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youmod",
+        "name": "YouMod",
+        "category": "photo-video",
+        "developer": "Tonwalter888",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "yattee",
+        "name": "Yattee",
+        "category": "photo-video",
+        "developer": "Yattee",
+        "bundleId": "stream.yattee.app",
+        "version": "1.5.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      }
+    ],
+    "dynamiccow": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "itransmission": [
+      {
+        "slug": "pikatorrent",
+        "name": "PikaTorrent",
+        "category": "networking",
+        "developer": "G-Ray",
+        "bundleId": "com.pikatorrent.PikaTorrent",
+        "version": "0.15.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "orbot",
+        "name": "Orbot",
+        "category": "networking",
+        "developer": "The Tor Project",
+        "bundleId": "org.torproject.orbot",
+        "version": "1.12.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "onionbrowser",
+        "name": "Onion Browser",
+        "category": "networking",
+        "developer": "Mike Tigas",
+        "bundleId": "com.miketigas.OnionBrowser",
+        "version": "3.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "itorrent",
+        "name": "iTorrent",
+        "category": "networking",
+        "developer": "XITRIX",
+        "bundleId": "com.xitrix.iTorrent2",
+        "version": "2.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      },
+      {
+        "slug": "gopeed",
+        "name": "Gopeed",
+        "category": "networking",
+        "developer": "GopeedLab",
+        "bundleId": "com.gopeed.gopeed",
+        "version": "1.9.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (networking)",
+          "Shared tags: networking"
+        ]
+      }
+    ],
+    "cowabunga": [
+      {
+        "slug": "secondhand",
+        "name": "SecondHand",
+        "category": "utilities",
+        "developer": "leminlimez",
+        "bundleId": "com.leemin.SecondHand",
+        "version": "1.3.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (leminlimez)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "helium",
+        "name": "Helium",
+        "category": "utilities",
+        "developer": "leminlimez",
+        "bundleId": "com.leemin.helium",
+        "version": "3.2.5",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (leminlimez)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "airtroller": [
+      {
+        "slug": "otraku",
+        "name": "Otraku",
+        "category": "other",
+        "developer": "lotusprey",
+        "bundleId": "com.otraku.app",
+        "version": "1.12.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "mangayomi",
+        "name": "Mangayomi",
+        "category": "other",
+        "developer": "kodjodevf",
+        "bundleId": "com.kodjodevf.mangayomi",
+        "version": "0.9.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "jellybook",
+        "name": "JellyBook",
+        "category": "other",
+        "developer": "JellyBook",
+        "bundleId": "com.KaraWilson.JellyBook",
+        "version": "1.4.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "hanami",
+        "name": "Hanami",
+        "category": "other",
+        "developer": "oolxg",
+        "bundleId": "moe.mkpwnz.Hanami",
+        "version": "0.28.2",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "anymex",
+        "name": "AnymeX",
+        "category": "other",
+        "developer": "RyanYuuki",
+        "bundleId": "com.ryan.anymex",
+        "version": "3.1.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      },
+      {
+        "slug": "aidoku",
+        "name": "Aidoku",
+        "category": "other",
+        "developer": "Skitty",
+        "bundleId": "app.aidoku.Aidoku",
+        "version": "0.9",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (other)",
+          "Shared tags: other"
+        ]
+      }
+    ],
+    "helium": [
+      {
+        "slug": "secondhand",
+        "name": "SecondHand",
+        "category": "utilities",
+        "developer": "leminlimez",
+        "bundleId": "com.leemin.SecondHand",
+        "version": "1.3.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (leminlimez)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "cowabunga",
+        "name": "Cowabunga",
+        "category": "utilities",
+        "developer": "leminlimez",
+        "bundleId": "com.leemin.Cowabunga",
+        "version": "10.3.2",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (leminlimez)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "secondhand": [
+      {
+        "slug": "helium",
+        "name": "Helium",
+        "category": "utilities",
+        "developer": "leminlimez",
+        "bundleId": "com.leemin.helium",
+        "version": "3.2.5",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (leminlimez)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "cowabunga",
+        "name": "Cowabunga",
+        "category": "utilities",
+        "developer": "leminlimez",
+        "bundleId": "com.leemin.Cowabunga",
+        "version": "10.3.2",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (leminlimez)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "caperfhud": [
+      {
+        "slug": "stikdebug",
+        "name": "StikDebug",
+        "category": "developer-tools",
+        "developer": "StikDebug",
+        "bundleId": "com.stik.stikdebug",
+        "version": "3.1.10",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (developer-tools)",
+          "Shared tags: developer-tools"
+        ]
+      },
+      {
+        "slug": "ish",
+        "name": "iSH",
+        "category": "developer-tools",
+        "developer": "Theodore Dubois and contributors",
+        "bundleId": "app.ish.iSH",
+        "version": "813",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (developer-tools)",
+          "Shared tags: developer-tools"
+        ]
+      }
+    ],
+    "appstoreplusplus": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "nuvio": [
+      {
+        "slug": "ytkp",
+        "name": "YTKillerPlus",
+        "category": "photo-video",
+        "developer": "iKarwan",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytkace",
+        "name": "YTKACE",
+        "category": "photo-video",
+        "developer": "itzzace",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.36.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytlite",
+        "name": "YouTubePlus",
+        "category": "photo-video",
+        "developer": "dayanch96",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.24.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youpro",
+        "name": "YouPro",
+        "category": "photo-video",
+        "developer": "alibusut",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youmod",
+        "name": "YouMod",
+        "category": "photo-video",
+        "developer": "Tonwalter888",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "yattee",
+        "name": "Yattee",
+        "category": "photo-video",
+        "developer": "Yattee",
+        "bundleId": "stream.yattee.app",
+        "version": "1.5.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      }
+    ],
+    "escapeos": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "3105": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "vibecontainers": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollfools",
+        "name": "TrollFools",
+        "category": "utilities",
+        "developer": "Lessica",
+        "bundleId": "wiki.qaq.TrollFools",
+        "version": "4.3-253",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "battman": [
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "unc0ver",
+        "name": "unc0ver",
+        "category": "utilities",
+        "developer": "pwn20wnd",
+        "bundleId": "science.xnu.undecimus",
+        "version": "5.2.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "trollinstallerx",
+        "name": "TrollInstallerX",
+        "category": "utilities",
+        "developer": "Alfie CG",
+        "bundleId": "com.Alfie.TrollInstallerX",
+        "version": "1.0.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "cercube": [
+      {
+        "slug": "ytkp",
+        "name": "YTKillerPlus",
+        "category": "photo-video",
+        "developer": "iKarwan",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytkace",
+        "name": "YTKACE",
+        "category": "photo-video",
+        "developer": "itzzace",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.36.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "ytlite",
+        "name": "YouTubePlus",
+        "category": "photo-video",
+        "developer": "dayanch96",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.24.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youpro",
+        "name": "YouPro",
+        "category": "photo-video",
+        "developer": "alibusut",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "youmod",
+        "name": "YouMod",
+        "category": "photo-video",
+        "developer": "Tonwalter888",
+        "bundleId": "com.google.ios.youtube",
+        "version": "21.37.4",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      },
+      {
+        "slug": "yattee",
+        "name": "Yattee",
+        "category": "photo-video",
+        "developer": "Yattee",
+        "bundleId": "stream.yattee.app",
+        "version": "1.5.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (photo-video)",
+          "Shared tags: photo-video"
+        ]
+      }
+    ],
+    "nicegram": [
+      {
+        "slug": "winston",
+        "name": "Winston",
+        "category": "social",
+        "developer": "lo.cafe",
+        "bundleId": "lo.cafe.winston",
+        "version": "1.1.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "voyager",
+        "name": "Voyager",
+        "category": "social",
+        "developer": "aeharding",
+        "bundleId": "app.vger.voyager",
+        "version": "2.49.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "twitchadblock",
+        "name": "TwitchAdBlock",
+        "category": "social",
+        "developer": "gunnerkidBT (original by dayanch96)",
+        "bundleId": "tv.twitch",
+        "version": "30.7",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "turrit-mxgram",
+        "name": "Turrit MxGram",
+        "category": "social",
+        "developer": "m1ronx1412 & IPA Vault",
+        "bundleId": "com.seastar.turrit",
+        "version": "1.5.3",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "ttkillerplus",
+        "name": "TTKillerPlus",
+        "category": "social",
+        "developer": "iKarwan",
+        "bundleId": "com.zhiliaoapp.musically",
+        "version": "46.8.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      },
+      {
+        "slug": "thunder",
+        "name": "Thunder",
+        "category": "social",
+        "developer": "Thunder App",
+        "bundleId": "com.hjiangsu.thunder",
+        "version": "0.8.6",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (social)",
+          "Shared tags: social"
+        ]
+      }
+    ],
+    "batteryinfo": [
+      {
+        "slug": "enablequic",
+        "name": "EnableQUIC",
+        "category": "utilities",
+        "developer": "DevelopCubeLab",
+        "bundleId": "com.developlab.EnableQUIC",
+        "version": "1.2.4",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (DevelopCubeLab)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "animationspeed",
+        "name": "Animation Speed",
+        "category": "utilities",
+        "developer": "DevelopCubeLab",
+        "bundleId": "com.developlab.AnimationSpeed",
+        "version": "1.0.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (DevelopCubeLab)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "enablequic": [
+      {
+        "slug": "batteryinfo",
+        "name": "Battery Info",
+        "category": "utilities",
+        "developer": "DevelopCubeLab",
+        "bundleId": "com.developlab.BatteryInfo",
+        "version": "1.2.2",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (DevelopCubeLab)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "animationspeed",
+        "name": "Animation Speed",
+        "category": "utilities",
+        "developer": "DevelopCubeLab",
+        "bundleId": "com.developlab.AnimationSpeed",
+        "version": "1.0.1",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (DevelopCubeLab)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
+    ],
+    "animationspeed": [
+      {
+        "slug": "enablequic",
+        "name": "EnableQUIC",
+        "category": "utilities",
+        "developer": "DevelopCubeLab",
+        "bundleId": "com.developlab.EnableQUIC",
+        "version": "1.2.4",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (DevelopCubeLab)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "batteryinfo",
+        "name": "Battery Info",
+        "category": "utilities",
+        "developer": "DevelopCubeLab",
+        "bundleId": "com.developlab.BatteryInfo",
+        "version": "1.2.2",
+        "score": 0.3833,
+        "reasons": [
+          "Same category (utilities)",
+          "Same developer (DevelopCubeLab)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "category": "utilities",
+        "developer": "Zeus LN",
+        "bundleId": "com.zeusln.zeus",
+        "version": "13.2.1",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "wdbfontoverwrite",
+        "name": "WDBFontOverwrite",
+        "category": "utilities",
+        "developer": "Ginsu",
+        "bundleId": "com.ginsudev.WDBFontOverwrite",
+        "version": "1.10.8",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "vibecontainers",
+        "name": "VibeContainers",
+        "category": "utilities",
+        "developer": "GenericCoding",
+        "bundleId": "com.genericcoding.vibecontainers",
+        "version": "1.0",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      },
+      {
+        "slug": "utm",
+        "name": "UTM",
+        "category": "utilities",
+        "developer": "UTM Team",
+        "bundleId": "com.utmapp.UTM",
+        "version": "4.7.5",
+        "score": 0.2333,
+        "reasons": [
+          "Same category (utilities)",
+          "Shared tags: utilities"
+        ]
+      }
     ]
   },
   "media": {
@@ -7836,7 +10280,7 @@
         "category": "music",
         "developer": "Mark02-2012",
         "bundleId": "com.google.ios.youtubemusic",
-        "version": "9.36.1"
+        "version": "9.37.2"
       },
       {
         "slug": "maxtube",

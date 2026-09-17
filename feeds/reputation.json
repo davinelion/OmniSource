@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16",
-  "count": 85,
+  "generatedAt": "2026-09-17",
+  "count": 114,
   "levels": [
     "TRUSTED",
     "RELIABLE",
@@ -27,51 +27,6 @@
   "windowDays": 30,
   "sources": [
     {
-      "id": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
-      "source": "927tx/IPA-Vault",
-      "publisher": "927tx/IPA-Vault",
-      "homepage": "https://raw.githubusercontent.com",
-      "sourceURL": "https://raw.githubusercontent.com",
-      "apps": [
-        "infuseplus",
-        "glow",
-        "swiftgram",
-        "telegram-mxgram",
-        "iqface",
-        "ryukgram",
-        "sparkle",
-        "nexasc",
-        "messenger-flow",
-        "msgplusx",
-        "threadsaver",
-        "ime",
-        "turrit-mxgram"
-      ],
-      "score": 97.5,
-      "level": "TRUSTED",
-      "status": "Verified",
-      "lastUpdate": "2026-09-13",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 92.31,
-        "updateFrequencyDays": 6.5,
-        "lastReleaseDaysAgo": 3,
-        "brokenLinks": 0,
-        "releasesPastYear": 24,
-        "metadataCompleteness": 96,
-        "probes": 312
-      },
-      "metrics": {
-        "uptime": 92.31,
-        "probes": 312,
-        "averageLatencyMs": 138.7,
-        "averageUpdateGapDays": 6.5,
-        "brokenReleases": 0,
-        "currentlyReachable": "13/13",
-        "legacyScore": 81.08
-      }
-    },
-    {
       "id": "mrdrvt99/YouProEXTRA",
       "source": "mrdrvt99/YouProEXTRA",
       "publisher": "mrdrvt99/YouProEXTRA",
@@ -91,7 +46,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": 8.2,
-        "lastReleaseDaysAgo": 2,
+        "lastReleaseDaysAgo": 3,
         "brokenLinks": 1,
         "releasesPastYear": 12,
         "metadataCompleteness": 96,
@@ -100,7 +55,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 120,
-        "averageLatencyMs": 200.8,
+        "averageLatencyMs": 230.8,
         "averageUpdateGapDays": 8.2,
         "brokenReleases": 1,
         "currentlyReachable": "4/4",
@@ -108,37 +63,36 @@
       }
     },
     {
-      "id": "https://repo.ikghd.me/repo.json",
-      "source": "iKarwan (repo.ikghd.me)",
-      "publisher": "iKarwan (repo.ikghd.me)",
-      "homepage": "https://repo.ikghd.me",
-      "sourceURL": "https://repo.ikghd.me",
+      "id": "Mark02-2012/MaxMusic",
+      "source": "Mark02-2012/MaxMusic",
+      "publisher": "Mark02-2012/MaxMusic",
+      "homepage": "https://github.com/Mark02-2012/MaxMusic",
+      "sourceURL": "https://github.com/Mark02-2012/MaxMusic",
       "apps": [
-        "inkillerplus",
-        "ttkillerplus"
+        "maxmusic"
       ],
-      "score": 92.4,
+      "score": 91.9,
       "level": "TRUSTED",
       "status": "Verified",
-      "lastUpdate": "2026-09-09",
+      "lastUpdate": "2026-09-15",
       "signals": {
         "jsonValidity": 100.0,
         "uptime": 100.0,
-        "updateFrequencyDays": 8.0,
-        "lastReleaseDaysAgo": 7,
+        "updateFrequencyDays": 7.0,
+        "lastReleaseDaysAgo": 2,
         "brokenLinks": 0,
-        "releasesPastYear": 4,
+        "releasesPastYear": 3,
         "metadataCompleteness": 96,
-        "probes": 60
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 60,
-        "averageLatencyMs": 605.5,
-        "averageUpdateGapDays": 8.0,
+        "probes": 30,
+        "averageLatencyMs": 224.0,
+        "averageUpdateGapDays": 7.0,
         "brokenReleases": 0,
-        "currentlyReachable": "2/2",
-        "legacyScore": 84.86
+        "currentlyReachable": "1/1",
+        "legacyScore": 85.0
       }
     },
     {
@@ -158,16 +112,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": 6.0,
-        "lastReleaseDaysAgo": 1,
+        "lastReleaseDaysAgo": 2,
         "brokenLinks": 0,
         "releasesPastYear": 3,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 173.0,
+        "probes": 20,
+        "averageLatencyMs": 206.0,
         "averageUpdateGapDays": 6.0,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -191,7 +145,7 @@
         "jsonValidity": 100.0,
         "uptime": 96.67,
         "updateFrequencyDays": 7.0,
-        "lastReleaseDaysAgo": 1,
+        "lastReleaseDaysAgo": 2,
         "brokenLinks": 0,
         "releasesPastYear": 3,
         "metadataCompleteness": 96,
@@ -200,11 +154,44 @@
       "metrics": {
         "uptime": 96.67,
         "probes": 30,
-        "averageLatencyMs": 277.0,
+        "averageLatencyMs": 273.0,
         "averageUpdateGapDays": 7.0,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 83.33
+      }
+    },
+    {
+      "id": "cogwheel0/conduit",
+      "source": "cogwheel0/conduit",
+      "publisher": "cogwheel0/conduit",
+      "homepage": "https://github.com/cogwheel0/conduit",
+      "sourceURL": "https://github.com/cogwheel0/conduit",
+      "apps": [
+        "conduit"
+      ],
+      "score": 89.9,
+      "level": "TRUSTED",
+      "status": "Verified",
+      "lastUpdate": "2026-09-16",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": 7.5,
+        "lastReleaseDaysAgo": 1,
+        "brokenLinks": 0,
+        "releasesPastYear": 3,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 30,
+        "averageLatencyMs": 213.0,
+        "averageUpdateGapDays": 7.5,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 84.93
       }
     },
     {
@@ -224,7 +211,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": 13.0,
-        "lastReleaseDaysAgo": 3,
+        "lastReleaseDaysAgo": 4,
         "brokenLinks": 0,
         "releasesPastYear": 3,
         "metadataCompleteness": 96,
@@ -233,11 +220,77 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 187.0,
+        "averageLatencyMs": 198.0,
         "averageUpdateGapDays": 13.0,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 84.17
+      }
+    },
+    {
+      "id": "SideStore/SideStore",
+      "source": "SideStore/SideStore",
+      "publisher": "SideStore/SideStore",
+      "homepage": "https://github.com/SideStore/SideStore",
+      "sourceURL": "https://github.com/SideStore/SideStore",
+      "apps": [
+        "sidestore"
+      ],
+      "score": 89.4,
+      "level": "TRUSTED",
+      "status": "Verified",
+      "lastUpdate": "2026-09-15",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": 6.0,
+        "lastReleaseDaysAgo": 2,
+        "brokenLinks": 0,
+        "releasesPastYear": 2,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 30,
+        "averageLatencyMs": 188.0,
+        "averageUpdateGapDays": 6.0,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 84.86
+      }
+    },
+    {
+      "id": "ayman708-UX/PlayTorrioV3",
+      "source": "ayman708-UX/PlayTorrioV3",
+      "publisher": "ayman708-UX/PlayTorrioV3",
+      "homepage": "https://github.com/ayman708-UX/PlayTorrioV3",
+      "sourceURL": "https://github.com/ayman708-UX/PlayTorrioV3",
+      "apps": [
+        "playtorrio"
+      ],
+      "score": 89.4,
+      "level": "TRUSTED",
+      "status": "Verified",
+      "lastUpdate": "2026-09-16",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": 7.0,
+        "lastReleaseDaysAgo": 1,
+        "brokenLinks": 0,
+        "releasesPastYear": 2,
+        "metadataCompleteness": 96,
+        "probes": 20
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 20,
+        "averageLatencyMs": 201.0,
+        "averageUpdateGapDays": 7.0,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 80.0
       }
     },
     {
@@ -257,40 +310,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": 7.0,
-        "lastReleaseDaysAgo": 3,
-        "brokenLinks": 0,
-        "releasesPastYear": 2,
-        "metadataCompleteness": 96,
-        "probes": 30
-      },
-      "metrics": {
-        "uptime": 100.0,
-        "probes": 30,
-        "averageLatencyMs": 206.0,
-        "averageUpdateGapDays": 7.0,
-        "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 85.0
-      }
-    },
-    {
-      "id": "Mark02-2012/MaxMusic",
-      "source": "Mark02-2012/MaxMusic",
-      "publisher": "Mark02-2012/MaxMusic",
-      "homepage": "https://github.com/Mark02-2012/MaxMusic",
-      "sourceURL": "https://github.com/Mark02-2012/MaxMusic",
-      "apps": [
-        "maxmusic"
-      ],
-      "score": 87.4,
-      "level": "TRUSTED",
-      "status": "Verified",
-      "lastUpdate": "2026-09-10",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 100.0,
-        "updateFrequencyDays": 9.0,
-        "lastReleaseDaysAgo": 6,
+        "lastReleaseDaysAgo": 4,
         "brokenLinks": 0,
         "releasesPastYear": 2,
         "metadataCompleteness": 96,
@@ -300,10 +320,10 @@
         "uptime": 100.0,
         "probes": 30,
         "averageLatencyMs": 204.0,
-        "averageUpdateGapDays": 9.0,
+        "averageUpdateGapDays": 7.0,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 84.72
+        "legacyScore": 85.0
       }
     },
     {
@@ -323,7 +343,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": 12.0,
-        "lastReleaseDaysAgo": 4,
+        "lastReleaseDaysAgo": 5,
         "brokenLinks": 0,
         "releasesPastYear": 2,
         "metadataCompleteness": 96,
@@ -332,7 +352,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 200.0,
+        "averageLatencyMs": 231.0,
         "averageUpdateGapDays": 12.0,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -340,102 +360,82 @@
       }
     },
     {
-      "id": "cogwheel0/conduit",
-      "source": "cogwheel0/conduit",
-      "publisher": "cogwheel0/conduit",
-      "homepage": "https://github.com/cogwheel0/conduit",
-      "sourceURL": "https://github.com/cogwheel0/conduit",
+      "id": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
+      "source": "927tx/IPA-Vault",
+      "publisher": "927tx/IPA-Vault",
+      "homepage": "https://raw.githubusercontent.com",
+      "sourceURL": "https://raw.githubusercontent.com",
       "apps": [
-        "conduit"
+        "infuseplus",
+        "glow",
+        "swiftgram",
+        "telegram-mxgram",
+        "iqface",
+        "ryukgram",
+        "sparkle",
+        "nexasc",
+        "messenger-flow",
+        "msgplusx",
+        "threadsaver",
+        "ime",
+        "turrit-mxgram"
       ],
       "score": 87.4,
       "level": "TRUSTED",
-      "status": "Verified",
-      "lastUpdate": "2026-09-15",
+      "status": "Warning",
+      "lastUpdate": "2026-09-13",
       "signals": {
         "jsonValidity": 100.0,
-        "uptime": 100.0,
-        "updateFrequencyDays": 14.0,
-        "lastReleaseDaysAgo": 1,
-        "brokenLinks": 0,
-        "releasesPastYear": 2,
+        "uptime": 72.05,
+        "updateFrequencyDays": 6.5,
+        "lastReleaseDaysAgo": 4,
+        "brokenLinks": 13,
+        "releasesPastYear": 24,
         "metadataCompleteness": 96,
-        "probes": 30
+        "probes": 390
       },
       "metrics": {
-        "uptime": 100.0,
-        "probes": 30,
-        "averageLatencyMs": 317.0,
-        "averageUpdateGapDays": 14.0,
+        "uptime": 72.05,
+        "probes": 390,
+        "averageLatencyMs": 496.8,
+        "averageUpdateGapDays": 6.5,
         "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 84.03
+        "currentlyReachable": "0/13",
+        "legacyScore": 70.96
       }
     },
     {
-      "id": "SideStore/SideStore",
-      "source": "SideStore/SideStore",
-      "publisher": "SideStore/SideStore",
-      "homepage": "https://github.com/SideStore/SideStore",
-      "sourceURL": "https://github.com/SideStore/SideStore",
+      "id": "https://repo.ikghd.me/repo.json",
+      "source": "iKarwan (repo.ikghd.me)",
+      "publisher": "iKarwan (repo.ikghd.me)",
+      "homepage": "https://repo.ikghd.me",
+      "sourceURL": "https://repo.ikghd.me",
       "apps": [
-        "sidestore"
+        "inkillerplus",
+        "ttkillerplus"
       ],
-      "score": 85.9,
-      "level": "TRUSTED",
-      "status": "Verified",
-      "lastUpdate": "2026-09-15",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 100.0,
-        "updateFrequencyDays": 66.5,
-        "lastReleaseDaysAgo": 1,
-        "brokenLinks": 0,
-        "releasesPastYear": 3,
-        "metadataCompleteness": 96,
-        "probes": 30
-      },
-      "metrics": {
-        "uptime": 100.0,
-        "probes": 30,
-        "averageLatencyMs": 178.0,
-        "averageUpdateGapDays": 66.5,
-        "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 76.74
-      }
-    },
-    {
-      "id": "gunnerkidBT/TwitchAdBlock",
-      "source": "gunnerkidBT/TwitchAdBlock",
-      "publisher": "gunnerkidBT/TwitchAdBlock",
-      "homepage": "https://github.com/gunnerkidBT/TwitchAdBlock",
-      "sourceURL": "https://github.com/gunnerkidBT/TwitchAdBlock",
-      "apps": [
-        "twitchadblock"
-      ],
-      "score": 83.4,
+      "score": 84.1,
       "level": "RELIABLE",
-      "status": "Community Verified",
-      "lastUpdate": "2026-08-14",
+      "status": "Warning",
+      "lastUpdate": "2026-09-09",
       "signals": {
         "jsonValidity": 100.0,
-        "uptime": 100.0,
-        "updateFrequencyDays": 90.0,
-        "lastReleaseDaysAgo": 33,
-        "brokenLinks": 0,
-        "releasesPastYear": 2,
+        "uptime": 76.67,
+        "updateFrequencyDays": 8.0,
+        "lastReleaseDaysAgo": 8,
+        "brokenLinks": 2,
+        "releasesPastYear": 4,
         "metadataCompleteness": 96,
-        "probes": 30
+        "probes": 60
       },
       "metrics": {
-        "uptime": 100.0,
-        "probes": 30,
-        "averageLatencyMs": 374.0,
-        "averageUpdateGapDays": 90.0,
+        "uptime": 76.67,
+        "probes": 60,
+        "averageLatencyMs": 670.0,
+        "averageUpdateGapDays": 8.0,
         "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 73.47
+        "currentlyReachable": "0/2",
+        "legacyScore": 73.19
       }
     },
     {
@@ -455,7 +455,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 14,
+        "lastReleaseDaysAgo": 15,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -464,7 +464,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 209.0,
+        "averageLatencyMs": 212.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -488,20 +488,53 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 10,
+        "lastReleaseDaysAgo": 11,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 207.0,
+        "probes": 20,
+        "averageLatencyMs": 228.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 55.0
+      }
+    },
+    {
+      "id": "YangJiiii/3105",
+      "source": "YangJiiii/3105",
+      "publisher": "YangJiiii/3105",
+      "homepage": "https://github.com/YangJiiii/3105",
+      "sourceURL": "https://github.com/YangJiiii/3105",
+      "apps": [
+        "3105"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-09-14",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 3,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 5
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 5,
+        "averageLatencyMs": 240.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -521,7 +554,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 59,
+        "lastReleaseDaysAgo": 60,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -530,7 +563,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 194.0,
+        "averageLatencyMs": 218.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -554,20 +587,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 100,
+        "lastReleaseDaysAgo": 101,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 178.0,
+        "probes": 30,
+        "averageLatencyMs": 211.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -587,7 +620,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 32,
+        "lastReleaseDaysAgo": 33,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -596,7 +629,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 354.0,
+        "averageLatencyMs": 197.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -620,7 +653,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 256,
+        "lastReleaseDaysAgo": 257,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -629,11 +662,44 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 182.0,
+        "averageLatencyMs": 200.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "Torrekie/Battman",
+      "source": "Torrekie/Battman",
+      "publisher": "Torrekie/Battman",
+      "homepage": "https://github.com/Torrekie/Battman",
+      "sourceURL": "https://github.com/Torrekie/Battman",
+      "apps": [
+        "battman"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-01-19",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 241,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 5
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 5,
+        "averageLatencyMs": 261.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -653,16 +719,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 252,
+        "lastReleaseDaysAgo": 253,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 184.0,
+        "probes": 20,
+        "averageLatencyMs": 232.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -686,7 +752,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 20,
+        "lastReleaseDaysAgo": 21,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -695,7 +761,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 178.0,
+        "averageLatencyMs": 183.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -719,7 +785,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 9,
+        "lastReleaseDaysAgo": 10,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -728,7 +794,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 191.0,
+        "averageLatencyMs": 221.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -752,7 +818,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 17,
+        "lastReleaseDaysAgo": 18,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -761,7 +827,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 205.0,
+        "averageLatencyMs": 201.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -785,7 +851,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 17,
+        "lastReleaseDaysAgo": 18,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -794,7 +860,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 202.0,
+        "averageLatencyMs": 215.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -818,20 +884,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 4,
+        "lastReleaseDaysAgo": 5,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 176.0,
+        "probes": 30,
+        "averageLatencyMs": 188.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -851,20 +917,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 96,
+        "lastReleaseDaysAgo": 97,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 182.0,
+        "probes": 30,
+        "averageLatencyMs": 193.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -884,16 +950,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 117,
+        "lastReleaseDaysAgo": 118,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 261.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -917,7 +983,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 318,
+        "lastReleaseDaysAgo": 319,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -926,7 +992,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 221.0,
+        "averageLatencyMs": 211.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -945,25 +1011,58 @@
       "score": 73.9,
       "level": "RELIABLE",
       "status": "Community Verified",
-      "lastUpdate": "2026-06-19",
+      "lastUpdate": "2026-09-17",
       "signals": {
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 89,
+        "lastReleaseDaysAgo": 0,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 24
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 24,
-        "averageLatencyMs": 201.0,
+        "probes": 30,
+        "averageLatencyMs": 209.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "pwnapplehat/EscapeOS",
+      "source": "pwnapplehat/EscapeOS",
+      "publisher": "pwnapplehat/EscapeOS",
+      "homepage": "https://github.com/pwnapplehat/EscapeOS",
+      "sourceURL": "https://github.com/pwnapplehat/EscapeOS",
+      "apps": [
+        "escapeos"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-08-17",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 31,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 5
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 5,
+        "averageLatencyMs": 256.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -983,7 +1082,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 186,
+        "lastReleaseDaysAgo": 187,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -992,7 +1091,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 205.0,
+        "averageLatencyMs": 217.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1016,20 +1115,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 25,
+        "lastReleaseDaysAgo": 26,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 165.0,
+        "probes": 30,
+        "averageLatencyMs": 173.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -1049,16 +1148,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 36,
+        "lastReleaseDaysAgo": 37,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 274.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1082,7 +1181,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 88,
+        "lastReleaseDaysAgo": 89,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1091,7 +1190,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 191.0,
+        "averageLatencyMs": 202.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1115,20 +1214,86 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 115,
+        "lastReleaseDaysAgo": 116,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 161.0,
+        "probes": 20,
+        "averageLatencyMs": 208.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 55.0
+      }
+    },
+    {
+      "id": "NuvioMedia/NuvioMobile",
+      "source": "NuvioMedia/NuvioMobile",
+      "publisher": "NuvioMedia/NuvioMobile",
+      "homepage": "https://github.com/NuvioMedia/NuvioMobile",
+      "sourceURL": "https://github.com/NuvioMedia/NuvioMobile",
+      "apps": [
+        "nuvio"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-09-17",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 0,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 5
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 5,
+        "averageLatencyMs": 260.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "nicegram/Nicegram-iOS",
+      "source": "nicegram/Nicegram-iOS",
+      "publisher": "nicegram/Nicegram-iOS",
+      "homepage": "https://github.com/nicegram/Nicegram-iOS",
+      "sourceURL": "https://github.com/nicegram/Nicegram-iOS",
+      "apps": [
+        "nicegram"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-09-07",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 10,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 3
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 3,
+        "averageLatencyMs": 275.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -1148,7 +1313,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 317,
+        "lastReleaseDaysAgo": 318,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1157,7 +1322,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 350.0,
+        "averageLatencyMs": 218.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1181,16 +1346,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 227,
+        "lastReleaseDaysAgo": 228,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 200.0,
+        "probes": 20,
+        "averageLatencyMs": 218.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1214,16 +1379,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 112,
+        "lastReleaseDaysAgo": 113,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 197.0,
+        "probes": 20,
+        "averageLatencyMs": 230.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1247,20 +1412,53 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 19,
+        "lastReleaseDaysAgo": 20,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 186.0,
+        "probes": 20,
+        "averageLatencyMs": 227.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 55.0
+      }
+    },
+    {
+      "id": "minh-ton/reynard-browser",
+      "source": "minh-ton/reynard-browser",
+      "publisher": "minh-ton/reynard-browser",
+      "homepage": "https://github.com/minh-ton/reynard-browser",
+      "sourceURL": "https://github.com/minh-ton/reynard-browser",
+      "apps": [
+        "reynard"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-09-14",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 3,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 238.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -1280,16 +1478,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 66,
+        "lastReleaseDaysAgo": 67,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 186.0,
+        "probes": 20,
+        "averageLatencyMs": 215.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1313,7 +1511,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 55,
+        "lastReleaseDaysAgo": 56,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1322,7 +1520,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 206.0,
+        "averageLatencyMs": 217.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1346,20 +1544,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 13,
+        "lastReleaseDaysAgo": 14,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 179.0,
+        "probes": 30,
+        "averageLatencyMs": 208.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -1379,16 +1577,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 180,
+        "lastReleaseDaysAgo": 181,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 186.0,
+        "probes": 20,
+        "averageLatencyMs": 211.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1412,7 +1610,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 61,
+        "lastReleaseDaysAgo": 62,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1421,7 +1619,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 179.0,
+        "averageLatencyMs": 190.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1445,20 +1643,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 196,
+        "lastReleaseDaysAgo": 197,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 192.0,
+        "probes": 30,
+        "averageLatencyMs": 219.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -1478,20 +1676,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 355,
+        "lastReleaseDaysAgo": 356,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 24
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 24,
-        "averageLatencyMs": 205.0,
+        "probes": 30,
+        "averageLatencyMs": 216.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -1511,16 +1709,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 146,
+        "lastReleaseDaysAgo": 147,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 256.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1544,7 +1742,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 103,
+        "lastReleaseDaysAgo": 104,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1553,7 +1751,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 190.0,
+        "averageLatencyMs": 193.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1577,16 +1775,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 7,
+        "lastReleaseDaysAgo": 8,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 183.0,
+        "probes": 20,
+        "averageLatencyMs": 213.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1610,7 +1808,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 14,
+        "lastReleaseDaysAgo": 15,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1619,7 +1817,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 199.0,
+        "averageLatencyMs": 205.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1643,7 +1841,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 25,
+        "lastReleaseDaysAgo": 26,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1652,7 +1850,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 216.0,
+        "averageLatencyMs": 207.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1676,7 +1874,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 123,
+        "lastReleaseDaysAgo": 124,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1685,7 +1883,40 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 193.0,
+        "averageLatencyMs": 201.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "gunnerkidBT/TwitchAdBlock",
+      "source": "gunnerkidBT/TwitchAdBlock",
+      "publisher": "gunnerkidBT/TwitchAdBlock",
+      "homepage": "https://github.com/gunnerkidBT/TwitchAdBlock",
+      "sourceURL": "https://github.com/gunnerkidBT/TwitchAdBlock",
+      "apps": [
+        "twitchadblock"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-08-14",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 34,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 30,
+        "averageLatencyMs": 224.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1709,16 +1940,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 78,
+        "lastReleaseDaysAgo": 79,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 300.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1742,20 +1973,53 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 182,
+        "lastReleaseDaysAgo": 183,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 189.0,
+        "probes": 30,
+        "averageLatencyMs": 243.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "GenericCoding/VibeContainers",
+      "source": "GenericCoding/VibeContainers",
+      "publisher": "GenericCoding/VibeContainers",
+      "homepage": "https://github.com/GenericCoding/VibeContainers",
+      "sourceURL": "https://github.com/GenericCoding/VibeContainers",
+      "apps": [
+        "vibecontainers"
+      ],
+      "score": 73.9,
+      "level": "RELIABLE",
+      "status": "Community Verified",
+      "lastUpdate": "2026-08-28",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 20,
+        "brokenLinks": 0,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 5
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 5,
+        "averageLatencyMs": 271.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -1775,16 +2039,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 248,
+        "lastReleaseDaysAgo": 249,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 199.0,
+        "probes": 20,
+        "averageLatencyMs": 243.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1808,16 +2072,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 9,
+        "lastReleaseDaysAgo": 10,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 295.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1841,7 +2105,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 106,
+        "lastReleaseDaysAgo": 107,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1850,7 +2114,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 214.0,
+        "averageLatencyMs": 201.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1874,16 +2138,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 16,
+        "lastReleaseDaysAgo": 17,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 298.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1907,7 +2171,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 8,
+        "lastReleaseDaysAgo": 9,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1916,7 +2180,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 203.0,
+        "averageLatencyMs": 219.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1940,7 +2204,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 27,
+        "lastReleaseDaysAgo": 28,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -1949,7 +2213,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 205.0,
+        "averageLatencyMs": 229.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -1957,36 +2221,36 @@
       }
     },
     {
-      "id": "iamsmmh/OmniSource",
-      "source": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
-      "publisher": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
-      "homepage": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
-      "sourceURL": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
+      "id": "CokePokes/AppStorePlus-TrollStore",
+      "source": "CokePokes/AppStorePlus-TrollStore",
+      "publisher": "CokePokes/AppStorePlus-TrollStore",
+      "homepage": "https://github.com/CokePokes/AppStorePlus-TrollStore",
+      "sourceURL": "https://github.com/CokePokes/AppStorePlus-TrollStore",
       "apps": [
-        "uyouenhanced"
+        "appstoreplusplus"
       ],
       "score": 73.9,
       "level": "RELIABLE",
       "status": "Community Verified",
-      "lastUpdate": "2026-08-22",
+      "lastUpdate": "2026-09-17",
       "signals": {
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 25,
+        "lastReleaseDaysAgo": 0,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 30
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 30,
-        "averageLatencyMs": 304.0,
+        "probes": 7,
+        "averageLatencyMs": 257.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 60.0
+        "legacyScore": 50.0
       }
     },
     {
@@ -2006,16 +2270,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 8,
+        "lastReleaseDaysAgo": 9,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 191.0,
+        "probes": 20,
+        "averageLatencyMs": 226.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2039,7 +2303,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 73,
+        "lastReleaseDaysAgo": 74,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -2048,7 +2312,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 184.0,
+        "averageLatencyMs": 194.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2072,16 +2336,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 35,
+        "lastReleaseDaysAgo": 36,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 195.0,
+        "probes": 20,
+        "averageLatencyMs": 219.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2105,7 +2369,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 57,
+        "lastReleaseDaysAgo": 58,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -2114,7 +2378,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 203.0,
+        "averageLatencyMs": 207.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2138,7 +2402,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 50,
+        "lastReleaseDaysAgo": 51,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -2147,44 +2411,11 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 372.0,
+        "averageLatencyMs": 217.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 60.0
-      }
-    },
-    {
-      "id": "ayman708-UX/PlayTorrioV3",
-      "source": "ayman708-UX/PlayTorrioV3",
-      "publisher": "ayman708-UX/PlayTorrioV3",
-      "homepage": "https://github.com/ayman708-UX/PlayTorrioV3",
-      "sourceURL": "https://github.com/ayman708-UX/PlayTorrioV3",
-      "apps": [
-        "playtorrio"
-      ],
-      "score": 73.9,
-      "level": "RELIABLE",
-      "status": "Community Verified",
-      "lastUpdate": "2026-09-09",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 100.0,
-        "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 7,
-        "brokenLinks": 0,
-        "releasesPastYear": 1,
-        "metadataCompleteness": 96,
-        "probes": 13
-      },
-      "metrics": {
-        "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 169.0,
-        "averageUpdateGapDays": null,
-        "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 55.0
       }
     },
     {
@@ -2204,7 +2435,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 44,
+        "lastReleaseDaysAgo": 45,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -2213,7 +2444,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 211.0,
+        "averageLatencyMs": 239.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2237,7 +2468,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 181,
+        "lastReleaseDaysAgo": 182,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -2246,7 +2477,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 210.0,
+        "averageLatencyMs": 213.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2270,7 +2501,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 13,
+        "lastReleaseDaysAgo": 14,
         "brokenLinks": 0,
         "releasesPastYear": 1,
         "metadataCompleteness": 96,
@@ -2279,77 +2510,11 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 193.0,
+        "averageLatencyMs": 206.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 60.0
-      }
-    },
-    {
-      "id": "https://source.ryuksign.com/ig410",
-      "source": "Ryuk / RyukSign (source.ryuksign.com)",
-      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
-      "homepage": "https://source.ryuksign.com/ig410",
-      "sourceURL": "https://source.ryuksign.com/ig410",
-      "apps": [
-        "ryukgram-ig410"
-      ],
-      "score": 72.9,
-      "level": "RELIABLE",
-      "status": "Community Verified",
-      "lastUpdate": "2026-07-25",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 96.0,
-        "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 53,
-        "brokenLinks": 0,
-        "releasesPastYear": 1,
-        "metadataCompleteness": 96,
-        "probes": 25
-      },
-      "metrics": {
-        "uptime": 96.0,
-        "probes": 25,
-        "averageLatencyMs": 1481.0,
-        "averageUpdateGapDays": null,
-        "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 53.0
-      }
-    },
-    {
-      "id": "https://source.ryuksign.com/duplicate",
-      "source": "Ryuk / RyukSign (source.ryuksign.com)",
-      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
-      "homepage": "https://source.ryuksign.com/duplicate",
-      "sourceURL": "https://source.ryuksign.com/duplicate",
-      "apps": [
-        "ryukgram-sidebyside"
-      ],
-      "score": 72.9,
-      "level": "RELIABLE",
-      "status": "Community Verified",
-      "lastUpdate": "2026-09-09",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 96.0,
-        "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 7,
-        "brokenLinks": 0,
-        "releasesPastYear": 1,
-        "metadataCompleteness": 96,
-        "probes": 25
-      },
-      "metrics": {
-        "uptime": 96.0,
-        "probes": 25,
-        "averageLatencyMs": 1489.0,
-        "averageUpdateGapDays": null,
-        "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 53.0
       }
     },
     {
@@ -2369,7 +2534,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 799,
+        "lastReleaseDaysAgo": 800,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2378,7 +2543,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 370.0,
+        "averageLatencyMs": 209.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2402,7 +2567,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 1374,
+        "lastReleaseDaysAgo": 1375,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2411,7 +2576,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 372.0,
+        "averageLatencyMs": 212.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2435,7 +2600,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 962,
+        "lastReleaseDaysAgo": 963,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2444,7 +2609,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 192.0,
+        "averageLatencyMs": 201.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2468,7 +2633,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 570,
+        "lastReleaseDaysAgo": 571,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2477,11 +2642,77 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 382.0,
+        "averageLatencyMs": 227.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "sourcelocation/AirTroller",
+      "source": "sourcelocation/AirTroller",
+      "publisher": "sourcelocation/AirTroller",
+      "homepage": "https://github.com/sourcelocation/AirTroller",
+      "sourceURL": "https://github.com/sourcelocation/AirTroller",
+      "apps": [
+        "airtroller"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2022-11-26",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1391,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 261.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "s8ngyu/Mugunghwa",
+      "source": "s8ngyu/Mugunghwa",
+      "publisher": "s8ngyu/Mugunghwa",
+      "homepage": "https://github.com/s8ngyu/Mugunghwa",
+      "sourceURL": "https://github.com/s8ngyu/Mugunghwa",
+      "apps": [
+        "mugunghwa"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2022-11-10",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1407,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 272.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -2501,7 +2732,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 797,
+        "lastReleaseDaysAgo": 798,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2510,7 +2741,7 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 214.0,
+        "averageLatencyMs": 221.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2534,20 +2765,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 2290,
+        "lastReleaseDaysAgo": 2291,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 197.0,
+        "probes": 30,
+        "averageLatencyMs": 209.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -2567,16 +2798,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 835,
+        "lastReleaseDaysAgo": 836,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 191.0,
+        "probes": 20,
+        "averageLatencyMs": 215.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2600,20 +2831,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 1089,
+        "lastReleaseDaysAgo": 1090,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 191.0,
+        "probes": 30,
+        "averageLatencyMs": 200.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -2633,20 +2864,20 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 1261,
+        "lastReleaseDaysAgo": 1262,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 197.0,
+        "probes": 30,
+        "averageLatencyMs": 207.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
       }
     },
     {
@@ -2666,16 +2897,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 414,
+        "lastReleaseDaysAgo": 415,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 0
+        "probes": 7
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 0,
-        "averageLatencyMs": null,
+        "probes": 7,
+        "averageLatencyMs": 272.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2699,20 +2930,53 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 973,
+        "lastReleaseDaysAgo": 974,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 25
+        "probes": 30
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 25,
-        "averageLatencyMs": 203.0,
+        "probes": 30,
+        "averageLatencyMs": 210.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
-        "legacyScore": 55.0
+        "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "matteozappia/DynamicCow",
+      "source": "matteozappia/DynamicCow",
+      "publisher": "matteozappia/DynamicCow",
+      "homepage": "https://github.com/matteozappia/DynamicCow",
+      "sourceURL": "https://github.com/matteozappia/DynamicCow",
+      "apps": [
+        "dynamiccow"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-02-02",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1323,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 258.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -2732,16 +2996,16 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 662,
+        "lastReleaseDaysAgo": 663,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 192.0,
+        "probes": 20,
+        "averageLatencyMs": 217.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
@@ -2765,7 +3029,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 814,
+        "lastReleaseDaysAgo": 815,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2774,11 +3038,374 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 210.0,
+        "averageLatencyMs": 221.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "leminlimez/SecondHand",
+      "source": "leminlimez/SecondHand",
+      "publisher": "leminlimez/SecondHand",
+      "homepage": "https://github.com/leminlimez/SecondHand",
+      "sourceURL": "https://github.com/leminlimez/SecondHand",
+      "apps": [
+        "secondhand"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2024-12-31",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 625,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 284.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "leminlimez/Pocket-Poster",
+      "source": "leminlimez/Pocket-Poster",
+      "publisher": "leminlimez/Pocket-Poster",
+      "homepage": "https://github.com/leminlimez/Pocket-Poster",
+      "sourceURL": "https://github.com/leminlimez/Pocket-Poster",
+      "apps": [
+        "pocketposter"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2025-08-29",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 384,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 236.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "leminlimez/Helium",
+      "source": "leminlimez/Helium",
+      "publisher": "leminlimez/Helium",
+      "homepage": "https://github.com/leminlimez/Helium",
+      "sourceURL": "https://github.com/leminlimez/Helium",
+      "apps": [
+        "helium"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2024-02-13",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 947,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 255.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "leminlimez/Cowabunga",
+      "source": "leminlimez/Cowabunga",
+      "publisher": "leminlimez/Cowabunga",
+      "homepage": "https://github.com/leminlimez/Cowabunga",
+      "sourceURL": "https://github.com/leminlimez/Cowabunga",
+      "apps": [
+        "cowabunga"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-05-29",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1207,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 240.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "haxi0/TrollBoard-Reborn",
+      "source": "haxi0/TrollBoard-Reborn",
+      "publisher": "haxi0/TrollBoard-Reborn",
+      "homepage": "https://github.com/haxi0/TrollBoard-Reborn",
+      "sourceURL": "https://github.com/haxi0/TrollBoard-Reborn",
+      "apps": [
+        "trollboard-reborn"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-12-05",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1017,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 6
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 6,
+        "averageLatencyMs": 297.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "haxi0/KillMyOTA",
+      "source": "haxi0/KillMyOTA",
+      "publisher": "haxi0/KillMyOTA",
+      "homepage": "https://github.com/haxi0/KillMyOTA",
+      "sourceURL": "https://github.com/haxi0/KillMyOTA",
+      "apps": [
+        "killmyota"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-01-30",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1326,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 287.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "haxi0/Jaility",
+      "source": "haxi0/Jaility",
+      "publisher": "haxi0/Jaility",
+      "homepage": "https://github.com/haxi0/Jaility",
+      "sourceURL": "https://github.com/haxi0/Jaility",
+      "apps": [
+        "jaility"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2022-11-12",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1405,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 286.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "ginsudev/WDBFontOverwrite",
+      "source": "ginsudev/WDBFontOverwrite",
+      "publisher": "ginsudev/WDBFontOverwrite",
+      "homepage": "https://github.com/ginsudev/WDBFontOverwrite",
+      "sourceURL": "https://github.com/ginsudev/WDBFontOverwrite",
+      "apps": [
+        "wdbfontoverwrite"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-02-09",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1316,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 293.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "DevelopCubeLab/EnableQUIC",
+      "source": "DevelopCubeLab/EnableQUIC",
+      "publisher": "DevelopCubeLab/EnableQUIC",
+      "homepage": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "sourceURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "apps": [
+        "enablequic"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2025-02-21",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 573,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 3
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 3,
+        "averageLatencyMs": 278.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "DevelopCubeLab/BatteryInfo",
+      "source": "DevelopCubeLab/BatteryInfo",
+      "publisher": "DevelopCubeLab/BatteryInfo",
+      "homepage": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "sourceURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "apps": [
+        "batteryinfo"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2025-07-09",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 435,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 3
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 3,
+        "averageLatencyMs": 279.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "DevelopCubeLab/AnimationSpeed",
+      "source": "DevelopCubeLab/AnimationSpeed",
+      "publisher": "DevelopCubeLab/AnimationSpeed",
+      "homepage": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "sourceURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "apps": [
+        "animationspeed"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2025-05-27",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 478,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 3
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 3,
+        "averageLatencyMs": 248.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -2798,20 +3425,53 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 561,
+        "lastReleaseDaysAgo": 562,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
-        "probes": 13
+        "probes": 20
       },
       "metrics": {
         "uptime": 100.0,
-        "probes": 13,
-        "averageLatencyMs": 213.0,
+        "probes": 20,
+        "averageLatencyMs": 244.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 55.0
+      }
+    },
+    {
+      "id": "bomberfish/CAPerfHUDSwift",
+      "source": "bomberfish/CAPerfHUDSwift",
+      "publisher": "bomberfish/CAPerfHUDSwift",
+      "homepage": "https://github.com/bomberfish/CAPerfHUDSwift",
+      "sourceURL": "https://github.com/bomberfish/CAPerfHUDSwift",
+      "apps": [
+        "caperfhud"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-12-19",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1003,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 323.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
       }
     },
     {
@@ -2831,7 +3491,7 @@
         "jsonValidity": 100.0,
         "uptime": 100.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 491,
+        "lastReleaseDaysAgo": 492,
         "brokenLinks": 0,
         "releasesPastYear": 0,
         "metadataCompleteness": 96,
@@ -2840,11 +3500,308 @@
       "metrics": {
         "uptime": 100.0,
         "probes": 30,
-        "averageLatencyMs": 197.0,
+        "averageLatencyMs": 209.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 60.0
+      }
+    },
+    {
+      "id": "BandarHL/BHInstagram",
+      "source": "BandarHL/BHInstagram",
+      "publisher": "BandarHL/BHInstagram",
+      "homepage": "https://github.com/BandarHL/BHInstagram",
+      "sourceURL": "https://github.com/BandarHL/BHInstagram",
+      "apps": [
+        "bhinstagram"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2025-05-14",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 491,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 266.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "Avangelista/StatusMagic",
+      "source": "Avangelista/StatusMagic",
+      "publisher": "Avangelista/StatusMagic",
+      "homepage": "https://github.com/Avangelista/StatusMagic",
+      "sourceURL": "https://github.com/Avangelista/StatusMagic",
+      "apps": [
+        "statusmagic"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Deprecated",
+      "lastUpdate": "2023-02-08",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1317,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 305.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "Avangelista/CarTube",
+      "source": "Avangelista/CarTube",
+      "publisher": "Avangelista/CarTube",
+      "homepage": "https://github.com/Avangelista/CarTube",
+      "sourceURL": "https://github.com/Avangelista/CarTube",
+      "apps": [
+        "cartube"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2023-01-23",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 1333,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 301.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "alfiecg24/TrollInstallerX",
+      "source": "alfiecg24/TrollInstallerX",
+      "publisher": "alfiecg24/TrollInstallerX",
+      "homepage": "https://github.com/alfiecg24/TrollInstallerX",
+      "sourceURL": "https://github.com/alfiecg24/TrollInstallerX",
+      "apps": [
+        "trollinstallerx"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2024-09-12",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 735,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 308.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "alexsvitlov/iTransmission",
+      "source": "alexsvitlov/iTransmission",
+      "publisher": "alexsvitlov/iTransmission",
+      "homepage": "https://github.com/alexsvitlov/iTransmission",
+      "sourceURL": "https://github.com/alexsvitlov/iTransmission",
+      "apps": [
+        "itransmission"
+      ],
+      "score": 71.4,
+      "level": "RELIABLE",
+      "status": "Inactive",
+      "lastUpdate": "2024-01-12",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 979,
+        "brokenLinks": 0,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 7
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 7,
+        "averageLatencyMs": 263.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 50.0
+      }
+    },
+    {
+      "id": "iamsmmh/OmniSource",
+      "source": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
+      "publisher": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
+      "homepage": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
+      "sourceURL": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
+      "apps": [
+        "uyouenhanced"
+      ],
+      "score": 66.8,
+      "level": "AVERAGE",
+      "status": "Warning",
+      "lastUpdate": "2026-08-22",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 76.67,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 26,
+        "brokenLinks": 1,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 76.67,
+        "probes": 30,
+        "averageLatencyMs": 642.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "0/1",
+        "legacyScore": 48.33
+      }
+    },
+    {
+      "id": "https://source.ryuksign.com/ig410",
+      "source": "Ryuk / RyukSign (source.ryuksign.com)",
+      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
+      "homepage": "https://source.ryuksign.com/ig410",
+      "sourceURL": "https://source.ryuksign.com/ig410",
+      "apps": [
+        "ryukgram-ig410"
+      ],
+      "score": 66.0,
+      "level": "AVERAGE",
+      "status": "Warning",
+      "lastUpdate": "2026-07-25",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 73.33,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 54,
+        "brokenLinks": 1,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 73.33,
+        "probes": 30,
+        "averageLatencyMs": 1617.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "0/1",
+        "legacyScore": 46.67
+      }
+    },
+    {
+      "id": "https://source.ryuksign.com/duplicate",
+      "source": "Ryuk / RyukSign (source.ryuksign.com)",
+      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
+      "homepage": "https://source.ryuksign.com/duplicate",
+      "sourceURL": "https://source.ryuksign.com/duplicate",
+      "apps": [
+        "ryukgram-sidebyside"
+      ],
+      "score": 66.0,
+      "level": "AVERAGE",
+      "status": "Warning",
+      "lastUpdate": "2026-09-09",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 73.33,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 8,
+        "brokenLinks": 1,
+        "releasesPastYear": 1,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 73.33,
+        "probes": 30,
+        "averageLatencyMs": 1611.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "0/1",
+        "legacyScore": 46.67
+      }
+    },
+    {
+      "id": "manual:cercube",
+      "source": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "publisher": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "homepage": "https://cercube.com",
+      "sourceURL": "https://cercube.com",
+      "apps": [
+        "cercube"
+      ],
+      "score": 45.1,
+      "level": "EXPERIMENTAL",
+      "status": "Warning",
+      "lastUpdate": "2026-09-17",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 0.0,
+        "updateFrequencyDays": null,
+        "lastReleaseDaysAgo": 0,
+        "brokenLinks": 1,
+        "releasesPastYear": 0,
+        "metadataCompleteness": 96,
+        "probes": 3
+      },
+      "metrics": {
+        "uptime": 0.0,
+        "probes": 3,
+        "averageLatencyMs": 1678.0,
+        "averageUpdateGapDays": null,
+        "brokenReleases": 0,
+        "currentlyReachable": "0/1",
+        "legacyScore": 0.0
       }
     }
   ]

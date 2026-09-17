@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 BUNDLE_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.-]{1,254}$")
 VERSION_RE = re.compile(r"^(?=.*\d)[^\s]{1,128}$")
 HEX_RE = re.compile(r"^[0-9a-fA-F]{64}$")
-INSTALLABLE_SUFFIXES = (".ipa", ".tipa")
+INSTALLABLE_SUFFIXES = (".ipa", ".tipa", ".deb")
 CLIENT_TYPES = {"altstore", "sidestore", "feather", "esign", "livecontainer"}
 
 
@@ -105,7 +105,7 @@ def validate_release_metadata(version: Any, *, prefix: str = "release") -> Metad
     if not normalized["downloadURL"] or not _url(normalized["downloadURL"]):
         report.error(f"{prefix}: downloadURL must be HTTPS")
     elif not normalized["downloadURL"].split("?", 1)[0].casefold().endswith(INSTALLABLE_SUFFIXES):
-        report.error(f"{prefix}: downloadURL must end in .ipa or .tipa")
+        report.error(f"{prefix}: downloadURL must end in .ipa, .tipa or .deb")
     size = normalized.get("size")
     if not isinstance(size, int) or isinstance(size, bool) or size <= 0:
         report.error(f"{prefix}: size must be a positive integer")

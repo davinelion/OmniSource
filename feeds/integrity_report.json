@@ -1,15 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-16",
+  "generatedAt": "2026-09-17",
   "totals": {
-    "apps": 101,
-    "pass": 71,
-    "warn": 30,
+    "apps": 130,
+    "pass": 81,
+    "warn": 49,
     "fail": 0,
     "rejected": 0
   },
   "rejected": [],
   "apps": [
+    {
+      "slug": "3105",
+      "name": "3105",
+      "asset": {
+        "sha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991",
+        "size": 4604223,
+        "releaseId": "2.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
     {
       "slug": "aidoku",
       "name": "Aidoku",
@@ -39,6 +57,42 @@
         "at": "2026-09-14",
         "durationMs": 260
       }
+    },
+    {
+      "slug": "airtroller",
+      "name": "AirTroller",
+      "asset": {
+        "sha256": null,
+        "size": 782388,
+        "releaseId": "1.1.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/sourcelocation/AirTroller/releases/download/1.1.1/AirTroller-1.1.1.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "asset": {
+        "sha256": null,
+        "size": 96650,
+        "releaseId": "1.0.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/AnimationSpeed_1.0.1.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "animegen",
@@ -161,6 +215,78 @@
       }
     },
     {
+      "slug": "appstoreplusplus",
+      "name": "AppStore++",
+      "asset": {
+        "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
+        "size": 11078209,
+        "releaseId": "2.3.15",
+        "source": "github",
+        "downloadUrl": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "asset": {
+        "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+        "size": 346882,
+        "releaseId": "1.2.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "battman",
+      "name": "Battman",
+      "asset": {
+        "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+        "size": 675573,
+        "releaseId": "1.0.3",
+        "source": "github",
+        "downloadUrl": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "bhinstagram",
+      "name": "BHInstagram",
+      "asset": {
+        "sha256": null,
+        "size": 228416558,
+        "releaseId": "1.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
       "slug": "bhtwitter",
       "name": "BHTwitter",
       "asset": {
@@ -269,6 +395,60 @@
       "status": "pass"
     },
     {
+      "slug": "caperfhud",
+      "name": "CAPerfHUD",
+      "asset": {
+        "sha256": null,
+        "size": 1058266,
+        "releaseId": "1.0.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/bomberfish/CAPerfHUDSwift/releases/download/v1.0.2/CAPerfHUDSwift.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "cartube",
+      "name": "CarTube",
+      "asset": {
+        "sha256": null,
+        "size": 574441,
+        "releaseId": "1.3",
+        "source": "github",
+        "downloadUrl": "https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "asset": {
+        "sha256": null,
+        "size": 2017412,
+        "releaseId": "6.1.3",
+        "source": "",
+        "downloadUrl": "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": false
+      },
+      "status": "warn"
+    },
+    {
       "slug": "chan",
       "name": "Chan",
       "asset": {
@@ -332,11 +512,11 @@
       "slug": "conduit",
       "name": "Conduit",
       "asset": {
-        "sha256": "4b53fed15852eb3414f23df70dc8012abac6730a241a27e80f488e9be1b8da22",
-        "size": 35897764,
-        "releaseId": "4.1.5",
+        "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
+        "size": 35930568,
+        "releaseId": "4.1.6",
         "source": "github",
-        "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa"
+        "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa"
       },
       "checks": {
         "sizePositive": true,
@@ -387,6 +567,24 @@
         "at": "2026-09-14",
         "durationMs": 283
       }
+    },
+    {
+      "slug": "cowabunga",
+      "name": "Cowabunga",
+      "asset": {
+        "sha256": null,
+        "size": 16288960,
+        "releaseId": "10.3.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "delta",
@@ -509,6 +707,60 @@
       }
     },
     {
+      "slug": "dynamiccow",
+      "name": "DynamicCow",
+      "asset": {
+        "sha256": null,
+        "size": 915515,
+        "releaseId": "1.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "asset": {
+        "sha256": null,
+        "size": 362372,
+        "releaseId": "1.2.4",
+        "source": "github",
+        "downloadUrl": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "escapeos",
+      "name": "EscapeOS",
+      "asset": {
+        "sha256": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02",
+        "size": 7259448,
+        "releaseId": "0.1.5",
+        "source": "github",
+        "downloadUrl": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
       "slug": "feather",
       "name": "Feather",
       "asset": {
@@ -582,7 +834,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -659,6 +911,24 @@
       }
     },
     {
+      "slug": "helium",
+      "name": "Helium",
+      "asset": {
+        "sha256": null,
+        "size": 4168281,
+        "releaseId": "3.2.5",
+        "source": "github",
+        "downloadUrl": "https://github.com/leminlimez/Helium/releases/download/v3.2.5/Helium.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
       "slug": "ime",
       "name": "iMe MxGram",
       "asset": {
@@ -672,7 +942,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -702,7 +972,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -732,7 +1002,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -762,7 +1032,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -839,6 +1109,42 @@
       }
     },
     {
+      "slug": "itransmission",
+      "name": "iTransmission",
+      "asset": {
+        "sha256": null,
+        "size": 3718662,
+        "releaseId": "1.0.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/alexsvitlov/iTransmission/releases/download/1.0.0/iTransmission.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "jaility",
+      "name": "Jaility",
+      "asset": {
+        "sha256": null,
+        "size": 108606,
+        "releaseId": "3.1.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/haxi0/Jaility/releases/download/3.1.1/Jaility-3.1.1.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
       "slug": "jellify",
       "name": "Jellify",
       "asset": {
@@ -897,6 +1203,24 @@
         "at": "2026-09-14",
         "durationMs": 348
       }
+    },
+    {
+      "slug": "killmyota",
+      "name": "KillMyOTA",
+      "asset": {
+        "sha256": null,
+        "size": 339440,
+        "releaseId": "1.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "ksign",
@@ -1070,11 +1394,11 @@
       "slug": "maxmusic",
       "name": "MaxMusic",
       "asset": {
-        "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
-        "size": 106420283,
-        "releaseId": "9.36.1",
+        "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
+        "size": 106518711,
+        "releaseId": "9.37.2",
         "source": "github",
-        "downloadUrl": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa"
+        "downloadUrl": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa"
       },
       "checks": {
         "sizePositive": true,
@@ -1140,7 +1464,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -1230,7 +1554,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -1275,6 +1599,24 @@
         "at": "2026-09-14",
         "durationMs": 141
       }
+    },
+    {
+      "slug": "mugunghwa",
+      "name": "Mugunghwa",
+      "asset": {
+        "sha256": null,
+        "size": 3889341,
+        "releaseId": "3.0.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/s8ngyu/Mugunghwa/releases/download/3.0.2/Mugunghwa.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "nebuloiptv",
@@ -1350,7 +1692,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -1365,6 +1707,42 @@
         "at": "2026-09-14",
         "durationMs": 3172
       }
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "asset": {
+        "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+        "size": 126339077,
+        "releaseId": "2.6.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "asset": {
+        "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
+        "size": 51420909,
+        "releaseId": "0.4.23",
+        "source": "github",
+        "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "odyssey",
@@ -1496,11 +1874,11 @@
       "slug": "playtorrio",
       "name": "PlayTorrio",
       "asset": {
-        "sha256": "3d6568b6f872fe089cdc3a8692f187abab004e178555bc861a3d6c6c5623aeda",
-        "size": 48421258,
-        "releaseId": "1.1.5",
+        "sha256": "dfb6ca4f282ebb82bcdbad5fd1abd82b17ee2ebb42b28c3b8cbffda11a95463c",
+        "size": 48685274,
+        "releaseId": "1.1.6",
         "source": "github",
-        "downloadUrl": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa"
+        "downloadUrl": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa"
       },
       "checks": {
         "sizePositive": true,
@@ -1521,6 +1899,24 @@
         "at": "2026-09-14",
         "durationMs": 354
       }
+    },
+    {
+      "slug": "pocketposter",
+      "name": "Pocket Poster",
+      "asset": {
+        "sha256": "0306c349a4292ca3c40647a48bf8959f4b8d9fa7793cab444d2f79f23d4aaaf7",
+        "size": 13686800,
+        "releaseId": "3.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "ppsspp",
@@ -1706,11 +2102,11 @@
       "slug": "raintweak",
       "name": "RainTweak",
       "asset": {
-        "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
-        "size": 107515564,
-        "releaseId": "0.9.3",
-        "source": "",
-        "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa"
+        "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+        "size": 107065935,
+        "releaseId": "1.2.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa"
       },
       "checks": {
         "sizePositive": true,
@@ -1763,6 +2159,24 @@
       }
     },
     {
+      "slug": "reynard",
+      "name": "Reynard",
+      "asset": {
+        "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
+        "size": 108070190,
+        "releaseId": "0.13.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
       "slug": "ryukgram",
       "name": "RyukGram",
       "asset": {
@@ -1776,7 +2190,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -1806,7 +2220,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "pass",
       "fullVerification": {
@@ -1836,7 +2250,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "pass",
       "fullVerification": {
@@ -1911,6 +2325,24 @@
         "at": "2026-09-14",
         "durationMs": 229
       }
+    },
+    {
+      "slug": "secondhand",
+      "name": "SecondHand",
+      "asset": {
+        "sha256": null,
+        "size": 2786937,
+        "releaseId": "1.3.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/leminlimez/SecondHand/releases/download/1.3.1/SecondHand.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "serotonin",
@@ -2034,7 +2466,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2109,6 +2541,24 @@
         "at": "2026-09-14",
         "durationMs": 367
       }
+    },
+    {
+      "slug": "statusmagic",
+      "name": "StatusMagic",
+      "asset": {
+        "sha256": null,
+        "size": 1218528,
+        "releaseId": "1.0.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "stikdebug",
@@ -2214,7 +2664,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2322,7 +2772,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2352,7 +2802,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2399,6 +2849,24 @@
       }
     },
     {
+      "slug": "trollboard-reborn",
+      "name": "TrollBoard Reborn",
+      "asset": {
+        "sha256": null,
+        "size": 542040,
+        "releaseId": "1.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/haxi0/TrollBoard-Reborn/releases/download/1.0/TrollBoard.Reborn.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
       "slug": "trollfools",
       "name": "TrollFools",
       "asset": {
@@ -2417,6 +2885,24 @@
       "status": "pass"
     },
     {
+      "slug": "trollinstallerx",
+      "name": "TrollInstallerX",
+      "asset": {
+        "sha256": null,
+        "size": 6889214,
+        "releaseId": "1.0.3",
+        "source": "github",
+        "downloadUrl": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
       "slug": "ttkillerplus",
       "name": "TTKillerPlus",
       "asset": {
@@ -2430,7 +2916,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2460,7 +2946,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2580,7 +3066,7 @@
         "sizePositive": true,
         "installable": true,
         "digestFormat": true,
-        "reachable": true
+        "reachable": false
       },
       "status": "warn",
       "fullVerification": {
@@ -2627,6 +3113,24 @@
       }
     },
     {
+      "slug": "vibecontainers",
+      "name": "VibeContainers",
+      "asset": {
+        "sha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+        "size": 8948447,
+        "releaseId": "1.0",
+        "source": "github",
+        "downloadUrl": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
       "slug": "voyager",
       "name": "Voyager",
       "asset": {
@@ -2655,6 +3159,24 @@
         "at": "2026-09-14",
         "durationMs": 250
       }
+    },
+    {
+      "slug": "wdbfontoverwrite",
+      "name": "WDBFontOverwrite",
+      "asset": {
+        "sha256": null,
+        "size": 5348316,
+        "releaseId": "1.10.8",
+        "source": "github",
+        "downloadUrl": "https://github.com/ginsudev/WDBFontOverwrite/releases/download/v1.10.8/WDBFontOverwrite.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
     },
     {
       "slug": "winston",

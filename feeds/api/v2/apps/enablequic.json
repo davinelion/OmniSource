@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-17",
+  "feedVersion": "a391f6e0b2d4",
+  "app": {
+    "id": "enablequic",
+    "name": "EnableQUIC",
+    "developer": "DevelopCubeLab",
+    "subtitle": "Enable QUIC for faster, more resilient networking",
+    "bundleIdentifier": "com.developlab.EnableQUIC",
+    "version": "1.2.4",
+    "versionDate": "2025-02-21",
+    "description": "EnableQUIC is a TrollStore utility from DevelopCubeLab that switches the network stack onto QUIC where supported, with per-app enable/disable, restore-default-settings (including from backup), configuration-file locking and advanced settings.",
+    "shortDescription": "Enable QUIC for faster, more resilient networking",
+    "category": "utilities",
+    "tags": [
+      "utilities"
+    ],
+    "icon": "https://iamsmmh.github.io/OmniSource/assets/EnableQUIC.webp",
+    "screenshots": [],
+    "downloadURL": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+    "size": 362372,
+    "source": "DevelopCubeLab/EnableQUIC",
+    "sourceURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+    "checksum": null,
+    "checksumPublished": false,
+    "minOSVersion": "12.2",
+    "status": "stable",
+    "featured": false,
+    "pageURL": "https://iamsmmh.github.io/OmniSource/apps/enablequic/",
+    "feedURL": "https://iamsmmh.github.io/OmniSource/enablequic.json",
+    "health": {
+      "reachable": true,
+      "detail": "HTTP 302",
+      "updatedAt": "2025-02-21"
+    }
+  },
+  "newest": {
+    "version": "1.2.4",
+    "date": "2025-02-21",
+    "downloadURL": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+    "size": 362372,
+    "sha256": null
+  },
+  "versions": [
+    {
+      "version": "1.2.4",
+      "date": "2025-02-21",
+      "downloadURL": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+      "size": 362372,
+      "sha256": null
+    }
+  ],
+  "verification": {
+    "status": "VERIFIED",
+    "level": "VERIFIED",
+    "method": "github-release"
+  }
+}

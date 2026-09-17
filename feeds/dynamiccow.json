@@ -1,0 +1,98 @@
+{
+  "name": "OmniSource - DynamicCow",
+  "identifier": "com.iamsmmh.omnisource.dynamiccow",
+  "apiVersion": "v2",
+  "subtitle": "Dynamic Island on iOS 16.0-16.1.2",
+  "description": "Standalone distribution feed for DynamicCow, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/dynamiccow.json",
+  "apps": [
+    {
+      "name": "DynamicCow",
+      "bundleIdentifier": "com.zeph.DynamicCoww",
+      "developerName": "matteo zappia",
+      "subtitle": "Dynamic Island on iOS 16.0-16.1.2",
+      "localizedDescription": "DynamicCow enables the Dynamic Island on every device running iOS 16.0 to 16.1.2 using the DirtyCow exploit.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/DynamicCow.webp",
+      "tintColor": "86B58F",
+      "category": "utilities",
+      "version": "1.1",
+      "versionDate": "2023-02-02",
+      "versionDescription": "DynamicCow 1.1 | DynamicCow",
+      "downloadURL": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa",
+      "size": 915515,
+      "versions": [
+        {
+          "version": "1.1",
+          "date": "2023-02-02",
+          "localizedDescription": "DynamicCow 1.1 | DynamicCow",
+          "downloadURL": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa",
+          "size": 915515,
+          "minOSVersion": "16.0",
+          "releaseUrl": "https://github.com/matteozappia/DynamicCow/releases/tag/1.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "DynamicCow.ipa",
+              "downloadUrl": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 915515,
+              "sha256": null,
+              "downloads": 134378,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 134378
+        }
+      ],
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/matteozappia/DynamicCow/main/Images/IMG_2391.PNG",
+        "https://raw.githubusercontent.com/matteozappia/DynamicCow/main/Images/IMG_2393.PNG"
+      ],
+      "omnisource": {
+        "slug": "dynamiccow",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/matteozappia/DynamicCow",
+        "sourceURL": "https://github.com/matteozappia/DynamicCow",
+        "verification": {
+          "method": "github-release",
+          "publisher": "matteozappia/DynamicCow",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "16.0",
+          "maxOSVersion": "16.1.2",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from matteozappia/DynamicCow. The upstream documents iOS 16.0 - 16.1.2 support. Unmaintained since 1.1 (February 2023)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2023-02-02"
+        }
+      }
+    }
+  ],
+  "news": []
+}

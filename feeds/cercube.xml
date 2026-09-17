@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cercube for YouTube — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/cercube.json</link>
+    <description>Release feed for Cercube for YouTube within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/cercube.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Cercube for YouTube v6.1.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/cercube.json</link>
+      <guid isPermaLink="false">cercube-6.1.3</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Cercube for YouTube 6.1.3 - the current official release (verified against apt.cercube.com on 2026-09-18).
+
+This release improves caching, ad blocking, and compatibility with older iOS versions.
+- Added compatibility for iOS 15-16
+- Minor bug fixes and improvements
+
+Previously: 6.1.2 added dislike counts, sponsored segment skipping and 14 languages; 6.0.1 added compatibility for recent iOS versions.]]></description>
+      <enclosure url="https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb" length="0" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

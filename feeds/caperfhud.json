@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource - CAPerfHUD",
+  "identifier": "com.iamsmmh.omnisource.caperfhud",
+  "apiVersion": "v2",
+  "subtitle": "Quartz Debug-style performance HUD",
+  "description": "Standalone distribution feed for CAPerfHUD, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/caperfhud.json",
+  "apps": [
+    {
+      "name": "CAPerfHUD",
+      "bundleIdentifier": "ca.bomberfish.CAPerfHudSwift",
+      "developerName": "Hariz S.",
+      "subtitle": "Quartz Debug-style performance HUD",
+      "localizedDescription": "CAPerfHUD (Swift) is a Quartz Debug-style performance HUD for iOS - track FPS, CPU and GPU statistics on screen, as a TrollStore build.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/CAPerfHUD.webp",
+      "tintColor": "3B6FD4",
+      "category": "developer-tools",
+      "version": "1.0.2",
+      "versionDate": "2023-12-19",
+      "versionDescription": "CAPerfHUD 1.0.2 | TrollStore\n\nHOTFIX 2: Electric Boogaloo\n- Fix labels not displaying correctly on light mode",
+      "downloadURL": "https://github.com/bomberfish/CAPerfHUDSwift/releases/download/v1.0.2/CAPerfHUDSwift.tipa",
+      "size": 1058266,
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2023-12-19",
+          "localizedDescription": "CAPerfHUD 1.0.2 | TrollStore\n\nHOTFIX 2: Electric Boogaloo\n- Fix labels not displaying correctly on light mode",
+          "downloadURL": "https://github.com/bomberfish/CAPerfHUDSwift/releases/download/v1.0.2/CAPerfHUDSwift.tipa",
+          "size": 1058266,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/bomberfish/CAPerfHUDSwift/releases/tag/v1.0.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "CAPerfHUDSwift.tipa",
+              "downloadUrl": "https://github.com/bomberfish/CAPerfHUDSwift/releases/download/v1.0.2/CAPerfHUDSwift.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 1058266,
+              "sha256": null,
+              "downloads": 2967,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 2967
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "caperfhud",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/bomberfish/CAPerfHUDSwift",
+        "sourceURL": "https://github.com/bomberfish/CAPerfHUDSwift",
+        "verification": {
+          "method": "github-release",
+          "publisher": "bomberfish/CAPerfHUDSwift",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from bomberfish/CAPerfHUDSwift, the Swift alternative to the original CAPerfHUD; install with TrollStore, or rename to .ipa if your client rejects the extension. Unmaintained since v1.0.2 (December 2023)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2023-12-19"
+        }
+      }
+    }
+  ],
+  "news": []
+}

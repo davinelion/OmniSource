@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3105 — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/3105.json</link>
+    <description>Release feed for 3105 within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/3105.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>3105 v2.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/3105.json</link>
+      <guid isPermaLink="false">3105-2.0</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[3105 2.0 | 3105-2.0-build8-20260914-125906-unsigned
+
+# 3105 2.0
+
+Bản 2.0 chuyển 3105 thành một nơi thống nhất để tìm, cài đặt và quản lý Patch, hình nền, Dialer và các tính năng dành cho thiết bị.
+
+## Điểm mới
+
+- Kho nội dung mới với Dành cho bạn, Mới cập nhật và nhiều nguồn.
+- Mục Đã cài quản lý mọi loại nội dung, có biểu tượng, phân loại và thông báo cập nhật.
+- Patch hỗ trợ nhiều ứng dụng và App Group trong cùng một gói, tùy chỉnh trước khi áp dụng và mật khẩu tùy chọn.
+- Cải thiện sao lưu, đặt lại, khôi phục và xóa Patch đang hoạt động.
+- Hỗ trợ giao diện Dialer dạng .3105pass và hình nền .tendies từ kho.
+- Trình quản lý Tệp mới có Workspace, Application, App Group, tệp ẩn, thẻ, yêu thích và trình sửa plist.
+- Dọn dẹp trở thành tính năng có thể cài hoặc gỡ; các bản iOS 27 được hỗ trợ có thêm Footnote và Supervised.
+- Thiết kế lại trang chủ, nguồn, chi tiết gói và mục Đã cài; tiến trình tải và kết quả thao tác rõ ràng hơn.
+
+## Cài đặt
+
+- Asset đính kèm là IPA unsigned dành cho việc ký lại bằng chứng chỉ doanh nghiệp.
+- Bundle đích: com.apple.mobile.MobileHouseArrest.
+- Không hỗ trợ SideStore, AltStore, 3uTools hoặc LiveContainer.
+- Chỉ tiếp tục trên các phiên bản iOS được ứng dụng xác nhận hỗ trợ và luôn sao lưu dữ liệu trước khi áp dụng Patch.
+
+---
+
+## English summary
+
+3105 2.0 adds a repository marketplace, a unified Installed library, multi-app and App Group patches, configurable plist/JSON edits, dialer themes, repository wallpapers, installable 3105 features, a redesigned Files experience, and safer restore flows.
+
+The attached IPA is unsigned and intended for enterprise-certificate signing. Bundle: com.apple.mobile.MobileHouseArrest.]]></description>
+      <enclosure url="https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa" length="0" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

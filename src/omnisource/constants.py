@@ -25,8 +25,10 @@ RETRYABLE_CODES = frozenset({408, 425, 429, 500, 502, 503, 504})
 
 # Containers an iOS sideloading client can install. ``.tipa`` is a
 # TrollStore-named IPA: byte-identical to a .ipa, only the extension
-# tells TrollStore to install it without the Share sheet.
-INSTALLABLE_SUFFIXES = (".ipa", ".tipa")
+# tells TrollStore to install it without the Share sheet. ``.deb`` is the
+# native jailbreak/TrollStore package format (dpkg), which is the only
+# official distribution format for apt-repo apps such as Cercube.
+INSTALLABLE_SUFFIXES = (".ipa", ".tipa", ".deb")
 
 VALID_STATUSES = frozenset({"stable", "beta", "manual", "unmaintained", "deprecated"})
 VALID_VERIFICATION_METHODS = frozenset(
@@ -77,6 +79,7 @@ ALTSTORE_NON_FEED = frozenset(
         "compare.json",
         "screenshots.json",
         "integrity_report.json",
+        "ipa-downloader.json",
         "dead_apps.json",
         "collections.json",
         "translation-status.json",
