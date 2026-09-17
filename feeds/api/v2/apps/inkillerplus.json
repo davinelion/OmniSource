@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16",
-  "feedVersion": "a39e5acb1b3a",
+  "generatedAt": "2026-09-17",
+  "feedVersion": "155a6a4b25b6",
   "app": {
     "id": "inkillerplus",
     "name": "iNKillerPlus",
@@ -34,8 +34,8 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/inkillerplus/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/inkillerplus.json",
     "health": {
-      "reachable": true,
-      "detail": "HTTP 200",
+      "reachable": false,
+      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "updatedAt": "2026-09-09"
     }
   },
@@ -56,8 +56,8 @@
     }
   ],
   "verification": {
-    "status": "VERIFIED",
-    "level": "VERIFIED",
+    "status": "UNVERIFIED",
+    "level": "UNVERIFIED",
     "method": "altstore"
   }
 }

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TrollInstallerX — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json</link>
+    <description>Release feed for TrollInstallerX within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>TrollInstallerX v1.0.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json</link>
+      <guid isPermaLink="false">trollinstallerx-1.0.3</guid>
+      <pubDate>Thu, 12 Sep 2024 00:00:00 +0000</pubDate>
+      <description><![CDATA[TrollInstallerX 1.0.3 | TrollInstallerX
+
+# TrollInstallerX v1.0.3
+
+## Changes:
+* Update for Xcode 15.4+ compilation (fixes #25)
+* Added a temporary fix for yellow iPhone 14 (Plus) devices on iOS 16.3, please use `TrollInstallerX-20D50.ipa` (fixes #33)
+* Removing confusing logging around exploit deinitialisation (e.g. #11)
+* Fix arm64e devices on iOS 15.7.x that couldn't download the kernelcache by updating libgrabkernel2 (should, in theory, fix #21)
+
+**Note**: A8 devices on iOS 15.2+ will not be supported until a future release of TrollInstallerX. Furthermore, support for arm64e (A12+) devices on early iOS 17.0 betas is not planned, unless someone else would like to implement it. You can now use [TrollRestore](https://github.com/JJTech0130/TrollRestore) for both of these cases.
+
+# DO NOT DOWNLOAD THE 20D50 IPA UNLESS YOU HAVE A YELLOW IPHONE 14 (PLUS) ON IOS 16.3.]]></description>
+      <enclosure url="https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa" length="6889214" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

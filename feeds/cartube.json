@@ -1,0 +1,107 @@
+{
+  "name": "OmniSource - CarTube",
+  "identifier": "com.iamsmmh.omnisource.cartube",
+  "apiVersion": "v2",
+  "subtitle": "YouTube on CarPlay",
+  "description": "Standalone distribution feed for CarTube, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/cartube.json",
+  "apps": [
+    {
+      "name": "CarTube",
+      "bundleIdentifier": "com.avangelista.CarTube",
+      "developerName": "Avangelista",
+      "subtitle": "YouTube on CarPlay",
+      "localizedDescription": "CarTube turns your car's screen into a YouTube streaming hub through CarPlay, on devices running iOS 14.0 to 15.4.1.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/CarTube.webp",
+      "tintColor": "E52D27",
+      "category": "photo-video",
+      "version": "1.3",
+      "versionDate": "2023-01-23",
+      "versionDescription": "CarTube 1.3 | CarTube\n\nBig Fixes + Some Features Update!\n- Much smoother experience\n- Swipe left or right anywhere on the screen to go Back or Forward\n- Native m.youtube.com player, so ALL videos should work plus comments and playlists, and should be all around smoother\n- New \"Play on CarPlay\" share extension, works with YouTube app\n- Zoom in settings works better and scales content correctly\n- Added age restriction bypass\n- Added ad blocker (beta)\n- Fixed awful scrolling\n- Fixed Google signin page zoom\n- Fixed the buggy keyboard bar\n- Small fixes to the persistence helper, Siri no longer breaks it",
+      "downloadURL": "https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.ipa",
+      "size": 574441,
+      "versions": [
+        {
+          "version": "1.3",
+          "date": "2023-01-23",
+          "localizedDescription": "CarTube 1.3 | CarTube\n\nBig Fixes + Some Features Update!\n- Much smoother experience\n- Swipe left or right anywhere on the screen to go Back or Forward\n- Native m.youtube.com player, so ALL videos should work plus comments and playlists, and should be all around smoother\n- New \"Play on CarPlay\" share extension, works with YouTube app\n- Zoom in settings works better and scales content correctly\n- Added age restriction bypass\n- Added ad blocker (beta)\n- Fixed awful scrolling\n- Fixed Google signin page zoom\n- Fixed the buggy keyboard bar\n- Small fixes to the persistence helper, Siri no longer breaks it",
+          "downloadURL": "https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.ipa",
+          "size": 574441,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/Avangelista/CarTube/releases/tag/1.3",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "CarTube.ipa",
+              "downloadUrl": "https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 574441,
+              "sha256": null,
+              "downloads": 235820,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "CarTube.tipa",
+              "downloadUrl": "https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 574441,
+              "sha256": null,
+              "downloads": 50538,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 235820
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "cartube",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/Avangelista/CarTube",
+        "sourceURL": "https://github.com/Avangelista/CarTube",
+        "verification": {
+          "method": "github-release",
+          "publisher": "Avangelista/CarTube",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from Avangelista/CarTube (the .tipa is not tracked). The upstream documents iOS 14.0 - 15.4.1 support for CarPlay."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2023-01-23"
+        }
+      }
+    }
+  ],
+  "news": []
+}

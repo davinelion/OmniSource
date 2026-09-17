@@ -5792,6 +5792,943 @@
         "minOSVersion": "12.4",
         "descriptionTemplate": "Messenger {version} | SNMessenger {secondary} | {label}"
       }
+    },
+    {
+      "slug": "bhinstagram",
+      "name": "BHInstagram",
+      "subtitle": "Instagram with no ads, downloads and more tweaks",
+      "bundleIdentifier": "com.bandarhl.bhinsta",
+      "developerName": "BandarHL",
+      "category": "social",
+      "tintColor": "E1306C",
+      "icon": "Instagram.webp",
+      "localizedDescription": "BHInstagram is an open-source tweak for Instagram from the developer of BHTwitter, published as a ready-to-sideload IPA. It hides ads and suggested posts, asks for confirmation before likes, shows like counts, lets you copy captions and download videos, save profile pictures, keep deleted messages, and turn off last-seen, screenshot alerts and story view receipts.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/BandarHL/BHInstagram",
+      "verification": {
+        "method": "github-release",
+        "publisher": "BandarHL/BHInstagram",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official sideloaded build from BandarHL/BHInstagram. The release also ships a TrollStore .tipa, which OmniSource skips - only the sideloaded .ipa is tracked."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "BandarHL/BHInstagram",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^.*sideloaded\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "BHInstagram {version} | {label}"
+      }
+    },
+    {
+      "slug": "reynard",
+      "name": "Reynard",
+      "subtitle": "Gecko-based browser, a real WebKit alternative",
+      "bundleIdentifier": "com.minh-ton.Reynard",
+      "developerName": "Minh Ton",
+      "category": "utilities",
+      "tintColor": "FB3828",
+      "icon": "Reynard.webp",
+      "localizedDescription": "Reynard is an experimental Gecko-based web browser for iOS 13 and up, rendering pages with the same engine Firefox uses instead of Safari's WebKit. It is actively developed and published from the project's own GitHub releases.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/minh-ton/reynard-browser",
+      "verification": {
+        "method": "github-release",
+        "publisher": "minh-ton/reynard-browser",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "13.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official unsigned IPA from minh-ton/reynard-browser (asset Reynard.ipa). The Jailbroken and TrollStore builds published alongside it are not tracked here."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "minh-ton/reynard-browser",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^Reynard\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "13.0",
+        "descriptionTemplate": "Reynard {version} | {label}"
+      }
+    },
+    {
+      "slug": "pocketposter",
+      "name": "Pocket Poster",
+      "subtitle": "Custom animated Poster Board wallpapers",
+      "bundleIdentifier": "com.lemin.Pocket-Poster",
+      "developerName": "leminlimez",
+      "category": "photo-video",
+      "tintColor": "C471ED",
+      "icon": "PocketPoster.webp",
+      "localizedDescription": "Pocket Poster creates custom, animated Poster Board wallpapers for iOS 17 to 26. Design your own live wallpapers with motion effects - no jailbreak needed.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/leminlimez/Pocket-Poster/main/Pocket%20Poster/Assets.xcassets/ResetCollections/CustomCollection.imageset/CustomCollections.png"
+      ],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/leminlimez/Pocket-Poster",
+      "verification": {
+        "method": "github-release",
+        "publisher": "leminlimez/Pocket-Poster",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "17.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from leminlimez/Pocket-Poster. Screenshot from the upstream repository."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "leminlimez/Pocket-Poster",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^Pocket[_.]Poster\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "17.0",
+        "descriptionTemplate": "Pocket Poster {version} | {label}"
+      }
+    },
+    {
+      "slug": "mugunghwa",
+      "name": "Mugunghwa",
+      "subtitle": "System-wide icon theming, no jailbreak",
+      "bundleIdentifier": "me.soongyu.mugunghwautil",
+      "developerName": "Soongyu Kwon",
+      "category": "utilities",
+      "tintColor": "E7A1CD",
+      "icon": "Mugunghwa.webp",
+      "localizedDescription": "Mugunghwa is a system-wide icon theming tool for iOS that works without a jailbreak. Change the icons of your apps system-wide, without the per-app icon replacement trick.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/s8ngyu/Mugunghwa",
+      "verification": {
+        "method": "github-release",
+        "publisher": "s8ngyu/Mugunghwa",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from s8ngyu/Mugunghwa. Unmaintained - the last release is 3.0.2 (March 2024)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "s8ngyu/Mugunghwa",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^Mugunghwa.*\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "Mugunghwa {version} | {label}"
+      }
+    },
+    {
+      "slug": "wdbfontoverwrite",
+      "name": "WDBFontOverwrite",
+      "subtitle": "Install custom fonts on iOS 14-16.1.2",
+      "bundleIdentifier": "com.ginsudev.WDBFontOverwrite",
+      "developerName": "Ginsu",
+      "category": "utilities",
+      "tintColor": "DADADA",
+      "icon": "WDBFontOverwrite.webp",
+      "localizedDescription": "WDBFontOverwrite overwrites the system font on iOS using CVE-2022-46689, letting you install custom fonts on iOS 14.0 to 16.1.2 without a jailbreak.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/ginsudev/WDBFontOverwrite",
+      "verification": {
+        "method": "github-release",
+        "publisher": "ginsudev/WDBFontOverwrite",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": "16.1.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from ginsudev/WDBFontOverwrite. The font overwrite relies on CVE-2022-46689, so it is limited to the affected firmware range. Unmaintained since v1.10.8 (August 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "ginsudev/WDBFontOverwrite",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "WDBFontOverwrite {version} | {label}"
+      }
+    },
+    {
+      "slug": "jaility",
+      "name": "Jaility",
+      "subtitle": "TrollStore supercharger and supervision",
+      "bundleIdentifier": "org.haxi0.Jaility",
+      "developerName": "haxi0",
+      "category": "utilities",
+      "tintColor": "1AA0F7",
+      "icon": "Jaility.webp",
+      "localizedDescription": "Jaility is a simple iOS supercharger to be used with TrollStore. It keeps your device unlocked after a respring and adds supervision for extra control.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/haxi0/Jaility",
+      "verification": {
+        "method": "github-release",
+        "publisher": "haxi0/Jaility",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from haxi0/Jaility. Unmaintained since 3.1.1 (September 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "haxi0/Jaility",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^Jaility.*\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "Jaility {version} | {label}"
+      }
+    },
+    {
+      "slug": "killmyota",
+      "name": "KillMyOTA",
+      "subtitle": "Toggle OTA updates on iOS 15-16.1.2",
+      "bundleIdentifier": "org.haxi0.KillMyOTA",
+      "developerName": "haxi0",
+      "category": "utilities",
+      "tintColor": "FEA909",
+      "icon": "KillMyOTA.webp",
+      "localizedDescription": "KillMyOTA enables or disables over-the-air iOS updates on jailbreak devices running iOS 15.0 to 16.1.2 - open the app and toggle updates on or off.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/haxi0/KillMyOTA",
+      "verification": {
+        "method": "github-release",
+        "publisher": "haxi0/KillMyOTA",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": "16.1.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from haxi0/KillMyOTA. Supports the KFD-era firmware range iOS 15.0 - 16.1.2. Unmaintained since 1.1 (January 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "haxi0/KillMyOTA",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "KillMyOTA {version} | {label}"
+      }
+    },
+    {
+      "slug": "trollinstallerx",
+      "name": "TrollInstallerX",
+      "subtitle": "One-tap TrollStore installer",
+      "bundleIdentifier": "com.Alfie.TrollInstallerX",
+      "developerName": "Alfie CG",
+      "category": "utilities",
+      "tintColor": "0BA0F2",
+      "icon": "TrollInstallerX.webp",
+      "localizedDescription": "TrollInstallerX installs TrollStore on compatible iOS devices - arm64 (iOS 14.0 - 16.6.1) and arm64e (iOS 14.0 - 16.5.1) - using the DirtyCow exploit.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/alfiecg24/TrollInstallerX",
+      "verification": {
+        "method": "github-release",
+        "publisher": "alfiecg24/TrollInstallerX",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": "16.6.1",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from alfiecg24/TrollInstallerX (the plain TrollInstallerX.ipa; the device-specific -20D50 build is not tracked). Intended for iOS 14.0 - 16.6.1 - newer firmware needs a different route to TrollStore."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "alfiecg24/TrollInstallerX",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^TrollInstallerX\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "TrollInstallerX {version} | {label}"
+      }
+    },
+    {
+      "slug": "trollboard-reborn",
+      "name": "TrollBoard Reborn",
+      "subtitle": "Web Clips icon manager for TrollStore",
+      "bundleIdentifier": "com.haxi0.TrollBoard-Reborn",
+      "developerName": "haxi0",
+      "category": "utilities",
+      "tintColor": "56C7F8",
+      "icon": "TrollBoardReborn.webp",
+      "localizedDescription": "TrollBoard Reborn is a WebClips icon pack manager - a theming engine for your home screen that runs with TrollStore on iOS 15 to 16.1.2.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/haxi0/TrollBoard-Reborn",
+      "verification": {
+        "method": "github-release",
+        "publisher": "haxi0/TrollBoard-Reborn",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from haxi0/TrollBoard-Reborn (a TrollStore theming app; the same payload also installs on standard clients). Unmaintained since 1.0 (December 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "haxi0/TrollBoard-Reborn",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "TrollBoard Reborn {version} | {label}",
+        "assetNamePattern": "^TrollBoard\\.Reborn\\.ipa$"
+      }
+    },
+    {
+      "slug": "statusmagic",
+      "name": "StatusMagic",
+      "subtitle": "Fully customizable status bar",
+      "bundleIdentifier": "com.avangelista.StatusMagic",
+      "developerName": "Avangelista",
+      "category": "utilities",
+      "tintColor": "EE9D34",
+      "icon": "StatusMagic.webp",
+      "localizedDescription": "StatusMagic lets you fully customize the iOS status bar on iOS 14.0 to 16.1.2 without a jailbreak - change fonts, colors and elements to make the status bar yours.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/Avangelista/StatusMagic/main/Images/Promo.png"
+      ],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/Avangelista/StatusMagic",
+      "verification": {
+        "method": "github-release",
+        "publisher": "Avangelista/StatusMagic",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": "16.1.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from Avangelista/StatusMagic (the .tipa is not tracked). The upstream documents iOS 14.0 - 16.1.2 support. Unmaintained since 1.0.2 (December 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "Avangelista/StatusMagic",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^StatusMagic\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "StatusMagic {version} | {label}"
+      }
+    },
+    {
+      "slug": "cartube",
+      "name": "CarTube",
+      "subtitle": "YouTube on CarPlay",
+      "bundleIdentifier": "com.avangelista.CarTube",
+      "developerName": "Avangelista",
+      "category": "photo-video",
+      "tintColor": "E52D27",
+      "icon": "CarTube.webp",
+      "localizedDescription": "CarTube turns your car's screen into a YouTube streaming hub through CarPlay, on devices running iOS 14.0 to 15.4.1.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/Avangelista/CarTube",
+      "verification": {
+        "method": "github-release",
+        "publisher": "Avangelista/CarTube",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from Avangelista/CarTube (the .tipa is not tracked). The upstream documents iOS 14.0 - 15.4.1 support for CarPlay."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "Avangelista/CarTube",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "assetNamePattern": "^CarTube\\.ipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "CarTube {version} | {label}"
+      }
+    },
+    {
+      "slug": "dynamiccow",
+      "name": "DynamicCow",
+      "subtitle": "Dynamic Island on iOS 16.0-16.1.2",
+      "bundleIdentifier": "com.zeph.DynamicCoww",
+      "developerName": "matteo zappia",
+      "category": "utilities",
+      "tintColor": "86B58F",
+      "icon": "DynamicCow.webp",
+      "localizedDescription": "DynamicCow enables the Dynamic Island on every device running iOS 16.0 to 16.1.2 using the DirtyCow exploit.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/matteozappia/DynamicCow/main/Images/IMG_2391.PNG",
+        "https://raw.githubusercontent.com/matteozappia/DynamicCow/main/Images/IMG_2393.PNG"
+      ],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/matteozappia/DynamicCow",
+      "verification": {
+        "method": "github-release",
+        "publisher": "matteozappia/DynamicCow",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "16.0",
+        "maxOSVersion": "16.1.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from matteozappia/DynamicCow. The upstream documents iOS 16.0 - 16.1.2 support. Unmaintained since 1.1 (February 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "matteozappia/DynamicCow",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "16.0",
+        "descriptionTemplate": "DynamicCow {version} | {label}"
+      }
+    },
+    {
+      "slug": "itransmission",
+      "name": "iTransmission",
+      "subtitle": "Fast, lightweight BitTorrent client",
+      "bundleIdentifier": "com.plusmediapps.itransmission",
+      "developerName": "alexsvitlov",
+      "category": "networking",
+      "tintColor": "D664AA",
+      "icon": "iTransmission.webp",
+      "localizedDescription": "iTransmission is a fast and lightweight BitTorrent client for iOS 13 and up. It downloads and manages torrents and magnet links directly on your iPhone or iPad.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/alexsvitlov/iTransmission",
+      "verification": {
+        "method": "github-release",
+        "publisher": "alexsvitlov/iTransmission",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "13.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from alexsvitlov/iTransmission (iTransmission.ipa). The upstream also documents a TrollStore install route for iOS 14 - 16.6.1 devices."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "alexsvitlov/iTransmission",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "13.0",
+        "descriptionTemplate": "iTransmission {version} | {label}"
+      }
+    },
+    {
+      "slug": "cowabunga",
+      "name": "Cowabunga",
+      "subtitle": "MacDirtyCow customization toolbox",
+      "bundleIdentifier": "com.leemin.Cowabunga",
+      "developerName": "leminlimez",
+      "category": "utilities",
+      "tintColor": "609A38",
+      "icon": "Cowabunga.webp",
+      "localizedDescription": "Cowabunga is a toolbox for MacDirtyCow devices (iOS 14.0 - 15.7.1 and 16.0 - 16.1.2): a passcode editor, lock-screen footnotes, audio changer, SpringBoard tools and more - customization without a jailbreak.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Home.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Passcode_Editor.PNG"
+      ],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/leminlimez/Cowabunga",
+      "verification": {
+        "method": "github-release",
+        "publisher": "leminlimez/Cowabunga",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from leminlimez/Cowabunga. Screenshots from the upstream repository. Unmaintained since v10.3.2 (February 2024)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "leminlimez/Cowabunga",
+        "assetSuffixes": [
+          ".ipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "Cowabunga {version} | {label}"
+      }
+    },
+    {
+      "slug": "airtroller",
+      "name": "AirTroller",
+      "subtitle": "AirDrop spammer for TrollStore",
+      "bundleIdentifier": "net.sourceloc.AirTroller",
+      "developerName": "Matthew Anisovich",
+      "category": "other",
+      "tintColor": "A4E966",
+      "icon": "AirTroller.webp",
+      "localizedDescription": "AirTroller is an AirDrop spammer/flooder to prank your friends, running on TrollStore and jailbroken iOS 14 and up.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/sourcelocation/AirTroller",
+      "verification": {
+        "method": "github-release",
+        "publisher": "sourcelocation/AirTroller",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from sourcelocation/AirTroller; install with TrollStore, or rename to .ipa if your client rejects the extension."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "sourcelocation/AirTroller",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "assetNamePattern": "^AirTroller.*\\.tipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "AirTroller {version} | TrollStore"
+      }
+    },
+    {
+      "slug": "helium",
+      "name": "Helium",
+      "subtitle": "Status-bar widgets for TrollStore",
+      "bundleIdentifier": "com.leemin.helium",
+      "developerName": "leminlimez",
+      "category": "utilities",
+      "tintColor": "63A1CA",
+      "icon": "Helium.webp",
+      "localizedDescription": "Helium adds status-bar widgets to TrollStore iPhones on iOS 14 and up - close the app and the HUD stays on your screen. It also works on jailbroken devices.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/leminlimez/Helium",
+      "verification": {
+        "method": "github-release",
+        "publisher": "leminlimez/Helium",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/Helium; install with TrollStore, or rename to .ipa if your client rejects the extension. On iOS 16+ you must enable developer mode. Unmaintained since v3.2.5 (February 2024)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "leminlimez/Helium",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "assetNamePattern": "^Helium\\.tipa$",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "Helium {version} | TrollStore"
+      }
+    },
+    {
+      "slug": "secondhand",
+      "name": "SecondHand",
+      "subtitle": "Seconds in the status bar clock",
+      "bundleIdentifier": "com.leemin.SecondHand",
+      "developerName": "leminlimez",
+      "category": "utilities",
+      "tintColor": "DDA51E",
+      "icon": "SecondHand.webp",
+      "localizedDescription": "SecondHand adds seconds to the status bar clock on TrollStore devices, with customizable date and time formats.",
+      "screenshots": [
+        "https://raw.githubusercontent.com/leminlimez/SecondHand/main/Images/MainPage.PNG",
+        "https://raw.githubusercontent.com/leminlimez/SecondHand/main/Images/DateFormatOptions.PNG"
+      ],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/leminlimez/SecondHand",
+      "verification": {
+        "method": "github-release",
+        "publisher": "leminlimez/SecondHand",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/SecondHand; install with TrollStore, or rename to .ipa if your client rejects the extension. The upstream documents iOS 14.0 - 15.4.1 compatibility."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "leminlimez/SecondHand",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "SecondHand {version} | TrollStore"
+      }
+    },
+    {
+      "slug": "caperfhud",
+      "name": "CAPerfHUD",
+      "subtitle": "Quartz Debug-style performance HUD",
+      "bundleIdentifier": "ca.bomberfish.CAPerfHudSwift",
+      "developerName": "Hariz S.",
+      "category": "developer-tools",
+      "tintColor": "3B6FD4",
+      "icon": "CAPerfHUD.webp",
+      "localizedDescription": "CAPerfHUD (Swift) is a Quartz Debug-style performance HUD for iOS - track FPS, CPU and GPU statistics on screen, as a TrollStore build.",
+      "screenshots": [],
+      "featured": false,
+      "status": "unmaintained",
+      "upstreamURL": "https://github.com/bomberfish/CAPerfHUDSwift",
+      "verification": {
+        "method": "github-release",
+        "publisher": "bomberfish/CAPerfHUDSwift",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from bomberfish/CAPerfHUDSwift, the Swift alternative to the original CAPerfHUD; install with TrollStore, or rename to .ipa if your client rejects the extension. Unmaintained since v1.0.2 (December 2023)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "bomberfish/CAPerfHUDSwift",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "CAPerfHUD {version} | TrollStore"
+      }
+    },
+    {
+      "slug": "appstoreplusplus",
+      "name": "AppStore++",
+      "subtitle": "App Store manager for TrollStore",
+      "bundleIdentifier": "com.cokepokes.AppStorePlus",
+      "developerName": "CokePokes",
+      "category": "utilities",
+      "tintColor": "EDAD53",
+      "icon": "AppStorePlus.webp",
+      "localizedDescription": "AppStore++ enhances the App Store experience on TrollStore devices - downgrade and upgrade apps and manage your installed apps outside the official store.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/CokePokes/AppStorePlus-TrollStore",
+      "verification": {
+        "method": "github-release",
+        "publisher": "CokePokes/AppStorePlus-TrollStore",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from the developer's own repository CokePokes/AppStorePlus-TrollStore; install with TrollStore, or rename to .ipa if your client rejects the extension. The .deb published alongside is for jailbroken devices."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "CokePokes/AppStorePlus-TrollStore",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "14.0",
+        "descriptionTemplate": "AppStore++ {version} | TrollStore"
+      }
     }
   ]
 }

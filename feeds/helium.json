@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource - Helium",
+  "identifier": "com.iamsmmh.omnisource.helium",
+  "apiVersion": "v2",
+  "subtitle": "Status-bar widgets for TrollStore",
+  "description": "Standalone distribution feed for Helium, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/helium.json",
+  "apps": [
+    {
+      "name": "Helium",
+      "bundleIdentifier": "com.leemin.helium",
+      "developerName": "leminlimez",
+      "subtitle": "Status-bar widgets for TrollStore",
+      "localizedDescription": "Helium adds status-bar widgets to TrollStore iPhones on iOS 14 and up - close the app and the HUD stays on your screen. It also works on jailbroken devices.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Helium.webp",
+      "tintColor": "63A1CA",
+      "category": "utilities",
+      "version": "3.2.5",
+      "versionDate": "2024-02-13",
+      "versionDescription": "Helium 3.2.5 | TrollStore\n\nMassive merge of features from [AsakuraFuuko's repo](https://github.com/AsakuraFuuko/Helium)\n\n**Top features from v3.0.0-v3.2.5 include:**\n- Landscape mode now works properly!\n- Massive improvements to the adaptive color functionality\n- Choosing the text font\n- Option for italic text\n- Update interval can be controlled for each widget\n- New weather widget (must set your own API key)\n- Enabling and disabling widget sets\n- HUD now updates widget sets without having to restart the HUD\n- Option for a debug border around the widgets\n- Date locale fixes for Chinese users\n- Chinese translation\n- A whole lot of other improvements/fixes\n\nOnce again, thank you so much to AsakuraFuuko for this huge update. I would like to welcome them to the development team, where they will hopefully continue to update the app! Keep an eye out for this up-and-coming dev 👀",
+      "downloadURL": "https://github.com/leminlimez/Helium/releases/download/v3.2.5/Helium.tipa",
+      "size": 4168281,
+      "versions": [
+        {
+          "version": "3.2.5",
+          "date": "2024-02-13",
+          "localizedDescription": "Helium 3.2.5 | TrollStore\n\nMassive merge of features from [AsakuraFuuko's repo](https://github.com/AsakuraFuuko/Helium)\n\n**Top features from v3.0.0-v3.2.5 include:**\n- Landscape mode now works properly!\n- Massive improvements to the adaptive color functionality\n- Choosing the text font\n- Option for italic text\n- Update interval can be controlled for each widget\n- New weather widget (must set your own API key)\n- Enabling and disabling widget sets\n- HUD now updates widget sets without having to restart the HUD\n- Option for a debug border around the widgets\n- Date locale fixes for Chinese users\n- Chinese translation\n- A whole lot of other improvements/fixes\n\nOnce again, thank you so much to AsakuraFuuko for this huge update. I would like to welcome them to the development team, where they will hopefully continue to update the app! Keep an eye out for this up-and-coming dev 👀",
+          "downloadURL": "https://github.com/leminlimez/Helium/releases/download/v3.2.5/Helium.tipa",
+          "size": 4168281,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/leminlimez/Helium/releases/tag/v3.2.5",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Helium.tipa",
+              "downloadUrl": "https://github.com/leminlimez/Helium/releases/download/v3.2.5/Helium.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 4168281,
+              "sha256": null,
+              "downloads": 27574,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 27574
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "helium",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/leminlimez/Helium",
+        "sourceURL": "https://github.com/leminlimez/Helium",
+        "verification": {
+          "method": "github-release",
+          "publisher": "leminlimez/Helium",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/Helium; install with TrollStore, or rename to .ipa if your client rejects the extension. On iOS 16+ you must enable developer mode. Unmaintained since v3.2.5 (February 2024)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2024-02-13"
+        }
+      }
+    }
+  ],
+  "news": []
+}

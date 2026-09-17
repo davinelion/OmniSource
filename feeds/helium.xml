@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Helium — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/helium.json</link>
+    <description>Release feed for Helium within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/helium.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Helium v3.2.5</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/helium.json</link>
+      <guid isPermaLink="false">helium-3.2.5</guid>
+      <pubDate>Tue, 13 Feb 2024 00:00:00 +0000</pubDate>
+      <description><![CDATA[Helium 3.2.5 | TrollStore
+
+Massive merge of features from [AsakuraFuuko's repo](https://github.com/AsakuraFuuko/Helium)
+
+**Top features from v3.0.0-v3.2.5 include:**
+- Landscape mode now works properly!
+- Massive improvements to the adaptive color functionality
+- Choosing the text font
+- Option for italic text
+- Update interval can be controlled for each widget
+- New weather widget (must set your own API key)
+- Enabling and disabling widget sets
+- HUD now updates widget sets without having to restart the HUD
+- Option for a debug border around the widgets
+- Date locale fixes for Chinese users
+- Chinese translation
+- A whole lot of other improvements/fixes
+
+Once again, thank you so much to AsakuraFuuko for this huge update. I would like to welcome them to the development team, where they will hopefully continue to update the app! Keep an eye out for this up-and-coming dev 👀]]></description>
+      <enclosure url="https://github.com/leminlimez/Helium/releases/download/v3.2.5/Helium.tipa" length="4168281" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

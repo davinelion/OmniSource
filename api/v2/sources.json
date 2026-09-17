@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-16",
-  "count": 85,
+  "generatedAt": "2026-09-17",
+  "count": 104,
   "feed": {
     "name": "OmniSource",
     "identifier": "com.iamsmmh.omnisource",
@@ -133,10 +133,10 @@
         "turrit-mxgram"
       ],
       "appCount": 13,
-      "verifiedApps": 13,
-      "healthScore": 74.1,
-      "score": 97.5,
-      "status": "Verified",
+      "verifiedApps": 0,
+      "healthScore": 52.1,
+      "score": 90.7,
+      "status": "Warning",
       "level": "TRUSTED",
       "updateFrequencyDays": 6.5,
       "lastUpdate": "2026-09-13"
@@ -198,6 +198,64 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2026-09-03",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/aidoku.json"
+    },
+    {
+      "id": "alexsvitlov/iTransmission",
+      "source": "alexsvitlov/iTransmission",
+      "type": "github",
+      "homepage": "https://github.com/alexsvitlov/iTransmission",
+      "sourceURL": "https://github.com/alexsvitlov/iTransmission",
+      "publisher": "alexsvitlov/iTransmission",
+      "apps": [
+        {
+          "slug": "itransmission",
+          "name": "iTransmission",
+          "version": "1.0.0"
+        }
+      ],
+      "slug": "alexsvitlov-itransmission",
+      "page": "/sources/alexsvitlov-itransmission/",
+      "appSlugs": [
+        "itransmission"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2024-01-12",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/itransmission.json"
+    },
+    {
+      "id": "alfiecg24/TrollInstallerX",
+      "source": "alfiecg24/TrollInstallerX",
+      "type": "github",
+      "homepage": "https://github.com/alfiecg24/TrollInstallerX",
+      "sourceURL": "https://github.com/alfiecg24/TrollInstallerX",
+      "publisher": "alfiecg24/TrollInstallerX",
+      "apps": [
+        {
+          "slug": "trollinstallerx",
+          "name": "TrollInstallerX",
+          "version": "1.0.3"
+        }
+      ],
+      "slug": "alfiecg24-trollinstallerx",
+      "page": "/sources/alfiecg24-trollinstallerx/",
+      "appSlugs": [
+        "trollinstallerx"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2024-09-12",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json"
     },
     {
       "id": "Anxcye/anx-reader",
@@ -287,6 +345,64 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/maxtube.json"
     },
     {
+      "id": "Avangelista/CarTube",
+      "source": "Avangelista/CarTube",
+      "type": "github",
+      "homepage": "https://github.com/Avangelista/CarTube",
+      "sourceURL": "https://github.com/Avangelista/CarTube",
+      "publisher": "Avangelista/CarTube",
+      "apps": [
+        {
+          "slug": "cartube",
+          "name": "CarTube",
+          "version": "1.3"
+        }
+      ],
+      "slug": "avangelista-cartube",
+      "page": "/sources/avangelista-cartube/",
+      "appSlugs": [
+        "cartube"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-01-23",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cartube.json"
+    },
+    {
+      "id": "Avangelista/StatusMagic",
+      "source": "Avangelista/StatusMagic",
+      "type": "github",
+      "homepage": "https://github.com/Avangelista/StatusMagic",
+      "sourceURL": "https://github.com/Avangelista/StatusMagic",
+      "publisher": "Avangelista/StatusMagic",
+      "apps": [
+        {
+          "slug": "statusmagic",
+          "name": "StatusMagic",
+          "version": "1.0.2"
+        }
+      ],
+      "slug": "avangelista-statusmagic",
+      "page": "/sources/avangelista-statusmagic/",
+      "appSlugs": [
+        "statusmagic"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-02-08",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json"
+    },
+    {
       "id": "ayman708-UX/PlayTorrioV3",
       "source": "ayman708-UX/PlayTorrioV3",
       "type": "github",
@@ -297,7 +413,7 @@
         {
           "slug": "playtorrio",
           "name": "PlayTorrio",
-          "version": "1.1.5"
+          "version": "1.1.6"
         }
       ],
       "slug": "ayman708-ux-playtorriov3",
@@ -308,12 +424,41 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 73.9,
-      "status": "Community Verified",
+      "score": 89.4,
+      "status": "Verified",
+      "level": "TRUSTED",
+      "updateFrequencyDays": 7.0,
+      "lastUpdate": "2026-09-16",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
+    },
+    {
+      "id": "BandarHL/BHInstagram",
+      "source": "BandarHL/BHInstagram",
+      "type": "github",
+      "homepage": "https://github.com/BandarHL/BHInstagram",
+      "sourceURL": "https://github.com/BandarHL/BHInstagram",
+      "publisher": "BandarHL/BHInstagram",
+      "apps": [
+        {
+          "slug": "bhinstagram",
+          "name": "BHInstagram",
+          "version": "1.2"
+        }
+      ],
+      "slug": "bandarhl-bhinstagram",
+      "page": "/sources/bandarhl-bhinstagram/",
+      "appSlugs": [
+        "bhinstagram"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
       "level": "RELIABLE",
       "updateFrequencyDays": null,
-      "lastUpdate": "2026-09-09",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
+      "lastUpdate": "2025-05-14",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json"
     },
     {
       "id": "BandarHL/BHTwitter",
@@ -401,6 +546,35 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2026-07-21",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/bluewallet.json"
+    },
+    {
+      "id": "bomberfish/CAPerfHUDSwift",
+      "source": "bomberfish/CAPerfHUDSwift",
+      "type": "github",
+      "homepage": "https://github.com/bomberfish/CAPerfHUDSwift",
+      "sourceURL": "https://github.com/bomberfish/CAPerfHUDSwift",
+      "publisher": "bomberfish/CAPerfHUDSwift",
+      "apps": [
+        {
+          "slug": "caperfhud",
+          "name": "CAPerfHUD",
+          "version": "1.0.2"
+        }
+      ],
+      "slug": "bomberfish-caperfhudswift",
+      "page": "/sources/bomberfish-caperfhudswift/",
+      "appSlugs": [
+        "caperfhud"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-12-19",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
     },
     {
       "id": "chatsen/chatsen",
@@ -500,7 +674,7 @@
         {
           "slug": "conduit",
           "name": "Conduit",
-          "version": "4.1.5"
+          "version": "4.1.6"
         }
       ],
       "slug": "cogwheel0-conduit",
@@ -511,12 +685,41 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 87.4,
+      "score": 89.9,
       "status": "Verified",
       "level": "TRUSTED",
-      "updateFrequencyDays": 14.0,
-      "lastUpdate": "2026-09-15",
+      "updateFrequencyDays": 7.5,
+      "lastUpdate": "2026-09-16",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/conduit.json"
+    },
+    {
+      "id": "CokePokes/AppStorePlus-TrollStore",
+      "source": "CokePokes/AppStorePlus-TrollStore",
+      "type": "github",
+      "homepage": "https://github.com/CokePokes/AppStorePlus-TrollStore",
+      "sourceURL": "https://github.com/CokePokes/AppStorePlus-TrollStore",
+      "publisher": "CokePokes/AppStorePlus-TrollStore",
+      "apps": [
+        {
+          "slug": "appstoreplusplus",
+          "name": "AppStore++",
+          "version": "2.3.15"
+        }
+      ],
+      "slug": "cokepokes-appstoreplus-trollstore",
+      "page": "/sources/cokepokes-appstoreplus-trollstore/",
+      "appSlugs": [
+        "appstoreplusplus"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-09-17",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json"
     },
     {
       "id": "iamsmmh/OmniSource",
@@ -539,9 +742,9 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 77.0,
-      "score": 73.9,
-      "status": "Community Verified",
+      "healthScore": 55.0,
+      "score": 71.0,
+      "status": "Warning",
       "level": "RELIABLE",
       "updateFrequencyDays": null,
       "lastUpdate": "2026-08-22",
@@ -751,6 +954,35 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
     },
     {
+      "id": "ginsudev/WDBFontOverwrite",
+      "source": "ginsudev/WDBFontOverwrite",
+      "type": "github",
+      "homepage": "https://github.com/ginsudev/WDBFontOverwrite",
+      "sourceURL": "https://github.com/ginsudev/WDBFontOverwrite",
+      "publisher": "ginsudev/WDBFontOverwrite",
+      "apps": [
+        {
+          "slug": "wdbfontoverwrite",
+          "name": "WDBFontOverwrite",
+          "version": "1.10.8"
+        }
+      ],
+      "slug": "ginsudev-wdbfontoverwrite",
+      "page": "/sources/ginsudev-wdbfontoverwrite/",
+      "appSlugs": [
+        "wdbfontoverwrite"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-02-09",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json"
+    },
+    {
       "id": "GopeedLab/gopeed",
       "source": "GopeedLab/gopeed",
       "type": "github",
@@ -830,12 +1062,99 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 83.4,
+      "score": 73.9,
       "status": "Community Verified",
       "level": "RELIABLE",
-      "updateFrequencyDays": 90.0,
+      "updateFrequencyDays": null,
       "lastUpdate": "2026-08-14",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json"
+    },
+    {
+      "id": "haxi0/Jaility",
+      "source": "haxi0/Jaility",
+      "type": "github",
+      "homepage": "https://github.com/haxi0/Jaility",
+      "sourceURL": "https://github.com/haxi0/Jaility",
+      "publisher": "haxi0/Jaility",
+      "apps": [
+        {
+          "slug": "jaility",
+          "name": "Jaility",
+          "version": "3.1.1"
+        }
+      ],
+      "slug": "haxi0-jaility",
+      "page": "/sources/haxi0-jaility/",
+      "appSlugs": [
+        "jaility"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2022-11-12",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/jaility.json"
+    },
+    {
+      "id": "haxi0/KillMyOTA",
+      "source": "haxi0/KillMyOTA",
+      "type": "github",
+      "homepage": "https://github.com/haxi0/KillMyOTA",
+      "sourceURL": "https://github.com/haxi0/KillMyOTA",
+      "publisher": "haxi0/KillMyOTA",
+      "apps": [
+        {
+          "slug": "killmyota",
+          "name": "KillMyOTA",
+          "version": "1.1"
+        }
+      ],
+      "slug": "haxi0-killmyota",
+      "page": "/sources/haxi0-killmyota/",
+      "appSlugs": [
+        "killmyota"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-01-30",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/killmyota.json"
+    },
+    {
+      "id": "haxi0/TrollBoard-Reborn",
+      "source": "haxi0/TrollBoard-Reborn",
+      "type": "github",
+      "homepage": "https://github.com/haxi0/TrollBoard-Reborn",
+      "sourceURL": "https://github.com/haxi0/TrollBoard-Reborn",
+      "publisher": "haxi0/TrollBoard-Reborn",
+      "apps": [
+        {
+          "slug": "trollboard-reborn",
+          "name": "TrollBoard Reborn",
+          "version": "1.0"
+        }
+      ],
+      "slug": "haxi0-trollboard-reborn",
+      "page": "/sources/haxi0-trollboard-reborn/",
+      "appSlugs": [
+        "trollboard-reborn"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-12-05",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json"
     },
     {
       "id": "hrydgard/ppsspp",
@@ -892,10 +1211,10 @@
         "ttkillerplus"
       ],
       "appCount": 2,
-      "verifiedApps": 2,
-      "healthScore": 79.0,
-      "score": 92.4,
-      "status": "Verified",
+      "verifiedApps": 0,
+      "healthScore": 57.0,
+      "score": 88.2,
+      "status": "Warning",
       "level": "TRUSTED",
       "updateFrequencyDays": 8.0,
       "lastUpdate": "2026-09-09"
@@ -1073,6 +1392,122 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2026-06-05",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/spotube.json"
+    },
+    {
+      "id": "leminlimez/Cowabunga",
+      "source": "leminlimez/Cowabunga",
+      "type": "github",
+      "homepage": "https://github.com/leminlimez/Cowabunga",
+      "sourceURL": "https://github.com/leminlimez/Cowabunga",
+      "publisher": "leminlimez/Cowabunga",
+      "apps": [
+        {
+          "slug": "cowabunga",
+          "name": "Cowabunga",
+          "version": "10.3.2"
+        }
+      ],
+      "slug": "leminlimez-cowabunga",
+      "page": "/sources/leminlimez-cowabunga/",
+      "appSlugs": [
+        "cowabunga"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-05-29",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cowabunga.json"
+    },
+    {
+      "id": "leminlimez/Helium",
+      "source": "leminlimez/Helium",
+      "type": "github",
+      "homepage": "https://github.com/leminlimez/Helium",
+      "sourceURL": "https://github.com/leminlimez/Helium",
+      "publisher": "leminlimez/Helium",
+      "apps": [
+        {
+          "slug": "helium",
+          "name": "Helium",
+          "version": "3.2.5"
+        }
+      ],
+      "slug": "leminlimez-helium",
+      "page": "/sources/leminlimez-helium/",
+      "appSlugs": [
+        "helium"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2024-02-13",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/helium.json"
+    },
+    {
+      "id": "leminlimez/Pocket-Poster",
+      "source": "leminlimez/Pocket-Poster",
+      "type": "github",
+      "homepage": "https://github.com/leminlimez/Pocket-Poster",
+      "sourceURL": "https://github.com/leminlimez/Pocket-Poster",
+      "publisher": "leminlimez/Pocket-Poster",
+      "apps": [
+        {
+          "slug": "pocketposter",
+          "name": "Pocket Poster",
+          "version": "3.0"
+        }
+      ],
+      "slug": "leminlimez-pocket-poster",
+      "page": "/sources/leminlimez-pocket-poster/",
+      "appSlugs": [
+        "pocketposter"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2025-08-29",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json"
+    },
+    {
+      "id": "leminlimez/SecondHand",
+      "source": "leminlimez/SecondHand",
+      "type": "github",
+      "homepage": "https://github.com/leminlimez/SecondHand",
+      "sourceURL": "https://github.com/leminlimez/SecondHand",
+      "publisher": "leminlimez/SecondHand",
+      "apps": [
+        {
+          "slug": "secondhand",
+          "name": "SecondHand",
+          "version": "1.3.1"
+        }
+      ],
+      "slug": "leminlimez-secondhand",
+      "page": "/sources/leminlimez-secondhand/",
+      "appSlugs": [
+        "secondhand"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2024-12-31",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/secondhand.json"
     },
     {
       "id": "Lessica/TrollFools",
@@ -1317,7 +1752,7 @@
         {
           "slug": "maxmusic",
           "name": "MaxMusic",
-          "version": "9.36.1"
+          "version": "9.37.2"
         }
       ],
       "slug": "mark02-2012-maxmusic",
@@ -1328,12 +1763,41 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 79.0,
-      "score": 87.4,
+      "score": 91.9,
       "status": "Verified",
       "level": "TRUSTED",
-      "updateFrequencyDays": 9.0,
-      "lastUpdate": "2026-09-10",
+      "updateFrequencyDays": 7.0,
+      "lastUpdate": "2026-09-15",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json"
+    },
+    {
+      "id": "matteozappia/DynamicCow",
+      "source": "matteozappia/DynamicCow",
+      "type": "github",
+      "homepage": "https://github.com/matteozappia/DynamicCow",
+      "sourceURL": "https://github.com/matteozappia/DynamicCow",
+      "publisher": "matteozappia/DynamicCow",
+      "apps": [
+        {
+          "slug": "dynamiccow",
+          "name": "DynamicCow",
+          "version": "1.1"
+        }
+      ],
+      "slug": "matteozappia-dynamiccow",
+      "page": "/sources/matteozappia-dynamiccow/",
+      "appSlugs": [
+        "dynamiccow"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 79.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2023-02-02",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/dynamiccow.json"
     },
     {
       "id": "Michael-128/qBitControl",
@@ -1421,6 +1885,35 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2024-01-17",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/serotonin.json"
+    },
+    {
+      "id": "minh-ton/reynard-browser",
+      "source": "minh-ton/reynard-browser",
+      "type": "github",
+      "homepage": "https://github.com/minh-ton/reynard-browser",
+      "sourceURL": "https://github.com/minh-ton/reynard-browser",
+      "publisher": "minh-ton/reynard-browser",
+      "apps": [
+        {
+          "slug": "reynard",
+          "name": "Reynard",
+          "version": "0.13.1"
+        }
+      ],
+      "slug": "minh-ton-reynard-browser",
+      "page": "/sources/minh-ton-reynard-browser/",
+      "appSlugs": [
+        "reynard"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-09-14",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/reynard.json"
     },
     {
       "id": "moffatman/chan",
@@ -1914,7 +2407,7 @@
         {
           "slug": "raintweak",
           "name": "RainTweak",
-          "version": "0.9.3"
+          "version": "1.2.0"
         }
       ],
       "slug": "raincord-raintweak",
@@ -1925,11 +2418,11 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 73.9,
+      "score": 83.4,
       "status": "Community Verified",
       "level": "RELIABLE",
-      "updateFrequencyDays": null,
-      "lastUpdate": "2026-06-19",
+      "updateFrequencyDays": 90.0,
+      "lastUpdate": "2026-09-17",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/raintweak.json"
     },
     {
@@ -2126,11 +2619,11 @@
         "ryukgram-sidebyside"
       ],
       "appCount": 1,
-      "verifiedApps": 1,
-      "healthScore": 76.0,
-      "score": 72.9,
-      "status": "Community Verified",
-      "level": "RELIABLE",
+      "verifiedApps": 0,
+      "healthScore": 54.0,
+      "score": 69.9,
+      "status": "Warning",
+      "level": "AVERAGE",
       "updateFrequencyDays": null,
       "lastUpdate": "2026-09-09",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json"
@@ -2155,14 +2648,43 @@
         "ryukgram-ig410"
       ],
       "appCount": 1,
-      "verifiedApps": 1,
-      "healthScore": 76.0,
-      "score": 72.9,
-      "status": "Community Verified",
-      "level": "RELIABLE",
+      "verifiedApps": 0,
+      "healthScore": 54.0,
+      "score": 69.9,
+      "status": "Warning",
+      "level": "AVERAGE",
       "updateFrequencyDays": null,
       "lastUpdate": "2026-07-25",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json"
+    },
+    {
+      "id": "s8ngyu/Mugunghwa",
+      "source": "s8ngyu/Mugunghwa",
+      "type": "github",
+      "homepage": "https://github.com/s8ngyu/Mugunghwa",
+      "sourceURL": "https://github.com/s8ngyu/Mugunghwa",
+      "publisher": "s8ngyu/Mugunghwa",
+      "apps": [
+        {
+          "slug": "mugunghwa",
+          "name": "Mugunghwa",
+          "version": "3.0.2"
+        }
+      ],
+      "slug": "s8ngyu-mugunghwa",
+      "page": "/sources/s8ngyu-mugunghwa/",
+      "appSlugs": [
+        "mugunghwa"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Deprecated",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2022-11-10",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/mugunghwa.json"
     },
     {
       "id": "saber-notes/saber",
@@ -2215,12 +2737,41 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 79.0,
-      "score": 85.9,
+      "score": 89.4,
       "status": "Verified",
       "level": "TRUSTED",
-      "updateFrequencyDays": 66.5,
+      "updateFrequencyDays": 6.0,
       "lastUpdate": "2026-09-15",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/sidestore.json"
+    },
+    {
+      "id": "sourcelocation/AirTroller",
+      "source": "sourcelocation/AirTroller",
+      "type": "github",
+      "homepage": "https://github.com/sourcelocation/AirTroller",
+      "sourceURL": "https://github.com/sourcelocation/AirTroller",
+      "publisher": "sourcelocation/AirTroller",
+      "apps": [
+        {
+          "slug": "airtroller",
+          "name": "AirTroller",
+          "version": "1.1.1"
+        }
+      ],
+      "slug": "sourcelocation-airtroller",
+      "page": "/sources/sourcelocation-airtroller/",
+      "appSlugs": [
+        "airtroller"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2022-11-26",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/airtroller.json"
     },
     {
       "id": "spotiflacapp/SpotiFLAC-Mobile",
@@ -2601,10 +3152,10 @@
     }
   ],
   "statuses": {
-    "Verified": 10,
-    "Community Verified": 59,
-    "Inactive": 10,
-    "Deprecated": 5,
-    "Warning": 1
+    "Warning": 6,
+    "Verified": 9,
+    "Community Verified": 57,
+    "Inactive": 17,
+    "Deprecated": 15
   }
 }

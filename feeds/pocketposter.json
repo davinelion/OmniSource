@@ -1,0 +1,98 @@
+{
+  "name": "OmniSource - Pocket Poster",
+  "identifier": "com.iamsmmh.omnisource.pocketposter",
+  "apiVersion": "v2",
+  "subtitle": "Custom animated Poster Board wallpapers",
+  "description": "Standalone distribution feed for Pocket Poster, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/pocketposter.json",
+  "apps": [
+    {
+      "name": "Pocket Poster",
+      "bundleIdentifier": "com.lemin.Pocket-Poster",
+      "developerName": "leminlimez",
+      "subtitle": "Custom animated Poster Board wallpapers",
+      "localizedDescription": "Pocket Poster creates custom, animated Poster Board wallpapers for iOS 17 to 26. Design your own live wallpapers with motion effects - no jailbreak needed.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/PocketPoster.webp",
+      "tintColor": "C471ED",
+      "category": "photo-video",
+      "version": "3.0",
+      "versionDate": "2025-08-29",
+      "versionDescription": "Pocket Poster 3.0 | Pocket_Poster\n\n# Features\n- Added an in-app explore page for finding and downloading wallpapers\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\n- *Preliminary* iOS 16 support (not all wallpapers will work)\n- Improved certain error messages\n\n# Bug Fixes\n- Fixed the aspect ratio/rotation of imported custom videos\n- Fixed the update API not being called correctly\n- Fixed issues with some alerts not popping up\n- Other various app stability improvements",
+      "downloadURL": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
+      "size": 13686800,
+      "versions": [
+        {
+          "version": "3.0",
+          "date": "2025-08-29",
+          "localizedDescription": "Pocket Poster 3.0 | Pocket_Poster\n\n# Features\n- Added an in-app explore page for finding and downloading wallpapers\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\n- *Preliminary* iOS 16 support (not all wallpapers will work)\n- Improved certain error messages\n\n# Bug Fixes\n- Fixed the aspect ratio/rotation of imported custom videos\n- Fixed the update API not being called correctly\n- Fixed issues with some alerts not popping up\n- Other various app stability improvements",
+          "downloadURL": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
+          "size": 13686800,
+          "minOSVersion": "17.0",
+          "releaseUrl": "https://github.com/leminlimez/Pocket-Poster/releases/tag/v3.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Pocket_Poster.ipa",
+              "downloadUrl": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 13686800,
+              "sha256": "0306c349a4292ca3c40647a48bf8959f4b8d9fa7793cab444d2f79f23d4aaaf7",
+              "downloads": 124371,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "0306c349a4292ca3c40647a48bf8959f4b8d9fa7793cab444d2f79f23d4aaaf7",
+          "downloads": 124371
+        }
+      ],
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/leminlimez/Pocket-Poster/main/Pocket%20Poster/Assets.xcassets/ResetCollections/CustomCollection.imageset/CustomCollections.png"
+      ],
+      "omnisource": {
+        "slug": "pocketposter",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/leminlimez/Pocket-Poster",
+        "sourceURL": "https://github.com/leminlimez/Pocket-Poster",
+        "verification": {
+          "method": "github-release",
+          "publisher": "leminlimez/Pocket-Poster",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "17.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from leminlimez/Pocket-Poster. Screenshot from the upstream repository."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2025-08-29"
+        }
+      }
+    }
+  ],
+  "news": []
+}

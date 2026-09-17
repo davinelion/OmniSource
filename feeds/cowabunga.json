@@ -1,0 +1,99 @@
+{
+  "name": "OmniSource - Cowabunga",
+  "identifier": "com.iamsmmh.omnisource.cowabunga",
+  "apiVersion": "v2",
+  "subtitle": "MacDirtyCow customization toolbox",
+  "description": "Standalone distribution feed for Cowabunga, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/cowabunga.json",
+  "apps": [
+    {
+      "name": "Cowabunga",
+      "bundleIdentifier": "com.leemin.Cowabunga",
+      "developerName": "leminlimez",
+      "subtitle": "MacDirtyCow customization toolbox",
+      "localizedDescription": "Cowabunga is a toolbox for MacDirtyCow devices (iOS 14.0 - 15.7.1 and 16.0 - 16.1.2): a passcode editor, lock-screen footnotes, audio changer, SpringBoard tools and more - customization without a jailbreak.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Cowabunga.webp",
+      "tintColor": "609A38",
+      "category": "utilities",
+      "version": "10.3.2",
+      "versionDate": "2023-05-29",
+      "versionDescription": "Cowabunga 10.3.2 | Cowabunga\n\n- Changing carrier bar strength now works when you do not have a sim card (or dual sim for secondary carrier)",
+      "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+      "size": 16288960,
+      "versions": [
+        {
+          "version": "10.3.2",
+          "date": "2023-05-29",
+          "localizedDescription": "Cowabunga 10.3.2 | Cowabunga\n\n- Changing carrier bar strength now works when you do not have a sim card (or dual sim for secondary carrier)",
+          "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+          "size": 16288960,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/leminlimez/Cowabunga/releases/tag/v10.3.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Cowabunga.ipa",
+              "downloadUrl": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 16288960,
+              "sha256": null,
+              "downloads": 262077,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 262077
+        }
+      ],
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Home.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Extra_Tools.PNG",
+        "https://raw.githubusercontent.com/leminlimez/Cowabunga/main/Images/Passcode_Editor.PNG"
+      ],
+      "omnisource": {
+        "slug": "cowabunga",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/leminlimez/Cowabunga",
+        "sourceURL": "https://github.com/leminlimez/Cowabunga",
+        "verification": {
+          "method": "github-release",
+          "publisher": "leminlimez/Cowabunga",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from leminlimez/Cowabunga. Screenshots from the upstream repository. Unmaintained since v10.3.2 (February 2024)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2023-05-29"
+        }
+      }
+    }
+  ],
+  "news": []
+}

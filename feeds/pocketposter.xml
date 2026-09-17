@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pocket Poster — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json</link>
+    <description>Release feed for Pocket Poster within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 29 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/pocketposter.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Pocket Poster v3.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json</link>
+      <guid isPermaLink="false">pocketposter-3.0</guid>
+      <pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Pocket Poster 3.0 | Pocket_Poster
+
+# Features
+- Added an in-app explore page for finding and downloading wallpapers
+- Added custom CarPlay wallpapers (will not work on iOS 26.0)
+- *Preliminary* iOS 16 support (not all wallpapers will work)
+- Improved certain error messages
+
+# Bug Fixes
+- Fixed the aspect ratio/rotation of imported custom videos
+- Fixed the update API not being called correctly
+- Fixed issues with some alerts not popping up
+- Other various app stability improvements]]></description>
+      <enclosure url="https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa" length="13686800" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

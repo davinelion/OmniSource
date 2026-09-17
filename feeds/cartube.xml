@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CarTube — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/cartube.json</link>
+    <description>Release feed for CarTube within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/cartube.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>CarTube v1.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/cartube.json</link>
+      <guid isPermaLink="false">cartube-1.3</guid>
+      <pubDate>Mon, 23 Jan 2023 00:00:00 +0000</pubDate>
+      <description><![CDATA[CarTube 1.3 | CarTube
+
+Big Fixes + Some Features Update!
+- Much smoother experience
+- Swipe left or right anywhere on the screen to go Back or Forward
+- Native m.youtube.com player, so ALL videos should work plus comments and playlists, and should be all around smoother
+- New "Play on CarPlay" share extension, works with YouTube app
+- Zoom in settings works better and scales content correctly
+- Added age restriction bypass
+- Added ad blocker (beta)
+- Fixed awful scrolling
+- Fixed Google signin page zoom
+- Fixed the buggy keyboard bar
+- Small fixes to the persistence helper, Siri no longer breaks it]]></description>
+      <enclosure url="https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.ipa" length="574441" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

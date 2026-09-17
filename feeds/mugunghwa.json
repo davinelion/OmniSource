@@ -1,0 +1,107 @@
+{
+  "name": "OmniSource - Mugunghwa",
+  "identifier": "com.iamsmmh.omnisource.mugunghwa",
+  "apiVersion": "v2",
+  "subtitle": "System-wide icon theming, no jailbreak",
+  "description": "Standalone distribution feed for Mugunghwa, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/mugunghwa.json",
+  "apps": [
+    {
+      "name": "Mugunghwa",
+      "bundleIdentifier": "me.soongyu.mugunghwautil",
+      "developerName": "Soongyu Kwon",
+      "subtitle": "System-wide icon theming, no jailbreak",
+      "localizedDescription": "Mugunghwa is a system-wide icon theming tool for iOS that works without a jailbreak. Change the icons of your apps system-wide, without the per-app icon replacement trick.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Mugunghwa.webp",
+      "tintColor": "E7A1CD",
+      "category": "utilities",
+      "version": "3.0.2",
+      "versionDate": "2022-11-10",
+      "versionDescription": "Mugunghwa 3.0.2 | Mugunghwa\n\nFixed crashes.",
+      "downloadURL": "https://github.com/s8ngyu/Mugunghwa/releases/download/3.0.2/Mugunghwa.ipa",
+      "size": 3889341,
+      "versions": [
+        {
+          "version": "3.0.2",
+          "date": "2022-11-10",
+          "localizedDescription": "Mugunghwa 3.0.2 | Mugunghwa\n\nFixed crashes.",
+          "downloadURL": "https://github.com/s8ngyu/Mugunghwa/releases/download/3.0.2/Mugunghwa.ipa",
+          "size": 3889341,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/s8ngyu/Mugunghwa/releases/tag/3.0.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Mugunghwa.ipa",
+              "downloadUrl": "https://github.com/s8ngyu/Mugunghwa/releases/download/3.0.2/Mugunghwa.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 3889341,
+              "sha256": null,
+              "downloads": 158345,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Mugunghwa.tipa",
+              "downloadUrl": "https://github.com/s8ngyu/Mugunghwa/releases/download/3.0.2/Mugunghwa.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 3889341,
+              "sha256": null,
+              "downloads": 32623,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 158345
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "mugunghwa",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/s8ngyu/Mugunghwa",
+        "sourceURL": "https://github.com/s8ngyu/Mugunghwa",
+        "verification": {
+          "method": "github-release",
+          "publisher": "s8ngyu/Mugunghwa",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from s8ngyu/Mugunghwa. Unmaintained - the last release is 3.0.2 (March 2024)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2022-11-10"
+        }
+      }
+    }
+  ],
+  "news": []
+}

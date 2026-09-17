@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource - Jaility",
+  "identifier": "com.iamsmmh.omnisource.jaility",
+  "apiVersion": "v2",
+  "subtitle": "TrollStore supercharger and supervision",
+  "description": "Standalone distribution feed for Jaility, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/jaility.json",
+  "apps": [
+    {
+      "name": "Jaility",
+      "bundleIdentifier": "org.haxi0.Jaility",
+      "developerName": "haxi0",
+      "subtitle": "TrollStore supercharger and supervision",
+      "localizedDescription": "Jaility is a simple iOS supercharger to be used with TrollStore. It keeps your device unlocked after a respring and adds supervision for extra control.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Jaility.webp",
+      "tintColor": "1AA0F7",
+      "category": "utilities",
+      "version": "3.1.1",
+      "versionDate": "2022-11-12",
+      "versionDescription": "Jaility 3.1.1 | Jaility-3.1.1\n\n- Theming removed\n- Jaility is cancelled. No more major additions like Theming and etc. Some tweaks might be added in the future if they are found. This doesn't mean Jaility is dead and stuff, I'm just not feeling like adding new major features because tools like TrollTools and others exist.",
+      "downloadURL": "https://github.com/haxi0/Jaility/releases/download/3.1.1/Jaility-3.1.1.ipa",
+      "size": 108606,
+      "versions": [
+        {
+          "version": "3.1.1",
+          "date": "2022-11-12",
+          "localizedDescription": "Jaility 3.1.1 | Jaility-3.1.1\n\n- Theming removed\n- Jaility is cancelled. No more major additions like Theming and etc. Some tweaks might be added in the future if they are found. This doesn't mean Jaility is dead and stuff, I'm just not feeling like adding new major features because tools like TrollTools and others exist.",
+          "downloadURL": "https://github.com/haxi0/Jaility/releases/download/3.1.1/Jaility-3.1.1.ipa",
+          "size": 108606,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/haxi0/Jaility/releases/tag/3.1.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Jaility-3.1.1.ipa",
+              "downloadUrl": "https://github.com/haxi0/Jaility/releases/download/3.1.1/Jaility-3.1.1.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 108606,
+              "sha256": null,
+              "downloads": 19535,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 19535
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "jaility",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/haxi0/Jaility",
+        "sourceURL": "https://github.com/haxi0/Jaility",
+        "verification": {
+          "method": "github-release",
+          "publisher": "haxi0/Jaility",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from haxi0/Jaility. Unmaintained since 3.1.1 (September 2023)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2022-11-12"
+        }
+      }
+    }
+  ],
+  "news": []
+}

@@ -1,0 +1,109 @@
+{
+  "name": "OmniSource - StatusMagic",
+  "identifier": "com.iamsmmh.omnisource.statusmagic",
+  "apiVersion": "v2",
+  "subtitle": "Fully customizable status bar",
+  "description": "Standalone distribution feed for StatusMagic, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/statusmagic.json",
+  "apps": [
+    {
+      "name": "StatusMagic",
+      "bundleIdentifier": "com.avangelista.StatusMagic",
+      "developerName": "Avangelista",
+      "subtitle": "Fully customizable status bar",
+      "localizedDescription": "StatusMagic lets you fully customize the iOS status bar on iOS 14.0 to 16.1.2 without a jailbreak - change fonts, colors and elements to make the status bar yours.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/StatusMagic.webp",
+      "tintColor": "EE9D34",
+      "category": "utilities",
+      "version": "1.0.2",
+      "versionDate": "2023-02-08",
+      "versionDescription": "StatusMagic 1.0.2 | StatusMagic\n\nEven in the best tested code, mistakes slip through. Sorry for such a hasty update.\n\n## Changes\n- Fixed \"Hide DND\" on iOS 15 (I accidentally left experimental code in there that enabled every single status bar icon, see #12) \n- And... that's it. Sorry!\n\n## Installation\n- iOS 14.*: Install the app with [TrollStore](https://github.com/opa334/TrollStore)\n- iOS 15.0 - 15.4.1: Install the app with [TrollStore](https://github.com/opa334/TrollStore) (recommended), [AltStore](https://altstore.io/), or [Sideloadly](https://sideloadly.io/)\n- iOS 15.5 - 16.1.2: Install the app with [AltStore](https://altstore.io/) or [Sideloadly](https://sideloadly.io/) (excludes iOS 15.7.2 & 15.7.3)\n- iOS 16.2+: Not supported, and never will be\n\n> __Warning__ ESign has been known to have issues. To avoid it, use other installation methods.",
+      "downloadURL": "https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.ipa",
+      "size": 1218528,
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2023-02-08",
+          "localizedDescription": "StatusMagic 1.0.2 | StatusMagic\n\nEven in the best tested code, mistakes slip through. Sorry for such a hasty update.\n\n## Changes\n- Fixed \"Hide DND\" on iOS 15 (I accidentally left experimental code in there that enabled every single status bar icon, see #12) \n- And... that's it. Sorry!\n\n## Installation\n- iOS 14.*: Install the app with [TrollStore](https://github.com/opa334/TrollStore)\n- iOS 15.0 - 15.4.1: Install the app with [TrollStore](https://github.com/opa334/TrollStore) (recommended), [AltStore](https://altstore.io/), or [Sideloadly](https://sideloadly.io/)\n- iOS 15.5 - 16.1.2: Install the app with [AltStore](https://altstore.io/) or [Sideloadly](https://sideloadly.io/) (excludes iOS 15.7.2 & 15.7.3)\n- iOS 16.2+: Not supported, and never will be\n\n> __Warning__ ESign has been known to have issues. To avoid it, use other installation methods.",
+          "downloadURL": "https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.ipa",
+          "size": 1218528,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/Avangelista/StatusMagic/releases/tag/1.0.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "StatusMagic.ipa",
+              "downloadUrl": "https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 1218528,
+              "sha256": null,
+              "downloads": 16874,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "StatusMagic.tipa",
+              "downloadUrl": "https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 1218528,
+              "sha256": null,
+              "downloads": 4243,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 16874
+        }
+      ],
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/Avangelista/StatusMagic/main/Images/Promo.png"
+      ],
+      "omnisource": {
+        "slug": "statusmagic",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/Avangelista/StatusMagic",
+        "sourceURL": "https://github.com/Avangelista/StatusMagic",
+        "verification": {
+          "method": "github-release",
+          "publisher": "Avangelista/StatusMagic",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": "16.1.2",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from Avangelista/StatusMagic (the .tipa is not tracked). The upstream documents iOS 14.0 - 16.1.2 support. Unmaintained since 1.0.2 (December 2023)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2023-02-08"
+        }
+      }
+    }
+  ],
+  "news": []
+}

@@ -1,0 +1,120 @@
+{
+  "name": "OmniSource - Reynard",
+  "identifier": "com.iamsmmh.omnisource.reynard",
+  "apiVersion": "v2",
+  "subtitle": "Gecko-based browser, a real WebKit alternative",
+  "description": "Standalone distribution feed for Reynard, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/reynard.json",
+  "apps": [
+    {
+      "name": "Reynard",
+      "bundleIdentifier": "com.minh-ton.Reynard",
+      "developerName": "Minh Ton",
+      "subtitle": "Gecko-based browser, a real WebKit alternative",
+      "localizedDescription": "Reynard is an experimental Gecko-based web browser for iOS 13 and up, rendering pages with the same engine Firefox uses instead of Safari's WebKit. It is actively developed and published from the project's own GitHub releases.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Reynard.webp",
+      "tintColor": "FB3828",
+      "category": "utilities",
+      "version": "0.13.1",
+      "versionDate": "2026-09-14",
+      "versionDescription": "Reynard 0.13.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1\n\nThis is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).\n\n### Bug Fixes & Improvements\n- Improved the reliability of text input fields repositioning above the software keyboard when editing.\n- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.",
+      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+      "size": 108070190,
+      "versions": [
+        {
+          "version": "0.13.1",
+          "date": "2026-09-14",
+          "localizedDescription": "Reynard 0.13.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1\n\nThis is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).\n\n### Bug Fixes & Improvements\n- Improved the reliability of text input fields repositioning above the software keyboard when editing.\n- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.",
+          "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+          "size": 108070190,
+          "minOSVersion": "13.0",
+          "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.13.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Reynard-Jailbroken.ipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard-Jailbroken.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 108119337,
+              "sha256": "421d5149dfe8087e18ea2b43cf437e2ea384208a74ee39bcfb23c9bc14cb7ae6",
+              "downloads": 207,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Reynard-TrollStore.tipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard-TrollStore.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 108168749,
+              "sha256": "b6b5fa78be22ac11bfdb179884caaa43b69e10d16d47a9079f33df014f57c590",
+              "downloads": 1516,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "Reynard.ipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 108070190,
+              "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
+              "downloads": 574,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
+          "downloads": 574
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "reynard",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/minh-ton/reynard-browser",
+        "sourceURL": "https://github.com/minh-ton/reynard-browser",
+        "verification": {
+          "method": "github-release",
+          "publisher": "minh-ton/reynard-browser",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "13.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official unsigned IPA from minh-ton/reynard-browser (asset Reynard.ipa). The Jailbroken and TrollStore builds published alongside it are not tracked here."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2026-09-14"
+        }
+      }
+    }
+  ],
+  "news": []
+}

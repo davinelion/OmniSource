@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>StatusMagic — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json</link>
+    <description>Release feed for StatusMagic within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/statusmagic.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>StatusMagic v1.0.2</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json</link>
+      <guid isPermaLink="false">statusmagic-1.0.2</guid>
+      <pubDate>Wed, 08 Feb 2023 00:00:00 +0000</pubDate>
+      <description><![CDATA[StatusMagic 1.0.2 | StatusMagic
+
+Even in the best tested code, mistakes slip through. Sorry for such a hasty update.
+
+## Changes
+- Fixed "Hide DND" on iOS 15 (I accidentally left experimental code in there that enabled every single status bar icon, see #12) 
+- And... that's it. Sorry!
+
+## Installation
+- iOS 14.*: Install the app with [TrollStore](https://github.com/opa334/TrollStore)
+- iOS 15.0 - 15.4.1: Install the app with [TrollStore](https://github.com/opa334/TrollStore) (recommended), [AltStore](https://altstore.io/), or [Sideloadly](https://sideloadly.io/)
+- iOS 15.5 - 16.1.2: Install the app with [AltStore](https://altstore.io/) or [Sideloadly](https://sideloadly.io/) (excludes iOS 15.7.2 & 15.7.3)
+- iOS 16.2+: Not supported, and never will be
+
+> __Warning__ ESign has been known to have issues. To avoid it, use other installation methods.]]></description>
+      <enclosure url="https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.ipa" length="1218528" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

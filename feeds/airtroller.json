@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource - AirTroller",
+  "identifier": "com.iamsmmh.omnisource.airtroller",
+  "apiVersion": "v2",
+  "subtitle": "AirDrop spammer for TrollStore",
+  "description": "Standalone distribution feed for AirTroller, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/airtroller.json",
+  "apps": [
+    {
+      "name": "AirTroller",
+      "bundleIdentifier": "net.sourceloc.AirTroller",
+      "developerName": "Matthew Anisovich",
+      "subtitle": "AirDrop spammer for TrollStore",
+      "localizedDescription": "AirTroller is an AirDrop spammer/flooder to prank your friends, running on TrollStore and jailbroken iOS 14 and up.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/AirTroller.webp",
+      "tintColor": "A4E966",
+      "category": "other",
+      "version": "1.1.1",
+      "versionDate": "2022-11-26",
+      "versionDescription": "AirTroller 1.1.1 | TrollStore\n\n- Fix a slow send bug introduced in 1.1\n\n♡ Support - https://ko-fi.com/sourcelocation",
+      "downloadURL": "https://github.com/sourcelocation/AirTroller/releases/download/1.1.1/AirTroller-1.1.1.tipa",
+      "size": 782388,
+      "versions": [
+        {
+          "version": "1.1.1",
+          "date": "2022-11-26",
+          "localizedDescription": "AirTroller 1.1.1 | TrollStore\n\n- Fix a slow send bug introduced in 1.1\n\n♡ Support - https://ko-fi.com/sourcelocation",
+          "downloadURL": "https://github.com/sourcelocation/AirTroller/releases/download/1.1.1/AirTroller-1.1.1.tipa",
+          "size": 782388,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/sourcelocation/AirTroller/releases/tag/1.1.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "AirTroller-1.1.1.tipa",
+              "downloadUrl": "https://github.com/sourcelocation/AirTroller/releases/download/1.1.1/AirTroller-1.1.1.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 782388,
+              "sha256": null,
+              "downloads": 41278,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 41278
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "airtroller",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/sourcelocation/AirTroller",
+        "sourceURL": "https://github.com/sourcelocation/AirTroller",
+        "verification": {
+          "method": "github-release",
+          "publisher": "sourcelocation/AirTroller",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from sourcelocation/AirTroller; install with TrollStore, or rename to .ipa if your client rejects the extension."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2022-11-26"
+        }
+      }
+    }
+  ],
+  "news": []
+}

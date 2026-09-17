@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource - KillMyOTA",
+  "identifier": "com.iamsmmh.omnisource.killmyota",
+  "apiVersion": "v2",
+  "subtitle": "Toggle OTA updates on iOS 15-16.1.2",
+  "description": "Standalone distribution feed for KillMyOTA, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/killmyota.json",
+  "apps": [
+    {
+      "name": "KillMyOTA",
+      "bundleIdentifier": "org.haxi0.KillMyOTA",
+      "developerName": "haxi0",
+      "subtitle": "Toggle OTA updates on iOS 15-16.1.2",
+      "localizedDescription": "KillMyOTA enables or disables over-the-air iOS updates on jailbreak devices running iOS 15.0 to 16.1.2 - open the app and toggle updates on or off.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/KillMyOTA.webp",
+      "tintColor": "FEA909",
+      "category": "utilities",
+      "version": "1.1",
+      "versionDate": "2023-01-30",
+      "versionDescription": "KillMyOTA 1.1 | KillMyOTA-1.1\n\n- The button doesn't appear as \"enable OTA\" or \"disable OTA\" momentally when you launch the app. This was made to fix some issues.",
+      "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+      "size": 339440,
+      "versions": [
+        {
+          "version": "1.1",
+          "date": "2023-01-30",
+          "localizedDescription": "KillMyOTA 1.1 | KillMyOTA-1.1\n\n- The button doesn't appear as \"enable OTA\" or \"disable OTA\" momentally when you launch the app. This was made to fix some issues.",
+          "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+          "size": 339440,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/haxi0/KillMyOTA/releases/tag/1.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "KillMyOTA-1.1.ipa",
+              "downloadUrl": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 339440,
+              "sha256": null,
+              "downloads": 18393,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 18393
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "killmyota",
+        "status": "unmaintained",
+        "featured": false,
+        "upstreamURL": "https://github.com/haxi0/KillMyOTA",
+        "sourceURL": "https://github.com/haxi0/KillMyOTA",
+        "verification": {
+          "method": "github-release",
+          "publisher": "haxi0/KillMyOTA",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": "16.1.2",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from haxi0/KillMyOTA. Supports the KFD-era firmware range iOS 15.0 - 16.1.2. Unmaintained since 1.1 (January 2023)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2023-01-30"
+        }
+      }
+    }
+  ],
+  "news": []
+}
