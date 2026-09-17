@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 109,
+  "count": 114,
   "feed": {
     "name": "OmniSource",
     "identifier": "com.iamsmmh.omnisource",
@@ -134,8 +134,8 @@
       ],
       "appCount": 13,
       "verifiedApps": 0,
-      "healthScore": 50.1,
-      "score": 89.2,
+      "healthScore": 48.0,
+      "score": 87.4,
       "status": "Warning",
       "level": "TRUSTED",
       "updateFrequencyDays": 6.5,
@@ -577,6 +577,35 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
     },
     {
+      "id": "manual:cercube",
+      "source": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "type": "manual",
+      "homepage": "https://cercube.com",
+      "sourceURL": "https://cercube.com",
+      "publisher": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "apps": [
+        {
+          "slug": "cercube",
+          "name": "Cercube for YouTube",
+          "version": "6.1.3"
+        }
+      ],
+      "slug": "manual-cercube",
+      "page": "/sources/manual-cercube/",
+      "appSlugs": [
+        "cercube"
+      ],
+      "appCount": 1,
+      "verifiedApps": 0,
+      "healthScore": 27.0,
+      "score": 45.1,
+      "status": "Warning",
+      "level": "EXPERIMENTAL",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-09-18",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cercube.json"
+    },
+    {
       "id": "chatsen/chatsen",
       "source": "chatsen/chatsen",
       "type": "github",
@@ -742,8 +771,8 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 53.0,
-      "score": 69.3,
+      "healthScore": 50.0,
+      "score": 66.8,
       "status": "Warning",
       "level": "AVERAGE",
       "updateFrequencyDays": null,
@@ -807,6 +836,93 @@
       "updateFrequencyDays": null,
       "lastUpdate": "2026-08-20",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/sora.json"
+    },
+    {
+      "id": "DevelopCubeLab/AnimationSpeed",
+      "source": "DevelopCubeLab/AnimationSpeed",
+      "type": "github",
+      "homepage": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "sourceURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "publisher": "DevelopCubeLab/AnimationSpeed",
+      "apps": [
+        {
+          "slug": "animationspeed",
+          "name": "Animation Speed",
+          "version": "1.0.1"
+        }
+      ],
+      "slug": "developcubelab-animationspeed",
+      "page": "/sources/developcubelab-animationspeed/",
+      "appSlugs": [
+        "animationspeed"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2025-05-27",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/animationspeed.json"
+    },
+    {
+      "id": "DevelopCubeLab/BatteryInfo",
+      "source": "DevelopCubeLab/BatteryInfo",
+      "type": "github",
+      "homepage": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "sourceURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "publisher": "DevelopCubeLab/BatteryInfo",
+      "apps": [
+        {
+          "slug": "batteryinfo",
+          "name": "Battery Info",
+          "version": "1.2.2"
+        }
+      ],
+      "slug": "developcubelab-batteryinfo",
+      "page": "/sources/developcubelab-batteryinfo/",
+      "appSlugs": [
+        "batteryinfo"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2025-07-09",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json"
+    },
+    {
+      "id": "DevelopCubeLab/EnableQUIC",
+      "source": "DevelopCubeLab/EnableQUIC",
+      "type": "github",
+      "homepage": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "sourceURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "publisher": "DevelopCubeLab/EnableQUIC",
+      "apps": [
+        {
+          "slug": "enablequic",
+          "name": "EnableQUIC",
+          "version": "1.2.4"
+        }
+      ],
+      "slug": "developcubelab-enablequic",
+      "page": "/sources/developcubelab-enablequic/",
+      "appSlugs": [
+        "enablequic"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 71.4,
+      "status": "Inactive",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2025-02-21",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/enablequic.json"
     },
     {
       "id": "DonutWare/Fladder",
@@ -1241,10 +1357,10 @@
       ],
       "appCount": 2,
       "verifiedApps": 0,
-      "healthScore": 55.0,
-      "score": 86.6,
+      "healthScore": 52.0,
+      "score": 84.1,
       "status": "Warning",
-      "level": "TRUSTED",
+      "level": "RELIABLE",
       "updateFrequencyDays": 8.0,
       "lastUpdate": "2026-09-09"
     },
@@ -2165,6 +2281,35 @@
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
     },
     {
+      "id": "nicegram/Nicegram-iOS",
+      "source": "nicegram/Nicegram-iOS",
+      "type": "github",
+      "homepage": "https://github.com/nicegram/Nicegram-iOS",
+      "sourceURL": "https://github.com/nicegram/Nicegram-iOS",
+      "publisher": "nicegram/Nicegram-iOS",
+      "apps": [
+        {
+          "slug": "nicegram",
+          "name": "Nicegram",
+          "version": "2.6.1"
+        }
+      ],
+      "slug": "nicegram-nicegram-ios",
+      "page": "/sources/nicegram-nicegram-ios/",
+      "appSlugs": [
+        "nicegram"
+      ],
+      "appCount": 1,
+      "verifiedApps": 1,
+      "healthScore": 77.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
+      "lastUpdate": "2026-09-07",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/nicegram.json"
+    },
+    {
       "id": "NuvioMedia/NuvioMobile",
       "source": "NuvioMedia/NuvioMobile",
       "type": "github",
@@ -2707,8 +2852,8 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 52.0,
-      "score": 68.3,
+      "healthScore": 49.0,
+      "score": 66.0,
       "status": "Warning",
       "level": "AVERAGE",
       "updateFrequencyDays": null,
@@ -2736,8 +2881,8 @@
       ],
       "appCount": 1,
       "verifiedApps": 0,
-      "healthScore": 52.0,
-      "score": 68.3,
+      "healthScore": 49.0,
+      "score": 66.0,
       "status": "Warning",
       "level": "AVERAGE",
       "updateFrequencyDays": null,
@@ -3297,10 +3442,10 @@
     }
   ],
   "statuses": {
-    "Warning": 6,
+    "Warning": 7,
     "Verified": 9,
-    "Community Verified": 62,
-    "Inactive": 17,
+    "Community Verified": 63,
+    "Inactive": 20,
     "Deprecated": 15
   }
 }

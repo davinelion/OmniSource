@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-17",
   "totals": {
-    "apps": 125,
-    "pass": 79,
-    "warn": 46,
+    "apps": 130,
+    "pass": 81,
+    "warn": 49,
     "fail": 0,
     "rejected": 0
   },
@@ -67,6 +67,24 @@
         "releaseId": "1.1.1",
         "source": "github",
         "downloadUrl": "https://github.com/sourcelocation/AirTroller/releases/download/1.1.1/AirTroller-1.1.1.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "asset": {
+        "sha256": null,
+        "size": 96650,
+        "releaseId": "1.0.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/AnimationSpeed_1.0.1.tipa"
       },
       "checks": {
         "sizePositive": true,
@@ -205,6 +223,24 @@
         "releaseId": "2.3.15",
         "source": "github",
         "downloadUrl": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "asset": {
+        "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+        "size": 346882,
+        "releaseId": "1.2.2",
+        "source": "github",
+        "downloadUrl": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa"
       },
       "checks": {
         "sizePositive": true,
@@ -391,6 +427,24 @@
         "installable": true,
         "digestFormat": true,
         "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "asset": {
+        "sha256": null,
+        "size": 2017412,
+        "releaseId": "6.1.3",
+        "source": "",
+        "downloadUrl": "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": false
       },
       "status": "warn"
     },
@@ -661,6 +715,24 @@
         "releaseId": "1.1",
         "source": "github",
         "downloadUrl": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "warn"
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "asset": {
+        "sha256": null,
+        "size": 362372,
+        "releaseId": "1.2.4",
+        "source": "github",
+        "downloadUrl": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa"
       },
       "checks": {
         "sizePositive": true,
@@ -1635,6 +1707,24 @@
         "at": "2026-09-14",
         "durationMs": 3172
       }
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "asset": {
+        "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+        "size": 126339077,
+        "releaseId": "2.6.1",
+        "source": "github",
+        "downloadUrl": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa"
+      },
+      "checks": {
+        "sizePositive": true,
+        "installable": true,
+        "digestFormat": true,
+        "reachable": true
+      },
+      "status": "pass"
     },
     {
       "slug": "nuvio",

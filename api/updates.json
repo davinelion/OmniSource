@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-17",
+  "generatedAt": "2026-09-18",
   "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
   "count": 100,
   "updates": [
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "version": "6.1.3",
+      "previousVersion": "",
+      "date": "2026-09-18",
+      "kind": "new",
+      "changelog": "Cercube for YouTube 6.1.3 - the current official release (verified against apt.cercube.com on 2026-09-18).\n\nThis release improves caching, ad blocking, and compatibility with older iOS versions.\n- Added compatibility for iOS 15-16\n- Minor bug fixes and improvements\n\nPreviously: 6.1.2 added dislike counts, sponsored segment skipping and 14 languages; 6.0.1 added compatibility for recent iOS versions.",
+      "downloadURL": "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/cercube.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/cercube.xml",
+      "status": "stable",
+      "shortDescription": "Offline, PiP, background play and no ads for YouTube"
+    },
     {
       "slug": "raintweak",
       "name": "RainTweak",
@@ -647,6 +662,21 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/spotiflac.xml",
       "status": "stable",
       "shortDescription": "FLAC Downloader for iOS"
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "version": "2.6.1",
+      "previousVersion": "",
+      "date": "2026-09-07",
+      "kind": "new",
+      "changelog": "Nicegram 2.6.1 | build 2.6.1\n\nBuild of Nicegram for iOS 2.6.1 (713)",
+      "downloadURL": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nicegram.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/nicegram.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/nicegram.xml",
+      "status": "stable",
+      "shortDescription": "Independent Telegram client: multi-account, AI, privacy"
     },
     {
       "slug": "nexasc",
@@ -1404,7 +1434,7 @@
       "version": "2.9.0",
       "previousVersion": "",
       "date": "2026-07-05",
-      "kind": "new",
+      "kind": "available",
       "changelog": "Feather 2.9.0 | Feather\n\nThank you for all your feedback and contributions!\n\n> [!TIP]\n> For `idevice` configuration, you can use [Impactor](https://github.com/claration/Impactor?tab=readme-ov-file#pairing-file) for easily retrieving a pairing file for installing!\n\n## What's Changed\n* Added tweak options in default signing options.\n* Added ability to search for identifier's in Library @ismailcarlik in https://github.com/claration/Feather/pull/652\n* Fixed issue in the file enumeration logic, by using the path property instead of method.\n* Fixed credit links.\n* Fixed duplicate repository in recommended repositories.\n\n## New Contributors\n* @xiangfeidexiaohuo made their first contribution in https://github.com/claration/Feather/pull/634\n* @osageling made their first contribution in https://github.com/claration/Feather/pull/642\n\n**Full Changelog**: https://github.com/claration/Feather/compare/v2.8.2...v2.9.0",
       "downloadURL": "https://github.com/claration/Feather/releases/download/v2.9.0/Feather.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Feather.webp",
@@ -1412,21 +1442,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/feather.xml",
       "status": "stable",
       "shortDescription": "On-device app manager, signer and installer"
-    },
-    {
-      "slug": "orbot",
-      "name": "Orbot",
-      "version": "1.12.0",
-      "previousVersion": "",
-      "date": "2026-06-30",
-      "kind": "new",
-      "changelog": "Orbot 1.12.0 | Orbot\n\n- Updated Tor to 0.4.9.11.\n- Updated Snowflake to 2.14.1.\n- Improved explanation of Kindness Mode and its test implications. \n- Slightly improved status error display.\n- Added simplified Chinese translation.\n\n**ATTENTION**: The attached binaries **do not work** without resigning them, e.g. with [AltStore](https://altstore.io). Insofar, they're here mostly for documentary purposes.",
-      "downloadURL": "https://github.com/guardianproject/orbot-apple/releases/download/v1.12.0/Orbot.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Orbot.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/orbot.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/orbot.xml",
-      "status": "stable",
-      "shortDescription": "Tor network tunnel for iOS and iPadOS"
     },
     {
       "slug": "provenance",
@@ -1472,21 +1487,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/bhtwitter.xml",
       "status": "stable",
       "shortDescription": "X (Twitter) with no ads, downloads and the chronological timeline"
-    },
-    {
-      "slug": "delta",
-      "name": "Delta",
-      "version": "1.6",
-      "previousVersion": "",
-      "date": "2024-07-11",
-      "kind": "available",
-      "changelog": "Delta 1.6 | Delta_1_6\n\n## New\n\nApp Icon\n* Brand new legally-compliant app icon (thanks Caroline Moore!)\n* Includes alternative app icons designed by community members:\n* \"Halogenide\" by Sebastiaan de With\n* \"Ketchup\" by Ben McCarthy\n* \"Microchip\" by Sean Fletcher\n\niPad Support\n* Play games full screen on iPad's beautiful display\n* Brand new controller skins designed specifically for iPad (thanks Caroline Moore!)\n* Supports multiple windows in Stage Manager and Split View\n* Automatically pauses games when switching windows (optional)\n\nHandoff\n* Seamlessly switch between iPhone and iPad\n* Continues playing exactly where you left off\n* Also supports Delta on Apple Silicon Macs via Mac App Store\n\nmelonDS 0.9.5\n* Improves DS game compatibility & performance\n* BIOS files are now optional!\n* Supports \"inserting\" GBA games into DS dual-slot\n* Increased Fast Forward speed to 3x (A15 processor or later)\n\nMenu Button Gestures\n* Use gestures while holding menu button to perform quick actions\n* Menu + Horizontal Swipe: Fast Forward\n* Menu + Any Button: Hold Button\n* Menu + Double-Tap: Quick Save\n* Menu + Long-Press: Quick Load\n\nExperimental Features\n* New section in Settings for features by third-party contributors\n* Features are WIP and should be used at user’s discretion\n* Available for Patrons on \"Beta Access\" tier or higher\n\nSave States\n* Sort save states by name\n* View all incompatible screenshots on a separate screen\n* Export save states to import into other emulators\n\n“Display Full Screen” AirPlay Setting\n* Control whether Delta shows games full screen on external displays\n* Disable to use multiple windows on external display with Stage Manager\n\nMisc.\n* Supports Game Mode on iOS 18+\n* Increased DS screen size for default edge-to-edge iPhone landscape skin\n\n## Fixed\n\n* Fixed exporting save file without file extension\n* Fixed interface rotating when playing WarioWare: Twisted!\n* Fixed Pokemon Black & White (2) freezing with C-Gear enabled",
-      "downloadURL": "https://github.com/rileytestut/Delta/releases/download/v1.6/Delta_1_6.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Delta.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/delta.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/delta.xml",
-      "status": "stable",
-      "shortDescription": "All-in-one retro emulator by Riley Testut"
     },
     {
       "slug": "winston",

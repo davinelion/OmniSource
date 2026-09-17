@@ -2,17 +2,17 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-17",
   "totals": {
-    "sources": 125,
-    "healthy": 68,
-    "degraded": 39,
-    "unavailable": 18,
+    "sources": 130,
+    "healthy": 69,
+    "degraded": 42,
+    "unavailable": 19,
     "unknown": 0
   },
   "pipeline": {
     "status": "degraded",
     "lastBuild": "2026-09-17",
-    "appsTotal": 125,
-    "appsHealthy": 68,
+    "appsTotal": 130,
+    "appsHealthy": 69,
     "appsFailing": 17
   },
   "providers": [
@@ -52,8 +52,8 @@
     },
     {
       "provider": "github",
-      "apps": 107,
-      "healthy": 67,
+      "apps": 111,
+      "healthy": 68,
       "unavailable": 1,
       "lastResolvedFrom": {
         "3105": "github:YangJiiii/3105",
@@ -90,6 +90,7 @@
         "maxtube": "github:Ashreq/ashstore-repo",
         "muffinstore": "github:mineek/MuffinStore",
         "mugunghwa": "github:s8ngyu/Mugunghwa",
+        "nicegram": "github:nicegram/Nicegram-iOS",
         "nuvio": "github:NuvioMedia/NuvioMobile",
         "odyssey": "github:Odyssey-Team/Odyssey",
         "onionbrowser": "github:OnionBrowser/OnionBrowser",
@@ -124,14 +125,17 @@
         "ytmusic": "github:mrdrvt99/YTMusicUltimate",
         "zeus": "github:ZeusLN/zeus",
         "airtroller": "github:sourcelocation/AirTroller",
+        "animationspeed": "github:DevelopCubeLab/AnimationSpeed",
         "animegen": "github:cranci1/AnimeGen",
         "anxreader": "github:Anxcye/anx-reader",
+        "batteryinfo": "github:DevelopCubeLab/BatteryInfo",
         "battman": "github:Torrekie/Battman",
         "bhinstagram": "github:BandarHL/BHInstagram",
         "bhtwitter": "github:BandarHL/BHTwitter",
         "bootstrap": "github:roothide/Bootstrap",
         "cartube": "github:Avangelista/CarTube",
         "delta": "github:RileyTestut/Delta",
+        "enablequic": "github:DevelopCubeLab/EnableQUIC",
         "gopeed": "github:GopeedLab/gopeed",
         "hanami": "github:oolxg/Hanami",
         "itransmission": "github:alexsvitlov/iTransmission",
@@ -164,13 +168,22 @@
         "xenios": "github:xenios-jp/XeniOS",
         "yattee": "github:yattee/yattee"
       }
+    },
+    {
+      "provider": "manual",
+      "apps": 1,
+      "healthy": 0,
+      "unavailable": 1,
+      "lastResolvedFrom": {
+        "cercube": "manual"
+      }
     }
   ],
   "deployment": {
     "platform": "GitHub Pages (static)",
     "status": "degraded",
-    "reachable": 107,
-    "total": 125
+    "reachable": 111,
+    "total": 130
   },
   "sources": [
     {
@@ -182,8 +195,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 235,
-      "latencyMs": 235,
+      "latency": 187,
+      "latencyMs": 187,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-14",
       "valid": true,
@@ -200,6 +213,24 @@
           "reachable": true,
           "latencyMs": 235,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 206,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 275,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 187,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -212,31 +243,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 210,
-      "latencyMs": 210,
+      "latency": 248,
+      "latencyMs": 248,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-03",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 199,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 160,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 186,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -302,6 +315,24 @@
           "reachable": true,
           "latencyMs": 210,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 374,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 299,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 248,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -314,31 +345,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 415,
-      "latencyMs": 415,
+      "latency": 183,
+      "latencyMs": 183,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-08-30",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 204,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 165,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 174,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -404,6 +417,24 @@
           "reachable": true,
           "latencyMs": 415,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 335,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 290,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 183,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -416,31 +447,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 279,
-      "latencyMs": 279,
+      "latency": 221,
+      "latencyMs": 221,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-13",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 213,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 78,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 197,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -506,6 +519,24 @@
           "reachable": true,
           "latencyMs": 279,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 245,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 231,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 221,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -518,8 +549,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 291,
-      "latencyMs": 291,
+      "latency": 209,
+      "latencyMs": 209,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-17",
       "valid": true,
@@ -548,6 +579,24 @@
           "reachable": true,
           "latencyMs": 291,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 253,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 293,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 209,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -560,31 +609,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 260,
-      "latencyMs": 260,
+      "latency": 201,
+      "latencyMs": 201,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-07-21",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 221,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 104,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 154,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -650,6 +681,24 @@
           "reachable": true,
           "latencyMs": 260,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 220,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 230,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 201,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -662,8 +711,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 256,
-      "latencyMs": 256,
+      "latency": 271,
+      "latencyMs": 271,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-08-31",
       "valid": true,
@@ -692,6 +741,24 @@
           "reachable": true,
           "latencyMs": 256,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 313,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 322,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 271,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -704,8 +771,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 300,
-      "latencyMs": 300,
+      "latency": 287,
+      "latencyMs": 287,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-12-19",
       "valid": true,
@@ -734,6 +801,24 @@
           "reachable": true,
           "latencyMs": 300,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 454,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 364,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 287,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -746,31 +831,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 280,
-      "latencyMs": 280,
+      "latency": 287,
+      "latencyMs": 287,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-08-28",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 225,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 87,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 161,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -836,6 +903,24 @@
           "reachable": true,
           "latencyMs": 280,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 285,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 313,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 287,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -848,31 +933,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 265,
-      "latencyMs": 265,
+      "latency": 258,
+      "latencyMs": 258,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-08-12",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 218,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 114,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 154,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -938,6 +1005,24 @@
           "reachable": true,
           "latencyMs": 265,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 244,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 312,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 258,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -950,31 +1035,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 377,
-      "latencyMs": 377,
+      "latency": 223,
+      "latencyMs": 223,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-16",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 214,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 103,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 161,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1040,6 +1107,24 @@
           "reachable": true,
           "latencyMs": 377,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 307,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 287,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 223,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1052,31 +1137,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 250,
-      "latencyMs": 250,
+      "latency": 270,
+      "latencyMs": 270,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-09-08",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 218,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 148,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 189,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1142,6 +1209,24 @@
           "reachable": true,
           "latencyMs": 250,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 248,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 318,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 270,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1154,8 +1239,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 205,
-      "latencyMs": 205,
+      "latency": 250,
+      "latencyMs": 250,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-05-29",
       "valid": true,
@@ -1184,6 +1269,24 @@
           "reachable": true,
           "latencyMs": 205,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 270,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 225,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 250,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1196,31 +1299,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 291,
-      "latencyMs": 291,
+      "latency": 192,
+      "latencyMs": 192,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-06-20",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 224,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 78,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 158,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1286,6 +1371,24 @@
           "reachable": true,
           "latencyMs": 291,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 216,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 255,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 192,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1298,31 +1401,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 192,
-      "latencyMs": 192,
+      "latency": 186,
+      "latencyMs": 186,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-08-22",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 182,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 117,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 131,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1388,6 +1473,24 @@
           "reachable": true,
           "latencyMs": 192,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 193,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 233,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 186,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1400,31 +1503,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 257,
-      "latencyMs": 257,
+      "latency": 203,
+      "latencyMs": 203,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-12",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 272,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 99,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 136,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1490,6 +1575,24 @@
           "reachable": true,
           "latencyMs": 257,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 198,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 257,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 203,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1502,8 +1605,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 288,
-      "latencyMs": 288,
+      "latency": 199,
+      "latencyMs": 199,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-02-02",
       "valid": true,
@@ -1532,6 +1635,24 @@
           "reachable": true,
           "latencyMs": 288,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 282,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 209,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 199,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1544,8 +1665,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 282,
-      "latencyMs": 282,
+      "latency": 206,
+      "latencyMs": 206,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-08-17",
       "valid": true,
@@ -1562,6 +1683,24 @@
           "reachable": true,
           "latencyMs": 282,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 213,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 276,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 206,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1574,31 +1713,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 278,
-      "latencyMs": 278,
+      "latency": 202,
+      "latencyMs": 202,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-07-05",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 254,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 105,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 146,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1664,6 +1785,24 @@
           "reachable": true,
           "latencyMs": 278,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 210,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 225,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 202,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1676,31 +1815,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 391,
-      "latencyMs": 391,
+      "latency": 200,
+      "latencyMs": 200,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-08",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 221,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 82,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 163,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1766,6 +1887,24 @@
           "reachable": true,
           "latencyMs": 391,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 334,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 288,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 200,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1778,8 +1917,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 233,
-      "latencyMs": 233,
+      "latency": 260,
+      "latencyMs": 260,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2024-02-13",
       "valid": true,
@@ -1808,6 +1947,24 @@
           "reachable": true,
           "latencyMs": 233,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 266,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 274,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 260,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1820,31 +1977,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 291,
-      "latencyMs": 291,
+      "latency": 200,
+      "latencyMs": 200,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-08-22",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 233,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 107,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 194,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -1910,6 +2049,24 @@
           "reachable": true,
           "latencyMs": 291,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 218,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 198,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 200,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -1922,31 +2079,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 320,
-      "latencyMs": 320,
+      "latency": 300,
+      "latencyMs": 300,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-07-19",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 265,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 113,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 164,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2012,6 +2151,24 @@
           "reachable": true,
           "latencyMs": 320,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 252,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 360,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 300,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2024,8 +2181,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 248,
-      "latencyMs": 248,
+      "latency": 281,
+      "latencyMs": 281,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2022-11-12",
       "valid": true,
@@ -2054,6 +2211,24 @@
           "reachable": true,
           "latencyMs": 248,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 337,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 328,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 281,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2066,31 +2241,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 279,
-      "latencyMs": 279,
+      "latency": 231,
+      "latencyMs": 231,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-02",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 231,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 78,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 176,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2156,6 +2313,24 @@
           "reachable": true,
           "latencyMs": 279,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 256,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 252,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 231,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2168,31 +2343,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 291,
-      "latencyMs": 291,
+      "latency": 218,
+      "latencyMs": 218,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-09-09",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 209,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 97,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 177,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2258,6 +2415,24 @@
           "reachable": true,
           "latencyMs": 291,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 289,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 219,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 218,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2270,8 +2445,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 268,
-      "latencyMs": 268,
+      "latency": 222,
+      "latencyMs": 222,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-01-30",
       "valid": true,
@@ -2300,6 +2475,24 @@
           "reachable": true,
           "latencyMs": 268,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 316,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 315,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 222,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2312,31 +2505,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 275,
-      "latencyMs": 275,
+      "latency": 215,
+      "latencyMs": 215,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-07-17",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 222,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 86,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 123,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2402,6 +2577,24 @@
           "reachable": true,
           "latencyMs": 275,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 214,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 235,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 215,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2414,31 +2607,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 288,
-      "latencyMs": 288,
+      "latency": 246,
+      "latencyMs": 246,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-09-15",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 210,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 94,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 138,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2504,6 +2679,24 @@
           "reachable": true,
           "latencyMs": 288,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 261,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 262,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 246,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2516,31 +2709,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 269,
-      "latencyMs": 269,
+      "latency": 315,
+      "latencyMs": 315,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-03",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 224,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 85,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 155,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2606,6 +2781,24 @@
           "reachable": true,
           "latencyMs": 269,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 209,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 289,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 315,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2618,31 +2811,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 384,
-      "latencyMs": 384,
+      "latency": 257,
+      "latencyMs": 257,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-15",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 222,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 109,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 153,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2708,6 +2883,24 @@
           "reachable": true,
           "latencyMs": 384,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 274,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 326,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 257,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2720,31 +2913,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 349,
-      "latencyMs": 349,
+      "latency": 341,
+      "latencyMs": 341,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-08-03",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 233,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 87,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 173,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2810,6 +2985,24 @@
           "reachable": true,
           "latencyMs": 349,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 340,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 367,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 341,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2822,31 +3015,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 304,
-      "latencyMs": 304,
+      "latency": 195,
+      "latencyMs": 195,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-07-12",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 251,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 169,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 138,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -2912,6 +3087,24 @@
           "reachable": true,
           "latencyMs": 304,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 284,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 270,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 195,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2924,8 +3117,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 250,
-      "latencyMs": 250,
+      "latency": 215,
+      "latencyMs": 215,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2022-11-10",
       "valid": true,
@@ -2954,6 +3147,60 @@
           "reachable": true,
           "latencyMs": 250,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 273,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 381,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 215,
+          "detail": "HTTP 302"
+        }
+      ]
+    },
+    {
+      "id": "nicegram",
+      "app": "nicegram",
+      "name": "Nicegram",
+      "source": "nicegram/Nicegram-iOS",
+      "sourceURL": "https://github.com/nicegram/Nicegram-iOS",
+      "type": "github",
+      "status": "healthy",
+      "reachable": true,
+      "latency": 281,
+      "latencyMs": 281,
+      "checkedAt": "2026-09-17",
+      "lastUpdate": "2026-09-07",
+      "valid": true,
+      "detail": "HTTP 302",
+      "history": [
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 307,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 238,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 281,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2966,8 +3213,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 325,
-      "latencyMs": 325,
+      "latency": 195,
+      "latencyMs": 195,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-17",
       "valid": true,
@@ -2984,6 +3231,24 @@
           "reachable": true,
           "latencyMs": 325,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 193,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 310,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 195,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -2996,31 +3261,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 257,
-      "latencyMs": 257,
+      "latency": 237,
+      "latencyMs": 237,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2023-04-04",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 230,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 140,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 170,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3086,6 +3333,24 @@
           "reachable": true,
           "latencyMs": 257,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 207,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 191,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 237,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3098,8 +3363,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 251,
-      "latencyMs": 251,
+      "latency": 259,
+      "latencyMs": 259,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-08-11",
       "valid": true,
@@ -3128,6 +3393,24 @@
           "reachable": true,
           "latencyMs": 251,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 297,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 306,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 259,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3140,8 +3423,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 352,
-      "latencyMs": 352,
+      "latency": 249,
+      "latencyMs": 249,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-06-30",
       "valid": true,
@@ -3170,6 +3453,24 @@
           "reachable": true,
           "latencyMs": 352,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 269,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 315,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 249,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3182,31 +3483,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 280,
-      "latencyMs": 280,
+      "latency": 239,
+      "latencyMs": 239,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-09-16",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 190,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 89,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 147,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3272,6 +3555,24 @@
           "reachable": true,
           "latencyMs": 280,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 302,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 248,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 239,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3284,31 +3585,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 253,
-      "latencyMs": 253,
+      "latency": 222,
+      "latencyMs": 222,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-07-23",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 284,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 83,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 167,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3374,6 +3657,24 @@
           "reachable": true,
           "latencyMs": 253,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 217,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 207,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 222,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3386,31 +3687,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 272,
-      "latencyMs": 272,
+      "latency": 215,
+      "latencyMs": 215,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-07-28",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 237,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 91,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 176,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3476,6 +3759,24 @@
           "reachable": true,
           "latencyMs": 272,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 289,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 245,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 215,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3495,24 +3796,6 @@
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 229,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 114,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 168,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3578,6 +3861,24 @@
           "reachable": true,
           "latencyMs": 310,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 251,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 202,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 310,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3590,8 +3891,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 262,
-      "latencyMs": 262,
+      "latency": 218,
+      "latencyMs": 218,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-14",
       "valid": true,
@@ -3620,6 +3921,24 @@
           "reachable": true,
           "latencyMs": 262,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 220,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 189,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 218,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3639,24 +3958,6 @@
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 232,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 106,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 176,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3722,6 +4023,24 @@
           "reachable": true,
           "latencyMs": 208,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 216,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 245,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 208,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3734,31 +4053,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 297,
-      "latencyMs": 297,
+      "latency": 206,
+      "latencyMs": 206,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2024-01-17",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 264,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 89,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 180,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3824,6 +4125,24 @@
           "reachable": true,
           "latencyMs": 297,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 223,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 203,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 206,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3836,31 +4155,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 236,
-      "latencyMs": 236,
+      "latency": 232,
+      "latencyMs": 232,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-15",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 285,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 86,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 143,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -3926,6 +4227,24 @@
           "reachable": true,
           "latencyMs": 236,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 204,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 216,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 232,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -3938,31 +4257,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 370,
-      "latencyMs": 370,
+      "latency": 312,
+      "latencyMs": 312,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-08-20",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 245,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 85,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 163,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4028,6 +4329,24 @@
           "reachable": true,
           "latencyMs": 370,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 319,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 417,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 312,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4040,31 +4359,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 359,
-      "latencyMs": 359,
+      "latency": 302,
+      "latencyMs": 302,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-07",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 264,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 93,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 138,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4130,6 +4431,24 @@
           "reachable": true,
           "latencyMs": 359,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 325,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 385,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 302,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4142,8 +4461,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 304,
-      "latencyMs": 304,
+      "latency": 257,
+      "latencyMs": 257,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-02-08",
       "valid": true,
@@ -4172,6 +4491,24 @@
           "reachable": true,
           "latencyMs": 304,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 331,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 336,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 257,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4184,31 +4521,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 227,
-      "latencyMs": 227,
+      "latency": 211,
+      "latencyMs": 211,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-08-27",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 222,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 62,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 156,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4274,6 +4593,24 @@
           "reachable": true,
           "latencyMs": 227,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 225,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 225,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 211,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4286,31 +4623,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 256,
-      "latencyMs": 256,
+      "latency": 243,
+      "latencyMs": 243,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-09-06",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 238,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 158,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 164,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4376,6 +4695,24 @@
           "reachable": true,
           "latencyMs": 256,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 239,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 265,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 243,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4388,8 +4725,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 355,
-      "latencyMs": 355,
+      "latency": 252,
+      "latencyMs": 252,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-07",
       "valid": true,
@@ -4418,6 +4755,24 @@
           "reachable": true,
           "latencyMs": 355,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 281,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 295,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 252,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4430,31 +4785,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 263,
-      "latencyMs": 263,
+      "latency": 205,
+      "latencyMs": 205,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2023-09-23",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 224,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 83,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 146,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4520,6 +4857,24 @@
           "reachable": true,
           "latencyMs": 263,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 219,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 205,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 205,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4532,8 +4887,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 331,
-      "latencyMs": 331,
+      "latency": 228,
+      "latencyMs": 228,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-12-05",
       "valid": true,
@@ -4556,6 +4911,24 @@
           "reachable": true,
           "latencyMs": 331,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 281,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 391,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 228,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4568,31 +4941,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 265,
-      "latencyMs": 265,
+      "latency": 216,
+      "latencyMs": 216,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-08-14",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 239,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 109,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 158,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4658,6 +5013,24 @@
           "reachable": true,
           "latencyMs": 265,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 201,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 267,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 216,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4670,31 +5043,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 294,
-      "latencyMs": 294,
+      "latency": 187,
+      "latencyMs": 187,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2020-06-09",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 224,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 142,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 181,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4760,6 +5115,24 @@
           "reachable": true,
           "latencyMs": 294,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 251,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 244,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 187,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4772,31 +5145,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 280,
-      "latencyMs": 280,
+      "latency": 219,
+      "latencyMs": 219,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-08-15",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 211,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 71,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 138,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4862,6 +5217,24 @@
           "reachable": true,
           "latencyMs": 280,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 266,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 267,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 219,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4874,8 +5247,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 266,
-      "latencyMs": 266,
+      "latency": 257,
+      "latencyMs": 257,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-08-28",
       "valid": true,
@@ -4892,6 +5265,24 @@
           "reachable": true,
           "latencyMs": 266,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 303,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 272,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 257,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -4904,31 +5295,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 227,
-      "latencyMs": 227,
+      "latency": 205,
+      "latencyMs": 205,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-13",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 245,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 118,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 193,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -4994,6 +5367,24 @@
           "reachable": true,
           "latencyMs": 227,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 211,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 212,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 205,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5006,8 +5397,8 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 270,
-      "latencyMs": 270,
+      "latency": 278,
+      "latencyMs": 278,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-02-09",
       "valid": true,
@@ -5036,6 +5427,24 @@
           "reachable": true,
           "latencyMs": 270,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 244,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 461,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 278,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5048,31 +5457,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 321,
-      "latencyMs": 321,
+      "latency": 246,
+      "latencyMs": 246,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2024-06-24",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 230,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 103,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 181,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5138,6 +5529,24 @@
           "reachable": true,
           "latencyMs": 321,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 281,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 265,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 246,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5150,31 +5559,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 363,
-      "latencyMs": 363,
+      "latency": 315,
+      "latencyMs": 315,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-14",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 224,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 95,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 161,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5240,6 +5631,24 @@
           "reachable": true,
           "latencyMs": 363,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 377,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 349,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 315,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5252,31 +5661,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 353,
-      "latencyMs": 353,
+      "latency": 298,
+      "latencyMs": 298,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-14",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 215,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 101,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 162,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5342,6 +5733,24 @@
           "reachable": true,
           "latencyMs": 353,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 369,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 381,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 298,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5354,31 +5763,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 361,
-      "latencyMs": 361,
+      "latency": 319,
+      "latencyMs": 319,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-09",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 276,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 87,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 147,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5444,6 +5835,24 @@
           "reachable": true,
           "latencyMs": 361,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 318,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 382,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 319,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5456,31 +5865,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 351,
-      "latencyMs": 351,
+      "latency": 325,
+      "latencyMs": 325,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-12",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 226,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 129,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 155,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5546,6 +5937,24 @@
           "reachable": true,
           "latencyMs": 351,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 334,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 385,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 325,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5558,31 +5967,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 375,
-      "latencyMs": 375,
+      "latency": 406,
+      "latencyMs": 406,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-09-14",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 244,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 102,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 241,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5648,6 +6039,24 @@
           "reachable": true,
           "latencyMs": 375,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 352,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 379,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 406,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5660,31 +6069,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 317,
-      "latencyMs": 317,
+      "latency": 288,
+      "latencyMs": 288,
       "checkedAt": "2026-09-14",
       "lastUpdate": "2026-09-15",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 254,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 93,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 159,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": false,
@@ -5750,6 +6141,24 @@
           "reachable": true,
           "latencyMs": 317,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 278,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 290,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 288,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5762,31 +6171,13 @@
       "type": "github",
       "status": "healthy",
       "reachable": true,
-      "latency": 271,
-      "latencyMs": 271,
+      "latency": 220,
+      "latencyMs": 220,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-09-02",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 252,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 124,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 163,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5852,6 +6243,24 @@
           "reachable": true,
           "latencyMs": 271,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 246,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 282,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 220,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5864,8 +6273,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 236,
-      "latencyMs": 236,
+      "latency": 286,
+      "latencyMs": 286,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2022-11-26",
       "valid": true,
@@ -5894,6 +6303,60 @@
           "reachable": true,
           "latencyMs": 236,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 275,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 277,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 286,
+          "detail": "HTTP 302"
+        }
+      ]
+    },
+    {
+      "id": "animationspeed",
+      "app": "animationspeed",
+      "name": "Animation Speed",
+      "source": "DevelopCubeLab/AnimationSpeed",
+      "sourceURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "type": "github",
+      "status": "degraded",
+      "reachable": true,
+      "latency": 217,
+      "latencyMs": 217,
+      "checkedAt": "2026-09-17",
+      "lastUpdate": "2025-05-27",
+      "valid": true,
+      "detail": "HTTP 302",
+      "history": [
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 236,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 293,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 217,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -5906,31 +6369,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 288,
-      "latencyMs": 288,
+      "latency": 179,
+      "latencyMs": 179,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2025-03-04",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 235,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 123,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 282,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -5996,6 +6441,24 @@
           "reachable": true,
           "latencyMs": 288,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 405,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 252,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 179,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6008,31 +6471,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 281,
-      "latencyMs": 281,
+      "latency": 208,
+      "latencyMs": 208,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-03-19",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 258,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 144,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 160,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6098,6 +6543,60 @@
           "reachable": true,
           "latencyMs": 281,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 257,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 204,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 208,
+          "detail": "HTTP 302"
+        }
+      ]
+    },
+    {
+      "id": "batteryinfo",
+      "app": "batteryinfo",
+      "name": "Battery Info",
+      "source": "DevelopCubeLab/BatteryInfo",
+      "sourceURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "type": "github",
+      "status": "degraded",
+      "reachable": true,
+      "latency": 267,
+      "latencyMs": 267,
+      "checkedAt": "2026-09-17",
+      "lastUpdate": "2025-07-09",
+      "valid": true,
+      "detail": "HTTP 302",
+      "history": [
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 241,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 329,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 267,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6110,8 +6609,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 225,
-      "latencyMs": 225,
+      "latency": 268,
+      "latencyMs": 268,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-01-19",
       "valid": true,
@@ -6127,6 +6626,24 @@
           "at": "2026-09-17",
           "reachable": true,
           "latencyMs": 225,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 308,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 252,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 268,
           "detail": "HTTP 302"
         }
       ]
@@ -6170,6 +6687,24 @@
           "reachable": true,
           "latencyMs": 271,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 273,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 244,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 271,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6182,31 +6717,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 257,
-      "latencyMs": 257,
+      "latency": 310,
+      "latencyMs": 310,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2025-05-13",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 214,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 95,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 164,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6272,6 +6789,24 @@
           "reachable": true,
           "latencyMs": 257,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 259,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 274,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 310,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6284,31 +6819,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 232,
-      "latencyMs": 232,
+      "latency": 204,
+      "latencyMs": 204,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-06-12",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 229,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 93,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 135,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6374,6 +6891,24 @@
           "reachable": true,
           "latencyMs": 232,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 215,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 214,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 204,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6386,8 +6921,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 247,
-      "latencyMs": 247,
+      "latency": 199,
+      "latencyMs": 199,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2023-01-23",
       "valid": true,
@@ -6416,6 +6951,60 @@
           "reachable": true,
           "latencyMs": 247,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 291,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 287,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 199,
+          "detail": "HTTP 302"
+        }
+      ]
+    },
+    {
+      "id": "cercube",
+      "app": "cercube",
+      "name": "Cercube for YouTube",
+      "source": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "sourceURL": "https://cercube.com",
+      "type": "manual",
+      "status": "unavailable",
+      "reachable": false,
+      "latency": 1673,
+      "latencyMs": 1673,
+      "checkedAt": "2026-09-17",
+      "lastUpdate": "2026-09-18",
+      "valid": true,
+      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+      "history": [
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1682,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1679,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1673,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -6428,31 +7017,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 281,
-      "latencyMs": 281,
+      "latency": 211,
+      "latencyMs": 211,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2024-07-11",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 248,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 90,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 136,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6518,6 +7089,60 @@
           "reachable": true,
           "latencyMs": 281,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 220,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 288,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 211,
+          "detail": "HTTP 302"
+        }
+      ]
+    },
+    {
+      "id": "enablequic",
+      "app": "enablequic",
+      "name": "EnableQUIC",
+      "source": "DevelopCubeLab/EnableQUIC",
+      "sourceURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "type": "github",
+      "status": "degraded",
+      "reachable": true,
+      "latency": 315,
+      "latencyMs": 315,
+      "checkedAt": "2026-09-17",
+      "lastUpdate": "2025-02-21",
+      "valid": true,
+      "detail": "HTTP 302",
+      "history": [
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 241,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 280,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 315,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6530,31 +7155,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1668,
-      "latencyMs": 1668,
+      "latency": 1770,
+      "latencyMs": 1770,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-05",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 79,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 201,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 100,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6620,6 +7227,24 @@
           "reachable": false,
           "latencyMs": 1668,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1687,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1567,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1770,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -6632,31 +7257,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 292,
-      "latencyMs": 292,
+      "latency": 1354,
+      "latencyMs": 1354,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-03-18",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 271,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 80,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 169,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6722,6 +7329,24 @@
           "reachable": true,
           "latencyMs": 292,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 231,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 186,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 1354,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6734,31 +7359,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 284,
-      "latencyMs": 284,
+      "latency": 196,
+      "latencyMs": 196,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2024-06-03",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 226,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 103,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 173,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6824,6 +7431,24 @@
           "reachable": true,
           "latencyMs": 284,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 307,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 238,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 196,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -6836,31 +7461,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1581,
-      "latencyMs": 1581,
+      "latency": 1726,
+      "latencyMs": 1726,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-01",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 64,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 98,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 110,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -6926,6 +7533,24 @@
           "reachable": false,
           "latencyMs": 1581,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1657,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1733,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1726,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -6938,31 +7563,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1723,
-      "latencyMs": 1723,
+      "latency": 1779,
+      "latencyMs": 1779,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-01",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 93,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 197,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 122,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7028,6 +7635,24 @@
           "reachable": false,
           "latencyMs": 1723,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1643,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1576,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1779,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -7040,31 +7665,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1767,
-      "latencyMs": 1767,
+      "latency": 1775,
+      "latencyMs": 1775,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-09",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 230,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 203,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 213,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7130,6 +7737,24 @@
           "reachable": false,
           "latencyMs": 1767,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1773,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1778,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1775,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -7142,31 +7767,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1697,
-      "latencyMs": 1697,
+      "latency": 1712,
+      "latencyMs": 1712,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-13",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 81,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 182,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 146,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7232,6 +7839,24 @@
           "reachable": false,
           "latencyMs": 1697,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1600,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1747,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1712,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -7244,8 +7869,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 215,
-      "latencyMs": 215,
+      "latency": 223,
+      "latencyMs": 223,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2024-01-12",
       "valid": true,
@@ -7274,6 +7899,24 @@
           "reachable": true,
           "latencyMs": 215,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 326,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 250,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 223,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -7286,31 +7929,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 204,
-      "latencyMs": 204,
+      "latency": 246,
+      "latencyMs": 246,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-05-24",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 201,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 92,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 167,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7376,6 +8001,24 @@
           "reachable": true,
           "latencyMs": 204,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 374,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 241,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 246,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -7388,8 +8031,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 222,
-      "latencyMs": 222,
+      "latency": 251,
+      "latencyMs": 251,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-05-22",
       "valid": true,
@@ -7418,6 +8061,24 @@
           "reachable": true,
           "latencyMs": 222,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 207,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 331,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 251,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -7430,31 +8091,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 270,
-      "latencyMs": 270,
+      "latency": 217,
+      "latencyMs": 217,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2022-12-12",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 227,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 92,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 179,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7520,6 +8163,24 @@
           "reachable": true,
           "latencyMs": 270,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 324,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 276,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 217,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -7532,31 +8193,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1586,
-      "latencyMs": 1586,
+      "latency": 1675,
+      "latencyMs": 1675,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-10",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 118,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 107,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 115,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7622,6 +8265,24 @@
           "reachable": false,
           "latencyMs": 1586,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1670,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1565,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1675,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -7634,31 +8295,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 261,
-      "latencyMs": 261,
+      "latency": 223,
+      "latencyMs": 223,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2024-07-09",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 218,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 83,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 170,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7724,6 +8367,24 @@
           "reachable": true,
           "latencyMs": 261,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 248,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 229,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 223,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -7736,31 +8397,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 287,
-      "latencyMs": 287,
+      "latency": 256,
+      "latencyMs": 256,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-05-27",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 247,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 92,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 163,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7826,6 +8469,24 @@
           "reachable": true,
           "latencyMs": 287,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 278,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 299,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 256,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -7838,31 +8499,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1661,
-      "latencyMs": 1661,
+      "latency": 1821,
+      "latencyMs": 1821,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-10",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 94,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 86,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 90,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -7928,6 +8571,24 @@
           "reachable": false,
           "latencyMs": 1661,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1585,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1619,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1821,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -7940,31 +8601,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 238,
-      "latencyMs": 238,
+      "latency": 262,
+      "latencyMs": 262,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-02-01",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 231,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 117,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 188,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8030,6 +8673,24 @@
           "reachable": true,
           "latencyMs": 238,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 257,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 269,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 262,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8042,31 +8703,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 258,
-      "latencyMs": 258,
+      "latency": 252,
+      "latencyMs": 252,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2025-11-03",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 296,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 103,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 163,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8132,6 +8775,24 @@
           "reachable": true,
           "latencyMs": 258,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 216,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 308,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 252,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8144,31 +8805,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1572,
-      "latencyMs": 1572,
+      "latency": 1583,
+      "latencyMs": 1583,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-07",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 87,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 97,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 147,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8234,6 +8877,24 @@
           "reachable": false,
           "latencyMs": 1572,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1580,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1568,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1583,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -8246,31 +8907,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 269,
-      "latencyMs": 269,
+      "latency": 246,
+      "latencyMs": 246,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-03-20",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 228,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 98,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 160,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8336,6 +8979,24 @@
           "reachable": true,
           "latencyMs": 269,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 273,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 230,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 246,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8348,31 +9009,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 297,
-      "latencyMs": 297,
+      "latency": 305,
+      "latencyMs": 305,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-01-11",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 256,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 96,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 160,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8438,6 +9081,24 @@
           "reachable": true,
           "latencyMs": 297,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 318,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 324,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 305,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8450,8 +9111,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 249,
-      "latencyMs": 249,
+      "latency": 240,
+      "latencyMs": 240,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2025-08-29",
       "valid": true,
@@ -8480,6 +9141,24 @@
           "reachable": true,
           "latencyMs": 249,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 215,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 234,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 240,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8492,31 +9171,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 271,
-      "latencyMs": 271,
+      "latency": 197,
+      "latencyMs": 197,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-05-16",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 217,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 53,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 170,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8582,6 +9243,24 @@
           "reachable": true,
           "latencyMs": 271,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 276,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 247,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 197,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8594,31 +9273,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 258,
-      "latencyMs": 258,
+      "latency": 235,
+      "latencyMs": 235,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-03-14",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 223,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 103,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 162,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8684,6 +9345,24 @@
           "reachable": true,
           "latencyMs": 258,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 330,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 240,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 235,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8696,31 +9375,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 233,
-      "latencyMs": 233,
+      "latency": 280,
+      "latencyMs": 280,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2024-11-23",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 244,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 108,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 174,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8786,6 +9447,24 @@
           "reachable": true,
           "latencyMs": 233,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 249,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 313,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 280,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8798,31 +9477,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 225,
-      "latencyMs": 225,
+      "latency": 229,
+      "latencyMs": 229,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2025-11-02",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 232,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 75,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 164,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8888,6 +9549,24 @@
           "reachable": true,
           "latencyMs": 225,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 263,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 273,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 229,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -8900,31 +9579,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 267,
-      "latencyMs": 267,
+      "latency": 244,
+      "latencyMs": 244,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2025-09-26",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 242,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 114,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 175,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -8990,6 +9651,24 @@
           "reachable": true,
           "latencyMs": 267,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 224,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 192,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 244,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9002,31 +9681,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1661,
-      "latencyMs": 1661,
+      "latency": 1686,
+      "latencyMs": 1686,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-10",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 81,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 187,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 94,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9092,6 +9753,24 @@
           "reachable": false,
           "latencyMs": 1661,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1687,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1806,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1686,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -9104,31 +9783,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1658,
-      "latencyMs": 1658,
+      "latency": 1787,
+      "latencyMs": 1787,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-07-25",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 584,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 393,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": false,
-          "latencyMs": 25816,
-          "detail": "timed out"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9194,6 +9855,24 @@
           "reachable": false,
           "latencyMs": 1658,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1688,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1810,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1787,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -9206,31 +9885,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1661,
-      "latencyMs": 1661,
+      "latency": 1718,
+      "latencyMs": 1718,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-09",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 525,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 360,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": false,
-          "latencyMs": 25791,
-          "detail": "timed out"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9296,6 +9957,24 @@
           "reachable": false,
           "latencyMs": 1661,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1633,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1742,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1718,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -9308,31 +9987,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 302,
-      "latencyMs": 302,
+      "latency": 358,
+      "latencyMs": 358,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-03-04",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 213,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 168,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 199,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9398,6 +10059,24 @@
           "reachable": true,
           "latencyMs": 302,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 279,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 250,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 358,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9410,8 +10089,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 245,
-      "latencyMs": 245,
+      "latency": 269,
+      "latencyMs": 269,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2024-12-31",
       "valid": true,
@@ -9440,6 +10119,24 @@
           "reachable": true,
           "latencyMs": 245,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 290,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 317,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 269,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9452,8 +10149,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 293,
-      "latencyMs": 293,
+      "latency": 302,
+      "latencyMs": 302,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2025-07-29",
       "valid": true,
@@ -9482,6 +10179,24 @@
           "reachable": true,
           "latencyMs": 293,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 244,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 204,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 302,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9494,31 +10209,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1672,
-      "latencyMs": 1672,
+      "latency": 1678,
+      "latencyMs": 1678,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-10",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 72,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 159,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 111,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9584,6 +10281,24 @@
           "reachable": false,
           "latencyMs": 1672,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1679,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1657,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1678,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -9596,31 +10311,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 240,
-      "latencyMs": 240,
+      "latency": 208,
+      "latencyMs": 208,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-06-05",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 222,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 92,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 163,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9686,6 +10383,24 @@
           "reachable": true,
           "latencyMs": 240,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 255,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 304,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 208,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9698,31 +10413,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 232,
-      "latencyMs": 232,
+      "latency": 237,
+      "latencyMs": 237,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2025-02-23",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 210,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 118,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 188,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9788,6 +10485,24 @@
           "reachable": true,
           "latencyMs": 232,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 239,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 206,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 237,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9800,31 +10515,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 213,
-      "latencyMs": 213,
+      "latency": 216,
+      "latencyMs": 216,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-06-02",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 248,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 110,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 153,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9890,6 +10587,24 @@
           "reachable": true,
           "latencyMs": 213,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 204,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 190,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 216,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -9902,31 +10617,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1629,
-      "latencyMs": 1629,
+      "latency": 1752,
+      "latencyMs": 1752,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-05",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 105,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 243,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 304,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -9992,6 +10689,24 @@
           "reachable": false,
           "latencyMs": 1629,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1656,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1693,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1752,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -10004,31 +10719,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1587,
-      "latencyMs": 1587,
+      "latency": 1732,
+      "latencyMs": 1732,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-12",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 81,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 182,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 153,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10094,6 +10791,24 @@
           "reachable": false,
           "latencyMs": 1587,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1620,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1757,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1732,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -10106,31 +10821,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1612,
-      "latencyMs": 1612,
+      "latency": 1836,
+      "latencyMs": 1836,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-10",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 93,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 89,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 94,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10196,6 +10893,24 @@
           "reachable": false,
           "latencyMs": 1612,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1667,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1698,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1836,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -10208,31 +10923,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 334,
-      "latencyMs": 334,
+      "latency": 293,
+      "latencyMs": 293,
       "checkedAt": "2026-09-13",
       "lastUpdate": "2026-01-07",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 225,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 82,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 169,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10298,6 +10995,24 @@
           "reachable": true,
           "latencyMs": 334,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 310,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 356,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 293,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -10310,8 +11025,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 231,
-      "latencyMs": 231,
+      "latency": 243,
+      "latencyMs": 243,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-04-23",
       "valid": true,
@@ -10340,6 +11055,24 @@
           "reachable": true,
           "latencyMs": 231,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 228,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 310,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 243,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -10352,8 +11085,8 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 330,
-      "latencyMs": 330,
+      "latency": 269,
+      "latencyMs": 269,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2024-09-12",
       "valid": true,
@@ -10382,6 +11115,24 @@
           "reachable": true,
           "latencyMs": 330,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 307,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 383,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 269,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -10394,31 +11145,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1858,
-      "latencyMs": 1858,
+      "latency": 1628,
+      "latencyMs": 1628,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-09",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 511,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 195,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 232,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10484,6 +11217,24 @@
           "reachable": false,
           "latencyMs": 1858,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1747,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1753,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1628,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -10496,31 +11247,13 @@
       "type": "altstore",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1591,
-      "latencyMs": 1591,
+      "latency": 1770,
+      "latencyMs": 1770,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-09-05",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 85,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 84,
-          "detail": "HTTP 200"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 89,
-          "detail": "HTTP 200"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10586,6 +11319,24 @@
           "reachable": false,
           "latencyMs": 1591,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1667,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1780,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1770,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -10598,31 +11349,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 314,
-      "latencyMs": 314,
+      "latency": 233,
+      "latencyMs": 233,
       "checkedAt": "2026-09-07",
       "lastUpdate": "2026-01-03T17:51:54Z",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 186,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 87,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 137,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10688,6 +11421,24 @@
           "reachable": true,
           "latencyMs": 314,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 263,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 308,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 233,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -10700,31 +11451,13 @@
       "type": "github",
       "status": "unavailable",
       "reachable": false,
-      "latency": 1705,
-      "latencyMs": 1705,
+      "latency": 1710,
+      "latencyMs": 1710,
       "checkedAt": "2026-09-17",
       "lastUpdate": "2026-08-22",
       "valid": true,
       "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 285,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 321,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 244,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10790,6 +11523,24 @@
           "reachable": false,
           "latencyMs": 1705,
           "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1746,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1747,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": false,
+          "latencyMs": 1710,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
         }
       ]
     },
@@ -10802,31 +11553,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 292,
-      "latencyMs": 292,
+      "latency": 382,
+      "latencyMs": 382,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2026-06-08",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 217,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 85,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 207,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10892,6 +11625,24 @@
           "reachable": true,
           "latencyMs": 292,
           "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 254,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 323,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 382,
+          "detail": "HTTP 302"
         }
       ]
     },
@@ -10904,31 +11655,13 @@
       "type": "github",
       "status": "degraded",
       "reachable": true,
-      "latency": 251,
-      "latencyMs": 251,
+      "latency": 183,
+      "latencyMs": 183,
       "checkedAt": "2026-09-10",
       "lastUpdate": "2024-01-28",
       "valid": true,
       "detail": "HTTP 302",
       "history": [
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 215,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 119,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-14",
-          "reachable": true,
-          "latencyMs": 185,
-          "detail": "HTTP 302"
-        },
         {
           "at": "2026-09-14",
           "reachable": true,
@@ -10993,6 +11726,24 @@
           "at": "2026-09-17",
           "reachable": true,
           "latencyMs": 251,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 268,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 240,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 183,
           "detail": "HTTP 302"
         }
       ]

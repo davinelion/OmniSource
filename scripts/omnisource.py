@@ -29,5 +29,21 @@ sys.path.insert(0, _SRC)
 
 from omnisource.cli import main
 
+
+def _build_ipa_downloader() -> int:
+    """Regenerate the direct-download index after a successful feed build."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from build_ipa_downloader import main as downloader_main
+
+    try:
+        return downloader_main([])
+    finally:
+        sys.path.remove(str(Path(__file__).resolve().parent))
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    exit_code = main()
+    if exit_code == 0:
+        downloader_code = _build_ipa_downloader()
+        sys.exit(max(exit_code, downloader_code))
+    sys.exit(exit_code)

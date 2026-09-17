@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-09-17",
-  "count": 125,
+  "count": 130,
   "formula": {
     "weights": {
       "recency": 0.4,
@@ -236,6 +236,23 @@
       "downloadReachable": true
     },
     {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "category": "photo-video",
+      "version": "6.1.3",
+      "releaseDate": "2026-09-18",
+      "score": 0.4,
+      "signals": {
+        "recency": 1.0,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
+    },
+    {
       "slug": "conduit",
       "name": "Conduit",
       "category": "utilities",
@@ -336,26 +353,26 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
-    },
-    {
-      "slug": "youpro",
-      "name": "YouPro",
-      "category": "photo-video",
-      "version": "21.37.4",
-      "releaseDate": "2026-09-14",
-      "score": 0.98,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
     }
   ],
   "recentlyUpdated": [
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "category": "photo-video",
+      "version": "6.1.3",
+      "releaseDate": "2026-09-18",
+      "score": 0.4,
+      "signals": {
+        "recency": 1.0,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
+    },
     {
       "slug": "raintweak",
       "name": "RainTweak",
@@ -507,23 +524,6 @@
       },
       "verificationLevel": "VERIFIED",
       "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "youpro",
-      "name": "YouPro",
-      "category": "photo-video",
-      "version": "21.37.4",
-      "releaseDate": "2026-09-14",
-      "score": 0.98,
-      "signals": {
-        "recency": 0.95,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
       "downloadReachable": true
     }
   ],
@@ -924,6 +924,23 @@
       "name": "Table Habit",
       "category": "utilities",
       "version": "1.27.6",
+      "releaseDate": "2026-09-07",
+      "score": 0.7333,
+      "signals": {
+        "recency": 0.8333,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "category": "social",
+      "version": "2.6.1",
       "releaseDate": "2026-09-07",
       "score": 0.7333,
       "signals": {
@@ -2353,6 +2370,74 @@
       "category": "utilities",
       "version": "1.0.3",
       "releaseDate": "2026-01-19",
+      "score": 0.4,
+      "signals": {
+        "recency": 0.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "category": "photo-video",
+      "version": "6.1.3",
+      "releaseDate": "2026-09-18",
+      "score": 0.4,
+      "signals": {
+        "recency": 1.0,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "category": "utilities",
+      "version": "1.2.2",
+      "releaseDate": "2025-07-09",
+      "score": 0.4,
+      "signals": {
+        "recency": 0.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "category": "utilities",
+      "version": "1.2.4",
+      "releaseDate": "2025-02-21",
+      "score": 0.4,
+      "signals": {
+        "recency": 0.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "category": "utilities",
+      "version": "1.0.1",
+      "releaseDate": "2025-05-27",
       "score": 0.4,
       "signals": {
         "recency": 0.0,

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 340,
-  "edgeCount": 1011,
+  "count": 353,
+  "edgeCount": 1051,
   "nodes": [
     {
       "id": "app:spotiflac",
@@ -2311,6 +2311,96 @@
       "type": "source",
       "label": "Torrekie/Battman",
       "url": "https://github.com/Torrekie/Battman"
+    },
+    {
+      "id": "app:cercube",
+      "type": "app",
+      "label": "Cercube for YouTube",
+      "slug": "cercube",
+      "bundleId": "com.cercube.ios",
+      "category": "photo-video",
+      "version": "6.1.3"
+    },
+    {
+      "id": "dev:cercube",
+      "type": "developer",
+      "label": "Cercube"
+    },
+    {
+      "id": "source:cercubecercubecomofficialsidel",
+      "type": "source",
+      "label": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "url": "https://cercube.com"
+    },
+    {
+      "id": "app:nicegram",
+      "type": "app",
+      "label": "Nicegram",
+      "slug": "nicegram",
+      "bundleId": "app.nicegram",
+      "category": "social",
+      "version": "2.6.1"
+    },
+    {
+      "id": "dev:nicegram-(appvillis-uab)",
+      "type": "developer",
+      "label": "Nicegram (Appvillis UAB)"
+    },
+    {
+      "id": "source:nicegramnicegramios",
+      "type": "source",
+      "label": "nicegram/Nicegram-iOS",
+      "url": "https://github.com/nicegram/Nicegram-iOS"
+    },
+    {
+      "id": "app:batteryinfo",
+      "type": "app",
+      "label": "Battery Info",
+      "slug": "batteryinfo",
+      "bundleId": "com.developlab.BatteryInfo",
+      "category": "utilities",
+      "version": "1.2.2"
+    },
+    {
+      "id": "dev:developcubelab",
+      "type": "developer",
+      "label": "DevelopCubeLab"
+    },
+    {
+      "id": "source:developcubelabbatteryinfo",
+      "type": "source",
+      "label": "DevelopCubeLab/BatteryInfo",
+      "url": "https://github.com/DevelopCubeLab/BatteryInfo"
+    },
+    {
+      "id": "app:enablequic",
+      "type": "app",
+      "label": "EnableQUIC",
+      "slug": "enablequic",
+      "bundleId": "com.developlab.EnableQUIC",
+      "category": "utilities",
+      "version": "1.2.4"
+    },
+    {
+      "id": "source:developcubelabenablequic",
+      "type": "source",
+      "label": "DevelopCubeLab/EnableQUIC",
+      "url": "https://github.com/DevelopCubeLab/EnableQUIC"
+    },
+    {
+      "id": "app:animationspeed",
+      "type": "app",
+      "label": "Animation Speed",
+      "slug": "animationspeed",
+      "bundleId": "com.developlab.AnimationSpeed",
+      "category": "utilities",
+      "version": "1.0.1"
+    },
+    {
+      "id": "source:developcubelabanimationspeed",
+      "type": "source",
+      "label": "DevelopCubeLab/AnimationSpeed",
+      "url": "https://github.com/DevelopCubeLab/AnimationSpeed"
     }
   ],
   "edges": [
@@ -3562,6 +3652,56 @@
     {
       "source": "app:battman",
       "target": "source:torrekiebattman",
+      "type": "source"
+    },
+    {
+      "source": "app:cercube",
+      "target": "dev:cercube",
+      "type": "developer"
+    },
+    {
+      "source": "app:cercube",
+      "target": "source:cercubecercubecomofficialsidel",
+      "type": "source"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "dev:nicegram-(appvillis-uab)",
+      "type": "developer"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "source:nicegramnicegramios",
+      "type": "source"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "dev:developcubelab",
+      "type": "developer"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "source:developcubelabbatteryinfo",
+      "type": "source"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "dev:developcubelab",
+      "type": "developer"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "source:developcubelabenablequic",
+      "type": "source"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "dev:developcubelab",
+      "type": "developer"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "source:developcubelabanimationspeed",
       "type": "source"
     },
     {
@@ -7396,6 +7536,156 @@
     {
       "source": "app:battman",
       "target": "app:trollinstallerx",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:cercube",
+      "target": "app:yattee",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:winston",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:voyager",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:twitchadblock",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:turrit-mxgram",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:ttkillerplus",
+      "type": "related"
+    },
+    {
+      "source": "app:nicegram",
+      "target": "app:thunder",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:enablequic",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:animationspeed",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:batteryinfo",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:batteryinfo",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:animationspeed",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:enablequic",
+      "target": "app:utm",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:enablequic",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:batteryinfo",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:zeus",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:wdbfontoverwrite",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:vibecontainers",
+      "type": "related"
+    },
+    {
+      "source": "app:animationspeed",
+      "target": "app:utm",
       "type": "related"
     }
   ]

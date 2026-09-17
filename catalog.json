@@ -6987,6 +6987,252 @@
         "minOSVersion": "12.0",
         "descriptionTemplate": "Battman {version} | TrollStore"
       }
+    },
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "subtitle": "Offline, PiP, background play and no ads for YouTube",
+      "bundleIdentifier": "com.cercube.ios",
+      "developerName": "Cercube",
+      "category": "photo-video",
+      "tintColor": "FF0000",
+      "icon": "YouTube.webp",
+      "localizedDescription": "Cercube for YouTube is the official YouTube enhancement from the original Cercube developer, relaunched in 2026: cache media for offline playback, use Picture in Picture and background playback, block supported video, feed and Shorts ads, choose default playback quality separately for Wi-Fi and cellular, reorder or hide tabs, auto-replay, skip sponsored segments, show dislike counts, queue videos - in 14 languages. It hooks the App Store YouTube app. Official distribution: apt.cercube.com (rootful, rootless and roothide jailbreak) and the altstore.cercube.com sideload source for AltStore (Classic), SideStore, Feather, eSign and friends.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://cercube.com",
+      "verification": {
+        "method": "altstore",
+        "publisher": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+        "codeSigned": false,
+        "checksumPublished": true
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official package com.cercube.ios v6.1.3 from the developer's own repository (apt.cercube.com, SHA256-published). The direct link below is the official arm64 .deb - install it with TrollStore or on a jailbroken device. Without a jailbreak, add the official source https://altstore.cercube.com to AltStore (Classic), SideStore or Feather instead; it injects Cercube into the App Store YouTube app. The sideloaded home-screen icon is the YouTube icon (this entry reuses it); the tweak's own branding icon is published at https://cdn.cercube.com/assets/icon.png."
+      },
+      "manualRelease": {
+        "version": "6.1.3",
+        "date": "2026-09-18",
+        "localizedDescription": "Cercube for YouTube 6.1.3 - the current official release (verified against apt.cercube.com on 2026-09-18).\n\nThis release improves caching, ad blocking, and compatibility with older iOS versions.\n- Added compatibility for iOS 15-16\n- Minor bug fixes and improvements\n\nPreviously: 6.1.2 added dislike counts, sponsored segment skipping and 14 languages; 6.0.1 added compatibility for recent iOS versions.",
+        "downloadURL": "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb",
+        "fallbackDownloadURLs": [
+          "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm.deb",
+          "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64e.deb"
+        ],
+        "size": 2017412,
+        "minOSVersion": "15.0"
+      }
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "subtitle": "Independent Telegram client: multi-account, AI, privacy",
+      "bundleIdentifier": "app.nicegram",
+      "developerName": "Nicegram (Appvillis UAB)",
+      "category": "social",
+      "tintColor": "111111",
+      "icon": "Nicegram.webp",
+      "localizedDescription": "Nicegram is an independent, open-source messaging client built on the Telegram API (not affiliated with Telegram): manage unlimited accounts on one device, hidden accounts and chats (Double Bottom), built-in AI assistant and in-chat translation, voice-call recording in Saved Messages, quick replies and templates, pre-recorded video messages, a non-custodial Web3 wallet and escrow tools. Official distribution: App Store, TestFlight, and unsigned GitHub-release IPAs signed per the official install guide; this entry tracks the official nicegram/Nicegram-iOS release builds.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/nicegram/Nicegram-iOS",
+      "verification": {
+        "method": "github-release",
+        "publisher": "nicegram/Nicegram-iOS",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official release build from nicegram/Nicegram-iOS (release name carries the app version, e.g. 'Nicegram 2.6.1 (713)'). The .ipa is unsigned and meant to be signed per the official guide (nicegram.me/download -> 'How to install IPA?'); also published on the App Store (id1608870673) and TestFlight. Requires iOS 15.0+ (App Store listing)."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "nicegram/Nicegram-iOS",
+        "assetNamePattern": "^Nicegram\\.ipa$",
+        "versionPattern": "Nicegram ([0-9]+[.][0-9]+[.][0-9]+)",
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "15.0",
+        "descriptionTemplate": "Nicegram {version} | build {secondary}"
+      }
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "subtitle": "Battery health, cycles and charge telemetry",
+      "bundleIdentifier": "com.developlab.BatteryInfo",
+      "developerName": "DevelopCubeLab",
+      "category": "utilities",
+      "tintColor": "3BB2E8",
+      "icon": "BatteryInfo.webp",
+      "localizedDescription": "Battery Info is a TrollStore utility from DevelopCubeLab: live charge voltage and current, full capacity, cycle count, temperature and a persistent charging-history database (QMax and limit voltage per charge). The developer also distributes it through the Havoc sideload store (havoc.app/package/batteryinfo).",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "verification": {
+        "method": "github-release",
+        "publisher": "DevelopCubeLab/BatteryInfo",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "12.2",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/BatteryInfo; install with TrollStore, or rename to .ipa if your client rejects the extension."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "DevelopCubeLab/BatteryInfo",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "assetNamePattern": "^com\\.developlab\\.batteryinfo_[0-9.]+\\.tipa$",
+        "versionFromTag": true,
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "12.2",
+        "descriptionTemplate": "Battery Info {version} | TrollStore"
+      }
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "subtitle": "Enable QUIC for faster, more resilient networking",
+      "bundleIdentifier": "com.developlab.EnableQUIC",
+      "developerName": "DevelopCubeLab",
+      "category": "utilities",
+      "tintColor": "38AEE0",
+      "icon": "EnableQUIC.webp",
+      "localizedDescription": "EnableQUIC is a TrollStore utility from DevelopCubeLab that switches the network stack onto QUIC where supported, with per-app enable/disable, restore-default-settings (including from backup), configuration-file locking and advanced settings.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "verification": {
+        "method": "github-release",
+        "publisher": "DevelopCubeLab/EnableQUIC",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "12.2",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/EnableQUIC; install with TrollStore, or rename to .ipa if your client rejects the extension."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "DevelopCubeLab/EnableQUIC",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "assetNamePattern": "^EnableQUIC_[0-9.]+\\.tipa$",
+        "versionFromTag": true,
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "12.2",
+        "descriptionTemplate": "EnableQUIC {version} | TrollStore"
+      }
+    },
+    {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "subtitle": "System-wide UI animation speed control",
+      "bundleIdentifier": "com.developlab.AnimationSpeed",
+      "developerName": "DevelopCubeLab",
+      "category": "utilities",
+      "tintColor": "35A8E0",
+      "icon": "AnimationSpeed.webp",
+      "localizedDescription": "Animation Speed is a TrollStore utility from DevelopCubeLab that changes the global UI animation speed with a dial (speed range 0-10), with English localization.",
+      "screenshots": [],
+      "featured": false,
+      "status": "stable",
+      "upstreamURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "verification": {
+        "method": "github-release",
+        "publisher": "DevelopCubeLab/AnimationSpeed",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "12.2",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/AnimationSpeed; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
+      },
+      "upstream": {
+        "provider": "github",
+        "repo": "DevelopCubeLab/AnimationSpeed",
+        "assetSuffixes": [
+          ".tipa"
+        ],
+        "assetNamePattern": "^AnimationSpeed_[0-9.]+\\.tipa$",
+        "versionFromTag": true,
+        "maxPages": 3,
+        "keepVersions": 1,
+        "minOSVersion": "12.2",
+        "descriptionTemplate": "Animation Speed {version} | TrollStore"
+      }
     }
   ]
 }

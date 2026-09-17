@@ -26,6 +26,14 @@
       "bytes": 7156,
       "sha256": "16458ee041bcc5070dc0be436a6d0936cb1a48fa4943a6175eb4250d5d578cf0"
     },
+    "animationspeed": {
+      "file": "AnimationSpeed.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/AnimationSpeed.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 9474,
+      "sha256": "a7f4b4b765e62f0126ce06891a763b8a6d5abf72e463cb3b9fe6565d3de766cf"
+    },
     "animegen": {
       "file": "AnimeGen.webp",
       "url": "https://iamsmmh.github.io/OmniSource/assets/AnimeGen.webp",
@@ -65,6 +73,14 @@
       "exists": true,
       "bytes": 4204,
       "sha256": "8b14cdd0bd28dbb1d16bf22a6143bd85c878b6ae24867b0dc0c9cad178b5fc46"
+    },
+    "batteryinfo": {
+      "file": "BatteryInfo.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/BatteryInfo.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 3464,
+      "sha256": "e9bc264fe1a6db60e628d2104e74a834df8aa323b6470bd602ad3ac84b267891"
     },
     "battman": {
       "file": "Battman.webp",
@@ -129,6 +145,14 @@
       "exists": true,
       "bytes": 7592,
       "sha256": "d0f8c55b21789374706b06412615ab0b8d35879f7e71ef66c1331cb430281877"
+    },
+    "cercube": {
+      "file": "YouTube.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 1086,
+      "sha256": "815fde3b8251e538445adef592182be322055486b13115b99aba22e837628e85"
     },
     "chan": {
       "file": "Chan.webp",
@@ -209,6 +233,14 @@
       "exists": true,
       "bytes": 19490,
       "sha256": "43b2470fa236c5d45f2c26b00d36b454b89560222d52b8bba501445fc5d83f0d"
+    },
+    "enablequic": {
+      "file": "EnableQUIC.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/EnableQUIC.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 9856,
+      "sha256": "455fc8527358e0eea197988ebd1bad06f74ad719aac5321ca1cb4469260026d2"
     },
     "escapeos": {
       "file": "EscapeOS.webp",
@@ -489,6 +521,14 @@
       "exists": true,
       "bytes": 6320,
       "sha256": "5c9cc7fb769dd70d17944646eb99df20b182a8a9469d0a06c25c24a71304c44b"
+    },
+    "nicegram": {
+      "file": "Nicegram.webp",
+      "url": "https://iamsmmh.github.io/OmniSource/assets/Nicegram.webp",
+      "fallback": "https://iamsmmh.github.io/OmniSource/assets/placeholders/app.svg",
+      "exists": true,
+      "bytes": 6858,
+      "sha256": "282574a6b6dd7d7f4a37c3d4a852609bd775d8799c06bbbfe3642caa0931ad56"
     },
     "nuvio": {
       "file": "Nuvio.webp",
@@ -1093,6 +1133,7 @@
       "apps": [
         "animegen",
         "cartube",
+        "cercube",
         "fladder",
         "infuseplus",
         "maxtube",
@@ -1111,7 +1152,7 @@
         "ytkp",
         "ytlite"
       ],
-      "count": 19
+      "count": 20
     },
     "social": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
@@ -1130,6 +1171,7 @@
         "msgplusx",
         "neofreebird",
         "nexasc",
+        "nicegram",
         "raintweak",
         "redditfilter",
         "ryukgram",
@@ -1147,14 +1189,16 @@
         "voyager",
         "winston"
       ],
-      "count": 30
+      "count": 31
     },
     "utilities": {
       "icon": "https://iamsmmh.github.io/OmniSource/assets/placeholders/category.svg",
       "apps": [
         "3105",
+        "animationspeed",
         "anxreader",
         "appstoreplusplus",
+        "batteryinfo",
         "battman",
         "bluewallet",
         "bootstrap",
@@ -1163,6 +1207,7 @@
         "dopamine",
         "dopamine-roothide",
         "dynamiccow",
+        "enablequic",
         "escapeos",
         "feather",
         "helium",
@@ -1195,23 +1240,26 @@
         "wdbfontoverwrite",
         "zeus"
       ],
-      "count": 42
+      "count": 45
     }
   },
   "missing": [],
   "screenshotsMissing": [
     "airtroller",
+    "animationspeed",
     "animegen",
     "anxreader",
     "anymex",
     "apollo",
     "appstoreplusplus",
+    "batteryinfo",
     "bhinstagram",
     "bluewallet",
     "bootstrap",
     "byetunes",
     "caperfhud",
     "cartube",
+    "cercube",
     "chan",
     "chatsen",
     "conduit",
@@ -1220,6 +1268,7 @@
     "dolphinish",
     "dopamine",
     "dopamine-roothide",
+    "enablequic",
     "escapeos",
     "fladder",
     "glow",
@@ -1250,6 +1299,7 @@
     "nebuloiptv",
     "neofreebird",
     "nexasc",
+    "nicegram",
     "nuvio",
     "odyssey",
     "orbot",
@@ -1302,11 +1352,11 @@
     "zeus"
   ],
   "totals": {
-    "apps": 125,
-    "iconsOk": 125,
+    "apps": 130,
+    "iconsOk": 130,
     "iconsMissing": 0,
     "placeholdersOk": 3,
     "screenshotsDeclared": 25,
-    "screenshotsMissing": 100
+    "screenshotsMissing": 105
   }
 }

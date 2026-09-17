@@ -72,7 +72,7 @@ for f in feeds/*.json; do
   related.json | reputation.json | download-intelligence.json | community.json | \
   install.json | search-index.json | compare.json | screenshots.json | \
   integrity_report.json | dead_apps.json | collections.json | \
-  translation-status.json | asset-manifest.json) continue ;;
+  translation-status.json | asset-manifest.json | ipa-downloader.json) continue ;;
     *) feeds+=("$f") ;;
   esac
 done

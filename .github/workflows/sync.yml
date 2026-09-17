@@ -163,7 +163,7 @@ jobs:
           # minimal on purpose: a stray file here means the build misbehaved.
           git add -A -- '*.json' '*.xml' '*.gz' 'api/**' 'apps/**' 'compare/**' \
             'collections/**' 'sources/**' 'docs/index.html' 'discover/**' 'graph/**' \
-            'reports/**' README.md index.html \
+            'reports/**' 'ipa-downloader/' README.md index.html \
             'sitemap.xml' 'robots.txt' '.nojekyll'
 
           if git diff --cached --quiet; then

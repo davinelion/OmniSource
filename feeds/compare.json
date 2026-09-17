@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 125,
+  "count": 130,
   "apps": [
     {
       "slug": "spotiflac",
@@ -2497,6 +2497,106 @@
       "downloadReachable": true,
       "compatibility": {
         "minOSVersion": "12.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "icon": "assets/YouTube.webp",
+      "category": "photo-video",
+      "version": "6.1.3",
+      "releaseDate": "2026-09-18",
+      "source": "Cercube (cercube.com - official sideload source altstore.cercube.com, jailbreak repo apt.cercube.com)",
+      "sourceURL": "https://cercube.com",
+      "verificationLevel": "UNVERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": false,
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "icon": "assets/Nicegram.webp",
+      "category": "social",
+      "version": "2.6.1",
+      "releaseDate": "2026-09-07",
+      "source": "nicegram/Nicegram-iOS",
+      "sourceURL": "https://github.com/nicegram/Nicegram-iOS",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "icon": "assets/BatteryInfo.webp",
+      "category": "utilities",
+      "version": "1.2.2",
+      "releaseDate": "2025-07-09",
+      "source": "DevelopCubeLab/BatteryInfo",
+      "sourceURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "12.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "icon": "assets/EnableQUIC.webp",
+      "category": "utilities",
+      "version": "1.2.4",
+      "releaseDate": "2025-02-21",
+      "source": "DevelopCubeLab/EnableQUIC",
+      "sourceURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "12.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ]
+      }
+    },
+    {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "icon": "assets/AnimationSpeed.webp",
+      "category": "utilities",
+      "version": "1.0.1",
+      "releaseDate": "2025-05-27",
+      "source": "DevelopCubeLab/AnimationSpeed",
+      "sourceURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+      "verificationLevel": "VERIFIED",
+      "updateFrequencyDays": 0.0,
+      "downloadReachable": true,
+      "compatibility": {
+        "minOSVersion": "12.2",
         "devices": [
           "iphone",
           "ipad"

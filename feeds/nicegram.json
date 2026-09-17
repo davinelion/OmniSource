@@ -1,0 +1,108 @@
+{
+  "name": "OmniSource - Nicegram",
+  "identifier": "com.iamsmmh.omnisource.nicegram",
+  "apiVersion": "v2",
+  "subtitle": "Independent Telegram client: multi-account, AI, privacy",
+  "description": "Standalone distribution feed for Nicegram, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/nicegram.json",
+  "apps": [
+    {
+      "name": "Nicegram",
+      "bundleIdentifier": "app.nicegram",
+      "developerName": "Nicegram (Appvillis UAB)",
+      "subtitle": "Independent Telegram client: multi-account, AI, privacy",
+      "localizedDescription": "Nicegram is an independent, open-source messaging client built on the Telegram API (not affiliated with Telegram): manage unlimited accounts on one device, hidden accounts and chats (Double Bottom), built-in AI assistant and in-chat translation, voice-call recording in Saved Messages, quick replies and templates, pre-recorded video messages, a non-custodial Web3 wallet and escrow tools. Official distribution: App Store, TestFlight, and unsigned GitHub-release IPAs signed per the official install guide; this entry tracks the official nicegram/Nicegram-iOS release builds.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nicegram.webp",
+      "tintColor": "111111",
+      "category": "social",
+      "version": "2.6.1",
+      "versionDate": "2026-09-07",
+      "versionDescription": "Nicegram 2.6.1 | build 2.6.1\n\nBuild of Nicegram for iOS 2.6.1 (713)",
+      "downloadURL": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa",
+      "size": 126339077,
+      "versions": [
+        {
+          "version": "2.6.1",
+          "date": "2026-09-07",
+          "localizedDescription": "Nicegram 2.6.1 | build 2.6.1\n\nBuild of Nicegram for iOS 2.6.1 (713)",
+          "downloadURL": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa",
+          "size": 126339077,
+          "minOSVersion": "15.0",
+          "releaseUrl": "https://github.com/nicegram/Nicegram-iOS/releases/tag/build-713",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "Nicegram.DSYMs.zip",
+              "downloadUrl": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.DSYMs.zip",
+              "platform": "unknown",
+              "architecture": null,
+              "fileType": "ZIP",
+              "size": 191328702,
+              "sha256": "a6f77c42b29b0bbccc2fbc63e32269cb04d5a59dbcbd660fa2bbc0a0af9b5924",
+              "downloads": 112,
+              "mimeType": "application/zip",
+              "installable": false
+            },
+            {
+              "filename": "Nicegram.ipa",
+              "downloadUrl": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 126339077,
+              "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+              "downloads": 177,
+              "mimeType": "application/zip",
+              "installable": true
+            }
+          ],
+          "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+          "downloads": 177
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "nicegram",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/nicegram/Nicegram-iOS",
+        "sourceURL": "https://github.com/nicegram/Nicegram-iOS",
+        "verification": {
+          "method": "github-release",
+          "publisher": "nicegram/Nicegram-iOS",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "15.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official release build from nicegram/Nicegram-iOS (release name carries the app version, e.g. 'Nicegram 2.6.1 (713)'). The .ipa is unsigned and meant to be signed per the official guide (nicegram.me/download -> 'How to install IPA?'); also published on the App Store (id1608870673) and TestFlight. Requires iOS 15.0+ (App Store listing)."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2026-09-07"
+        }
+      }
+    }
+  ],
+  "news": []
+}

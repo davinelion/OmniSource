@@ -1,0 +1,144 @@
+# -----------------------------------------------------------------------------
+# IPA Downloader — build apps and publish direct download links.
+#
+# Rebuilds the app feeds and emits the direct-link surface:
+#   * feeds/ipa-downloader.json  — machine-readable index of every app's
+#     newest direct download URL (size, date, icon, min OS, per-client
+#     install deep links)
+#   * ipa-downloader/index.html  — self-contained searchable page of direct
+#     download buttons, served at /ipa-downloader/ on GitHub Pages
+#
+# Default mode is an offline rebuild from the committed feeds/state (the
+# check_reproducible gate below fails the run if anything else would change,
+# so this workflow can never clobber a concurrent sync.yml run). Feed syncing
+# itself stays sync.yml's job; dispatch with full_sync=true to force an
+# upstream sync here as well (then the standard generated set is committed
+# alongside the downloader artifacts).
+# -----------------------------------------------------------------------------
+name: Build IPA Downloader
+
+on:
+  schedule:
+    # Daily, offset from sync.yml (0 */6) and publish.yml (30 6 * * *).
+    - cron: "15 4 * * *"
+  push:
+    branches: [main]
+    paths:
+      - catalog.json
+      - assets/**
+      - scripts/omnisource.py
+      - scripts/build_ipa_downloader.py
+      - src/omnisource/**
+      - .github/workflows/ipa-downloader.yml
+  workflow_dispatch:
+    inputs:
+      full_sync:
+        description: "Sync upstreams (GitHub API) instead of rebuilding from committed state"
+        type: boolean
+        default: false
+
+# Never let two downloader runs commit at once; never cancel mid-commit.
+concurrency:
+  group: ipa-downloader
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  build:
+    name: Build apps and direct-link index
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # Reuse the provider HTTP response cache between runs (metadata only).
+      - name: Cache upstream metadata
+        uses: actions/cache@v5
+        with:
+          path: .cache/omnisource
+          key: omnisource-http-${{ runner.os }}
+          restore-keys: |
+            omnisource-http-
+
+      - name: Build apps and downloader index
+        env:
+          GH_TOKEN: ${{ github.token }}
+          # Default: offline rebuild from committed state; full_sync=true
+          # dispatches hit the upstreams. Inputs reach the shell through the
+          # environment only — never interpolate ${{ }} into run: scripts.
+          FULL_SYNC: ${{ inputs.full_sync }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [ "${EVENT_NAME}" = "schedule" ] && [ "${FULL_SYNC}" = "true" ]; then
+            ARGS+=(--incremental)
+          fi
+          if [ "${FULL_SYNC}" != "true" ]; then
+            ARGS+=(--no-sync --no-health)
+          fi
+          python3 scripts/omnisource.py "${ARGS[@]}"
+
+      - name: Verify generated artifacts are reproducible
+        run: |
+          set -euo pipefail
+          python3 scripts/check_reproducible.py
+
+      - name: Validate downloader index
+        run: |
+          set -euo pipefail
+          python3 scripts/build_ipa_downloader.py --check
+          jq -e '.count > 0 and all(.apps[]; has("downloadURL"))' feeds/ipa-downloader.json >/dev/null
+
+      - name: Commit downloader artifacts
+        if: github.event_name != 'pull_request'
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Offline mode only ever touches the downloader artifacts (the
+          # reproducibility gate above guarantees it). A full sync may also
+          # refresh the standard generated set.
+          git add -A -- 'feeds/ipa-downloader.json' 'ipa-downloader/'
+          if [ "${FULL_SYNC}" = "true" ]; then
+            git add -A -- '*.json' '*.xml' '*.gz' 'api/**' 'apps/**' 'compare/**' \
+              'collections/**' 'sources/**' 'docs/index.html' 'discover/**' 'graph/**' \
+              'reports/**' README.md index.html \
+              'sitemap.xml' 'robots.txt' '.nojekyll'
+          fi
+          if git diff --cached --quiet; then
+            echo "Downloader index unchanged."
+            exit 0
+          fi
+          git commit -m "chore(downloader): refresh IPA direct-link index [skip ci]"
+          for attempt in 1 2 3; do
+            if git pull --rebase --autostash origin "${GITHUB_REF_NAME}"; then
+              break
+            fi
+            if [ "${attempt}" -eq 3 ]; then
+              echo "::error::git pull --rebase failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 5))
+          done
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              break
+            fi
+            if [ "${attempt}" -eq 3 ]; then
+              echo "::error::git push failed after 3 attempts"
+              exit 1
+            fi
+            sleep $((attempt * 5))
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          done

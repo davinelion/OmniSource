@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-17",
-  "count": 125,
+  "count": 130,
   "fuse": {
     "keys": [
       {
@@ -4664,6 +4664,196 @@
       "icon": "assets/Battman.webp",
       "pageURL": "apps/battman/",
       "version": "1.0.3",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "cercube",
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "subtitle": "Offline, PiP, background play and no ads for YouTube",
+      "shortDescription": "Offline, PiP, background play and no ads for YouTube",
+      "description": "Cercube for YouTube is the official YouTube enhancement from the original Cercube developer, relaunched in 2026: cache media for offline playback, use Picture in Picture and background playback, block supported video, feed and Shorts ads, choose default playback quality separately for Wi-Fi and cellular, reorder or hide tabs, auto-replay, skip sponsored segments, show dislike counts, queue videos - in 14 languages. It hooks the App Store YouTube app. Official distribution: apt.cercube.com (rootful, rootless and roothide jailbreak) and the altstore.cercube.com sideload source for AltStore (Classic), SideStore, Feather, eSign and friends.",
+      "category": "photo-video",
+      "tags": [
+        "photo-video"
+      ],
+      "keywords": [
+        "ads",
+        "and",
+        "background",
+        "cercube",
+        "for",
+        "no",
+        "offline",
+        "photo",
+        "pip",
+        "play",
+        "video",
+        "youtube"
+      ],
+      "developer": "Cercube",
+      "bundleId": "com.cercube.ios",
+      "icon": "assets/YouTube.webp",
+      "pageURL": "apps/cercube/",
+      "version": "6.1.3",
+      "verificationLevel": "UNVERIFIED",
+      "downloadReachable": false,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "nicegram",
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "subtitle": "Independent Telegram client: multi-account, AI, privacy",
+      "shortDescription": "Independent Telegram client: multi-account, AI, privacy",
+      "description": "Nicegram is an independent, open-source messaging client built on the Telegram API (not affiliated with Telegram): manage unlimited accounts on one device, hidden accounts and chats (Double Bottom), built-in AI assistant and in-chat translation, voice-call recording in Saved Messages, quick replies and templates, pre-recorded video messages, a non-custodial Web3 wallet and escrow tools. Official distribution: App Store, TestFlight, and unsigned GitHub-release IPAs signed per the official install guide; this entry tracks the official nicegram/Nicegram-iOS release builds.",
+      "category": "social",
+      "tags": [
+        "social"
+      ],
+      "keywords": [
+        "account",
+        "ai",
+        "appvillis",
+        "client",
+        "independent",
+        "multi",
+        "nicegram",
+        "privacy",
+        "social",
+        "telegram",
+        "uab"
+      ],
+      "developer": "Nicegram (Appvillis UAB)",
+      "bundleId": "app.nicegram",
+      "icon": "assets/Nicegram.webp",
+      "pageURL": "apps/nicegram/",
+      "version": "2.6.1",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "batteryinfo",
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "subtitle": "Battery health, cycles and charge telemetry",
+      "shortDescription": "Battery health, cycles and charge telemetry",
+      "description": "Battery Info is a TrollStore utility from DevelopCubeLab: live charge voltage and current, full capacity, cycle count, temperature and a persistent charging-history database (QMax and limit voltage per charge). The developer also distributes it through the Havoc sideload store (havoc.app/package/batteryinfo).",
+      "category": "utilities",
+      "tags": [
+        "utilities"
+      ],
+      "keywords": [
+        "and",
+        "battery",
+        "charge",
+        "cycles",
+        "developcubelab",
+        "health",
+        "info",
+        "telemetry",
+        "utilities"
+      ],
+      "developer": "DevelopCubeLab",
+      "bundleId": "com.developlab.BatteryInfo",
+      "icon": "assets/BatteryInfo.webp",
+      "pageURL": "apps/batteryinfo/",
+      "version": "1.2.2",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "enablequic",
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "subtitle": "Enable QUIC for faster, more resilient networking",
+      "shortDescription": "Enable QUIC for faster, more resilient networking",
+      "description": "EnableQUIC is a TrollStore utility from DevelopCubeLab that switches the network stack onto QUIC where supported, with per-app enable/disable, restore-default-settings (including from backup), configuration-file locking and advanced settings.",
+      "category": "utilities",
+      "tags": [
+        "utilities"
+      ],
+      "keywords": [
+        "developcubelab",
+        "enable",
+        "enablequic",
+        "faster",
+        "for",
+        "more",
+        "networking",
+        "quic",
+        "resilient",
+        "utilities"
+      ],
+      "developer": "DevelopCubeLab",
+      "bundleId": "com.developlab.EnableQUIC",
+      "icon": "assets/EnableQUIC.webp",
+      "pageURL": "apps/enablequic/",
+      "version": "1.2.4",
+      "verificationLevel": "VERIFIED",
+      "downloadReachable": true,
+      "clientCompatibility": [
+        "altstore",
+        "sidestore",
+        "feather",
+        "esign",
+        "livecontainer"
+      ]
+    },
+    {
+      "id": "animationspeed",
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "subtitle": "System-wide UI animation speed control",
+      "shortDescription": "System-wide UI animation speed control",
+      "description": "Animation Speed is a TrollStore utility from DevelopCubeLab that changes the global UI animation speed with a dial (speed range 0-10), with English localization.",
+      "category": "utilities",
+      "tags": [
+        "utilities"
+      ],
+      "keywords": [
+        "animation",
+        "control",
+        "developcubelab",
+        "speed",
+        "system",
+        "ui",
+        "utilities",
+        "wide"
+      ],
+      "developer": "DevelopCubeLab",
+      "bundleId": "com.developlab.AnimationSpeed",
+      "icon": "assets/AnimationSpeed.webp",
+      "pageURL": "apps/animationspeed/",
+      "version": "1.0.1",
       "verificationLevel": "VERIFIED",
       "downloadReachable": true,
       "clientCompatibility": [

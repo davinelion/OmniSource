@@ -6,11 +6,11 @@
     "stale": 180,
     "archived": 365
   },
-  "count": 54,
+  "count": 57,
   "summary": {
     "warning": 9,
     "stale": 13,
-    "archived": 32,
+    "archived": 35,
     "critical": 0
   },
   "deadApps": [
@@ -27,6 +27,18 @@
       ]
     },
     {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "lastUpdate": "2025-05-27",
+      "daysSinceUpdate": 478,
+      "classification": "archived",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 478 days (threshold 365)"
+      ]
+    },
+    {
       "slug": "animegen",
       "name": "AnimeGen",
       "lastUpdate": "2025-03-04",
@@ -36,6 +48,18 @@
       "supersededReleases": 0,
       "reasons": [
         "no update for 562 days (threshold 365)"
+      ]
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "lastUpdate": "2025-07-09",
+      "daysSinceUpdate": 435,
+      "classification": "archived",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 435 days (threshold 365)"
       ]
     },
     {
@@ -120,6 +144,18 @@
       "supersededReleases": 0,
       "reasons": [
         "no update for 1323 days (threshold 365)"
+      ]
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "lastUpdate": "2025-02-21",
+      "daysSinceUpdate": 573,
+      "classification": "archived",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 573 days (threshold 365)"
       ]
     },
     {
@@ -2020,6 +2056,62 @@
       "supersededReleases": 0,
       "reasons": [
         "no update for 241 days (threshold 180)"
+      ]
+    },
+    {
+      "slug": "cercube",
+      "name": "Cercube for YouTube",
+      "lastUpdate": "2026-09-18",
+      "daysSinceUpdate": 0,
+      "classification": "healthy",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": []
+    },
+    {
+      "slug": "nicegram",
+      "name": "Nicegram",
+      "lastUpdate": "2026-09-07",
+      "daysSinceUpdate": 10,
+      "classification": "healthy",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": []
+    },
+    {
+      "slug": "batteryinfo",
+      "name": "Battery Info",
+      "lastUpdate": "2025-07-09",
+      "daysSinceUpdate": 435,
+      "classification": "archived",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 435 days (threshold 365)"
+      ]
+    },
+    {
+      "slug": "enablequic",
+      "name": "EnableQUIC",
+      "lastUpdate": "2025-02-21",
+      "daysSinceUpdate": 573,
+      "classification": "archived",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 573 days (threshold 365)"
+      ]
+    },
+    {
+      "slug": "animationspeed",
+      "name": "Animation Speed",
+      "lastUpdate": "2025-05-27",
+      "daysSinceUpdate": 478,
+      "classification": "archived",
+      "removedReleases": 0,
+      "supersededReleases": 0,
+      "reasons": [
+        "no update for 478 days (threshold 365)"
       ]
     }
   ]

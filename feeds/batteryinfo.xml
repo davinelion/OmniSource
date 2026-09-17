@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Battery Info — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json</link>
+    <description>Release feed for Battery Info within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 09 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Battery Info v1.2.2</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json</link>
+      <guid isPermaLink="false">batteryinfo-1.2.2</guid>
+      <pubDate>Wed, 09 Jul 2025 00:00:00 +0000</pubDate>
+      <description><![CDATA[Battery Info 1.2.2 | TrollStore
+
+1. Added 'full capacity'.
+2. Improve history add saving of QMax and limit voltage data.
+3. Improve the database.
+4. Other improvements.
+
+
+Zh:
+1. 新增 满充容量
+2. 改进历史记录，新增保存QMax和限制电压数据
+3. 改进数据库，为将来的非TrollStore版做好准备，当前进度新建文件夹，并验证了可行性
+4. 其他小改进]]></description>
+      <enclosure url="https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa" length="346882" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

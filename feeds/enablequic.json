@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource - EnableQUIC",
+  "identifier": "com.iamsmmh.omnisource.enablequic",
+  "apiVersion": "v2",
+  "subtitle": "Enable QUIC for faster, more resilient networking",
+  "description": "Standalone distribution feed for EnableQUIC, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/enablequic.json",
+  "apps": [
+    {
+      "name": "EnableQUIC",
+      "bundleIdentifier": "com.developlab.EnableQUIC",
+      "developerName": "DevelopCubeLab",
+      "subtitle": "Enable QUIC for faster, more resilient networking",
+      "localizedDescription": "EnableQUIC is a TrollStore utility from DevelopCubeLab that switches the network stack onto QUIC where supported, with per-app enable/disable, restore-default-settings (including from backup), configuration-file locking and advanced settings.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/EnableQUIC.webp",
+      "tintColor": "38AEE0",
+      "category": "utilities",
+      "version": "1.2.4",
+      "versionDate": "2025-02-21",
+      "versionDescription": "EnableQUIC 1.2.4 | TrollStore\n\n1. Bug fix #4, Improve the process of 'Restore default settings'. Firstly, restore the default configuration from the backup after improvement. If the backup configuration file does not exist, use the built-in rules to restore the default settings.\n\nAdvanced settings to enable:\nClick the icon at the top of the app 5 times, then shake the device to open Advanced Mode.  \n\nZh:\n1. 修复#4，改进恢复默认设置流程，改进后先从备份中恢复默认配置，如果备份的配置文件不存在，则使用内置规则恢复默认设置。  \n\n开启流程（普通用户）：启用->注销  \n关闭流程（普通用户）：恢复默认->注销  \n**App无需保留后台，设置成功后即可关闭App**  \n\n高级设置仅供了解原理的用户使用，您可以自定义每一项的设置，如果您不知道这些开关的含义，请使用默认设置  \n高级设置开启方法：\n点击App顶部的图标5次，然后摇晃下设备，即可打开高级模式  \n开启流程（高级用户）：启用->注销(可省略)->锁定文件权限->注销  \n关闭流程（高级用户）：解锁文件权限->恢复默认->注销  \n**卸载App或抹除/升级设备系统之前请解锁文件权限，以防止出现未知错误**",
+      "downloadURL": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+      "size": 362372,
+      "versions": [
+        {
+          "version": "1.2.4",
+          "date": "2025-02-21",
+          "localizedDescription": "EnableQUIC 1.2.4 | TrollStore\n\n1. Bug fix #4, Improve the process of 'Restore default settings'. Firstly, restore the default configuration from the backup after improvement. If the backup configuration file does not exist, use the built-in rules to restore the default settings.\n\nAdvanced settings to enable:\nClick the icon at the top of the app 5 times, then shake the device to open Advanced Mode.  \n\nZh:\n1. 修复#4，改进恢复默认设置流程，改进后先从备份中恢复默认配置，如果备份的配置文件不存在，则使用内置规则恢复默认设置。  \n\n开启流程（普通用户）：启用->注销  \n关闭流程（普通用户）：恢复默认->注销  \n**App无需保留后台，设置成功后即可关闭App**  \n\n高级设置仅供了解原理的用户使用，您可以自定义每一项的设置，如果您不知道这些开关的含义，请使用默认设置  \n高级设置开启方法：\n点击App顶部的图标5次，然后摇晃下设备，即可打开高级模式  \n开启流程（高级用户）：启用->注销(可省略)->锁定文件权限->注销  \n关闭流程（高级用户）：解锁文件权限->恢复默认->注销  \n**卸载App或抹除/升级设备系统之前请解锁文件权限，以防止出现未知错误**",
+          "downloadURL": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+          "size": 362372,
+          "minOSVersion": "12.2",
+          "releaseUrl": "https://github.com/DevelopCubeLab/EnableQUIC/releases/tag/1.2.4",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "EnableQUIC_1.2.4.tipa",
+              "downloadUrl": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 362372,
+              "sha256": null,
+              "downloads": 1322,
+              "mimeType": "application/zip",
+              "installable": true
+            }
+          ],
+          "downloads": 1322
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "enablequic",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+        "sourceURL": "https://github.com/DevelopCubeLab/EnableQUIC",
+        "verification": {
+          "method": "github-release",
+          "publisher": "DevelopCubeLab/EnableQUIC",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "12.2",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/EnableQUIC; install with TrollStore, or rename to .ipa if your client rejects the extension."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2025-02-21"
+        }
+      }
+    }
+  ],
+  "news": []
+}
