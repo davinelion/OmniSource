@@ -183,16 +183,39 @@ self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(keys.filter(key => !key.startsWith(VERSION)).map(key => caches.delete(key))))
-      .then(() => self.clients.claim())
-      .then(() => notifyClientsOfUpdate())
+      // Which tabs were already running under an *older* worker? Ask before
+      // claiming them: `clients.claim()` swaps every client's controller to
+      // this worker, after which the answer would always be "all of them".
+      .then(() => upgradingClients())
+      .then(upgrading => self.clients.claim().then(() => notifyClientsOfUpdate(upgrading)))
   );
 });
 
-function notifyClientsOfUpdate() {
-  // Tell every open client that a new SW took over so the page can show
-  // the “update available” toast and reload.
-  self.clients.matchAll({ includeUncontrolled: true }).then(clients => {
+// A client that reports a controller is one that was being served by an older
+// worker; a null controller means the page loaded without a worker and this
+// activation is its first install.
+function upgradingClients() {
+  return self.clients
+    .matchAll({ includeUncontrolled: false, type: 'window' })
+    .then(clients => clients.filter(client => Boolean(client.controller)).map(client => client.id))
+    .catch(() => []);
+}
+
+function notifyClientsOfUpdate(upgradingIds) {
+  // Tell the tabs running an older version that a new worker took over so the
+  // page can show the "update available" toast and reload.
+  //
+  // This must not fire for a first visit. On an uncached site the worker
+  // installs, activates and claims clients that were never controlled, and
+  // the page reacted to this message by reloading itself: the visitor opened
+  // the site and, a second later, watched it jump back to the top and fetch
+  // everything again. Nothing was replaced in that case — the worker is new,
+  // not newer. `upgradingIds` is the set captured before `claim()`.
+  const targets = Array.isArray(upgradingIds) ? upgradingIds : [];
+  if (!targets.length) return;
+  self.clients.matchAll({ includeUncontrolled: false, type: 'window' }).then(clients => {
     for (const client of clients) {
+      if (!targets.includes(client.id)) continue;
       client.postMessage({ type: 'omnisource-sw-updated', version: VERSION });
     }
   });
