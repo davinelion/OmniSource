@@ -1,52 +1,71 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T09:13:39Z",
+  "generatedAt": "2026-09-17T23:15:56Z",
   "verdict": "pass",
   "summary": {
-    "apps": 101,
-    "sha256": 71,
+    "apps": 130,
+    "sha256": 81,
     "sha512": 0,
-    "hashesMissing": 30,
+    "hashesMissing": 49,
     "hashesInvalid": 0,
     "duplicateBinaries": 0,
     "downloadsFailing": 0,
-    "provenanceOfficial": 101,
+    "provenanceOfficial": 130,
     "provenanceCommunity": 0,
     "provenanceUnknown": 0
   },
   "hashes": {
-    "apps": 101,
-    "sha256": 71,
+    "apps": 130,
+    "sha256": 81,
     "sha512": 0,
     "missing": [
+      "AirTroller",
+      "Animation Speed",
       "AnimeGen",
+      "BHInstagram",
       "BHTwitter",
+      "CAPerfHUD",
+      "CarTube",
+      "Cercube for YouTube",
+      "Cowabunga",
       "Delta",
+      "DynamicCow",
+      "EnableQUIC",
       "Glow",
       "Hanami",
+      "Helium",
       "Infuse Plus",
+      "Jaility",
+      "KillMyOTA",
       "MAME4iOS",
       "MSGPlusX",
       "Messenger Flow",
       "Mini vMac",
+      "Mugunghwa",
       "NexaSC",
       "Odyssey",
       "PureKFD",
       "RyukGram",
+      "SecondHand",
       "Serotonin",
       "Sparkle",
+      "StatusMagic",
       "StikNES",
       "Swiftgram",
       "TTKillerPlus",
       "Taurine",
       "Telegram MxGram",
       "ThreadSaver",
+      "TrollBoard Reborn",
+      "TrollInstallerX",
       "Turrit MxGram",
+      "WDBFontOverwrite",
       "Winston",
       "Yattee",
       "iMe MxGram",
       "iNKillerPlus",
       "iQFace",
+      "iTransmission",
       "uYouEnhanced",
       "unc0ver"
     ],
@@ -157,20 +176,67 @@
       "",
       "",
       "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
       ""
     ]
   },
   "provenance": {
-    "official": 101,
+    "official": 130,
     "community": 0,
     "unknown": [],
-    "total": 101
+    "total": 130
   },
   "findings": [
     {
       "severity": "low",
       "check": "hash-missing",
+      "id": "AirTroller",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "Animation Speed",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
       "id": "AnimeGen",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "BHInstagram",
       "detail": "no SHA-256 recorded for the newest version"
     },
     {
@@ -182,7 +248,43 @@
     {
       "severity": "low",
       "check": "hash-missing",
+      "id": "CAPerfHUD",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "CarTube",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "Cercube for YouTube",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "Cowabunga",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
       "id": "Delta",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "DynamicCow",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "EnableQUIC",
       "detail": "no SHA-256 recorded for the newest version"
     },
     {
@@ -200,7 +302,25 @@
     {
       "severity": "low",
       "check": "hash-missing",
+      "id": "Helium",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
       "id": "Infuse Plus",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "Jaility",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "KillMyOTA",
       "detail": "no SHA-256 recorded for the newest version"
     },
     {
@@ -230,6 +350,12 @@
     {
       "severity": "low",
       "check": "hash-missing",
+      "id": "Mugunghwa",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
       "id": "NexaSC",
       "detail": "no SHA-256 recorded for the newest version"
     },
@@ -254,6 +380,12 @@
     {
       "severity": "low",
       "check": "hash-missing",
+      "id": "SecondHand",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
       "id": "Serotonin",
       "detail": "no SHA-256 recorded for the newest version"
     },
@@ -261,6 +393,12 @@
       "severity": "low",
       "check": "hash-missing",
       "id": "Sparkle",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "StatusMagic",
       "detail": "no SHA-256 recorded for the newest version"
     },
     {
@@ -302,7 +440,25 @@
     {
       "severity": "low",
       "check": "hash-missing",
+      "id": "TrollBoard Reborn",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "TrollInstallerX",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
       "id": "Turrit MxGram",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "WDBFontOverwrite",
       "detail": "no SHA-256 recorded for the newest version"
     },
     {
@@ -333,6 +489,12 @@
       "severity": "low",
       "check": "hash-missing",
       "id": "iQFace",
+      "detail": "no SHA-256 recorded for the newest version"
+    },
+    {
+      "severity": "low",
+      "check": "hash-missing",
+      "id": "iTransmission",
       "detail": "no SHA-256 recorded for the newest version"
     },
     {
