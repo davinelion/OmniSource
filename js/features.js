@@ -935,20 +935,29 @@
       style.textContent = `
         .search-help {
           position: absolute;
-          right: 12px;
+          right: 6px;
           top: 50%;
           transform: translateY(-50%);
+          display: grid;
+          place-items: center;
+          /* A real tap target: this used to be a 15x19px "?" that sat under
+             the user's thumb — and under the input's own text. */
+          min-width: 36px;
+          min-height: 36px;
           background: none;
           border: 0;
           color: var(--muted);
           cursor: pointer;
-          padding: 4px;
-          border-radius: 6px;
-          font: 700 10px var(--font-mono);
+          padding: 0;
+          border-radius: 9px;
+          font: 700 11px var(--font-mono);
           letter-spacing: 0.08em;
           text-transform: uppercase;
         }
-        .search-help:hover {
+        /* Reserve the button's room so the query never runs underneath it. */
+        .search-box.has-search-help input { padding-right: 34px; }
+        .search-help:hover,
+        .search-help:focus-visible {
           color: var(--text);
           background: var(--surface-2);
         }
@@ -1044,6 +1053,7 @@
         </div>
       `;
 
+      searchBox.classList.add('has-search-help');
       searchBox.appendChild(helpBtn);
       searchBox.appendChild(operatorsPanel);
 

@@ -54,6 +54,19 @@
     var file = String(name || 'OmniSource.png').replace(/^assets\//, '');
     return url('assets/' + file);
   }
+  /* Icon fields arrive in three shapes: absolute URLs (the generated feeds
+     write https://site/assets/X.webp), root-relative ones (feeds/compare.json
+     stores "assets/X.webp") and bare file names (api/catalog.json stores
+     "X.webp"). Resolving the relative shapes with `cleanUrl` is wrong away
+     from the site root — `new URL('assets/X.webp', location.href)` on
+     /compare/ answers "http://…/compare/assets/X.webp", a 404 for every icon
+     on the page — so resolve them against the detected ROOT instead. */
+  function icon(value, fallback) {
+    var raw = String(value == null ? '' : value).trim();
+    if (!raw || raw === '#') return url(fallback || 'assets/OmniSource.png');
+    if (/^data:/i.test(raw) || /^(?:https?:)?\/\//i.test(raw)) return raw;
+    return asset(raw.replace(/^(?:\.\.?\/)+/, '').replace(/^\/+/, ''));
+  }
 
   /* --------------------------------------------------------------- helpers */
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
@@ -73,6 +86,7 @@
     ROOT: ROOT,
     url: url,
     asset: asset,
+    icon: icon,
     $: $,
     $$: $$,
     animateCount: animateCount,
@@ -669,15 +683,39 @@
   });
 
   /* --------------------------------------------------------------------- PWA */
+
+  /* One reload per worker version per tab. `activate` can fire more than once
+     for a worker that is already in charge, and reloading the same page again
+     (with the browser restoring the scroll position) is pure déjà vu. */
+  function alreadyReloadedFor(version) {
+    var key = 'omnisource-sw-reloaded:' + (version || 'unknown');
+    try {
+      if (sessionStorage.getItem(key)) return true;
+      sessionStorage.setItem(key, '1');
+    } catch (error) { /* private mode: allow the reload */ }
+    return false;
+  }
+
   function registerServiceWorker() {
     if (!('serviceWorker' in navigator)) return;
     var host = location.hostname.toLowerCase();
     var isSecure = location.protocol === 'https:' || host === 'localhost' || host === '127.0.0.1';
     if (!isSecure) return;
+    /* Was this page already under a service worker when it booted?
+
+       A first-ever visit installs the worker, `activate` claims the page and
+       broadcasts `omnisource-sw-updated`; the page then toasted "A new version
+       is ready. Reloading…" and reloaded itself — for a visitor who had just
+       opened the site, and once for every freshly activated worker. The reload
+       also restored the previous scroll position, so the page came back ~50px
+       down. Only a page that was already controlled can be *updated*: on a
+       first visit the new worker is an install, not an upgrade, and the page
+       keeps what it has. */
+    var hadController = Boolean(navigator.serviceWorker.controller);
     window.addEventListener('load', function () {
       navigator.serviceWorker.register(url('sw.js'))
         .then(function (reg) {
-          if (reg.waiting) promptUpdate(reg.waiting);
+          if (reg.waiting && hadController) promptUpdate(reg.waiting);
           reg.addEventListener('updatefound', function () {
             var next = reg.installing;
             if (!next) return;
@@ -688,10 +726,11 @@
             });
           });
           navigator.serviceWorker.addEventListener('message', function (event) {
-            if (event.data && event.data.type === 'omnisource-sw-updated') {
-              OS.toast('A new version is ready. Reloading…');
-              setTimeout(function () { location.reload(); }, 1200);
-            }
+            if (!event.data || event.data.type !== 'omnisource-sw-updated') return;
+            if (!hadController || !navigator.serviceWorker.controller) return;
+            if (alreadyReloadedFor(event.data.version)) return;
+            OS.toast('A new version is ready. Reloading…');
+            setTimeout(function () { location.reload(); }, 1200);
           });
         })
         .catch(function () { /* offline support is progressive */ });

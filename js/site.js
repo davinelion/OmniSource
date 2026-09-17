@@ -100,6 +100,9 @@
   var statusLabel = function (s) { return STATUS_LABELS[s] || (s ? s.charAt(0).toUpperCase() + s.slice(1) : 'Unknown'); };
 
   /* -------------------------------------------------------------- lookups */
+  /* Icons come from data written in three URL shapes; OS.icon resolves each
+     against the site root (see the helper in core.js). */
+  var iconSrc = function (value, fallback) { return OS.icon(value, fallback); };
   var slugFor = function (app) { return (app.omnisource && app.omnisource.slug) || (app.bundleIdentifier ? app.bundleIdentifier.split('.').pop().toLowerCase() : 'app'); };
   var feedFor = function (app) { return OS.url('feeds/' + slugFor(app) + '.json'); };
   var rssFor = function (app) { return OS.url('feeds/' + slugFor(app) + '.xml'); };
@@ -520,7 +523,7 @@
     var meta = app.omnisource || {};
     var verification = verificationFor(app);
     var disc = state.discovery.get(slug);
-    var icon = OS.cleanUrl(app.iconURL) || OS.url('assets/' + (app.icon ? app.icon.replace(/^assets\//, '') : 'OmniSource.png'));
+    var icon = iconSrc(app.iconURL || app.icon);
     var tags = (disc && disc.tags ? disc.tags : []).slice(0, 3);
     var scorePill = extra && extra.score != null
       ? '<span class="score-pill" title="Trending score: recency + availability + featured + verification">' + (extra.score * 100).toFixed(0) + '</span>'
@@ -544,7 +547,7 @@
     var app = appForSlug(slug);
     if (!app) return '';
     var meta = app.omnisource || {};
-    var icon = OS.cleanUrl(app.iconURL) || OS.url('assets/OmniSource.png');
+    var icon = iconSrc(app.iconURL || app.icon);
     var disc = state.discovery.get(slug);
     var tags = (disc && disc.tags ? disc.tags : []).slice(0, 3);
     var tint = tintFor(slug);
@@ -589,7 +592,7 @@
       ? '<span class="badge ' + verificationBadgeClass(verification.status) + '" title="' + OS.esc((verification.checks && verification.checks.fileAvailable ? 'File available · ' : '') + (verification.hash_verified ? 'Checksum verified' : 'No published checksum')) + '">' + OS.esc(VERIFICATION_LABELS[verification.status] || verification.status) + '</span>'
       : '';
     var osMajor = minOSMajor(app);
-    var icon = OS.cleanUrl(app.iconURL) || OS.url('assets/OmniSource.png');
+    var icon = iconSrc(app.iconURL || app.icon);
     return '<article class="app-card os-lift os-icon-hover' + (conflict ? ' has-collision' : '') + '" data-slug="' + OS.esc(slug) + '" tabindex="0" role="button" aria-label="View ' + OS.esc(app.name) + ' details">' +
       '<div class="card-top">' +
         '<div class="icon-wrap">' +
@@ -1423,7 +1426,7 @@
         return;
       }
       list.innerHTML = updates.map(function (item, i) {
-        var icon = OS.cleanUrl(item.iconURL) || OS.url('assets/OmniSource.png');
+        var icon = iconSrc(item.iconURL || item.icon);
         var kind = KIND_LABELS[item.kind] || item.kind || 'Updated';
         var preview = (item.changelog || item.shortDescription || '').trim();
         var snippet = preview ? preview.slice(0, 220) : item.name + ' version ' + item.version + ' is available.';
@@ -1614,7 +1617,7 @@
     var conflict = collisionInfo(app);
     return '<button class="dialog-close" type="button" data-close aria-label="Close details"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>' +
       '<div class="dialog-hero">' +
-        '<img class="dialog-icon" src="' + OS.esc(OS.cleanUrl(app.iconURL) || OS.url('assets/OmniSource.png')) + '" alt="" width="84" height="84">' +
+        '<img class="dialog-icon" src="' + OS.esc(iconSrc(app.iconURL || app.icon)) + '" alt="" width="84" height="84">' +
         '<div class="dialog-titles">' +
           '<h2 id="dialogTitle">' + OS.esc(app.name) + '</h2>' +
           '<p class="dialog-sub">' + OS.esc(app.subtitle || 'By ' + (app.developerName || 'independent developer')) + '</p>' +
@@ -1891,7 +1894,7 @@
       if (!featured.length) { section.hidden = true; return; }
       list.innerHTML = featured.map(function (p) {
         return '<li><button type="button" data-left="' + OS.esc(p.left.slug) + '" data-right="' + OS.esc(p.right.slug) + '" class="os-lift">' +
-          '<img src="' + OS.esc(OS.cleanUrl(p.left.icon) || OS.url('assets/OmniSource.png')) + '" alt="" width="34" height="34" loading="lazy">' +
+          '<img src="' + OS.esc(iconSrc(p.left.icon)) + '" alt="" width="34" height="34" loading="lazy">' +
           '<span class="pair-vs">' + OS.esc(p.left.name) + ' <em>vs</em> ' + OS.esc(p.right.name) + '</span>' +
           '<span class="pair-meta">' + (p.shareBundle ? 'Same bundle' : p.shareCategory ? 'Same category' : '') + '</span>' +
           '<span class="pair-arrow" aria-hidden="true">→</span>' +
@@ -1915,7 +1918,7 @@
         ? catalogApp.screenshotURLs.filter(function (u) { return OS.cleanUrl(u) !== '#'; })
         : [];
       if (!shots.length) {
-        return '<img class="icon-fallback" src="' + OS.esc(OS.cleanUrl(app.icon) || OS.url('assets/OmniSource.png')) + '" alt="' + OS.esc(app.name) + ' icon" loading="lazy">';
+        return '<img class="icon-fallback" src="' + OS.esc(iconSrc(app.icon)) + '" alt="' + OS.esc(app.name) + ' icon" loading="lazy">';
       }
       return shots.slice(0, 4).map(function (u, i) {
         return '<img src="' + OS.esc(OS.cleanUrl(u)) + '" alt="' + OS.esc(app.name) + ' screenshot ' + (i + 1) + '" loading="lazy">';
@@ -1927,7 +1930,7 @@
       var verification = app.verificationLevel || 'UNVERIFIED';
       return '<article class="cmp-side' + (winner ? ' is-winner' : '') + '" data-reveal>' +
         '<header>' +
-          '<img src="' + OS.esc(OS.cleanUrl(app.icon) || OS.url('assets/OmniSource.png')) + '" alt="" width="68" height="68" loading="lazy">' +
+          '<img src="' + OS.esc(iconSrc(app.icon)) + '" alt="" width="68" height="68" loading="lazy">' +
           '<div style="min-width:0;flex:1"><h2><a href="' + OS.esc(OS.url('apps/' + app.slug + '/')) + '">' + OS.esc(app.name) + '</a></h2>' +
             '<p>' + OS.esc(categoryLabel(app.category)) + ' · ' + OS.esc(app.developer || '') + '</p>' +
             '<div class="chips">' +
@@ -2286,7 +2289,11 @@
         }).join('') + '</div>';
       }
       node.innerHTML =
-        '<div class="an-charts" style="grid-template-columns:1fr 1fr;margin-bottom:0">' +
+        // The two-column template lives in CSS (`.an-charts.is-pair`), never in
+        // a style attribute: an inline `grid-template-columns` outranks the
+        // responsive rule, so on a phone this row stayed two columns wide and
+        // the second panel hung off the right edge of the screen.
+        '<div class="an-charts is-pair">' +
         '<div class="chart-panel panel" data-reveal><h3>Updated this week</h3><p class="chart-sub">Releases that shipped in the last 7 days.</p>' + list(doc.updatedThisWeek, 'No updates recorded this week.') + '</div>' +
         '<div class="chart-panel panel" data-reveal><h3>New this week</h3><p class="chart-sub">Apps that joined the catalog in the last 7 days.</p>' + list(doc.newThisWeek, 'No new apps this week.') + '</div>' +
         '</div>';

@@ -16,10 +16,18 @@ export async function status() {
   return registration.active ? 'activated' : 'registered';
 }
 
-/** Ask the waiting worker to take over (core.js also handles this path). */
+/** Ask the waiting worker to take over (core.js also handles this path).
+
+ *  The message has to be the object `sw.js` listens for: it matched only
+ *  `{type: 'omnisource-skip-waiting'}`, so posting the bare string
+ *  'skipWaiting' (or even `{type: 'skipWaiting'}`) was silently ignored and
+ *  the "Update available" pill stayed stuck on a worker that never took
+ *  over. Kept in sync with the listener in sw.js. */
 export async function skipWaiting() {
   const registration = await navigator.serviceWorker.getRegistration();
-  if (registration && registration.waiting) registration.waiting.postMessage('skipWaiting');
+  if (registration && registration.waiting) {
+    registration.waiting.postMessage({ type: 'omnisource-skip-waiting' });
+  }
 }
 
 function paintPill() {

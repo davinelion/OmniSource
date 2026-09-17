@@ -155,5 +155,60 @@ class TestServiceWorkerShell(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
 
 
+class UpdateProtocolTests(unittest.TestCase):
+    """A first visit must never reload the page by itself.
+
+    ``activate`` used to broadcast ``omnisource-sw-updated`` to every client
+    unconditionally. On an uncached site that message arrived right after the
+    worker claimed a page that had published itself seconds earlier, and the
+    page's handler answered it with ``location.reload()``: the visitor watched
+    the site jump back to the top and refetch every asset. An update notice is
+    only meaningful for a tab that already had a controller.
+    """
+
+    def setUp(self) -> None:
+        self.sw = SW.read_text(encoding="utf-8")
+        self.core = (ROOT / "js" / "core.js").read_text(encoding="utf-8")
+        self.pwa = (ROOT / "js" / "modules" / "pwa.js").read_text(encoding="utf-8")
+
+    @staticmethod
+    def _code(source: str) -> str:
+        """Drop comments so prose about ordering cannot satisfy an ordering test."""
+        source = re.sub(r"/\*.*?\*/", "", source, flags=re.S)
+        return re.sub(r"(?m)//.*$", "", source)
+
+    def test_upgrade_set_is_captured_before_claim(self) -> None:
+        activate = self.sw.split("self.addEventListener('activate'", 1)[1]
+        activate = self._code(activate.split("\n});", 1)[0])
+        self.assertLess(
+            activate.index("upgradingClients()"),
+            activate.index("clients.claim()"),
+            "clients.claim() runs before the upgrade set is captured",
+        )
+
+    def test_notify_only_targets_already_controlled_clients(self) -> None:
+        notify = self._code(self.sw.split("function notifyClientsOfUpdate(", 1)[1])
+        self.assertIn("upgradingIds", notify)
+        self.assertIn("if (!targets.length) return;", notify)
+        # Broadcasting to uncontrolled clients is the first-visit reload.
+        self.assertNotIn("includeUncontrolled: true", notify)
+
+    def test_core_ignores_the_message_without_a_previous_controller(self) -> None:
+        marker = "event.data.type !== 'omnisource-sw-updated'"
+        self.assertIn(marker, self.core)
+        handler = self._code(self.core.split(marker, 1)[1].split("\n          });", 1)[0])
+        self.assertIn("hadController", handler)
+        self.assertLess(handler.index("hadController"), handler.index("location.reload()"))
+
+    def test_reload_happens_at_most_once_per_version_and_tab(self) -> None:
+        self.assertIn("omnisource-sw-reloaded:", self.core)
+        self.assertIn("sessionStorage", self.core)
+
+    def test_skip_waiting_message_matches_the_sw_listener(self) -> None:
+        self.assertIn("postMessage({ type: 'omnisource-skip-waiting' })", self.pwa)
+        self.assertNotIn("postMessage('skipWaiting')", self.pwa)
+        self.assertIn("omnisource-skip-waiting", self.sw)
+
+
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()
