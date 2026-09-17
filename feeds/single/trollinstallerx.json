@@ -1,0 +1,106 @@
+{
+  "name": "OmniSource — TrollInstallerX",
+  "identifier": "com.iamsmmh.omnisource.trollinstallerx",
+  "apiVersion": "v2",
+  "subtitle": "Single-app source",
+  "description": "Single-app feed for TrollInstallerX.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollInstallerX.webp",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
+  "apps": [
+    {
+      "name": "TrollInstallerX",
+      "bundleIdentifier": "com.Alfie.TrollInstallerX",
+      "developerName": "Alfie CG",
+      "subtitle": "One-tap TrollStore installer",
+      "localizedDescription": "TrollInstallerX installs TrollStore on compatible iOS devices - arm64 (iOS 14.0 - 16.6.1) and arm64e (iOS 14.0 - 16.5.1) - using the DirtyCow exploit.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollInstallerX.webp",
+      "tintColor": "0BA0F2",
+      "category": "utilities",
+      "version": "1.0.3",
+      "versionDate": "2024-09-12",
+      "versionDescription": "TrollInstallerX 1.0.3 | TrollInstallerX\n\n# TrollInstallerX v1.0.3\n\n## Changes:\n* Update for Xcode 15.4+ compilation (fixes #25)\n* Added a temporary fix for yellow iPhone 14 (Plus) devices on iOS 16.3, please use `TrollInstallerX-20D50.ipa` (fixes #33)\n* Removing confusing logging around exploit deinitialisation (e.g. #11)\n* Fix arm64e devices on iOS 15.7.x that couldn't download the kernelcache by updating libgrabkernel2 (should, in theory, fix #21)\n\n**Note**: A8 devices on iOS 15.2+ will not be supported until a future release of TrollInstallerX. Furthermore, support for arm64e (A12+) devices on early iOS 17.0 betas is not planned, unless someone else would like to implement it. You can now use [TrollRestore](https://github.com/JJTech0130/TrollRestore) for both of these cases.\n\n# DO NOT DOWNLOAD THE 20D50 IPA UNLESS YOU HAVE A YELLOW IPHONE 14 (PLUS) ON IOS 16.3.",
+      "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa",
+      "size": 6889214,
+      "versions": [
+        {
+          "version": "1.0.3",
+          "date": "2024-09-12",
+          "localizedDescription": "TrollInstallerX 1.0.3 | TrollInstallerX\n\n# TrollInstallerX v1.0.3\n\n## Changes:\n* Update for Xcode 15.4+ compilation (fixes #25)\n* Added a temporary fix for yellow iPhone 14 (Plus) devices on iOS 16.3, please use `TrollInstallerX-20D50.ipa` (fixes #33)\n* Removing confusing logging around exploit deinitialisation (e.g. #11)\n* Fix arm64e devices on iOS 15.7.x that couldn't download the kernelcache by updating libgrabkernel2 (should, in theory, fix #21)\n\n**Note**: A8 devices on iOS 15.2+ will not be supported until a future release of TrollInstallerX. Furthermore, support for arm64e (A12+) devices on early iOS 17.0 betas is not planned, unless someone else would like to implement it. You can now use [TrollRestore](https://github.com/JJTech0130/TrollRestore) for both of these cases.\n\n# DO NOT DOWNLOAD THE 20D50 IPA UNLESS YOU HAVE A YELLOW IPHONE 14 (PLUS) ON IOS 16.3.",
+          "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa",
+          "size": 6889214,
+          "minOSVersion": "14.0",
+          "releaseUrl": "https://github.com/alfiecg24/TrollInstallerX/releases/tag/1.0.3",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "TrollInstallerX-20D50.ipa",
+              "downloadUrl": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX-20D50.ipa",
+              "platform": "ios",
+              "architecture": "universal",
+              "fileType": "IPA",
+              "size": 27098183,
+              "sha256": null,
+              "downloads": 364225,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
+              "filename": "TrollInstallerX.ipa",
+              "downloadUrl": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa",
+              "platform": "ios",
+              "architecture": "universal",
+              "fileType": "IPA",
+              "size": 6889214,
+              "sha256": null,
+              "downloads": 1242791,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "downloads": 1242791
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "trollinstallerx",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/alfiecg24/TrollInstallerX",
+        "sourceURL": "https://github.com/alfiecg24/TrollInstallerX",
+        "verification": {
+          "method": "github-release",
+          "publisher": "alfiecg24/TrollInstallerX",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "14.0",
+          "maxOSVersion": "16.6.1",
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Official IPA from alfiecg24/TrollInstallerX (the plain TrollInstallerX.ipa; the device-specific -20D50 build is not tracked). Intended for iOS 14.0 - 16.6.1 - newer firmware needs a different route to TrollStore."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2024-09-12"
+        }
+      }
+    }
+  ],
+  "news": []
+}

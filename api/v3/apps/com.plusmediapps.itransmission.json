@@ -1,0 +1,86 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "iTransmission",
+    "bundleIdentifier": "com.plusmediapps.itransmission",
+    "developerName": "alexsvitlov",
+    "subtitle": "Fast, lightweight BitTorrent client",
+    "localizedDescription": "iTransmission is a fast and lightweight BitTorrent client for iOS 13 and up. It downloads and manages torrents and magnet links directly on your iPhone or iPad.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/iTransmission.webp",
+    "tintColor": "D664AA",
+    "category": "networking",
+    "version": "1.0.0",
+    "versionDate": "2024-01-12",
+    "versionDescription": "iTransmission 1.0.0 | iTransmission\n\nThe very first release of iTransmission app for iOS.",
+    "downloadURL": "https://github.com/alexsvitlov/iTransmission/releases/download/1.0.0/iTransmission.ipa",
+    "size": 3718662,
+    "versions": [
+      {
+        "version": "1.0.0",
+        "date": "2024-01-12",
+        "localizedDescription": "iTransmission 1.0.0 | iTransmission\n\nThe very first release of iTransmission app for iOS.",
+        "downloadURL": "https://github.com/alexsvitlov/iTransmission/releases/download/1.0.0/iTransmission.ipa",
+        "size": 3718662,
+        "minOSVersion": "13.0",
+        "releaseUrl": "https://github.com/alexsvitlov/iTransmission/releases/tag/1.0.0",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "iTransmission.ipa",
+            "downloadUrl": "https://github.com/alexsvitlov/iTransmission/releases/download/1.0.0/iTransmission.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 3718662,
+            "sha256": null,
+            "downloads": 22819,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "downloads": 22819
+      }
+    ],
+    "screenshotURLs": [],
+    "omnisource": {
+      "slug": "itransmission",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/alexsvitlov/iTransmission",
+      "sourceURL": "https://github.com/alexsvitlov/iTransmission",
+      "verification": {
+        "method": "github-release",
+        "publisher": "alexsvitlov/iTransmission",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "13.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from alexsvitlov/iTransmission (iTransmission.ipa). The upstream also documents a TrollStore install route for iOS 14 - 16.6.1 devices."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2024-01-12"
+      }
+    },
+    "id": "com.plusmediapps.itransmission"
+  }
+}

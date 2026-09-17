@@ -1,0 +1,106 @@
+{
+  "name": "OmniSource — Animation Speed",
+  "identifier": "com.iamsmmh.omnisource.animationspeed",
+  "apiVersion": "v2",
+  "subtitle": "Single-app source",
+  "description": "Single-app feed for Animation Speed.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/AnimationSpeed.webp",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
+  "apps": [
+    {
+      "name": "Animation Speed",
+      "bundleIdentifier": "com.developlab.AnimationSpeed",
+      "developerName": "DevelopCubeLab",
+      "subtitle": "System-wide UI animation speed control",
+      "localizedDescription": "Animation Speed is a TrollStore utility from DevelopCubeLab that changes the global UI animation speed with a dial (speed range 0-10), with English localization.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/AnimationSpeed.webp",
+      "tintColor": "35A8E0",
+      "category": "utilities",
+      "version": "1.0.1",
+      "versionDate": "2025-05-27",
+      "versionDescription": "Animation Speed 1.0.1 | TrollStore\n\n1. Limit the speed to [0~10]\n\nZh:\n1. 限制设置速度为[0~10]",
+      "downloadURL": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/AnimationSpeed_1.0.1.tipa",
+      "size": 96650,
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2025-05-27",
+          "localizedDescription": "Animation Speed 1.0.1 | TrollStore\n\n1. Limit the speed to [0~10]\n\nZh:\n1. 限制设置速度为[0~10]",
+          "downloadURL": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/AnimationSpeed_1.0.1.tipa",
+          "size": 96650,
+          "minOSVersion": "12.2",
+          "releaseUrl": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/tag/1.0.1",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "AnimationSpeed_1.0.1.tipa",
+              "downloadUrl": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/AnimationSpeed_1.0.1.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 96650,
+              "sha256": null,
+              "downloads": 3221,
+              "mimeType": "application/zip",
+              "installable": true
+            },
+            {
+              "filename": "com.developlab.animationspeed_1.0.1_iphoneos-arm.deb",
+              "downloadUrl": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/com.developlab.animationspeed_1.0.1_iphoneos-arm.deb",
+              "platform": "linux",
+              "architecture": null,
+              "fileType": "DEB",
+              "size": 80480,
+              "sha256": null,
+              "downloads": 400,
+              "mimeType": "application/x-deb",
+              "installable": true
+            }
+          ],
+          "downloads": 3221
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "animationspeed",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+        "sourceURL": "https://github.com/DevelopCubeLab/AnimationSpeed",
+        "verification": {
+          "method": "github-release",
+          "publisher": "DevelopCubeLab/AnimationSpeed",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "12.2",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/AnimationSpeed; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2025-05-27"
+        }
+      }
+    }
+  ],
+  "news": []
+}

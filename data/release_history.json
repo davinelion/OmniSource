@@ -1,9 +1,21 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-15T22:43:23Z",
-  "appCount": 101,
-  "releases": 117,
+  "generatedAt": "2026-09-17T23:15:53Z",
+  "appCount": 130,
+  "releases": 150,
   "apps": {
+    "3105": [
+      {
+        "version": "2.0",
+        "date": "2026-09-14",
+        "downloadURL": "https://github.com/YangJiiii/3105/releases/download/v2.0/3105-2.0-build8-20260914-125906-unsigned.ipa",
+        "size": 4604223,
+        "sha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991",
+        "localizedDescription": "3105 2.0 | 3105-2.0-build8-20260914-125906-unsigned\n\n# 3105 2.0\n\nBản 2.0 chuyển 3105 thành một nơi thống nhất để tìm, cài đặt và quản lý Patch, hình nền, Dialer và các tính năng dành cho thiết bị.\n\n## Điểm mới\n\n- Kho nội dung mới với Dành cho bạn, Mới cập nhật và nhiều nguồn.\n- Mục Đã cài quản lý mọi loại nội dung, có biểu tượng, phân loại và thông báo cập nhật.\n- Patch hỗ trợ nhiều ứng dụng và App Group trong cùng một gói, tùy chỉnh trước khi áp dụng và mật khẩu tùy chọn.\n- Cải thiện sao lưu, đặt lại, khôi phục và xóa Patch đang hoạt động.\n- Hỗ trợ giao diện Dialer dạng .3105pass và hình nền .tendies từ kho.\n- Trình quản lý Tệp mới có Workspace, Application, App Group, tệp ẩn, thẻ, yêu thích và trình sửa plist.\n- Dọn dẹp trở thành tính năng có thể cài hoặc gỡ; các bản iOS 27 được hỗ trợ có thêm Footnote và Supervised.\n- Thiết kế lại trang chủ, nguồn, chi tiết gói và mục Đã cài; tiến trình tải và kết quả thao tác rõ ràng hơn.\n\n## Cài đặt\n\n- Asset đính kèm là IPA unsigned dành cho việc ký lại bằng chứng chỉ doanh nghiệp.\n- Bundle đích: com.apple.mobile.MobileHouseArrest.\n- Không hỗ trợ SideStore, AltStore, 3uTools hoặc LiveContainer.\n- Chỉ tiếp tục trên các phiên bản iOS được ứng dụng xác nhận hỗ trợ và luôn sao lưu dữ liệu trước khi áp dụng Patch.\n\n---\n\n## English summary\n\n3105 2.0 adds a repository marketplace, a unified Installed library, multi-app and App Group patches, configurable plist/JSON edits, dialer themes, repository wallpapers, installable 3105 features, a redesigned Files experience, and safer restore flows.\n\nThe attached IPA is unsigned and intended for enterprise-certificate signing. Bundle: com.apple.mobile.MobileHouseArrest.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "aidoku": [
       {
         "version": "0.9",
@@ -14,6 +26,30 @@
         "localizedDescription": "Aidoku 0.9 | Aidoku\n\n- OCR dictionary support (iOS 18+): import Yomitan-compatible dictionaries in the app and look up words while reading.\n- Suwayomi built-in source: read and track from a Suwayomi instance, just like Komga and Kavita.\n- Auto scroll for webtoon reader: enable and press the play button to scroll without touching your device.\n- Fixed CloudFlare handling: CloudFlare issues that caused external sources to break should be resolved.\n- Overall performance improvements: the library loads much faster (@Amqx), and the webtoon reader was improved.\n- Source stability fixes and disable option: the issue where sources were causing the app to crash should not happen again, and now you can even disable a source that is broken until it receives an update.\n- Many more things: see [the website](https://aidoku.app/release-notes/) for a more complete list.",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "airtroller": [
+      {
+        "version": "1.1.1",
+        "date": "2022-11-26",
+        "downloadURL": "https://github.com/sourcelocation/AirTroller/releases/download/1.1.1/AirTroller-1.1.1.tipa",
+        "size": 782388,
+        "sha256": "",
+        "localizedDescription": "AirTroller 1.1.1 | TrollStore\n\n- Fix a slow send bug introduced in 1.1\n\n♡ Support - https://ko-fi.com/sourcelocation",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "animationspeed": [
+      {
+        "version": "1.0.1",
+        "date": "2025-05-27",
+        "downloadURL": "https://github.com/DevelopCubeLab/AnimationSpeed/releases/download/1.0.1/AnimationSpeed_1.0.1.tipa",
+        "size": 96650,
+        "sha256": "",
+        "localizedDescription": "Animation Speed 1.0.1 | TrollStore\n\n1. Limit the speed to [0~10]\n\nZh:\n1. 限制设置速度为[0~10]",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "animegen": [
@@ -74,6 +110,54 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "appstoreplusplus": [
+      {
+        "version": "2.3.15",
+        "date": "2026-09-17",
+        "downloadURL": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa",
+        "size": 11078209,
+        "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
+        "localizedDescription": "AppStore++ 2.3.15 | TrollStore\n\n# AppStore++ — What’s New in v2.3.15-7\n\n- Added a delete all/trashcan button for ipa library\n- Fixed bug when an ipa download is cancelled when packaging & becoming corrupted\n- Run ipa packaging on background thread so the UI isn't lagged",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "batteryinfo": [
+      {
+        "version": "1.2.2",
+        "date": "2025-07-09",
+        "downloadURL": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+        "size": 346882,
+        "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+        "localizedDescription": "Battery Info 1.2.2 | TrollStore\n\n1. Added 'full capacity'.\n2. Improve history add saving of QMax and limit voltage data.\n3. Improve the database.\n4. Other improvements.\n\n\nZh:\n1. 新增 满充容量\n2. 改进历史记录，新增保存QMax和限制电压数据\n3. 改进数据库，为将来的非TrollStore版做好准备，当前进度新建文件夹，并验证了可行性\n4. 其他小改进",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "battman": [
+      {
+        "version": "1.0.3",
+        "date": "2026-01-19",
+        "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+        "size": 675573,
+        "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+        "localizedDescription": "Battman 1.0.3 | TrollStore\n\n## Battman 1.0.3.3\nIn this hotfix version, I have only fixed few bugs cuz I'm a super lazyass and I cannot think of what to be added.\n\n**PLEASE LET ME KNOW** when you wish any new features or found any bugs, especially, you can create any GitHub issues to describe those, to effectively urge me to update this project (Or the most efficient way is to give me money and let me do your requests).\n\n- Fixed a bug where wrongly swapped \"⏾\" and \"▶\" when daemon runs.\n- Added a \"Unsupported\" notification popup when user attempts to run 'Charging Limit' with wireless chargers.\n- Attempt to fix a problem where iOS 17 cannot trigger iCloud autobackup when Battman has been installed.\n- Improved daemon communication logics to make daemon shutdowns gracefully.\n- Removed Herobrine.\n\n### Dependencies (deb)\n- `libintl8`\n\n### Support List\n| iOS \\ Chip \t| <= A10 / A10X \t|           A11          \t|       A12 Series       \t|           A13          \t|     A14 / M1 Series    \t|     A15 / M2 Series    \t| >= A16 / M3 Series \t|\n|:----------:\t|:-------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:------------------:\t|\n|   <= 11.0  \t|  Unsupported  \t|       Unsupported      \t|            -           \t|            -           \t|            -           \t|            -           \t|          -         \t|\n|    12.0    \t|  Unsupported  \t|        Jailbreak       \t|        Jailbreak       \t|            -           \t|            -           \t|            -           \t|          -         \t|\n|    13.0    \t|  Unsupported  \t|        Jailbreak       \t|        Jailbreak       \t|        Jailbreak       \t|            -           \t|            -           \t|          -         \t|\n|    14.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|            -           \t|          -         \t|\n|    15.0    \t|  Unsupported  \t|",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "bhinstagram": [
+      {
+        "version": "1.2",
+        "date": "2025-05-14",
+        "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/1.2/bhinsta_sideloaded.ipa",
+        "size": 228416558,
+        "sha256": "",
+        "localizedDescription": "BHInstagram 1.2 | bhinsta_sideloaded\n\nUpdate 2.1:\n- Fix downloading Reels in lasted versions.\n- Fix Removing Ads in Reels.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "bhtwitter": [
       {
         "version": "4.4",
@@ -122,6 +206,42 @@
         "firstSeen": "2026-09-15T06:46:35Z"
       }
     ],
+    "caperfhud": [
+      {
+        "version": "1.0.2",
+        "date": "2023-12-19",
+        "downloadURL": "https://github.com/bomberfish/CAPerfHUDSwift/releases/download/v1.0.2/CAPerfHUDSwift.tipa",
+        "size": 1058266,
+        "sha256": "",
+        "localizedDescription": "CAPerfHUD 1.0.2 | TrollStore\n\nHOTFIX 2: Electric Boogaloo\n- Fix labels not displaying correctly on light mode",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "cartube": [
+      {
+        "version": "1.3",
+        "date": "2023-01-23",
+        "downloadURL": "https://github.com/Avangelista/CarTube/releases/download/1.3/CarTube.ipa",
+        "size": 574441,
+        "sha256": "",
+        "localizedDescription": "CarTube 1.3 | CarTube\n\nBig Fixes + Some Features Update!\n- Much smoother experience\n- Swipe left or right anywhere on the screen to go Back or Forward\n- Native m.youtube.com player, so ALL videos should work plus comments and playlists, and should be all around smoother\n- New \"Play on CarPlay\" share extension, works with YouTube app\n- Zoom in settings works better and scales content correctly\n- Added age restriction bypass\n- Added ad blocker (beta)\n- Fixed awful scrolling\n- Fixed Google signin page zoom\n- Fixed the buggy keyboard bar\n- Small fixes to the persistence helper, Siri no longer breaks it",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "cercube": [
+      {
+        "version": "6.1.3",
+        "date": "2026-09-18",
+        "downloadURL": "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb",
+        "size": 2017412,
+        "sha256": "",
+        "localizedDescription": "Cercube for YouTube 6.1.3 - the current official release (verified against apt.cercube.com on 2026-09-18).\n\nThis release improves caching, ad blocking, and compatibility with older iOS versions.\n- Added compatibility for iOS 15-16\n- Minor bug fixes and improvements\n\nPreviously: 6.1.2 added dislike counts, sponsored segment skipping and 14 languages; 6.0.1 added compatibility for recent iOS versions.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "chan": [
       {
         "version": "1.2.9",
@@ -148,13 +268,23 @@
     ],
     "conduit": [
       {
+        "version": "4.1.6",
+        "date": "2026-09-16",
+        "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa",
+        "size": 35930568,
+        "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
+        "localizedDescription": "Conduit 4.1.6 | conduit\n\n## What's Changed\n* Collapse raw reasoning tags client-side and stop re-escaping stored content by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/731\n* Fix attachments, STT, TTS, citations, proxy re-auth, and Hermes probe by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/732\n* Keep chat scrollbar thumb stable and inset it from the composer by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/734\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.5...v4.1.6",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      },
+      {
         "version": "4.1.5",
         "date": "2026-09-15",
         "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa",
         "size": 35897764,
         "sha256": "4b53fed15852eb3414f23df70dc8012abac6730a241a27e80f488e9be1b8da22",
         "localizedDescription": "Conduit 4.1.5 | conduit\n\n## What's Changed\n* Fix native toolbar, Apple gating, streaming cadence, and wakelock regressions by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/718\n* Fix ten reported issues and vendor Hermes Agent as an API reference by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/725\n* Support Open WebUI shared folders by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/726\n* Upgrade all packages, add notification settings link and Ollama thinking replay by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/727\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-15T12:00:00Z"
       },
       {
@@ -178,6 +308,18 @@
         "localizedDescription": "Cosmos Music Player 1.2.5 | Cosmos-Music-Player\n\n- Search is now available across songs, favorites, artists, albums, and playlists.\n- Lyrics have been redesigned with smoother synchronization, tap-to-seek, instrumental breaks, offline caching, and alternate versions.\n- Added broader support for Opus, Ogg, FLAC, AAC/M4A, DSF, and DFF files.\n- Improved playback stability, gapless transitions, seeking, Bluetooth, CarPlay, and audio interruption handling.\n- Added appearance options: System, Light, and Dark.\n- Added controls for automatic library scan frequency and artist organization.\n- Added a Create Playlist button when no playlists exist.\n- Improved artwork loading for iCloud and externally imported music.\n- Improved Siri, widgets, CarPlay, and Share extension reliability.\n- Fixed library issues involving moved, renamed, restored, or temporarily unavailable files.\n- Added and improved translations across all supported languages.\n- Includes numerous performance improvements and bug fixes.",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "cowabunga": [
+      {
+        "version": "10.3.2",
+        "date": "2023-05-29",
+        "downloadURL": "https://github.com/leminlimez/Cowabunga/releases/download/v10.3.2/Cowabunga.ipa",
+        "size": 16288960,
+        "sha256": "",
+        "localizedDescription": "Cowabunga 10.3.2 | Cowabunga\n\n- Changing carrier bar strength now works when you do not have a sim card (or dual sim for secondary carrier)",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "delta": [
@@ -226,6 +368,42 @@
         "localizedDescription": "Dopamine (RootHide) 2.4.9.27 | Dopamine\n\n1: some improvements and fixes\n\n2: hide more jailbreak traces",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "dynamiccow": [
+      {
+        "version": "1.1",
+        "date": "2023-02-02",
+        "downloadURL": "https://github.com/matteozappia/DynamicCow/releases/download/1.1/DynamicCow.ipa",
+        "size": 915515,
+        "sha256": "",
+        "localizedDescription": "DynamicCow 1.1 | DynamicCow",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "enablequic": [
+      {
+        "version": "1.2.4",
+        "date": "2025-02-21",
+        "downloadURL": "https://github.com/DevelopCubeLab/EnableQUIC/releases/download/1.2.4/EnableQUIC_1.2.4.tipa",
+        "size": 362372,
+        "sha256": "",
+        "localizedDescription": "EnableQUIC 1.2.4 | TrollStore\n\n1. Bug fix #4, Improve the process of 'Restore default settings'. Firstly, restore the default configuration from the backup after improvement. If the backup configuration file does not exist, use the built-in rules to restore the default settings.\n\nAdvanced settings to enable:\nClick the icon at the top of the app 5 times, then shake the device to open Advanced Mode.  \n\nZh:\n1. 修复#4，改进恢复默认设置流程，改进后先从备份中恢复默认配置，如果备份的配置文件不存在，则使用内置规则恢复默认设置。  \n\n开启流程（普通用户）：启用->注销  \n关闭流程（普通用户）：恢复默认->注销  \n**App无需保留后台，设置成功后即可关闭App**  \n\n高级设置仅供了解原理的用户使用，您可以自定义每一项的设置，如果您不知道这些开关的含义，请使用默认设置  \n高级设置开启方法：\n点击App顶部的图标5次，然后摇晃下设备，即可打开高级模式  \n开启流程（高级用户）：启用->注销(可省略)->锁定文件权限->注销  \n关闭流程（高级用户）：解锁文件权限->恢复默认->注销  \n**卸载App或抹除/升级设备系统之前请解锁文件权限，以防止出现未知错误**",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "escapeos": [
+      {
+        "version": "0.1.5",
+        "date": "2026-08-17",
+        "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
+        "size": 7259448,
+        "sha256": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02",
+        "localizedDescription": "EscapeOS 0.1.5 | EscapeOS-0.1.5\n\n## EscapeOS 0.1.5\n\nv0.1.0, v0.1.1, v0.1.3, and v0.1.4 are unchanged.\n\n### Added\n- **Reclaim** tab ranks apps by Safe cache and temp size (`tmp`, `Library/Caches`, logs, splash snapshots, GPU cache)\n- Per-app Reclaim Space from App Detail; Session buckets (cookies, WebKit, HTTP storage) are opt-in\n- Batch reclaim is Safe-only. Documents, Preferences, and Application Support are never reclaimed\n- Opening an app after a tab scan reuses those Safe sizes instead of measuring again\n- Locked cache files (permission denied, e.g. some `Library/Caches/FileData` folders) are skipped instead of failing the whole reclaim\n- **Reset App Data** on App Detail empties Documents, Library, and tmp. Keychain and App Groups are not touched. Resetting EscapeOS itself warns that the pairing file will be deleted\n\nHardware-checked on iPhone 17, iOS 26.5.1. After install, reconnect LocalDevVPN if the list is empty; iPASide places `pairingFile.plist` again after sideload. Close the target app before reclaiming or resetting.\n\n`EscapeOS-0.1.5.ipa` SHA-256:\n\n```\n231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02\n```",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "feather": [
@@ -286,6 +464,18 @@
         "localizedDescription": "Hanami 0.28.2 | Hanami\n\n# Fixes\n- fixed crash #10\n- bump package versions",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "helium": [
+      {
+        "version": "3.2.5",
+        "date": "2024-02-13",
+        "downloadURL": "https://github.com/leminlimez/Helium/releases/download/v3.2.5/Helium.tipa",
+        "size": 4168281,
+        "sha256": "",
+        "localizedDescription": "Helium 3.2.5 | TrollStore\n\nMassive merge of features from [AsakuraFuuko's repo](https://github.com/AsakuraFuuko/Helium)\n\n**Top features from v3.0.0-v3.2.5 include:**\n- Landscape mode now works properly!\n- Massive improvements to the adaptive color functionality\n- Choosing the text font\n- Option for italic text\n- Update interval can be controlled for each widget\n- New weather widget (must set your own API key)\n- Enabling and disabling widget sets\n- HUD now updates widget sets without having to restart the HUD\n- Option for a debug border around the widgets\n- Date locale fixes for Chinese users\n- Chinese translation\n- A whole lot of other improvements/fixes\n\nOnce again, thank you so much to AsakuraFuuko for this huge update. I would like to welcome them to the development team, where they will hopefully continue to update the app! Keep an eye out for this up-and-coming dev 👀",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "ime": [
@@ -370,6 +560,30 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "itransmission": [
+      {
+        "version": "1.0.0",
+        "date": "2024-01-12",
+        "downloadURL": "https://github.com/alexsvitlov/iTransmission/releases/download/1.0.0/iTransmission.ipa",
+        "size": 3718662,
+        "sha256": "",
+        "localizedDescription": "iTransmission 1.0.0 | iTransmission\n\nThe very first release of iTransmission app for iOS.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "jaility": [
+      {
+        "version": "3.1.1",
+        "date": "2022-11-12",
+        "downloadURL": "https://github.com/haxi0/Jaility/releases/download/3.1.1/Jaility-3.1.1.ipa",
+        "size": 108606,
+        "sha256": "",
+        "localizedDescription": "Jaility 3.1.1 | Jaility-3.1.1\n\n- Theming removed\n- Jaility is cancelled. No more major additions like Theming and etc. Some tweaks might be added in the future if they are found. This doesn't mean Jaility is dead and stuff, I'm just not feeling like adding new major features because tools like TrollTools and others exist.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "jellify": [
       {
         "version": "1.2.10",
@@ -392,6 +606,18 @@
         "localizedDescription": "JellyBook 1.4.1 | JellyBook-Release\n\nSorry for the error in the previous version 😅\n## What's Changed\n* chore: clarifications by @Kara-Zor-El in https://github.com/JellyBookOrg/JellyBook/pull/223\n* fix: fix auth headers by @Kara-Zor-El in https://github.com/JellyBookOrg/JellyBook/pull/225\n\n\n**Full Changelog**: https://github.com/JellyBookOrg/JellyBook/compare/v1.4.0...v1.4.1\n\n<details>\n<summary>SHA1</summary>\n<ul>\n<li><code>JellyBook-Debug-arm32.apk</code>: <code>ebbaf6954023d544454e208d0252ac8b677cf2bc</code></li>\n<li><code>JellyBook-Debug-arm64.apk</code>: <code>f89c75aaf7debf647a6862fd401209aee4417110</code></li>\n<li><code>JellyBook-Debug-x86_64.apk</code>: <code>393f2b232e60c20e339be08f2b0fe0311ef06694</code></li>\n<li><code>JellyBook-Debug.aab</code>: <code>924fa1c6f34072205884366522c428e394f62ec7</code></li>\n<li><code>JellyBook-Debug.apk</code>: <code>29f8f3b49a9704745947251d24dfee5ed17eb67e</code></li>\n<li><code>JellyBook-Debug.ipa</code>: <code>2ead28016efc584defd6ea6d7e6c9f9cd9627aa6</code></li>\n<li><code>JellyBook-Release-arm32.apk</code>: <code>0587957d7a109283f0b31cc4bd8d634a6f9cff06</code></li>\n<li><code>JellyBook-Release-arm64.apk</code>: <code>48568af90caa5e67387b35ab7567f356ac8f43cc</code></li>\n<li><code>JellyBook-Release-x86_64.apk</code>: <code>0f3230be1ced4c74f7483e08ec08a247fc3fe650</code></li>\n<li><code>JellyBook-Release.aab</code>: <code>f3256e5c70f8bd09cbadc6f142cbb5949966a2d6</code></li>\n<li><code>JellyBook-Release.apk</code>: <code>030e3ec3aece59a66340f7784c3165650a27d4dc</code></li>\n<li><code>JellyBook-Release.ipa</code>: <code>f3a3c8b10b7538442b65a97f037f6e42a43deba3</code></li>\n</ul>\n</details>",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "killmyota": [
+      {
+        "version": "1.1",
+        "date": "2023-01-30",
+        "downloadURL": "https://github.com/haxi0/KillMyOTA/releases/download/1.1/KillMyOTA-1.1.ipa",
+        "size": 339440,
+        "sha256": "",
+        "localizedDescription": "KillMyOTA 1.1 | KillMyOTA-1.1\n\n- The button doesn't appear as \"enable OTA\" or \"disable OTA\" momentally when you launch the app. This was made to fix some issues.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "ksign": [
@@ -488,13 +714,23 @@
     ],
     "maxmusic": [
       {
+        "version": "9.37.2",
+        "date": "2026-09-15",
+        "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa",
+        "size": 106518711,
+        "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
+        "localizedDescription": "MaxMusic 9.37.2 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.37.2\n\n**Changed**\nYouTube Music version",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      },
+      {
         "version": "9.36.1",
         "date": "2026-09-10",
         "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
         "size": 106420283,
         "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
         "localizedDescription": "MaxMusic 9.36.1 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.36.1\n\n**Changed**\nYouTube Music version",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -570,6 +806,18 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "mugunghwa": [
+      {
+        "version": "3.0.2",
+        "date": "2022-11-10",
+        "downloadURL": "https://github.com/s8ngyu/Mugunghwa/releases/download/3.0.2/Mugunghwa.ipa",
+        "size": 3889341,
+        "sha256": "",
+        "localizedDescription": "Mugunghwa 3.0.2 | Mugunghwa\n\nFixed crashes.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "nebuloiptv": [
       {
         "version": "2.3",
@@ -604,6 +852,30 @@
         "localizedDescription": "SoundCloud 8.77.0 | SoundCloud-8.77.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.77.0",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "nicegram": [
+      {
+        "version": "2.6.1",
+        "date": "2026-09-07",
+        "downloadURL": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa",
+        "size": 126339077,
+        "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+        "localizedDescription": "Nicegram 2.6.1 | build 2.6.1\n\nBuild of Nicegram for iOS 2.6.1 (713)",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
+    "nuvio": [
+      {
+        "version": "0.4.23",
+        "date": "2026-09-17",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
+        "size": 51420909,
+        "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
+        "localizedDescription": "Nuvio 0.4.23 | nuvio-0.4.23-full-release\n\n- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  \n- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  \n- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  \n- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "odyssey": [
@@ -668,14 +940,36 @@
     ],
     "playtorrio": [
       {
+        "version": "1.1.6",
+        "date": "2026-09-16",
+        "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa",
+        "size": 48685274,
+        "sha256": "dfb6ca4f282ebb82bcdbad5fd1abd82b17ee2ebb42b28c3b8cbffda11a95463c",
+        "localizedDescription": "PlayTorrio 1.1.6 | PlayTorrio-iOS\n\nCloudstream extenstion support added\nUI Fixes\nMultistream added in iptv\nCustom channels added in iptv\nnew sources\nPlayer fixes\nMacOS Torrent streaming fixed\nMobile player audio, brightness control and screen lock added\nGeneral fixes and improvements",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      },
+      {
         "version": "1.1.5",
         "date": "2026-09-09",
         "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.5/PlayTorrio-iOS.ipa",
         "size": 48421258,
         "sha256": "3d6568b6f872fe089cdc3a8692f187abab004e178555bc861a3d6c6c5623aeda",
         "localizedDescription": "PlayTorrio 1.1.5 | PlayTorrio-iOS\n\nDownloader enhancements\nFixed streaming issues\nFixed audiobook generation\nAdded fullscreen mode\nUI Fixes",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "pocketposter": [
+      {
+        "version": "3.0",
+        "date": "2025-08-29",
+        "downloadURL": "https://github.com/leminlimez/Pocket-Poster/releases/download/v3.0/Pocket_Poster.ipa",
+        "size": 13686800,
+        "sha256": "0306c349a4292ca3c40647a48bf8959f4b8d9fa7793cab444d2f79f23d4aaaf7",
+        "localizedDescription": "Pocket Poster 3.0 | Pocket_Poster\n\n# Features\n- Added an in-app explore page for finding and downloading wallpapers\n- Added custom CarPlay wallpapers (will not work on iOS 26.0)\n- *Preliminary* iOS 16 support (not all wallpapers will work)\n- Improved certain error messages\n\n# Bug Fixes\n- Fixed the aspect ratio/rotation of imported custom videos\n- Fixed the update API not being called correctly\n- Fixed issues with some alerts not popping up\n- Other various app stability improvements",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "ppsspp": [
@@ -752,13 +1046,23 @@
     ],
     "raintweak": [
       {
+        "version": "1.2.0",
+        "date": "2026-09-17",
+        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+        "size": 107065935,
+        "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+        "localizedDescription": "Discord 1.2.0 | RainTweak",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      },
+      {
         "version": "0.9.3",
         "date": "2026-06-19",
         "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
         "size": 107515564,
         "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
         "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -772,6 +1076,18 @@
         "localizedDescription": "Reddit 2025.37.0 | RedditFilter_2025.37.0-1.1.8\n\n# RedditFilter v2025.37.0-1.1.8\n\n## Changes\n\n- Fix app crash (@NicholasBly)\n- Fix ad comments showing under posts (@Laitinlok)\n- Fix popular feed not showing with recommendations disabled\n- Move RedditFilter settings to the user drawer / side bar (accessed by tapping the profile picture in the top right)\n\n## SHA256\n\n- `1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3`  packages/RedditFilter_2025.37.0-1.1.8.ipa\n- `1aabd2f0656e6ec4b26fa38f4b5e10bb2d4465c0c6e087e3d57da57a06799f83`  packages/com.level3tjg.redditfilter_1.1.8_iphoneos-arm.deb\n- `e871f455aa868a25a7ea1fd40ef3b19a7a7ade21aa4162e0b26d94dab9f31c12`  packages/com.level3tjg.redditfilter_1.1.8_iphoneos-arm64.deb",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "reynard": [
+      {
+        "version": "0.13.1",
+        "date": "2026-09-14",
+        "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+        "size": 108070190,
+        "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
+        "localizedDescription": "Reynard 0.13.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1\n\nThis is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).\n\n### Bug Fixes & Improvements\n- Improved the reliability of text input fields repositioning above the software keyboard when editing.\n- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "ryukgram": [
@@ -832,6 +1148,18 @@
         "localizedDescription": "SameBoy 1.0.3 | sameboy_ios_v1.0.3\n\nThis version is backwards compatible with save states from SameBoy 0.14.3 and newer, as well as save states from any BESS compliant emulator\n\n## New/Improved Features\n* Added support for more controllers in the iOS frontend, including singular Joy-Cons\n* Pressing buttons while in a locked rewind state now exits rewind mode in the iOS frontend\n* The iOS frontend now handles save conflicts with a dialog, making syncing saves across different machines and emulators easier\n* An `examine`/`x` command can now use the `/s` modifier to change its output style to RGBDS-compatible assembly\n* An `examine`/`x` command can now use `$` in its modifier to use hexadecimal count values\n* It is now possible to adjust the maximum rumble strength\n* It is now possible to modify and save a running ROM file from the Memory Viewer in the Cocoa frontend\n* Controller buttons can now be assigned to one of 4 hotkey commands in the iOS frontend\n* Periodic saves were added to the iOS frontend\n* A new screenshot hotkey was added to the SDL frontend\n* Controller UI hiding in the iOS frontend can now optionally disable the centering of the game screen\n* The Cocoa and SDL frontends now save the battery more frequently\n\n## Accuracy Improvements/Fixes\n* Added silence detection to eliminate rounding artifacts when playing nothing but frequencies above Nyquist\n* Prevented abnormal vblank events from updating the SNES-side buffers prematurely\n* Fixed a bug that made reading the PCM registers non-deterministic when emulating a CGB in CPU revision C or older\n* Fixed a bug that caused ROMs to be running in the background under some cases in the Cocoa frontend\n* Fixed a bug that caused channel `PCM12` to output incorrect channel 2 values when emulating CGB in CPU revision C or older\n* Improved the accuracy of the `PCM` registers when emulating CGB in CPU revision C or older\n* Emulated a new quirk where volume envelope ticks are delayed while emulating a CGB in CPU revision",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "secondhand": [
+      {
+        "version": "1.3.1",
+        "date": "2024-12-31",
+        "downloadURL": "https://github.com/leminlimez/SecondHand/releases/download/1.3.1/SecondHand.tipa",
+        "size": 2786937,
+        "sha256": "",
+        "localizedDescription": "SecondHand 1.3.1 | TrollStore\n\n- Fixed applying on iOS 17.0+ (hopefully)\n  - Reverts to using the iOS 16.1 offsets",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "serotonin": [
@@ -926,6 +1254,18 @@
         "localizedDescription": "Spotube 5.1.2 | Spotube-iOS\n\n### Bug Fixes\n\n- **newpipe**: Fallback to muxed streams if no audio stream is available\n- Dismiss search dropdown and keyboard on submission\n- Custom image helper null exception\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.1...v5.1.2",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "statusmagic": [
+      {
+        "version": "1.0.2",
+        "date": "2023-02-08",
+        "downloadURL": "https://github.com/Avangelista/StatusMagic/releases/download/1.0.2/StatusMagic.ipa",
+        "size": 1218528,
+        "sha256": "",
+        "localizedDescription": "StatusMagic 1.0.2 | StatusMagic\n\nEven in the best tested code, mistakes slip through. Sorry for such a hasty update.\n\n## Changes\n- Fixed \"Hide DND\" on iOS 15 (I accidentally left experimental code in there that enabled every single status bar icon, see #12) \n- And... that's it. Sorry!\n\n## Installation\n- iOS 14.*: Install the app with [TrollStore](https://github.com/opa334/TrollStore)\n- iOS 15.0 - 15.4.1: Install the app with [TrollStore](https://github.com/opa334/TrollStore) (recommended), [AltStore](https://altstore.io/), or [Sideloadly](https://sideloadly.io/)\n- iOS 15.5 - 16.1.2: Install the app with [AltStore](https://altstore.io/) or [Sideloadly](https://sideloadly.io/) (excludes iOS 15.7.2 & 15.7.3)\n- iOS 16.2+: Not supported, and never will be\n\n> __Warning__ ESign has been known to have issues. To avoid it, use other installation methods.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "stikdebug": [
@@ -1058,6 +1398,18 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "trollboard-reborn": [
+      {
+        "version": "1.0",
+        "date": "2023-12-05",
+        "downloadURL": "https://github.com/haxi0/TrollBoard-Reborn/releases/download/1.0/TrollBoard.Reborn.ipa",
+        "size": 542040,
+        "sha256": "",
+        "localizedDescription": "TrollBoard Reborn 1.0 | TrollBoard.Reborn\n\n**Here we are, TrollBoard Reborn Stable Release 1.0!**\n\nThis is a WebClips manager app. It does **NOT** change the original icons.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "trollfools": [
       {
         "version": "4.3-253",
@@ -1068,6 +1420,18 @@
         "localizedDescription": "TrollFools 4.3-253 | TrollFools_4.3-253.tipa\n\n# Changelog\n\n## 4.3 Build 253 (2026-04-23)\n\n修复与 MachOKit 有关的一处断言崩溃。\n\n------\n\n## 4.3 Build 253 (2026-04-23) [EN]\n\nFixed an assertion crash related to MachOKit.\n\n------\n\n## 4.3 Build 246 (2026-04-16)\n\n修复二次注入时可能误选已注入动态库作为目标 Mach-O 的问题。\n\n### 修复\n\n- 注入目标选取：修复追加注入时，上次注入的动态库可能被误选为注入目标的问题。  \n  新增三层防御：从注入前备份读取原始 Load Commands 以还原真实依赖链；枚举阶段跳过 `.troll-fools.bak` 备份文件；通过备份差分精确识别并排除已注入的动态库。\n\n------\n\n## 4.3 Build 246 (2026-04-16) [EN]\n\nFixed an issue where re-injection could incorrectly select a previously-injected dylib as the target Mach-O.\n\n### Fixed\n\n- Target selection: Fixed re-injection potentially picking a previously-injected dylib as the injection target.  \n  Added three-layer defense: read original load commands from pre-injection backup to restore the true dependency chain; skip `.troll-fools.bak` backup files during enumeration; use backup-diff to precisely identify and exclude previously-injected dylibs.\n\n------\n\n## 4.3 (2026-04-13)\n\n本次版本聚焦于“动态加载框架兼容性”和“页面说明可理解性”，并包含插件管理流程调整与资源清理。\n\n### 修复\n\n- 注入兼容性：修复部分 Unity/运行时 `dlopen` 场景下无法命中可注入目标的问题。  \n  当主程序静态链接交集为空时，改为回退扫描 `Frameworks/` 中可用 Mach-O（含一级目录下 `.dylib`）。\n- 插件管理：调整“移除插件”流程，区分已启用与已禁用插件：  \n  已启用插件执行卸载；已禁用插件执行标记清理，降低批量处理风险。\n\n### 新增\n\n- 高级选项：新增“启用兼容模式回退”开关（默认开启），可控制是否在无静态链接命中时启用回退候选。\n- 结果页提示：当本次注入通过兼容模式完成时，在“已完成”下方显示额外提示。\n\n### 优化\n\n- 候选筛选：回退候选新增过滤，排除 `libswift*` 与已忽略注入相关动态库/框架，并统一大小写处理。\n- 诊断日志：增强 Mach-O 扫描日志，输出候选数量、文件大小、加密/不可读统计与最终选择结果，便于定位“无可用目标”问题。\n- 设置说明：优化高级选项页面结构与说明文案，减少非技术用户理解成本。\n- 广告与资源：移除内置广告位 `Letterpress` 及相关本地化词条/图标资源；更新营销图素材。\n\n### 本地化\n\n- 更新 `en/zh-Hans/it/vi` 词条，补充兼容模式与设置说明相关文案，并清理移除条目对应文案。\n\n------\n\n## 4.3 (2026-04-13) [EN]\n\nThis release focuses on dynamic-framework injection compatibility and clearer user guidance, plus plugin-management flow adjustments and resource cleanup.\n\n### Fixed\n\n- Injection compatibility: Fixed cases (notably Unity/runtime `dlopen` flows) where no injectable target could be selected.  \n  When the static-link intersection is empty, TrollFools",
         "status": "current",
         "firstSeen": "2026-09-15T06:46:35Z"
+      }
+    ],
+    "trollinstallerx": [
+      {
+        "version": "1.0.3",
+        "date": "2024-09-12",
+        "downloadURL": "https://github.com/alfiecg24/TrollInstallerX/releases/download/1.0.3/TrollInstallerX.ipa",
+        "size": 6889214,
+        "sha256": "",
+        "localizedDescription": "TrollInstallerX 1.0.3 | TrollInstallerX\n\n# TrollInstallerX v1.0.3\n\n## Changes:\n* Update for Xcode 15.4+ compilation (fixes #25)\n* Added a temporary fix for yellow iPhone 14 (Plus) devices on iOS 16.3, please use `TrollInstallerX-20D50.ipa` (fixes #33)\n* Removing confusing logging around exploit deinitialisation (e.g. #11)\n* Fix arm64e devices on iOS 15.7.x that couldn't download the kernelcache by updating libgrabkernel2 (should, in theory, fix #21)\n\n**Note**: A8 devices on iOS 15.2+ will not be supported until a future release of TrollInstallerX. Furthermore, support for arm64e (A12+) devices on early iOS 17.0 betas is not planned, unless someone else would like to implement it. You can now use [TrollRestore](https://github.com/JJTech0130/TrollRestore) for both of these cases.\n\n# DO NOT DOWNLOAD THE 20D50 IPA UNLESS YOU HAVE A YELLOW IPHONE 14 (PLUS) ON IOS 16.3.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "ttkillerplus": [
@@ -1154,6 +1518,18 @@
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
+    "vibecontainers": [
+      {
+        "version": "1.0",
+        "date": "2026-08-28",
+        "downloadURL": "https://github.com/GenericCoding/VibeContainers/releases/download/v1.0/VibeContainers-1.0-unsigned.ipa",
+        "size": 8948447,
+        "sha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+        "localizedDescription": "VibeContainers 1.0 | VibeContainers-1.0-unsigned\n\nInitial release.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
+      }
+    ],
     "voyager": [
       {
         "version": "2.49.1",
@@ -1174,6 +1550,18 @@
         "localizedDescription": "Voyager 2.49.0 | Voyager-iOS-2.49.0\n\n## 🚀 Features\n\n- feat: enable rich editor by default\n   - PR: #2352\n\n## 🐛 Fixes\n\n- fix: show two column setting in desktop app\n   - PR: #2346\n- fix: stabilize navigation after ionic v9 upgrade\n   - PR: #2348\n- fix: preserve tab state during route transitions\n   - PR: #2349\n- fix: prevent random community transition flicker\n   - PR: #2353\n\n## 📝 Other Changes\n\n- chore: upgrade to ionic v9\n   - PR: #2347\n- test: expand provider matrix to comment threads, feed and search\n   - PR: #2321\n- chore: upgrade threadiverse to 0.21.2\n   - PR: #2350\n- chore: upgrade dependencies\n   - PR: #2351",
         "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "wdbfontoverwrite": [
+      {
+        "version": "1.10.8",
+        "date": "2023-02-09",
+        "downloadURL": "https://github.com/ginsudev/WDBFontOverwrite/releases/download/v1.10.8/WDBFontOverwrite.ipa",
+        "size": 5348316,
+        "sha256": "",
+        "localizedDescription": "WDBFontOverwrite 1.10.8 | WDBFontOverwrite\n\n- Updated grant_full_disk_access.\n- Concurrency and code improvements/fixes.",
+        "status": "current",
+        "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
     "winston": [

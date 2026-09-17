@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 167001383,
               "sha256": null,
-              "downloads": 16918,
+              "downloads": 17070,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "IPA",
               "size": 166994432,
               "sha256": null,
-              "downloads": 4636,
+              "downloads": 4685,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -69,7 +69,7 @@
               "fileType": "DEB",
               "size": 7336848,
               "sha256": null,
-              "downloads": 2465,
+              "downloads": 2473,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -81,12 +81,12 @@
               "fileType": "DEB",
               "size": 7336826,
               "sha256": null,
-              "downloads": 2578,
+              "downloads": 2588,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 16918
+          "downloads": 17070
         }
       ],
       "screenshotURLs": [
@@ -166,13 +166,13 @@
               "fileType": "IPA",
               "size": 55704386,
               "sha256": "24c43c66579fcbf8735176b8465b58d20d0b92524e5b32ed64c60993d76ec8f5",
-              "downloads": 8607,
+              "downloads": 8804,
               "mimeType": "application/trollstore-ipa",
               "installable": true
             }
           ],
           "sha256": "24c43c66579fcbf8735176b8465b58d20d0b92524e5b32ed64c60993d76ec8f5",
-          "downloads": 8607
+          "downloads": 8804
         }
       ],
       "screenshotURLs": [],
@@ -288,9 +288,9 @@
           "notes": "Tracks the ready-to-sideload Infuse Plus build from the IPA Vault source (the official dayanch96/InfusePlus repo publishes the tweak as .deb only). Current Infuse 8.5 builds require iOS 18 or newer; upstream also publishes an iOS 16-era 7.x build that is not tracked here. Shares com.firecore.infuse with a sideloaded stock Infuse - install one at a time."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
-          "statusSince": "2026-09-10",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-09-01"
         }
       }
@@ -392,9 +392,9 @@
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
-          "statusSince": "2026-09-07",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-09-09"
         }
       }
@@ -434,13 +434,13 @@
               "fileType": "IPA",
               "size": 5474210,
               "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-              "downloads": 15599,
+              "downloads": 15960,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-          "downloads": 15599
+          "downloads": 15960
         }
       ],
       "screenshotURLs": [],
@@ -474,8 +474,8 @@
         },
         "health": {
           "downloadReachable": true,
-          "detail": "not probed",
-          "statusSince": "2026-05-22",
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-05-22"
         }
       }
@@ -489,39 +489,39 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/MaxMusic.webp",
       "tintColor": "FF0033",
       "category": "music",
-      "version": "9.36.1",
-      "versionDate": "2026-09-10",
-      "versionDescription": "MaxMusic 9.36.1 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.36.1\n\n**Changed**\nYouTube Music version",
-      "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
-      "size": 106420283,
+      "version": "9.37.2",
+      "versionDate": "2026-09-15",
+      "versionDescription": "MaxMusic 9.37.2 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.37.2\n\n**Changed**\nYouTube Music version",
+      "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa",
+      "size": 106518711,
       "versions": [
         {
-          "version": "9.36.1",
-          "date": "2026-09-10",
-          "localizedDescription": "MaxMusic 9.36.1 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.36.1\n\n**Changed**\nYouTube Music version",
-          "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
-          "size": 106420283,
+          "version": "9.37.2",
+          "date": "2026-09-15",
+          "localizedDescription": "MaxMusic 9.37.2 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.37.2\n\n**Changed**\nYouTube Music version",
+          "downloadURL": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa",
+          "size": 106518711,
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/Mark02-2012/MaxMusic/releases/tag/MaxMusic_9.36.1_2.4.1_(90)",
+          "releaseUrl": "https://github.com/Mark02-2012/MaxMusic/releases/tag/MaxMusic_9.37.2_2.4.1_(93)",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "MaxMusic_2.4.1_9.36.1.ipa",
-              "downloadUrl": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.36.1_2.4.1_%2890%29/MaxMusic_2.4.1_9.36.1.ipa",
+              "filename": "MaxMusic_2.4.1_9.37.2.ipa",
+              "downloadUrl": "https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 106420283,
-              "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
-              "downloads": 509,
+              "size": 106518711,
+              "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
+              "downloads": 213,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
-          "downloads": 509
+          "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
+          "downloads": 213
         }
       ],
       "screenshotURLs": [
@@ -577,7 +577,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-07",
-          "lastUpdatedAt": "2026-09-10"
+          "lastUpdatedAt": "2026-09-15"
         }
       }
     },
@@ -628,13 +628,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 187,
+              "downloads": 220,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 187
+          "downloads": 220
         }
       ],
       "screenshotURLs": [
@@ -738,7 +738,7 @@
               "fileType": "IPA",
               "size": 158452402,
               "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-              "downloads": 22488,
+              "downloads": 22648,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -750,13 +750,13 @@
               "fileType": "IPA",
               "size": 153108663,
               "sha256": "964d8e009113dea7c29924a746bebbf5f50c29d61c1fd8656a91a8a765231db0",
-              "downloads": 21734,
+              "downloads": 21855,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-          "downloads": 22488
+          "downloads": 22648
         }
       ],
       "screenshotURLs": [],
@@ -831,7 +831,7 @@
               "fileType": "IPA",
               "size": 10806164,
               "sha256": null,
-              "downloads": 19426,
+              "downloads": 19515,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -843,7 +843,7 @@
               "fileType": "IPA",
               "size": 3932657,
               "sha256": null,
-              "downloads": 1852,
+              "downloads": 1860,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -855,12 +855,12 @@
               "fileType": "IPA",
               "size": 4042969,
               "sha256": null,
-              "downloads": 1324,
+              "downloads": 1330,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 19426
+          "downloads": 19515
         }
       ],
       "screenshotURLs": [],
@@ -913,21 +913,51 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Discord.webp",
       "tintColor": "5865F2",
       "category": "social",
-      "version": "0.9.3",
-      "versionDate": "2026-06-19",
-      "versionDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
-      "size": 107515564,
+      "version": "1.2.0",
+      "versionDate": "2026-09-17",
+      "versionDescription": "Discord 1.2.0 | RainTweak",
+      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+      "size": 107065935,
       "versions": [
         {
-          "version": "0.9.3",
-          "date": "2026-06-19",
-          "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
-          "size": 107515564,
-          "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
+          "version": "1.2.0",
+          "date": "2026-09-17",
+          "localizedDescription": "Discord 1.2.0 | RainTweak",
+          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+          "size": 107065935,
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v0.9.3"
+          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v1.2.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
+              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 41230,
+              "sha256": "73048c2d44806bdf34749f7743067724516098a12311fb51d1f5c37f302d697a",
+              "downloads": 19,
+              "mimeType": "application/vnd.debian.binary-package",
+              "installable": true
+            },
+            {
+              "filename": "RainTweak.ipa",
+              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 107065935,
+              "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+              "downloads": 149,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+          "downloads": 149
         }
       ],
       "screenshotURLs": [],
@@ -988,7 +1018,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-06-19"
+          "lastUpdatedAt": "2026-09-17"
         }
       }
     },
@@ -1027,7 +1057,7 @@
               "fileType": "DEB",
               "size": 19086,
               "sha256": "1aabd2f0656e6ec4b26fa38f4b5e10bb2d4465c0c6e087e3d57da57a06799f83",
-              "downloads": 846,
+              "downloads": 847,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
@@ -1039,7 +1069,7 @@
               "fileType": "DEB",
               "size": 19154,
               "sha256": "e871f455aa868a25a7ea1fd40ef3b19a7a7ade21aa4162e0b26d94dab9f31c12",
-              "downloads": 819,
+              "downloads": 821,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
@@ -1051,13 +1081,13 @@
               "fileType": "IPA",
               "size": 137114565,
               "sha256": "1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3",
-              "downloads": 5596,
+              "downloads": 5671,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3",
-          "downloads": 5596
+          "downloads": 5671
         }
       ],
       "screenshotURLs": [],
@@ -1219,9 +1249,9 @@
           "notes": "Official project: faroukbmiled/RyukGram (publishes .deb/.dylib assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Shares com.burbn.instagram with iNKillerPlus in this catalog - install one at a time."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
-          "statusSince": "2026-09-11",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-09-10"
         }
       }
@@ -1261,7 +1291,7 @@
               "fileType": "DEB",
               "size": 420364,
               "sha256": "6f480032c25f644682f9d5be9e4e4dff985856074495d9bd9552045235da1c6c",
-              "downloads": 378,
+              "downloads": 380,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -1273,7 +1303,7 @@
               "fileType": "DEB",
               "size": 419368,
               "sha256": "aa9b0636b3d1b8539b471b7d7c72bc8f2b707f0ae66e0ee42ad5f5678d36d431",
-              "downloads": 275,
+              "downloads": 277,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -1285,7 +1315,7 @@
               "fileType": "DEB",
               "size": 419052,
               "sha256": "8471daa3c136cfd6e781a177e0c466aff8ae46837b56e0fe21c98177afd95d21",
-              "downloads": 214,
+              "downloads": 215,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -1297,13 +1327,13 @@
               "fileType": "IPA",
               "size": 74865911,
               "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-              "downloads": 732,
+              "downloads": 753,
               "mimeType": "application/x-itunes-ipa",
               "installable": true
             }
           ],
           "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-          "downloads": 732
+          "downloads": 753
         }
       ],
       "screenshotURLs": [
@@ -1339,8 +1369,8 @@
         },
         "health": {
           "downloadReachable": true,
-          "detail": "not probed",
-          "statusSince": "2025-07-29",
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2025-07-29"
         }
       }
@@ -1380,13 +1410,13 @@
               "fileType": "IPA",
               "size": 6214108,
               "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-              "downloads": 24503,
+              "downloads": 24848,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-          "downloads": 24503
+          "downloads": 24848
         }
       ],
       "screenshotURLs": [],
@@ -1420,8 +1450,8 @@
         },
         "health": {
           "downloadReachable": true,
-          "detail": "not probed",
-          "statusSince": "2026-04-23",
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-04-23"
         }
       }
@@ -1521,9 +1551,9 @@
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
-          "statusSince": "2026-09-07",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-09-09"
         }
       }
@@ -1563,7 +1593,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 463,
+              "downloads": 488,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -1575,13 +1605,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1042,
+              "downloads": 1159,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1042
+          "downloads": 1159
         }
       ],
       "screenshotURLs": [],
@@ -1708,9 +1738,9 @@
           "notes": "uYouEnhanced's official GitHub releases publish release notes only - no .ipa assets - so the IPA served here is a community build of the official release tag (YouTube 21.14.4 / uYou 3.0.5), mirrored on archive.org. Once a 'Build uYouEnhanced' run publishes an IPA in this repository (tag uyouenhanced-v*), the self-built artifact takes over automatically."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 302",
-          "statusSince": "2026-09-07",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "statusSince": "2026-09-17",
           "lastUpdatedAt": "2026-08-22"
         }
       }
@@ -1750,13 +1780,13 @@
               "fileType": "IPA",
               "size": 129607592,
               "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-              "downloads": 100,
+              "downloads": 254,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-          "downloads": 100
+          "downloads": 254
         }
       ],
       "screenshotURLs": [],
@@ -1856,13 +1886,13 @@
               "fileType": "IPA",
               "size": 129769811,
               "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-              "downloads": 35,
+              "downloads": 307,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-          "downloads": 35
+          "downloads": 307
         }
       ],
       "screenshotURLs": [],
@@ -1962,13 +1992,13 @@
               "fileType": "IPA",
               "size": 129031075,
               "sha256": "37b4f9a4390c909205a0c93928c941587aa0994eddc99a29097d54ae6be477ba",
-              "downloads": 2083,
+              "downloads": 3303,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "37b4f9a4390c909205a0c93928c941587aa0994eddc99a29097d54ae6be477ba",
-          "downloads": 2083
+          "downloads": 3303
         },
         {
           "version": "20.21.6",
@@ -1990,13 +2020,13 @@
               "fileType": "IPA",
               "size": 115566999,
               "sha256": "9b97fdef5a336ef784621efa8f6afa8e30eff6dbe414a4924ef8020409628355",
-              "downloads": 50,
+              "downloads": 69,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "9b97fdef5a336ef784621efa8f6afa8e30eff6dbe414a4924ef8020409628355",
-          "downloads": 50
+          "downloads": 69
         },
         {
           "version": "19.20.2",
@@ -2018,13 +2048,13 @@
               "fileType": "IPA",
               "size": 106247621,
               "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
-              "downloads": 26,
+              "downloads": 40,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
-          "downloads": 26
+          "downloads": 40
         }
       ],
       "screenshotURLs": [
@@ -2128,7 +2158,7 @@
               "fileType": "DEB",
               "size": 889130,
               "sha256": "3e3b0b5c703e78413786ceac9970b99c76c35a3cae797ac5daa06c37d4896111",
-              "downloads": 10,
+              "downloads": 29,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
@@ -2140,7 +2170,7 @@
               "fileType": "DEB",
               "size": 889138,
               "sha256": "2afe189ce4f6ad5f4c3937dd46d78f82784cf23ab01c4737b226a02d613ccb64",
-              "downloads": 29,
+              "downloads": 46,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
@@ -2152,7 +2182,7 @@
               "fileType": "IPA",
               "size": 134780934,
               "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-              "downloads": 792,
+              "downloads": 1546,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -2164,13 +2194,13 @@
               "fileType": "IPA",
               "size": 132513253,
               "sha256": "1e1917b089958f653d81aafb13e82f30dbdc8b45704752ae7625d5c44dbf5323",
-              "downloads": 59,
+              "downloads": 123,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-          "downloads": 792
+          "downloads": 1546
         }
       ],
       "screenshotURLs": [
@@ -2274,13 +2304,13 @@
               "fileType": "IPA",
               "size": 143259058,
               "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-              "downloads": 64,
+              "downloads": 186,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-          "downloads": 64
+          "downloads": 186
         }
       ],
       "screenshotURLs": [
@@ -2384,13 +2414,13 @@
               "fileType": "IPA",
               "size": 105090579,
               "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-              "downloads": 6,
+              "downloads": 171,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-          "downloads": 6
+          "downloads": 171
         }
       ],
       "screenshotURLs": [

@@ -1,0 +1,99 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "AppStore++",
+    "bundleIdentifier": "com.cokepokes.AppStorePlus",
+    "developerName": "CokePokes",
+    "subtitle": "App Store manager for TrollStore",
+    "localizedDescription": "AppStore++ enhances the App Store experience on TrollStore devices - downgrade and upgrade apps and manage your installed apps outside the official store.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/AppStorePlus.webp",
+    "tintColor": "EDAD53",
+    "category": "utilities",
+    "version": "2.3.15",
+    "versionDate": "2026-09-17",
+    "versionDescription": "AppStore++ 2.3.15 | TrollStore\n\n# AppStore++ — What’s New in v2.3.15-7\n\n- Added a delete all/trashcan button for ipa library\n- Fixed bug when an ipa download is cancelled when packaging & becoming corrupted\n- Run ipa packaging on background thread so the UI isn't lagged",
+    "downloadURL": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa",
+    "size": 11078209,
+    "versions": [
+      {
+        "version": "2.3.15",
+        "date": "2026-09-17",
+        "localizedDescription": "AppStore++ 2.3.15 | TrollStore\n\n# AppStore++ — What’s New in v2.3.15-7\n\n- Added a delete all/trashcan button for ipa library\n- Fixed bug when an ipa download is cancelled when packaging & becoming corrupted\n- Run ipa packaging on background thread so the UI isn't lagged",
+        "downloadURL": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa",
+        "size": 11078209,
+        "minOSVersion": "14.0",
+        "releaseUrl": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/tag/v2.3.15-7",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "AppStorePlus-v2.3.15-7.tipa",
+            "downloadUrl": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus-v2.3.15-7.tipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 11078209,
+            "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
+            "downloads": 1584,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          },
+          {
+            "filename": "AppStorePlus_2.3.15-7_iphoneos-arm.deb",
+            "downloadUrl": "https://github.com/CokePokes/AppStorePlus-TrollStore/releases/download/v2.3.15-7/AppStorePlus_2.3.15-7_iphoneos-arm.deb",
+            "platform": "linux",
+            "architecture": null,
+            "fileType": "DEB",
+            "size": 11053666,
+            "sha256": "672ac4bf96feb87e28e1b2bdcbeb0bd3a425dafe43098f801e4548bfc13c3e29",
+            "downloads": 58,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
+        "downloads": 1584
+      }
+    ],
+    "screenshotURLs": [],
+    "omnisource": {
+      "slug": "appstoreplusplus",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/CokePokes/AppStorePlus-TrollStore",
+      "sourceURL": "https://github.com/CokePokes/AppStorePlus-TrollStore",
+      "verification": {
+        "method": "github-release",
+        "publisher": "CokePokes/AppStorePlus-TrollStore",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from the developer's own repository CokePokes/AppStorePlus-TrollStore; install with TrollStore, or rename to .ipa if your client rejects the extension. The .deb published alongside is for jailbroken devices."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2026-09-17"
+      }
+    },
+    "id": "com.cokepokes.AppStorePlus"
+  }
+}

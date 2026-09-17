@@ -1,7 +1,7 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "3ec26e0fbb5a",
+  "feedVersion": "d47939b95294",
   "data": {
     "name": "RainTweak",
     "bundleIdentifier": "com.hammerandchisel.discord",
@@ -11,21 +11,51 @@
     "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Discord.webp",
     "tintColor": "5865F2",
     "category": "social",
-    "version": "0.9.3",
-    "versionDate": "2026-06-19",
-    "versionDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-    "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
-    "size": 107515564,
+    "version": "1.2.0",
+    "versionDate": "2026-09-17",
+    "versionDescription": "Discord 1.2.0 | RainTweak",
+    "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+    "size": 107065935,
     "versions": [
       {
-        "version": "0.9.3",
-        "date": "2026-06-19",
-        "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
-        "size": 107515564,
-        "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
+        "version": "1.2.0",
+        "date": "2026-09-17",
+        "localizedDescription": "Discord 1.2.0 | RainTweak",
+        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+        "size": 107065935,
         "minOSVersion": "16.0",
-        "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v0.9.3"
+        "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v1.2.0",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
+            "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
+            "platform": "linux",
+            "architecture": "arm64",
+            "fileType": "DEB",
+            "size": 41230,
+            "sha256": "73048c2d44806bdf34749f7743067724516098a12311fb51d1f5c37f302d697a",
+            "downloads": 19,
+            "mimeType": "application/vnd.debian.binary-package",
+            "installable": true
+          },
+          {
+            "filename": "RainTweak.ipa",
+            "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 107065935,
+            "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+            "downloads": 149,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+        "downloads": 149
       }
     ],
     "screenshotURLs": [],
@@ -86,7 +116,7 @@
         "downloadReachable": true,
         "detail": "HTTP 302",
         "statusSince": "2026-09-10",
-        "lastUpdatedAt": "2026-06-19"
+        "lastUpdatedAt": "2026-09-17"
       }
     },
     "id": "com.hammerandchisel.discord"

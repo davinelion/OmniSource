@@ -1,7 +1,7 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "3ec26e0fbb5a",
+  "feedVersion": "d47939b95294",
   "data": {
     "name": "RyukGram",
     "bundleIdentifier": "com.burbn.instagram",
@@ -99,9 +99,9 @@
         "notes": "Official project: faroukbmiled/RyukGram (publishes .deb/.dylib assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Shares com.burbn.instagram with iNKillerPlus in this catalog - install one at a time."
       },
       "health": {
-        "downloadReachable": true,
-        "detail": "HTTP 200",
-        "statusSince": "2026-09-11",
+        "downloadReachable": false,
+        "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+        "statusSince": "2026-09-17",
         "lastUpdatedAt": "2026-09-10"
       }
     },

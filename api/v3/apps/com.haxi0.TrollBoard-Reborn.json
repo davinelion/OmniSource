@@ -1,0 +1,86 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "TrollBoard Reborn",
+    "bundleIdentifier": "com.haxi0.TrollBoard-Reborn",
+    "developerName": "haxi0",
+    "subtitle": "Web Clips icon manager for TrollStore",
+    "localizedDescription": "TrollBoard Reborn is a WebClips icon pack manager - a theming engine for your home screen that runs with TrollStore on iOS 15 to 16.1.2.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TrollBoardReborn.webp",
+    "tintColor": "56C7F8",
+    "category": "utilities",
+    "version": "1.0",
+    "versionDate": "2023-12-05",
+    "versionDescription": "TrollBoard Reborn 1.0 | TrollBoard.Reborn\n\n**Here we are, TrollBoard Reborn Stable Release 1.0!**\n\nThis is a WebClips manager app. It does **NOT** change the original icons.",
+    "downloadURL": "https://github.com/haxi0/TrollBoard-Reborn/releases/download/1.0/TrollBoard.Reborn.ipa",
+    "size": 542040,
+    "versions": [
+      {
+        "version": "1.0",
+        "date": "2023-12-05",
+        "localizedDescription": "TrollBoard Reborn 1.0 | TrollBoard.Reborn\n\n**Here we are, TrollBoard Reborn Stable Release 1.0!**\n\nThis is a WebClips manager app. It does **NOT** change the original icons.",
+        "downloadURL": "https://github.com/haxi0/TrollBoard-Reborn/releases/download/1.0/TrollBoard.Reborn.ipa",
+        "size": 542040,
+        "minOSVersion": "15.0",
+        "releaseUrl": "https://github.com/haxi0/TrollBoard-Reborn/releases/tag/1.0",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "TrollBoard.Reborn.ipa",
+            "downloadUrl": "https://github.com/haxi0/TrollBoard-Reborn/releases/download/1.0/TrollBoard.Reborn.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 542040,
+            "sha256": null,
+            "downloads": 14496,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "downloads": 14496
+      }
+    ],
+    "screenshotURLs": [],
+    "omnisource": {
+      "slug": "trollboard-reborn",
+      "status": "unmaintained",
+      "featured": false,
+      "upstreamURL": "https://github.com/haxi0/TrollBoard-Reborn",
+      "sourceURL": "https://github.com/haxi0/TrollBoard-Reborn",
+      "verification": {
+        "method": "github-release",
+        "publisher": "haxi0/TrollBoard-Reborn",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "15.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from haxi0/TrollBoard-Reborn (a TrollStore theming app; the same payload also installs on standard clients). Unmaintained since 1.0 (December 2023)."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2023-12-05"
+      }
+    },
+    "id": "com.haxi0.TrollBoard-Reborn"
+  }
+}

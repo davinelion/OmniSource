@@ -1,0 +1,135 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "Nuvio",
+    "bundleIdentifier": "com.nuvio.app",
+    "developerName": "Nuvio Media",
+    "subtitle": "Open-source media player, bring your own sources",
+    "localizedDescription": "Nuvio is a free, open-source media app for your phone, desktop and the TV you already own. Bring your own sources - Nuvio turns them into a library with artwork, ratings, subtitles and your place saved on every screen.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
+    "tintColor": "5B5FE8",
+    "category": "photo-video",
+    "version": "0.4.23",
+    "versionDate": "2026-09-17",
+    "versionDescription": "Nuvio 0.4.23 | nuvio-0.4.23-full-release\n\n- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  \n- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  \n- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  \n- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco",
+    "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
+    "size": 51420909,
+    "versions": [
+      {
+        "version": "0.4.23",
+        "date": "2026-09-17",
+        "localizedDescription": "Nuvio 0.4.23 | nuvio-0.4.23-full-release\n\n- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  \n- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  \n- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  \n- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
+        "size": 51420909,
+        "minOSVersion": "16.1",
+        "releaseUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/tag/0.4.23-beta",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "androidApp-full-x86-release.apk",
+            "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-x86-release.apk",
+            "platform": "android",
+            "architecture": "x86",
+            "fileType": "APK",
+            "size": 42264850,
+            "sha256": "51fc16c075fdb8651bd0a2291b903ac18f8595c997f9d1c0e4fef800c1e32640",
+            "downloads": 200,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "androidApp-full-armeabi-v7a-release.apk",
+            "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-armeabi-v7a-release.apk",
+            "platform": "android",
+            "architecture": "armv7",
+            "fileType": "APK",
+            "size": 40084162,
+            "sha256": "3201823956b4de701d3b4e5e94cd0caa5cedd410ef40f7ac2da5a738d1730ee6",
+            "downloads": 452,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "androidApp-full-x86_64-release.apk",
+            "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-x86_64-release.apk",
+            "platform": "android",
+            "architecture": "x86_64",
+            "fileType": "APK",
+            "size": 43175541,
+            "sha256": "ab856c6a12143825816e2284bed75ea388b03d82895c68099ac7e84e44fcaa83",
+            "downloads": 259,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          },
+          {
+            "filename": "nuvio-0.4.23-full-release.ipa",
+            "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 51420909,
+            "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
+            "downloads": 644,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          },
+          {
+            "filename": "androidApp-full-arm64-v8a-release.apk",
+            "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-arm64-v8a-release.apk",
+            "platform": "android",
+            "architecture": "arm64",
+            "fileType": "APK",
+            "size": 41819720,
+            "sha256": "3deac86ac6bec5546ecd6a87a96e4aa9ea212f41a831483f0eb13d5ca43ec0c0",
+            "downloads": 10355,
+            "mimeType": "application/vnd.android.package-archive",
+            "installable": true
+          }
+        ],
+        "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
+        "downloads": 644
+      }
+    ],
+    "screenshotURLs": [],
+    "omnisource": {
+      "slug": "nuvio",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/NuvioMedia/NuvioMobile",
+      "sourceURL": "https://github.com/NuvioMedia/NuvioMobile",
+      "verification": {
+        "method": "github-release",
+        "publisher": "NuvioMedia/NuvioMobile",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "16.1",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from NuvioMedia/NuvioMobile. The upstream also publishes a companion store.json source for AltStore and SideStore. Android and TV builds are separate releases not tracked here."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2026-09-17"
+      }
+    },
+    "id": "com.nuvio.app"
+  }
+}

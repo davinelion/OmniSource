@@ -1,0 +1,86 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "WDBFontOverwrite",
+    "bundleIdentifier": "com.ginsudev.WDBFontOverwrite",
+    "developerName": "Ginsu",
+    "subtitle": "Install custom fonts on iOS 14-16.1.2",
+    "localizedDescription": "WDBFontOverwrite overwrites the system font on iOS using CVE-2022-46689, letting you install custom fonts on iOS 14.0 to 16.1.2 without a jailbreak.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/WDBFontOverwrite.webp",
+    "tintColor": "DADADA",
+    "category": "utilities",
+    "version": "1.10.8",
+    "versionDate": "2023-02-09",
+    "versionDescription": "WDBFontOverwrite 1.10.8 | WDBFontOverwrite\n\n- Updated grant_full_disk_access.\n- Concurrency and code improvements/fixes.",
+    "downloadURL": "https://github.com/ginsudev/WDBFontOverwrite/releases/download/v1.10.8/WDBFontOverwrite.ipa",
+    "size": 5348316,
+    "versions": [
+      {
+        "version": "1.10.8",
+        "date": "2023-02-09",
+        "localizedDescription": "WDBFontOverwrite 1.10.8 | WDBFontOverwrite\n\n- Updated grant_full_disk_access.\n- Concurrency and code improvements/fixes.",
+        "downloadURL": "https://github.com/ginsudev/WDBFontOverwrite/releases/download/v1.10.8/WDBFontOverwrite.ipa",
+        "size": 5348316,
+        "minOSVersion": "14.0",
+        "releaseUrl": "https://github.com/ginsudev/WDBFontOverwrite/releases/tag/v1.10.8",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "WDBFontOverwrite.ipa",
+            "downloadUrl": "https://github.com/ginsudev/WDBFontOverwrite/releases/download/v1.10.8/WDBFontOverwrite.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 5348316,
+            "sha256": null,
+            "downloads": 69292,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "downloads": 69292
+      }
+    ],
+    "screenshotURLs": [],
+    "omnisource": {
+      "slug": "wdbfontoverwrite",
+      "status": "unmaintained",
+      "featured": false,
+      "upstreamURL": "https://github.com/ginsudev/WDBFontOverwrite",
+      "sourceURL": "https://github.com/ginsudev/WDBFontOverwrite",
+      "verification": {
+        "method": "github-release",
+        "publisher": "ginsudev/WDBFontOverwrite",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": "16.1.2",
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "Official IPA from ginsudev/WDBFontOverwrite. The font overwrite relies on CVE-2022-46689, so it is limited to the affected firmware range. Unmaintained since v1.10.8 (August 2023)."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2023-02-09"
+      }
+    },
+    "id": "com.ginsudev.WDBFontOverwrite"
+  }
+}

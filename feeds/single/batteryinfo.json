@@ -1,0 +1,95 @@
+{
+  "name": "OmniSource — Battery Info",
+  "identifier": "com.iamsmmh.omnisource.batteryinfo",
+  "apiVersion": "v2",
+  "subtitle": "Single-app source",
+  "description": "Single-app feed for Battery Info.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/BatteryInfo.webp",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
+  "apps": [
+    {
+      "name": "Battery Info",
+      "bundleIdentifier": "com.developlab.BatteryInfo",
+      "developerName": "DevelopCubeLab",
+      "subtitle": "Battery health, cycles and charge telemetry",
+      "localizedDescription": "Battery Info is a TrollStore utility from DevelopCubeLab: live charge voltage and current, full capacity, cycle count, temperature and a persistent charging-history database (QMax and limit voltage per charge). The developer also distributes it through the Havoc sideload store (havoc.app/package/batteryinfo).",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/BatteryInfo.webp",
+      "tintColor": "3BB2E8",
+      "category": "utilities",
+      "version": "1.2.2",
+      "versionDate": "2025-07-09",
+      "versionDescription": "Battery Info 1.2.2 | TrollStore\n\n1. Added 'full capacity'.\n2. Improve history add saving of QMax and limit voltage data.\n3. Improve the database.\n4. Other improvements.\n\n\nZh:\n1. 新增 满充容量\n2. 改进历史记录，新增保存QMax和限制电压数据\n3. 改进数据库，为将来的非TrollStore版做好准备，当前进度新建文件夹，并验证了可行性\n4. 其他小改进",
+      "downloadURL": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+      "size": 346882,
+      "versions": [
+        {
+          "version": "1.2.2",
+          "date": "2025-07-09",
+          "localizedDescription": "Battery Info 1.2.2 | TrollStore\n\n1. Added 'full capacity'.\n2. Improve history add saving of QMax and limit voltage data.\n3. Improve the database.\n4. Other improvements.\n\n\nZh:\n1. 新增 满充容量\n2. 改进历史记录，新增保存QMax和限制电压数据\n3. 改进数据库，为将来的非TrollStore版做好准备，当前进度新建文件夹，并验证了可行性\n4. 其他小改进",
+          "downloadURL": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+          "size": 346882,
+          "minOSVersion": "12.2",
+          "releaseUrl": "https://github.com/DevelopCubeLab/BatteryInfo/releases/tag/1.2.2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "com.developlab.batteryinfo_1.2.2.tipa",
+              "downloadUrl": "https://github.com/DevelopCubeLab/BatteryInfo/releases/download/1.2.2/com.developlab.batteryinfo_1.2.2.tipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 346882,
+              "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+              "downloads": 7707,
+              "mimeType": "application/zip",
+              "installable": true
+            }
+          ],
+          "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+          "downloads": 7707
+        }
+      ],
+      "screenshotURLs": [],
+      "omnisource": {
+        "slug": "batteryinfo",
+        "status": "stable",
+        "featured": false,
+        "upstreamURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+        "sourceURL": "https://github.com/DevelopCubeLab/BatteryInfo",
+        "verification": {
+          "method": "github-release",
+          "publisher": "DevelopCubeLab/BatteryInfo",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "12.2",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/BatteryInfo; install with TrollStore, or rename to .ipa if your client rejects the extension."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-17",
+          "lastUpdatedAt": "2025-07-09"
+        }
+      }
+    }
+  ],
+  "news": []
+}

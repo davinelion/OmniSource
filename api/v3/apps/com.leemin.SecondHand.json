@@ -1,0 +1,89 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "SecondHand",
+    "bundleIdentifier": "com.leemin.SecondHand",
+    "developerName": "leminlimez",
+    "subtitle": "Seconds in the status bar clock",
+    "localizedDescription": "SecondHand adds seconds to the status bar clock on TrollStore devices, with customizable date and time formats.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/SecondHand.webp",
+    "tintColor": "DDA51E",
+    "category": "utilities",
+    "version": "1.3.1",
+    "versionDate": "2024-12-31",
+    "versionDescription": "SecondHand 1.3.1 | TrollStore\n\n- Fixed applying on iOS 17.0+ (hopefully)\n  - Reverts to using the iOS 16.1 offsets",
+    "downloadURL": "https://github.com/leminlimez/SecondHand/releases/download/1.3.1/SecondHand.tipa",
+    "size": 2786937,
+    "versions": [
+      {
+        "version": "1.3.1",
+        "date": "2024-12-31",
+        "localizedDescription": "SecondHand 1.3.1 | TrollStore\n\n- Fixed applying on iOS 17.0+ (hopefully)\n  - Reverts to using the iOS 16.1 offsets",
+        "downloadURL": "https://github.com/leminlimez/SecondHand/releases/download/1.3.1/SecondHand.tipa",
+        "size": 2786937,
+        "minOSVersion": "14.0",
+        "releaseUrl": "https://github.com/leminlimez/SecondHand/releases/tag/1.3.1",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "SecondHand.tipa",
+            "downloadUrl": "https://github.com/leminlimez/SecondHand/releases/download/1.3.1/SecondHand.tipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 2786937,
+            "sha256": null,
+            "downloads": 1505,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "downloads": 1505
+      }
+    ],
+    "screenshotURLs": [
+      "https://raw.githubusercontent.com/leminlimez/SecondHand/main/Images/MainPage.PNG",
+      "https://raw.githubusercontent.com/leminlimez/SecondHand/main/Images/DateFormatOptions.PNG"
+    ],
+    "omnisource": {
+      "slug": "secondhand",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/leminlimez/SecondHand",
+      "sourceURL": "https://github.com/leminlimez/SecondHand",
+      "verification": {
+        "method": "github-release",
+        "publisher": "leminlimez/SecondHand",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "14.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/SecondHand; install with TrollStore, or rename to .ipa if your client rejects the extension. The upstream documents iOS 14.0 - 15.4.1 compatibility."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2024-12-31"
+      }
+    },
+    "id": "com.leemin.SecondHand"
+  }
+}

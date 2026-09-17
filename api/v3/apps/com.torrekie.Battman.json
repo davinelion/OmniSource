@@ -1,0 +1,116 @@
+{
+  "apiVersion": "3.0.0",
+  "schemaVersion": 3,
+  "feedVersion": "d47939b95294",
+  "data": {
+    "name": "Battman",
+    "bundleIdentifier": "com.torrekie.Battman",
+    "developerName": "Torrekie Gen",
+    "subtitle": "Battery health and charge management",
+    "localizedDescription": "Battman is a battery manager for TrollStore and jailbroken iOS devices - battery health, cycle count and temperature, charging limits and a live gas gauge, with a plugin SDK for extra cards.",
+    "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Battman.webp",
+    "tintColor": "4CD964",
+    "category": "utilities",
+    "version": "1.0.3",
+    "versionDate": "2026-01-19",
+    "versionDescription": "Battman 1.0.3 | TrollStore\n\n## Battman 1.0.3.3\nIn this hotfix version, I have only fixed few bugs cuz I'm a super lazyass and I cannot think of what to be added.\n\n**PLEASE LET ME KNOW** when you wish any new features or found any bugs, especially, you can create any GitHub issues to describe those, to effectively urge me to update this project (Or the most efficient way is to give me money and let me do your requests).\n\n- Fixed a bug where wrongly swapped \"⏾\" and \"▶\" when daemon runs.\n- Added a \"Unsupported\" notification popup when user attempts to run 'Charging Limit' with wireless chargers.\n- Attempt to fix a problem where iOS 17 cannot trigger iCloud autobackup when Battman has been installed.\n- Improved daemon communication logics to make daemon shutdowns gracefully.\n- Removed Herobrine.\n\n### Dependencies (deb)\n- `libintl8`\n\n### Support List\n| iOS \\ Chip \t| <= A10 / A10X \t|           A11          \t|       A12 Series       \t|           A13          \t|     A14 / M1 Series    \t|     A15 / M2 Series    \t| >= A16 / M3 Series \t|\n|:----------:\t|:-------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:------------------:\t|\n|   <= 11.0  \t|  Unsupported  \t|       Unsupported      \t|            -           \t|            -           \t|            -           \t|            -           \t|          -         \t|\n|    12.0    \t|  Unsupported  \t|        Jailbreak       \t|        Jailbreak       \t|            -           \t|            -           \t|            -           \t|          -         \t|\n|    13.0    \t|  Unsupported  \t|        Jailbreak       \t|        Jailbreak       \t|        Jailbreak       \t|            -           \t|            -           \t|          -         \t|\n|    14.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|            -           \t|          -         \t|\n|    15.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|          -         \t|\n|    16.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|      Untested      \t|\n|   >= 17.0  \t|  Unsupported  \t|        Untested        \t|        Untested        \t|        Untested        \t|        Untested        \t|        Untested        \t|      Untested      \t|\n\n* Unsupported: Battman would not work on your device, at least for now\n* Untested: Battman has not been tested on your device, but it should theoretically work if you can jailbreak or use TrollStore\n* Jailbreak: You can install Battman after jailbreaking, **Please notice that Roothide jailbreak was not considered in this list**\n* TrollStore: You can install Battman by using [TrollStore](https://github.com/opa334/TrollStore)\n\n### Choose your package\n`com.torrekie.battman_1.0.3.3_iphoneos-arm.deb`: For your rooted jailbreaks, typically for devices which running iOS 12.0 ~ 14.x\n`com.torrekie.battman_1.0.3.3_iphoneos-arm64.deb`: For your rootless jailbreaks, typically for devices which running iOS 15.0 or above\n`Battman.tipa`: TrollStore ipa, use when you prefer a TrollStore method, please notice that **DO NOT install deb and tipa versions at same time**. You can only keep one installation on your device.\n\n**Full Changelog**: https://github.com/Torrekie/Battman/compare/v1.0.3.2...v1.0.3.3",
+    "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+    "size": 675573,
+    "versions": [
+      {
+        "version": "1.0.3",
+        "date": "2026-01-19",
+        "localizedDescription": "Battman 1.0.3 | TrollStore\n\n## Battman 1.0.3.3\nIn this hotfix version, I have only fixed few bugs cuz I'm a super lazyass and I cannot think of what to be added.\n\n**PLEASE LET ME KNOW** when you wish any new features or found any bugs, especially, you can create any GitHub issues to describe those, to effectively urge me to update this project (Or the most efficient way is to give me money and let me do your requests).\n\n- Fixed a bug where wrongly swapped \"⏾\" and \"▶\" when daemon runs.\n- Added a \"Unsupported\" notification popup when user attempts to run 'Charging Limit' with wireless chargers.\n- Attempt to fix a problem where iOS 17 cannot trigger iCloud autobackup when Battman has been installed.\n- Improved daemon communication logics to make daemon shutdowns gracefully.\n- Removed Herobrine.\n\n### Dependencies (deb)\n- `libintl8`\n\n### Support List\n| iOS \\ Chip \t| <= A10 / A10X \t|           A11          \t|       A12 Series       \t|           A13          \t|     A14 / M1 Series    \t|     A15 / M2 Series    \t| >= A16 / M3 Series \t|\n|:----------:\t|:-------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:----------------------:\t|:------------------:\t|\n|   <= 11.0  \t|  Unsupported  \t|       Unsupported      \t|            -           \t|            -           \t|            -           \t|            -           \t|          -         \t|\n|    12.0    \t|  Unsupported  \t|        Jailbreak       \t|        Jailbreak       \t|            -           \t|            -           \t|            -           \t|          -         \t|\n|    13.0    \t|  Unsupported  \t|        Jailbreak       \t|        Jailbreak       \t|        Jailbreak       \t|            -           \t|            -           \t|          -         \t|\n|    14.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|            -           \t|          -         \t|\n|    15.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|          -         \t|\n|    16.0    \t|  Unsupported  \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t| Jailbreak / TrollStore \t|      Untested      \t|\n|   >= 17.0  \t|  Unsupported  \t|        Untested        \t|        Untested        \t|        Untested        \t|        Untested        \t|        Untested        \t|      Untested      \t|\n\n* Unsupported: Battman would not work on your device, at least for now\n* Untested: Battman has not been tested on your device, but it should theoretically work if you can jailbreak or use TrollStore\n* Jailbreak: You can install Battman after jailbreaking, **Please notice that Roothide jailbreak was not considered in this list**\n* TrollStore: You can install Battman by using [TrollStore](https://github.com/opa334/TrollStore)\n\n### Choose your package\n`com.torrekie.battman_1.0.3.3_iphoneos-arm.deb`: For your rooted jailbreaks, typically for devices which running iOS 12.0 ~ 14.x\n`com.torrekie.battman_1.0.3.3_iphoneos-arm64.deb`: For your rootless jailbreaks, typically for devices which running iOS 15.0 or above\n`Battman.tipa`: TrollStore ipa, use when you prefer a TrollStore method, please notice that **DO NOT install deb and tipa versions at same time**. You can only keep one installation on your device.\n\n**Full Changelog**: https://github.com/Torrekie/Battman/compare/v1.0.3.2...v1.0.3.3",
+        "downloadURL": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+        "size": 675573,
+        "minOSVersion": "12.0",
+        "releaseUrl": "https://github.com/Torrekie/Battman/releases/tag/v1.0.3.3",
+        "source": "github",
+        "isPrerelease": false,
+        "isDraft": false,
+        "assets": [
+          {
+            "filename": "Battman.tipa",
+            "downloadUrl": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/Battman.tipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 675573,
+            "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+            "downloads": 2123,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          },
+          {
+            "filename": "com.torrekie.battman_1.0.3.3_iphoneos-arm.deb",
+            "downloadUrl": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/com.torrekie.battman_1.0.3.3_iphoneos-arm.deb",
+            "platform": "linux",
+            "architecture": null,
+            "fileType": "DEB",
+            "size": 3118352,
+            "sha256": "54c4af7ba6c5ef8a4b62ef392b75a22957d553fed2396620ed630e483c514684",
+            "downloads": 635,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          },
+          {
+            "filename": "com.torrekie.battman_1.0.3.3_iphoneos-arm64.deb",
+            "downloadUrl": "https://github.com/Torrekie/Battman/releases/download/v1.0.3.3/com.torrekie.battman_1.0.3.3_iphoneos-arm64.deb",
+            "platform": "linux",
+            "architecture": "arm64",
+            "fileType": "DEB",
+            "size": 441412,
+            "sha256": "c4f28720a7373ec67884a162db964c1405b4ca6e8f712fad2b1383b065000959",
+            "downloads": 636,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          }
+        ],
+        "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+        "downloads": 2123
+      }
+    ],
+    "screenshotURLs": [
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Main.png",
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Gas%20Gauge.png",
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/ChargingMgmt.png",
+      "https://raw.githubusercontent.com/Torrekie/Battman/master/Screenshots/Adapter.png"
+    ],
+    "omnisource": {
+      "slug": "battman",
+      "status": "stable",
+      "featured": false,
+      "upstreamURL": "https://github.com/Torrekie/Battman",
+      "sourceURL": "https://github.com/Torrekie/Battman",
+      "verification": {
+        "method": "github-release",
+        "publisher": "Torrekie/Battman",
+        "codeSigned": false,
+        "checksumPublished": false
+      },
+      "compatibility": {
+        "minOSVersion": "12.0",
+        "maxOSVersion": null,
+        "devices": [
+          "iphone",
+          "ipad"
+        ],
+        "clients": [
+          "altstore",
+          "sidestore",
+          "feather",
+          "esign",
+          "livecontainer"
+        ],
+        "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from Torrekie/Battman; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
+      },
+      "health": {
+        "downloadReachable": true,
+        "detail": "HTTP 302",
+        "statusSince": "2026-09-17",
+        "lastUpdatedAt": "2026-01-19"
+      }
+    },
+    "id": "com.torrekie.Battman"
+  }
+}
