@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 915515,
             "sha256": null,
-            "downloads": 134402,
+            "downloads": 134434,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 134402
+        "downloads": 134434
       }
     ],
     "screenshotURLs": [
@@ -71,8 +71,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from matteozappia/DynamicCow. The upstream documents iOS 16.0 - 16.1.2 support. Unmaintained since 1.1 (February 2023)."

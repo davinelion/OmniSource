@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 48820768,
               "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
-              "downloads": 838,
+              "downloads": 846,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,13 +57,13 @@
               "fileType": "other",
               "size": 68472868,
               "sha256": "43719f3713c5d39c0dbc21ccae0c18d4b215c7e2b90167628df6f94a42b550ef",
-              "downloads": 499,
+              "downloads": 500,
               "mimeType": "application/octet-stream",
               "installable": false
             }
           ],
           "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
-          "downloads": 838
+          "downloads": 846
         }
       ],
       "screenshotURLs": [],
@@ -89,8 +89,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Uses the Network Extension (packet tunnel) entitlement, which a free personal Apple ID cannot sign: expect it to run only where your certificate allows network-extension configurations (AltStore or SideStore with a paid developer account, Feather/ESign with a developer certificate). Network extensions do not run in simulators."

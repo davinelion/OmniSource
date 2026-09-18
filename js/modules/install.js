@@ -23,8 +23,10 @@ import { esc, siteUrl, translate } from './utils.js';
 export const CLIENT_SCHEMES = Object.freeze({
   altstore: 'altstore://source?url={url}',
   sidestore: 'sidestore://source?url={url}',
+  flarestore: 'flarestore://source?url={url}',
   feather: 'feather://source/{hostpath}',
   esign: 'esign://addsource?url={url}',
+  ksign: 'ksign://addsource?url={url}',
   livecontainer: 'livecontainer://sources?url={url}',
 });
 

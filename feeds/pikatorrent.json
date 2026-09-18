@@ -45,7 +45,7 @@
               "fileType": "APK",
               "size": 129996418,
               "sha256": "c18be0b559136dd3bc701b763e5e884145e7787e8e18454628c6fd6dd76b0f40",
-              "downloads": 4824,
+              "downloads": 4834,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "IPA",
               "size": 38053348,
               "sha256": "0c02f3de181df9c77a03bfa8326449feddf66bc1b1508f65ffde6b86eb72cd89",
-              "downloads": 2168,
+              "downloads": 2184,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -117,13 +117,13 @@
               "fileType": "ZIP",
               "size": 77013750,
               "sha256": "f9c6a719512e351216f3888c345c41ec84d3add821025fc4556ff54555ae7628",
-              "downloads": 3699,
+              "downloads": 3703,
               "mimeType": "application/zip",
               "installable": false
             }
           ],
           "sha256": "0c02f3de181df9c77a03bfa8326449feddf66bc1b1508f65ffde6b86eb72cd89",
-          "downloads": 2168
+          "downloads": 2184
         }
       ],
       "screenshotURLs": [],
@@ -153,8 +153,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA published by the developer on GitHub Releases."

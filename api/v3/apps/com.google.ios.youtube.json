@@ -49,13 +49,13 @@
             "fileType": "IPA",
             "size": 133357787,
             "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-            "downloads": 235,
+            "downloads": 239,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-        "downloads": 235
+        "downloads": 239
       }
     ],
     "screenshotURLs": [
@@ -110,8 +110,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The upstream repository removed its IPA release assets for legal reasons and now publishes builds on Telegram/TubeVault, so this entry tracks the GitHub mirror of the TubeVault build (MaxTube 1.4.2, YouTube 21.31.3, YTPlus 5.2.2), which publishes a SHA-256. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."

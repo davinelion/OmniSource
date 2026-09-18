@@ -37,13 +37,13 @@
             "fileType": "IPA",
             "size": 143259058,
             "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-            "downloads": 205,
+            "downloads": 220,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-        "downloads": 205
+        "downloads": 220
       }
     ],
     "screenshotURLs": [
@@ -98,8 +98,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The developer's own AltStore source (repo.ikghd.me) has been unreachable, so this feed resolves from the ready-to-sideload community build of the official tweak at mrdrvt99/YouProEXTRA. YouTube 21.34+ requires iOS 17. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."

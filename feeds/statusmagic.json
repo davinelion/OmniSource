@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 1218528,
               "sha256": null,
-              "downloads": 16889,
+              "downloads": 16898,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -62,7 +62,7 @@
               "installable": true
             }
           ],
-          "downloads": 16889
+          "downloads": 16898
         }
       ],
       "screenshotURLs": [
@@ -90,8 +90,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from Avangelista/StatusMagic (the .tipa is not tracked). The upstream documents iOS 14.0 - 16.1.2 support. Unmaintained since 1.0.2 (December 2023)."

@@ -67,8 +67,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Tracks the ready-to-sideload Infuse Plus build from the IPA Vault source (the official dayanch96/InfusePlus repo publishes the tweak as .deb only). Current Infuse 8.5 builds require iOS 18 or newer; upstream also publishes an iOS 16-era 7.x build that is not tracked here. Shares com.firecore.infuse with a sideloaded stock Infuse - install one at a time."

@@ -23,7 +23,15 @@ from __future__ import annotations
 
 from typing import Any
 
-CLIENTS = ("altstore", "sidestore", "feather", "esign", "livecontainer")
+CLIENTS = (
+    "altstore",
+    "sidestore",
+    "flarestore",
+    "feather",
+    "esign",
+    "ksign",
+    "livecontainer",
+)
 
 
 def _is_https(url: Any) -> bool:

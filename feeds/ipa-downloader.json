@@ -1,7 +1,7 @@
 {
   "name": "OmniSource IPA Downloader",
   "description": "Direct download links for every app in the OmniSource catalog, resolved from each app's official upstream and refreshed by the build pipeline. downloadURL is the newest published asset; install[] are one-tap source-add deep links per client.",
-  "generatedAt": "2026-09-18T10:21:43Z",
+  "generatedAt": "2026-09-18T14:06:30Z",
   "baseURL": "https://iamsmmh.github.io/OmniSource",
   "count": 130,
   "apps": [
@@ -23,8 +23,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/3105.json",
@@ -40,6 +42,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/3105.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/3105.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/3105.json"
@@ -48,6 +55,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/3105.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/3105.json"
         },
         {
           "client": "livecontainer",
@@ -74,8 +86,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/aidoku.json",
@@ -91,6 +105,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/aidoku.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/aidoku.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/aidoku.json"
@@ -99,6 +118,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/aidoku.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/aidoku.json"
         },
         {
           "client": "livecontainer",
@@ -125,8 +149,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/airtroller.json",
@@ -142,6 +168,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/airtroller.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/airtroller.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/airtroller.json"
@@ -150,6 +181,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/airtroller.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/airtroller.json"
         },
         {
           "client": "livecontainer",
@@ -176,8 +212,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/animationspeed.json",
@@ -193,6 +231,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/animationspeed.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/animationspeed.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/animationspeed.json"
@@ -201,6 +244,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/animationspeed.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/animationspeed.json"
         },
         {
           "client": "livecontainer",
@@ -227,8 +275,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/animegen.json",
@@ -244,6 +294,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/animegen.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/animegen.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/animegen.json"
@@ -252,6 +307,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/animegen.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/animegen.json"
         },
         {
           "client": "livecontainer",
@@ -278,8 +338,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/anxreader.json",
@@ -295,6 +357,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/anxreader.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/anxreader.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/anxreader.json"
@@ -303,6 +370,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/anxreader.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/anxreader.json"
         },
         {
           "client": "livecontainer",
@@ -329,8 +401,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/anymex.json",
@@ -346,6 +420,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/anymex.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/anymex.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/anymex.json"
@@ -354,6 +433,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/anymex.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/anymex.json"
         },
         {
           "client": "livecontainer",
@@ -380,8 +464,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/apollo.json",
@@ -397,6 +483,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/apollo.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/apollo.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/apollo.json"
@@ -405,6 +496,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/apollo.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/apollo.json"
         },
         {
           "client": "livecontainer",
@@ -431,8 +527,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json",
@@ -448,6 +546,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json"
@@ -456,6 +559,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/appstoreplusplus.json"
         },
         {
           "client": "livecontainer",
@@ -482,8 +590,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json",
@@ -499,6 +609,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/batteryinfo.json"
@@ -507,6 +622,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/batteryinfo.json"
         },
         {
           "client": "livecontainer",
@@ -533,8 +653,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/battman.json",
@@ -550,6 +672,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/battman.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/battman.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/battman.json"
@@ -558,6 +685,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/battman.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/battman.json"
         },
         {
           "client": "livecontainer",
@@ -584,8 +716,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json",
@@ -601,6 +735,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/bhinstagram.json"
@@ -609,6 +748,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bhinstagram.json"
         },
         {
           "client": "livecontainer",
@@ -635,8 +779,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/bhtwitter.json",
@@ -652,6 +798,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhtwitter.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bhtwitter.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/bhtwitter.json"
@@ -660,6 +811,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bhtwitter.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bhtwitter.json"
         },
         {
           "client": "livecontainer",
@@ -686,8 +842,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/bluewallet.json",
@@ -703,6 +861,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bluewallet.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bluewallet.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/bluewallet.json"
@@ -711,6 +874,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bluewallet.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bluewallet.json"
         },
         {
           "client": "livecontainer",
@@ -737,8 +905,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/bootstrap.json",
@@ -754,6 +924,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bootstrap.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/bootstrap.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/bootstrap.json"
@@ -762,6 +937,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bootstrap.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/bootstrap.json"
         },
         {
           "client": "livecontainer",
@@ -788,8 +968,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/byetunes.json",
@@ -805,6 +987,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/byetunes.json"
@@ -813,6 +1000,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/byetunes.json"
         },
         {
           "client": "livecontainer",
@@ -839,8 +1031,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json",
@@ -856,6 +1050,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
@@ -864,6 +1063,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/caperfhud.json"
         },
         {
           "client": "livecontainer",
@@ -890,8 +1094,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cartube.json",
@@ -907,6 +1113,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cartube.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cartube.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/cartube.json"
@@ -915,6 +1126,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cartube.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cartube.json"
         },
         {
           "client": "livecontainer",
@@ -941,8 +1157,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cercube.json",
@@ -958,6 +1176,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cercube.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cercube.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/cercube.json"
@@ -966,6 +1189,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cercube.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cercube.json"
         },
         {
           "client": "livecontainer",
@@ -992,8 +1220,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/chan.json",
@@ -1009,6 +1239,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/chan.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/chan.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/chan.json"
@@ -1017,6 +1252,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/chan.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/chan.json"
         },
         {
           "client": "livecontainer",
@@ -1043,8 +1283,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/chatsen.json",
@@ -1060,6 +1302,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/chatsen.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/chatsen.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/chatsen.json"
@@ -1068,6 +1315,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/chatsen.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/chatsen.json"
         },
         {
           "client": "livecontainer",
@@ -1094,8 +1346,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/conduit.json",
@@ -1111,6 +1365,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/conduit.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/conduit.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/conduit.json"
@@ -1119,6 +1378,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/conduit.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/conduit.json"
         },
         {
           "client": "livecontainer",
@@ -1145,8 +1409,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cosmos.json",
@@ -1162,6 +1428,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cosmos.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cosmos.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/cosmos.json"
@@ -1170,6 +1441,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cosmos.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cosmos.json"
         },
         {
           "client": "livecontainer",
@@ -1196,8 +1472,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/cowabunga.json",
@@ -1213,6 +1491,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cowabunga.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/cowabunga.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/cowabunga.json"
@@ -1221,6 +1504,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cowabunga.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/cowabunga.json"
         },
         {
           "client": "livecontainer",
@@ -1247,8 +1535,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/delta.json",
@@ -1264,6 +1554,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/delta.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/delta.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/delta.json"
@@ -1272,6 +1567,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/delta.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/delta.json"
         },
         {
           "client": "livecontainer",
@@ -1298,8 +1598,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/dolphinish.json",
@@ -1315,6 +1617,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dolphinish.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dolphinish.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/dolphinish.json"
@@ -1323,6 +1630,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dolphinish.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dolphinish.json"
         },
         {
           "client": "livecontainer",
@@ -1349,8 +1661,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/dopamine.json",
@@ -1366,6 +1680,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/dopamine.json"
@@ -1374,6 +1693,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine.json"
         },
         {
           "client": "livecontainer",
@@ -1400,8 +1724,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json",
@@ -1417,6 +1743,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json"
@@ -1425,6 +1756,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dopamine-roothide.json"
         },
         {
           "client": "livecontainer",
@@ -1451,8 +1787,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/dynamiccow.json",
@@ -1468,6 +1806,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dynamiccow.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/dynamiccow.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/dynamiccow.json"
@@ -1476,6 +1819,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dynamiccow.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/dynamiccow.json"
         },
         {
           "client": "livecontainer",
@@ -1502,8 +1850,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/enablequic.json",
@@ -1519,6 +1869,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/enablequic.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/enablequic.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/enablequic.json"
@@ -1527,6 +1882,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/enablequic.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/enablequic.json"
         },
         {
           "client": "livecontainer",
@@ -1540,11 +1900,11 @@
       "name": "EscapeOS",
       "developer": "pwnapplehat",
       "bundleIdentifier": "com.ipaside.escapeos",
-      "version": "0.1.5",
-      "date": "2026-08-17",
-      "size": 7259448,
+      "version": "0.1.6",
+      "date": "2026-09-18",
+      "size": 7274676,
       "sizeHuman": "6.9 MB",
-      "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
+      "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.6/EscapeOS-0.1.6.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/EscapeOS.webp",
       "tintColor": "3D9A97",
       "category": "utilities",
@@ -1553,8 +1913,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/escapeos.json",
@@ -1570,6 +1932,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/escapeos.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/escapeos.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/escapeos.json"
@@ -1578,6 +1945,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/escapeos.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/escapeos.json"
         },
         {
           "client": "livecontainer",
@@ -1604,8 +1976,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/feather.json",
@@ -1621,6 +1995,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/feather.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/feather.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/feather.json"
@@ -1629,6 +2008,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/feather.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/feather.json"
         },
         {
           "client": "livecontainer",
@@ -1655,8 +2039,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/fladder.json",
@@ -1672,6 +2058,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/fladder.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/fladder.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/fladder.json"
@@ -1680,6 +2071,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/fladder.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/fladder.json"
         },
         {
           "client": "livecontainer",
@@ -1706,8 +2102,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/glow.json",
@@ -1723,6 +2121,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/glow.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/glow.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/glow.json"
@@ -1731,6 +2134,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/glow.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/glow.json"
         },
         {
           "client": "livecontainer",
@@ -1757,8 +2165,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/gopeed.json",
@@ -1774,6 +2184,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/gopeed.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/gopeed.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/gopeed.json"
@@ -1782,6 +2197,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/gopeed.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/gopeed.json"
         },
         {
           "client": "livecontainer",
@@ -1808,8 +2228,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/hanami.json",
@@ -1825,6 +2247,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/hanami.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/hanami.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/hanami.json"
@@ -1833,6 +2260,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/hanami.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/hanami.json"
         },
         {
           "client": "livecontainer",
@@ -1859,8 +2291,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/helium.json",
@@ -1876,6 +2310,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/helium.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/helium.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/helium.json"
@@ -1884,6 +2323,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/helium.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/helium.json"
         },
         {
           "client": "livecontainer",
@@ -1910,8 +2354,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ime.json",
@@ -1927,6 +2373,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ime.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ime.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ime.json"
@@ -1935,6 +2386,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ime.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ime.json"
         },
         {
           "client": "livecontainer",
@@ -1961,8 +2417,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/infuseplus.json",
@@ -1978,6 +2436,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/infuseplus.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/infuseplus.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/infuseplus.json"
@@ -1986,6 +2449,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/infuseplus.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/infuseplus.json"
         },
         {
           "client": "livecontainer",
@@ -2012,8 +2480,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/inkillerplus.json",
@@ -2029,6 +2499,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/inkillerplus.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/inkillerplus.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/inkillerplus.json"
@@ -2037,6 +2512,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/inkillerplus.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/inkillerplus.json"
         },
         {
           "client": "livecontainer",
@@ -2063,8 +2543,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/iqface.json",
@@ -2080,6 +2562,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/iqface.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/iqface.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/iqface.json"
@@ -2088,6 +2575,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/iqface.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/iqface.json"
         },
         {
           "client": "livecontainer",
@@ -2114,8 +2606,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ish.json",
@@ -2131,6 +2625,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ish.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ish.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ish.json"
@@ -2139,6 +2638,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ish.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ish.json"
         },
         {
           "client": "livecontainer",
@@ -2165,8 +2669,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/itorrent.json",
@@ -2182,6 +2688,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/itorrent.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/itorrent.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/itorrent.json"
@@ -2190,6 +2701,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/itorrent.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/itorrent.json"
         },
         {
           "client": "livecontainer",
@@ -2216,8 +2732,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/itransmission.json",
@@ -2233,6 +2751,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/itransmission.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/itransmission.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/itransmission.json"
@@ -2241,6 +2764,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/itransmission.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/itransmission.json"
         },
         {
           "client": "livecontainer",
@@ -2267,8 +2795,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/jaility.json",
@@ -2284,6 +2814,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/jaility.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/jaility.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/jaility.json"
@@ -2292,6 +2827,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/jaility.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/jaility.json"
         },
         {
           "client": "livecontainer",
@@ -2318,8 +2858,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/jellify.json",
@@ -2335,6 +2877,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/jellify.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/jellify.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/jellify.json"
@@ -2343,6 +2890,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/jellify.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/jellify.json"
         },
         {
           "client": "livecontainer",
@@ -2369,8 +2921,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/jellybook.json",
@@ -2386,6 +2940,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/jellybook.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/jellybook.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/jellybook.json"
@@ -2394,6 +2953,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/jellybook.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/jellybook.json"
         },
         {
           "client": "livecontainer",
@@ -2420,8 +2984,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/killmyota.json",
@@ -2437,6 +3003,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/killmyota.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/killmyota.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/killmyota.json"
@@ -2445,6 +3016,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/killmyota.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/killmyota.json"
         },
         {
           "client": "livecontainer",
@@ -2471,8 +3047,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ksign.json",
@@ -2488,6 +3066,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ksign.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ksign.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ksign.json"
@@ -2496,6 +3079,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ksign.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ksign.json"
         },
         {
           "client": "livecontainer",
@@ -2522,8 +3110,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/lara.json",
@@ -2539,6 +3129,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/lara.json"
@@ -2547,6 +3142,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/lara.json"
         },
         {
           "client": "livecontainer",
@@ -2573,8 +3173,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/livecontainer.json",
@@ -2590,6 +3192,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/livecontainer.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/livecontainer.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/livecontainer.json"
@@ -2598,6 +3205,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/livecontainer.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/livecontainer.json"
         },
         {
           "client": "livecontainer",
@@ -2624,8 +3236,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/mame4ios.json",
@@ -2641,6 +3255,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/mame4ios.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/mame4ios.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/mame4ios.json"
@@ -2649,6 +3268,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/mame4ios.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/mame4ios.json"
         },
         {
           "client": "livecontainer",
@@ -2675,8 +3299,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json",
@@ -2692,6 +3318,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/mangayomi.json"
@@ -2700,6 +3331,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json"
         },
         {
           "client": "livecontainer",
@@ -2726,8 +3362,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/manicemu.json",
@@ -2743,6 +3381,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/manicemu.json"
@@ -2751,6 +3394,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json"
         },
         {
           "client": "livecontainer",
@@ -2777,8 +3425,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json",
@@ -2794,6 +3444,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/maxmusic.json"
@@ -2802,6 +3457,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json"
         },
         {
           "client": "livecontainer",
@@ -2828,8 +3488,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/maxtube.json",
@@ -2845,6 +3507,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/maxtube.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/maxtube.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/maxtube.json"
@@ -2853,6 +3520,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/maxtube.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/maxtube.json"
         },
         {
           "client": "livecontainer",
@@ -2879,8 +3551,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/messenger-flow.json",
@@ -2896,6 +3570,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/messenger-flow.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/messenger-flow.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/messenger-flow.json"
@@ -2904,6 +3583,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/messenger-flow.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/messenger-flow.json"
         },
         {
           "client": "livecontainer",
@@ -2930,8 +3614,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/minivmac.json",
@@ -2947,6 +3633,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/minivmac.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/minivmac.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/minivmac.json"
@@ -2955,6 +3646,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/minivmac.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/minivmac.json"
         },
         {
           "client": "livecontainer",
@@ -2981,8 +3677,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/monal.json",
@@ -2998,6 +3696,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/monal.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/monal.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/monal.json"
@@ -3006,6 +3709,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/monal.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/monal.json"
         },
         {
           "client": "livecontainer",
@@ -3032,8 +3740,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/msgplusx.json",
@@ -3049,6 +3759,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/msgplusx.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/msgplusx.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/msgplusx.json"
@@ -3057,6 +3772,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/msgplusx.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/msgplusx.json"
         },
         {
           "client": "livecontainer",
@@ -3083,8 +3803,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/muffinstore.json",
@@ -3100,6 +3822,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/muffinstore.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/muffinstore.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/muffinstore.json"
@@ -3108,6 +3835,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/muffinstore.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/muffinstore.json"
         },
         {
           "client": "livecontainer",
@@ -3134,8 +3866,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/mugunghwa.json",
@@ -3151,6 +3885,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/mugunghwa.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/mugunghwa.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/mugunghwa.json"
@@ -3159,6 +3898,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/mugunghwa.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/mugunghwa.json"
         },
         {
           "client": "livecontainer",
@@ -3185,8 +3929,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/nebuloiptv.json",
@@ -3202,6 +3948,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nebuloiptv.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nebuloiptv.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/nebuloiptv.json"
@@ -3210,6 +3961,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nebuloiptv.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nebuloiptv.json"
         },
         {
           "client": "livecontainer",
@@ -3236,8 +3992,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/neofreebird.json",
@@ -3253,6 +4011,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/neofreebird.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/neofreebird.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/neofreebird.json"
@@ -3261,6 +4024,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/neofreebird.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/neofreebird.json"
         },
         {
           "client": "livecontainer",
@@ -3287,8 +4055,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/nexasc.json",
@@ -3304,6 +4074,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nexasc.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nexasc.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/nexasc.json"
@@ -3312,6 +4087,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nexasc.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nexasc.json"
         },
         {
           "client": "livecontainer",
@@ -3338,8 +4118,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/nicegram.json",
@@ -3355,6 +4137,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nicegram.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nicegram.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/nicegram.json"
@@ -3363,6 +4150,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nicegram.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nicegram.json"
         },
         {
           "client": "livecontainer",
@@ -3389,8 +4181,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/nuvio.json",
@@ -3406,6 +4200,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nuvio.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/nuvio.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/nuvio.json"
@@ -3414,6 +4213,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nuvio.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/nuvio.json"
         },
         {
           "client": "livecontainer",
@@ -3440,8 +4244,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/odyssey.json",
@@ -3457,6 +4263,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/odyssey.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/odyssey.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/odyssey.json"
@@ -3465,6 +4276,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/odyssey.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/odyssey.json"
         },
         {
           "client": "livecontainer",
@@ -3491,8 +4307,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json",
@@ -3508,6 +4326,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/onionbrowser.json"
@@ -3516,6 +4339,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/onionbrowser.json"
         },
         {
           "client": "livecontainer",
@@ -3542,8 +4370,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/orbot.json",
@@ -3559,6 +4389,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/orbot.json"
@@ -3567,6 +4402,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/orbot.json"
         },
         {
           "client": "livecontainer",
@@ -3593,8 +4433,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/otraku.json",
@@ -3610,6 +4452,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/otraku.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/otraku.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/otraku.json"
@@ -3618,6 +4465,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/otraku.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/otraku.json"
         },
         {
           "client": "livecontainer",
@@ -3644,8 +4496,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json",
@@ -3661,6 +4515,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
@@ -3669,6 +4528,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/pikatorrent.json"
         },
         {
           "client": "livecontainer",
@@ -3695,8 +4559,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json",
@@ -3712,6 +4578,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
@@ -3720,6 +4591,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/playtorrio.json"
         },
         {
           "client": "livecontainer",
@@ -3746,8 +4622,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json",
@@ -3763,6 +4641,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/pocketposter.json"
@@ -3771,6 +4654,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/pocketposter.json"
         },
         {
           "client": "livecontainer",
@@ -3797,8 +4685,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ppsspp.json",
@@ -3814,6 +4704,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ppsspp.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ppsspp.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ppsspp.json"
@@ -3822,6 +4717,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ppsspp.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ppsspp.json"
         },
         {
           "client": "livecontainer",
@@ -3848,8 +4748,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/provenance.json",
@@ -3865,6 +4767,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/provenance.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/provenance.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/provenance.json"
@@ -3873,6 +4780,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/provenance.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/provenance.json"
         },
         {
           "client": "livecontainer",
@@ -3899,8 +4811,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/purekfd.json",
@@ -3916,6 +4830,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/purekfd.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/purekfd.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/purekfd.json"
@@ -3924,6 +4843,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/purekfd.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/purekfd.json"
         },
         {
           "client": "livecontainer",
@@ -3950,8 +4874,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/qbitconnect.json",
@@ -3967,6 +4893,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/qbitconnect.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/qbitconnect.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/qbitconnect.json"
@@ -3975,6 +4906,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/qbitconnect.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/qbitconnect.json"
         },
         {
           "client": "livecontainer",
@@ -4001,8 +4937,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/qbitcontrol.json",
@@ -4018,6 +4956,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontrol.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontrol.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/qbitcontrol.json"
@@ -4026,6 +4969,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontrol.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontrol.json"
         },
         {
           "client": "livecontainer",
@@ -4052,8 +5000,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/qbitcontroller.json",
@@ -4069,6 +5019,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontroller.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontroller.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/qbitcontroller.json"
@@ -4077,6 +5032,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontroller.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/qbitcontroller.json"
         },
         {
           "client": "livecontainer",
@@ -4103,8 +5063,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/raintweak.json",
@@ -4120,6 +5082,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/raintweak.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/raintweak.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/raintweak.json"
@@ -4128,6 +5095,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/raintweak.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/raintweak.json"
         },
         {
           "client": "livecontainer",
@@ -4154,8 +5126,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/redditfilter.json",
@@ -4171,6 +5145,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/redditfilter.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/redditfilter.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/redditfilter.json"
@@ -4179,6 +5158,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/redditfilter.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/redditfilter.json"
         },
         {
           "client": "livecontainer",
@@ -4205,8 +5189,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/reynard.json",
@@ -4222,6 +5208,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/reynard.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/reynard.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/reynard.json"
@@ -4230,6 +5221,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/reynard.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/reynard.json"
         },
         {
           "client": "livecontainer",
@@ -4256,8 +5252,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ryukgram.json",
@@ -4273,6 +5271,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ryukgram.json"
@@ -4281,6 +5284,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram.json"
         },
         {
           "client": "livecontainer",
@@ -4307,8 +5315,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json",
@@ -4324,6 +5334,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json"
@@ -4332,6 +5347,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-ig410.json"
         },
         {
           "client": "livecontainer",
@@ -4358,8 +5378,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json",
@@ -4375,6 +5397,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json"
@@ -4383,6 +5410,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ryukgram-sidebyside.json"
         },
         {
           "client": "livecontainer",
@@ -4409,8 +5441,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/saber.json",
@@ -4426,6 +5460,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/saber.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/saber.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/saber.json"
@@ -4434,6 +5473,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/saber.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/saber.json"
         },
         {
           "client": "livecontainer",
@@ -4460,8 +5504,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/sameboy.json",
@@ -4477,6 +5523,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sameboy.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sameboy.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/sameboy.json"
@@ -4485,6 +5536,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sameboy.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sameboy.json"
         },
         {
           "client": "livecontainer",
@@ -4511,8 +5567,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/secondhand.json",
@@ -4528,6 +5586,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/secondhand.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/secondhand.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/secondhand.json"
@@ -4536,6 +5599,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/secondhand.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/secondhand.json"
         },
         {
           "client": "livecontainer",
@@ -4562,8 +5630,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/serotonin.json",
@@ -4579,6 +5649,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/serotonin.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/serotonin.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/serotonin.json"
@@ -4587,6 +5662,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/serotonin.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/serotonin.json"
         },
         {
           "client": "livecontainer",
@@ -4613,8 +5693,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/sidestore.json",
@@ -4630,6 +5712,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sidestore.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sidestore.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/sidestore.json"
@@ -4638,6 +5725,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sidestore.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sidestore.json"
         },
         {
           "client": "livecontainer",
@@ -4664,8 +5756,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json",
@@ -4681,6 +5775,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
@@ -4689,6 +5788,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/snmessenger.json"
         },
         {
           "client": "livecontainer",
@@ -4715,8 +5819,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/sora.json",
@@ -4732,6 +5838,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sora.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sora.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/sora.json"
@@ -4740,6 +5851,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sora.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sora.json"
         },
         {
           "client": "livecontainer",
@@ -4766,8 +5882,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/sparkle.json",
@@ -4783,6 +5901,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sparkle.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/sparkle.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/sparkle.json"
@@ -4791,6 +5914,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sparkle.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/sparkle.json"
         },
         {
           "client": "livecontainer",
@@ -4817,8 +5945,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json",
@@ -4834,6 +5964,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/spotiflac.json"
@@ -4842,6 +5977,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json"
         },
         {
           "client": "livecontainer",
@@ -4868,8 +6008,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/spotube.json",
@@ -4885,6 +6027,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/spotube.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/spotube.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/spotube.json"
@@ -4893,6 +6040,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/spotube.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/spotube.json"
         },
         {
           "client": "livecontainer",
@@ -4919,8 +6071,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json",
@@ -4936,6 +6090,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/statusmagic.json"
@@ -4944,6 +6103,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/statusmagic.json"
         },
         {
           "client": "livecontainer",
@@ -4970,8 +6134,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json",
@@ -4987,6 +6153,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/stikdebug.json"
@@ -4995,6 +6166,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json"
         },
         {
           "client": "livecontainer",
@@ -5021,8 +6197,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/stiknes.json",
@@ -5038,6 +6216,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/stiknes.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/stiknes.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/stiknes.json"
@@ -5046,6 +6229,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/stiknes.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/stiknes.json"
         },
         {
           "client": "livecontainer",
@@ -5072,8 +6260,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/streamyfin.json",
@@ -5089,6 +6279,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/streamyfin.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/streamyfin.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/streamyfin.json"
@@ -5097,6 +6292,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/streamyfin.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/streamyfin.json"
         },
         {
           "client": "livecontainer",
@@ -5123,8 +6323,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/swiftgram.json",
@@ -5140,6 +6342,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/swiftgram.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/swiftgram.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/swiftgram.json"
@@ -5148,6 +6355,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/swiftgram.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/swiftgram.json"
         },
         {
           "client": "livecontainer",
@@ -5174,8 +6386,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/synkplay.json",
@@ -5191,6 +6405,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/synkplay.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/synkplay.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/synkplay.json"
@@ -5199,6 +6418,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/synkplay.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/synkplay.json"
         },
         {
           "client": "livecontainer",
@@ -5225,8 +6449,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json",
@@ -5242,6 +6468,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/tablehabit.json"
@@ -5250,6 +6481,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json"
         },
         {
           "client": "livecontainer",
@@ -5276,8 +6512,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/taurine.json",
@@ -5293,6 +6531,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/taurine.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/taurine.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/taurine.json"
@@ -5301,6 +6544,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/taurine.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/taurine.json"
         },
         {
           "client": "livecontainer",
@@ -5327,8 +6575,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json",
@@ -5344,6 +6594,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json"
@@ -5352,6 +6607,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/telegram-mxgram.json"
         },
         {
           "client": "livecontainer",
@@ -5378,8 +6638,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/threadsaver.json",
@@ -5395,6 +6657,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/threadsaver.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/threadsaver.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/threadsaver.json"
@@ -5403,6 +6670,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/threadsaver.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/threadsaver.json"
         },
         {
           "client": "livecontainer",
@@ -5429,8 +6701,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/thunder.json",
@@ -5446,6 +6720,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/thunder.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/thunder.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/thunder.json"
@@ -5454,6 +6733,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/thunder.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/thunder.json"
         },
         {
           "client": "livecontainer",
@@ -5480,8 +6764,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json",
@@ -5497,6 +6783,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json"
@@ -5505,6 +6796,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollboard-reborn.json"
         },
         {
           "client": "livecontainer",
@@ -5531,8 +6827,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollfools.json",
@@ -5548,6 +6846,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/trollfools.json"
@@ -5556,6 +6859,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollfools.json"
         },
         {
           "client": "livecontainer",
@@ -5582,8 +6890,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json",
@@ -5599,6 +6909,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json"
@@ -5607,6 +6922,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/trollinstallerx.json"
         },
         {
           "client": "livecontainer",
@@ -5633,8 +6953,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json",
@@ -5650,6 +6972,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json"
@@ -5658,6 +6985,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json"
         },
         {
           "client": "livecontainer",
@@ -5684,8 +7016,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/turrit-mxgram.json",
@@ -5701,6 +7035,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/turrit-mxgram.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/turrit-mxgram.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/turrit-mxgram.json"
@@ -5709,6 +7048,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/turrit-mxgram.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/turrit-mxgram.json"
         },
         {
           "client": "livecontainer",
@@ -5735,8 +7079,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json",
@@ -5752,6 +7098,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/twitchadblock.json"
@@ -5760,6 +7111,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/twitchadblock.json"
         },
         {
           "client": "livecontainer",
@@ -5786,8 +7142,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/unc0ver.json",
@@ -5803,6 +7161,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/unc0ver.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/unc0ver.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/unc0ver.json"
@@ -5811,6 +7174,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/unc0ver.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/unc0ver.json"
         },
         {
           "client": "livecontainer",
@@ -5837,8 +7205,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/utm.json",
@@ -5854,6 +7224,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/utm.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/utm.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/utm.json"
@@ -5862,6 +7237,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/utm.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/utm.json"
         },
         {
           "client": "livecontainer",
@@ -5888,8 +7268,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json",
@@ -5905,6 +7287,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
@@ -5913,6 +7300,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
         },
         {
           "client": "livecontainer",
@@ -5939,8 +7331,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/vcmi.json",
@@ -5956,6 +7350,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/vcmi.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/vcmi.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/vcmi.json"
@@ -5964,6 +7363,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/vcmi.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/vcmi.json"
         },
         {
           "client": "livecontainer",
@@ -5990,8 +7394,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/vibecontainers.json",
@@ -6007,6 +7413,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/vibecontainers.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/vibecontainers.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/vibecontainers.json"
@@ -6015,6 +7426,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/vibecontainers.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/vibecontainers.json"
         },
         {
           "client": "livecontainer",
@@ -6041,8 +7457,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/voyager.json",
@@ -6058,6 +7476,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/voyager.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/voyager.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/voyager.json"
@@ -6066,6 +7489,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/voyager.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/voyager.json"
         },
         {
           "client": "livecontainer",
@@ -6092,8 +7520,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json",
@@ -6109,6 +7539,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json"
@@ -6117,6 +7552,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/wdbfontoverwrite.json"
         },
         {
           "client": "livecontainer",
@@ -6143,8 +7583,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/winston.json",
@@ -6160,6 +7602,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/winston.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/winston.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/winston.json"
@@ -6168,6 +7615,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/winston.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/winston.json"
         },
         {
           "client": "livecontainer",
@@ -6194,8 +7646,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/xenios.json",
@@ -6211,6 +7665,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/xenios.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/xenios.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/xenios.json"
@@ -6219,6 +7678,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/xenios.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/xenios.json"
         },
         {
           "client": "livecontainer",
@@ -6245,8 +7709,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/yattee.json",
@@ -6262,6 +7728,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/yattee.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/yattee.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/yattee.json"
@@ -6272,6 +7743,11 @@
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/yattee.json"
         },
         {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/yattee.json"
+        },
+        {
           "client": "livecontainer",
           "name": "LiveContainer",
           "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/yattee.json"
@@ -6280,7 +7756,7 @@
     },
     {
       "slug": "youmod",
-      "name": "YouMod",
+      "name": "uPro Plus",
       "developer": "Tonwalter888",
       "bundleIdentifier": "com.google.ios.youtube",
       "version": "21.37.4",
@@ -6292,12 +7768,14 @@
       "tintColor": "FF0000",
       "category": "photo-video",
       "status": "stable",
-      "minOSVersion": "16.0",
+      "minOSVersion": "17.0",
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/youmod.json",
@@ -6313,6 +7791,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/youmod.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/youmod.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/youmod.json"
@@ -6321,6 +7804,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/youmod.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/youmod.json"
         },
         {
           "client": "livecontainer",
@@ -6347,8 +7835,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/youpro.json",
@@ -6364,6 +7854,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/youpro.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/youpro.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/youpro.json"
@@ -6372,6 +7867,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/youpro.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/youpro.json"
         },
         {
           "client": "livecontainer",
@@ -6398,8 +7898,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ytkace.json",
@@ -6415,6 +7917,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytkace.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytkace.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ytkace.json"
@@ -6423,6 +7930,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytkace.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytkace.json"
         },
         {
           "client": "livecontainer",
@@ -6449,8 +7961,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ytkp.json",
@@ -6466,6 +7980,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytkp.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytkp.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ytkp.json"
@@ -6474,6 +7993,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytkp.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytkp.json"
         },
         {
           "client": "livecontainer",
@@ -6500,8 +8024,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ytlite.json",
@@ -6517,6 +8043,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytlite.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytlite.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ytlite.json"
@@ -6525,6 +8056,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytlite.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytlite.json"
         },
         {
           "client": "livecontainer",
@@ -6551,8 +8087,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json",
@@ -6568,6 +8106,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/ytmusic.json"
@@ -6576,6 +8119,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/ytmusic.json"
         },
         {
           "client": "livecontainer",
@@ -6602,8 +8150,10 @@
       "clients": [
         "altstore",
         "sidestore",
+        "flarestore",
         "feather",
         "esign",
+        "ksign",
         "livecontainer"
       ],
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/zeus.json",
@@ -6619,6 +8169,11 @@
           "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/zeus.json"
         },
         {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/zeus.json"
+        },
+        {
           "client": "feather",
           "name": "Feather",
           "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/zeus.json"
@@ -6627,6 +8182,11 @@
           "client": "esign",
           "name": "ESign",
           "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/zeus.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/zeus.json"
         },
         {
           "client": "livecontainer",

@@ -22,7 +22,7 @@
         "source_id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{1,79}$" },
         "name": { "type": "string", "minLength": 1 },
         "url": { "type": "string", "format": "uri", "pattern": "^https://" },
-        "type": { "type": "string", "enum": ["altstore", "sidestore", "feather", "esign", "livecontainer", "unknown"] },
+        "type": { "type": "string", "enum": ["altstore", "sidestore", "flarestore", "feather", "esign", "ksign", "livecontainer", "unknown"] },
         "discovered_at": { "type": "string" },
         "last_checked": { "type": "string" },
         "health": { "type": "string", "enum": ["unknown", "online", "degraded", "offline"] },

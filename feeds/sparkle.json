@@ -100,8 +100,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: efibalogh/sparkle-ig (publishes .deb assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Uses its own bundle identifier (com.burbn.instagram.sparkle) - installs alongside the stock app."

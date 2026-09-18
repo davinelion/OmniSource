@@ -115,7 +115,7 @@
     {
       "id": "app:youmod",
       "type": "app",
-      "label": "YouMod",
+      "label": "uPro Plus",
       "slug": "youmod",
       "bundleId": "com.google.ios.youtube",
       "category": "photo-video",
@@ -2239,7 +2239,7 @@
       "slug": "escapeos",
       "bundleId": "com.ipaside.escapeos",
       "category": "utilities",
-      "version": "0.1.5"
+      "version": "0.1.6"
     },
     {
       "id": "dev:pwnapplehat",
@@ -3955,16 +3955,16 @@
     },
     {
       "source": "app:ytlite",
-      "target": "app:youmod",
-      "type": "related"
-    },
-    {
-      "source": "app:ytlite",
       "target": "app:uyouenhanced",
       "type": "related"
     },
     {
       "source": "app:ytlite",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:ytlite",
       "target": "app:maxtube",
       "type": "related"
     },
@@ -3985,12 +3985,12 @@
     },
     {
       "source": "app:youpro",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
       "source": "app:youpro",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
@@ -4015,12 +4015,12 @@
     },
     {
       "source": "app:ytkp",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
       "source": "app:ytkp",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
@@ -4045,12 +4045,12 @@
     },
     {
       "source": "app:ytkace",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
       "source": "app:ytkace",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
@@ -4110,12 +4110,12 @@
     },
     {
       "source": "app:maxtube",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
       "source": "app:maxtube",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
@@ -4595,12 +4595,12 @@
     },
     {
       "source": "app:yattee",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
       "source": "app:yattee",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
@@ -4625,12 +4625,12 @@
     },
     {
       "source": "app:streamyfin",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:streamyfin",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -5235,12 +5235,12 @@
     },
     {
       "source": "app:fladder",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:fladder",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -5295,12 +5295,12 @@
     },
     {
       "source": "app:sora",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:sora",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -5355,12 +5355,12 @@
     },
     {
       "source": "app:infuseplus",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:infuseplus",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -6395,12 +6395,12 @@
     },
     {
       "source": "app:synkplay",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:synkplay",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -6485,12 +6485,12 @@
     },
     {
       "source": "app:animegen",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:animegen",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -6545,12 +6545,12 @@
     },
     {
       "source": "app:playtorrio",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:playtorrio",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -6605,12 +6605,12 @@
     },
     {
       "source": "app:nebuloiptv",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:nebuloiptv",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -6925,12 +6925,12 @@
     },
     {
       "source": "app:pocketposter",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:pocketposter",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -7165,12 +7165,12 @@
     },
     {
       "source": "app:cartube",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:cartube",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -7410,12 +7410,12 @@
     },
     {
       "source": "app:nuvio",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:nuvio",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -7560,12 +7560,12 @@
     },
     {
       "source": "app:cercube",
-      "target": "app:youmod",
+      "target": "app:yattee",
       "type": "related"
     },
     {
       "source": "app:cercube",
-      "target": "app:yattee",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {

@@ -45,12 +45,12 @@
               "fileType": "IPA",
               "size": 782388,
               "sha256": null,
-              "downloads": 41293,
+              "downloads": 41303,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 41293
+          "downloads": 41303
         }
       ],
       "screenshotURLs": [],
@@ -76,8 +76,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from sourcelocation/AirTroller; install with TrollStore, or rename to .ipa if your client rejects the extension."

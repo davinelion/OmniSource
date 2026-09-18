@@ -45,7 +45,7 @@
               "fileType": "DEB",
               "size": 889130,
               "sha256": "3e3b0b5c703e78413786ceac9970b99c76c35a3cae797ac5daa06c37d4896111",
-              "downloads": 30,
+              "downloads": 31,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
@@ -69,7 +69,7 @@
               "fileType": "IPA",
               "size": 134780934,
               "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-              "downloads": 1613,
+              "downloads": 1680,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -81,13 +81,13 @@
               "fileType": "IPA",
               "size": 132513253,
               "sha256": "1e1917b089958f653d81aafb13e82f30dbdc8b45704752ae7625d5c44dbf5323",
-              "downloads": 129,
+              "downloads": 131,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-          "downloads": 1613
+          "downloads": 1680
         }
       ],
       "screenshotURLs": [
@@ -142,8 +142,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Tracks the official itzzace/ytkace releases. The published build follows the latest YouTube release and needs iOS 17 or newer; upstream also ships a separate iOS 16 IPA (YTKACE_<version>_YouTube_iOS16_<youtube>.ipa) on the same release page."

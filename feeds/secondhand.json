@@ -45,12 +45,12 @@
               "fileType": "IPA",
               "size": 2786937,
               "sha256": null,
-              "downloads": 1516,
+              "downloads": 1524,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1516
+          "downloads": 1524
         }
       ],
       "screenshotURLs": [
@@ -79,8 +79,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/SecondHand; install with TrollStore, or rename to .ipa if your client rejects the extension. The upstream documents iOS 14.0 - 15.4.1 compatibility."

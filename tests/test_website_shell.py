@@ -735,7 +735,7 @@ class TestWebsiteShell(unittest.TestCase):
         # is that a tap produces the same deep link the client recognises.
         expected = {cid: profile["scheme"].split("{", 1)[0] for cid, profile in CLIENT_PROFILES.items()}
         self.assertEqual(
-            {"altstore", "sidestore", "feather", "esign", "livecontainer"},
+            {"altstore", "sidestore", "flarestore", "feather", "esign", "ksign", "livecontainer"},
             set(expected),
             "builder gained/lost a client; update this test too",
         )
@@ -814,7 +814,7 @@ class TestWebsiteShell(unittest.TestCase):
         # where `&`, `#`, `$` and friends change how the value parses. Nothing
         # RFC-excluded may survive there.
         query_forbidden = ['"', "<", ">", "\\", " ", "\t", "{", "}", "|", "$", "#", "&", "`", "^"]
-        for client_id in ("altstore", "sidestore", "esign", "livecontainer"):
+        for client_id in ("altstore", "sidestore", "flarestore", "esign", "ksign", "livecontainer"):
             for name, url_by_client in got.items():
                 url = url_by_client[client_id]
                 for char in query_forbidden:
@@ -887,6 +887,8 @@ class TestWebsiteShell(unittest.TestCase):
                 "livecontainer://sources?url=",
                 "altstore://source?url=",
                 "sidestore://source?url=",
+                "flarestore://source?url=",
+                "ksign://addsource?url=",
                 "feather://source/",
             ):
                 self.assertIn(real, source, path.name + " lost the " + real.split("://")[0] + " scheme")

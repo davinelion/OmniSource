@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 167001383,
               "sha256": null,
-              "downloads": 17094,
+              "downloads": 17110,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "IPA",
               "size": 166994432,
               "sha256": null,
-              "downloads": 4689,
+              "downloads": 4691,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -81,12 +81,12 @@
               "fileType": "DEB",
               "size": 7336826,
               "sha256": null,
-              "downloads": 2593,
+              "downloads": 2594,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 17094
+          "downloads": 17110
         }
       ],
       "screenshotURLs": [
@@ -117,8 +117,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official sideloaded build from BandarHL/BHTwitter. The release also ships a TrollStore .tipa, which OmniSource skips - only the -sideloaded.ipa is tracked. The bundled X app is whichever decrypted build the maintainer packaged for that tweak release. Shares com.atebits.Tweetie2 with NeoFreeBird: install one at a time."

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-18",
-  "feedVersion": "d4cb70eec0d0",
-  "count": 6,
+  "feedVersion": "4ecaa2846e9a",
+  "count": 7,
   "apps": [
     {
       "id": "delta",
@@ -31,6 +31,21 @@
       "shortDescription": "FLAC Downloader for iOS",
       "downloadURL": "https://github.com/spotiflacapp/SpotiFLAC-Mobile/releases/download/v4.9.6/SpotiFLAC-v4.9.6-ios-unsigned.ipa",
       "size": 34171700,
+      "featured": true,
+      "status": "stable"
+    },
+    {
+      "id": "youmod",
+      "name": "uPro Plus",
+      "developer": "Tonwalter888",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "version": "21.37.4",
+      "versionDate": "2026-09-14",
+      "category": "photo-video",
+      "icon": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "shortDescription": "YouTube 21.37.4 extra-tweaks build (YouMod + player stack)",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
+      "size": 129607592,
       "featured": true,
       "status": "stable"
     },

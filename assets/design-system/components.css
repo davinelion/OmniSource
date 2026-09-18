@@ -2031,7 +2031,7 @@ html[data-view="compact"] .card-mini { display: none; }
 }
 .install-grid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
   gap: 8px;
   margin-bottom: 14px;
 }
@@ -3180,7 +3180,7 @@ a.ap-source-link:focus-visible {
    ========================================================================== */
 .in-clients {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
   margin-bottom: 44px;
 }
@@ -4455,8 +4455,9 @@ html[data-view="compact"] .card-bottom {
 }
 
 .install-grid {
-  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
 }
+
 .install-grid .button.download,
 .install-grid .button.primary.download { grid-column: 1 / -1; }
 

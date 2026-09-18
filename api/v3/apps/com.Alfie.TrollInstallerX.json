@@ -37,7 +37,7 @@
             "fileType": "IPA",
             "size": 27098183,
             "sha256": null,
-            "downloads": 364336,
+            "downloads": 364419,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -49,12 +49,12 @@
             "fileType": "IPA",
             "size": 6889214,
             "sha256": null,
-            "downloads": 1243209,
+            "downloads": 1243442,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 1243209
+        "downloads": 1243442
       }
     ],
     "screenshotURLs": [],
@@ -80,8 +80,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from alfiecg24/TrollInstallerX (the plain TrollInstallerX.ipa; the device-specific -20D50 build is not tracked). Intended for iOS 14.0 - 16.6.1 - newer firmware needs a different route to TrollStore."

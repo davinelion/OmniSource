@@ -37,7 +37,7 @@
             "fileType": "IPA",
             "size": 574441,
             "sha256": null,
-            "downloads": 235847,
+            "downloads": 235880,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -49,12 +49,12 @@
             "fileType": "IPA",
             "size": 574441,
             "sha256": null,
-            "downloads": 50540,
+            "downloads": 50550,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 235847
+        "downloads": 235880
       }
     ],
     "screenshotURLs": [],
@@ -80,8 +80,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from Avangelista/CarTube (the .tipa is not tracked). The upstream documents iOS 14.0 - 15.4.1 support for CarPlay."

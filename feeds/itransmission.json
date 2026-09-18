@@ -45,12 +45,12 @@
               "fileType": "IPA",
               "size": 3718662,
               "sha256": null,
-              "downloads": 22835,
+              "downloads": 22854,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 22835
+          "downloads": 22854
         }
       ],
       "screenshotURLs": [],
@@ -76,8 +76,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from alexsvitlov/iTransmission (iTransmission.ipa). The upstream also documents a TrollStore install route for iOS 14 - 16.6.1 devices."

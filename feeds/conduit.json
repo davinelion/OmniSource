@@ -45,7 +45,7 @@
               "fileType": "APK",
               "size": 77757928,
               "sha256": "09b0a21c4ad2fbae9855cfc37549f3f12c9cf78faa5c408a2b1758e3f91ae963",
-              "downloads": 920,
+              "downloads": 976,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "APK",
               "size": 70235448,
               "sha256": "8d94f7ba324ad75d00745590f5db1e38b514883ac3c80536872cd2137c1432a3",
-              "downloads": 2,
+              "downloads": 3,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -69,7 +69,7 @@
               "fileType": "AAB",
               "size": 171985717,
               "sha256": "51b93da8a9f81feecc5d91fdb0e69b75b9c54d8394803bed36d1f50247775c5b",
-              "downloads": 2,
+              "downloads": 3,
               "mimeType": "raw",
               "installable": true
             },
@@ -81,7 +81,7 @@
               "fileType": "APK",
               "size": 83698864,
               "sha256": "91c7a41607223f92bf43b43047be7693591d547801c61c3b827508f1e6534d99",
-              "downloads": 1,
+              "downloads": 2,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -93,13 +93,13 @@
               "fileType": "IPA",
               "size": 35930568,
               "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
-              "downloads": 30,
+              "downloads": 45,
               "mimeType": "raw",
               "installable": true
             }
           ],
           "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
-          "downloads": 30
+          "downloads": 45
         }
       ],
       "screenshotURLs": [],
@@ -125,8 +125,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA (conduit.ipa) from the developer's GitHub releases; the debug-flavored bundle (app.cogwheel.conduit.debug) is excluded. Requires a self-hosted Open WebUI/Ollama server or your own API endpoints."

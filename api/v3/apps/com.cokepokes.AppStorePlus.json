@@ -37,7 +37,7 @@
             "fileType": "IPA",
             "size": 11078209,
             "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
-            "downloads": 2010,
+            "downloads": 2602,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -49,13 +49,13 @@
             "fileType": "DEB",
             "size": 11053666,
             "sha256": "672ac4bf96feb87e28e1b2bdcbeb0bd3a425dafe43098f801e4548bfc13c3e29",
-            "downloads": 77,
+            "downloads": 97,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
-        "downloads": 2010
+        "downloads": 2602
       }
     ],
     "screenshotURLs": [],
@@ -81,8 +81,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from the developer's own repository CokePokes/AppStorePlus-TrollStore; install with TrollStore, or rename to .ipa if your client rejects the extension. The .deb published alongside is for jailbroken devices."

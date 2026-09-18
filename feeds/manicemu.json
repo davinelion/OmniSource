@@ -45,13 +45,13 @@
               "fileType": "IPA",
               "size": 288525117,
               "sha256": "b670b1c1c538325d82ff2c74ebacd97c9fb338af6dc8516cccbfade882147b71",
-              "downloads": 77,
+              "downloads": 342,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "b670b1c1c538325d82ff2c74ebacd97c9fb338af6dc8516cccbfade882147b71",
-          "downloads": 77
+          "downloads": 342
         }
       ],
       "screenshotURLs": [],
@@ -81,8 +81,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official unsigned IPA from Manic-EMU/ManicEMU. Upstream ships two variants per release: SideloadJIT (served here, for AltStore, SideStore, Feather and ESign) and TrollStoreJIT (TrollStore only). Some consoles need a JIT enabler such as StikDebug after installation."

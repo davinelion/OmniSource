@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 14986482,
             "sha256": null,
-            "downloads": 51414,
+            "downloads": 51426,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 51414
+        "downloads": 51426
       }
     ],
     "screenshotURLs": [],
@@ -72,8 +72,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official .tipa from mineek/Serotonin. Supported firmware is iOS 16.5.1 – 16.7 RC and 17.0; the upstream release line stopped in January 2024 and later Dopamine versions cover much of the same range, so treat this as a legacy option for devices that cannot run Dopamine. Upstream ships the TrollStore-named .tipa (identical container to an .ipa); rename it to .ipa if your client rejects the extension."

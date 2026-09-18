@@ -45,13 +45,13 @@
               "fileType": "IPA",
               "size": 3112338,
               "sha256": "8bcdf430a58fb2aa55e9b841266a6aff731af7623fcbb90a8bc4654a10d7c1ce",
-              "downloads": 876,
+              "downloads": 889,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8bcdf430a58fb2aa55e9b841266a6aff731af7623fcbb90a8bc4654a10d7c1ce",
-          "downloads": 876
+          "downloads": 889
         }
       ],
       "screenshotURLs": [],
@@ -77,8 +77,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from the developer's GitHub releases; current builds ship as Sulfur.ipa (the project's renamed build) with bundle me.cranci.sulfur — the asset pattern also accepts Sora.ipa from older tags. Requires iOS 15+. Content modules are community-maintained."

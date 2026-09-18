@@ -37,7 +37,7 @@
             "fileType": "IPA",
             "size": 54863273,
             "sha256": "761b668671b7724a856b9103a919f13e60a554a91ef74f0b32b90aa7385e045e",
-            "downloads": 4916,
+            "downloads": 5279,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -49,13 +49,13 @@
             "fileType": "IPA",
             "size": 54863273,
             "sha256": "761b668671b7724a856b9103a919f13e60a554a91ef74f0b32b90aa7385e045e",
-            "downloads": 2235,
+            "downloads": 2365,
             "mimeType": "application/trollstore-ipa",
             "installable": true
           }
         ],
         "sha256": "761b668671b7724a856b9103a919f13e60a554a91ef74f0b32b90aa7385e045e",
-        "downloads": 4916
+        "downloads": 5279
       }
     ],
     "screenshotURLs": [],
@@ -85,8 +85,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from roothide/Dopamine2-roothide. Upstream tags releases by iOS generation (26, 25, …) while the release name carries the real Dopamine version, so this source reads the version from the release name. Installs as com.opa334.Dopamine-roothide, next to (not over) Dopamine — run only one jailbreak environment at a time."

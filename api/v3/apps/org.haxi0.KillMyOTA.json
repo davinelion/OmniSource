@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 339440,
             "sha256": null,
-            "downloads": 18413,
+            "downloads": 18424,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 18413
+        "downloads": 18424
       }
     ],
     "screenshotURLs": [],
@@ -68,8 +68,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from haxi0/KillMyOTA. Supports the KFD-era firmware range iOS 15.0 - 16.1.2. Unmaintained since 1.1 (January 2023)."

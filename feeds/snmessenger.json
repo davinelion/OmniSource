@@ -81,13 +81,13 @@
               "fileType": "IPA",
               "size": 74865911,
               "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-              "downloads": 765,
+              "downloads": 773,
               "mimeType": "application/x-itunes-ipa",
               "installable": true
             }
           ],
           "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-          "downloads": 765
+          "downloads": 773
         }
       ],
       "screenshotURLs": [
@@ -115,8 +115,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: NguyenASang/SNMessenger. The repository publishes the tweak as a .deb for jailbroken devices plus one ready-to-sideload IPA built from it; that IPA carries whichever Messenger build the maintainer patched for the release, so the version shown here is that build's. Uses the stock com.facebook.Messenger bundle id, so it REPLACES the App Store Messenger."

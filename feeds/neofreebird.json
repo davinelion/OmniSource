@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 158452402,
               "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-              "downloads": 22670,
+              "downloads": 22688,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,13 +57,13 @@
               "fileType": "IPA",
               "size": 153108663,
               "sha256": "964d8e009113dea7c29924a746bebbf5f50c29d61c1fd8656a91a8a765231db0",
-              "downloads": 21863,
+              "downloads": 21873,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-          "downloads": 22670
+          "downloads": 22688
         }
       ],
       "screenshotURLs": [],
@@ -89,8 +89,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPAs from the project's GitHub releases (its own AltStore source mirrors them). The plain build is distributed here; the -noFixTwitterLogin variant on the same release is a troubleshooting fallback. Twitter 11.x builds require iOS 15+. Shares the Twitter bundle identifier with BHTwitter in this catalog — install one at a time."

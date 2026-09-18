@@ -37,7 +37,7 @@
             "fileType": "IPA",
             "size": 35403538,
             "sha256": "97dc0fd2202fd4460efcab389943b8d5fdbb4988efff76b116b92b84a4662425",
-            "downloads": 311510,
+            "downloads": 313403,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -49,13 +49,13 @@
             "fileType": "IPA",
             "size": 4707271,
             "sha256": "b6fea95e30083382e29ffef88fa1aaa40b5069e1112e5307d490dab04648bba6",
-            "downloads": 88836,
+            "downloads": 89408,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "b6fea95e30083382e29ffef88fa1aaa40b5069e1112e5307d490dab04648bba6",
-        "downloads": 88836
+        "downloads": 89408
       }
     ],
     "screenshotURLs": [
@@ -94,8 +94,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official AGPL-3.0 releases. The plain LiveContainer.ipa is tracked; the LiveContainer+SideStore.ipa bundle in the same release is skipped. Multitasking needs iPadOS 16 or later, and installing guest apps needs AltStore 2.0+ / SideStore 0.6.0+."
