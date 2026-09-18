@@ -1,4 +1,5 @@
 import AppCard from "@/components/AppCard";
+import Filters from "@/components/Filters";
 import { getAppsWithIds, getCategories } from "@/lib/data";
 import { getLangDict } from "@/lib/lang";
 
@@ -25,31 +26,30 @@ export default async function AppsPage({
         <h1 className="text-2xl font-extrabold">{dict.sections.appsTitle}</h1>
         <p className="text-zinc-600 dark:text-zinc-400">{dict.sections.appsSubtitle}</p>
       </div>
-      <form method="get" className="flex flex-wrap gap-2">
-        <select
-          name="category"
-          defaultValue={category}
-          className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900"
-        >
-          <option value="">— {dict.common.category} —</option>
-          {categories.map((c) => (
-            <option key={c.name} value={c.name}>
-              {c.name} ({c.count})
-            </option>
-          ))}
-        </select>
-        <select
-          name="sort"
-          defaultValue={sort}
-          className="rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900"
-        >
-          <option value="name">A–Z</option>
-          <option value="updated">{dict.common.updated}</option>
-        </select>
-        <button type="submit" className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white dark:bg-zinc-100 dark:text-zinc-900">
-          OK
-        </button>
-      </form>
+      <Filters
+        action="/apps"
+        submitLabel={dict.common.apply ?? "Apply"}
+        selects={[
+          {
+            name: "category",
+            label: dict.common.category ?? "Category",
+            value: category,
+            options: [
+              { value: "", label: `— ${dict.common.category ?? "Category"} —` },
+              ...categories.map((c) => ({ value: c.name, label: `${c.name} (${c.count})` })),
+            ],
+          },
+          {
+            name: "sort",
+            label: dict.common.sort ?? "Sort",
+            value: sort,
+            options: [
+              { value: "name", label: "A–Z" },
+              { value: "updated", label: dict.common.updated ?? "Updated" },
+            ],
+          },
+        ]}
+      />
       <p className="text-sm text-zinc-500">
         {entries.length} {dict.common.apps}
       </p>

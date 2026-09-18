@@ -18,6 +18,8 @@ from __future__ import annotations
 
 import hashlib
 import re
+import shutil
+import subprocess
 from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -146,6 +148,60 @@ def _persist_mirror(
     return True, len(payload), digest
 
 
+def _committed_mirror_paths(assets_dir: Path) -> set[str] | None:
+    """Mirror files under ``assets/screenshots`` that git actually carries.
+
+    ``mirrored: true`` in ``feeds/screenshots.json`` promises the bytes ship
+    beside the manifest. The scheduled sync job refreshes mirrors into its
+    workspace but commits only generated JSON/XML, so a run that downloaded
+    every screenshot produced a manifest pointing at binaries no checkout ever
+    sees — the published catalog then claimed art it did not have. The claim is
+    therefore tied to the git record: bytes that are only in the working tree
+    are reported as ``mirrored: false`` (they still land on disk for the local
+    build). Returns ``None`` when the repository state cannot be read - a
+    non-repository working directory, or no ``git`` binary - because then "the
+    file is on disk" is the only available answer and every existing caller
+    (and test) expects the historical behaviour.
+    """
+    try:
+        # Resolve the binary once: git is not a dependency of the runtime, and a
+        # partial path in subprocess is both a lint error and an easy way to run
+        # whatever ``git`` happens to be first on $PATH.
+        git = shutil.which("git")
+        if not git:
+            return None
+        top = subprocess.run(
+            [git, "-C", str(assets_dir), "rev-parse", "--show-toplevel"],
+            capture_output=True,
+            text=True,
+            timeout=5,
+        )
+        if top.returncode != 0 or not top.stdout.strip():
+            return None
+        repo = Path(top.stdout.strip())
+        try:
+            prefix = assets_dir.resolve().relative_to(repo.resolve()).as_posix()
+        except ValueError:
+            return None
+        listing = subprocess.run(
+            [git, "-C", str(repo), "ls-files", "-z", "--", f"{prefix}/screenshots"],
+            capture_output=True,
+            timeout=10,
+        )
+        if listing.returncode != 0:
+            return None
+        tracked: set[str] = set()
+        for raw in listing.stdout.decode("utf-8", "replace").split("\0"):
+            if not raw:
+                continue
+            # ``git ls-files`` answers relative to the repository root.
+            rel = raw[len(prefix) + 1 :] if raw.startswith(f"{prefix}/") else raw
+            tracked.add(rel)
+        return tracked
+    except Exception:  # pragma: no cover - git missing, timeout, odd worktree
+        return None
+
+
 def process_screenshots(
     catalog: Catalog,
     base_url: str,
@@ -189,6 +245,7 @@ def process_screenshots(
     thumbnails_dir = assets_dir / "screenshots" / "thumbnails"
     screenshots_dir.mkdir(parents=True, exist_ok=True)
     thumbnails_dir.mkdir(parents=True, exist_ok=True)
+    tracked_mirrors = _committed_mirror_paths(assets_dir)
 
     for app in catalog.apps:
         declared = list(getattr(app, "screenshots", []) or [])
@@ -200,6 +257,7 @@ def process_screenshots(
             ext = Path(url.split("?", 1)[0]).suffix or ".png"
             mirror_name = _filename_for(app.slug, index, ext)
             mirror_path = screenshots_dir / app.slug / mirror_name
+            mirror_relative = f"screenshots/{app.slug}/{mirror_name}"
             mirrored_url = f"{base}/assets/screenshots/{app.slug}/{mirror_name}"
             thumbnail_name = f"{_slugify(mirror_name.rsplit('.', 1)[0])}.webp"
             thumbnail_path = thumbnails_dir / app.slug / thumbnail_name
@@ -237,6 +295,16 @@ def process_screenshots(
                     # worse than one that admits it still has to be fetched, and
                     # scripts/validate.py now rejects exactly that mismatch.
                     reused = False
+            committed = tracked_mirrors is None or mirror_relative in tracked_mirrors
+            if entry["mirrored"] and not committed:
+                # Downloaded into the working tree, but the commit this
+                # manifest travels in carries JSON only: keeping the claim
+                # would make ``feeds/screenshots.json`` advertise a mirror that
+                # no checkout has (validate.py rejects exactly that), so the
+                # entry falls back to its upstream URL like any offline miss.
+                entry["mirrored"] = False
+                entry["size"] = 0
+                entry["sha256"] = ""
             # Thumbnail generation requires Pillow. The build environment
             # may not have it; if it is missing we record a transparent
             # placeholder and the website falls back to the full image.
@@ -260,7 +328,7 @@ def process_screenshots(
                     # Pillow is optional. The website gracefully falls back to
                     # the full-size mirrored image.
                     entry["thumbnailSize"] = 0
-            if not entry.get("thumbnailSize") and thumbnail_path.exists():
+            if not entry.get("thumbnailSize") and thumbnail_path.exists() and committed:
                 # The thumbnail on disk is the truth whether or not this run could
                 # measure it with Pillow - reporting its real size keeps an offline
                 # rebuild byte-identical instead of quietly zeroing the field.

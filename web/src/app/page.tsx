@@ -30,7 +30,7 @@ export default async function Home() {
         </p>
         <h1 className="mt-2 max-w-2xl text-3xl font-extrabold tracking-tight md:text-5xl">{dict.home.tagline}</h1>
         <div className="mt-6">
-          <SearchBox placeholder={dict.sections.searchPlaceholder} />
+          <SearchBox placeholder={dict.sections.searchPlaceholder} submitLabel={dict.nav.search ?? "Search"} />
         </div>
         <div className="mt-6 flex flex-wrap gap-2">
           {CLIENTS.map((c) => (

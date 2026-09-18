@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AppCard from "@/components/AppCard";
+import CopyButton from "@/components/CopyButton";
 import { getAppsWithIds, getSourceById, getSources } from "@/lib/data";
 import { getLangDict } from "@/lib/lang";
+import { safeExternalUrl } from "@/lib/url";
 
 export function generateStaticParams() {
   return getSources().map((s) => ({ id: s.id }));
@@ -13,6 +15,8 @@ export default async function SourceDetail({ params }: { params: Promise<{ id: s
   const source = getSourceById(decodeURIComponent(id));
   if (!source) notFound();
   const { dict } = await getLangDict();
+  const homepage = safeExternalUrl(source.homepage);
+  const sourceUrl = safeExternalUrl(source.sourceURL);
   const slugs = new Set(source.appSlugs ?? []);
   const entries = getAppsWithIds().filter(
     ({ id: appId, app }) => slugs.has(appId) || (source.apps ?? []).includes(app.name),
@@ -42,10 +46,32 @@ export default async function SourceDetail({ params }: { params: Promise<{ id: s
             <div><dt className="text-zinc-500">Publisher</dt><dd className="font-semibold">{source.publisher}</dd></div>
           )}
           {source.homepage && (
-            <div><dt className="text-zinc-500">Homepage</dt><dd><a href={source.homepage} className="font-semibold text-red-600 hover:underline">{source.homepage}</a></dd></div>
+            <div>
+              <dt className="text-zinc-500">Homepage</dt>
+              <dd className="min-w-0 break-words">
+                {homepage ? (
+                  <a href={homepage} rel="noopener noreferrer" className="font-semibold text-red-600 hover:underline">
+                    {source.homepage}
+                  </a>
+                ) : (
+                  <span>{source.homepage}</span>
+                )}
+              </dd>
+            </div>
           )}
-          {source.sourceURL && (
-            <div className="md:col-span-2"><dt className="text-zinc-500">Feed URL</dt><dd className="break-all font-mono text-xs">{source.sourceURL}</dd></div>
+          {sourceUrl && (
+            <div className="md:col-span-2">
+              <dt className="text-zinc-500">Feed URL</dt>
+              <dd className="break-all font-mono text-xs">{source.sourceURL}</dd>
+              <dd className="mt-2">
+                <CopyButton
+                  value={sourceUrl}
+                  label={dict.common.copyUrl ?? "Copy source URL"}
+                  copiedLabel={dict.common.copied ?? "Copied"}
+                  failedLabel={dict.common.copyFailed ?? "Copy blocked — press and hold to copy"}
+                />
+              </dd>
+            </div>
           )}
         </dl>
       </div>

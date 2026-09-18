@@ -2329,10 +2329,56 @@ html[data-view="compact"] .card-mini { display: none; }
 }
 .toast.show {
   opacity: 1;
+  pointer-events: auto;
   transform: translate(-50%, 0);
   animation: os-toast-in 0.3s var(--ease-spring);
 }
 .toast svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+/* A toast may carry actions (Update / Later on the service-worker prompt). It
+   stays a pill on one line when it can and wraps at 320px instead of pushing
+   itself past the viewport edge; the buttons keep a real touch target. */
+/* `.has-actions` is set by OS.toast() when the toast carries buttons; a class
+   rather than :has() so older engines still get the wrapped layout. */
+.toast.has-actions {
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: min(92vw, 460px);
+  border-radius: var(--radius-lg);
+  padding: 10px 14px 10px 18px;
+}
+.toast-text { min-width: 0; }
+.toast-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+.toast-action {
+  appearance: none;
+  border: 1px solid color-mix(in srgb, var(--bg) 35%, transparent);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  padding: 8px 14px;
+  min-height: 36px;
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.toast-action:hover { background: color-mix(in srgb, var(--bg) 16%, transparent); }
+.toast-action:active { background: color-mix(in srgb, var(--bg) 26%, transparent); }
+.toast-action.primary {
+  background: var(--bg);
+  border-color: var(--bg);
+  color: var(--text);
+}
+.toast-action.primary:hover { background: color-mix(in srgb, var(--bg) 88%, var(--text)); }
+.toast-action:focus-visible {
+  outline: 2px solid var(--bg);
+  outline-offset: 2px;
+}
+.toast-action[disabled] { opacity: 0.55; cursor: default; }
 .noscript {
   position: fixed;
   bottom: 0;
@@ -3595,33 +3641,56 @@ body.nav-open .nav-toggle .icon-close { display: block; }
   transition: opacity var(--dur) var(--ease);
 }
 /* Scroll lock for the open drawer.
-   `body.nav-open { overflow: hidden }` used to live here, and it was both
-   ineffective and harmful:
+   Three earlier attempts are recorded here so they are not repeated:
 
-   - ineffective: `html` sets `overflow-x`, so the body is not marked as the
-     scrolling element and its `overflow` never propagates to the viewport —
-     the page kept scrolling underneath the open drawer;
-   - harmful: `overflow: hidden` turns the body into a scroll container that
-     never scrolls, which is precisely what `position: sticky` resolves
-     against, so the header stopped sticking *while the drawer was open* and
-     the drawer — a fixed child of the header capsule — rode off the top of
-     the screen with it (the reported "blurred screen, nothing clickable").
+   1. `body.nav-open { overflow: hidden }` — ineffective (`html` sets
+      `overflow-x`, so the body never became the scrolling element) *and*
+      harmful: it turned the body into a scroll container that never scrolls,
+      which is what `position: sticky` resolves against, so the sticky header
+      stopped sticking while the drawer was open and the drawer — a fixed child
+      of the header capsule — rode off the top of the screen, leaving a blurred
+      page with nothing clickable;
+   2. swallowing `wheel` / `touchmove` in js/core.js with a non-passive,
+      document-level listener — worked on a desktop trackpad and broke phones:
+      it competes with native momentum scrolling, which is exactly what makes
+      a fast fling feel like it froze;
+   3. `touch-action: none` on `html` — `touch-action` resolves as the
+      intersection of an element and its ancestors, so this also disabled the
+      drawer's *own* list: the menu could not be panned by finger on iOS, and
+      the gesture fell through to Safari's rubber-band / pull-to-refresh.
 
-   The page is now locked by consuming the scroll gestures in js/core.js
-   (wheel / touchmove / scroll keys), which leaves layout — and therefore the
-   sticky header and the drawer hanging from it — untouched. These two
-   declarations close the gaps a JS listener cannot see: scroll chaining and
-   touch panning. */
-html.nav-open,
-body.nav-open {
-  overscroll-behavior: none;
+   The lock is now a body pin, applied by js/core.js only while the drawer is
+   open: the body is taken out of flow at its current scroll offset, so the
+   document has nothing left to scroll (no preventDefault anywhere) and the
+   offset is restored on close. `scrollbar-gutter: stable` on `html` keeps the
+   viewport width unchanged when the body leaves the flow. */
+body.nav-lock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
 }
-html.nav-open {
-  touch-action: none;
+/* The body pin takes the page out of flow, so a sticky header would be left at
+   its *document* offset — thousands of pixels above the viewport — and the
+   drawer, which hangs from the header capsule, would leave the screen with it.
+   Pinning the header to the same place (sticky top values are kept: 0 on
+   desktop, 8px on phones) keeps the drawer exactly where the reader expects
+   it. Its `backdrop-filter` still makes it the drawer's containing block, so
+   the drawer keeps its 78px/70px offset, and the fixed body cannot clip it
+   (a fixed element's containing block is the viewport, not the body). */
+body.nav-lock .site-header,
+body.nav-lock .ap-header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
-/* …except the drawer's own list, which is allowed to pan vertically. */
+/* Momentum inside the drawer stops at its edges instead of chaining to the
+   page behind it — containment, not interception. */
 html.nav-open .nav-links {
-  touch-action: pan-y;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 body.nav-open .nav-backdrop {
   opacity: 1;
@@ -3904,7 +3973,7 @@ body.nav-open .nav-backdrop {
     right: 16px;
     margin: 0;
     padding: 14px;
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
     gap: 4px;
@@ -3917,9 +3986,38 @@ body.nav-open .nav-backdrop {
     -webkit-backdrop-filter: var(--blur-liquid);
     max-height: min(72vh, 520px);
     overflow-y: auto;
+    /* Closed state. The drawer is animated with transform/opacity only — no
+       width, height, top or display changes — so opening and closing it never
+       lays the page out again and never moves the content behind it. The
+       element stays in the tree (a hidden drawer keeps its focusability out of
+       the tab order via `visibility`), which also keeps the close animation
+       possible. */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px) scale(0.985);
+    transform-origin: 50% 0;
+    transition:
+      opacity var(--dur-fast) var(--ease),
+      transform var(--dur) var(--ease-out),
+      visibility 0s linear var(--dur);
   }
   body.nav-open .nav-links,
-  body.nav-open .ap-header-inner .nav-links { display: flex; }
+  body.nav-open .ap-header-inner .nav-links {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+    /* Promoted only while it is actually on screen. */
+    will-change: transform, opacity;
+    transition:
+      opacity var(--dur-fast) var(--ease),
+      transform var(--dur) var(--ease-out),
+      visibility 0s;
+  }
+  /* The scroll lock takes the body out of flow, so the header must keep its
+     own stacking while the drawer is open. */
+  body.nav-lock .nav-backdrop { will-change: opacity; }
   .nav-links a,
   .ap-header-inner .nav-links a {
     padding: 12px 16px;
@@ -3928,6 +4026,20 @@ body.nav-open .nav-backdrop {
   }
   .nav-links a.nav-gh { display: flex; }
   .brand-badge { display: none; }
+}
+
+/* Reduced motion: the drawer still opens and closes, it just does not travel.
+   Nothing is removed, only the movement. */
+@media (max-width: 1180px) and (prefers-reduced-motion: reduce) {
+  .nav-links,
+  .ap-header-inner .nav-links {
+    transform: none;
+    transition: visibility 0s linear var(--dur-fast);
+  }
+  body.nav-open .nav-links,
+  body.nav-open .ap-header-inner .nav-links {
+    transition: visibility 0s;
+  }
 }
 
 @media (max-width: 760px) {
