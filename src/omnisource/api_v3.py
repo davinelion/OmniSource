@@ -7,7 +7,9 @@ statically hostable:
 * ``/api/v3/index.json`` — endpoint registry + global ``feedVersion``.
 * ``/api/v3/apps.json`` — paginated app catalog (``page``/``per_page``).
 * ``/api/v3/apps/<id>.json`` — one normalized app record.
-* ``/api/v3/sources.json`` + ``/api/v3/sources/<id>.json`` — upstreams.
+* ``/api/v3/sources.json`` + ``/api/v3/sources/<slug>.json`` — upstreams.
+  The document name is the record's ``slug`` (see :func:`safe_doc_id`), never
+  its raw ``id``, which may be a URL or an ``owner/repo`` pair.
 * ``/api/v3/trending.json`` — trending / rising / recently updated.
 * ``/api/v3/search-index.json`` — compact client-side search corpus.
 * ``/api/v3/status.json`` — health board snapshot.
@@ -28,6 +30,7 @@ See ``docs/API-V3.md`` for the full contract.
 from __future__ import annotations
 
 import hashlib
+import re
 from typing import Any
 
 API_V3_VERSION = "3.0.0"
@@ -129,12 +132,37 @@ def feed_version_for(documents: dict[str, str]) -> str:
     return digest.hexdigest()[:12]
 
 
+#: Characters a document name may contain. Everything else becomes ``-``.
+SAFE_DOC_ID_CHARS = re.compile(r"[^A-Za-z0-9._-]+")
+
+
+def safe_doc_id(raw: Any) -> str:
+    """Flatten an arbitrary record id into one filesystem-safe path segment.
+
+    Document names are the last path segment of a URL *and* a filename on every
+    runner, mirror and checkout this project publishes to, so they may not
+    contain a separator or any character NTFS rejects. Record ids do not obey
+    that: upstreams are keyed by whatever identifies them — a bare slug, a
+    GitHub ``owner/repo`` pair, a full feed URL, or a namespaced
+    ``manual:cercube``. Interpolated raw they produced
+    ``sources/Aidoku/Aidoku.json`` (a directory per source, 97 of them) and
+    ``sources/https:/repo.ikghd.me/repo.json.json`` — a colon in a filename,
+    which ``actions/upload-artifact`` refuses outright, so the scheduled
+    ``Backup and Recovery`` job failed on the upload step of every run.
+
+    Empty and dot-only results collapse to ``source`` so the caller always gets
+    a usable segment rather than writing to the parent directory.
+    """
+    text = SAFE_DOC_ID_CHARS.sub("-", str(raw or "")).strip("-._")
+    return text if text not in {"", ".", ".."} else "source"
+
+
 def _unique_ids(apps: list[dict[str, Any]]) -> list[str]:
     """Stable unique IDs: bare for the first use, ``-2``/``-3``… on collision."""
     seen: dict[str, int] = {}
     ids: list[str] = []
     for app in apps:
-        base = str(app.get("slug") or app.get("id") or app.get("bundleIdentifier") or "app")
+        base = safe_doc_id(app.get("slug") or app.get("id") or app.get("bundleIdentifier")) or "app"
         seen[base] = seen.get(base, 0) + 1
         ids.append(base if seen[base] == 1 else f"{base}-{seen[base]}")
     return ids
@@ -199,10 +227,18 @@ def build_static_documents(bundle: dict[str, Any]) -> dict[str, Any]:
         detail = full_app(app)
         detail["id"] = uid
         documents[f"apps/{uid}.json"] = envelope(detail, feed_version=feed_version)
+    seen_sources: dict[str, int] = {}
     for source in sources:
-        source_id = source.get("id") or source.get("slug")
-        if source_id:
-            documents[f"sources/{source_id}.json"] = envelope(source, feed_version=feed_version)
+        # `slug` is the pre-flattened form every source record already carries;
+        # `id` is the fallback for callers that only pass an id (and is what
+        # `safe_doc_id` exists to make safe). Collisions keep both documents by
+        # suffixing `-2`/`-3`…, the same convention `_unique_ids` uses for apps.
+        base = safe_doc_id(source.get("slug") or source.get("id"))
+        if base == "source" and not (source.get("slug") or source.get("id")):
+            continue
+        seen_sources[base] = seen_sources.get(base, 0) + 1
+        doc_id = base if seen_sources[base] == 1 else f"{base}-{seen_sources[base]}"
+        documents[f"sources/{doc_id}.json"] = envelope(source, feed_version=feed_version)
     checksums = {name: hashlib.sha256(repr(doc).encode("utf-8")).hexdigest() for name, doc in documents.items()}
     documents["index.json"] = {
         "apiVersion": API_V3_VERSION,

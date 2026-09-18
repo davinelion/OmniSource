@@ -44,12 +44,19 @@ fails: reverting the date-stamped per-app documents broke the manifest digest.
 `scripts/check_reproducible.py` (both modes) is green on the result, 697
 generated files stable.
 
-The residual problem is the reason those stamps move at all: `domain.today()`
-has no environment hook, so a build cannot be pinned to a date. Consequence:
-this tree is reproducible until a day passes — on `main`, `check_reproducible.py`
-currently fails for exactly that reason (its own `updatedDaysAgo` fields age by a
-day between a commit and a later build), which is pre-existing here and out of
-scope; `SOURCE_DATE_EPOCH` support in the writers is the real fix.
+> **Correction (2026-09-18).** This paragraph claimed `domain.today()` has no
+> environment hook and that a build therefore cannot be pinned to a date. That
+> was wrong: `src/omnisource/domain.py:67` has read an `OMNISOURCE_TODAY` pin
+> since the change described above, and it is exactly what
+> `scripts/check_reproducible.py` uses to rebuild as of the committed date.
+> What was genuinely missing was the *conventional* spelling, so external
+> reproducible-build tooling could pin this project's clock the way it pins
+> everything else's. `today()` now also honours `SOURCE_DATE_EPOCH` (seconds
+> since the Unix epoch, UTC), with `OMNISOURCE_TODAY` winning when both are set
+> and an unparsable or out-of-range value falling back to the real clock.
+> Pinned by three tests in `tests/test_domain.py`. The underlying point stands:
+> a build is only byte-reproducible *as of* a pinned date, and the pin is what
+> makes that true.
 
 
 ## CI failures (reviewed 2026-09-13, branch `arena/01a09c23-omnisource`)

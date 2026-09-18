@@ -23,6 +23,7 @@ from omnisource.domain import (
     SyncReport,
     UpdateEvent,
     today,
+    today_date,
 )
 from omnisource.errors import ConfigurationError
 
@@ -195,6 +196,26 @@ class TestDomainModel(unittest.TestCase):
             with self.subTest(pin=bad), mock.patch.dict(os.environ, {"OMNISOURCE_TODAY": bad}):
                 self.assertRegex(today(), r"^\d{4}-\d{2}-\d{2}$")
                 self.assertNotEqual(today(), bad)
+
+    def test_today_honors_source_date_epoch(self) -> None:
+        # The reproducible-builds convention, so external tooling can pin this
+        # project's clock the way it pins every other project's. 1789747200 is
+        # 2026-09-18T00:00:00Z.
+        with mock.patch.dict(os.environ, {"SOURCE_DATE_EPOCH": "1789747200"}, clear=False):
+            os.environ.pop("OMNISOURCE_TODAY", None)
+            self.assertEqual(today(), "2026-09-18")
+            self.assertEqual(today_date().isoformat(), "2026-09-18")
+
+    def test_today_prefers_the_explicit_date_pin_over_the_epoch(self) -> None:
+        env = {"SOURCE_DATE_EPOCH": "1789747200", "OMNISOURCE_TODAY": "2026-09-01"}
+        with mock.patch.dict(os.environ, env, clear=False):
+            self.assertEqual(today(), "2026-09-01")
+
+    def test_today_ignores_an_unusable_source_date_epoch(self) -> None:
+        for bad in ("", "not-a-number", "-1", "1.5", "9" * 40):
+            with self.subTest(epoch=bad), mock.patch.dict(os.environ, {"SOURCE_DATE_EPOCH": bad}, clear=False):
+                os.environ.pop("OMNISOURCE_TODAY", None)
+                self.assertRegex(today(), r"^\d{4}-\d{2}-\d{2}$")
 
 
 if __name__ == "__main__":

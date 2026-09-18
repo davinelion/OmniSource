@@ -1685,10 +1685,13 @@
 
     var deep = scrollLandmark();
     var section = landmarkSection(deep) || $('main');
+    var mainNode = $('main');
     var deepWas = usable(deep);
     var sectionWas = usable(section);
+    var mainWas = mainNode !== section && usable(mainNode);
     var deepBefore = deepWas ? deep.getBoundingClientRect().top : null;
     var sectionBefore = sectionWas ? section.getBoundingClientRect().top : null;
+    var mainBefore = mainWas ? mainNode.getBoundingClientRect().top : null;
 
     work();
 
@@ -1700,6 +1703,13 @@
       delta = deep.getBoundingClientRect().top - deepBefore;
     } else if (sectionWas && sectionBefore !== null && usable(section)) {
       delta = section.getBoundingClientRect().top - sectionBefore;
+    } else if (mainWas && mainBefore !== null && usable(mainNode)) {
+      /* Both were replaced by the render — a rail that rebuilds its own
+         subtree does that. Without a third measurement there is no delta, and
+         "no delta" means no correction at all, i.e. exactly the multi-thousand
+         pixel jump this exists to prevent on engines without scroll anchoring.
+         <main> outlives any re-render inside it. */
+      delta = mainNode.getBoundingClientRect().top - mainBefore;
     }
     if (delta === null || Math.abs(delta) < 1) return;
     scrollTo(Math.max(0, y + delta));

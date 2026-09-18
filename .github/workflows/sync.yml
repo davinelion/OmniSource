@@ -118,7 +118,13 @@ jobs:
           if [ "${SKIP_HEALTH}" = "true" ]; then
             ARGS+=(--no-health)
           fi
-          python3 scripts/omnisource.py "${ARGS[@]}"
+          # Tee to a file so a failed run leaves something behind: the job's
+          # own log lives in Azure blob storage, which is not reachable from
+          # everywhere (and `gh run view --log-failed` fails with EOF from a
+          # sandbox), so the annotations and the artifact below are the only
+          # reliable record of *why* a scheduled sync died. pipefail keeps the
+          # exit status the pipeline's, not tee's.
+          python3 scripts/omnisource.py "${ARGS[@]}" 2>&1 | tee "$RUNNER_TEMP/omnisource-pipeline.log"
 
       # Test gate: the commit step below only runs if every check here is
       # green (GitHub Actions skips the rest of the job on any failure). This
@@ -236,6 +242,35 @@ jobs:
           # which would ship a Pages artifact without `_site/.nojekyll` — the
           # marker that stops Jekyll from swallowing underscore/asset paths.
           include-hidden-files: true
+
+      # Diagnostics for a failed run. Scheduled runs of this job failed seven
+      # times on 2026-09-16/17 with the only annotation being "Process
+      # completed with exit code 1." — the step-level log was unreachable, so
+      # there was no way to tell an upstream rate limit from a code fault. The
+      # tail lands in the annotations (readable through
+      # `gh api repos/…/check-runs/<job>/annotations`) and the full log in an
+      # artifact; both run only on failure, and neither may fail the job.
+      - name: Report the failure in the annotations
+        if: failure()
+        run: |
+          set -uo pipefail
+          LOG="$RUNNER_TEMP/omnisource-pipeline.log"
+          if [ ! -f "$LOG" ]; then
+            echo "::error::pipeline failed before it produced a log — see the step that failed"
+            exit 0
+          fi
+          echo "--- last 40 lines of the pipeline log ---"
+          tail -40 "$LOG"
+          echo "::error::pipeline failed — tail above, full log in the pipeline-log-${GITHUB_RUN_ID} artifact"
+
+      - name: Upload pipeline log (on failure)
+        if: failure()
+        uses: actions/upload-artifact@v6
+        with:
+          name: pipeline-log-${{ github.run_id }}
+          path: ${{ runner.temp }}/omnisource-pipeline.log
+          if-no-files-found: ignore
+          retention-days: 14
 
   deploy:
     name: Deploy GitHub Pages
