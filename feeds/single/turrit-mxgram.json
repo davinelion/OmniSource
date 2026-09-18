@@ -106,9 +106,9 @@
           "notes": "UNOFFICIAL BUILD - TWICE OVER. Turrit is itself an unofficial third-party Telegram client (not affiliated with Telegram FZ-LLC), and this is a community rebuild of it with the MxGram tweak injected. The tweak's official project (m1ronx1412/mxgram) publishes .deb/.dylib assets only; the ready-to-sideload IPA exists solely in the IPA Vault source, so no developer-published IPA link exists to verify. Uses its own bundle identifier."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-05"
         }
       }

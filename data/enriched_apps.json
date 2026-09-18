@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-17T23:15:53Z",
+  "generatedAt": "2026-09-18T04:29:51Z",
   "count": 130,
   "incomplete": 0,
   "apps": [
@@ -874,7 +874,7 @@
               "fileType": "ZIP",
               "size": 20365290,
               "sha256": "3852fb61c3f2294359cca0683719d51ea4b57d97c8f79467f4d0cd4c163f45fc",
-              "downloads": 24,
+              "downloads": 26,
               "mimeType": "application/zip",
               "installable": false
             },
@@ -886,7 +886,7 @@
               "fileType": "IPA",
               "size": 114471562,
               "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 1446,
+              "downloads": 1491,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -898,7 +898,7 @@
               "fileType": "IPA",
               "size": 124722640,
               "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 3150,
+              "downloads": 3249,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -910,7 +910,7 @@
               "fileType": "IPA",
               "size": 114471417,
               "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-              "downloads": 58,
+              "downloads": 62,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -922,7 +922,7 @@
               "fileType": "IPA",
               "size": 124722495,
               "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 113,
+              "downloads": 116,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -934,7 +934,7 @@
               "fileType": "IPA",
               "size": 85880995,
               "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 358,
+              "downloads": 372,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -946,7 +946,7 @@
               "fileType": "IPA",
               "size": 96132071,
               "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 540,
+              "downloads": 563,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -958,7 +958,7 @@
               "fileType": "DEB",
               "size": 12186352,
               "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-              "downloads": 23,
+              "downloads": 24,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -970,13 +970,13 @@
               "fileType": "DEB",
               "size": 12187106,
               "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-              "downloads": 26,
+              "downloads": 27,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 540
+          "downloads": 563
         }
       ],
       "screenshotURLs": [],
@@ -2065,9 +2065,9 @@
           "notes": "Official package com.cercube.ios v6.1.3 from the developer's own repository (apt.cercube.com, SHA256-published). The direct link below is the official arm64 .deb - install it with TrollStore or on a jailbroken device. Without a jailbreak, add the official source https://altstore.cercube.com to AltStore (Classic), SideStore or Feather instead; it injects Cercube into the App Store YouTube app. The sideloaded home-screen icon is the YouTube icon (this entry reuses it); the tweak's own branding icon is published at https://cdn.cercube.com/assets/icon.png."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-18"
         }
       },
@@ -3687,9 +3687,9 @@
           "notes": "Tracks the ready-to-sideload Glow build from the IPA Vault source (the official dayanch96/Glow repo publishes the tweak as .deb only). Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-05"
         }
       },
@@ -4392,9 +4392,9 @@
           "notes": "UNOFFICIAL BUILD - TWICE OVER. iMe is itself an unofficial third-party Telegram client (not affiliated with Telegram FZ-LLC), and this is a community rebuild of it with the MxGram tweak injected. The tweak's official project (m1ronx1412/mxgram) publishes .deb/.dylib assets only; the ready-to-sideload IPA exists solely in the IPA Vault source, so no developer-published IPA link exists to verify. Uses its own bundle identifier."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-01"
         }
       },
@@ -4409,18 +4409,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Infuse.webp",
       "tintColor": "FF6B00",
       "category": "photo-video",
-      "version": "8.5.3",
-      "versionDate": "2026-09-01",
-      "versionDescription": "Infuse 8.5.3 | Infuse-8.5.3-Infuse-Plus IPA Vault build for Infuse Plus (8.5.3), version 8.5.3",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-      "size": 100074036,
+      "version": "8.5.5",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Infuse 8.5.5 | Infuse-8.5.5-Infuse-Plus IPA Vault build for Infuse Plus (8.5.5), version 8.5.5",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+      "size": 99611121,
       "versions": [
         {
-          "version": "8.5.3",
-          "date": "2026-09-01",
-          "localizedDescription": "Infuse 8.5.3 | Infuse-8.5.3-Infuse-Plus\n\nIPA Vault build for Infuse Plus (8.5.3), version 8.5.3",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-          "size": 100074036,
+          "version": "8.5.5",
+          "date": "2026-09-16",
+          "localizedDescription": "Infuse 8.5.5 | Infuse-8.5.5-Infuse-Plus\n\nIPA Vault build for Infuse Plus (8.5.5), version 8.5.5",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+          "size": 99611121,
           "minOSVersion": "18.0",
           "releaseUrl": null,
           "source": "altstore",
@@ -4428,12 +4428,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Infuse-8.5.3-Infuse-Plus.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
+              "filename": "Infuse-8.5.5-Infuse-Plus.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 100074036,
+              "size": 99611121,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -4472,10 +4472,10 @@
           "notes": "Tracks the ready-to-sideload Infuse Plus build from the IPA Vault source (the official dayanch96/InfusePlus repo publishes the tweak as .deb only). Current Infuse 8.5 builds require iOS 18 or newer; upstream also publishes an iOS 16-era 7.x build that is not tracked here. Shares com.firecore.infuse with a sideloaded stock Infuse - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-01"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -4489,18 +4489,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
       "tintColor": "E1306C",
       "category": "Social Networking",
-      "version": "446.0.0",
-      "versionDate": "2026-09-09",
-      "versionDescription": "Instagram 446.0.0 | Instagram_446.0_iNKillerPlus_5.2 • Fix profile bio long press to copy detect email and links • Fix read DM icon • Fix user exception for direct message • Add roothide & relaxin JB support • Add full compatibility with IG v440+ • Add tab configuration for hide & launch • Fix swipe between tabs • Fix story mention button crashes on v440+ • Fix story download button • Fix eye long-press user exception on v440+ • Fix follow confirmation toggle • Fix long-press profile picture expand & download • Fix grid button in main navbar • Fix 2x2 grid handling in 3x3 position style • Fix photo picker with music on multiple posts for iOS 27 Liquid Glass • Other fixes & improvements • Updated base IPA to Instagram v446.0",
-      "downloadURL": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
-      "size": 247800840,
+      "version": "447.0.0",
+      "versionDate": "2026-09-15",
+      "versionDescription": "Instagram 447.0.0 | Instagram_447.0_iNKillerPlus_5.2 • Fixes profile bio long press to copy detect email and links • Fixes read DM icon • Fixes user exception for direct message • Add full compatibility with IG v445+ • Updated base IPA to Instagram v447.0",
+      "downloadURL": "https://ikghd.site/ipa/Instagram_447.0_iNKillerPlus_5.2.ipa",
+      "size": 247462182,
       "versions": [
         {
-          "version": "446.0.0",
-          "date": "2026-09-09",
-          "localizedDescription": "Instagram 446.0.0 | Instagram_446.0_iNKillerPlus_5.2\n\n• Fix profile bio long press to copy detect email and links\n• Fix read DM icon\n• Fix user exception for direct message\n• Add roothide & relaxin JB support\n• Add full compatibility with IG v440+\n• Add tab configuration for hide & launch\n• Fix swipe between tabs\n• Fix story mention button crashes on v440+\n• Fix story download button\n• Fix eye long-press user exception on v440+\n• Fix follow confirmation toggle\n• Fix long-press profile picture expand & download\n• Fix grid button in main navbar\n• Fix 2x2 grid handling in 3x3 position style\n• Fix photo picker with music on multiple posts for iOS 27 Liquid Glass\n• Other fixes & improvements\n• Updated base IPA to Instagram v446.0",
-          "downloadURL": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
-          "size": 247800840,
+          "version": "447.0.0",
+          "date": "2026-09-15",
+          "localizedDescription": "Instagram 447.0.0 | Instagram_447.0_iNKillerPlus_5.2\n\n• Fixes profile bio long press to copy detect email and links\n• Fixes read DM icon\n• Fixes user exception for direct message\n• Add full compatibility with IG v445+\n• Updated base IPA to Instagram v447.0",
+          "downloadURL": "https://ikghd.site/ipa/Instagram_447.0_iNKillerPlus_5.2.ipa",
+          "size": 247462182,
           "minOSVersion": "16.3",
           "releaseUrl": null,
           "source": "altstore",
@@ -4508,12 +4508,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Instagram_446.0_iNKillerPlus_5.2.ipa",
-              "downloadUrl": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
+              "filename": "Instagram_447.0_iNKillerPlus_5.2.ipa",
+              "downloadUrl": "https://ikghd.site/ipa/Instagram_447.0_iNKillerPlus_5.2.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 247800840,
+              "size": 247462182,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -4577,10 +4577,10 @@
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-09"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-15"
         }
       },
       "missingFields": []
@@ -4594,18 +4594,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
       "tintColor": "1877F2",
       "category": "Social Networking",
-      "version": "578.1",
-      "versionDate": "2026-09-13",
-      "versionDescription": "Facebook 578.1 | Facebook-578.1-iQFace IPA Vault build for Facebook (iQFace), version 578.1",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
-      "size": 227299291,
+      "version": "579.0.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Facebook 579.0.0 | Facebook-579.0.0-iQFace IPA Vault build for Facebook (iQFace), version 579.0.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+      "size": 228632105,
       "versions": [
         {
-          "version": "578.1",
-          "date": "2026-09-13",
-          "localizedDescription": "Facebook 578.1 | Facebook-578.1-iQFace\n\nIPA Vault build for Facebook (iQFace), version 578.1",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
-          "size": 227299291,
+          "version": "579.0.0",
+          "date": "2026-09-16",
+          "localizedDescription": "Facebook 579.0.0 | Facebook-579.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 579.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+          "size": 228632105,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -4613,12 +4613,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Facebook-578.1-iQFace.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
+              "filename": "Facebook-579.0.0-iQFace.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 227299291,
+              "size": 228632105,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -4682,10 +4682,10 @@
           "notes": "Tweak by 7MD; distributed ready-to-sideload via the IPA Vault source. Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-13"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -5313,7 +5313,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 235,
+              "downloads": 237,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5349,7 +5349,7 @@
               "fileType": "APK",
               "size": 88506651,
               "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-              "downloads": 81,
+              "downloads": 82,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5361,13 +5361,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 99,
+              "downloads": 107,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 99
+          "downloads": 107
         }
       ],
       "screenshotURLs": [],
@@ -6272,13 +6272,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 213,
+              "downloads": 234,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 213
+          "downloads": 234
         }
       ],
       "screenshotURLs": [
@@ -6386,13 +6386,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 220,
+              "downloads": 228,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 220
+          "downloads": 228
         }
       ],
       "screenshotURLs": [
@@ -6471,18 +6471,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
       "tintColor": "0084FF",
       "category": "Social Networking",
-      "version": "578.1.0",
-      "versionDate": "2026-09-10",
-      "versionDescription": "Messenger 578.1.0 | Messenger-578.1.0-Flow IPA Vault build for Messenger (Flow), version 578.1.0",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-      "size": 113359444,
+      "version": "579.0.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Messenger 579.0.0 | Messenger-579.0.0-Flow IPA Vault build for Messenger (Flow), version 579.0.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+      "size": 112483407,
       "versions": [
         {
-          "version": "578.1.0",
-          "date": "2026-09-10",
-          "localizedDescription": "Messenger 578.1.0 | Messenger-578.1.0-Flow\n\nIPA Vault build for Messenger (Flow), version 578.1.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-          "size": 113359444,
+          "version": "579.0.0",
+          "date": "2026-09-16",
+          "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 579.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+          "size": 112483407,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -6490,12 +6490,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Messenger-578.1.0-Flow.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
+              "filename": "Messenger-579.0.0-Flow.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 113359444,
+              "size": 112483407,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -6559,10 +6559,10 @@
           "notes": "UNOFFICIAL BUILD. Flow has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses its own bundle identifier, so it installs alongside the stock App Store Messenger."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-10"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -6803,18 +6803,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
       "tintColor": "0084FF",
       "category": "Social Networking",
-      "version": "578.1.0",
-      "versionDate": "2026-09-10",
-      "versionDescription": "Messenger 578.1.0 | Messenger-578.1.0-MSGPlusX IPA Vault build for Messenger (MSGPlusX), version 578.1.0",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
-      "size": 113236064,
+      "version": "579.0.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX IPA Vault build for Messenger (MSGPlusX), version 579.0.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
+      "size": 112520493,
       "versions": [
         {
-          "version": "578.1.0",
-          "date": "2026-09-10",
-          "localizedDescription": "Messenger 578.1.0 | Messenger-578.1.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 578.1.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
-          "size": 113236064,
+          "version": "579.0.0",
+          "date": "2026-09-16",
+          "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 579.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
+          "size": 112520493,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -6822,12 +6822,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Messenger-578.1.0-MSGPlusX.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
+              "filename": "Messenger-579.0.0-MSGPlusX.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 113236064,
+              "size": 112520493,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -6891,10 +6891,10 @@
           "notes": "UNOFFICIAL BUILD. MSGPlusX has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Messenger bundle identifier, so installing it REPLACES the App Store Messenger on device. SNMessenger shares the same stock Messenger bundle id, so those two install over each other one at a time; Messenger Flow keeps its own id and can stay installed."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-10"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -7279,18 +7279,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/SoundCloud.webp",
       "tintColor": "FF5500",
       "category": "Social Networking",
-      "version": "8.77.0",
-      "versionDate": "2026-09-07",
-      "versionDescription": "SoundCloud 8.77.0 | SoundCloud-8.77.0-NexaSC IPA Vault build for SoundCloud (NexaSC), version 8.77.0",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa",
-      "size": 107196182,
+      "version": "8.78.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "SoundCloud 8.78.0 | SoundCloud-8.78.0-NexaSC IPA Vault build for SoundCloud (NexaSC), version 8.78.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
+      "size": 115772654,
       "versions": [
         {
-          "version": "8.77.0",
-          "date": "2026-09-07",
-          "localizedDescription": "SoundCloud 8.77.0 | SoundCloud-8.77.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.77.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa",
-          "size": 107196182,
+          "version": "8.78.0",
+          "date": "2026-09-16",
+          "localizedDescription": "SoundCloud 8.78.0 | SoundCloud-8.78.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.78.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
+          "size": 115772654,
           "minOSVersion": "16.4",
           "releaseUrl": null,
           "source": "altstore",
@@ -7298,12 +7298,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "SoundCloud-8.77.0-NexaSC.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa",
+              "filename": "SoundCloud-8.78.0-NexaSC.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 107196182,
+              "size": 115772654,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -7367,10 +7367,10 @@
           "notes": "UNOFFICIAL BUILD. NexaSC has no public repository or developer feed - the only distribution channel is the IPA Vault source, so no developer-published download link exists to verify. Not affiliated with or endorsed by SoundCloud Ltd. Current SoundCloud 8.x builds require iOS 16.4 or newer (a pinned 7.68.1 build for iOS 16.0-16.3 also exists in the vault but is not tracked here). Shares com.soundcloud.TouchApp with TTKillerPlus in this catalog - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-07"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -9202,51 +9202,21 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Discord.webp",
       "tintColor": "5865F2",
       "category": "Social Networking",
-      "version": "1.2.0",
-      "versionDate": "2026-09-17",
-      "versionDescription": "Discord 1.2.0 | RainTweak",
-      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-      "size": 107065935,
+      "version": "0.9.3",
+      "versionDate": "2026-06-19",
+      "versionDescription": "Discord 0.9.3 | RainTweak RainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
+      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+      "size": 107515564,
       "versions": [
         {
-          "version": "1.2.0",
-          "date": "2026-09-17",
-          "localizedDescription": "Discord 1.2.0 | RainTweak",
-          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-          "size": 107065935,
+          "version": "0.9.3",
+          "date": "2026-06-19",
+          "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
+          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+          "size": 107515564,
+          "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v1.2.0",
-          "source": "github",
-          "isPrerelease": false,
-          "isDraft": false,
-          "assets": [
-            {
-              "filename": "dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
-              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
-              "platform": "linux",
-              "architecture": "arm64",
-              "fileType": "DEB",
-              "size": 41230,
-              "sha256": "73048c2d44806bdf34749f7743067724516098a12311fb51d1f5c37f302d697a",
-              "downloads": 19,
-              "mimeType": "application/vnd.debian.binary-package",
-              "installable": true
-            },
-            {
-              "filename": "RainTweak.ipa",
-              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-              "platform": "ios",
-              "architecture": null,
-              "fileType": "IPA",
-              "size": 107065935,
-              "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
-              "downloads": 149,
-              "mimeType": "application/octet-stream",
-              "installable": true
-            }
-          ],
-          "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
-          "downloads": 149
+          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v0.9.3"
         }
       ],
       "screenshotURLs": [],
@@ -9307,7 +9277,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-09-17"
+          "lastUpdatedAt": "2026-06-19"
         }
       },
       "missingFields": []
@@ -9478,7 +9448,7 @@
               "fileType": "IPA",
               "size": 108119337,
               "sha256": "421d5149dfe8087e18ea2b43cf437e2ea384208a74ee39bcfb23c9bc14cb7ae6",
-              "downloads": 208,
+              "downloads": 213,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9490,7 +9460,7 @@
               "fileType": "IPA",
               "size": 108168749,
               "sha256": "b6b5fa78be22ac11bfdb179884caaa43b69e10d16d47a9079f33df014f57c590",
-              "downloads": 1523,
+              "downloads": 1560,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9502,13 +9472,13 @@
               "fileType": "IPA",
               "size": 108070190,
               "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-              "downloads": 578,
+              "downloads": 607,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-          "downloads": 578
+          "downloads": 607
         }
       ],
       "screenshotURLs": [],
@@ -9558,18 +9528,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
       "tintColor": "E1306C",
       "category": "Social Networking",
-      "version": "446.0.0",
-      "versionDate": "2026-09-10",
-      "versionDescription": "Instagram 446.0.0 | Instagram-446.0.0-RyukGram IPA Vault build for Instagram (RyukGram), version 446.0.0",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
-      "size": 325835336,
+      "version": "447.0.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Instagram 447.0.0 | Instagram-447.0.0-RyukGram IPA Vault build for Instagram (RyukGram), version 447.0.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
+      "size": 320995960,
       "versions": [
         {
-          "version": "446.0.0",
-          "date": "2026-09-10",
-          "localizedDescription": "Instagram 446.0.0 | Instagram-446.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 446.0.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
-          "size": 325835336,
+          "version": "447.0.0",
+          "date": "2026-09-16",
+          "localizedDescription": "Instagram 447.0.0 | Instagram-447.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 447.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
+          "size": 320995960,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -9577,12 +9547,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Instagram-446.0.0-RyukGram.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
+              "filename": "Instagram-447.0.0-RyukGram.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 325835336,
+              "size": 320995960,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -9646,10 +9616,10 @@
           "notes": "Official project: faroukbmiled/RyukGram (publishes .deb/.dylib assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Shares com.burbn.instagram with iNKillerPlus in this catalog - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-10"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -9731,9 +9701,9 @@
           "notes": "The IG 410 line from the developer's own source (source.ryuksign.com/ig410); versions track the Instagram base build rather than the RyukGram tweak version. Shares com.burbn.instagram with RyukGram, RyukGram Side by Side's sibling builds and iNKillerPlus — install one Instagram mod at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-07-25"
         }
       },
@@ -9816,9 +9786,9 @@
           "notes": "Distinct bundle identifier (com.ryuk.ryukgram) from the developer's own source, so it does not clash with Instagram or the other Instagram mods in this catalog. iPadOS is supported by the upstream build."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-09"
         }
       },
@@ -10626,18 +10596,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
       "tintColor": "E1306C",
       "category": "Social Networking",
-      "version": "446.0.0",
-      "versionDate": "2026-09-10",
-      "versionDescription": "Instagram 446.0.0 | Instagram-446.0.0-Sparkle IPA Vault build for Instagram (Sparkle), version 446.0.0",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
-      "size": 318531474,
+      "version": "447.0.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Instagram 447.0.0 | Instagram-447.0.0-Sparkle IPA Vault build for Instagram (Sparkle), version 447.0.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
+      "size": 312339573,
       "versions": [
         {
-          "version": "446.0.0",
-          "date": "2026-09-10",
-          "localizedDescription": "Instagram 446.0.0 | Instagram-446.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 446.0.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
-          "size": 318531474,
+          "version": "447.0.0",
+          "date": "2026-09-16",
+          "localizedDescription": "Instagram 447.0.0 | Instagram-447.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 447.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
+          "size": 312339573,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -10645,12 +10615,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Instagram-446.0.0-Sparkle.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
+              "filename": "Instagram-447.0.0-Sparkle.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 318531474,
+              "size": 312339573,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -10714,10 +10684,10 @@
           "notes": "Official project: efibalogh/sparkle-ig (publishes .deb assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Uses its own bundle identifier (com.burbn.instagram.sparkle) - installs alongside the stock app."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-10"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -11379,7 +11349,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 10868,
+              "downloads": 10877,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11391,7 +11361,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1481,
+              "downloads": 1487,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11427,13 +11397,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 222,
+              "downloads": 230,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 222
+          "downloads": 230
         }
       ],
       "screenshotURLs": [],
@@ -11571,9 +11541,9 @@
           "notes": "Swiftgram's official distribution channels are the App Store and TestFlight and the project publishes no sideload IPA, so this source serves a community-built IPA from the IPA Vault, clearly labelled in the feed. Telegram 12.x requires iOS 13 or newer. Uses its own bundle identifier - installs alongside the stock Telegram app."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-05"
         }
       },
@@ -12049,9 +12019,9 @@
           "notes": "Official project: m1ronx1412/mxgram (publishes the tweak as .deb/.dylib only); this source serves the ready-to-sideload IPA build from the IPA Vault. Telegram 12.x requires iOS 13 or newer. Shares ph.telegra.Telegraph with a sideloaded stock Telegram - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-12"
         }
       },
@@ -12066,18 +12036,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Threads.webp",
       "tintColor": "000000",
       "category": "Social Networking",
-      "version": "446.1",
-      "versionDate": "2026-09-10",
-      "versionDescription": "Threads 446.1 | Threads-446.1-ThreadSaver IPA Vault build for Threads (ThreadSaver), version 446.1",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
-      "size": 105719166,
+      "version": "447.0",
+      "versionDate": "2026-09-16",
+      "versionDescription": "Threads 447.0 | Threads-447.0-ThreadSaver IPA Vault build for Threads (ThreadSaver), version 447.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
+      "size": 107906677,
       "versions": [
         {
-          "version": "446.1",
-          "date": "2026-09-10",
-          "localizedDescription": "Threads 446.1 | Threads-446.1-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 446.1",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
-          "size": 105719166,
+          "version": "447.0",
+          "date": "2026-09-16",
+          "localizedDescription": "Threads 447.0 | Threads-447.0-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 447.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
+          "size": 107906677,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -12085,12 +12055,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Threads-446.1-ThreadSaver.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
+              "filename": "Threads-447.0-ThreadSaver.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 105719166,
+              "size": 107906677,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -12154,10 +12124,10 @@
           "notes": "UNOFFICIAL BUILD. ThreadSaver has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Threads bundle identifier, so installing it REPLACES the App Store Threads on device."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-10"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-16"
         }
       },
       "missingFields": []
@@ -12482,7 +12452,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 364225,
+              "downloads": 364254,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12494,12 +12464,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1242791,
+              "downloads": 1242899,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1242791
+          "downloads": 1242899
         }
       ],
       "screenshotURLs": [],
@@ -12549,18 +12519,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TikTok.webp",
       "tintColor": "232621",
       "category": "Social Networking",
-      "version": "46.8.0",
-      "versionDate": "2026-09-09",
-      "versionDescription": "TikTok 46.8.0 | TikTok_46.8_TTKillerPlus_2.1 • Add v46.0+ compatibility. • Fix like confirmation bypass on double tap. • Fix post date display format. • Fix settings localization & toggles. • Fix flag button not tappable. • Other fixes & improvements. • Update base IPA to TikTok v46.8",
-      "downloadURL": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
-      "size": 453011354,
+      "version": "46.9.0",
+      "versionDate": "2026-09-15",
+      "versionDescription": "TikTok 46.9.0 | TikTok_46.9_TTKillerPlus_2.2 • Add follow status to new profile style user name. • Fix like confirmation bypass on double tap. • Fix post date display format. • Fix settings localization & toggles. • Fix flag button not tappable. • Other fixes & improvements. • Update base IPA to TikTok v46.9",
+      "downloadURL": "https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa",
+      "size": 466535207,
       "versions": [
         {
-          "version": "46.8.0",
-          "date": "2026-09-09",
-          "localizedDescription": "TikTok 46.8.0 | TikTok_46.8_TTKillerPlus_2.1\n\n• Add v46.0+ compatibility.\n• Fix like confirmation bypass on double tap.\n• Fix post date display format.\n• Fix settings localization & toggles.\n• Fix flag button not tappable.\n• Other fixes & improvements.\n• Update base IPA to TikTok v46.8",
-          "downloadURL": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
-          "size": 453011354,
+          "version": "46.9.0",
+          "date": "2026-09-15",
+          "localizedDescription": "TikTok 46.9.0 | TikTok_46.9_TTKillerPlus_2.2\n\n• Add follow status to new profile style user name.\n• Fix like confirmation bypass on double tap.\n• Fix post date display format.\n• Fix settings localization & toggles.\n• Fix flag button not tappable.\n• Other fixes & improvements.\n• Update base IPA to TikTok v46.9",
+          "downloadURL": "https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa",
+          "size": 466535207,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -12568,12 +12538,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "TikTok_46.8_TTKillerPlus_2.1.ipa",
-              "downloadUrl": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
+              "filename": "TikTok_46.9_TTKillerPlus_2.2.ipa",
+              "downloadUrl": "https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 453011354,
+              "size": 466535207,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -12635,10 +12605,10 @@
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-09"
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
+          "lastUpdatedAt": "2026-09-15"
         }
       },
       "missingFields": []
@@ -12740,9 +12710,9 @@
           "notes": "UNOFFICIAL BUILD - TWICE OVER. Turrit is itself an unofficial third-party Telegram client (not affiliated with Telegram FZ-LLC), and this is a community rebuild of it with the MxGram tweak injected. The tweak's official project (m1ronx1412/mxgram) publishes .deb/.dylib assets only; the ready-to-sideload IPA exists solely in the IPA Vault source, so no developer-published IPA link exists to verify. Uses its own bundle identifier."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-05"
         }
       },
@@ -12795,13 +12765,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1159,
+              "downloads": 1167,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1159
+          "downloads": 1167
         }
       ],
       "screenshotURLs": [],
@@ -13218,9 +13188,9 @@
           "notes": "uYouEnhanced's official GitHub releases publish release notes only - no .ipa assets - so the IPA served here is a community build of the official release tag (YouTube 21.14.4 / uYou 3.0.5), mirrored on archive.org. Once a 'Build uYouEnhanced' run publishes an IPA in this repository (tag uyouenhanced-v*), the self-built artifact takes over automatically."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-          "statusSince": "2026-09-17",
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-08-22"
         }
       },
