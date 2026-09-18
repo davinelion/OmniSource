@@ -30,13 +30,19 @@ const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const core = fs.readFileSync(path.join(ROOT, "js", "core.js"), "utf8");
 const site = fs.readFileSync(path.join(ROOT, "js", "site.js"), "utf8");
 
-/* The home page's feed tiers (js/site.js FEEDS): these four are awaited before
-   the first render, so they must resolve for boot() to reach the deep-link
-   step at all. */
-const FIRST_PAINT = ["feeds/health.json", "feeds/analytics.json", "feeds/verification.json", "feeds/trending.json"];
-/* Deferred (non-first-paint, non-idle) home feeds — each one re-renders and
-   therefore re-pins when it lands. */
-const LATE_FEEDS = ["feeds/reputation.json", "feeds/download-intelligence.json"];
+/* The home page's feed tiers (js/site.js FEEDS). Three documents are awaited
+   before the first render, so they must resolve for boot() to reach the
+   deep-link step at all. */
+const FIRST_PAINT = ["feeds/health.json", "feeds/analytics.json", "feeds/verification.json"];
+/* The deferred home feed: not first paint and not idle, so it is requested
+   right after boot and re-renders (and therefore re-pins) when it lands. */
+const DEFERRED_FEEDS = ["discovery.json"];
+/* Idle-tier feeds, requested from requestIdleCallback. The harness supplies
+   that callback (see boot) so the checks decide when they land instead of
+   racing the 1200 ms fallback timer. */
+const IDLE_FEEDS = ["feeds/updates.json", "feeds/install.json", "feeds/search-index.json"];
+/* Every document that can land after the first render, in landing order. */
+const LATE_FEEDS = DEFERRED_FEEDS.concat(IDLE_FEEDS);
 
 const MINIMAL_FEED = {
   apps: [
@@ -121,6 +127,15 @@ function boot(hash) {
     pinned.push(this.id || this.tagName.toLowerCase());
   };
 
+  /* js/site.js hands the idle-tier feed loads to requestIdleCallback. jsdom
+     does not implement it, and the code's timer fallback would fire in the
+     middle of a check, so capture the callbacks and run them on demand. */
+  const idleWork = [];
+  window.requestIdleCallback = function (work) {
+    idleWork.push(work);
+    return idleWork.length;
+  };
+
   window.eval(core);
 
   const pending = new Map();
@@ -156,6 +171,14 @@ function boot(hash) {
       const entry = pending.get(feedPath);
       if (!entry) throw new Error("no pending request for " + feedPath);
       entry.resolve(null);
+      await tick(220);
+      await new Promise((resolve) => window.requestAnimationFrame(() => resolve()));
+    },
+    /* Run the queued idle work (which requests the idle-tier feeds) and let
+       them resolve and re-render. */
+    async landIdle() {
+      const queued = idleWork.splice(0, idleWork.length);
+      queued.forEach((work) => work());
       await tick(220);
       await new Promise((resolve) => window.requestAnimationFrame(() => resolve()));
     },
@@ -211,8 +234,8 @@ async function main() {
       : "the page re-pinned after the reader scrolled away: " + JSON.stringify(after);
   });
 
-  await dragged.land(LATE_FEEDS[1]);
-  await check("and stays put for every feed after that", function () {
+  await dragged.landIdle();
+  await check("and stays put for every idle-tier feed after that", function () {
     return dragged.pinned.length === pinnedBeforeDrag
       ? true
       : "further re-pins: " + JSON.stringify(dragged.pinned.slice(pinnedBeforeDrag));
@@ -261,16 +284,16 @@ async function main() {
   );
   await tick(30);
   const pinnedBeforeRehash = rehash.pinned.length;
-  // #trending starts hidden and only becomes a scroll target once its feed
-  // lands — which is the situation a reader clicking "Trending" is in.
-  rehash.document.getElementById("trending").hidden = false;
-  rehash.window.location.hash = "#trending";
+  // #installGuide starts hidden and only becomes a scroll target once its
+  // feed lands — which is the situation a reader clicking "Install" is in.
+  rehash.document.getElementById("installGuide").hidden = false;
+  rehash.window.location.hash = "#installGuide";
   rehash.window.dispatchEvent(new rehash.window.Event("hashchange"));
   await tick(30);
   await check("a deep link requested after the reader scrolled is honoured again", function () {
-    return rehash.pinned.slice(pinnedBeforeRehash).indexOf("trending") !== -1
+    return rehash.pinned.slice(pinnedBeforeRehash).indexOf("installGuide") !== -1
       ? true
-      : "the new #trending request was ignored after a reader scroll (pinned: " +
+      : "the new #installGuide request was ignored after a reader scroll (pinned: " +
           JSON.stringify(rehash.pinned) +
           ")";
   });

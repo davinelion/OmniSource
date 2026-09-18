@@ -10,6 +10,13 @@ The result is intentionally not hard-coded — every URL is derived from
 ``baseURL`` and the per-app feed, so a future host rename is a single edit
 to the catalog.
 
+The document also carries the *advice*: ``clients[].bestFor`` (one line per
+client, from :data:`CLIENT_GUIDE`) and a ``recommender`` decision tree
+(:data:`RECOMMENDER`) that the installation center walks to answer "which
+client should I use?". ``clients[].recommended`` marks the default pick
+(SideStore: free, and refreshes on the device after a one-time computer setup),
+which is what the install cards badge everywhere else.
+
 Markdown contexts that strip non-http schemes (GitHub README rendering, most
 chat apps) cannot link the client URLs above directly. They instead link the
 installation center with an ``add`` parameter —
@@ -197,6 +204,213 @@ CLIENT_PROFILES = {
 }
 
 
+# ---------------------------------------------------------------------------
+# Client guidance
+# ---------------------------------------------------------------------------
+# Who each client is actually for, and which one OmniSource recommends when the
+# reader has no opinion. The website renders this verbatim (install center
+# "Which client?" panel, client cards, README), so the advice lives here — one
+# place, versioned with the catalog, instead of prose that drifts per page.
+#
+# The default recommendation is SideStore: free (no certificate to buy), and
+# after a one-time computer setup it refreshes its own apps on the device, which
+# is the lowest-friction path that does not depend on paying a third party.
+# FlareStore is the recommendation when the reader wants no computer *at all*
+# and accepts a third-party signing certificate; AltStore is the reference
+# client (and the only one Apple notarizes, as AltStore PAL in the EU); Feather
+# is the right answer on a jailbroken or TrollStore device, where no signing
+# limit applies.
+CLIENT_GUIDE: dict[str, dict[str, Any]] = {
+    "altstore": {
+        "recommended": False,
+        "bestFor": "The reference client, and the EU option (AltStore PAL, iOS 17.4+) that installs with no computer.",
+        "effort": "AltServer on a Mac/PC, or an EU Apple Account",
+        "refresh": "Automatic over Wi-Fi (AltServer) or on-device (PAL)",
+        "cost": "Free Apple Account (7-day re-sign) or a paid developer account (365 days)",
+    },
+    "sidestore": {
+        "recommended": True,
+        "bestFor": (
+            "Most people: free, and after one computer setup it refreshes on the phone with no computer attached."
+        ),
+        "effort": "A computer once (iloader) + LocalDevVPN kept on",
+        "refresh": "Automatic on-device through its local VPN",
+        "cost": "Free Apple Account (7-day re-sign) or a paid developer account (365 days)",
+    },
+    "flarestore": {
+        "recommended": False,
+        "bestFor": "No computer at all, or no weekly re-signing: it can sell/attach a ~1-year signing certificate.",
+        "effort": "Install the app and import a certificate",
+        "refresh": "Certificate lasts up to a year; no weekly refresh",
+        "cost": "Free with your own certificate, otherwise a paid certificate",
+    },
+    "feather": {
+        "recommended": False,
+        "bestFor": "Jailbroken or TrollStore devices, where apps are not limited by Apple's 7-day signing window.",
+        "effort": "Jailbreak, TrollStore/ERE, or your own certificate",
+        "refresh": "Depends on how the app was signed; TrollStore apps never expire",
+        "cost": "Free on TrollStore/jailbreak; otherwise your own certificate",
+    },
+    "esign": {
+        "recommended": False,
+        "bestFor": "Signing IPAs by hand with a certificate you already trust.",
+        "effort": "A certificate on the device",
+        "refresh": "Manual — re-sign before it expires",
+        "cost": "Free with your own certificate",
+    },
+    "ksign": {
+        "recommended": False,
+        "bestFor": "An ESign-style on-device signer with source import.",
+        "effort": "A certificate on the device",
+        "refresh": "Manual — re-sign before it expires",
+        "cost": "Free with your own certificate",
+    },
+    "livecontainer": {
+        "recommended": False,
+        "bestFor": "Running many apps under one signature without spending App ID slots.",
+        "effort": "Installed through AltStore/SideStore/TrollStore first",
+        "refresh": "Inherits the host client's refresh",
+        "cost": "Free (rides on the host client's signature)",
+    },
+}
+
+# Decision tree for "Which client should I use?".
+#
+# Data, not code: every question either points at another question (`next`) or
+# ends at a client (`result`), so the install center can walk it without a
+# second copy of the advice, and a test can assert every path terminates at a
+# client that actually exists. Keep ids in sync with CLIENT_PROFILES.
+RECOMMENDER: dict[str, Any] = {
+    "default": "sidestore",
+    "title": "Which client should I use?",
+    "intro": "Four questions, one recommendation. Nothing is installed by answering.",
+    "questions": [
+        {
+            "id": "device",
+            "label": "What is your device running?",
+            "options": [
+                {"id": "stock", "label": "Stock iOS, no jailbreak", "next": "computer"},
+                {"id": "trollstore", "label": "Jailbroken or TrollStore", "result": "feather"},
+            ],
+        },
+        {
+            "id": "computer",
+            "label": "Can you connect the phone to a Mac or PC once?",
+            "options": [
+                {"id": "yes", "label": "Yes", "next": "after-setup"},
+                {"id": "no", "label": "No computer at all", "next": "no-computer"},
+            ],
+        },
+        {
+            "id": "after-setup",
+            "label": "After that one-time setup, how should apps stay alive?",
+            "options": [
+                {
+                    "id": "on-device",
+                    "label": "Refresh on the phone — leave the computer out of it",
+                    "result": "sidestore",
+                },
+                {"id": "over-wifi", "label": "Refresh over Wi-Fi from the computer", "result": "altstore"},
+                {
+                    "id": "year",
+                    "label": "Don't care, as long as it lasts — no weekly re-signing",
+                    "result": "flarestore",
+                },
+            ],
+        },
+        {
+            "id": "no-computer",
+            "label": "No computer — which of these fits?",
+            "options": [
+                {"id": "eu", "label": "I'm in the EU on iOS 17.4+", "result": "altstore"},
+                {"id": "cert", "label": "I have (or will buy) a signing certificate", "result": "flarestore"},
+                {"id": "none", "label": "Neither — keep it simple", "result": "sidestore"},
+            ],
+        },
+    ],
+}
+
+
+def _prune_recommender(
+    recommender: dict[str, Any],
+    client_ids: set[str],
+) -> dict[str, Any] | None:
+    """Drop recommender branches that name a client this catalog does not carry.
+
+    The tree is written against the full client set, but ``catalog.json`` is the
+    source of truth: a catalog that lists no FlareStore must not recommend one.
+    Options whose result names an absent client are removed, questions that lose
+    every option are removed, and only questions reachable from the first
+    question survive. Returns ``None`` when nothing usable is left — the
+    document then simply omits ``recommender`` and the install center falls back
+    to the plain client grid.
+    """
+    source = [dict(question) for question in recommender.get("questions", [])]
+    root_id = str(source[0].get("id")) if source else ""
+    if not root_id:
+        return None
+
+    questions: dict[str, dict[str, Any]] = {}
+    for question in source:
+        options = []
+        for option in question.get("options", []):
+            result = str(option.get("result") or "")
+            nxt = str(option.get("next") or "")
+            if (result and result in client_ids) or (nxt and nxt in {str(q.get("id")) for q in source}):
+                options.append(dict(option))
+        questions[str(question.get("id"))] = {**question, "options": options}
+
+    # Remove questions that lost every option, then re-filter, until stable.
+    changed = True
+    while changed:
+        changed = False
+        for question_id, question in list(questions.items()):
+            kept = [
+                option for option in question["options"] if not option.get("next") or str(option["next"]) in questions
+            ]
+            if kept != question["options"]:
+                question["options"] = kept
+                changed = True
+            if not kept:
+                del questions[question_id]
+                changed = True
+
+    # Keep only what the root can reach, preserving the declared order.
+    reachable: set[str] = set()
+    pending = [root_id]
+    while pending:
+        question_id = pending.pop()
+        if question_id in reachable or question_id not in questions:
+            continue
+        reachable.add(question_id)
+        for option in questions[question_id]["options"]:
+            if option.get("next"):
+                pending.append(str(option["next"]))
+    ordered = [
+        {**questions[str(question.get("id"))], "options": questions[str(question.get("id"))]["options"]}
+        for question in source
+        if str(question.get("id")) in reachable
+    ]
+    if root_id not in reachable or not ordered:
+        return None
+
+    default = str(recommender.get("default") or "")
+    if default not in client_ids:
+        # The default pick is gone: use the first client the tree can actually
+        # recommend, so `default` is never a client the page cannot link.
+        default = ""
+        for question in ordered:
+            for option in question["options"]:
+                if option.get("result"):
+                    default = str(option["result"])
+                    break
+            if default:
+                break
+    if not default:
+        return None
+    return {**recommender, "default": default, "questions": ordered}
+
+
 def _build_url(profile: dict[str, Any], feed_url: str) -> str:
     template = profile.get("scheme") or ""
     if not template:
@@ -234,6 +448,10 @@ def build_install_doc(
         cid = str(client.get("id") or "")
         if not cid:
             continue
+        # `url` is the catalog's "get the client" homepage; install.json used to
+        # drop it, so the install center's "Get <client> ↗" link never rendered.
+        guide = dict(CLIENT_GUIDE.get(cid, {}))
+        site = str(client.get("url") or "")
         profile = CLIENT_PROFILES.get(cid)
         if profile is None:
             clients.append(
@@ -241,14 +459,24 @@ def build_install_doc(
                     "id": cid,
                     "name": str(client.get("name") or cid.title()),
                     "icon": str(client.get("icon") or ""),
+                    "url": site,
                     "deepLinkable": False,
                     "manualSetup": True,
+                    "recommended": False,
+                    "bestFor": "",
                     "instructions": f"Open {client.get('name') or cid} and add the source manually.",
                     "scheme": "",
                 }
             )
         else:
-            clients.append({**profile, "icon": str(client.get("icon") or profile.get("icon", ""))})
+            clients.append(
+                {
+                    **profile,
+                    **guide,
+                    "icon": str(client.get("icon") or profile.get("icon", "")),
+                    "url": site or str(profile.get("url") or ""),
+                }
+            )
 
     def _cards(feed_url: str) -> list[dict[str, Any]]:
         cards = []
@@ -260,7 +488,8 @@ def build_install_doc(
                     "name": client["name"],
                     "icon": client.get("icon", ""),
                     "compatible": True,
-                    "recommended": cid == "flarestore",
+                    "recommended": bool(client.get("recommended", False)),
+                    "bestFor": client.get("bestFor", ""),
                     "manualSetup": bool(client.get("manualSetup", False)),
                     "url": _build_url(client, feed_url),
                     "feedURL": feed_url,
@@ -287,7 +516,8 @@ def build_install_doc(
         "feedURL": master_feed,
         "cards": _cards(master_feed),
     }
-    return {
+    recommender = _prune_recommender(RECOMMENDER, {str(client["id"]) for client in clients})
+    document: dict[str, Any] = {
         "schemaVersion": INSTALL_SCHEMA_VERSION,
         "generatedAt": today(),
         "baseURL": base,
@@ -295,3 +525,6 @@ def build_install_doc(
         "master": master,
         "apps": apps,
     }
+    if recommender is not None:
+        document["recommender"] = recommender
+    return document

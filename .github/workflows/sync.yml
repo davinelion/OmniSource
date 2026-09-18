@@ -70,18 +70,18 @@ jobs:
       changed: ${{ steps.commit.outputs.changed }}
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 1
 
-      - uses: actions/setup-python@v6
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       # Reuse the provider HTTP response cache between runs: stdlib-only runtime,
       # metadata only (never IPA payloads). Cache writes are opaque to the build.
       - name: Cache upstream metadata
-        uses: actions/cache@v5
+        uses: actions/cache@v6
         with:
           path: .cache/omnisource
           key: omnisource-http-${{ runner.os }}
@@ -214,7 +214,7 @@ jobs:
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Upload generated feeds (debug artifact)
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: generated-feeds
           path: |
@@ -265,7 +265,7 @@ jobs:
 
       - name: Upload pipeline log (on failure)
         if: failure()
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: pipeline-log-${{ github.run_id }}
           path: ${{ runner.temp }}/omnisource-pipeline.log

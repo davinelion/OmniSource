@@ -87,7 +87,7 @@ selfheal_report, mirrors, mirror_status), `feeds/clients/*.json` (5),
 
 ### New website (`web/`)
 
-Next.js 15 + TypeScript + Tailwind v4 PWA: 11 routes (Home, Apps,
+Next.js 16 + TypeScript + Tailwind v4 PWA: 11 routes (Home, Apps,
 Sources, Collections, Categories, Trending, Search, Status, Security,
 Statistics, About) + app/source detail pages + dynamic `/api/v3/*`
 (pagination, sorting, filtering, ETag/304, cache control) + 8 lazy

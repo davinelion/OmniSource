@@ -337,11 +337,14 @@
 
      This replaces a single Promise.all over all 16 documents: every page used
      to download the whole 2.09 MB bundle and draw nothing until the slowest
-     file landed, so on a phone the catalog and every rail sat as skeletons for
-     seconds and the nav's #trending anchor pointed at a still-hidden section.
-     Now the catalog plus the four feeds behind the hero stats and the rails
-     paint first (~825 KB), the long tail streams in behind a debounced
-     re-render, and the other pages fetch only what they render. */
+     file landed, so on a phone the catalog sat as a skeleton for seconds.
+     A page now fetches only the documents it renders, and the home page — the
+     one with the most traffic — asks for five instead of ten: `trending.json`,
+     `reputation.json` and `download-intelligence.json` were only ever read by
+     the trending/recent/featured/source-health/metrics sections that the
+     minimal home page no longer carries. They are still published for API
+     consumers and still rendered on /status/ and /analytics/, which request
+     them themselves. */
   var FEEDS = [
     {
       key: 'health', path: 'feeds/health.json', firstPaint: true,
@@ -363,11 +366,6 @@
       }
     },
     {
-      key: 'trending', path: 'feeds/trending.json', firstPaint: true,
-      pages: ['home'],
-      set: function (doc) { state.trending = doc; }
-    },
-    {
       key: 'updates', path: 'feeds/updates.json', idle: true,
       pages: ['home'],
       set: function (doc) { state.updates = doc; }
@@ -384,13 +382,8 @@
     },
     {
       key: 'reputation', path: 'feeds/reputation.json',
-      pages: ['home', 'status'],
+      pages: ['status'],
       set: function (doc) { state.reputation = doc; }
-    },
-    {
-      key: 'downloadIntel', path: 'feeds/download-intelligence.json',
-      pages: ['home'],
-      set: function (doc) { state.downloadIntel = doc; }
     },
     {
       key: 'install', path: 'feeds/install.json', idle: true,
@@ -1990,7 +1983,7 @@
     if (!dialog) return;
     $('#qrTitle').textContent = title;
     $('#qrText').textContent = text;
-    $('#qrImage').src = 'https://api.qrserver.com/v1/create-qr-code/?size=460x460&margin=0&data=' + encodeURIComponent(text);
+    OS.qrInto($('#qrImage'), text, 460);
     showModal(dialog);
   }
 
@@ -2549,9 +2542,142 @@
   /* ============================================================== install */
   var Install = {
     render: function () {
+      this.renderFinder();
       this.renderClientCards();
       this.renderAppPicker();
       this.handleAutoAdd();
+    },
+
+    /* ---- "Which client should I use?" ---------------------------------- */
+    /* The decision tree lives in the feed (src/omnisource/install.py::
+       RECOMMENDER) so the advice can change without shipping new JavaScript,
+       and so the API and the page can never disagree. Only the walker is
+       here; the questions themselves are data. */
+    renderFinder: function () {
+      var panel = $('#clientFinder');
+      var body = $('#clientFinderBody');
+      if (!panel || !body) return;
+      var doc = state.install;
+      if (!doc || !doc.recommender || !Array.isArray(doc.recommender.questions)) {
+        // Feed not in yet (or offline): stay hidden rather than flashing a
+        // half-built quiz — the client cards below work without it.
+        return;
+      }
+      // Built once: a later feed landing must not reset a half-answered quiz.
+      if (panel.dataset.rendered === '1') return;
+      panel.dataset.rendered = '1';
+      panel.hidden = false;
+
+      var clients = (doc.clients || []).filter(function (c) { return c && c.id; });
+      var byId = {};
+      clients.forEach(function (c) { byId[c.id] = c; });
+      var masterCards = (doc.master && doc.master.cards) || [];
+      function cardFor(id) {
+        return masterCards.filter(function (c) { return c.client === id; })[0] || null;
+      }
+
+      var questions = {};
+      doc.recommender.questions.forEach(function (q) { questions[q.id] = q; });
+      var start = doc.recommender.questions[0] && doc.recommender.questions[0].id;
+      var trail = [];
+      var current = start;
+
+      function esc(value) { return OS.esc(String(value == null ? '' : value)); }
+
+      function iconFor(client) {
+        if (!client || !client.icon) {
+          return '<span class="iaa-dot">' + esc((client && client.name || '?').slice(0, 1)) + '</span>';
+        }
+        return '<img src="' + OS.esc(OS.url('assets/' + client.icon)) + '" alt="" width="44" height="44">';
+      }
+
+      function progress() {
+        var total = Math.max(1, trail.length + 1);
+        var out = '';
+        for (var i = 0; i < total; i += 1) {
+          out += '<i class="' + (i < trail.length ? 'is-done' : '') + '"></i>';
+        }
+        return '<div class="finder-progress" aria-hidden="true">' + out + '</div>';
+      }
+
+      function verdict(id) {
+        var client = byId[id] || {};
+        var card = cardFor(id);
+        var feed = doc.master && doc.master.feedURL ? doc.master.feedURL : '';
+        var add = card && card.url
+          ? '<a class="button primary" href="' + esc(card.url) + '">Add source in ' + esc(client.name) + '</a>'
+          : '<button class="button primary" type="button" data-copy="' + esc(feed) + '" data-copy-msg="Source URL copied — paste it in ' + esc(client.name) + '"">Copy source URL</button>';
+        var rows = [
+          ['Effort', client.effort],
+          ['Refresh', client.refresh],
+          ['Cost', client.cost]
+        ].filter(function (row) { return row[1]; }).map(function (row) {
+          return '<div><dt>' + esc(row[0]) + '</dt><dd>' + esc(row[1]) + '</dd></div>';
+        }).join('');
+        return '<div class="finder-verdict" role="status" aria-live="polite">' +
+            progress() +
+            '<div class="client-head">' + iconFor(client) +
+              '<div><span class="kicker">RECOMMENDED FOR YOU</span><h3>' + esc(client.name) + '</h3></div>' +
+            '</div>' +
+            '<p>' + esc(client.bestFor || client.description || '') + '</p>' +
+            (rows ? '<dl class="finder-meta">' + rows + '</dl>' : '') +
+            '<div class="finder-actions">' + add +
+              (client.url ? '<a class="button" href="' + esc(client.url) + '" target="_blank" rel="noopener">Get ' + esc(client.name) + ' ↗</a>' : '') +
+              '<button class="text-button" type="button" data-finder-restart>Start over</button>' +
+            '</div>' +
+          '</div>';
+      }
+
+      function question(id) {
+        var q = questions[id];
+        if (!q) { body.innerHTML = verdict(doc.recommender.default); return; }
+        var options = (q.options || []).map(function (option) {
+          return '<button class="finder-option" type="button" data-finder-option="' + esc(option.id) + '">' +
+            esc(option.label) + '</button>';
+        }).join('');
+        body.innerHTML =
+          progress() +
+          '<h3 class="finder-question">' + esc(q.label) + '</h3>' +
+          '<div class="finder-options">' + options + '</div>' +
+          (trail.length ? '<button class="finder-back" type="button" data-finder-back>← Back</button>' : '');
+      }
+
+      function draw() {
+        if (!current || !questions[current]) { body.innerHTML = verdict(doc.recommender.default); return; }
+        question(current);
+      }
+
+      function choose(optionId) {
+        var q = questions[current];
+        var option = (q && q.options || []).filter(function (o) { return o.id === optionId; })[0];
+        if (!option) return;
+        trail.push({ question: current, option: optionId });
+        if (option.result) { body.innerHTML = verdict(option.result); return; }
+        current = option.next;
+        draw();
+      }
+
+      function back() {
+        if (!trail.length) return;
+        trail.pop();
+        current = trail.length ? questions[trail[trail.length - 1].question].options
+          .filter(function (o) { return o.id === trail[trail.length - 1].option; })[0].next : start;
+        draw();
+      }
+
+      body.addEventListener('click', function (event) {
+        var target = event.target;
+        var option = target.closest && target.closest('[data-finder-option]');
+        if (option) { choose(option.getAttribute('data-finder-option')); return; }
+        if (target.closest && target.closest('[data-finder-back]')) { back(); return; }
+        if (target.closest && target.closest('[data-finder-restart]')) {
+          trail = [];
+          current = start;
+          draw();
+        }
+      });
+
+      draw();
     },
 
     /* One-tap hand-off used by README badges, QR codes and external links:
@@ -2670,6 +2796,7 @@
             '</div>' +
             (recommended ? '<span class="badge ok client-badge">Recommended</span>' : manual ? '<span class="badge warn client-badge">Manual setup</span>' : '<span class="badge cyan client-badge">Deep link</span>') +
           '</div>' +
+          (client.bestFor ? '<p class="client-bestfor">' + OS.esc(client.bestFor) + '</p>' : '') +
           (needs ? '<p class="client-needs"><b>Needs</b> ' + OS.esc(needs) + '</p>' : '') +
           '<ol class="client-steps">' + steps.map(function (step) { return '<li>' + OS.esc(step) + '</li>'; }).join('') + '</ol>' +
           (deep

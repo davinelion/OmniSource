@@ -72,6 +72,78 @@
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
 
+  /* ------------------------------------------------------------- QR codes */
+  /* QR dialogs used to point an <img> at api.qrserver.com. That is a
+     third-party request (and a transfer of the URL being shared) for every
+     visitor, it never works offline, and it fails closed whenever that service
+     is blocked. The MIT-licensed qrcode-generator build in
+     js/vendor/qrcode.min.js is fetched lazily the first time a QR is asked
+     for and rendered into a canvas data: URL locally, so the install center,
+     the app pages and the share dialog keep working with no network at all.
+     Loading is memoised: ten dialogs on one page fetch the library once, and
+     pages that never show a QR never download it. */
+  var qrLibPromise = null;
+  function loadQrLib() {
+    if (window.qrcode) return Promise.resolve(window.qrcode);
+    if (qrLibPromise) return qrLibPromise;
+    qrLibPromise = new Promise(function (resolve, reject) {
+      var tag = document.createElement('script');
+      tag.src = url('js/vendor/qrcode.min.js');
+      tag.onload = function () {
+        if (window.qrcode) resolve(window.qrcode);
+        else reject(new Error('qrcode-generator did not register'));
+      };
+      tag.onerror = function () { reject(new Error('qrcode-generator failed to load')); };
+      document.head.appendChild(tag);
+    });
+    return qrLibPromise;
+  }
+
+  function renderQr(lib, text, size) {
+    var target = Math.max(160, parseInt(size, 10) || 460);
+    var qr = lib(0, 'M');
+    qr.addData(String(text), 'Byte');
+    qr.make();
+    var modules = qr.getModuleCount();
+    var margin = 4; /* quiet zone, in modules — required by the spec */
+    var cell = Math.max(2, Math.floor(target / (modules + margin * 2)));
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext ? canvas.getContext('2d') : null;
+    /* No canvas (older engines, jsdom): the library's own GIF encoder still
+       yields a valid data: URL, just a heavier one. */
+    if (!ctx) return qr.createDataURL(cell, margin);
+    var side = modules * cell + margin * cell * 2;
+    canvas.width = side;
+    canvas.height = side;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, side, side);
+    ctx.translate(margin * cell, margin * cell);
+    qr.renderTo2dContext(ctx, cell);
+    try {
+      return canvas.toDataURL('image/png');
+    } catch (e) {
+      return qr.createDataURL(cell, margin);
+    }
+  }
+
+  /* Resolve to a data: URL for `text`, or '' when the library cannot be
+     loaded — callers treat that as "no preview", never as a fatal error. */
+  function qrImage(text, size) {
+    if (!text) return Promise.resolve('');
+    return loadQrLib()
+      .then(function (lib) { return renderQr(lib, text, size); })
+      .catch(function () { return ''; });
+  }
+
+  /* Same, but writes the result straight into an <img>. */
+  function qrInto(image, text, size) {
+    if (!image) return Promise.resolve('');
+    return qrImage(text, size).then(function (dataUrl) {
+      if (dataUrl) image.src = dataUrl;
+      return dataUrl;
+    });
+  }
+
   /* Per-page JSON memo. Several modules ask for the same document (site.js,
      the src/js data layer, per-page widgets); before this, /compare/ fetched
      11 feeds twice — 34 requests and 3.4 MB for one page. In-flight requests
@@ -87,6 +159,8 @@
     url: url,
     asset: asset,
     icon: icon,
+    qrImage: qrImage,
+    qrInto: qrInto,
     $: $,
     $$: $$,
     animateCount: animateCount,
@@ -924,10 +998,7 @@
     });
     button.addEventListener('click', function () {
       var img = $('#qrImage');
-      if (img) {
-        img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=460x460&margin=0&data=' +
-          encodeURIComponent(button.dataset.qrFeed);
-      }
+      if (img) OS.qrInto(img, button.dataset.qrFeed, 460);
       if (!dialog.open) dialog.showModal();
     });
   }
@@ -1473,118 +1544,13 @@
     });
   }
 
-  function setupTapButtons() {
-    // Inject bottom nav + FABs on any page that doesn't have them (collections, sources, etc.)
-    function ensureTapUI() {
-      if (!document.querySelector('.bottom-nav')) {
-        var nav = document.createElement('nav');
-        nav.className = 'bottom-nav';
-        nav.setAttribute('aria-label', 'Quick tap navigation');
-        var root = (typeof ROOT !== 'undefined' ? ROOT : '') || '';
-        // Use OS.url for proper base path handling if available
-        function u(path) {
-          try { return (window.OS && OS.url ? OS.url(path) : path); } catch(e) { return path; }
-        }
-        nav.innerHTML =
-          '<a href="' + (window.OS ? OS.url('#top') : '#top') + '" class="bn-item" data-bn="home" aria-label="Home">' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-5H9v5H4a1 1 0 0 1-1-1v-9.5Z"/></svg><span>Home</span></a>' +
-          '<a href="' + u('#catalog') + '" class="bn-item" data-bn="apps" aria-label="All apps">' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg><span>Apps</span></a>' +
-          '<button class="bn-item bn-primary" type="button" data-open-palette aria-label="Search apps">' +
-            '<span class="bn-primary-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4"/></svg></span><span>Search</span></button>' +
-          '<a href="' + u('collections/') + '" class="bn-item" data-bn="collections" aria-label="Collections">' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5L21 12"/><path d="m3 16.5 9 4.5 9-4.5"/></svg><span>Stacks</span></a>' +
-          '<a href="' + u('install/') + '" class="bn-item" data-bn="install" aria-label="Install guide">' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg><span>Install</span></a>';
-        document.body.appendChild(nav);
-      }
-      if (!document.getElementById('fabTop')) {
-        var stack = document.createElement('div');
-        stack.className = 'fab-stack';
-        stack.setAttribute('aria-label', 'Quick actions');
-        stack.innerHTML =
-          '<button class="fab" id="fabTop" type="button" aria-label="Back to top" title="Back to top">' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 5 12l1.4 1.4L11 9v10h2V9l4.6 4.4L19 12 12 5Z"/></svg></button>' +
-          '<button class="fab fab-primary" id="fabBrowse" type="button" aria-label="Browse all apps" title="Browse apps">' +
-            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="8" cy="18" r="1.6" fill="currentColor"/></svg></button>';
-        document.body.appendChild(stack);
-      }
-    }
-    try { ensureTapUI(); } catch(e) {}
-    var fabTop = document.getElementById('fabTop');
-    var fabBrowse = document.getElementById('fabBrowse');
-    var bottomNav = document.querySelector('.bottom-nav');
-    var ticking = false;
-
-    function updateFabs() {
-      ticking = false;
-      var y = window.scrollY || window.pageYOffset || 0;
-      var showTop = y > 400;
-      var showBrowse = y > 200;
-      if (fabTop) fabTop.classList.toggle('is-visible', showTop);
-      if (fabBrowse) fabBrowse.classList.toggle('is-visible', showBrowse);
-      // Bottom nav active state based on scroll
-      if (bottomNav) {
-        var items = bottomNav.querySelectorAll('.bn-item[data-bn]');
-        var catalog = document.getElementById('catalog');
-        var homeActive = true;
-        if (catalog) {
-          var rect = catalog.getBoundingClientRect();
-          if (rect.top < window.innerHeight * 0.5) homeActive = false;
-        }
-        items.forEach(function (it) {
-          var active = false;
-          if (it.dataset.bn === 'home') active = homeActive;
-          if (it.dataset.bn === 'apps') active = !homeActive;
-          it.classList.toggle('is-active', active);
-          if (active) it.setAttribute('aria-current', 'page');
-          else it.removeAttribute('aria-current');
-        });
-      }
-    }
-
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(updateFabs);
-      }
-    }, { passive: true });
-
-    if (fabTop) {
-      fabTop.addEventListener('click', function () {
-        try {
-          if (OS.reducedMotion) window.scrollTo(0, 0);
-          else window.scrollTo({ top: 0, behavior: 'smooth' });
-        } catch (e) { window.scrollTo(0, 0); }
-      });
-    }
-    if (fabBrowse) {
-      fabBrowse.addEventListener('click', function () {
-        var catalog = document.getElementById('catalog');
-        if (catalog) {
-          try {
-            catalog.scrollIntoView({ behavior: OS.reducedMotion ? 'auto' : 'smooth', block: 'start' });
-          } catch (e) { catalog.scrollIntoView(); }
-        } else {
-          // On other pages, go to home catalog
-          try {
-            var target = (window.OS && OS.url ? OS.url('#catalog') : '/#catalog');
-            // If already on home, use hash; else navigate
-            if (document.body && document.body.dataset.page === 'home') {
-              location.hash = 'catalog';
-            } else {
-              location.href = target;
-            }
-          } catch (e) {
-            // Root-relative, so the fallback still lands on the catalog when
-            // the site is served from a sub-path (GitHub Pages project sites).
-            location.href = url('/#catalog');
-          }
-        }
-      });
-    }
-    updateFabs();
-  }
+  /* The floating mobile tap bar (`.bottom-nav`) and the FAB stack used to be
+     injected on every page that lacked them. Both are gone: they sat on top of
+     the last catalog row and the footer on a phone, and the page had to carry
+     a 90px bottom padding to compensate, which made the real bottom of the
+     page unreachable-looking. The sticky header, the sticky section tabs and
+     the injected back-to-top bead (setupScrollAffordances) cover the same
+     ground without covering content. */
 
   function setupDeferredAnchors() {
     var pending = null;
@@ -2031,7 +1997,6 @@
     setupNavFit();
     setupInstallPrompt();
     setupTopAnchorFix();
-    setupTapButtons();
     setupDeferredAnchors();
     setupScrollAffordances();
     setupScrollHints();

@@ -52,11 +52,15 @@ export default function LanguageSwitcher({ lang, label }: { lang: Locale; label:
   const selectRef = useRef<HTMLSelectElement>(null);
 
   // The server is the source of truth: if a render arrives with another locale
-  // (a link, a back/forward, another tab), the control follows it.
-  useEffect(() => {
+  // (a link, a back/forward, another tab), the control follows it. Adjusting
+  // during render is React's documented pattern for deriving state from a
+  // prop, and it does not cost the extra render pass an effect would.
+  const [renderedLang, setRenderedLang] = useState(lang);
+  if (renderedLang !== lang) {
+    setRenderedLang(lang);
     setValue(lang);
     setFailed(false);
-  }, [lang]);
+  }
 
   function change(next: Locale) {
     if (next === value) return;

@@ -88,7 +88,14 @@
 // and became an opt-in Update / Later toast in js/core.js. tokens.css,
 // components.css, core.js, index.html and the generated app/source pages all
 // changed, so the shell version has to move with them.
-const VERSION = 'omnisource-v16';
+/* v17: the mobile tap bar and FAB stack were removed, the home page was
+   slimmed to hero + catalog + release feed, and the design tokens that carry
+   small-text contrast changed — all three live in precached CSS/JS, so the
+   cache has to roll.
+   v18: QR codes are generated on-device from js/vendor/qrcode.min.js instead
+   of being fetched from api.qrserver.com, so the vendor file joins the
+   precache and every client drops the old shell. */
+const VERSION = 'omnisource-v18';
 const CORE_CACHE = `${VERSION}-core`;
 const DATA_CACHE = `${VERSION}-data`;
 const ASSET_CACHE = `${VERSION}-assets`;
@@ -134,6 +141,7 @@ const CORE_ASSETS = [
   './src/js/recommendation-engine.js',
   './src/js/trust-score.js',
   './src/js/router.js',
+  './js/vendor/qrcode.min.js',
   './js/core.js',
   './js/site.js',
   './js/features.js',

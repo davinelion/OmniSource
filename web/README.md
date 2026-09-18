@@ -1,6 +1,6 @@
 # OmniSource Web
 
-Next.js 15, TypeScript, Tailwind, and an installable PWA for the validated
+Next.js 16, TypeScript, Tailwind, and an installable PWA for the validated
 OmniSource catalog. The root static site remains the GitHub Pages compatibility
 path. This application is source-first: it provides catalog browsing, source
 health, release/security evidence, operational statistics, and install links.

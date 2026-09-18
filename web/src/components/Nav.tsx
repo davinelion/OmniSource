@@ -63,12 +63,23 @@ export default function Nav({ dict, lang }: { dict: Dictionary; lang: Locale }) 
     setOpen(true);
   }, []);
 
-  // Navigating (including a back/forward gesture) always closes the drawer, and
-  // the lock can never outlive the route it was opened on.
-  useEffect(() => {
+  // Navigating (including a back/forward gesture) always closes the drawer.
+  // Adjusting during render is React's documented pattern for deriving state
+  // from a prop; the effect below releases the lock, which is a DOM side
+  // effect and stays where side effects belong.
+  const [renderedPath, setRenderedPath] = useState(pathname);
+  if (renderedPath !== pathname) {
+    setRenderedPath(pathname);
     setOpen(false);
-    unlockBody(0);
-  }, [pathname]);
+  }
+
+  // The lock can never outlive the route it was opened on: whenever the drawer
+  // is closed (by navigation, Escape, a backdrop click or the close button),
+  // the body goes back into flow. `close()` restores the offset itself; here
+  // the page is new, so it starts at the top.
+  useEffect(() => {
+    if (!open) unlockBody(0);
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
