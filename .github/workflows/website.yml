@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
 # Modern website (Next.js) — typecheck, lint, build.
 #
-# Builds web/ (Next.js 15 + TypeScript + Tailwind PWA) on every change.
+# Builds web/ (Next.js 16 + TypeScript + Tailwind PWA) on every change.
 # The static zero-dependency site at the repository root keeps deploying
 # through sync.yml; this workflow verifies the modern app and uploads the
 # production build as an artifact. Promotion to hosting (Vercel /
@@ -40,11 +40,11 @@ jobs:
     timeout-minutes: 15
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
 
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: "22"
           cache: npm
@@ -75,7 +75,7 @@ jobs:
           npm run build
 
       - name: Upload production build
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: website-build
           path: web/.next
