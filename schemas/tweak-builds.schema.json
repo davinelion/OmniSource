@@ -1,9 +1,29 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "OmniSource Tweak Factory registry",
-  "description": "Curated registry of .deb tweaks the factory may collect, inject into an operator-supplied decrypted base app, and publish as provenance-tagged releases. Hand-reviewed like catalog.json: the pipeline never writes this file. Structural enforcement lives in scripts/tweak_factory.py (the runtime is stdlib-only, so no JSON Schema validator is loaded); this document is the human-readable contract the validator mirrors.",
+  "description": "Curated registry of .deb tweaks the factory may collect from their own official upstream (GitHub releases or their own apt repository), inject into an operator-supplied decrypted base app, and publish as provenance-tagged releases. Hand-reviewed like catalog.json: the pipeline never writes this file. Structural enforcement lives in scripts/tweak_factory.py (the runtime is stdlib-only, so no JSON Schema validator is loaded); this document is the human-readable contract the validator mirrors.",
   "type": "object",
   "required": ["version", "baseApps", "builds"],
+  "definitions": {
+    "member": {
+      "type": "object",
+      "description": "One tweak to collect from its own official upstream. github-release reads the project's release assets; apt-repository reads the developer's own Packages index and takes the SHA-256 published there. Two rules come with the apt lane: the resolved .deb must stay on the index's own host, and the index digest is verified by the build before injection.",
+      "required": ["source"],
+      "properties": {
+        "label": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,31}$", "description": "Bundle member name, unique within a build; what warnings and release notes refer to." },
+        "source": { "enum": ["github-release", "apt-repository"] },
+        "repo": { "type": "string", "description": "owner/name for github-release; repository base URL for apt-repository (mutually exclusive with indexUrl)" },
+        "assetRegex": { "type": "string" },
+        "archPreference": { "type": "array", "items": { "enum": ["arm64", "arm64e", "arm"] } },
+        "pinVersion": { "type": "string", "description": "Accept only this version (release tag / index Version field)" },
+        "packageId": { "type": "string", "pattern": "^[a-z0-9][a-z0-9+-]*(\\.[a-z0-9][a-z0-9+-]*)+$", "description": "The deb's Package field; required on the github-release lane to take part in conflictGroups" },
+        "indexUrl": { "type": "string", "pattern": "^https://[^\\s]+/Packages(\\.(gz|bz2|xz|lzma|lz4))?$", "description": "Flat Cydia layout: the index file to read" },
+        "suite": { "type": "string", "description": "dists/<suite> layout: the suite" },
+        "component": { "type": "string", "description": "dists/<suite> layout: the component (optional)" },
+        "package": { "type": "string", "pattern": "^[a-z0-9][a-z0-9+-]*(\\.[a-z0-9][a-z0-9+-]*)+$", "description": "The Package field to look up in the index" }
+      }
+    }
+  },
   "properties": {
     "version": { "const": 1 },
     "$schema": { "type": "string" },
@@ -39,27 +59,37 @@
         ]
       }
     },
-    "builds": {
+    "conflictGroups": {
       "type": "array",
+      "description": "Package ids that must never be injected into the same build. The plan resolves each bundle member and skips the build (with the reason in the run summary) when two members share a group.",
       "items": {
         "type": "object",
-        "required": ["slug", "name", "deb", "base"],
+        "required": ["name", "packages", "reason"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "packages": { "type": "array", "minItems": 2, "items": { "type": "string", "pattern": "^[a-z0-9][a-z0-9+-]*(\\.[a-z0-9][a-z0-9+-]*)+$" } },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "builds": {
+      "type": "array",
+      "description": "One injection lane per entry: a base app plus either deb (one tweak) or debs (a bundle). A bundle's release tag and state digest are derived from the sorted label|version|url of its members, so any member moving rebuilds it exactly once.",
+      "items": {
+        "type": "object",
+        "required": ["slug", "name", "base"],
+        "oneOf": [
+          { "required": ["deb"], "not": { "required": ["debs"] } },
+          { "required": ["debs"], "not": { "required": ["deb"] } }
+        ],
         "properties": {
           "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
           "name": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._+-]*$" },
           "enabled": { "type": "boolean", "default": true },
-          "catalogApp": { "type": "string" },
-          "deb": {
-            "type": "object",
-            "description": "Where the official tweak .deb is collected from. v1 supports GitHub releases; apt repositories are a documented follow-up.",
-            "required": ["source", "repo", "assetRegex"],
-            "properties": {
-              "source": { "const": "github-release" },
-              "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
-              "assetRegex": { "type": "string" },
-              "archPreference": { "type": "array", "items": { "enum": ["arm64", "arm64e", "arm"] } }
-            }
-          },
+          "catalogApp": { "type": "string", "description": "The catalog.json app this build may serve. Empty means operator-only: built, published under the reserved tag namespace and recorded, but never reachable from a feed." },
+          "note": { "type": "string", "description": "Why this entry exists and how it was curated. Operator-facing; never rendered to a client." },
+          "deb": { "$ref": "#/definitions/member", "description": "One tweak to collect and inject." },
+          "debs": { "type": "array", "minItems": 1, "maxItems": 8, "items": { "$ref": "#/definitions/member" }, "description": "A bundle: several tweaks injected into one base app in one build. Register deb XOR debs." },
           "base": { "type": "string", "description": "Key into baseApps." },
           "bundleId": { "type": "string" },
           "appName": { "type": "string" },

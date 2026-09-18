@@ -31,6 +31,7 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 import tweak_factory
+from omnisource.apt_index import Relation
 from omnisource.source_policy import Decision
 
 
@@ -86,8 +87,28 @@ class RegistryValidationTests(unittest.TestCase):
         catalog_slugs = {app["slug"] for app in catalog["apps"]}
         for build in registry.builds:
             with self.subTest(slug=build.slug):
-                self.assertIn(build.slug, catalog_slugs, f"{build.slug} must be a catalog app")
+                # An empty catalogApp is the operator-only lane: a build that
+                # never reaches a feed must not pretend to be a catalog app.
+                if build.catalog_app:
+                    self.assertIn(build.catalog_app, catalog_slugs, f"{build.slug}: catalogApp must be a catalog app")
                 self.assertIn(build.base_app, registry.base_apps, f"{build.slug}: base app must exist in baseApps")
+        self.assertTrue(any(build.is_bundle for build in registry.builds), "no bundle lane is registered")
+        self.assertTrue(registry.conflict_groups, "a bundle without conflictGroups could mix mutually exclusive tweaks")
+
+    def test_the_shipped_bundle_is_all_upstream_and_never_promoted(self) -> None:
+        # Both properties are policy statements, so they are asserted rather
+        # than documented and hoped for: a bundle may only collect from a
+        # registered official upstream, and it may not be promoted into a feed.
+        registry = tweak_factory.load_registry()
+        bundles = [build for build in registry.builds if build.is_bundle]
+        self.assertTrue(bundles, "the shipped registry curates no bundle")
+        for build in bundles:
+            with self.subTest(slug=build.slug):
+                self.assertEqual(build.catalog_app, "", "a bundle may not be promoted into a feed")
+                self.assertGreaterEqual(len(build.members), 2)
+                for spec in build.members:
+                    self.assertIn(spec.source, tweak_factory.DEB_SOURCES)
+                    self.assertTrue(spec.repo or spec.index_url)
 
     def test_invalid_registries_are_rejected(self) -> None:
         def with_slug(slug: object) -> dict[str, object]:
@@ -109,6 +130,103 @@ class RegistryValidationTests(unittest.TestCase):
         bad_regex = _registry_payload()
         bad_regex["builds"][0]["deb"]["assetRegex"] = "("  # type: ignore[index]
         cases["bad regex"] = bad_regex
+        for label, payload in cases.items():
+            with self.subTest(case=label), self.assertRaises(tweak_factory.FactoryError):
+                _registry(payload)
+
+    def test_a_build_registers_either_one_deb_or_a_bundle(self) -> None:
+        both = _registry_payload()
+        both["builds"][0]["debs"] = [both["builds"][0]["deb"]]
+        neither = _registry_payload()
+        neither["builds"][0].pop("deb")
+        empty = _registry_payload()
+        empty["builds"][0]["deb"] = None
+        empty["builds"][0]["debs"] = []
+        for label, payload in (("both", both), ("neither", neither), ("empty list", empty)):
+            with self.subTest(case=label), self.assertRaises(tweak_factory.FactoryError):
+                _registry(payload)
+
+    def test_bundle_members_are_shape_checked(self) -> None:
+        def member(**overrides) -> dict:
+            base = {
+                "label": "youmod",
+                "source": "github-release",
+                "repo": "Tonwalter888/YouMod",
+                "assetRegex": "^dev\\.water888\\.youmod_.+\\.deb$",
+            }
+            base.update(overrides)
+            return base
+
+        def with_members(members: list[dict]) -> dict:
+            payload = _registry_payload()
+            payload["builds"][0].pop("deb")
+            payload["builds"][0]["debs"] = members
+            return payload
+
+        single = with_members([member()])
+        _registry(single)  # a one-member bundle is legal, just pointless
+        cases = {
+            "duplicate labels": with_members([member(), member()]),
+            "nine members": with_members([member(label=f"t{i}") for i in range(9)]),
+            "apt member without a package": with_members(
+                [
+                    member(label="a"),
+                    {"label": "b", "source": "apt-repository", "indexUrl": "https://r.example/Packages"},
+                ]
+            ),
+            "apt index that is not a Packages file": with_members(
+                [
+                    member(label="a"),
+                    {
+                        "label": "b",
+                        "source": "apt-repository",
+                        "indexUrl": "https://r.example/html/index.html",
+                        "package": "com.b",
+                    },
+                ]
+            ),
+            "apt member with both layouts": with_members(
+                [
+                    member(label="a"),
+                    {
+                        "label": "b",
+                        "source": "apt-repository",
+                        "indexUrl": "https://r.example/Packages",
+                        "repo": "https://r.example",
+                        "suite": "stable",
+                        "package": "com.b",
+                    },
+                ]
+            ),
+            "unknown deb source": with_members([member(source="telegram-bot")]),
+            "bad package id": with_members([member(packageId="Not_An_Id")]),
+            "unpromotable catalog app": {
+                **single,
+                "builds": [{**single["builds"][0], "catalogApp": "nope-not-here"}],
+            },
+        }
+        for label, payload in cases.items():
+            with self.subTest(case=label), self.assertRaises(tweak_factory.FactoryError):
+                _registry(payload)
+
+    def test_conflict_groups_are_shape_checked(self) -> None:
+        group = {"name": "primary-enhancer", "packages": ["com.a.one", "com.b.two"], "reason": "same settings host"}
+
+        def with_groups(groups: object) -> dict:
+            payload = _registry_payload()
+            payload["conflictGroups"] = groups
+            return payload
+
+        ok = _registry(with_groups([group]))
+        self.assertEqual(len(ok.conflict_groups), 1)
+        self.assertEqual(ok.conflict_groups[0].packages, ("com.a.one", "com.b.two"))
+        cases = {
+            "one package": with_groups([{**group, "packages": ["com.a.one"]}]),
+            "no reason": with_groups([{key: value for key, value in group.items() if key != "reason"}]),
+            "duplicate name": with_groups([group, dict(group)]),
+            "bad package id": with_groups([{**group, "packages": ["com.a.one", "not an id"]}]),
+            "not an array": with_groups("nope"),
+        }
         for label, payload in cases.items():
             with self.subTest(case=label), self.assertRaises(tweak_factory.FactoryError):
                 _registry(payload)
@@ -271,6 +389,276 @@ class PlanTests(unittest.TestCase):
         self.assertIn("tweak-build/ytlite/v5.2.2", text)
 
 
+def _bundle_payload(**overrides: object) -> dict[str, object]:
+    """A two-member bundle: one GitHub-release tweak and one apt-only tweak."""
+    payload = {
+        "version": 1,
+        "baseApps": {"youtube": _base_release_cfg()},
+        "builds": [
+            {
+                "slug": "open-bundle",
+                "name": "Open Bundle",
+                "enabled": True,
+                "catalogApp": "",
+                "base": "youtube",
+                "debs": [
+                    {
+                        "label": "youmod",
+                        "source": "github-release",
+                        "repo": "Tonwalter888/YouMod",
+                        "packageId": "dev.water888.youmod",
+                        "assetRegex": "^dev\\.water888\\.youmod_.+\\.deb$",
+                    },
+                    {
+                        "label": "youpip",
+                        "source": "apt-repository",
+                        "indexUrl": "https://poomsmart.github.io/repo/Packages",
+                        "package": "com.ps.youpip",
+                    },
+                ],
+            }
+        ],
+    }
+    payload.update(overrides)  # type: ignore[arg-type]
+    return payload
+
+
+_VERSIONS = {"youmod": "2.0.0", "youpip": "1.12.14", "overlay": "2.3.8"}
+
+
+def _bundle_members(build: object, spec: object, **_kwargs: object) -> tweak_factory.Resolved:
+    versions = _VERSIONS
+    depends = () if spec.label == "youmod" else ("com.ps.ytvideooverlay",)
+    return tweak_factory.Resolved(
+        version=versions[spec.label],
+        url=f"https://upstream.example/{spec.label}.deb",
+        name=f"{spec.label}.deb",
+        architecture="iphoneos-arm64",
+        sha256="a" * 64 if spec.source == "apt-repository" else "",
+        depends=depends,
+        package_id=spec.package_id or spec.package,
+    )
+
+
+class BundlePlanTests(unittest.TestCase):
+    """A bundle is one build over N tweaks: identity, conflicts and advisories."""
+
+    def _plan(self, registry: tweak_factory.Registry, state: dict | None = None, **patches: object):
+        getters = {
+            "resolve_member": _bundle_members,
+            "resolve_base": lambda *a, **k: tweak_factory.Resolved(
+                version="youtube-21.36.6", url="https://me.example/base.ipa", tag="youtube-21.36.6"
+            ),
+            "release_exists": lambda *a, **k: False,
+            "decide": lambda *a, **k: Decision(False, "", "", ""),
+        }
+        getters.update(patches)  # type: ignore[arg-type]
+        with mock.patch.multiple(
+            tweak_factory,
+            **{
+                name: (mock.MagicMock(side_effect=value) if callable(value) else mock.MagicMock(return_value=value))
+                for name, value in getters.items()
+            },
+        ):
+            return tweak_factory.plan_builds(registry, state or {}, token=None)  # type: ignore[arg-type]
+
+    def test_a_bundle_hashes_its_members_into_one_release_tag(self) -> None:
+        result = self._plan(_registry(_bundle_payload()))
+        self.assertEqual(result["skipped"], [])
+        entry = result["include"][0]
+        self.assertEqual(entry["is_bundle"], "true")
+        self.assertEqual(entry["member_count"], "2")
+        self.assertRegex(entry["tag"], r"^tweak-build/open-bundle/v21\.36\.6-[0-9a-f]{8}$")
+        self.assertRegex(entry["asset_name"], r"^OpenBundle-21\.36\.6-[0-9a-f]{8}\.ipa$")
+        members = json.loads(entry["deb_entries"])
+        self.assertEqual([member["label"] for member in members], ["youmod", "youpip"])
+        self.assertEqual(members[1]["sha256"], "a" * 64)
+        # The base app's version is part of the identity: a new dump rebuilds.
+        self.assertEqual(entry["deb_version"].rsplit("-", 1)[0], "21.36.6")
+
+    def test_the_tag_is_stable_and_moves_when_any_member_moves(self) -> None:
+        registry = _registry(_bundle_payload())
+        first = self._plan(registry)["include"][0]["tag"]
+        second = self._plan(registry)["include"][0]["tag"]
+        self.assertEqual(first, second)
+
+        def bumped(build: object, spec: object, **kwargs: object) -> tweak_factory.Resolved:
+            resolved = _bundle_members(build, spec, **kwargs)
+            if spec.label == "youpip":
+                resolved = tweak_factory.Resolved(**{**resolved.__dict__, "version": "1.12.15"})
+            return resolved
+
+        moved = self._plan(registry, resolve_member=bumped)["include"][0]["tag"]
+        self.assertNotEqual(first, moved)
+
+    def test_an_unchanged_published_bundle_is_skipped(self) -> None:
+        registry = _registry(_bundle_payload())
+        entry = self._plan(registry)["include"][0]
+        state = {
+            "builds": {
+                "open-bundle": {
+                    "tweakVersion": entry["deb_version"],
+                    "debSha256": entry["bundle_sha256"],
+                    "baseVersion": "youtube-21.36.6",
+                    "baseURL": "https://me.example/base.ipa",
+                }
+            }
+        }
+        result = self._plan(registry, state, release_exists=lambda *a, **k: True)
+        self.assertEqual(result["include"], [])
+        self.assertEqual(len(result["uptodate"]), 1)
+        # A recorded build whose members differ is stale even at the same base.
+        stale = {
+            "builds": {
+                "open-bundle": {
+                    "tweakVersion": "21.36.6-deadbeef",
+                    "debSha256": "d" * 64,
+                    "baseVersion": "youtube-21.36.6",
+                    "baseURL": "https://me.example/base.ipa",
+                }
+            }
+        }
+        self.assertEqual(len(self._plan(registry, stale)["include"]), 1)
+
+    def test_members_that_conflict_are_never_built(self) -> None:
+        registry = _registry(
+            _bundle_payload(
+                conflictGroups=[
+                    {
+                        "name": "primary-enhancer",
+                        "packages": ["dev.water888.youmod", "com.ps.youpip"],
+                        "reason": "both patch the player controls",
+                    }
+                ]
+            )
+        )
+        result = self._plan(registry)
+        self.assertEqual(result["include"], [])
+        reason = result["skipped"][0]["reason"]
+        self.assertIn("mixes conflicting tweaks", reason)
+        self.assertIn("both patch the player controls", reason)
+
+    def test_a_blocked_member_url_skips_the_whole_bundle(self) -> None:
+        def decide(url: str = "", **_kwargs: object) -> Decision:
+            return (
+                Decision(True, "cracked-package-repository", "cracked repo", "host evil.example")
+                if "youpip" in url
+                else Decision(False)
+            )
+
+        result = self._plan(_registry(_bundle_payload()), decide=decide)
+        self.assertEqual(result["include"], [])
+        self.assertIn("cracked-package-repository", result["skipped"][0]["reason"])
+
+    def test_a_missing_dependency_is_reported_as_a_warning(self) -> None:
+        result = self._plan(_registry(_bundle_payload()))
+        self.assertTrue(result["warnings"])
+        self.assertIn("com.ps.ytvideooverlay", result["warnings"][0]["reason"])
+        text = tweak_factory.summary_markdown(result)
+        self.assertIn("### Warnings", text)
+        self.assertIn("bundle x2", text)
+
+        # Adding the library as a member satisfies the dependency, and the plan
+        # still builds: warnings never block, they inform.
+        payload = _bundle_payload()
+        payload["builds"][0]["debs"].append(  # type: ignore[index]
+            {
+                "label": "overlay",
+                "source": "apt-repository",
+                "indexUrl": "https://poomsmart.github.io/repo/Packages",
+                "package": "com.ps.ytvideooverlay",
+            }
+        )
+        widened = self._plan(_registry(payload))
+        self.assertEqual(len(json.loads(widened["include"][0]["deb_entries"])), 3)
+        self.assertEqual(widened["warnings"], [])
+
+    def test_a_slice_mismatch_between_members_is_advisory(self) -> None:
+        # Architecture is what the repository claims, not what the binary
+        # contains, so this warns instead of refusing to build.
+        def skewed(build: object, spec: object, **kwargs: object) -> tweak_factory.Resolved:
+            resolved = _bundle_members(build, spec, **kwargs)
+            if spec.label == "youpip":
+                return tweak_factory.Resolved(**{**resolved.__dict__, "architecture": "iphoneos-arm"})
+            return resolved
+
+        result = self._plan(_registry(_bundle_payload()), resolve_member=skewed)
+        self.assertEqual(len(result["include"]), 1, "an advisory must not stop a build")
+        self.assertIn("different Architecture", result["warnings"][0]["reason"])
+
+    def test_all_members_sharing_a_slice_is_silent(self) -> None:
+        result = self._plan(_registry(_bundle_payload()))
+        self.assertFalse([note for note in (result["warnings"] or []) if "Architecture" in note["reason"]])
+
+
+class AptMemberResolutionTests(unittest.TestCase):
+    def test_an_apt_index_entry_reaches_the_resolution(self) -> None:
+        from omnisource.apt_index import DebFile
+
+        registry = _registry(_bundle_payload())
+        spec = registry.builds[0].members[1]
+        deb = DebFile(
+            package="com.ps.youpip",
+            version="1.12.14",
+            architecture="iphoneos-arm64",
+            url="https://poomsmart.github.io/repo/debs/youtube/youpip/com.ps.youpip_1.12.14_iphoneos-arm64.deb",
+            name="com.ps.youpip_1.12.14_iphoneos-arm64.deb",
+            sha256="b" * 64,
+            size=25552,
+            depends=(Relation(names=("com.ps.ytvideooverlay",), constraint=">= 2.0.0"),),
+        )
+        with mock.patch.object(tweak_factory, "resolve_apt_deb", return_value=deb) as resolver:
+            resolved = tweak_factory.resolve_member(registry.builds[0], spec, token=None)
+        kwargs = resolver.call_args.kwargs
+        self.assertEqual(kwargs["package"], "com.ps.youpip")
+        self.assertEqual(kwargs["index_url"], "https://poomsmart.github.io/repo/Packages")
+        self.assertEqual(kwargs["architectures"], ("iphoneos-arm64", "iphoneos-arm64e", "iphoneos-arm"))
+        self.assertEqual(resolved.sha256, "b" * 64)
+        self.assertEqual(resolved.package_id, "com.ps.youpip")
+        self.assertEqual(resolved.depends, ("com.ps.ytvideooverlay",))
+        self.assertEqual(resolved.architecture, "iphoneos-arm64")
+
+    def test_an_unreadable_index_is_a_skip_with_the_upstream_message(self) -> None:
+        from omnisource.apt_index import AptIndexError
+
+        registry = _registry(_bundle_payload())
+        spec = registry.builds[0].members[1]
+        with (
+            mock.patch.object(
+                tweak_factory,
+                "resolve_apt_deb",
+                side_effect=AptIndexError("no readable Packages index at: https://x/Packages"),
+            ),
+            self.assertRaises(tweak_factory.FactoryError) as caught,
+        ):
+            tweak_factory.resolve_member(registry.builds[0], spec, token=None)
+        self.assertIn("no readable Packages index", str(caught.exception))
+
+    def test_a_pinned_release_tag_narrows_the_candidates(self) -> None:
+        payload = _registry_payload()
+        payload["builds"][0]["deb"]["pinVersion"] = "v5.2.2"  # type: ignore[index]
+        registry = _registry(payload)
+        spec = registry.builds[0].members[0]
+        releases = [
+            _release("v5.3.0", ["com.dvntm.ytlite_5.3.0_iphoneos-arm64.deb"]),
+            _release("v5.2.2", ["com.dvntm.ytlite_5.2.2_iphoneos-arm64.deb"]),
+        ]
+        with mock.patch.object(tweak_factory, "_get_json", return_value=releases):
+            resolved = tweak_factory.resolve_member(registry.builds[0], spec, token=None)
+        self.assertEqual(resolved.version, "v5.2.2")
+        unresolved = _registry(
+            {
+                **payload,
+                "builds": [{**payload["builds"][0], "deb": {**payload["builds"][0]["deb"], "pinVersion": "v9.9.9"}}],
+            }  # type: ignore[index]
+        )
+        with (
+            mock.patch.object(tweak_factory, "_get_json", return_value=releases),
+            self.assertRaises(tweak_factory.FactoryError),
+        ):
+            tweak_factory.resolve_deb(unresolved.builds[0], token=None)
+
+
 def _on(doc: dict) -> dict:
     """GitHub reads ``on:`` as the trigger map; PyYAML pre-1.2 reads ``True``."""
     return doc["on"] if isinstance(doc.get("on"), dict) else doc[True]
@@ -328,6 +716,143 @@ class PublishAndMergeTests(unittest.TestCase):
             with self.assertRaises(tweak_factory.FactoryError):
                 tweak_factory.publish_fragment(self._args(ipa=str(ipa), slug="unknown"))  # type: ignore[arg-type]
 
+    def _bundle_args(self, tmp: str, *, members: list[dict], **overrides: object) -> object:
+        import argparse
+
+        registry = _registry(_bundle_payload())
+        build = registry.builds[0]
+        manifest = tweak_factory.manifest_from_members(members)
+        version = f"21.36.6-{manifest[:8]}"
+        payload = {
+            "slug": build.slug,
+            "tag": f"{build.tag_prefix}/v{version}",
+            "deb_url": "",
+            "deb_version": version,
+            "deb_sha256": "",
+            "deb_name": "",
+            "members_json": json.dumps(members),
+            "base_app": "youtube",
+            "base_version": "youtube-21.36.6",
+            "base_url": "https://me.example/base.ipa",
+            "asset_name": f"OpenBundle-{version}.ipa",
+            "ipa": str(Path(tmp) / "out.ipa"),
+            "fragment": str(Path(tmp) / "frag.json"),
+            "run_url": "https://github.com/iamsmmh/OmniSource/actions/runs/9",
+        }
+        payload.update(overrides)
+        Path(payload["ipa"]).write_bytes(b"bundle-ipa")
+        return argparse.Namespace(**payload)
+
+    def test_a_bundle_records_every_member_and_their_digests(self) -> None:
+        members = [
+            {
+                "label": "youmod",
+                "name": "youmod.deb",
+                "version": "2.0.0",
+                "url": "https://a.example/youmod.deb",
+                "sha256": "1" * 64,
+            },
+            {
+                "label": "youpip",
+                "name": "youpip.deb",
+                "version": "1.12.14",
+                "url": "https://b.example/youpip.deb",
+                "sha256": "2" * 64,
+            },
+        ]
+        registry = _registry(_bundle_payload())
+        with tempfile.TemporaryDirectory() as tmp:
+            with mock.patch.object(tweak_factory, "load_registry", return_value=registry):
+                fragment = tweak_factory.publish_fragment(self._bundle_args(tmp, members=members))  # type: ignore[arg-type]
+            record = fragment["builds"]["open-bundle"]
+            self.assertTrue(record["bundle"])
+            self.assertEqual([member["label"] for member in record["members"]], ["youmod", "youpip"])
+            self.assertEqual(record["debSha256"], tweak_factory.manifest_from_members(members))
+            self.assertEqual(record["tweakVersion"], f"21.36.6-{record['debSha256'][:8]}")
+            # The digest of the injected app is recorded next to the inputs.
+            self.assertEqual(record["size"], len(b"bundle-ipa"))
+
+    def test_a_bundle_cannot_record_a_different_tweak_set(self) -> None:
+        members = [
+            {
+                "label": "youmod",
+                "name": "youmod.deb",
+                "version": "2.0.0",
+                "url": "https://a.example/youmod.deb",
+                "sha256": "1" * 64,
+            },
+            {
+                "label": "youpip",
+                "name": "youpip.deb",
+                "version": "1.12.14",
+                "url": "https://b.example/youpip.deb",
+                "sha256": "2" * 64,
+            },
+        ]
+        registry = _registry(_bundle_payload())
+        cases = {
+            # The run claims one release tag while recording different bytes:
+            # the digest derived from the members no longer matches the tag.
+            "a swapped url": json.dumps([{**members[0]}, {**members[1], "url": "https://evil.example/youpip.deb"}]),
+            "a dropped member": json.dumps(members[:1]),
+            "an extra member": json.dumps(
+                [
+                    *members,
+                    {
+                        "label": "third",
+                        "name": "t.deb",
+                        "version": "1",
+                        "url": "https://c.example/t.deb",
+                        "sha256": "3" * 64,
+                    },
+                ]
+            ),
+            "no members at all": "",
+        }
+        for label, members_json in cases.items():
+            with self.subTest(case=label), tempfile.TemporaryDirectory() as tmp:
+                Path(tmp, "out.ipa").write_bytes(b"bundle-ipa")
+                args = self._bundle_args(tmp, members=members)  # type: ignore[arg-type]
+                args.members_json = members_json
+                with (
+                    mock.patch.object(tweak_factory, "load_registry", return_value=registry),
+                    self.assertRaises(tweak_factory.FactoryError),
+                ):
+                    tweak_factory.publish_fragment(args)  # type: ignore[arg-type]
+
+    def test_a_bundle_and_a_single_tweak_use_the_right_flags(self) -> None:
+        members = [
+            {"label": "youmod", "version": "2.0.0", "url": "https://a.example/youmod.deb"},
+            {"label": "youpip", "version": "1.12.14", "url": "https://b.example/youpip.deb"},
+        ]
+        registry = _registry(_bundle_payload())
+        with tempfile.TemporaryDirectory() as tmp:
+            args = self._bundle_args(tmp, members=members)
+            # --deb-url is meaningless for a bundle and must be refused.
+            args.deb_url = "https://a.example/youmod.deb"
+            with (
+                mock.patch.object(tweak_factory, "load_registry", return_value=registry),
+                self.assertRaises(tweak_factory.FactoryError),
+            ):
+                tweak_factory.publish_fragment(args)  # type: ignore[arg-type]
+            args.deb_url = ""
+            with mock.patch.object(tweak_factory, "load_registry", return_value=registry):
+                notes = tweak_factory.release_notes(args)  # type: ignore[arg-type]
+            # ... while a single-tweak build must not smuggle in a member list.
+            with tempfile.TemporaryDirectory() as inner:
+                Path(inner, "x.ipa").write_bytes(b"x")
+                with (
+                    mock.patch.object(tweak_factory, "load_registry", return_value=_registry(_registry_payload())),
+                    self.assertRaises(tweak_factory.FactoryError),
+                ):
+                    tweak_factory.publish_fragment(
+                        self._args(ipa=str(Path(inner) / "x.ipa"), members_json=json.dumps(members))  # type: ignore[arg-type]
+                    )
+        self.assertIn("youmod 2.0.0", notes)
+        self.assertIn("youpip 1.12.14", notes)
+        self.assertIn("Bundle SHA-256", notes)
+        self.assertIn("https://b.example/youpip.deb", notes)
+
     def test_merge_keeps_the_newest_fragment_and_is_stable(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             old = {"version": 1, "builds": {"ytlite": {"tweakVersion": "v1", "builtAt": "2026-09-01"}}}
@@ -358,7 +883,7 @@ class WorkflowContractTests(unittest.TestCase):
     the honest way to pin them.
     """
 
-    _INJECT_INPUTS = ("app_name", "base_ipa_url", "bundle_id", "tweak_deb_url", "tweak_name")
+    _INJECT_INPUTS = ("app_name", "base_ipa_url", "bundle_id", "tweak_deb_url", "tweak_deb_urls_json", "tweak_name")
 
     def _factory(self) -> str:
         return (_ROOT / ".github" / "workflows" / "tweak-factory.yml").read_text(encoding="utf-8")
@@ -405,6 +930,23 @@ class WorkflowContractTests(unittest.TestCase):
         wired = set(re.findall(r"(?m)^          (\w+):", step))
         self.assertEqual(sorted(wired), list(self._INJECT_INPUTS), "the inject call must wire every input, by name")
 
+    def test_the_inject_workflow_handles_a_bundle_safely(self) -> None:
+        text = self._inject()
+        # The bundle list is parsed in exactly one place and nothing trusts it.
+        self.assertIn("workspace/tweaks.tsv", text)
+        self.assertIn("a bundle injects at most 8 tweaks", text)
+        self.assertIn("duplicate tweak label", text)
+        self.assertIn("url must be an https URL", text)
+        # Every URL is policy-gated, not just the first, and every digest the
+        # upstream published is verified before anything is injected.
+        self.assertIn('check-url "${urls[@]}"', text)
+        self.assertIn("does not match the digest the upstream published", text)
+        # One cyan pass per deb, in a stable order, so a bad member fails the
+        # build instead of producing an app nobody can attribute.
+        self.assertIn("for deb in $(find debs -name '*.deb' -type f | sort)", text)
+        self.assertIn("members_json=", text)
+        self.assertIn("value: ${{ jobs.build.outputs.members_json }}", text)
+
     def test_the_factory_keeps_its_safety_rails(self) -> None:
         text = self._factory()
         self.assertIn("group: tweak-factory", text)
@@ -428,6 +970,52 @@ class WorkflowContractTests(unittest.TestCase):
 
     def test_the_plan_script_is_the_only_matrix_source(self) -> None:
         self.assertIn("include: ${{ fromJSON(needs.plan.outputs.matrix).include }}", self._factory())
+
+    def test_the_factory_records_the_tweaks_actually_injected(self) -> None:
+        text = self._factory()
+        self.assertIn("tweak_deb_urls_json: ${{ matrix.deb_entries }}", text)
+        self.assertIn("--members-json members.json", text)
+        # The recorded digests are the ones cyan consumed. Re-downloading the
+        # URL to hash it again would describe something other than what shipped.
+        self.assertNotIn('--max-time 600 "${M_DEB_URL}" -o /tmp/tweak.deb', text)
+        self.assertIn("MEMBERS_JSON: ${{ steps.inject.outputs.members_json }}", text)
+
+
+class SchemaContractTests(unittest.TestCase):
+    """The published schema must keep describing what the validator enforces.
+
+    The schema is documentation (the runtime is stdlib-only), which makes it
+    exactly the kind of file that silently rots; these checks are the cheap
+    version of a code generator.
+    """
+
+    def _schema(self) -> dict:
+        return json.loads((_ROOT / "schemas" / "tweak-builds.schema.json").read_text(encoding="utf-8"))
+
+    def test_the_schema_documents_the_bundle_and_apt_lanes(self) -> None:
+        schema = self._schema()
+        self.assertIn("conflictGroups", schema["properties"])
+        self.assertIn("definitions", schema)
+        build = schema["properties"]["builds"]["items"]
+        self.assertEqual(
+            sorted(build["properties"]),
+            sorted(["slug", "name", "enabled", "catalogApp", "note", "deb", "debs", "base", "bundleId", "appName", "publish"]),
+        )
+        reference = build["properties"]["deb"]
+        self.assertIn("$ref", reference, "the member shape is shared by deb and debs")
+        definition = str(reference["$ref"]).rsplit("/", 1)[-1]
+        member = schema["definitions"][definition]
+        self.assertEqual(build["properties"]["debs"]["items"]["$ref"], reference["$ref"])
+        for field in ("label", "source", "indexUrl", "suite", "component", "package", "pinVersion", "packageId", "archPreference"):
+            with self.subTest(field=field):
+                self.assertIn(field, member["properties"])
+        self.assertIn("apt-repository", str(member["properties"]["source"]["enum"]))
+
+    def test_the_empty_catalog_app_is_documented_as_operator_only(self) -> None:
+        schema = self._schema()
+        description = schema["properties"]["builds"]["items"]["properties"]["catalogApp"]["description"]
+        self.assertIn("operator-only", description)
+        self.assertIn("feed", description)
 
 
 class CliTests(unittest.TestCase):

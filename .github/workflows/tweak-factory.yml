@@ -3,9 +3,10 @@
 #
 # 1. plan   (ubuntu)  resolve the newest official .deb per registry entry and
 #                     the operator-supplied base app; emit the build matrix.
-# 2. build  (macOS)   one job per stale build: inject via the reusable
-#                     Build & Inject Tweak workflow, publish the IPA as a
-#                     provenance-tagged release, upload the state fragment.
+# 2. build  (macOS)   one job per stale build: inject (one deb or a whole
+#                     bundle) via the reusable Build & Inject Tweak workflow,
+#                     publish the IPA as a provenance-tagged release, upload the
+#                     state fragment.
 # 3. commit (ubuntu)  merge fragments into data/tweak-builds-state.json,
 #                     commit, and dispatch sync.yml so the feeds pick up
 #                     anything that references the new release tag.
@@ -100,6 +101,10 @@ jobs:
       M_DEB_URL: ${{ matrix.deb_url }}
       M_DEB_VERSION: ${{ matrix.deb_version }}
       M_DEB_NAME: ${{ matrix.deb_name }}
+      # A bundle injects several tweaks: the same list the plan resolved, as
+      # JSON, is what gets downloaded, injected and recorded.
+      M_DEB_ENTRIES: ${{ matrix.deb_entries }}
+      M_IS_BUNDLE: ${{ matrix.is_bundle }}
       M_BASE_APP: ${{ matrix.base_app }}
       M_BASE_URL: ${{ matrix.base_url }}
       M_BASE_VERSION: ${{ matrix.base_version }}
@@ -114,10 +119,12 @@ jobs:
           python-version: "3.12"
 
       - name: Inject tweak (reuses Build & Inject Tweak)
+        id: inject
         uses: ./.github/workflows/build-tweak.yml
         with:
           base_ipa_url: ${{ matrix.base_url }}
           tweak_deb_url: ${{ matrix.deb_url }}
+          tweak_deb_urls_json: ${{ matrix.deb_entries }}
           tweak_name: ${{ matrix.name }}
           app_name: ${{ matrix.app_name }}
           bundle_id: ${{ matrix.bundle_id }}
@@ -126,6 +133,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          MEMBERS_JSON: ${{ steps.inject.outputs.members_json }}
         run: |
           set -euo pipefail
           IPA="workspace/output.ipa"
@@ -133,42 +141,36 @@ jobs:
             echo "::error::injection produced no workspace/output.ipa"
             exit 1
           fi
-          # The sourcing policy gets a final say on the exact URLs that are
-          # about to be downloaded again and published.
           export PYTHONPATH=src
-          python3 -m omnisource.source_policy check-url "${M_BASE_URL}" "${M_DEB_URL}"
+          # The sourcing policy gets a final say on every URL that was
+          # downloaded and is about to be published — all of a bundle's, not
+          # just the first.
+          urls=("${M_BASE_URL}")
+          while IFS= read -r entry_url; do
+            if [ -n "${entry_url}" ]; then
+              urls+=("${entry_url}")
+            fi
+          done < <(printf '%s' "${M_DEB_ENTRIES}" | python3 -c 'import json,sys;[print(e.get("url", "")) for e in json.load(sys.stdin)]')
+          python3 -m omnisource.source_policy check-url "${urls[@]}"
 
-          # sha256 of the exact deb that will be recorded in the state file.
-          curl -fsSL --proto '=https' --max-time 600 "${M_DEB_URL}" -o /tmp/tweak.deb
-          DEB_SHA="$(shasum -a 256 /tmp/tweak.deb | awk '{print $1}')"
+          # The digests come from the build job: they are the ones measured on
+          # the exact files cyan consumed, not a second download of whatever
+          # the URL happens to serve now.
+          COMMON=(--slug "${M_SLUG}" --tag "${M_TAG}" --deb-version "${M_DEB_VERSION}"
+                   --base-app "${M_BASE_APP}" --base-version "${M_BASE_VERSION}"
+                   --base-url "${M_BASE_URL}" --ipa "${IPA}" --asset-name "${M_ASSET_NAME}"
+                   --run-url "${RUN_URL}")
+          if [ "${M_IS_BUNDLE}" = "true" ]; then
+            printf '%s' "${MEMBERS_JSON}" > members.json
+            EXTRA=(--members-json members.json)
+          else
+            DEB_SHA="$(printf '%s' "${MEMBERS_JSON}" | python3 -c 'import json,sys;print(json.load(sys.stdin)[0]["sha256"])')"
+            DEB_NAME="$(printf '%s' "${MEMBERS_JSON}" | python3 -c 'import json,sys;print(json.load(sys.stdin)[0].get("name", ""))')"
+            EXTRA=(--deb-url "${M_DEB_URL}" --deb-sha256 "${DEB_SHA}" --deb-name "${DEB_NAME}")
+          fi
 
-          python3 scripts/tweak_factory.py publish \
-            --slug "${M_SLUG}" \
-            --tag "${M_TAG}" \
-            --deb-url "${M_DEB_URL}" \
-            --deb-version "${M_DEB_VERSION}" \
-            --deb-sha256 "${DEB_SHA}" \
-            --base-app "${M_BASE_APP}" \
-            --base-version "${M_BASE_VERSION}" \
-            --base-url "${M_BASE_URL}" \
-            --ipa "${IPA}" \
-            --asset-name "${M_ASSET_NAME}" \
-            --run-url "${RUN_URL}" \
-            --fragment "state-${M_SLUG}.json"
-
-          python3 scripts/tweak_factory.py notes \
-            --slug "${M_SLUG}" \
-            --tag "${M_TAG}" \
-            --deb-url "${M_DEB_URL}" \
-            --deb-version "${M_DEB_VERSION}" \
-            --deb-sha256 "${DEB_SHA}" \
-            --deb-name "${M_DEB_NAME}" \
-            --base-app "${M_BASE_APP}" \
-            --base-version "${M_BASE_VERSION}" \
-            --base-url "${M_BASE_URL}" \
-            --asset-name "${M_ASSET_NAME}" \
-            --ipa "${IPA}" \
-            --run-url "${RUN_URL}" > notes.md
+          python3 scripts/tweak_factory.py publish "${COMMON[@]}" "${EXTRA[@]}" --fragment "state-${M_SLUG}.json"
+          python3 scripts/tweak_factory.py notes "${COMMON[@]}" "${EXTRA[@]}" > notes.md
 
           cp "${IPA}" "${M_ASSET_NAME}"
           FLAGS=()

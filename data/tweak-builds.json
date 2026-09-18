@@ -1,7 +1,7 @@
 {
   "version": 1,
   "$schema": "../schemas/tweak-builds.schema.json",
-  "description": "Tweak Factory registry: .deb tweaks the scheduled factory may collect from their official upstream, inject into an operator-supplied decrypted base app, and publish as provenance-tagged OmniSource releases. Hand-reviewed like catalog.json; the pipeline never writes this file. A build only runs when its base app (baseApps) is configured — the factory never pulls base IPAs from public decrypted-app stores (blocked by data/source_policy.json).",
+  "description": "Tweak Factory registry: .deb tweaks the scheduled factory may collect from their official upstream (GitHub releases or the developer's own apt repository), inject into an operator-supplied decrypted base app, and publish as provenance-tagged OmniSource releases. Hand-reviewed like catalog.json; the pipeline never writes this file. A build only runs when its base app (baseApps) is configured — the factory never pulls base IPAs from public decrypted-app stores (blocked by data/source_policy.json), and an entry with an empty catalogApp is operator-only: it never reaches a feed.",
   "baseApps": {
     "youtube": {
       "description": "Decrypted YouTube base app shared by every YouTube tweak injection. Configure ONE of the three sources before enabling builds: (1) 'release' — your own private/public dumps repo where each release tag starts with tagPrefix and holds the decrypted .ipa; (2) 'variable' — a repository variable named envVar holding a direct https URL; (3) 'url' — a fixed https URL. The repo below is the recommended layout and does not exist yet: create it and push your dumps, or repoint the source.",
@@ -11,15 +11,28 @@
       "assetGlob": "*.ipa"
     }
   },
+  "conflictGroups": [
+    {
+      "name": "youtube-primary-enhancer",
+      "packages": [
+        "com.dvntm.ytlite",
+        "dev.water888.youmod",
+        "com.itzzace.ytkace"
+      ],
+      "reason": "each one is a complete enhancer: its own settings pane, its own player/overlay patches, its own ad-block and its own download manager. Two of them in one app is the double-menu / no-playback state that 'all features in one IPA' builds ship with, so the factory refuses to inject them together instead of publishing it and finding out per-user."
+    }
+  ],
   "builds": [
     {
       "slug": "ytlite",
       "name": "YTLite",
       "enabled": true,
       "catalogApp": "ytlite",
+      "note": "The free lane: Dayanch96/YTLite still publishes the 5.2.2 .deb on its own GitHub releases, and that build already covers 120Hz/framerate override, PiP, mute-on-app-switch, playback speed, quality selection, downloads and SponsorBlock. One tweak, no duplicate hooks — this is the stable answer to an 'everything in one app' request.",
       "deb": {
         "source": "github-release",
         "repo": "Dayanch96/YTLite",
+        "packageId": "com.dvntm.ytlite",
         "assetRegex": "^com\\.dvntm\\.ytlite_[^/]+_iphoneos-(arm64|arm64e|arm)\\.deb$",
         "archPreference": ["arm64", "arm64e", "arm"]
       },
@@ -28,6 +41,51 @@
       "appName": "",
       "publish": {
         "tagPrefix": "tweak-build/ytlite",
+        "prerelease": true
+      }
+    },
+    {
+      "slug": "youtube-open-bundle",
+      "name": "YouTube Open Bundle",
+      "enabled": true,
+      "catalogApp": "",
+      "note": "The all-open-source bundle: one primary enhancer (YouMod, GPLv3) plus the independent single-purpose tweaks it does not cover (native PiP via YouPiP, the quality menu via YouQuality) and the library both of them need (YouTubeVideoOverlay). Every member is collected from its own official upstream — the deb digest comes from the developer's published Packages index. Deliberately NOT YTLite + YouMod + YTKACE together: see conflictGroups. catalogApp is empty, so this lane stays operator-only and is never promoted into a feed.",
+      "debs": [
+        {
+          "label": "youmod",
+          "source": "github-release",
+          "repo": "Tonwalter888/YouMod",
+          "packageId": "dev.water888.youmod",
+          "assetRegex": "^dev\\.water888\\.youmod_[^/]+_iphoneos-(arm64|arm64e|arm)\\.deb$",
+          "archPreference": ["arm64", "arm64e", "arm"]
+        },
+        {
+          "label": "youpip",
+          "source": "apt-repository",
+          "indexUrl": "https://poomsmart.github.io/repo/Packages",
+          "package": "com.ps.youpip",
+          "archPreference": ["arm64", "arm64e", "arm"]
+        },
+        {
+          "label": "youquality",
+          "source": "apt-repository",
+          "indexUrl": "https://poomsmart.github.io/repo/Packages",
+          "package": "com.ps.youquality",
+          "archPreference": ["arm64", "arm64e", "arm"]
+        },
+        {
+          "label": "ytvideooverlay",
+          "source": "apt-repository",
+          "indexUrl": "https://poomsmart.github.io/repo/Packages",
+          "package": "com.ps.ytvideooverlay",
+          "archPreference": ["arm64", "arm64e", "arm"]
+        }
+      ],
+      "base": "youtube",
+      "bundleId": "",
+      "appName": "",
+      "publish": {
+        "tagPrefix": "tweak-build/youtube-open-bundle",
         "prerelease": true
       }
     }
