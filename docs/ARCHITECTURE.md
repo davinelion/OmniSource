@@ -105,7 +105,7 @@ calls from feed generation. Metrics and structured logs are provided by
 ## Web architecture
 
 - `js/` is the zero-dependency GitHub Pages PWA and compatibility surface.
-- `web/` is the Next.js 15 / TypeScript / Tailwind application for Node
+- `web/` is the Next.js 16 / TypeScript / Tailwind application for Node
   hosting. It consumes local snapshots during build and relative API routes at
   runtime; browser code never calls localhost.
 - Eight lazy locale modules use English fallback and server-selected language

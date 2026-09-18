@@ -97,7 +97,7 @@ feeds/              generated client feeds, per-app feeds, reports (never edited
 api/                published JSON mirror + gzip twins consumed by clients and the site
 src/omnisource/     pipeline, providers, validators, renderers and adapters
 scripts/            operational entry points (pipeline, validators, discovery, backup)
-web/                Next.js 15 + TypeScript + Tailwind PWA
+web/                Next.js 16 + TypeScript + Tailwind PWA
 js/ assets/         zero-dependency GitHub Pages frontend and Liquid Glass design system
 docs/               architecture, API, operations and deployment guides
 ```

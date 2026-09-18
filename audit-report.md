@@ -24,7 +24,7 @@ The review covered every tracked and generated boundary:
   projections, single-app/collection feeds, API v2/v3, static API mirrors,
   pagination/search/cache behavior, and JSON/GZip contracts;
 - **web and assets:** static GitHub Pages PWA, HTML routes, CSS/design system,
-  icons/screenshots, service worker, and the Next.js 15 TypeScript/Tailwind PWA;
+  icons/screenshots, service worker, and the Next.js 16 TypeScript/Tailwind PWA;
 - **documentation and collections:** README, docs, contribution/deployment/
   migration/security/performance/architecture material, committed collections,
   source pages, developer/source views, and analytics surfaces.
