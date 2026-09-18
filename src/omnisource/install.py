@@ -139,7 +139,7 @@ CLIENT_PROFILES = {
         "scheme": "flarestore://source?url={url}",
         "deepLinkable": True,
         "instructions": (
-            "Tap to add the source to FlareStore (recommended). "
+            "Tap to add the source to FlareStore. "
             "If nothing happens, paste the feed URL in Sources."
         ),
         "manualSetup": False,

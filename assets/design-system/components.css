@@ -4457,17 +4457,7 @@ html[data-view="compact"] .card-bottom {
 .install-grid {
   grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
 }
-.client-button.is-recommended {
-  outline: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
-}
-.client-rec {
-  display: inline-block;
-  margin-left: 4px;
-  font: 700 10px/1 var(--font-mono);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
+
 .install-grid .button.download,
 .install-grid .button.primary.download { grid-column: 1 / -1; }
 

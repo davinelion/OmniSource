@@ -594,14 +594,11 @@
       ? '<img src="' + OS.esc(OS.url('assets/' + client.icon)) + '" alt="" loading="lazy">'
       : '<span class="cli-fallback">' + OS.esc(String(client.name || '?').slice(0, 1).toUpperCase()) + '</span>';
     var urlValue = installUrlFor(client.id, feedUrl);
-    var rec = String(client.id || '').toLowerCase() === 'flarestore'
-      ? ' <span class="client-rec">Recommended</span>'
-      : '';
-    var common = 'class="button client-button os-press' + (rec ? ' is-recommended' : '') + '"';
+    var common = 'class="button client-button os-press"';
     if (urlValue) {
-      return '<a ' + common + ' href="' + OS.esc(urlValue) + '" title="Add to ' + OS.esc(client.name) + '" aria-label="Add to ' + OS.esc(client.name) + '">' + icon + OS.esc(client.name) + rec + '</a>';
+      return '<a ' + common + ' href="' + OS.esc(urlValue) + '" title="Add to ' + OS.esc(client.name) + '" aria-label="Add to ' + OS.esc(client.name) + '">' + icon + OS.esc(client.name) + '</a>';
     }
-    return '<button ' + common + ' type="button" data-copy="' + OS.esc(feedUrl) + '" data-copy-msg="URL copied — paste it in ' + OS.esc(client.name) + '" title="Copy the source URL for ' + OS.esc(client.name) + '">' + icon + OS.esc(client.name) + rec + '</button>';
+    return '<button ' + common + ' type="button" data-copy="' + OS.esc(feedUrl) + '" data-copy-msg="URL copied — paste it in ' + OS.esc(client.name) + '" title="Copy the source URL for ' + OS.esc(client.name) + '">' + icon + OS.esc(client.name) + '</button>';
   }
 
   function verificationBadgeClass(level) {
