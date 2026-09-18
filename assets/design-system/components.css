@@ -472,14 +472,17 @@ html[data-view="compact"] #viewToggle .icon-grid { display: none; }
   border-radius: 50%;
   background: currentColor;
 }
-.badge.ok, .badge.stable, .badge.verified { background: var(--green-soft); color: var(--green); }
+/* Badges are 9.5px text: they use the text-safe twins (--*-text) of the
+   semantic tones, which clear 4.5:1 on their own soft tint. The base tones stay
+   for dots, borders and washes (3:1 non-text). */
+.badge.ok, .badge.stable, .badge.verified { background: var(--green-soft); color: var(--green-text); }
 .badge.verified { border-color: color-mix(in srgb, var(--green) 25%, transparent); }
-.badge.bad, .badge.unmaintained, .badge.deprecated { background: var(--red-soft); color: var(--red); }
-.badge.warn, .badge.beta, .badge.unverified { background: var(--amber-soft); color: var(--amber); }
+.badge.bad, .badge.unmaintained, .badge.deprecated { background: var(--red-soft); color: var(--red-text); }
+.badge.warn, .badge.beta, .badge.unverified { background: var(--amber-soft); color: var(--amber-text); }
 .badge.unverified { border-color: color-mix(in srgb, var(--amber) 25%, transparent); }
-.badge.manual, .badge.community, .badge.cyan { background: var(--cyan-soft); color: var(--cyan); }
+.badge.manual, .badge.community, .badge.cyan { background: var(--cyan-soft); color: var(--cyan-text); }
 .badge.community { border-color: color-mix(in srgb, var(--cyan) 25%, transparent); }
-.badge.blue { background: var(--blue-soft); color: var(--blue); }
+.badge.blue { background: var(--blue-soft); color: var(--blue-text); }
 .badge.neutral { background: var(--surface-2); color: var(--muted); }
 
 /* Filter chips. */
@@ -2567,6 +2570,11 @@ button.client-link:hover { color: var(--text); }
 }
 .ap-screenshots img {
   height: 380px;
+  /* Reserve the tile before the bytes land. Phone screenshots are ~9:19.5, the
+     markup declares width="175" height="380" to match, and the ratio here keeps
+     a slow third-party host from reflowing the row (and everything after it). */
+  aspect-ratio: 9 / 19.5;
+  background: var(--surface-2);
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   scroll-snap-align: start;
@@ -3581,9 +3589,40 @@ body.nav-open .nav-toggle .icon-close { display: block; }
   -webkit-backdrop-filter: blur(20px) saturate(1.4);
   opacity: 0;
   pointer-events: none;
+  /* The backdrop exists to swallow interactions with the page behind the
+     drawer; a pan there must not scroll it either. */
+  touch-action: none;
   transition: opacity var(--dur) var(--ease);
 }
-body.nav-open { overflow: hidden; }
+/* Scroll lock for the open drawer.
+   `body.nav-open { overflow: hidden }` used to live here, and it was both
+   ineffective and harmful:
+
+   - ineffective: `html` sets `overflow-x`, so the body is not marked as the
+     scrolling element and its `overflow` never propagates to the viewport —
+     the page kept scrolling underneath the open drawer;
+   - harmful: `overflow: hidden` turns the body into a scroll container that
+     never scrolls, which is precisely what `position: sticky` resolves
+     against, so the header stopped sticking *while the drawer was open* and
+     the drawer — a fixed child of the header capsule — rode off the top of
+     the screen with it (the reported "blurred screen, nothing clickable").
+
+   The page is now locked by consuming the scroll gestures in js/core.js
+   (wheel / touchmove / scroll keys), which leaves layout — and therefore the
+   sticky header and the drawer hanging from it — untouched. These two
+   declarations close the gaps a JS listener cannot see: scroll chaining and
+   touch panning. */
+html.nav-open,
+body.nav-open {
+  overscroll-behavior: none;
+}
+html.nav-open {
+  touch-action: none;
+}
+/* …except the drawer's own list, which is allowed to pan vertically. */
+html.nav-open .nav-links {
+  touch-action: pan-y;
+}
 body.nav-open .nav-backdrop {
   opacity: 1;
   pointer-events: auto;
@@ -4723,7 +4762,10 @@ html[data-view="compact"] .card-bottom {
 }
 .sources-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  /* min() keeps the track from demanding more than the container: at 320px the
+     bare 320px minimum pushed the card 15px past the viewport (masked by the
+     root's horizontal clip, so the right edge was simply cut off). */
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
   gap: 14px;
 }
 .source-card { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
@@ -4890,7 +4932,9 @@ html[data-view="compact"] .card-bottom {
   border-radius: var(--radius-pill);
   background: var(--surface-2);
   font: 700 10.5px var(--font-mono);
-  color: var(--faint);
+  /* `--faint` measured 3.63:1 on the dark surface at this size; the count is
+     text, so it uses the muted tone (4.4:1 light, 7.6:1 dark). */
+  color: var(--muted);
 }
 .catalog-tab:hover {
   color: var(--text);
@@ -5381,6 +5425,16 @@ html[data-view="compact"] .card-bottom {
 
 /* Fix for #mainContent scroll margin */
 #mainContent {
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+/* In-page targets that live near the top of a panel (`#qrTitle` in the QR
+   dialog, `#installAutoAdd` in the install guide, `#pairs` on compare) were
+   scrolled to underneath the floating header capsule. Nothing links to them
+   today, so this is a latent bug being closed before a link is added. */
+#qrTitle,
+#installAutoAdd,
+#pairs {
   scroll-margin-top: calc(var(--header-h) + 24px);
 }
 

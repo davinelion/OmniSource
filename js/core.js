@@ -265,7 +265,16 @@
     { name: 'bundleId', weight: 0.12 }
   ];
   var SEARCH_THRESHOLD = 0.38;
-  var SEARCH_MIN_CHARS = 2;
+  /* A single character is a legitimate query — "y" for YouTube, "v" for
+     Vanced — and the old two-character minimum made the palette answer it with
+     the popular chips and nothing else, as if the keystroke had been dropped.
+     Scoring every field at 0.38 still filtered those out (a one-character name
+     match is worth 0.35 x 0.85 = 0.30), so short queries get their own, lower
+     bar: at 0.12 only a name hit (0.35 x 0.65 = 0.23) and combinations of
+     name + metadata clear it, which is exactly the "apps called something with
+     this letter" answer a single keystroke deserves. */
+  var SEARCH_MIN_CHARS = 1;
+  var SEARCH_SHORT_THRESHOLD = 0.12;
 
   var Search = {
     docs: [],          // index documents
@@ -274,9 +283,16 @@
 
     load: function () {
       if (!this.ready) {
-        this.ready = OS.fetchJSON('feeds/search-index.json').then(function (doc) {
-          Search.docs = (doc && doc.documents) || [];
-          return Search.fetchTrending().then(function () { return Search.docs; });
+        /* js/site.js may already have warmed the index on the home page (its
+           idle tier); reuse it instead of fetching and parsing 120 KB twice. */
+        var index = this.docs.length
+          ? Promise.resolve(this.docs)
+          : OS.fetchJSON('feeds/search-index.json').then(function (doc) {
+            Search.docs = (doc && doc.documents) || [];
+            return Search.docs;
+          });
+        this.ready = index.then(function (docs) {
+          return Search.fetchTrending().then(function () { return docs; });
         });
       }
       return this.ready;
@@ -309,6 +325,7 @@
     search: function (query) {
       var q = String(query || '').toLowerCase().trim();
       if (q.length < SEARCH_MIN_CHARS) return [];
+      var threshold = q.length === 1 ? SEARCH_SHORT_THRESHOLD : SEARCH_THRESHOLD;
       var results = [];
       for (var i = 0; i < this.docs.length; i++) {
         var doc = this.docs[i];
@@ -324,7 +341,7 @@
             score += key.weight * this.score(q, field || '');
           }
         }
-        if (score >= SEARCH_THRESHOLD) results.push({ doc: doc, score: score });
+        if (score >= threshold) results.push({ doc: doc, score: score });
       }
       results.sort(function (a, b) { return b.score - a.score; });
       return results.slice(0, 10);
@@ -824,12 +841,14 @@
     var moreMenus = $$('.nav-more', links);
     function closeNav() {
       document.body.classList.remove('nav-open');
+      document.documentElement.classList.remove('nav-open');
       btn.setAttribute('aria-expanded', 'false');
       btn.setAttribute('aria-label', 'Open menu');
       if (window.innerWidth > NAV_DRAWER_WIDTH) moreMenus.forEach(function (d) { d.open = false; });
     }
     function openNav() {
       document.body.classList.add('nav-open');
+      document.documentElement.classList.add('nav-open');
       btn.setAttribute('aria-expanded', 'true');
       btn.setAttribute('aria-label', 'Close menu');
       if (window.innerWidth <= NAV_DRAWER_WIDTH) moreMenus.forEach(function (d) { d.open = true; });
@@ -857,6 +876,37 @@
     window.addEventListener('resize', function () {
       if (window.innerWidth > NAV_DRAWER_WIDTH) closeNav();
     });
+
+    /* Scroll lock. The classic layout lock (overflow/position on html or body)
+       is what used to be here in CSS, and it made things worse: it turns the
+       root or the body into a scroll container, and Chromium then stops
+       honouring `position: sticky` for the header — measured with the drawer
+       open at scrollY 600: header y = -592, drawer y = -521, backdrop up,
+       nothing clickable. The drawer is a fixed child of the header capsule, so
+       it can only be used while the header is on screen; the page is therefore
+       locked by consuming the scroll gestures instead, which leaves layout (and
+       the sticky header) alone. The CSS keeps overscroll-behavior/touch-action
+       guards for gestures this listener never sees. */
+    var SCROLL_KEYS = {
+      ArrowDown: 1, ArrowUp: 1, PageDown: 1, PageUp: 1, Home: 1, End: 1, ' ': 1, Spacebar: 1
+    };
+    function lockOwns(event) {
+      if (!document.body.classList.contains('nav-open')) return false;
+      /* The drawer scrolls its own list: those gestures belong to it. */
+      var target = event.target;
+      if (target && target.closest && target.closest('.nav-links')) return false;
+      return true;
+    }
+    function swallow(event) {
+      if (lockOwns(event)) event.preventDefault();
+    }
+    function swallowKey(event) {
+      if (SCROLL_KEYS[event.key]) swallow(event);
+    }
+    document.addEventListener('wheel', swallow, { passive: false });
+    document.addEventListener('touchmove', swallow, { passive: false });
+    document.addEventListener('keydown', swallowKey);
+
     OS.closeNav = closeNav;
   }
 

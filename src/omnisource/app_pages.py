@@ -477,10 +477,22 @@ def render_app_page(
     size_text = html.escape(_fmt_bytes(int(newest.get("size") or 0)))
     tint = str(app.raw.get("tintColor") or "")
     tint_style = f' style="--tint:#{html.escape(tint)}"' if tint else ""
-    screenshots_html = "".join(
-        f'<img src="{html.escape(url)}" alt="{title} screenshot {index}" loading="lazy">'
-        for index, url in enumerate(screenshots, start=1)
-    )
+    # Tiles are generated from the catalog alone, so a rebuild is byte-identical
+    # on a machine that cannot reach the screenshot hosts (the mirror state in
+    # feeds/screenshots.json is network-dependent; scripts/check_reproducible.py
+    # treats that document specially for the same reason). Phone screenshots are
+    # the overwhelming majority (9:19.5) and the gallery sets a fixed height, so
+    # the intrinsic size is declared to reserve the tile's box before the bytes
+    # land: 380 x 175 plus the same ratio in CSS keeps the horizontal scroller
+    # from reflowing on load. website/assets/AssetManager.js also understands a
+    # data-original attribute, so if a later build points src at the repository
+    # mirror the upstream URL can ride along as the documented fallback.
+    attrs = 'width="175" height="380" loading="lazy" decoding="async"'
+    screenshot_tiles = [
+        f'<img src="{html.escape(url)}" alt="{title} screenshot {index + 1}" {attrs}>'
+        for index, url in enumerate(screenshots)
+    ]
+    screenshots_html = "".join(screenshot_tiles)
     if screenshots:
         screenshots_block = f'<div class="ap-screenshots">{screenshots_html}</div>\n'
     else:
@@ -508,6 +520,9 @@ def render_app_page(
         else ""
     )
 
+    # JSON-LD advertises the screenshots the catalog declares, so the structured
+    # data stays byte-identical between an offline and a networked rebuild (see
+    # the tile comment above).
     head = _head(title, sub, icon_url, page_url, rss_url, app, newest, download_url, publisher, screenshots)
 
     hero = [
