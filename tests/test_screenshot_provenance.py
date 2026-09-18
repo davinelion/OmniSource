@@ -11,6 +11,7 @@ the two rules that keep the gallery honest:
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import tempfile
@@ -158,14 +159,70 @@ class ShippedTreeTests(unittest.TestCase):
 
     def test_the_fabricated_mockups_are_gone(self) -> None:
         # These ten directories held 390x844 renders (fake status bar, app icon,
-        # skeleton rows) published as screenshots. They must stay deleted, and the
-        # apps that have no upstream art must declare none.
-        self.assertFalse((ROOT / "assets" / "screenshots" / "ytlite").exists())
+        # skeleton rows) published as screenshots. They must stay deleted *as
+        # fabricated art* - which is not the same as "the directory must never
+        # exist": a real sync mirrors the art an app legitimately declares from
+        # its own upstream into exactly those paths (refresh=True in
+        # omnisource.screenshots), and the sync job runs this suite on that
+        # workspace. So the durable invariants are instead:
+        #   * an app whose upstream publishes no art must declare none and must
+        #     have no mirror directory in the tree, and
+        #   * every mirror file in the tree must be a pipeline artifact
+        #     recorded in the current feeds/screenshots.json - digest-checked
+        #     whenever the manifest claims the mirror, so a re-added render
+        #     (or a hand-dropped file) can never ship.
         catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
-        empty = {app["slug"] for app in catalog["apps"] if not (app.get("screenshots") or [])}
+        declared = {app["slug"]: (app.get("screenshots") or []) for app in catalog["apps"]}
         for slug in ("youpro", "youmod", "itorrent", "winston", "raintweak", "uyouenhanced"):
             with self.subTest(slug=slug):
-                self.assertIn(slug, empty)
+                self.assertEqual(
+                    declared.get(slug, []),
+                    [],
+                    f"{slug} publishes no upstream art and must keep declaring none",
+                )
+                self.assertFalse(
+                    (ROOT / "assets" / "screenshots" / slug).exists(),
+                    f"{slug} declares no screenshots, so no mirror directory may exist",
+                )
+
+        manifest = {
+            (entry["slug"], str(entry["mirroredURL"]).rsplit("/", 1)[-1]): entry
+            for entry in json.loads((ROOT / "feeds" / "screenshots.json").read_text(encoding="utf-8")).get(
+                "screenshots", []
+            )
+            if isinstance(entry, dict) and entry.get("mirroredURL")
+        }
+        screenshots_dir = ROOT / "assets" / "screenshots"
+        if not screenshots_dir.is_dir():
+            # Fresh checkout: mirrors are build artifacts and never committed,
+            # so a clean tree legitimately ships none of them.
+            return
+        for path in sorted(screenshots_dir.rglob("*")):
+            if not path.is_file():
+                continue
+            rel = path.relative_to(screenshots_dir)
+            # Only <slug>/<file> mirror pairs are guarded; thumbnails/<slug>/
+            # holds derived WebP thumbnails and _manifest/ is a marker.
+            if len(rel.parts) != 2 or rel.parts[0] in ("_manifest", "thumbnails"):
+                continue
+            slug, filename = rel.parts
+            with self.subTest(mirror=str(rel)):
+                self.assertTrue(
+                    declared.get(slug),
+                    f"{slug} ships mirror files but declares no screenshots",
+                )
+                entry = manifest.get((slug, filename))
+                self.assertIsNotNone(
+                    entry,
+                    f"{slug}/{filename} is not recorded in feeds/screenshots.json - "
+                    "a screenshot file without manifest provenance is a fabricated mockup",
+                )
+                if entry is not None and entry.get("mirrored"):
+                    self.assertEqual(
+                        entry.get("sha256"),
+                        hashlib.sha256(path.read_bytes()).hexdigest(),
+                        f"{slug}/{filename} does not match the digest recorded in feeds/screenshots.json",
+                    )
 
     def test_apps_with_screenshots_point_at_their_own_project(self) -> None:
         catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))

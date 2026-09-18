@@ -7,8 +7,10 @@ pipeline turns them into the version entries of the AltStore feeds.
 
 from __future__ import annotations
 
+import os
+import re
 from dataclasses import dataclass, field
-from datetime import UTC, datetime
+from datetime import UTC, date, datetime
 from enum import StrEnum
 from typing import Any
 from urllib.parse import urlsplit
@@ -59,8 +61,30 @@ def utc_now() -> datetime:
     return datetime.now(UTC)
 
 
+_TODAY_OVERRIDE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
 def today() -> str:
+    """The build date, or the ``OMNISOURCE_TODAY`` pin when set.
+
+    Everything date-derived in the generated set (recency scores, trending
+    windows, freshness decay, ``generatedAt``) flows through this clock, so a
+    rebuild can only reproduce committed bytes for the day they were built.
+    ``scripts/check_reproducible.py`` sets ``OMNISOURCE_TODAY`` to the date
+    committed in the feeds and rebuilds *as of that day* — the offline build
+    is then genuinely a no-op instead of silently shifting every score at
+    UTC midnight. Anything that is not a strict ``YYYY-MM-DD`` is ignored so
+    a malformed value can never masquerade as a clock.
+    """
+    override = os.environ.get("OMNISOURCE_TODAY", "")
+    if _TODAY_OVERRIDE_RE.match(override):
+        return override
     return utc_now().strftime("%Y-%m-%d")
+
+
+def today_date() -> date:
+    """:func:`today` as a ``date`` — the single pinnable clock for arithmetic."""
+    return date.fromisoformat(today())
 
 
 @dataclass(frozen=True)

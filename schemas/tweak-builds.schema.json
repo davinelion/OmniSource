@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OmniSource Tweak Factory registry",
+  "description": "Curated registry of .deb tweaks the factory may collect, inject into an operator-supplied decrypted base app, and publish as provenance-tagged releases. Hand-reviewed like catalog.json: the pipeline never writes this file. Structural enforcement lives in scripts/tweak_factory.py (the runtime is stdlib-only, so no JSON Schema validator is loaded); this document is the human-readable contract the validator mirrors.",
+  "type": "object",
+  "required": ["version", "baseApps", "builds"],
+  "properties": {
+    "version": { "const": 1 },
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "baseApps": {
+      "type": "object",
+      "description": "Decrypted base apps, keyed by app name. A build references one of these. Every source must be operator-controlled: the factory never downloads a base from a public decrypted-IPA store (blocked by data/source_policy.json).",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["source"],
+        "properties": {
+          "description": { "type": "string" },
+          "source": { "enum": ["release", "url", "variable"] },
+          "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
+          "tagPrefix": { "type": "string" },
+          "assetGlob": { "type": "string" },
+          "url": { "type": "string", "pattern": "^https://" },
+          "envVar": { "type": "string", "pattern": "^[A-Z_][A-Z0-9_]*$" }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "source": { "const": "release" } } },
+            "then": { "required": ["repo", "tagPrefix", "assetGlob"] }
+          },
+          {
+            "if": { "properties": { "source": { "const": "url" } } },
+            "then": { "required": ["url"] }
+          },
+          {
+            "if": { "properties": { "source": { "const": "variable" } } },
+            "then": { "required": ["envVar"] }
+          }
+        ]
+      }
+    },
+    "builds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug", "name", "deb", "base"],
+        "properties": {
+          "slug": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "name": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._+-]*$" },
+          "enabled": { "type": "boolean", "default": true },
+          "catalogApp": { "type": "string" },
+          "deb": {
+            "type": "object",
+            "description": "Where the official tweak .deb is collected from. v1 supports GitHub releases; apt repositories are a documented follow-up.",
+            "required": ["source", "repo", "assetRegex"],
+            "properties": {
+              "source": { "const": "github-release" },
+              "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
+              "assetRegex": { "type": "string" },
+              "archPreference": { "type": "array", "items": { "enum": ["arm64", "arm64e", "arm"] } }
+            }
+          },
+          "base": { "type": "string", "description": "Key into baseApps." },
+          "bundleId": { "type": "string" },
+          "appName": { "type": "string" },
+          "publish": {
+            "type": "object",
+            "properties": {
+              "tagPrefix": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9./-]*$" },
+              "prerelease": { "type": "boolean", "default": true }
+            }
+          }
+        }
+      }
+    }
+  }
+}

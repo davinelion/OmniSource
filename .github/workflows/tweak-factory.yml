@@ -1,0 +1,252 @@
+# -----------------------------------------------------------------------------
+# Tweak Factory — scheduled collect → build → publish pipeline.
+#
+# 1. plan   (ubuntu)  resolve the newest official .deb per registry entry and
+#                     the operator-supplied base app; emit the build matrix.
+# 2. build  (macOS)   one job per stale build: inject via the reusable
+#                     Build & Inject Tweak workflow, publish the IPA as a
+#                     provenance-tagged release, upload the state fragment.
+# 3. commit (ubuntu)  merge fragments into data/tweak-builds-state.json,
+#                     commit, and dispatch sync.yml so the feeds pick up
+#                     anything that references the new release tag.
+#
+# Policy line (identical to build-tweak.yml, enforced by the same module):
+# the .deb comes from the tweak's own official upstream; the base app comes
+# from operator-configured sources only — never from a public decrypted-app
+# store (data/source_policy.json blocks those hosts, and plan() re-checks
+# every resolved URL before anything is downloaded).
+#
+# Cost control: skipped/up-to-date builds never enter the matrix, so a quiet
+# week claims zero macOS runners. See docs/TWEAK-FACTORY.md.
+# -----------------------------------------------------------------------------
+name: Tweak Factory
+
+on:
+  schedule:
+    # Weekly, Monday 02:50 UTC — offset from sync (0 */6), publish (30 6) and
+    # the IPA downloader (15 4).
+    - cron: "50 2 * * 1"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Rebuild even when the resolved versions are already published"
+        type: boolean
+        default: false
+
+# One factory run at a time; never cancel a run midway through a release.
+concurrency:
+  group: tweak-factory
+  cancel-in-progress: false
+
+permissions: {}
+
+jobs:
+  plan:
+    name: Collect tweaks and plan builds
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      # The registry may resolve base apps from repository variables.
+      actions: read
+    outputs:
+      has_builds: ${{ steps.plan.outputs.has_builds }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Plan builds
+        id: plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          set -euo pipefail
+          ARGS=()
+          if [ "${FORCE}" = "true" ]; then
+            ARGS+=(--force)
+          fi
+          python3 scripts/tweak_factory.py plan --matrix-out /tmp/matrix.json "${ARGS[@]}" | tee /tmp/summary.md
+          cat /tmp/summary.md >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "has_builds=$(jq -r '.include | length > 0' /tmp/matrix.json)"
+            echo "matrix=$(jq -c . /tmp/matrix.json)"
+          } >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Build ${{ matrix.slug }}
+    needs: plan
+    if: needs.plan.outputs.has_builds == 'true'
+    runs-on: macos-14
+    timeout-minutes: 40
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.plan.outputs.matrix).include }}
+    env:
+      # Matrix fields reach the shell through the environment only — never
+      # interpolate ${{ matrix.* }} into run: scripts.
+      M_SLUG: ${{ matrix.slug }}
+      M_NAME: ${{ matrix.name }}
+      M_CATALOG_APP: ${{ matrix.catalog_app }}
+      M_DEB_URL: ${{ matrix.deb_url }}
+      M_DEB_VERSION: ${{ matrix.deb_version }}
+      M_DEB_NAME: ${{ matrix.deb_name }}
+      M_BASE_APP: ${{ matrix.base_app }}
+      M_BASE_URL: ${{ matrix.base_url }}
+      M_BASE_VERSION: ${{ matrix.base_version }}
+      M_TAG: ${{ matrix.tag }}
+      M_ASSET_NAME: ${{ matrix.asset_name }}
+      M_PRERELEASE: ${{ matrix.prerelease }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Inject tweak (reuses Build & Inject Tweak)
+        uses: ./.github/workflows/build-tweak.yml
+        with:
+          base_ipa_url: ${{ matrix.base_url }}
+          tweak_deb_url: ${{ matrix.deb_url }}
+          tweak_name: ${{ matrix.name }}
+          app_name: ${{ matrix.app_name }}
+          bundle_id: ${{ matrix.bundle_id }}
+
+      - name: Publish release and state fragment
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          IPA="workspace/output.ipa"
+          if [ ! -f "${IPA}" ]; then
+            echo "::error::injection produced no workspace/output.ipa"
+            exit 1
+          fi
+          # The sourcing policy gets a final say on the exact URLs that are
+          # about to be downloaded again and published.
+          export PYTHONPATH=src
+          python3 -m omnisource.source_policy check-url "${M_BASE_URL}" "${M_DEB_URL}"
+
+          # sha256 of the exact deb that will be recorded in the state file.
+          curl -fsSL --proto '=https' --max-time 600 "${M_DEB_URL}" -o /tmp/tweak.deb
+          DEB_SHA="$(shasum -a 256 /tmp/tweak.deb | awk '{print $1}')"
+
+          python3 scripts/tweak_factory.py publish \
+            --slug "${M_SLUG}" \
+            --tag "${M_TAG}" \
+            --deb-url "${M_DEB_URL}" \
+            --deb-version "${M_DEB_VERSION}" \
+            --deb-sha256 "${DEB_SHA}" \
+            --base-app "${M_BASE_APP}" \
+            --base-version "${M_BASE_VERSION}" \
+            --base-url "${M_BASE_URL}" \
+            --ipa "${IPA}" \
+            --asset-name "${M_ASSET_NAME}" \
+            --run-url "${RUN_URL}" \
+            --fragment "state-${M_SLUG}.json"
+
+          python3 scripts/tweak_factory.py notes \
+            --slug "${M_SLUG}" \
+            --tag "${M_TAG}" \
+            --deb-url "${M_DEB_URL}" \
+            --deb-version "${M_DEB_VERSION}" \
+            --deb-sha256 "${DEB_SHA}" \
+            --deb-name "${M_DEB_NAME}" \
+            --base-app "${M_BASE_APP}" \
+            --base-version "${M_BASE_VERSION}" \
+            --base-url "${M_BASE_URL}" \
+            --asset-name "${M_ASSET_NAME}" \
+            --ipa "${IPA}" \
+            --run-url "${RUN_URL}" > notes.md
+
+          cp "${IPA}" "${M_ASSET_NAME}"
+          FLAGS=()
+          if [ "${M_PRERELEASE}" = "true" ]; then
+            FLAGS+=(--prerelease)
+          fi
+          if gh release view "${M_TAG}" --repo "${GITHUB_REPOSITORY}" > /dev/null 2>&1; then
+            gh release delete "${M_TAG}" --repo "${GITHUB_REPOSITORY}" --yes
+          fi
+          gh release create "${M_TAG}" "${M_ASSET_NAME}" \
+            --repo "${GITHUB_REPOSITORY}" \
+            --title "${M_NAME} ${M_DEB_VERSION} (${M_BASE_APP} injection)" \
+            --notes-file notes.md \
+            ${FLAGS[@]+"${FLAGS[@]}"}
+          echo "Published ${M_ASSET_NAME} as ${M_TAG}"
+
+      - name: Upload state fragment
+        uses: actions/upload-artifact@v6
+        with:
+          name: state-${{ matrix.slug }}
+          path: state-${{ matrix.slug }}.json
+          if-no-files-found: error
+          retention-days: 1
+
+  commit:
+    name: Record builds and trigger feed sync
+    needs: [plan, build]
+    if: always() && needs.plan.outputs.has_builds == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Download state fragments
+        uses: actions/download-artifact@v7
+        with:
+          pattern: state-*
+          merge-multiple: true
+          path: fragments
+
+      - name: Merge, commit, dispatch sync
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ls fragments/*.json > /dev/null 2>&1; then
+            python3 scripts/tweak_factory.py merge fragments/*.json --out data/tweak-builds-state.json
+          else
+            echo "No build succeeded; nothing to record."
+            exit 0
+          fi
+          git add data/tweak-builds-state.json
+          if git diff --cached --quiet; then
+            echo "State unchanged."
+          else
+            git commit -m "chore(tweak-factory): record injected tweak builds [skip ci]"
+            for attempt in 1 2 3; do
+              if git push origin "HEAD:${GITHUB_REF_NAME}"; then
+                break
+              fi
+              if [ "${attempt}" -eq 3 ]; then
+                echo "::error::git push failed after 3 attempts"
+                exit 1
+              fi
+              sleep $((attempt * 5))
+            done
+            # Feeds only change when a catalog app references the new tag, but
+            # dispatching unconditionally keeps the pipeline self-healing.
+            gh workflow run sync.yml --repo "${GITHUB_REPOSITORY}" --ref main
+          fi

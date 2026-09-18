@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -10,6 +11,7 @@ if str(_SRC) not in sys.path:
     sys.path.insert(0, str(_SRC))
 
 import unittest
+from unittest import mock
 
 from omnisource.domain import (
     App,
@@ -181,6 +183,18 @@ class TestDomainModel(unittest.TestCase):
     def test_today_helper(self) -> None:
         t = today()
         self.assertRegex(t, r"^\d{4}-\d{2}-\d{2}$")
+
+    def test_today_honors_a_strict_date_pin(self) -> None:
+        # check_reproducible pins the rebuild to the committed build date so
+        # date-derived scores reproduce byte-identically; see domain.today.
+        with mock.patch.dict(os.environ, {"OMNISOURCE_TODAY": "2026-09-01"}):
+            self.assertEqual(today(), "2026-09-01")
+
+    def test_today_ignores_a_malformed_pin(self) -> None:
+        for bad in ("2026-9-1", "not-a-date", "2026-09-01T00:00:00Z"):
+            with self.subTest(pin=bad), mock.patch.dict(os.environ, {"OMNISOURCE_TODAY": bad}):
+                self.assertRegex(today(), r"^\d{4}-\d{2}-\d{2}$")
+                self.assertNotEqual(today(), bad)
 
 
 if __name__ == "__main__":

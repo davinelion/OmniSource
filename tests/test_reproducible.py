@@ -78,6 +78,38 @@ class TestReproducible(unittest.TestCase):
         self.assertTrue(MODULE._is_screenshots_doc("screenshots.json.gz"))
         self.assertFalse(MODULE._is_screenshots_doc("discovery.json"))
 
+    def test_the_committed_build_date_is_the_dominant_stamp(self) -> None:
+        """The rebuild must run as of the committed date, never the wall clock."""
+        date = MODULE._committed_build_date()
+        self.assertIsNotNone(date, "the shipped feeds carry generatedAt dates")
+        self.assertRegex(date, r"^\d{4}-\d{2}-\d{2}$")
+        # The most common stamp wins — one feed refreshed hours later (an
+        # update that straddled UTC midnight) must not drag the pin onto the
+        # wrong day, which would shift every recency-derived score.
+        import json
+
+        feeds = Path(MODULE.ROOT) / "feeds"
+        dates = []
+        for path in feeds.glob("*.json"):
+            try:
+                value = json.loads(path.read_text(encoding="utf-8")).get("generatedAt", "")
+            except (OSError, json.JSONDecodeError, AttributeError):
+                continue
+            if len(value) == 10 and value[4] == "-":
+                dates.append(value)
+        if dates:
+            counts = {}
+            for value in dates:
+                counts[value] = counts.get(value, 0) + 1
+            self.assertEqual(date, max(counts, key=lambda value: (counts[value], value)))
+
+    def test_the_date_pin_stays_out_of_the_checker_environment(self) -> None:
+        # The pin is passed to the rebuild subprocess only, never set
+        # process-wide: snapshot hashing itself must stay date-independent.
+        import os
+
+        self.assertNotIn("OMNISOURCE_TODAY", os.environ)
+
 
 if __name__ == "__main__":
     unittest.main()

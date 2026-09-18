@@ -9,7 +9,7 @@ and the API mirror), runs the offline build, snapshots again and compares.
 Volatile values that are correct to refresh on every build are normalized
 before comparing — the build/sync date (``generatedAt``, ``lastSync``), the
 README ``last sync`` line, the rolling analytics history (which legitimately
-gains a new day's entry) and the screenshot-mirror state
+gains a new day's entry), the screenshot-mirror state
 (``mirrored``/``size``/``sha256``/``thumbnailSize``), which depends on
 whether *this* machine could reach the remote screenshot hosts. Any *other*
 difference means a hand-edit or a bug in the generators and fails the check.
@@ -17,6 +17,16 @@ gzip twins are compared by the document they decode to, so the check does not
 depend on the local zlib. Untracked generated files (under ``feeds/``,
 ``apps/``, ``api/`` or ``apps.json``) are also reported, because an artifact
 that is not committed would silently diverge after deploy.
+
+Because the generated set embeds date-derived *values* (recency scores,
+trending/freshness windows — the build's clock, not just its stamps), the
+offline rebuild is run with ``OMNISOURCE_TODAY`` pinned to the build date
+recorded in the committed feeds: the rebuild then reproduces the committed
+state as of its own build date, so a run after UTC midnight no longer scores
+as drift. Every generator must read the date through
+``omnisource.domain.today``/``today_date`` for this to hold — a direct
+``date.today()`` anywhere shows up here as drift.
+
 
 Usage
 -----
@@ -32,6 +42,7 @@ import fnmatch
 import gzip
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -188,6 +199,37 @@ def _untracked_generated() -> list[str]:
     return [rel for rel in listed if any(_matches(rel, p) for p in TRACKED_PATTERNS)]
 
 
+_COMMITTED_DATE_RE = re.compile(r'"generatedAt":\s*"(?P<date>\d{4}-\d{2}-\d{2})"')
+
+
+def _committed_build_date() -> str | None:
+    """The build date the committed feeds were generated for.
+
+    The generated set embeds date-derived *values* (recency scores, trending
+    and freshness windows), not just date stamps, so a rebuild on a later day
+    can never byte-match — that is clock movement, not drift. The offline
+    rebuild is therefore pinned to the build date via ``OMNISOURCE_TODAY``,
+    reproducing the committed state as of its own build date.
+
+    The date is the *most common* ``generatedAt`` across the feeds, not the
+    newest: a build that straddles UTC midnight (or a single feed refreshed
+    hours later) leaves one straggler stamp that must not drag the whole
+    rebuild onto the wrong day. Ties resolve to the later date.
+    """
+    dates: list[str] = []
+    feeds = ROOT / "feeds"
+    if feeds.is_dir():
+        for path in feeds.glob("*.json"):
+            with contextlib.suppress(OSError, UnicodeDecodeError):
+                dates.extend(_COMMITTED_DATE_RE.findall(path.read_text(encoding="utf-8", errors="replace")))
+    if not dates:
+        return None
+    counts: dict[str, int] = {}
+    for date in dates:
+        counts[date] = counts.get(date, 0) + 1
+    return max(counts, key=lambda date: (counts[date], date))
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--diff", action="store_true", help="print paths that differ")
@@ -198,11 +240,19 @@ def main(argv: list[str] | None = None) -> int:
         print("check_reproducible: no generated files found", file=sys.stderr)
         return 2
 
+    env = dict(os.environ)
+    pinned = _committed_build_date()
+    if pinned:
+        # Rebuild as of the committed build date (see _committed_build_date).
+        env["OMNISOURCE_TODAY"] = pinned
+        print(f"check_reproducible: rebuilding with the committed build date ({pinned})")
+
     result = subprocess.run(
         [shutil.which("python3") or "python3", "scripts/omnisource.py", "--no-sync", "--no-health"],
         cwd=ROOT,
         capture_output=True,
         text=True,
+        env=env,
     )
     if result.returncode != 0:
         print("check_reproducible: offline build failed", file=sys.stderr)
