@@ -1,9 +1,9 @@
 {
   "name": "OmniSource IPA Downloader",
   "description": "Direct download links for every app in the OmniSource catalog, resolved from each app's official upstream and refreshed by the build pipeline. downloadURL is the newest published asset; install[] are one-tap source-add deep links per client.",
-  "generatedAt": "2026-09-18T16:33:16Z",
+  "generatedAt": "2026-09-18T19:46:45Z",
   "baseURL": "https://iamsmmh.github.io/OmniSource",
-  "count": 130,
+  "count": 131,
   "apps": [
     {
       "slug": "3105",
@@ -7188,6 +7188,69 @@
       ]
     },
     {
+      "slug": "uprovid",
+      "name": "uProVid",
+      "developer": "iamsmmh",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "version": "21.37.4",
+      "date": "2026-09-14",
+      "size": 131694546,
+      "sizeHuman": "125.6 MB",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "tintColor": "FF0000",
+      "category": "photo-video",
+      "status": "manual",
+      "minOSVersion": "17.0",
+      "clients": [
+        "altstore",
+        "sidestore",
+        "flarestore",
+        "feather",
+        "esign",
+        "ksign",
+        "livecontainer"
+      ],
+      "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/uprovid.json",
+      "install": [
+        {
+          "client": "altstore",
+          "name": "AltStore",
+          "url": "altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        },
+        {
+          "client": "sidestore",
+          "name": "SideStore",
+          "url": "sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        },
+        {
+          "client": "flarestore",
+          "name": "FlareStore",
+          "url": "flarestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        },
+        {
+          "client": "feather",
+          "name": "Feather",
+          "url": "feather://source/iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        },
+        {
+          "client": "esign",
+          "name": "ESign",
+          "url": "esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        },
+        {
+          "client": "ksign",
+          "name": "Ksign",
+          "url": "ksign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        },
+        {
+          "client": "livecontainer",
+          "name": "LiveContainer",
+          "url": "livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/uprovid.json"
+        }
+      ]
+    },
+    {
       "slug": "utm",
       "name": "UTM",
       "developer": "UTM Team",
@@ -7756,7 +7819,7 @@
     },
     {
       "slug": "youmod",
-      "name": "uPro Plus",
+      "name": "YouMod",
       "developer": "Tonwalter888",
       "bundleIdentifier": "com.google.ios.youtube",
       "version": "21.37.4",

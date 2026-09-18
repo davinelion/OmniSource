@@ -38,6 +38,11 @@ on:
         required: true
         type: string
         default: "Tweak"
+      extra_deb_urls:
+        description: "Additional .deb tweaks to inject into the same IPA, one https URL per line (empty for none)"
+        required: false
+        type: string
+        default: ""
       app_name:
         description: "CFBundleDisplayName for the patched app (leave empty to keep original)"
         required: false
@@ -63,6 +68,10 @@ on:
         required: false
         type: string
         default: "Tweak"
+      extra_deb_urls:
+        required: false
+        type: string
+        default: ""
       app_name:
         required: false
         type: string
@@ -111,6 +120,7 @@ jobs:
           IN_TWEAK_NAME: ${{ inputs.tweak_name }}
           IN_BASE_IPA_URL: ${{ inputs.base_ipa_url }}
           IN_TWEAK_DEB_URL: ${{ inputs.tweak_deb_url }}
+          IN_EXTRA_DEB_URLS: ${{ inputs.extra_deb_urls }}
         run: |
           set -euo pipefail
           case "${IN_BASE_IPA_URL}" in
@@ -121,12 +131,25 @@ jobs:
             https://*) ;;
             *) echo "::error::tweak_deb_url must be an https URL"; exit 1 ;;
           esac
+          # Extra tweaks are newline-separated; every non-empty line must be
+          # https. `<<<` passes the value as data (no shell expansion of the
+          # URLs themselves), which is what keeps this injection-safe.
+          EXTRA_COUNT=0
+          while IFS= read -r line; do
+            [ -z "${line}" ] && continue
+            EXTRA_COUNT=$((EXTRA_COUNT + 1))
+            case "${line}" in
+              https://*) ;;
+              *) echo "::error::extra_deb_urls line ${EXTRA_COUNT} must be an https URL"; exit 1 ;;
+            esac
+          done <<< "${IN_EXTRA_DEB_URLS}"
           SAFE_NAME="$(printf '%s' "${IN_TWEAK_NAME}" | tr -c 'A-Za-z0-9._-' '_' | cut -c1-64)"
           if [ -z "${SAFE_NAME}" ]; then
             echo "::error::tweak_name is empty after sanitization"
             exit 1
           fi
           echo "safe_name=${SAFE_NAME}" >> "${GITHUB_OUTPUT}"
+          echo "extra_count=${EXTRA_COUNT}" >> "${GITHUB_OUTPUT}"
 
       # Recorded sourcing verdicts apply here as well: a base IPA pulled from an
       # account-gated cracked-app storefront, or a .deb from a cracked-package
@@ -137,27 +160,45 @@ jobs:
         env:
           BASE_IPA_URL: ${{ inputs.base_ipa_url }}
           TWEAK_DEB_URL: ${{ inputs.tweak_deb_url }}
+          EXTRA_DEB_URLS: ${{ inputs.extra_deb_urls }}
         run: |
           set -euo pipefail
           export PYTHONPATH=src
-          python3 -m omnisource.source_policy check-url "${BASE_IPA_URL}" "${TWEAK_DEB_URL}"
+          URLS=("${BASE_IPA_URL}" "${TWEAK_DEB_URL}")
+          while IFS= read -r line; do
+            [ -z "${line}" ] && continue
+            URLS+=("${line}")
+          done <<< "${EXTRA_DEB_URLS}"
+          python3 -m omnisource.source_policy check-url "${URLS[@]}"
 
       - name: Download Base IPA & Deb Tweak
+        id: download
         env:
           BASE_IPA_URL: ${{ inputs.base_ipa_url }}
           TWEAK_DEB_URL: ${{ inputs.tweak_deb_url }}
+          EXTRA_DEB_URLS: ${{ inputs.extra_deb_urls }}
         run: |
           set -euo pipefail
           mkdir -p workspace
           echo "Downloading base IPA..."
           curl -fSL --proto '=https' --max-time 600 "${BASE_IPA_URL}" -o workspace/base.ipa
           echo "Downloading tweak .deb..."
-          curl -fSL --proto '=https' --max-time 600 "${TWEAK_DEB_URL}" -o workspace/tweak.deb
+          curl -fSL --proto '=https' --max-time 600 "${TWEAK_DEB_URL}" -o workspace/tweak-1.deb
+          INDEX=1
+          while IFS= read -r line; do
+            [ -z "${line}" ] && continue
+            INDEX=$((INDEX + 1))
+            echo "Downloading extra tweak .deb (${INDEX})..."
+            curl -fSL --proto '=https' --max-time 600 "${line}" -o "workspace/tweak-${INDEX}.deb"
+          done <<< "${EXTRA_DEB_URLS}"
+          echo "deb_count=${INDEX}" >> "${GITHUB_OUTPUT}"
 
       - name: Inject Tweak using Cyan
         env:
           IN_BUNDLE_ID: ${{ inputs.bundle_id }}
           IN_APP_NAME: ${{ inputs.app_name }}
+          DEB_COUNT: ${{ steps.download.outputs.deb_count }}
+        id: inject
         run: |
           set -euo pipefail
           cd workspace
@@ -175,10 +216,18 @@ jobs:
             FLAGS+=(-n "${IN_APP_NAME}")
           fi
 
-          echo "Injecting tweak with Cyan..."
-          # ${FLAGS[@]+"..."} guards empty arrays under `set -u` on the macOS
-          # runner's bash 3.2 (a bare "${FLAGS[@]}" would abort as unbound).
-          cyan -i base.ipa -o output.ipa -d tweak.deb ${FLAGS[@]+"${FLAGS[@]}"}
+          DEBS=()
+          COUNT="${DEB_COUNT}"
+          while [ "${COUNT}" -gt 0 ]; do
+            DEBS+=(-d "tweak-${COUNT}.deb")
+            COUNT=$((COUNT - 1))
+          done
+
+          echo "Injecting ${DEB_COUNT} tweak(s) with Cyan..."
+          # ${FLAGS[@]+"..."} / ${DEBS[@]+"..."} guard empty arrays under
+          # `set -u` on the macOS runner's bash 3.2 (a bare "${FLAGS[@]}"
+          # would abort as unbound).
+          cyan -i base.ipa -o output.ipa "${DEBS[@]+"${DEBS[@]}"}" ${FLAGS[@]+"${FLAGS[@]}"}
 
       - name: Upload Patched IPA Artifact
         uses: actions/upload-artifact@v7

@@ -229,39 +229,6 @@
       }
     },
     {
-      "id": "Apollo-Reborn/Apollo-Reborn",
-      "source": "Apollo-Reborn/Apollo-Reborn",
-      "publisher": "Apollo-Reborn/Apollo-Reborn",
-      "homepage": "https://github.com/Apollo-Reborn/Apollo-Reborn",
-      "sourceURL": "https://github.com/Apollo-Reborn/Apollo-Reborn",
-      "apps": [
-        "apollo"
-      ],
-      "score": 89.9,
-      "level": "TRUSTED",
-      "status": "Verified",
-      "lastUpdate": "2026-09-13",
-      "signals": {
-        "jsonValidity": 100.0,
-        "uptime": 100.0,
-        "updateFrequencyDays": 13.0,
-        "lastReleaseDaysAgo": 5,
-        "brokenLinks": 0,
-        "releasesPastYear": 3,
-        "metadataCompleteness": 96,
-        "probes": 30
-      },
-      "metrics": {
-        "uptime": 100.0,
-        "probes": 30,
-        "averageLatencyMs": 186.0,
-        "averageUpdateGapDays": 13.0,
-        "brokenReleases": 0,
-        "currentlyReachable": "1/1",
-        "legacyScore": 84.17
-      }
-    },
-    {
       "id": "https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
       "source": "927tx/IPA-Vault",
       "publisher": "927tx/IPA-Vault",
@@ -370,6 +337,39 @@
         "brokenReleases": 0,
         "currentlyReachable": "1/1",
         "legacyScore": 85.0
+      }
+    },
+    {
+      "id": "Apollo-Reborn/Apollo-Reborn",
+      "source": "Apollo-Reborn/Apollo-Reborn",
+      "publisher": "Apollo-Reborn/Apollo-Reborn",
+      "homepage": "https://github.com/Apollo-Reborn/Apollo-Reborn",
+      "sourceURL": "https://github.com/Apollo-Reborn/Apollo-Reborn",
+      "apps": [
+        "apollo"
+      ],
+      "score": 89.4,
+      "level": "TRUSTED",
+      "status": "Verified",
+      "lastUpdate": "2026-09-13",
+      "signals": {
+        "jsonValidity": 100.0,
+        "uptime": 100.0,
+        "updateFrequencyDays": 2.0,
+        "lastReleaseDaysAgo": 5,
+        "brokenLinks": 0,
+        "releasesPastYear": 2,
+        "metadataCompleteness": 96,
+        "probes": 30
+      },
+      "metrics": {
+        "uptime": 100.0,
+        "probes": 30,
+        "averageLatencyMs": 186.0,
+        "averageUpdateGapDays": 2.0,
+        "brokenReleases": 0,
+        "currentlyReachable": "1/1",
+        "legacyScore": 84.31
       }
     },
     {
@@ -3674,24 +3674,25 @@
     },
     {
       "id": "iamsmmh/OmniSource",
-      "source": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
-      "publisher": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
-      "homepage": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
-      "sourceURL": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
+      "source": "iamsmmh/OmniSource (Tweak Factory)",
+      "publisher": "iamsmmh/OmniSource (Tweak Factory)",
+      "homepage": "https://github.com/iamsmmh/OmniSource",
+      "sourceURL": "https://github.com/iamsmmh/OmniSource",
       "apps": [
+        "uprovid",
         "uyouenhanced"
       ],
-      "score": 66.4,
+      "score": 68.9,
       "level": "AVERAGE",
       "status": "Maintained",
-      "lastUpdate": "2026-08-22",
+      "lastUpdate": "2026-09-14",
       "signals": {
         "jsonValidity": 100.0,
         "uptime": 70.0,
         "updateFrequencyDays": null,
-        "lastReleaseDaysAgo": 27,
+        "lastReleaseDaysAgo": 4,
         "brokenLinks": 0,
-        "releasesPastYear": 1,
+        "releasesPastYear": 2,
         "metadataCompleteness": 96,
         "probes": 30
       },
@@ -3701,7 +3702,7 @@
         "averageLatencyMs": 780.0,
         "averageUpdateGapDays": null,
         "brokenReleases": 0,
-        "currentlyReachable": "1/1",
+        "currentlyReachable": "2/2",
         "legacyScore": 45.0
       }
     },

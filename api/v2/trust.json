@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-18",
   "totals": {
-    "apps": 130,
-    "verified": 129,
+    "apps": 131,
+    "verified": 130,
     "communityVerified": 1,
     "unverified": 0,
     "hashVerified": 81,
     "official": 111,
-    "communityBuilds": 19,
+    "communityBuilds": 20,
     "avgTrustScore": 6.87,
     "trustLevels": [
       "Verified",
@@ -2413,25 +2413,25 @@
       "trustBadge": "Community"
     },
     {
-      "app": "youmod",
-      "name": "uPro Plus",
+      "app": "uprovid",
+      "name": "uProVid",
       "status": "VERIFIED",
       "provenance": "community",
-      "hash_verified": true,
+      "hash_verified": false,
       "method": "github-release",
-      "publisher": "mrdrvt99/YouProEXTRA",
+      "publisher": "iamsmmh/OmniSource (Tweak Factory)",
       "checks": {
         "metadata": true,
         "urls": true,
         "fileAvailable": true,
-        "hashVerified": true
+        "hashVerified": false
       },
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-      "trustScore": 7.5,
-      "trustBadge": "Trusted"
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+      "trustScore": 6.0,
+      "trustBadge": "Community"
     },
     {
       "app": "utm",
@@ -2600,6 +2600,27 @@
       "downloadURL": "https://github.com/yattee/yattee/releases/download/v1.5.1/Yattee-1.5.1-iOS.ipa",
       "trustScore": 6.0,
       "trustBadge": "Community"
+    },
+    {
+      "app": "youmod",
+      "name": "YouMod",
+      "status": "VERIFIED",
+      "provenance": "community",
+      "hash_verified": true,
+      "method": "github-release",
+      "publisher": "mrdrvt99/YouProEXTRA",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (github-release)"
+      ],
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
+      "trustScore": 7.5,
+      "trustBadge": "Trusted"
     },
     {
       "app": "youpro",

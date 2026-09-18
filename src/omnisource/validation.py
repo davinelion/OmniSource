@@ -175,7 +175,7 @@ def validate_catalog(catalog: Any, *, assets_dir: Path) -> Report:
         report.extend(_validate_verification(prefix, app.get("verification")))
         report.extend(_validate_compatibility(prefix, app.get("compatibility")))
         report.extend(_validate_upstream(prefix, app))
-        report.extend(_validate_screenshots(prefix, app, catalog))
+        report.extend(_validate_screenshots(prefix, app, catalog, _screenshot_host_allowlist(assets_dir.parent)))
         report.extend(_validate_fallback_urls(prefix, app.get("fallbackDownloadURLs")))
         manual = app.get("manualRelease")
         if isinstance(manual, dict):
@@ -221,7 +221,32 @@ def _screenshot_source(app: dict[str, Any]) -> tuple[set[str], set[str]]:
     return owners, hosts
 
 
-def _validate_screenshots(prefix: str, app: dict[str, Any], catalog: dict[str, Any]) -> Report:
+SCREENSHOT_HOSTS_RELATIVE = Path("data/screenshot_hosts.json")
+
+
+def _screenshot_host_allowlist(root: Path | None) -> frozenset[str]:
+    """Hosts confirmed as the developer's own screenshot hosting.
+
+    ``data/screenshot_hosts.json`` records a reviewed decision per host (reason,
+    date, references) - the same discipline as ``source_policy.json``. A
+    missing or malformed file degrades to the previous behaviour (warn on
+    every foreign host); it never errors.
+    """
+    if root is None:
+        return frozenset()
+    try:
+        doc = json.loads((root / SCREENSHOT_HOSTS_RELATIVE).read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return frozenset()
+    hosts = doc.get("hosts") if isinstance(doc, dict) else None
+    if not isinstance(hosts, dict):
+        return frozenset()
+    return frozenset(str(name).casefold() for name in hosts)
+
+
+def _validate_screenshots(
+    prefix: str, app: dict[str, Any], catalog: dict[str, Any], allowlisted: frozenset[str] = frozenset()
+) -> Report:
     """A screenshot must come from the app's own upstream, never from us.
 
     Screenshots are the one catalogue field that can be invented without anyone
@@ -277,7 +302,7 @@ def _validate_screenshots(prefix: str, app: dict[str, Any], catalog: dict[str, A
                     "someone else's repository"
                 )
                 continue
-        elif hosts and host not in hosts:
+        elif hosts and host not in hosts and host not in allowlisted:
             report.warn(
                 f"{prefix}: screenshot host {host!r} is not the app's upstream host "
                 f"({', '.join(sorted(hosts))}) - confirm it is the developer's own hosting"

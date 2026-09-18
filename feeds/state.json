@@ -553,11 +553,11 @@
   "analyticsHistory": [
     {
       "date": "2026-09-18",
-      "apps": 130,
+      "apps": 131,
       "sources": 114,
-      "verified": 129,
+      "verified": 130,
       "deadLinks": 0,
-      "newThisWeek": 6,
+      "newThisWeek": 7,
       "updatedThisWeek": 30
     }
   ],
@@ -27468,6 +27468,16 @@
       "kind": "updated"
     },
     {
+      "appId": "uprovid",
+      "name": "uProVid",
+      "version": "21.37.4",
+      "previousVersion": null,
+      "releaseDate": "2026-09-14",
+      "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+      "changelog": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+      "kind": "new"
+    },
+    {
       "appId": "upro-plus",
       "name": "uPro Plus",
       "version": "21.37.4",
@@ -28196,18 +28206,23 @@
       "downloadUrl": "https://github.com/cranci1/Sora/releases/download/1.3.0/Sulfur.ipa",
       "changelog": "Sora 1.3.0 | Sulfur\n\n## What's New:\n- Modules Settings support\n- AniList sync (Watching/Planing collections)\n\n## Fixes:\n- Fixed search results being randomized\n- Fixed bookmark removal causing view to close\n- Fixed \"Mark as Watched\" option not showing up\n- Fixed \"Watch Next\" button choosing wrong season\n\n\n**Full Changelog**: https://github.com/cranci1/Sora/compare/1.2.0...1.3.0",
       "kind": "new"
-    },
-    {
-      "appId": "apollo",
-      "name": "Apollo",
-      "version": "3.6.0",
-      "previousVersion": null,
-      "releaseDate": "2026-08-18",
-      "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.6.0/Apollo-Reborn-3.6.0.ipa",
-      "changelog": "Apollo 3.6.0 | Apollo-Reborn-3.6.0\n\n### Features\n\n- Add **Gallery View** to the Home feed, Popular, All, Moderator Posts, and user profiles, with real video controls, rotation, and sort inherited from the feed you opened it from (#904: @icpryde)\n  - Adds a universal \"...\" menu to your own profile holding Gallery View, Edit Profile, Recently Read, hidden and deleted content, and Share Profile, so the floating Edit pill and the nav-bar clock and eye icons are gone\n- Add **Live Interactive Posts** so Reddit's Developer Platform posts — live match threads, games, and other custom widgets — render inline in comments and the feed instead of the \"not supported on old Reddit\" placeholder (#920, #939: @icpryde)\n- Add a **Feed Video Scrubber** that makes an inline video's own progress bar grabbable, so you can slide to seek without opening the player (#938: @icpryde)\n  - Adds **Unmute Videos in Feed** alongside it, with Never, Always, and Remember modes\n- Redesign the **App Icon** picker around browsable pack cards, a daily-rotating Spotlight row, an adaptive iPad grid, and clearer selection state and haptics (#912, #941: @IllIIllIllIllII)\n- Add an **Icon Appearance** menu so any icon can be pinned to its Light or Dark artwork instead of always following the device appearance (#894: @IllIIllIllIllII)\n- Add **Wallpapers** to Settings for browsing and saving Apollo's Goodbye wallpaper collections for iPhone, iPad, and Mac (#947: @IllIIllIllIllII)\n- Add a configurable **Share Link Host** so Copy Link, the share sheet, and Share as Image can share through Reddit, old.reddit, vxReddit, or fxreddit (#857: @JamesLautner)\n- Add a **Blur NSFW Media** setting with Reddit Setting, Always, and Never options, covering mature media while leaving the post title readable (#874: @jordanearle)\n- Add **Swipe Past Gallery to Navigate** so swiping past the first or last image of a feed gallery goes back or forward instead of rubber-banding (#934: @icpryde)\n- Add swipe navigation between **Notifications and Chat** in the Inbox, and keep the title from sliding across when switching tabs (#900: @icpryde)\n- Add **Prefer Native Images** to Comment Link Host, so comment images upload natively wherever a subreddit allows image comments and only fall back to the link host where it doesn't (#952: @icpryde)\n- Add the **Right to Repair** app icon, overhaul the **Classics** Liquid Glass pack with more faithful recreations and four new icons, and refresh **Synthwave** (#888, #915, #927, #928: @IllIIllIllIllII, @bajader)\n- Move **Icon-Only Tab Bar** under Settings > Interface alongside the rest of the tab bar options (#867: @JeffreyCA)\n\n### Fixes\n\n- Fix five crashes reported against 3.5.1 — Filters & Blocks Edit and the Tag Filters toggle, switching accounts from the Inbox, token refresh, and Liquid Glass nav titles — plus a crash on malformed multireddit responses (#864, #897: @jordanearle)\n- Stop hidden scrape web views letting a Reddit video ad take over the screen while **Community Highlights**, Badge Book, Social Links, User Flair, or the sidebar load in the background (#908: @jordanearle)\n- Stop the **theme crash kill-switch** disabling a custom theme after force-quits, iOS prewarm discards, or jetsams, while still tripping on a real crash loop (#923: @icpryde)\n- Fix **Community Highlights** stalling at two entries when Reddit serves its bot challenge, plus the collapsed bar's excess padding and the layout snap the first time a subreddit opens (#925, #926: @icpryde)\n- Fix **A–Z scrubbing** in the Subreddits list going dead mid-drag on non-Liquid-Glass builds, along with the black bands behind its section headers (#936: @icpryde)\n- Fix images being cropped in multi-image **feed carousels** — every page now shows the complete picture, letterboxed in the theme's card color (#922: @icpryde)\n- Fix **link previews** rendering as mojibake for pages served in a legacy charset such as EUC-KR, Shift_JIS, GB18030, or Big5 (#950: @icpryde)\n- Fix **tweet previews** not rendering at all after x.com changed its guest-token flow, and show them on posts with 40 or fewer upvotes too (#873: @DeltAndy123)\n- Fix **Picture in Picture** taking over for silent v.redd.it clips while Activate For is set to Unmuted Videos Only (#951: @JeffreyCA)\n- Play more **sports clips** inline: add MLB's cuts-diamond CDN, restore streamain posters, and follow dubz's and streamin's split CDNs instead of assuming a single host (#929, #944: @icpryde)\n- Fix Apollo's native **NSFW blur** ignoring your Reddit preference on API-Key-Free accounts, and the Search tab pill painting its light-mode color on dark themes (#866: @jordanearle)\n- Fix **custom themes** greying out primary text in Pure Black Dark Mode and leaving the GIF and gallery-count pills unreadable on compact posts (#869: @DeltAndy123)\n- Fix **Recently Read** opening with a black background and mis-sized stats, and apply custom theme text colors to the remaining tweak-owned settings rows that ignored them (#860: @JeffreyCA)\n- Fix mature listings returning the placeholder user on **API-Key-Free** accounts configured with a custom User-Agent (#889: @Thetromboneman1)\n- Fix cloud **AI Summaries** failing on newer OpenAI models, and bound streaming responses so a malformed endpoint can't exhaust memory (#887, #890: @Thetromboneman1, @jaredrossberg)\n- Improve scrolling and launch smoothness by tightening shared-state synchronization and keeping cache serialization and image decoding off the critical path (#859: @ryannair05)\n- Fix the **Public Sticky from Subreddit** row eating the gap above Cancel on the legacy \"Notify user via...\" sheet (#862: @DeltAndy123)",
-      "kind": "new"
     }
   ],
+  "uprovid": {
+    "retryCount": 0,
+    "lastResolvedSource": "manual",
+    "versions": [
+      {
+        "version": "21.37.4",
+        "date": "2026-09-14",
+        "localizedDescription": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+        "size": 131694546,
+        "minOSVersion": "17.0"
+      }
+    ],
+    "syncedAt": "2026-09-18"
+  },
   "utm": {
     "retryCount": 0,
     "versions": [

@@ -2,13 +2,24 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-18",
   "count": 5,
-  "appsAffected": 17,
+  "appsAffected": 18,
   "groups": [
     {
       "key": "com.google.ios.youtube",
       "type": "bundle-id",
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'",
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'",
       "apps": [
+        {
+          "app": "uprovid",
+          "name": "uProVid",
+          "version": "21.37.4",
+          "releaseDate": "2026-09-14",
+          "source": "iamsmmh/OmniSource (Tweak Factory)",
+          "developer": "iamsmmh",
+          "category": "photo-video",
+          "status": "manual",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa"
+        },
         {
           "app": "uyouenhanced",
           "name": "uYouEnhanced",
@@ -66,7 +77,7 @@
         },
         {
           "app": "youmod",
-          "name": "uPro Plus",
+          "name": "YouMod",
           "version": "21.37.4",
           "releaseDate": "2026-09-14",
           "source": "mrdrvt99/YouProEXTRA",
@@ -88,8 +99,8 @@
         }
       ],
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
@@ -263,82 +274,93 @@
     }
   ],
   "bySlug": {
+    "uprovid": {
+      "groupKey": "com.google.ios.youtube",
+      "type": "bundle-id",
+      "recommended": {
+        "app": "uprovid",
+        "name": "uProVid",
+        "version": "21.37.4",
+        "reason": "Newest version available (21.37.4, released 2026-09-14)"
+      },
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
+    },
     "uyouenhanced": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "ytlite": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "youpro": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "ytkp": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "ytkace": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "youmod": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "maxtube": {
       "groupKey": "com.google.ios.youtube",
       "type": "bundle-id",
       "recommended": {
-        "app": "youpro",
-        "name": "YouPro",
+        "app": "uprovid",
+        "name": "uProVid",
         "version": "21.37.4",
         "reason": "Newest version available (21.37.4, released 2026-09-14)"
       },
-      "reason": "7 apps share bundle identifier 'com.google.ios.youtube'"
+      "reason": "8 apps share bundle identifier 'com.google.ios.youtube'"
     },
     "bhtwitter": {
       "groupKey": "com.atebits.Tweetie2",

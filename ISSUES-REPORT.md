@@ -11,6 +11,20 @@ the ones those checks cannot see.
 
 ---
 
+## Status (2026-09-18, branch `arena/01a0b522-omnisource`)
+
+| Item | Status | What happened |
+| --- | --- | --- |
+| F8 screenshot-host advisories | **Fixed** | The 15 standing `validate.py` warnings (hosts not equal to the app's upstream host) are now resolved by an explicit, dated allowlist: `data/screenshot_hosts.json` records the reviewed decision per host (`repo.ikghd.me` — iKarwan's depiction server, `apps.sidestore.io` — SideStore's own domain, `aidoku.app` — Aidoku's project site). `validate.py` reads it via `_screenshot_host_allowlist()`; anything not listed still warns. `validate.py` now reports **0 errors, 0 warnings**; `tests/test_screenshot_provenance.py` pins the allowlist shape, the no-warning outcome, and the fallback when the file is missing |
+| F4 #6 home weight | **Budget pinned** | New `TestHomeWeightBudget` in `tests/test_website_shell.py`: the home page's first-paint JSON (catalog + `apps.json` + every feed declared `firstPaint: true` in `js/site.js`) must stay under 2 MiB (measured baseline 2026-09-18: ~1.47 MiB — well below the 2.4 MiB that motivated the report), and `apps.json` must not embed per-app release histories |
+| F2 flaky `Sync & Publish` | **Observable, no recurrence since the fix window** | The 09-16/17 failure window predates the observability step; the `sync.yml` "Build feeds" step tees the pipeline to a log, and two `if: failure()` steps raise an `::error::` annotation with the log tail and upload `pipeline-log-<run_id>` as an artifact (verified present in the committed workflow). Runs checked green through 2026-09-18T15:33Z; the next real failure will be diagnosable from annotations without Azure blob access. Root cause remains unverified — there is nothing left to fix until it fails again |
+| F4 #4 / #5 / #11 / #12 (hero clipping, `/sources/` 320 px, contrast, target sizes) | **Open — needs a layout engine** | Verified-against-code items only; this checkout has no browser or rendering engine, and the repo's own rule is not to claim pixel or contrast fixes from reading CSS. Unchanged by design |
+| F4 #7 hot-linked media | **By design, now reviewed** | Catalog icons/screenshots intentionally point at developer-owned hosting (the provenance rule in `validation.py` plus the new host allowlist are the review surface); nothing to fix in code |
+| F5 reputation cadence | **Open — retention decision** | The 70 null-cadence sources need per-app release history (a retention knob), which this report explicitly says is not a formula bug. Left as-is |
+| uPro Plus naming | **Reverted** | The `youmod` catalog entry is named **YouMod** again (slug, feed URLs and upstream unchanged); the new **uProVid** app ships with the Tweak Factory `build` helper — see `docs/TWEAK-FACTORY.md` |
+
+---
+
 ## Status (reviewed 2026-09-13, branch `arena/01a09925-omnisource`)
 
 This table is the audit's own ledger, kept current so the document says what the

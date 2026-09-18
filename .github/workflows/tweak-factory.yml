@@ -100,6 +100,8 @@ jobs:
       M_DEB_URL: ${{ matrix.deb_url }}
       M_DEB_VERSION: ${{ matrix.deb_version }}
       M_DEB_NAME: ${{ matrix.deb_name }}
+      M_EXTRA_DEB_URLS: ${{ matrix.extra_deb_urls }}
+      M_EXTRA_DEBS_JSON: ${{ matrix.extra_debs_json }}
       M_BASE_APP: ${{ matrix.base_app }}
       M_BASE_URL: ${{ matrix.base_url }}
       M_BASE_VERSION: ${{ matrix.base_version }}
@@ -119,6 +121,7 @@ jobs:
           base_ipa_url: ${{ matrix.base_url }}
           tweak_deb_url: ${{ matrix.deb_url }}
           tweak_name: ${{ matrix.name }}
+          extra_deb_urls: ${{ matrix.extra_deb_urls }}
           app_name: ${{ matrix.app_name }}
           bundle_id: ${{ matrix.bundle_id }}
 
@@ -137,10 +140,33 @@ jobs:
           # about to be downloaded again and published.
           export PYTHONPATH=src
           python3 -m omnisource.source_policy check-url "${M_BASE_URL}" "${M_DEB_URL}"
+          while IFS= read -r EXTRA_URL; do
+            [ -z "${EXTRA_URL}" ] && continue
+            python3 -m omnisource.source_policy check-url "${EXTRA_URL}"
+          done <<< "${M_EXTRA_DEB_URLS}"
 
           # sha256 of the exact deb that will be recorded in the state file.
           curl -fsSL --proto '=https' --max-time 600 "${M_DEB_URL}" -o /tmp/tweak.deb
           DEB_SHA="$(shasum -a 256 /tmp/tweak.deb | awk '{print $1}')"
+
+          # Extra tweaks: hash each exact .deb and fill the digests into the
+          # plan's extra_debs_json (sha256 starts empty at plan time).
+          EXTRA_DEBS_JSON=""
+          if [ -n "${M_EXTRA_DEB_URLS}" ]; then
+            mkdir -p /tmp/extras
+            printf '%s' "${M_EXTRA_DEBS_JSON}" > /tmp/extras/plan.json
+            INDEX=0
+            while IFS= read -r EXTRA_URL; do
+              [ -z "${EXTRA_URL}" ] && continue
+              INDEX=$((INDEX + 1))
+              curl -fsSL --proto '=https' --max-time 600 "${EXTRA_URL}" -o "/tmp/extras/${INDEX}.deb"
+              EXTRA_SHA="$(shasum -a 256 "/tmp/extras/${INDEX}.deb" | awk '{print $1}')"
+              # One-liner on purpose: a heredoc here would terminate the YAML
+              # block scalar (actionlint caught exactly that).
+              python3 -c 'import json,sys; p,i,s = sys.argv[1],int(sys.argv[2]),sys.argv[3]; d = json.load(open(p,encoding="utf-8")); d[i-1]["sha256"] = s; open(p,"w",encoding="utf-8").write(json.dumps(d,sort_keys=True))' /tmp/extras/plan.json "${INDEX}" "${EXTRA_SHA}"
+            done <<< "${M_EXTRA_DEB_URLS}"
+            EXTRA_DEBS_JSON="$(cat /tmp/extras/plan.json)"
+          fi
 
           python3 scripts/tweak_factory.py publish \
             --slug "${M_SLUG}" \
@@ -154,6 +180,7 @@ jobs:
             --ipa "${IPA}" \
             --asset-name "${M_ASSET_NAME}" \
             --run-url "${RUN_URL}" \
+            --extra-debs-json "${EXTRA_DEBS_JSON}" \
             --fragment "state-${M_SLUG}.json"
 
           python3 scripts/tweak_factory.py notes \
@@ -168,7 +195,8 @@ jobs:
             --base-url "${M_BASE_URL}" \
             --asset-name "${M_ASSET_NAME}" \
             --ipa "${IPA}" \
-            --run-url "${RUN_URL}" > notes.md
+            --run-url "${RUN_URL}" \
+            --extra-debs-json "${EXTRA_DEBS_JSON}" > notes.md
 
           cp "${IPA}" "${M_ASSET_NAME}"
           FLAGS=()

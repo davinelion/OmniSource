@@ -235,5 +235,49 @@ class ShippedTreeTests(unittest.TestCase):
                 self.assertTrue(all(str(u).startswith("https://") for u in shots), shots)
 
 
+class ScreenshotHostAllowlistTests(unittest.TestCase):
+    """data/screenshot_hosts.json is the reviewed exception to the own-upstream-host rule."""
+
+    def test_the_shipped_allowlist_covers_only_confirmed_developer_hosts(self) -> None:
+        from omnisource.validation import _screenshot_host_allowlist
+
+        allowlist = _screenshot_host_allowlist(ROOT)
+        self.assertEqual(allowlist, frozenset({"repo.ikghd.me", "apps.sidestore.io", "aidoku.app"}))
+
+    def test_the_shipped_catalog_no_longer_warns_on_confirmed_hosts(self) -> None:
+        catalog = json.loads((ROOT / "catalog.json").read_text(encoding="utf-8"))
+        report = validate_catalog(catalog, assets_dir=ROOT / "assets")
+        self.assertEqual(
+            [warning for warning in report.warnings if "screenshot host" in warning],
+            [],
+            "every catalog screenshot host must be the app's upstream host or reviewed in data/screenshot_hosts.json",
+        )
+
+    def test_a_foreign_host_not_on_the_allowlist_still_warns(self) -> None:
+        report = validate_catalog(
+            _catalog(_app(screenshots=["https://screenshots.example.net/app/shot.png"])),
+            assets_dir=ROOT / "assets",
+        )
+        self.assertTrue(any("screenshot host" in warning for warning in report.warnings), report.warnings)
+
+    def test_an_allowlisted_foreign_host_does_not_warn(self) -> None:
+        report = validate_catalog(
+            _catalog(_app(screenshots=["https://aidoku.app/screenshots/shot.png"])),
+            assets_dir=ROOT / "assets",
+        )
+        self.assertFalse(any("screenshot host" in warning for warning in report.warnings), report.warnings)
+
+    def test_a_missing_allowlist_file_falls_back_to_warning(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "assets").mkdir()
+            (root / "data").mkdir()  # deliberately no screenshot_hosts.json
+            report = validate_catalog(
+                _catalog(_app(screenshots=["https://aidoku.app/screenshots/shot.png"])),
+                assets_dir=root / "assets",
+            )
+            self.assertTrue(any("screenshot host" in warning for warning in report.warnings), report.warnings)
+
+
 if __name__ == "__main__":  # pragma: no cover
     unittest.main()

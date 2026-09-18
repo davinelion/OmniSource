@@ -1,49 +1,29 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "d72d28da07e1",
+  "feedVersion": "6ef0755cf2e7",
   "data": {
-    "name": "uPro Plus",
+    "name": "uProVid",
     "bundleIdentifier": "com.google.ios.youtube",
-    "developerName": "Tonwalter888",
-    "subtitle": "YouTube 21.37.4 extra-tweaks build (YouMod + player stack)",
-    "localizedDescription": "uPro Plus is OmniSource's featured YouTube 21.37.4 extra-tweaks IPA. It is the YouProEXTRA YouMod 2.0.0 line on YouTube 21.37.4 with the extra player stack that release publishes: YouPip (Picture-in-Picture), YouQuality and YouChooseQuality, YTHoldForSpeed, YouGetCaption, YTABConfig, YTNativeShare, YTweaks, Return YouTube Dislike, DontEatMyContent, Gonerino, VolumeBoostYT and PleaseDontStopTheMusic. 120 Hz display refresh is used when the device supports it. Native 4K is available on A16+ devices; YTUHD is not bundled on this YouTube version. Requires iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time. YTLite, YTKACE and YouMod are competing main tweaks; stacking all three in one IPA is unstable, so this listing follows the extra-tweaks YouMod 21.37.4 release.",
+    "developerName": "iamsmmh",
+    "subtitle": "Your YouTube, your tweaks: base IPA + the mods you pick",
+    "localizedDescription": "uProVid is a build-it-yourself YouTube mod. Bring your own decrypted YouTube base IPA (local file or link), pick the tweaks you want - YouMod and YTLite resolve from their official upstream releases, anything else by direct .deb link - set the app name, bundle ID and version, and the Tweak Factory injects the selection with Cyan and publishes the result back to this source as a provenance-tagged release with digests. Until the first uProVid factory build ships (tag tweak-build/uprovid/* in this repository), the listing serves ASJTube 1.2.1 on YouTube 21.37.4 - the same publisher's ready-to-sideload YouTube enhancer with the YouPip / YouQuality / dislikes/privacy tweak stack - as a stand-in. Build one: python3 scripts/tweak_factory.py build (docs/TWEAK-FACTORY.md). Requires iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time.",
     "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
     "tintColor": "FF0000",
     "category": "photo-video",
     "version": "21.37.4",
     "versionDate": "2026-09-14",
-    "versionDescription": "YouTube 21.37.4 | uPro Plus extra tweaks | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-    "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-    "size": 129607592,
+    "versionDescription": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+    "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+    "size": 131694546,
     "versions": [
       {
         "version": "21.37.4",
         "date": "2026-09-14",
-        "localizedDescription": "YouTube 21.37.4 | uPro Plus extra tweaks | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-        "size": 129607592,
-        "minOSVersion": "17.0",
-        "releaseUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youmod-ipa2",
-        "source": "github",
-        "isPrerelease": false,
-        "isDraft": false,
-        "assets": [
-          {
-            "filename": "YouMod_21.37.4_2.0.0.ipa",
-            "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-            "platform": "ios",
-            "architecture": null,
-            "fileType": "IPA",
-            "size": 129607592,
-            "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-            "downloads": 301,
-            "mimeType": "application/octet-stream",
-            "installable": true
-          }
-        ],
-        "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-        "downloads": 301
+        "localizedDescription": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+        "size": 131694546,
+        "minOSVersion": "17.0"
       }
     ],
     "screenshotURLs": [],
@@ -73,14 +53,14 @@
       }
     },
     "omnisource": {
-      "slug": "youmod",
-      "status": "stable",
-      "featured": true,
-      "upstreamURL": "https://github.com/Tonwalter888/YouMod",
-      "sourceURL": "https://github.com/mrdrvt99/YouProEXTRA",
+      "slug": "uprovid",
+      "status": "manual",
+      "featured": false,
+      "upstreamURL": "https://github.com/iamsmmh/OmniSource",
+      "sourceURL": "https://github.com/iamsmmh/OmniSource",
       "verification": {
         "method": "github-release",
-        "publisher": "mrdrvt99/YouProEXTRA",
+        "publisher": "iamsmmh/OmniSource (Tweak Factory)",
         "codeSigned": false,
         "checksumPublished": false
       },
@@ -100,12 +80,12 @@
           "ksign",
           "livecontainer"
         ],
-        "notes": "Requires iOS 17.0+ (YouTube 21.34.3+). Served from mrdrvt99/YouProEXTRA tags youmod-ipa* (YouMod_21.37.4_2.0.0 extra-tweaks IPA). Catalog name is uPro Plus; slug remains youmod for stable feed URLs. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
+        "notes": "Self-built lane: the base IPA is operator-supplied (a decrypted YouTube dump) and the tweaks are collected from their official upstreams by the Tweak Factory, then injected with Cyan. Factory builds publish under tag tweak-build/uprovid/* in this repository and take over automatically; until then the manualRelease stand-in below is served. Bases of YouTube 21.34.3+ require iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
       },
       "health": {
         "downloadReachable": true,
-        "detail": "HTTP 302",
-        "statusSince": "2026-09-07",
+        "detail": "not probed",
+        "statusSince": "2026-09-14",
         "lastUpdatedAt": "2026-09-14"
       }
     },

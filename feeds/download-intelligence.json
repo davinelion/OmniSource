@@ -5,7 +5,7 @@
   "summary": {
     "averageAvailability": 95.16,
     "averageResponseTimeMs": 281.8,
-    "mirrorCount": 133,
+    "mirrorCount": 134,
     "probes": 3509
   },
   "apps": [
@@ -66,7 +66,7 @@
     },
     {
       "slug": "youmod",
-      "name": "uPro Plus",
+      "name": "YouMod",
       "availability": 100.0,
       "probes": 30,
       "averageLatencyMs": 227.8,
@@ -1442,6 +1442,17 @@
       "mirrorCount": 1,
       "releaseConsistency": 0.0,
       "primaryURL": "https://source.ryuksign.com/ipas/86bd8282219bf3b32dca.ipa",
+      "fallbackURLs": []
+    },
+    {
+      "slug": "uprovid",
+      "name": "uProVid",
+      "availability": 0.0,
+      "probes": 0,
+      "averageLatencyMs": null,
+      "mirrorCount": 1,
+      "releaseConsistency": 0.0,
+      "primaryURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
       "fallbackURLs": []
     }
   ]
