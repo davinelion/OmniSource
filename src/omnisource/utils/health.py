@@ -6,9 +6,10 @@ Extracted from the near-identical window logic in ``reputation.py`` and
 
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import timedelta
 from typing import Any
 
+from omnisource.domain import today_date
 from omnisource.utils.dates import parse_date
 
 WINDOW_DAYS = 30
@@ -23,7 +24,7 @@ def probe_window(app_state: dict[str, Any]) -> tuple[int, int, float | None]:
     history = app_state.get("healthHistory") or []
     if not isinstance(history, list):
         return 0, 0, None
-    cutoff = date.today() - timedelta(days=WINDOW_DAYS)
+    cutoff = today_date() - timedelta(days=WINDOW_DAYS)
     total = 0
     reachable = 0
     latencies: list[int] = []

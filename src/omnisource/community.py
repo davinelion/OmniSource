@@ -16,10 +16,10 @@ Lists produced:
 
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import timedelta
 from typing import Any
 
-from omnisource.domain import Catalog, today
+from omnisource.domain import Catalog, today, today_date
 from omnisource.utils.dates import parse_date as _parse_date
 
 COMMUNITY_SCHEMA_VERSION = 1
@@ -40,7 +40,7 @@ def _popularity(state: dict[str, Any], slug: str) -> float:
         newest_date = _parse_date(versions[0].get("date"))
     recency = 0.0
     if newest_date is not None:
-        days = max(0, (date.today() - newest_date).days)
+        days = max(0, (today_date() - newest_date).days)
         recency = max(0.0, 1.0 - (days / 60))
     return round(0.65 * availability + 0.35 * recency, 4)
 
@@ -50,7 +50,7 @@ def _rising_signal(state: dict[str, Any], slug: str) -> float:
     versions = (state.get(slug) or {}).get("versions") or []
     if not isinstance(versions, list):
         return 0.0
-    now = date.today()
+    now = today_date()
     this_month = sum(
         1
         for v in versions
@@ -73,7 +73,7 @@ def build_community_doc(
     state: dict[str, Any],
 ) -> dict[str, Any]:
     """Build ``feeds/community.json``."""
-    cutoff_recent = date.today() - timedelta(days=14)
+    cutoff_recent = today_date() - timedelta(days=14)
     popular: list[dict[str, Any]] = []
     recently_added: list[dict[str, Any]] = []
     rising: list[dict[str, Any]] = []

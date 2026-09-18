@@ -14,10 +14,10 @@ so dashboards can show trends without extra storage.
 
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import timedelta
 from typing import Any
 
-from omnisource.domain import Catalog, today
+from omnisource.domain import Catalog, today, today_date
 from omnisource.utils.dates import parse_date as _date
 
 ANALYTICS_SCHEMA_VERSION = 1
@@ -28,7 +28,7 @@ def _week_events(state: dict[str, Any], kind: str, *, days: int = 7) -> list[dic
     history = state.get("updateHistory", [])
     if not isinstance(history, list):
         return []
-    cutoff = date.today() - timedelta(days=days)
+    cutoff = today_date() - timedelta(days=days)
     events: list[dict[str, Any]] = []
     for item in history:
         if not isinstance(item, dict) or item.get("kind") != kind:

@@ -48,10 +48,11 @@ import json
 import re
 import shutil
 import sys
-from datetime import date
 from html import escape
 from pathlib import Path
 from typing import Any
+
+from omnisource.domain import today
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_OUTPUT = ROOT / "_site"
@@ -527,7 +528,7 @@ def _publish_api_mirror(root: Path, api_dir: Path, *, brotli: bool) -> dict[str,
     v2_apps_written = _publish_v2_contract(root, v2_dir, publish_v2, v2_written)
 
     manifest_path = api_dir / "index.json"
-    manifest = _api_manifest(_base_url_from_catalog(root), date.today().isoformat())
+    manifest = _api_manifest(_base_url_from_catalog(root), today())
     manifest_payload = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
     if not manifest_path.exists() or manifest_path.read_text(encoding="utf-8") != manifest_payload:
         changed.append(manifest_path)
@@ -668,7 +669,7 @@ def _publish_v2_graph(root: Path, v2_dir: Path, written_set: set[str]) -> None:
 
     payload = {
         "schemaVersion": 2,
-        "generatedAt": date.today().isoformat(),
+        "generatedAt": today(),
         "count": len(nodes),
         "edgeCount": len(edges),
         "nodes": nodes,
@@ -889,7 +890,7 @@ def publish_repo_artifacts(
         _sitemap(
             base_url,
             _app_slugs(root),
-            date.today().isoformat(),
+            today(),
             compare_pairs=_compare_pairs(root),
             collection_slugs=_collection_slugs(root),
             source_slugs=_source_slugs(root),
@@ -948,7 +949,7 @@ def build_site(output: Path, *, root: Path | None = None) -> dict[str, Any]:
     if output == root or root not in output.parents:
         raise ValueError("output must be a directory inside the repository")
 
-    today = date.today().isoformat()
+    build_date = today()
     base_url = _base_url_from_catalog(root)
     slugs = _app_slugs(root)
 
@@ -1005,7 +1006,7 @@ def build_site(output: Path, *, root: Path | None = None) -> dict[str, Any]:
         _sitemap(
             base_url,
             slugs,
-            today,
+            build_date,
             compare_pairs=_compare_pairs(root),
             collection_slugs=_collection_slugs(root),
             source_slugs=_source_slugs(root),
