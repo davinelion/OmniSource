@@ -2,7 +2,7 @@
   "name": "omnisource-web",
   "private": true,
   "version": "3.2.0",
-  "description": "OmniSource modern website (Next.js 15 + TypeScript + Tailwind PWA)",
+  "description": "OmniSource modern website (Next.js 16 + TypeScript + Tailwind PWA)",
   "scripts": {
     "sync-data": "node scripts/sync-data.mjs",
     "predev": "npm run sync-data",
@@ -14,23 +14,22 @@
     "lint": "npm run sync-data && eslint src"
   },
   "dependencies": {
-    "next": "^15.3.0",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "next": "^16.3.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "overrides": {
     "postcss": "^8.5.28"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.7",
     "@tailwindcss/postcss": "^4.1.0",
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.1.0",
-    "@types/react-dom": "^19.1.0",
-    "eslint": "^9.0.0",
-    "eslint-config-next": "^15.3.0",
+    "@types/node": "^26.6.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.5",
     "jsdom": "^30.1.0",
     "tailwindcss": "^4.1.0",
-    "typescript": "^5.8.0"
+    "typescript": "^6.0.3"
   }
 }

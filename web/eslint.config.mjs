@@ -1,11 +1,9 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
 
-const compat = new FlatCompat({ baseDirectory: dirname(fileURLToPath(import.meta.url)) });
-
+// eslint-config-next ships a flat config array (no @eslint/eslintrc bridge
+// needed); ESLint 10 dropped the legacy eslintrc path that `FlatCompat` used.
 const config = [
-  ...compat.extends("next/core-web-vitals"),
+  ...nextCoreWebVitals,
   {
     ignores: ["node_modules/**", ".next/**", "out/**", "src/data/**", "public/data/**"],
   },

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useId, useState } from "react";
+import { useId, useState } from "react";
 
 /**
  * Search input.
@@ -22,10 +22,18 @@ export default function SearchBox({
   submitLabel?: string;
 }) {
   const [value, setValue] = useState(initial);
+  const [renderedInitial, setRenderedInitial] = useState(initial);
   const router = useRouter();
   const inputId = useId();
 
-  useEffect(() => setValue(initial), [initial]);
+  /* The server is the source of truth: when the page renders /search?q=… with
+     a different query, the box follows it. Adjusting during render (rather
+     than from an effect) is React's documented pattern for deriving state from
+     a prop, and it avoids the extra render pass effects would cause. */
+  if (renderedInitial !== initial) {
+    setRenderedInitial(initial);
+    setValue(initial);
+  }
 
   return (
     <form

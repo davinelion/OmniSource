@@ -35,11 +35,12 @@ export default function Toast({
 
   useEffect(() => {
     if (timer.current) clearTimeout(timer.current);
-    if (!state) {
-      setVisible(false);
-      return;
-    }
-    setVisible(true);
+    if (!state) return;
+    /* Flip the enter transition on the next frame instead of synchronously:
+       a synchronous setState in an effect cascades a second render pass, and
+       the element has to be painted in its offscreen class first for the
+       transition to run at all. */
+    const frame = requestAnimationFrame(() => setVisible(true));
     if (!state.persistent) {
       timer.current = setTimeout(() => {
         setVisible(false);
@@ -48,6 +49,7 @@ export default function Toast({
       }, 2600);
     }
     return () => {
+      cancelAnimationFrame(frame);
       if (timer.current) clearTimeout(timer.current);
     };
   }, [state, onDismiss]);
