@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-17",
-  "feedVersion": "a391f6e0b2d4",
+  "generatedAt": "2026-09-18",
+  "feedVersion": "89ca8a1d5364",
   "app": {
     "id": "infuseplus",
     "name": "Infuse Plus",
     "developer": "dayanch96 & IPA Vault",
     "subtitle": "Enhancer tweak for the Infuse video player",
     "bundleIdentifier": "com.firecore.infuse",
-    "version": "8.5.3",
-    "versionDate": "2026-09-01",
+    "version": "8.5.5",
+    "versionDate": "2026-09-16",
     "description": "Infuse Plus (by Dayanch96) enhances the Infuse video player with extra appearance options, app icon choices and playback quality-of-life improvements on top of the stock Infuse 8 app. The build follows the latest Infuse release.",
     "shortDescription": "Enhancer tweak for the Infuse video player",
     "category": "photo-video",
@@ -18,8 +18,8 @@
     ],
     "icon": "https://iamsmmh.github.io/OmniSource/assets/Infuse.webp",
     "screenshots": [],
-    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-    "size": 100074036,
+    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+    "size": 99611121,
     "source": "927tx/IPA-Vault",
     "sourceURL": "https://github.com/dayanch96/InfusePlus",
     "checksum": null,
@@ -30,30 +30,30 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/infuseplus/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/infuseplus.json",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "updatedAt": "2026-09-01"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "updatedAt": "2026-09-16"
     }
   },
   "newest": {
-    "version": "8.5.3",
-    "date": "2026-09-01",
-    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-    "size": 100074036,
+    "version": "8.5.5",
+    "date": "2026-09-16",
+    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+    "size": 99611121,
     "sha256": null
   },
   "versions": [
     {
-      "version": "8.5.3",
-      "date": "2026-09-01",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-      "size": 100074036,
+      "version": "8.5.5",
+      "date": "2026-09-16",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+      "size": 99611121,
       "sha256": null
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }

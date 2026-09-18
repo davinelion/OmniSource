@@ -36,8 +36,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 187,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 58,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -69,6 +69,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 187,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 58,
         "detail": "HTTP 302"
       }
     ]
@@ -110,16 +116,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 248,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 66,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 182,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -293,6 +293,12 @@
         "reachable": true,
         "latencyMs": 248,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 66,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Aidoku/Aidoku",
@@ -345,8 +351,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 286,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 98,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -391,18 +397,24 @@
         "reachable": true,
         "latencyMs": 286,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 98,
+        "detail": "HTTP 302"
       }
     ]
   },
   "analyticsHistory": [
     {
-      "date": "2026-09-17",
+      "date": "2026-09-18",
       "apps": 130,
       "sources": 114,
-      "verified": 111,
-      "deadLinks": 19,
+      "verified": 129,
+      "deadLinks": 0,
       "newThisWeek": 5,
-      "updatedThisWeek": 26
+      "updatedThisWeek": 28
     }
   ],
   "animationspeed": {
@@ -453,8 +465,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 217,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 101,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -474,6 +486,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 217,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 101,
         "detail": "HTTP 302"
       }
     ]
@@ -514,8 +532,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 179,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 105,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -637,6 +655,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 179,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 105,
         "detail": "HTTP 302"
       }
     ],
@@ -798,17 +822,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 208,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 102,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 239,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -981,6 +999,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 208,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 102,
         "detail": "HTTP 302"
       }
     ],
@@ -1166,17 +1190,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 183,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 67,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 234,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -1350,6 +1368,12 @@
         "reachable": true,
         "latencyMs": 183,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 67,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1389,7 +1413,7 @@
             "fileType": "ZIP",
             "size": 20365290,
             "sha256": "3852fb61c3f2294359cca0683719d51ea4b57d97c8f79467f4d0cd4c163f45fc",
-            "downloads": 24,
+            "downloads": 26,
             "mimeType": "application/zip",
             "installable": false
           },
@@ -1401,7 +1425,7 @@
             "fileType": "IPA",
             "size": 114471562,
             "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-            "downloads": 1446,
+            "downloads": 1491,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1413,7 +1437,7 @@
             "fileType": "IPA",
             "size": 124722640,
             "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-            "downloads": 3150,
+            "downloads": 3249,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1425,7 +1449,7 @@
             "fileType": "IPA",
             "size": 114471417,
             "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-            "downloads": 58,
+            "downloads": 62,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1437,7 +1461,7 @@
             "fileType": "IPA",
             "size": 124722495,
             "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-            "downloads": 113,
+            "downloads": 116,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1449,7 +1473,7 @@
             "fileType": "IPA",
             "size": 85880995,
             "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-            "downloads": 358,
+            "downloads": 372,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1461,7 +1485,7 @@
             "fileType": "IPA",
             "size": 96132071,
             "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-            "downloads": 540,
+            "downloads": 563,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1473,7 +1497,7 @@
             "fileType": "DEB",
             "size": 12186352,
             "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-            "downloads": 23,
+            "downloads": 24,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1485,30 +1509,24 @@
             "fileType": "DEB",
             "size": 12187106,
             "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-            "downloads": 26,
+            "downloads": 27,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-        "downloads": 540
+        "downloads": 563
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 221,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 89,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 220,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -1682,6 +1700,12 @@
         "reachable": true,
         "latencyMs": 221,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 89,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1746,8 +1770,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 209,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 66,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -1792,6 +1816,12 @@
         "reachable": true,
         "latencyMs": 209,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 66,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -1832,8 +1862,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 267,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 101,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -1853,6 +1883,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 267,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 101,
         "detail": "HTTP 302"
       }
     ]
@@ -1918,8 +1954,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 268,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 118,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -1951,6 +1987,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 268,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 118,
         "detail": "HTTP 302"
       }
     ]
@@ -2027,8 +2069,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 271,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -2072,6 +2114,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 271,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
         "detail": "HTTP 302"
       }
     ]
@@ -2148,16 +2196,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 310,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 214,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -2331,6 +2373,12 @@
         "reachable": true,
         "latencyMs": 310,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:BandarHL/BHTwitter",
@@ -2420,17 +2468,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 201,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 91,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 222,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -2604,6 +2646,12 @@
         "reachable": true,
         "latencyMs": 201,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2656,17 +2704,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 204,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 92,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 246,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -2840,6 +2882,12 @@
         "reachable": true,
         "latencyMs": 204,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 92,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2892,8 +2940,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 271,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 90,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -2938,6 +2986,12 @@
         "reachable": true,
         "latencyMs": 271,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 90,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -2977,8 +3031,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 287,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 108,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -3022,6 +3076,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 287,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 108,
         "detail": "HTTP 302"
       }
     ]
@@ -3074,8 +3134,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 199,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -3120,6 +3180,12 @@
         "reachable": true,
         "latencyMs": 199,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -3142,11 +3208,11 @@
     ],
     "syncedAt": "2026-09-17",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1673,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 302",
+      "latencyMs": 831,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
       {
@@ -3166,6 +3232,12 @@
         "reachable": false,
         "latencyMs": 1673,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 831,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -3242,8 +3314,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 287,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 99,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -3366,6 +3438,12 @@
         "reachable": true,
         "latencyMs": 287,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 99,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3430,8 +3508,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 258,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 99,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -3554,6 +3632,12 @@
         "reachable": true,
         "latencyMs": 258,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 99,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3654,17 +3738,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 223,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 198,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -3838,6 +3916,12 @@
         "reachable": true,
         "latencyMs": 223,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3890,8 +3974,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 270,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 102,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -4014,6 +4098,12 @@
         "reachable": true,
         "latencyMs": 270,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 102,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -4065,8 +4155,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 250,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 92,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -4111,6 +4201,12 @@
         "reachable": true,
         "latencyMs": 250,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 92,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -4150,17 +4246,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 211,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 63,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 274,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -4334,6 +4424,12 @@
         "reachable": true,
         "latencyMs": 211,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 63,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -4422,17 +4518,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 192,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 70,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 234,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -4606,6 +4696,12 @@
         "reachable": true,
         "latencyMs": 192,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 70,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -4670,17 +4766,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 186,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 69,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 197,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -4854,6 +4944,12 @@
         "reachable": true,
         "latencyMs": 186,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 69,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -4918,17 +5014,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 203,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 91,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 213,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -5102,6 +5192,12 @@
         "reachable": true,
         "latencyMs": 203,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5153,8 +5249,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 199,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 90,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -5199,6 +5295,12 @@
         "reachable": true,
         "latencyMs": 199,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 90,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -5238,8 +5340,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 315,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -5259,6 +5361,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 315,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
         "detail": "HTTP 302"
       }
     ]
@@ -5324,8 +5432,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 206,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -5357,6 +5465,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 206,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
         "detail": "HTTP 302"
       }
     ]
@@ -5410,16 +5524,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 202,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 75,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 190,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -5592,6 +5700,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 202,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 75,
         "detail": "HTTP 302"
       }
     ],
@@ -5790,17 +5904,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 200,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 86,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 200,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -5974,6 +6082,12 @@
         "reachable": true,
         "latencyMs": 200,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 86,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5990,7 +6104,7 @@
     }
   },
   "glow": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
@@ -6022,19 +6136,13 @@
     ],
     "syncedAt": "2026-09-10",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1770,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 121,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 473,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -6208,6 +6316,12 @@
         "reachable": false,
         "latencyMs": 1770,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 121,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -6221,8 +6335,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 7217
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "gopeed": {
     "retryCount": 0,
@@ -6609,17 +6722,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 1354,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 90,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 213,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -6793,6 +6900,12 @@
         "reachable": true,
         "latencyMs": 1354,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 90,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6844,8 +6957,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 196,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 103,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -6968,6 +7081,12 @@
         "reachable": true,
         "latencyMs": 196,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -7019,8 +7138,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 260,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 79,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -7065,11 +7184,17 @@
         "reachable": true,
         "latencyMs": 260,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 79,
+        "detail": "HTTP 302"
       }
     ]
   },
   "ime": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
@@ -7101,19 +7226,13 @@
     ],
     "syncedAt": "2026-09-10",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1726,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 118,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 137,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -7287,6 +7406,12 @@
         "reachable": false,
         "latencyMs": 1726,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 118,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -7300,19 +7425,18 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3235
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "infuseplus": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "8.5.3",
-        "date": "2026-09-01",
-        "localizedDescription": "Infuse 8.5.3 | Infuse-8.5.3-Infuse-Plus\n\nIPA Vault build for Infuse Plus (8.5.3), version 8.5.3",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
-        "size": 100074036,
+        "version": "8.5.5",
+        "date": "2026-09-16",
+        "localizedDescription": "Infuse 8.5.5 | Infuse-8.5.5-Infuse-Plus\n\nIPA Vault build for Infuse Plus (8.5.5), version 8.5.5",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+        "size": 99611121,
         "minOSVersion": "18.0",
         "releaseUrl": null,
         "source": "altstore",
@@ -7320,12 +7444,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Infuse-8.5.3-Infuse-Plus.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.3-Infuse-Plus.ipa",
+            "filename": "Infuse-8.5.5-Infuse-Plus.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 100074036,
+            "size": 99611121,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -7334,21 +7458,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-10",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1779,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 108,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 432,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -7522,6 +7640,12 @@
         "reachable": false,
         "latencyMs": 1779,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -7535,18 +7659,17 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3367
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "inkillerplus": {
-    "retryCount": 7,
+    "retryCount": 0,
     "versions": [
       {
-        "version": "446.0.0",
-        "date": "2026-09-09",
-        "localizedDescription": "Instagram 446.0.0 | Instagram_446.0_iNKillerPlus_5.2\n\n• Fix profile bio long press to copy detect email and links\n• Fix read DM icon\n• Fix user exception for direct message\n• Add roothide & relaxin JB support\n• Add full compatibility with IG v440+\n• Add tab configuration for hide & launch\n• Fix swipe between tabs\n• Fix story mention button crashes on v440+\n• Fix story download button\n• Fix eye long-press user exception on v440+\n• Fix follow confirmation toggle\n• Fix long-press profile picture expand & download\n• Fix grid button in main navbar\n• Fix 2x2 grid handling in 3x3 position style\n• Fix photo picker with music on multiple posts for iOS 27 Liquid Glass\n• Other fixes & improvements\n• Updated base IPA to Instagram v446.0",
-        "downloadURL": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
-        "size": 247800840,
+        "version": "447.0.0",
+        "date": "2026-09-15",
+        "localizedDescription": "Instagram 447.0.0 | Instagram_447.0_iNKillerPlus_5.2\n\n• Fixes profile bio long press to copy detect email and links\n• Fixes read DM icon\n• Fixes user exception for direct message\n• Add full compatibility with IG v445+\n• Updated base IPA to Instagram v447.0",
+        "downloadURL": "https://ikghd.site/ipa/Instagram_447.0_iNKillerPlus_5.2.ipa",
+        "size": 247462182,
         "minOSVersion": "16.3",
         "releaseUrl": null,
         "source": "altstore",
@@ -7554,12 +7677,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Instagram_446.0_iNKillerPlus_5.2.ipa",
-            "downloadUrl": "https://ikghd.site/ipa/Instagram_446.0_iNKillerPlus_5.2.ipa",
+            "filename": "Instagram_447.0_iNKillerPlus_5.2.ipa",
+            "downloadUrl": "https://ikghd.site/ipa/Instagram_447.0_iNKillerPlus_5.2.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 247800840,
+            "size": 247462182,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -7568,21 +7691,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-09",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "since": "2026-09-17",
-      "latencyMs": 1775,
-      "measuredAt": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "since": "2026-09-18",
+      "latencyMs": 211,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 1921,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -7756,6 +7873,12 @@
         "reachable": false,
         "latencyMs": 1775,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 211,
+        "detail": "HTTP 200"
       }
     ],
     "lastResolvedSource": "altstore:https://repo.ikghd.me/repo.json",
@@ -7770,19 +7893,18 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 1756
-    },
-    "lastError": "all sources failed: altstore:https://repo.ikghd.me/repo.json error: HTTP request failed after 3 attempts: https://repo.ikghd.me/repo.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "iqface": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "578.1",
-        "date": "2026-09-13",
-        "localizedDescription": "Facebook 578.1 | Facebook-578.1-iQFace\n\nIPA Vault build for Facebook (iQFace), version 578.1",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
-        "size": 227299291,
+        "version": "579.0.0",
+        "date": "2026-09-16",
+        "localizedDescription": "Facebook 579.0.0 | Facebook-579.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 579.0.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+        "size": 228632105,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -7790,12 +7912,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Facebook-578.1-iQFace.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-578.1-iQFace.ipa",
+            "filename": "Facebook-579.0.0-iQFace.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 227299291,
+            "size": 228632105,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -7804,21 +7926,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-13",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1712,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 152,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": false,
-        "latencyMs": 280,
-        "detail": "HTTP 404"
-      },
       {
         "at": "2026-09-10",
         "reachable": false,
@@ -7992,6 +8108,12 @@
         "reachable": false,
         "latencyMs": 1712,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 152,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -8005,8 +8127,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 7199
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "ish": {
     "retryCount": 0,
@@ -8057,17 +8178,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 200,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 66,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 282,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -8241,6 +8356,12 @@
         "reachable": true,
         "latencyMs": 200,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 66,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -8317,16 +8438,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 300,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 86,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 253,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -8500,6 +8615,12 @@
         "reachable": true,
         "latencyMs": 300,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 86,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:XITRIX/iTorrent",
@@ -8552,8 +8673,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 223,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 111,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -8598,6 +8719,12 @@
         "reachable": true,
         "latencyMs": 223,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 111,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -8637,8 +8764,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 281,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 105,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -8682,6 +8809,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 281,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 105,
         "detail": "HTTP 302"
       }
     ]
@@ -8783,17 +8916,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 231,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 99,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 214,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -8967,6 +9094,12 @@
         "reachable": true,
         "latencyMs": 231,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 99,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9090,7 +9223,7 @@
             "fileType": "APK",
             "size": 31553916,
             "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-            "downloads": 235,
+            "downloads": 237,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -9126,7 +9259,7 @@
             "fileType": "APK",
             "size": 88506651,
             "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-            "downloads": 81,
+            "downloads": 82,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -9138,21 +9271,21 @@
             "fileType": "IPA",
             "size": 14640159,
             "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-            "downloads": 99,
+            "downloads": 107,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-        "downloads": 99
+        "downloads": 107
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 218,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 117,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -9275,6 +9408,12 @@
         "reachable": true,
         "latencyMs": 218,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 117,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9326,8 +9465,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 222,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 90,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -9372,6 +9511,12 @@
         "reachable": true,
         "latencyMs": 222,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 90,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -9412,8 +9557,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 246,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 85,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -9536,6 +9681,12 @@
         "reachable": true,
         "latencyMs": 246,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 85,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9588,8 +9739,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 251,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 74,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -9633,6 +9784,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 251,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 74,
         "detail": "HTTP 302"
       }
     ]
@@ -9686,16 +9843,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 215,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 58,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 147,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -9869,6 +10020,12 @@
         "reachable": true,
         "latencyMs": 215,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 58,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:LiveContainer/LiveContainer",
@@ -9981,17 +10138,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 217,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 87,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 226,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -10164,6 +10315,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 217,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 87,
         "detail": "HTTP 302"
       }
     ],
@@ -10373,8 +10530,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 246,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 76,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -10497,6 +10654,12 @@
         "reachable": true,
         "latencyMs": 246,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 76,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -10549,17 +10712,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 315,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 84,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 193,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -10733,6 +10890,12 @@
         "reachable": true,
         "latencyMs": 315,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 84,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -10771,30 +10934,24 @@
             "fileType": "IPA",
             "size": 106518711,
             "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-            "downloads": 213,
+            "downloads": 234,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-        "downloads": 213
+        "downloads": 234
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 257,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 91,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 204,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -10968,6 +11125,12 @@
         "reachable": true,
         "latencyMs": 257,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Mark02-2012/MaxMusic",
@@ -11019,30 +11182,24 @@
             "fileType": "IPA",
             "size": 133357787,
             "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-            "downloads": 220,
+            "downloads": 228,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-        "downloads": 220
+        "downloads": 228
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 341,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 109,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 255,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -11216,6 +11373,12 @@
         "reachable": true,
         "latencyMs": 341,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 109,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Ashreq/ashstore-repo",
@@ -11233,15 +11396,15 @@
     }
   },
   "messenger-flow": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "578.1.0",
-        "date": "2026-09-10",
-        "localizedDescription": "Messenger 578.1.0 | Messenger-578.1.0-Flow\n\nIPA Vault build for Messenger (Flow), version 578.1.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-        "size": 113359444,
+        "version": "579.0.0",
+        "date": "2026-09-16",
+        "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 579.0.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+        "size": 112483407,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -11249,12 +11412,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Messenger-578.1.0-Flow.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
+            "filename": "Messenger-579.0.0-Flow.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 113359444,
+            "size": 112483407,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -11263,21 +11426,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-11",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1675,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 108,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": false,
-        "latencyMs": 125,
-        "detail": "HTTP 404"
-      },
       {
         "at": "2026-09-10",
         "reachable": false,
@@ -11451,13 +11608,12 @@
         "reachable": false,
         "latencyMs": 1675,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
-      }
-    ],
-    "removedReleases": [
+      },
       {
-        "version": "577.0.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-577.0.0-Flow.ipa",
-        "at": "2026-09-11"
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -11471,8 +11627,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3020
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "minivmac": {
     "retryCount": 0,
@@ -11522,17 +11677,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 223,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 95,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 213,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -11706,6 +11855,12 @@
         "reachable": true,
         "latencyMs": 223,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 95,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -11806,8 +11961,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 256,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -11930,6 +12085,12 @@
         "reachable": true,
         "latencyMs": 256,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -11946,15 +12107,15 @@
     }
   },
   "msgplusx": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "578.1.0",
-        "date": "2026-09-10",
-        "localizedDescription": "Messenger 578.1.0 | Messenger-578.1.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 578.1.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
-        "size": 113236064,
+        "version": "579.0.0",
+        "date": "2026-09-16",
+        "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 579.0.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
+        "size": 112520493,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -11962,12 +12123,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Messenger-578.1.0-MSGPlusX.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-MSGPlusX.ipa",
+            "filename": "Messenger-579.0.0-MSGPlusX.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 113236064,
+            "size": 112520493,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -11976,21 +12137,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-11",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1821,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": false,
-        "latencyMs": 123,
-        "detail": "HTTP 404"
-      },
       {
         "at": "2026-09-10",
         "reachable": false,
@@ -12164,13 +12319,12 @@
         "reachable": false,
         "latencyMs": 1821,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
-      }
-    ],
-    "removedReleases": [
+      },
       {
-        "version": "577.0.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-577.0.0-MSGPlusX.ipa",
-        "at": "2026-09-11"
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -12184,8 +12338,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3402
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "muffinstore": {
     "retryCount": 0,
@@ -12224,8 +12377,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 195,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 91,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -12348,6 +12501,12 @@
         "reachable": true,
         "latencyMs": 195,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12411,8 +12570,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 215,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 105,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -12456,6 +12615,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 215,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 105,
         "detail": "HTTP 302"
       }
     ]
@@ -12509,8 +12674,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 262,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -12633,6 +12798,12 @@
         "reachable": true,
         "latencyMs": 262,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12697,17 +12868,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 252,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 98,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 221,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -12881,6 +13046,12 @@
         "reachable": true,
         "latencyMs": 252,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 98,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12897,15 +13068,15 @@
     }
   },
   "nexasc": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "8.77.0",
-        "date": "2026-09-07",
-        "localizedDescription": "SoundCloud 8.77.0 | SoundCloud-8.77.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.77.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa",
-        "size": 107196182,
+        "version": "8.78.0",
+        "date": "2026-09-16",
+        "localizedDescription": "SoundCloud 8.78.0 | SoundCloud-8.78.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.78.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
+        "size": 115772654,
         "minOSVersion": "16.4",
         "releaseUrl": null,
         "source": "altstore",
@@ -12913,12 +13084,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "SoundCloud-8.77.0-NexaSC.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.77.0-NexaSC.ipa",
+            "filename": "SoundCloud-8.78.0-NexaSC.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 107196182,
+            "size": 115772654,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -12927,21 +13098,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-10",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1583,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 103,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 249,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -13115,6 +13280,12 @@
         "reachable": false,
         "latencyMs": 1583,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -13128,8 +13299,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3172
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "nicegram": {
     "retryCount": 0,
@@ -13180,8 +13350,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 281,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 109,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -13201,6 +13371,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 281,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 109,
         "detail": "HTTP 302"
       }
     ]
@@ -13290,8 +13466,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 195,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 66,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -13323,6 +13499,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 195,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 66,
         "detail": "HTTP 302"
       }
     ]
@@ -13363,17 +13545,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 237,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 109,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 213,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -13547,6 +13723,12 @@
         "reachable": true,
         "latencyMs": 237,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 109,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -13599,8 +13781,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 259,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 69,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -13644,6 +13826,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 259,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 69,
         "detail": "HTTP 302"
       }
     ]
@@ -13697,8 +13885,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 249,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -13742,6 +13930,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 249,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
         "detail": "HTTP 302"
       }
     ]
@@ -13831,8 +14025,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 246,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 122,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -13954,6 +14148,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 246,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 122,
         "detail": "HTTP 302"
       }
     ],
@@ -14079,8 +14279,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 305,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 95,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -14202,6 +14402,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 305,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 95,
         "detail": "HTTP 302"
       }
     ],
@@ -14375,8 +14581,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 239,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 85,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -14499,6 +14705,12 @@
         "reachable": true,
         "latencyMs": 239,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 85,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14551,8 +14763,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 240,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 71,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -14596,6 +14808,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 240,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 71,
         "detail": "HTTP 302"
       }
     ]
@@ -14745,17 +14963,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 197,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 66,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 169,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -14929,6 +15141,12 @@
         "reachable": true,
         "latencyMs": 197,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 66,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14993,16 +15211,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 235,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 95,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 174,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -15176,6 +15388,12 @@
         "reachable": true,
         "latencyMs": 235,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 95,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Provenance-Emu/Provenance",
@@ -15252,8 +15470,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 280,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 108,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -15376,6 +15594,12 @@
         "reachable": true,
         "latencyMs": 280,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -15452,17 +15676,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 229,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 236,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -15636,6 +15854,12 @@
         "reachable": true,
         "latencyMs": 229,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -15688,17 +15912,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 222,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 218,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -15872,6 +16090,12 @@
         "reachable": true,
         "latencyMs": 222,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16008,17 +16232,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 215,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 96,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 199,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -16192,6 +16410,12 @@
         "reachable": true,
         "latencyMs": 215,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 96,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16209,64 +16433,28 @@
   },
   "raintweak": {
     "retryCount": 0,
-    "lastResolvedSource": "github:ra1ncord/RainTweak",
+    "lastResolvedSource": "manual",
     "versions": [
       {
-        "version": "1.2.0",
-        "date": "2026-09-17",
-        "localizedDescription": "Discord 1.2.0 | RainTweak",
-        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-        "size": 107065935,
+        "version": "0.9.3",
+        "date": "2026-06-19",
+        "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
+        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+        "size": 107515564,
+        "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
         "minOSVersion": "16.0",
-        "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v1.2.0",
-        "source": "github",
-        "isPrerelease": false,
-        "isDraft": false,
-        "assets": [
-          {
-            "filename": "dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
-            "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
-            "platform": "linux",
-            "architecture": "arm64",
-            "fileType": "DEB",
-            "size": 41230,
-            "sha256": "73048c2d44806bdf34749f7743067724516098a12311fb51d1f5c37f302d697a",
-            "downloads": 19,
-            "mimeType": "application/vnd.debian.binary-package",
-            "installable": true
-          },
-          {
-            "filename": "RainTweak.ipa",
-            "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-            "platform": "ios",
-            "architecture": null,
-            "fileType": "IPA",
-            "size": 107065935,
-            "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
-            "downloads": 149,
-            "mimeType": "application/octet-stream",
-            "installable": true
-          }
-        ],
-        "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
-        "downloads": 149
+        "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v0.9.3"
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 310,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 170,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -16440,6 +16628,12 @@
         "reachable": true,
         "latencyMs": 310,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16453,7 +16647,14 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 684
-    }
+    },
+    "removedReleases": [
+      {
+        "version": "1.2.0",
+        "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+        "at": "2026-09-18"
+      }
+    ]
   },
   "redditfilter": {
     "retryCount": 0,
@@ -16516,17 +16717,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 244,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 101,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 240,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -16700,6 +16895,12 @@
         "reachable": true,
         "latencyMs": 244,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 101,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16739,7 +16940,7 @@
             "fileType": "IPA",
             "size": 108119337,
             "sha256": "421d5149dfe8087e18ea2b43cf437e2ea384208a74ee39bcfb23c9bc14cb7ae6",
-            "downloads": 208,
+            "downloads": 213,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -16751,7 +16952,7 @@
             "fileType": "IPA",
             "size": 108168749,
             "sha256": "b6b5fa78be22ac11bfdb179884caaa43b69e10d16d47a9079f33df014f57c590",
-            "downloads": 1523,
+            "downloads": 1560,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -16763,21 +16964,21 @@
             "fileType": "IPA",
             "size": 108070190,
             "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-            "downloads": 578,
+            "downloads": 607,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-        "downloads": 578
+        "downloads": 607
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 218,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 90,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -16822,19 +17023,25 @@
         "reachable": true,
         "latencyMs": 218,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 90,
+        "detail": "HTTP 302"
       }
     ]
   },
   "ryukgram": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "446.0.0",
-        "date": "2026-09-10",
-        "localizedDescription": "Instagram 446.0.0 | Instagram-446.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 446.0.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
-        "size": 325835336,
+        "version": "447.0.0",
+        "date": "2026-09-16",
+        "localizedDescription": "Instagram 447.0.0 | Instagram-447.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 447.0.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
+        "size": 320995960,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -16842,12 +17049,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Instagram-446.0.0-RyukGram.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-RyukGram.ipa",
+            "filename": "Instagram-447.0.0-RyukGram.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 325835336,
+            "size": 320995960,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -16856,21 +17063,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-11",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1686,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 154,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": false,
-        "latencyMs": 308,
-        "detail": "HTTP 404"
-      },
       {
         "at": "2026-09-10",
         "reachable": false,
@@ -17044,13 +17245,12 @@
         "reachable": false,
         "latencyMs": 1686,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
-      }
-    ],
-    "removedReleases": [
+      },
       {
-        "version": "445.0.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-445.0.0-RyukGram.ipa",
-        "at": "2026-09-11"
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 154,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -17064,11 +17264,10 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 7510
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "ryukgram-ig410": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://source.ryuksign.com/ig410",
     "versions": [
       {
@@ -17101,19 +17300,13 @@
     ],
     "syncedAt": "2026-09-10",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1787,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 420,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 550,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -17287,6 +17480,12 @@
         "reachable": false,
         "latencyMs": 1787,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 420,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -17300,11 +17499,10 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 25428
-    },
-    "lastError": "all sources failed: altstore:https://source.ryuksign.com/ig410 error: HTTP request failed after 3 attempts: https://source.ryuksign.com/ig410 (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "ryukgram-sidebyside": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://source.ryuksign.com/duplicate",
     "versions": [
       {
@@ -17337,19 +17535,13 @@
     ],
     "syncedAt": "2026-09-10",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1718,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 412,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 542,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -17523,6 +17715,12 @@
         "reachable": false,
         "latencyMs": 1718,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 412,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -17536,8 +17734,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 18176
-    },
-    "lastError": "all sources failed: altstore:https://source.ryuksign.com/duplicate error: HTTP request failed after 3 attempts: https://source.ryuksign.com/duplicate (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "saber": {
     "retryCount": 0,
@@ -17684,17 +17881,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 208,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 239,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -17868,6 +18059,12 @@
         "reachable": true,
         "latencyMs": 208,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -17968,17 +18165,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 358,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 76,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 187,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -18152,6 +18343,12 @@
         "reachable": true,
         "latencyMs": 358,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 76,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18203,8 +18400,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 269,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 88,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -18249,6 +18446,12 @@
         "reachable": true,
         "latencyMs": 269,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 88,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -18288,17 +18491,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 206,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 113,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 236,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -18472,6 +18669,12 @@
         "reachable": true,
         "latencyMs": 206,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 113,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18524,16 +18727,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 232,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 71,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 159,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -18707,6 +18904,12 @@
         "reachable": true,
         "latencyMs": 232,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 71,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:SideStore/SideStore",
@@ -18796,8 +18999,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 302,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 88,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -18842,6 +19045,12 @@
         "reachable": true,
         "latencyMs": 302,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 88,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -18882,17 +19091,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 312,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 91,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 252,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -19066,6 +19269,12 @@
         "reachable": true,
         "latencyMs": 312,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -19082,15 +19291,15 @@
     }
   },
   "sparkle": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "446.0.0",
-        "date": "2026-09-10",
-        "localizedDescription": "Instagram 446.0.0 | Instagram-446.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 446.0.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
-        "size": 318531474,
+        "version": "447.0.0",
+        "date": "2026-09-16",
+        "localizedDescription": "Instagram 447.0.0 | Instagram-447.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 447.0.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
+        "size": 312339573,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -19098,12 +19307,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Instagram-446.0.0-Sparkle.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-446.0.0-Sparkle.ipa",
+            "filename": "Instagram-447.0.0-Sparkle.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 318531474,
+            "size": 312339573,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -19112,21 +19321,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-11",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1678,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 103,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": false,
-        "latencyMs": 184,
-        "detail": "HTTP 404"
-      },
       {
         "at": "2026-09-10",
         "reachable": false,
@@ -19300,13 +19503,12 @@
         "reachable": false,
         "latencyMs": 1678,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
-      }
-    ],
-    "removedReleases": [
+      },
       {
-        "version": "445.0.0",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-445.0.0-Sparkle.ipa",
-        "at": "2026-09-11"
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -19320,8 +19522,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 11854
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "spotiflac": {
     "retryCount": 0,
@@ -19384,16 +19585,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 302,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 114,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 238,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -19566,6 +19761,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 302,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 114,
         "detail": "HTTP 302"
       }
     ],
@@ -19788,17 +19989,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 208,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 112,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 198,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -19972,6 +20167,12 @@
         "reachable": true,
         "latencyMs": 208,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 112,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20035,8 +20236,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 257,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 92,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -20081,6 +20282,12 @@
         "reachable": true,
         "latencyMs": 257,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 92,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -20121,16 +20328,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 211,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 68,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 162,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -20304,6 +20505,12 @@
         "reachable": true,
         "latencyMs": 211,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 68,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:StikDebug/StikDebug",
@@ -20356,17 +20563,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 237,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 118,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 216,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -20540,6 +20741,12 @@
         "reachable": true,
         "latencyMs": 237,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 118,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20579,7 +20786,7 @@
             "fileType": "APK",
             "size": 197174334,
             "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-            "downloads": 10868,
+            "downloads": 10877,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -20591,7 +20798,7 @@
             "fileType": "APK",
             "size": 191577143,
             "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-            "downloads": 1481,
+            "downloads": 1487,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -20627,30 +20834,24 @@
             "fileType": "IPA",
             "size": 53931137,
             "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-            "downloads": 222,
+            "downloads": 230,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-        "downloads": 222
+        "downloads": 230
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 216,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 101,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 334,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -20824,6 +21025,12 @@
         "reachable": true,
         "latencyMs": 216,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 101,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20840,7 +21047,7 @@
     }
   },
   "swiftgram": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
@@ -20872,19 +21079,13 @@
     ],
     "syncedAt": "2026-09-11",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1752,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 108,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 220,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -21058,6 +21259,12 @@
         "reachable": false,
         "latencyMs": 1752,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -21078,8 +21285,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3051
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "synkplay": {
     "retryCount": 0,
@@ -21142,8 +21348,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 243,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 88,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -21265,6 +21471,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 243,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 88,
         "detail": "HTTP 302"
       }
     ],
@@ -21414,8 +21626,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 252,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -21460,6 +21672,12 @@
         "reachable": true,
         "latencyMs": 252,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -21499,17 +21717,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 205,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 86,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 191,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -21683,6 +21895,12 @@
         "reachable": true,
         "latencyMs": 205,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 86,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -21699,7 +21917,7 @@
     }
   },
   "telegram-mxgram": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
@@ -21731,19 +21949,13 @@
     ],
     "syncedAt": "2026-09-13",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1732,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 193,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -21917,6 +22129,12 @@
         "reachable": false,
         "latencyMs": 1732,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -21930,19 +22148,18 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3315
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "threadsaver": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
-        "version": "446.1",
-        "date": "2026-09-10",
-        "localizedDescription": "Threads 446.1 | Threads-446.1-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 446.1",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
-        "size": 105719166,
+        "version": "447.0",
+        "date": "2026-09-16",
+        "localizedDescription": "Threads 447.0 | Threads-447.0-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 447.0",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
+        "size": 107906677,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -21950,12 +22167,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "Threads-446.1-ThreadSaver.ipa",
-            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-446.1-ThreadSaver.ipa",
+            "filename": "Threads-447.0-ThreadSaver.ipa",
+            "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 105719166,
+            "size": 107906677,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -21964,21 +22181,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-11",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1836,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 103,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": false,
-        "latencyMs": 370,
-        "detail": "HTTP 404"
-      },
       {
         "at": "2026-09-10",
         "reachable": false,
@@ -22152,13 +22363,12 @@
         "reachable": false,
         "latencyMs": 1836,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
-      }
-    ],
-    "removedReleases": [
+      },
       {
-        "version": "445.1",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-445.1-ThreadSaver.ipa",
-        "at": "2026-09-11"
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -22172,8 +22382,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3267
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "thunder": {
     "retryCount": 0,
@@ -22248,8 +22457,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 293,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 87,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-13"
     },
     "healthHistory": [
@@ -22372,6 +22581,12 @@
         "reachable": true,
         "latencyMs": 293,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 87,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -22423,8 +22638,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 228,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 1167,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -22462,6 +22677,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 228,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 1167,
         "detail": "HTTP 302"
       }
     ]
@@ -22503,8 +22724,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 243,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 114,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -22549,6 +22770,12 @@
         "reachable": true,
         "latencyMs": 243,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 114,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -22576,7 +22803,7 @@
             "fileType": "IPA",
             "size": 27098183,
             "sha256": null,
-            "downloads": 364225,
+            "downloads": 364254,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -22588,20 +22815,20 @@
             "fileType": "IPA",
             "size": 6889214,
             "sha256": null,
-            "downloads": 1242791,
+            "downloads": 1242899,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 1242791
+        "downloads": 1242899
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 269,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 71,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -22646,18 +22873,24 @@
         "reachable": true,
         "latencyMs": 269,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 71,
+        "detail": "HTTP 302"
       }
     ]
   },
   "ttkillerplus": {
-    "retryCount": 7,
+    "retryCount": 0,
     "versions": [
       {
-        "version": "46.8.0",
-        "date": "2026-09-09",
-        "localizedDescription": "TikTok 46.8.0 | TikTok_46.8_TTKillerPlus_2.1\n\n• Add v46.0+ compatibility.\n• Fix like confirmation bypass on double tap.\n• Fix post date display format.\n• Fix settings localization & toggles.\n• Fix flag button not tappable.\n• Other fixes & improvements.\n• Update base IPA to TikTok v46.8",
-        "downloadURL": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
-        "size": 453011354,
+        "version": "46.9.0",
+        "date": "2026-09-15",
+        "localizedDescription": "TikTok 46.9.0 | TikTok_46.9_TTKillerPlus_2.2\n\n• Add follow status to new profile style user name.\n• Fix like confirmation bypass on double tap.\n• Fix post date display format.\n• Fix settings localization & toggles.\n• Fix flag button not tappable.\n• Other fixes & improvements.\n• Update base IPA to TikTok v46.9",
+        "downloadURL": "https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa",
+        "size": 466535207,
         "minOSVersion": "15.1",
         "releaseUrl": null,
         "source": "altstore",
@@ -22665,12 +22898,12 @@
         "isDraft": false,
         "assets": [
           {
-            "filename": "TikTok_46.8_TTKillerPlus_2.1.ipa",
-            "downloadUrl": "https://ikghd.site/ipa/TikTok_46.8_TTKillerPlus_2.1.ipa",
+            "filename": "TikTok_46.9_TTKillerPlus_2.2.ipa",
+            "downloadUrl": "https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 453011354,
+            "size": 466535207,
             "sha256": null,
             "downloads": 0,
             "mimeType": null,
@@ -22679,21 +22912,15 @@
         ]
       }
     ],
-    "syncedAt": "2026-09-09",
+    "syncedAt": "2026-09-18",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "since": "2026-09-17",
-      "latencyMs": 1628,
-      "measuredAt": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "since": "2026-09-18",
+      "latencyMs": 199,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 258,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -22867,6 +23094,12 @@
         "reachable": false,
         "latencyMs": 1628,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 199,
+        "detail": "HTTP 200"
       }
     ],
     "lastResolvedSource": "altstore:https://repo.ikghd.me/repo.json",
@@ -22881,11 +23114,10 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 2308
-    },
-    "lastError": "all sources failed: altstore:https://repo.ikghd.me/repo.json error: HTTP request failed after 3 attempts: https://repo.ikghd.me/repo.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "turrit-mxgram": {
-    "retryCount": 7,
+    "retryCount": 0,
     "lastResolvedSource": "altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json",
     "versions": [
       {
@@ -22917,19 +23149,13 @@
     ],
     "syncedAt": "2026-09-11",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "latencyMs": 1770,
-      "measuredAt": "2026-09-17",
-      "since": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "latencyMs": 101,
+      "measuredAt": "2026-09-18",
+      "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 138,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -23103,6 +23329,12 @@
         "reachable": false,
         "latencyMs": 1770,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 101,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -23123,8 +23355,7 @@
       "detail": "ok",
       "at": "2026-09-14",
       "durationMs": 3943
-    },
-    "lastError": "all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+    }
   },
   "twitchadblock": {
     "retryCount": 0,
@@ -23162,30 +23393,24 @@
             "fileType": "IPA",
             "size": 152372292,
             "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-            "downloads": 1159,
+            "downloads": 1167,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-        "downloads": 1159
+        "downloads": 1167
       }
     ],
-    "syncedAt": "2026-09-17",
+    "syncedAt": "2026-09-18",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 216,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 217,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -23359,6 +23584,12 @@
         "reachable": true,
         "latencyMs": 216,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -23410,17 +23641,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 187,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 211,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -23594,6 +23819,12 @@
         "reachable": true,
         "latencyMs": 187,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -23651,6 +23882,36 @@
       "kind": "new"
     },
     {
+      "appId": "threadsaver",
+      "name": "ThreadSaver",
+      "version": "447.0",
+      "previousVersion": "446.1",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
+      "changelog": "Threads 447.0 | Threads-447.0-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 447.0",
+      "kind": "updated"
+    },
+    {
+      "appId": "sparkle",
+      "name": "Sparkle",
+      "version": "447.0.0",
+      "previousVersion": "446.0.0",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
+      "changelog": "Instagram 447.0.0 | Instagram-447.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 447.0.0",
+      "kind": "updated"
+    },
+    {
+      "appId": "ryukgram",
+      "name": "RyukGram",
+      "version": "447.0.0",
+      "previousVersion": "446.0.0",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
+      "changelog": "Instagram 447.0.0 | Instagram-447.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 447.0.0",
+      "kind": "updated"
+    },
+    {
       "appId": "playtorrio",
       "name": "PlayTorrio",
       "version": "1.1.6",
@@ -23658,6 +23919,56 @@
       "releaseDate": "2026-09-16",
       "downloadUrl": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa",
       "changelog": "PlayTorrio 1.1.6 | PlayTorrio-iOS\n\nCloudstream extenstion support added\nUI Fixes\nMultistream added in iptv\nCustom channels added in iptv\nnew sources\nPlayer fixes\nMacOS Torrent streaming fixed\nMobile player audio, brightness control and screen lock added\nGeneral fixes and improvements",
+      "kind": "updated"
+    },
+    {
+      "appId": "nexasc",
+      "name": "NexaSC",
+      "version": "8.78.0",
+      "previousVersion": "8.77.0",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
+      "changelog": "SoundCloud 8.78.0 | SoundCloud-8.78.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.78.0",
+      "kind": "updated"
+    },
+    {
+      "appId": "msgplusx",
+      "name": "MSGPlusX",
+      "version": "579.0.0",
+      "previousVersion": "578.1.0",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
+      "changelog": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 579.0.0",
+      "kind": "updated"
+    },
+    {
+      "appId": "messenger-flow",
+      "name": "Messenger Flow",
+      "version": "579.0.0",
+      "previousVersion": "578.1.0",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+      "changelog": "Messenger 579.0.0 | Messenger-579.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 579.0.0",
+      "kind": "updated"
+    },
+    {
+      "appId": "iqface",
+      "name": "iQFace",
+      "version": "579.0.0",
+      "previousVersion": "578.1",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+      "changelog": "Facebook 579.0.0 | Facebook-579.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 579.0.0",
+      "kind": "updated"
+    },
+    {
+      "appId": "infuseplus",
+      "name": "Infuse Plus",
+      "version": "8.5.5",
+      "previousVersion": "8.5.3",
+      "releaseDate": "2026-09-16",
+      "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
+      "changelog": "Infuse 8.5.5 | Infuse-8.5.5-Infuse-Plus\n\nIPA Vault build for Infuse Plus (8.5.5), version 8.5.5",
       "kind": "updated"
     },
     {
@@ -23678,6 +23989,16 @@
       "releaseDate": "2026-09-15",
       "downloadUrl": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
       "changelog": "YTMusicUltimate 9.37.2 | YTMusic 2.4.1 | YTMusicUltimate_9.37.2_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
+      "kind": "updated"
+    },
+    {
+      "appId": "ttkillerplus",
+      "name": "TTKillerPlus",
+      "version": "46.9.0",
+      "previousVersion": "46.8.0",
+      "releaseDate": "2026-09-15",
+      "downloadUrl": "https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa",
+      "changelog": "TikTok 46.9.0 | TikTok_46.9_TTKillerPlus_2.2\n\n• Add follow status to new profile style user name.\n• Fix like confirmation bypass on double tap.\n• Fix post date display format.\n• Fix settings localization & toggles.\n• Fix flag button not tappable.\n• Other fixes & improvements.\n• Update base IPA to TikTok v46.9",
       "kind": "updated"
     },
     {
@@ -23708,6 +24029,16 @@
       "releaseDate": "2026-09-15",
       "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
       "changelog": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
+      "kind": "updated"
+    },
+    {
+      "appId": "inkillerplus",
+      "name": "iNKillerPlus",
+      "version": "447.0.0",
+      "previousVersion": "446.0.0",
+      "releaseDate": "2026-09-15",
+      "downloadUrl": "https://ikghd.site/ipa/Instagram_447.0_iNKillerPlus_5.2.ipa",
+      "changelog": "Instagram 447.0.0 | Instagram_447.0_iNKillerPlus_5.2\n\n• Fixes profile bio long press to copy detect email and links\n• Fixes read DM icon\n• Fixes user exception for direct message\n• Add full compatibility with IG v445+\n• Updated base IPA to Instagram v447.0",
       "kind": "updated"
     },
     {
@@ -24509,106 +24840,6 @@
       "downloadUrl": "https://github.com/vcmi/vcmi/releases/download/1.7.5/VCMI-iOS.ipa",
       "changelog": "VCMI 1.7.5 | VCMI-iOS\n\nNote: saved games from 1.6 release can be loaded in 1.7\n\n### Changelog\n- Player Changelog: [1.7.4 -> 1.7.5](https://github.com/vcmi/vcmi/blob/master/ChangeLog.md#174---175)\n- Full Changelog: https://github.com/vcmi/vcmi/compare/1.7.4..1.7.5\n\n### Additional builds\n<!-- - Android release will be available on Google Play shortly -->\n<!-- - Linux release will be available on Flathub shortly -->\n<!-- - Ubuntu release will be available on VCMI PPA shortly -->\n<!-- - Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi) -->\n<!-- - Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI) -->\n<!-- - Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa) -->\n\n- Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi) and [F-Droid](https://f-droid.org/en/packages/is.xyz.vcmi/)\n- iOS release is available on [TestFlight](https://testflight.apple.com/join/pJWHSbmu) (AppStore version coming soon)\n- Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI)\n- Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa)\n- macOS release can be installed via Homebrew: `brew install --cask vcmi` (official) or `brew install --cask vcmi/vcmi/vcmi` (from our tap)",
       "kind": "new"
-    },
-    {
-      "appId": "twitchadblock",
-      "name": "TwitchAdBlock",
-      "version": "30.7",
-      "previousVersion": "29.4.2",
-      "releaseDate": "2026-08-14",
-      "downloadUrl": "https://github.com/gunnerkidBT/TwitchAdBlock/releases/download/v30.7-0.1.13/tv.twitch-30.7-TwitchAdBlock-0.1.13.ipa",
-      "changelog": "Twitch 30.7 | TwitchAdBlock 0.1.13\n\n**TwitchMods v0.1.13** — for Twitch iOS **30.7**\n\n### New in v0.1.13\n- **Casting & AirPlay now work with ad-blocking on.** Previously, having the ad-block proxy enabled could make casting to a Chromecast crash after a few seconds, or make AirPlay to an Apple TV show \"offline.\" The mod now automatically steps aside while you're casting/AirPlaying, so the stream plays on the TV — and your phone goes right back to blocking ads the moment you stop. (The stream *on the TV* still shows ads — the TV fetches the video itself, so that can't be blocked — but your phone stays ad-free.)\n\n### Everything else (v0.1.12)\n- Blocks ads (live + VOD pre-rolls, feed banners, sponsor spots, the \"Go Ad-Free\" Turbo button)\n- Keep Live Feed Playing · 7TV/BTTV/FFZ chat emotes + Reload · settings backup/restore · Diagnostics · launch screen · hide Stories\n\n### Downloads\n- **`tv.twitch-30.7-TwitchAdBlock-0.1.13.ipa`** — full app.\n- **`tv.twitch-30.7-TwitchAdBlock-0.1.13-noplugins.ipa`** — app extensions removed so a free Apple ID only uses 1 App ID slot when sideloading.\n\nInstall with **AltStore / SideStore** (drag in the IPA) or **TrollStore** (tap +, pick the IPA).\n\nFull plain-language changelog: [`CHANGELOG.md`](https://github.com/gunnerkidBT/TwitchAdBlock/blob/master/CHANGELOG.md)",
-      "kind": "updated"
-    },
-    {
-      "appId": "chatsen",
-      "name": "Chatsen",
-      "version": "1.1.107",
-      "previousVersion": null,
-      "releaseDate": "2026-08-12",
-      "downloadUrl": "https://github.com/chatsen/chatsen/releases/download/1.1.107%2B107/iOS.ipa",
-      "changelog": "Chatsen 1.1.107 | iOS",
-      "kind": "new"
-    },
-    {
-      "appId": "onionbrowser",
-      "name": "Onion Browser",
-      "version": "3.4.1",
-      "previousVersion": null,
-      "releaseDate": "2026-08-11",
-      "downloadUrl": "https://github.com/OnionBrowser/OnionBrowser/releases/download/v3.4.1/OnionBrowser.ipa",
-      "changelog": "Onion Browser 3.4.1 | OnionBrowser\n\n- Fixed IP leaks during DNS prefetch found by Mysk: https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/\n  (The other leaks are mitigated by Lockdown Mode in Onion Browser, included in Silver and Gold security levels.)\n- Updated libevent to 2.1.13.\n- Updated Japanese and Pashto translations.",
-      "kind": "new"
-    },
-    {
-      "appId": "maxtube",
-      "name": "MaxTube",
-      "version": "21.31.3",
-      "previousVersion": null,
-      "releaseDate": "2026-08-03",
-      "downloadUrl": "https://github.com/Ashreq/ashstore-repo/releases/download/v1.0.8/YTPlusM_21.31.3_5.2.2.tg%40tubevault.ipa",
-      "changelog": "MaxTube 21.31.3 | YTPlus 5.2.2 | YTPlusM_21.31.3_5.2.2.tg@tubevault\n\n[YouTube_v21.31.3_YTPlus_v5.2.2_cracked.tg@tubevault]\n\nDescription: \nYTPlus 5.2.2 Cracked by zarzel\nYouTube v21.31.3\n\nVersion Description:\nDownloading does not work on this version of YouTube\nNo Bonus Tweaks\nSidestore is supported\n\n[YTPlusM_21.31.3_5.2.2.tg@tubevault]\n\nDescription: \nYTPlusM v1.4.2\nYouTube v21.31.3\n\nVersion Description:\nBonus Tweaks:\nYouPiP, YTUHD, YouQuality, RYD, YTABConfig, DontEatMyContent, YTweaks, Gonerino, YouSpeed, YTLowContrastMode, VolumeBoostYT, YouGetCaption, Mark's Tweak YTPlaybackFix, YouChooseQuality, YouShare, PleaseDontStopTheMusic and OpenYouTubeInSafari.",
-      "kind": "new"
-    },
-    {
-      "appId": "qbitcontroller",
-      "name": "qBitController",
-      "version": "2.2.1",
-      "previousVersion": null,
-      "releaseDate": "2026-07-28",
-      "downloadUrl": "https://github.com/Bartuzen/qBitController/releases/download/v2.2.1/qbitcontroller-2.2.1-ios.ipa",
-      "changelog": "qBitController 2.2.1 | qbitcontroller-2.2.1-ios\n\n- Updated translations",
-      "kind": "new"
-    },
-    {
-      "appId": "qbitcontrol",
-      "name": "qBitControl",
-      "version": "1.4.1",
-      "previousVersion": null,
-      "releaseDate": "2026-07-23",
-      "downloadUrl": "https://github.com/Michael-128/qBitControl/releases/download/release-1.4.1/qBitControl.ipa",
-      "changelog": "qBitControl 1.4.1 | qBitControl\n\n## 📊 Performance & Efficiency\n\n- **Reduced Data Usage:** Network traffic reduced by **93%** thanks to optimized data syncing.\n- **Smooth Charts:** Statistics charts now scroll continuously and smoothly instead of updating every two seconds.\n- **Responsive Progress Bars:** Progress indicators now feature fluid animations for a more natural feel.\n\n## 🛠️ Interface & Usability\n\n- **Custom Headers:** Specify custom HTTP headers for server connections—offering seamless support for reverse proxies and zero-trust networks (e.g., Cloudflare Access, Authelia).\n- **Reworked Server Addition:** Redesigned server setup and edit screens with an updated *Advanced* settings page and deferred saving.\n- **Limit Configuration:** Configure precise speed limits, seeding time limits, and share ratios for individual torrents directly in-app.\n- **Cleaner Torrent List:** Torrent rows now adapt dynamically to show the most relevant details depending on whether a transfer is downloading, seeding, or paused.\n- **Repositioned Add Button:** Moved the \"Add Torrent\" button to the toolbar for cleaner, more intuitive access.\n- **Offline Banner:** A clear overlay banner now appears whenever your connection drops.\n- **In-App Logs:** Added a built-in log viewer to review and easily share system events directly inside the app.\n\n## 🐛 Fixes & Refinements\n\n- **Self-Signed Certificate Support:** Full support for untrusted and self-signed SSL certificates, making it easier to connect to home-hosted servers.\n- **Stable RSS Downloads:** Fixed an issue in the RSS view where tapping a row to download a torrent caused the confirmation sheet to glitch and reopen unexpectedly.\n- **Connection Timeouts:** Implemented strict network timeouts to prevent the app from hanging indefinitely on the launch screen if a server is unresponsive.\n- **Clearer Error Alerts:** If adding a `.torrent` file or magnet link fails, a clear error message now pops up explaining what went wrong.",
-      "kind": "new"
-    },
-    {
-      "appId": "bluewallet",
-      "name": "BlueWallet",
-      "version": "8.0.1",
-      "previousVersion": null,
-      "releaseDate": "2026-07-21",
-      "downloadUrl": "https://github.com/BlueWallet/BlueWallet/releases/download/8.0.1/BlueWallet_8.0.1_1784575843.ipa",
-      "changelog": "BlueWallet 8.0.1 | BlueWallet_8.0.1_1784575843\n\n### New Features\n\niOS 26 Liquid Glass design\nImport Unchained JSON as a multisig cosigner\nSupport BC-UR v2 air-gap scanning for hardware wallets (OneKey, Keystone)\nOption to redact push notification content\nArkade Lightning push notifications\nEnable RBF for single-sig watch-only wallets (HD Bech32)\nHuman-readable data on transaction status screen\n19 new languages, including Filipino, Armenian, Akan, and Sesotho\n\n### Improvements\n\nRenewed Settings UI\nBetter green success color contrast\nRemoved GroundControl server URL option from notification settings\nFaster transaction fetching for HD wallets\nReplaced crypto-js with modern @noble crypto libraries\n\n### Fixes\n\nStartup crash\nAmount input lag in RBF custom fee input\nText size on main app views and clipped wallet balance in carousel\nQR codes no longer have rounded corners\nSigned transaction hex screen stays scrollable\nArkade LNURL payment result now persists\nFloating button no longer overlaps the transaction list\nVarious modal and navigation UX polish\n\nUnder the hood: dependency updates, TypeScript coverage improvements, CI and translation tooling fixes.\n\n## What's Changed\n* FIX: startup crash by @Overtorment in https://github.com/BlueWallet/BlueWallet/pull/8618\n* OPS: Bump version by @marcosrdz in https://github.com/BlueWallet/BlueWallet/pull/8621\n* fix: no round corners in qrcode by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8631\n* REF: remove GroundControl server URL option from notification settings by @Overtorment in https://github.com/BlueWallet/BlueWallet/pull/8636\n* ADD: arkade ln pushes by @Overtorment in https://github.com/BlueWallet/BlueWallet/pull/8634\n* REF: single-pass tx-to-address mapping in HD fetchTransactions by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8639\n* fix(deps): update dependency @noble/secp256k1 to v1.7.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8590\n* chore(deps): update actions/checkout action to v6.0.3 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8643\n* Retyui remove dead code by @Overtorment in https://github.com/BlueWallet/BlueWallet/pull/8645\n* fix(deps): update dependency @arkade-os/sdk to v0.4.33 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8647\n* fix(deps): update dependency @arkade-os/boltz-swap to v0.3.38 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8646\n* fix(deps): update dependency @react-native-vector-icons/ionicons to v13.1.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8650\n* fix(deps): update dependency @react-native-vector-icons/fontawesome to v13.1.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8648\n* fix(deps): update dependency @react-native-vector-icons/material-design-icons to v13.1.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8652\n* FIX: Remove chevron on modal open ux by @marcosrdz in https://github.com/BlueWallet/BlueWallet/pull/8651\n* fix(deps): update dependency @react-native-vector-icons/fontawesome6 to v13.1.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8649\n* fix(deps): update dependency @react-native-vector-icons/material-icons to v13.1.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8653\n* fix(deps): update dependency dayjs to v1.11.21 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8669\n* fix: improve typescript coverage by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8239\n* fix(deps): update dependency @react-native-vector-icons/entypo to v13.1.2 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8617\n* OPS: bump Arkade SDKs (sdk 0.4.35, boltz-swap 0.3.40) by @Kukks in https://github.com/BlueWallet/BlueWallet/pull/8675\n* tst: fix flaky goBack in iOS e2e tests by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8569\n* ADD: support importing Unchained JSON as multisig cosigner by @r6mez in https://github.com/BlueWallet/BlueWallet/pull/8568\n* chore(deps): update dependency @react-native/js-polyfills to ^0.86.0 by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8679\n* fix(deps): update react-navigation monorepo by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8678\n* FIX: persist Arkade LNURL payment result by @Overtorment in https://github.com/BlueWallet/BlueWallet/pull/8635\n* fix(deps): update dependency react-native-permissions to v5.5.3 - abandoned by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8670\n* fix: key on tx list by @ncoelho in https://github.com/BlueWallet/BlueWallet/pull/8687\n* feat: iOS 26 glass by @ncoelho in https://github.com/BlueWallet/BlueWallet/pull/8508\n* REF: swap crypto-js for @noble/ciphers + hashes by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8566\n* FIX: Amount input lag in rbf custom fee input by @ojokne in https://github.com/BlueWallet/BlueWallet/pull/8632\n* FIX: text size on main app views by @ncoelho in https://github.com/BlueWallet/BlueWallet/pull/8689\n* FIX: clipping wallet balance on carousel by @ncoelho in https://github.com/BlueWallet/BlueWallet/pull/8695\n* OPS: Update dependency concurrent-ruby to '< 1.3.8' [SECURITY] by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8694\n* FIX: ark tests Premature close — drop node-fetch, use native fetch by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8726\n* FIX: keep signed transaction hex screen scrollable by @K-i-Q in https://github.com/BlueWallet/BlueWallet/pull/8700\n* FIX: repair Transifex fastlane metadata integration by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8723\n* ADD: Filipino (fil_PH) language by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8709\n* fix: sync language files by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8703\n* ADD: Armenian (hy) language by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8704\n* ADD: Akan (ak) language by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8714\n* fix: fastlate android  by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8724\n* ADD: Sesotho (st_ZA) language by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8708\n* ADD: setting to redact push notification content by @r6mez in https://github.com/BlueWallet/BlueWallet/pull/8696\n* ADD: 15 new languages by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8734\n* Updates for file loc/en.json in es_419 by @transifex-integration[bot] in https://github.com/BlueWallet/BlueWallet/pull/8736\n* FIX: stray tool artifacts in ak/fil_PH vocabularies by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8730\n* REF: Change header ownership by @marcosrdz in https://github.com/BlueWallet/BlueWallet/pull/8735\n* chore: upgrade @arkade-os sdk@0.4.41  boltz-swap@0.3.46 by @pietro909 in https://github.com/BlueWallet/BlueWallet/pull/8744\n* OPS: Update all dependencies by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8743\n* FIX: bump qr to 0.6.0 by @GladosBlueWallet in https://github.com/BlueWallet/BlueWallet/pull/8748\n* fix: passphrase term by @limpbrains in https://github.com/BlueWallet/BlueWallet/pull/8738\n* REF: improve green success contrast by @ncoelho in https://github.com/BlueWallet/BlueWallet/pull/8751\n* FIX: reserve floating-button space in wallet tx list on both platforms by @r6mez in https://github.com/BlueWallet/BlueWallet/pull/8742\n* feat: readable data on tx status by @ncoelho in https://github.com/BlueWallet/BlueWallet/pull/8688\n* OPS: Update all dependencies by @renovate[bot] in https://github.com/BlueWallet/BlueWallet/pull/8761\n* Updates for file loc/en.json in es_419 by @transifex-integration[bot] in https://github.com/BlueWallet/BlueWallet/pull/8763\n* ADD: Enable RBF for single sig watch only wallet(HD Bech32) by @ojokne in https://github.com/BlueWallet/BlueWallet/pull/8641\n* REF: Use new saveDocument for fs by @marcosrdz in https://gi…",
-      "kind": "new"
-    },
-    {
-      "appId": "itorrent",
-      "name": "iTorrent",
-      "version": "2.2.0",
-      "previousVersion": null,
-      "releaseDate": "2026-07-19",
-      "downloadUrl": "https://github.com/XITRIX/iTorrent/releases/download/v2.2.0-1/iTorrent.ipa",
-      "changelog": "iTorrent 2.2.0 | iTorrent\n\n## What's new:\n* Meet the new built-in VLC player. Play compatible video and audio files directly in iTorrent, even while they are still downloading.\n* Enjoy Picture in Picture, playback speeds from 0.5x to 2x, audio and subtitle track selection, precise seeking, and system media controls.\n* Take playback to a bigger screen with AirPlay or a compatible player discovered on your local network.\n* Choose how pieces are downloaded with Sequential and First & Last priority modes, making it easier to start watching sooner.\n* Select and share multiple completed files or entire folders in one go.\n\n## Improvements:\n* Refreshed the interface for iOS 26, with Liquid Glass styling, cleaner dialogs, and more polished navigation.\n* Made torrent details smoother and easier to use, with clearer download-priority controls and private-torrent information.\n* Improved media previewing so iTorrent can offer the best available player for each file.\n* Updated the torrent and media engines for better compatibility, stability, and recovery from unexpected errors.\n* Expanded and refined translations across all supported languages.\n\n## Fixes:\n* Fixed cases where magnet links could be saved incorrectly.\n* Fixed a startup race condition that could interfere with launching the app or completing initial setup.\n* Fixed toolbars and navigation behaving incorrectly in iPad split-screen mode.\n* Fixed RSS downloads returning to the wrong screen.\n* Fixed torrent details sometimes getting stuck in a continuous update loop.\n* Fixed several playback, AirPlay, and local-device connection issues.\n\n**Full Changelog**: https://github.com/XITRIX/iTorrent/compare/v2.1.1-1...v2.2.0-1",
-      "kind": "new"
-    },
-    {
-      "appId": "livecontainer",
-      "name": "LiveContainer",
-      "version": "3.8.0",
-      "previousVersion": null,
-      "releaseDate": "2026-07-17",
-      "downloadUrl": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer.ipa",
-      "changelog": "LiveContainer 3.8.0 | LiveContainer\n\n# LiveContainer 3.8.0\n\n> [!Warning]\n> The standalone version requires **SideStore 0.6.2+** or **AltStore 2.2.1+** for installation.\n> To install LiveContainer with built-in SideStore (`LiveContainer+SideStore.ipa`), please use [Impactor](https://github.com/khcrysalis/Impactor) or [iloader](https://github.com/nab138/iloader). See [our installation guide](https://livecontainer.github.io/docs/installation/lc_sidestore) for details.\n\n# New Features\n\n## Storage Management\n\n- Added a new storage management view with a breakdown of app bundles, containers, temporary files, app group data, tweaks, and other files. (Hidden apps' size is included in \"other\" section until unlocked)\n- Added per-app storage details, including app bundle size, container sizes, and last-used date.\n- Added actions to clean temporary files and caches, including guest app caches and LiveContainer's own caches.\n\n## Multiple LiveContainers\n- Added configurable launch priority for multiple LiveContainer instances, making shared-app shortcuts choose available instances in the order you prefer. (#1367)\n\n## Share to Apps in LiveContainer\nAdded a share extension to LiveContainer. When you share a URL or a file from iOS's share sheet, LiveContainer will ask which app you would like to open the URL/file in, so the old share to LiveContainer shortcut method is no longer needed. When an ipa file is shared in this way, LiveContainer will ask if you want to install it in LiveContainer or in the built-in SideStore (if installed) (#1357)\n\n## Multitasking\n\n- Added per-app multitask preferences. Each app can now follow the global setting, always launch in multitask mode, or avoid multitask mode. (#1208)\n- Improved multitask dock behavior: the dock can be made smaller, hidden more cleanly, and has improved padding. (#1228, #1250)\n- Added more multitask window animations and improved native-window scene handling.\n- URL schemes and `open-url` payloads can be passed to already-running multitask apps and native windows.\n\n## JIT\n- Added StosDebug support as a JIT enabler.\n\n## TweakLoader\nYou can now disable tweaks in the \"Tweaks\" page in LiveContainer's UI. by @SAOMDVN\n\n# Improvements\n- Added support for manually setting a container's IDFV. (#1194)\n- IDFV spoofing works even when Tweakloader is not loaded.\n- Reworked signing logic for tweaks and app installation, with multithreaded signing support.\n- Download alerts now block tab switching while a download is in progress.\n- Crash reports are shown in a sheet instead of a large alert for better performance on newer iOS versions.\n- Add a \"Clear Notification\" button (#1388)\n- Added some popular NSBonjourServices keys so apps can discover AirPlay devices and remote pairing pairable hosts in the local network. (#1417)\n\n# Bug Fixes\n\n- Fixed `livecontainer://open-url` dropping the deep link when launching an app from a cold start. (#1339)\n- Fixed the Add to Home Screen menu failing or behaving incorrectly by replacing the SwiftUI context menu implementation. (#1209)\n- Fixed a crash when opening Container Preferences if the app did not contain an `en.lproj` path. (#1239)\n- Fixed apps and AltStore sources not being searchable in some cases. (#1365, #1368)\n- Fixed converting a shared app back to private after aborting an install with the same bundle identifier, which could leave stale container state behind. (#1347)\n- Fixed shortcuts and JIT flows getting stuck on a busy LiveContainer instance instead of using another available instance. (#1386)\n- Fixed file picker not workings for some apps because Tweakloader is not loaded after enabling \"Hide LiveContainer from dyld API\". (#1430)\n- Fixed several app launch compatibility issues on iOS 26.5 beta, and some multitask/JIT app launches. (#1300, #1310, #1329)\n- Fixed multitask keyboard focus issues on iOS 17.4+, including cases where the keyboard would not appear, Passwords would immediately close, or video playback would freeze in multitask mode. (#1402, #844, #870)\n- Added support for iOS 27 developer beta. (#1394, #1417, #1416)\n- Fix background downloads in multitask apps (choosing \"Keep App Extensions (Register App ID for Each Extension)\" is required). (#1415)\n\n# Localization\n\n- Updated translations. Added Spanish translation by @Deci8BelioS\n\n# Credits\n\nThanks to everyone who contributed code, fixes, testing, and reports for this release, including @boa-z, @ruri1208, @Project516, @yazdipour, @stossy11, and @SAOMDVN.\n\nGreat thanks to everyone who helped translate LiveContainer.",
-      "kind": "new"
-    },
-    {
-      "appId": "muffinstore",
-      "name": "MuffinStore",
-      "version": "1.3",
-      "previousVersion": null,
-      "releaseDate": "2026-07-12",
-      "downloadUrl": "https://github.com/mineek/MuffinStore/releases/download/1.3/MuffinStore_v1.3.tipa",
-      "changelog": "MuffinStore 1.3 | TrollStore\n\nAdds an app icon, and other changes.\n\nThe app icon is designed by [Kate](https://github.com/2x6k), thank you!",
-      "kind": "new"
     }
   ],
   "utm": {
@@ -24744,16 +24975,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 233,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 68,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 184,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -24927,6 +25152,12 @@
         "reachable": true,
         "latencyMs": 233,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 68,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:utmapp/UTM",
@@ -24960,19 +25191,13 @@
     ],
     "syncedAt": "2026-09-07",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "since": "2026-09-17",
-      "latencyMs": 1710,
-      "measuredAt": "2026-09-17"
+      "reachable": true,
+      "detail": "HTTP 302",
+      "since": "2026-09-18",
+      "latencyMs": 826,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 373,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -25146,6 +25371,12 @@
         "reachable": false,
         "latencyMs": 1710,
         "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 826,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "manual",
@@ -25379,17 +25610,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 219,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 79,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 174,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -25563,6 +25788,12 @@
         "reachable": true,
         "latencyMs": 219,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 79,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -25615,8 +25846,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 257,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 91,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -25648,6 +25879,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 257,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 91,
         "detail": "HTTP 302"
       }
     ]
@@ -25809,17 +26046,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 205,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 90,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 262,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -25993,6 +26224,12 @@
         "reachable": true,
         "latencyMs": 205,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 90,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -26044,8 +26281,8 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 278,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 98,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-17"
     },
     "healthHistory": [
@@ -26090,6 +26327,12 @@
         "reachable": true,
         "latencyMs": 278,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 98,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -26129,16 +26372,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 246,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 97,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 208,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -26312,6 +26549,12 @@
         "reachable": true,
         "latencyMs": 246,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:lo-cafe/winston",
@@ -26401,17 +26644,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 382,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 68,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 255,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -26585,6 +26822,12 @@
         "reachable": true,
         "latencyMs": 382,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 68,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -26660,17 +26903,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 183,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 88,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 204,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -26844,6 +27081,12 @@
         "reachable": true,
         "latencyMs": 183,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 88,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -26896,16 +27139,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 315,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 106,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 198,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -27079,6 +27316,12 @@
         "reachable": true,
         "latencyMs": 315,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 106,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -27132,16 +27375,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 298,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 101,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 247,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -27315,6 +27552,12 @@
         "reachable": true,
         "latencyMs": 298,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 101,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -27404,16 +27647,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 325,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 94,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 217,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -27587,6 +27824,12 @@
         "reachable": true,
         "latencyMs": 325,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 94,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:itzzace/ytkace",
@@ -27640,16 +27883,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 406,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 116,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 236,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -27823,6 +28060,12 @@
         "reachable": true,
         "latencyMs": 406,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 116,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -27932,16 +28175,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 319,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 106,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 190,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -28115,6 +28352,12 @@
         "reachable": true,
         "latencyMs": 319,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 106,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -28168,16 +28411,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-14",
-      "latencyMs": 288,
-      "measuredAt": "2026-09-17"
+      "latencyMs": 93,
+      "measuredAt": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 211,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -28351,6 +28588,12 @@
         "reachable": true,
         "latencyMs": 288,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YTMusicUltimate",
@@ -28488,17 +28731,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 220,
-      "measuredAt": "2026-09-17",
+      "latencyMs": 89,
+      "measuredAt": "2026-09-18",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-10",
-        "reachable": true,
-        "latencyMs": 200,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-10",
         "reachable": true,
@@ -28671,6 +28908,12 @@
         "at": "2026-09-17",
         "reachable": true,
         "latencyMs": 220,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-18",
+        "reachable": true,
+        "latencyMs": 89,
         "detail": "HTTP 302"
       }
     ],

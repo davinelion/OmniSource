@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-17",
-  "feedVersion": "a391f6e0b2d4",
+  "generatedAt": "2026-09-18",
+  "feedVersion": "89ca8a1d5364",
   "app": {
     "id": "messenger-flow",
     "name": "Messenger Flow",
     "developer": "dvntms & IPA Vault",
     "subtitle": "Facebook Messenger tweak by dvntms (unofficial build)",
     "bundleIdentifier": "com.facebook.Messenger.flow",
-    "version": "578.1.0",
-    "versionDate": "2026-09-10",
+    "version": "579.0.0",
+    "versionDate": "2026-09-16",
     "description": "Messenger Flow is a tweaked Facebook Messenger build by dvntms, distributed ready-to-sideload through the IPA Vault on a current Messenger base version. The Flow tweak's feature set is defined by its build; no official public documentation exists.",
     "shortDescription": "Facebook Messenger tweak by dvntms (unofficial build)",
     "category": "social",
@@ -18,8 +18,8 @@
     ],
     "icon": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
     "screenshots": [],
-    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-    "size": 113359444,
+    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+    "size": 112483407,
     "source": "927tx/IPA-Vault",
     "sourceURL": "",
     "checksum": null,
@@ -30,30 +30,30 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/messenger-flow/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/messenger-flow.json",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
-      "updatedAt": "2026-09-10"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "updatedAt": "2026-09-16"
     }
   },
   "newest": {
-    "version": "578.1.0",
-    "date": "2026-09-10",
-    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-    "size": 113359444,
+    "version": "579.0.0",
+    "date": "2026-09-16",
+    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+    "size": 112483407,
     "sha256": null
   },
   "versions": [
     {
-      "version": "578.1.0",
-      "date": "2026-09-10",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-578.1.0-Flow.ipa",
-      "size": 113359444,
+      "version": "579.0.0",
+      "date": "2026-09-16",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+      "size": 112483407,
       "sha256": null
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }

@@ -1,60 +1,100 @@
 {
-  "generatedAt": "2026-09-17",
-  "feedVersion": "a391f6e0b2d4",
+  "generatedAt": "2026-09-18",
+  "feedVersion": "89ca8a1d5364",
   "apps": {
     "total": 130,
-    "reachable": 111,
-    "unreachable": 19,
-    "verified": 111
+    "reachable": 130,
+    "unreachable": 0,
+    "verified": 129
   },
   "sync": {
-    "synced": 113,
-    "incrementalHits": 0,
-    "updated": 0,
-    "failed": 17,
-    "apiRequests": 181
+    "synced": 130,
+    "incrementalHits": 111,
+    "updated": 11,
+    "failed": 0,
+    "apiRequests": 116
   },
-  "unreachable": [
-    "cercube",
-    "glow",
-    "ime",
-    "infuseplus",
-    "inkillerplus",
-    "iqface",
-    "messenger-flow",
-    "msgplusx",
-    "nexasc",
-    "ryukgram",
-    "ryukgram-ig410",
-    "ryukgram-sidebyside",
-    "sparkle",
-    "swiftgram",
-    "telegram-mxgram",
-    "threadsaver",
-    "ttkillerplus",
-    "turrit-mxgram",
-    "uyouenhanced"
+  "unreachable": [],
+  "updates": [
+    {
+      "slug": "inkillerplus",
+      "name": "iNKillerPlus",
+      "previousVersion": "446.0.0",
+      "version": "447.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "ttkillerplus",
+      "name": "TTKillerPlus",
+      "previousVersion": "46.8.0",
+      "version": "46.9.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "raintweak",
+      "name": "RainTweak",
+      "previousVersion": "1.2.0",
+      "version": "0.9.3",
+      "kind": "updated"
+    },
+    {
+      "slug": "infuseplus",
+      "name": "Infuse Plus",
+      "previousVersion": "8.5.3",
+      "version": "8.5.5",
+      "kind": "updated"
+    },
+    {
+      "slug": "iqface",
+      "name": "iQFace",
+      "previousVersion": "578.1",
+      "version": "579.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "ryukgram",
+      "name": "RyukGram",
+      "previousVersion": "446.0.0",
+      "version": "447.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "sparkle",
+      "name": "Sparkle",
+      "previousVersion": "446.0.0",
+      "version": "447.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "nexasc",
+      "name": "NexaSC",
+      "previousVersion": "8.77.0",
+      "version": "8.78.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "messenger-flow",
+      "name": "Messenger Flow",
+      "previousVersion": "578.1.0",
+      "version": "579.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "msgplusx",
+      "name": "MSGPlusX",
+      "previousVersion": "578.1.0",
+      "version": "579.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "threadsaver",
+      "name": "ThreadSaver",
+      "previousVersion": "446.1",
+      "version": "447.0",
+      "kind": "updated"
+    }
   ],
-  "updates": [],
-  "errors": [
-    "inkillerplus: all sources failed: altstore:https://repo.ikghd.me/repo.json error: HTTP request failed after 3 attempts: https://repo.ikghd.me/repo.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "ttkillerplus: all sources failed: altstore:https://repo.ikghd.me/repo.json error: HTTP request failed after 3 attempts: https://repo.ikghd.me/repo.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "infuseplus: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "glow: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "swiftgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "telegram-mxgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "iqface: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "ryukgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "sparkle: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "nexasc: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "messenger-flow: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "msgplusx: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "threadsaver: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "ime: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "turrit-mxgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "ryukgram-ig410: all sources failed: altstore:https://source.ryuksign.com/ig410 error: HTTP request failed after 3 attempts: https://source.ryuksign.com/ig410 (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
-    "ryukgram-sidebyside: all sources failed: altstore:https://source.ryuksign.com/duplicate error: HTTP request failed after 3 attempts: https://source.ryuksign.com/duplicate (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
-  ],
+  "errors": [],
   "translations": {
     "ar": 100,
     "bn": 100,
