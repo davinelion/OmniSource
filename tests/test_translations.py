@@ -39,11 +39,16 @@ def load_en():
         return flatten(json.load(fh))
 
 
+# Directories that only ever contain generated output or third-party code.
+# `_site/` copies every page verbatim, so including it would scan each page
+# twice and let a stale build decide whether a key counts as used.
+SKIP_PARTS = {"_site", ".git", "node_modules", ".next"}
+
+
 def iter_pages():
-    yield from sorted(ROOT.glob("*.html"))
-    for pattern in ("*/index.html", "*/*/index.html"):
+    for pattern in ("*.html", "*/index.html", "*/*/index.html"):
         for path in sorted(ROOT.glob(pattern)):
-            if ".git" not in path.parts:
+            if not SKIP_PARTS.intersection(path.parts):
                 yield path
 
 

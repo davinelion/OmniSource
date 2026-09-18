@@ -30,11 +30,16 @@ CATALOG = {
         "icon": "OmniSource.png",
     },
     "clients": [
-        {"id": "altstore", "name": "AltStore", "icon": "AltStore.png"},
-        {"id": "sidestore", "name": "SideStore", "icon": "SideStore.png"},
-        {"id": "feather", "name": "Feather", "icon": "Feather.png"},
-        {"id": "esign", "name": "ESign", "icon": "E-Sign.png"},
-        {"id": "livecontainer", "name": "LiveContainer", "icon": "LiveContainer.png"},
+        {"id": "altstore", "name": "AltStore", "icon": "AltStore.png", "url": "https://altstore.io"},
+        {"id": "sidestore", "name": "SideStore", "icon": "SideStore.png", "url": "https://sidestore.io"},
+        {"id": "feather", "name": "Feather", "icon": "Feather.png", "url": "https://github.com/claration/Feather"},
+        {"id": "esign", "name": "ESign", "icon": "E-Sign.png", "url": "https://example.com/esign"},
+        {
+            "id": "livecontainer",
+            "name": "LiveContainer",
+            "icon": "LiveContainer.png",
+            "url": "https://github.com/LiveContainer/LiveContainer",
+        },
     ],
     "apps": [
         {
@@ -349,9 +354,78 @@ class InstallTests(unittest.TestCase):
                 self.assertIn("name", card)
                 self.assertIn("compatible", card)
                 self.assertIn("recommended", card)
+                self.assertIn("bestFor", card)
                 # Recommended clients must have a URL.
                 if card["recommended"]:
                     self.assertTrue(card["url"])
+
+    def test_exactly_one_client_is_the_default_pick(self) -> None:
+        # The install center badges the default pick and every other client
+        # explains who it *is* for; two defaults would make the badge noise.
+        doc = build_install_doc(_catalog())
+        picked = [c["id"] for c in doc["clients"] if c.get("recommended")]
+        self.assertEqual(len(picked), 1, picked)
+        self.assertEqual(picked[0], doc["recommender"]["default"])
+        # The catalog's own client list is the source of truth for ids.
+        self.assertEqual(
+            [c["id"] for c in doc["clients"]],
+            [c["id"] for c in _catalog().clients],
+        )
+
+    def test_recommender_questions_terminate_at_real_clients(self) -> None:
+        doc = build_install_doc(_catalog())
+        ids = {c["id"] for c in doc["clients"]}
+        recommender = doc["recommender"]
+        self.assertIn(recommender["default"], ids)
+        questions = {q["id"]: q for q in recommender["questions"]}
+
+        def walk(question_id: str, seen: tuple[str, ...] = ()) -> None:
+            self.assertNotIn(question_id, seen, "recommender question cycle")
+            for option in questions[question_id]["options"]:
+                if "result" in option:
+                    self.assertIn(option["result"], ids, option)
+                else:
+                    self.assertIn(option["next"], questions, option)
+                    walk(option["next"], (*seen, question_id))
+
+        walk("device")
+        # Every client with a profile in src/omnisource/install.py explains
+        # itself: who it is for and where to get it. (A catalog can declare a
+        # client OmniSource has no profile for; that one is labelled "manual
+        # setup" instead and is not part of the advice.)
+        from omnisource.install import CLIENT_GUIDE
+
+        for client in doc["clients"]:
+            if client["id"] in CLIENT_GUIDE:
+                self.assertTrue(client.get("bestFor"), client["id"])
+                self.assertTrue(client.get("url"), client["id"])
+
+    def test_recommender_prunes_clients_the_catalog_does_not_carry(self) -> None:
+        # The fixture catalog has no FlareStore; the full tree does. Advice must
+        # never point at a client the document cannot link.
+        catalog = _catalog()
+        doc = build_install_doc(catalog)
+        ids = {c["id"] for c in doc["clients"]}
+        self.assertNotIn("flarestore", ids)
+        results = [
+            option["result"]
+            for question in doc["recommender"]["questions"]
+            for option in question["options"]
+            if option.get("result")
+        ]
+        self.assertTrue(results, "every branch was pruned")
+        for result in results:
+            self.assertIn(result, ids)
+        self.assertIn(doc["recommender"]["default"], ids)
+        self.assertIn(doc["recommender"]["default"], results)
+
+    def test_recommender_is_omitted_when_nothing_survives(self) -> None:
+        # A catalog whose only client has no profile: there is no advice to
+        # give, and the install center renders the client grid without it.
+        catalog = Catalog.from_dict({**CATALOG, "clients": [{"id": "some-other-signer", "name": "Other", "icon": ""}]})
+        doc = build_install_doc(catalog)
+        self.assertNotIn("recommender", doc)
+        self.assertEqual(len(doc["clients"]), 1)
 
 
 class CompareTests(unittest.TestCase):

@@ -726,10 +726,11 @@
   // ============================================================================
   // QR CODE GENERATOR (P1)
   // ============================================================================
-  // Dependency-free: the QR is rendered as an <img> from api.qrserver.com (the
-  // same generator the home page uses), so there is no third-party script to
-  // load and no canvas library to shadow. The favorites/collections pages ship
-  // a .qr-modal/.qr-backdrop pair; when it is missing this module creates one.
+  // Dependency-free and offline-first: OS.qrInto() (js/core.js) renders the
+  // code locally from the vendored qrcode-generator build and hands the <img>
+  // a data: URL — no api.qrserver.com request, nothing to fail on a plane.
+  // The favorites/collections pages ship a .qr-modal/.qr-backdrop pair; when
+  // it is missing this module creates one.
   const QRCode = {
     init() {
       this._injectUI();
@@ -836,15 +837,12 @@
       return { backdrop, modal };
     },
 
-    _qrSrc(text) {
-      return 'https://api.qrserver.com/v1/create-qr-code/?size=460x460&margin=0&data=' + encodeURIComponent(text);
-    },
-
     showQR(text, title = 'QR Code') {
       const els = this._els();
       const container = els.modal.querySelector('.qr-code');
       if (container) {
-        container.innerHTML = '<img src="' + this._qrSrc(text) + '" alt="QR code" width="240" height="240" loading="lazy">';
+        container.innerHTML = '<img alt="QR code" width="240" height="240">';
+        OS.qrInto(container.querySelector('img'), text, 460);
       }
       const urlDisplay = els.modal.querySelector('.url-display');
       if (urlDisplay) urlDisplay.textContent = text;
@@ -889,18 +887,17 @@
     download() {
       const text = this._lastText;
       if (!text) return;
-      fetch(this._qrSrc(text))
-        .then((res) => res.blob())
-        .then((blob) => {
-          const link = document.createElement('a');
-          link.href = URL.createObjectURL(blob);
-          link.download = 'omnisource-qr.png';
-          link.click();
-          setTimeout(() => URL.revokeObjectURL(link.href), 5000);
-        })
-        .catch(() => {
-          window.open(this._qrSrc(text), '_blank');
-        });
+      // A data: URL is already the file; no fetch, so the download works with
+      // no network and does not depend on a third-party QR service staying up.
+      OS.qrImage(text, 1024).then((src) => {
+        if (!src) return;
+        const link = document.createElement('a');
+        link.href = src;
+        link.download = src.indexOf('data:image/gif') === 0 ? 'omnisource-qr.gif' : 'omnisource-qr.png';
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+      });
     }
   };
 

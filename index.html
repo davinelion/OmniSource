@@ -32,7 +32,6 @@
        theme bootstrap + page widgets), images/data from self + https (QR provider),
        API calls to self + https. All dynamic markup is escaped via OS.esc. -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; media-src 'self' data:; connect-src 'self' https:; font-src 'self' data: https://fonts.gstatic.com; form-action 'self'">
-  <link rel="preconnect" href="https://api.qrserver.com" crossorigin>
   <!-- Design system -->
   <link rel="preload" href="assets/design-system/tokens.css" as="style">
   <link rel="preload" href="assets/design-system/components.css" as="style">
@@ -135,20 +134,18 @@
   <main id="mainContent">
     <!-- ================================ HERO ================================ -->
     <section class="hero os-hero" aria-label="OmniSource introduction">
-      <div class="hero-bg" aria-hidden="true"><i class="spot"></i><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i><i class="hero-grid"></i></div>
       <div class="shell hero-inner">
         <span class="eyebrow" id="healthPill"><span class="live-dot" id="healthDot"></span><span id="healthLabel">All 130 downloads verified online</span></span>
         <picture class="hero-logo-wrap">
           <source srcset="assets/OmniSource.webp" type="image/webp">
-          <img class="hero-logo" src="assets/OmniSource.png" alt="OmniSource logo" width="88" height="88" fetchpriority="high">
+          <img class="hero-logo" src="assets/OmniSource.png" alt="OmniSource logo" width="72" height="72" fetchpriority="high">
         </picture>
         <h1><span data-i18n="hero.titleA">One Source.</span><br><span class="grad-text" data-i18n="hero.titleB">Every Source.</span></h1>
         <p class="hero-tagline" data-i18n="hero.tagline">Discover trusted AltStore-compatible repositories.</p>
-        <p class="hero-copy" data-i18n="hero.copy">A carefully curated iOS catalog, synced from official upstream releases every six hours — verified, health-checked and always installable.</p>
 
         <div class="hero-ctas">
           <a class="button primary os-press" href="install/" data-i18n="hero.quickInstall">Quick install</a>
-          <a class="button os-press" href="sources/" data-i18n="hero.explore">Source explorer</a>
+          <a class="button os-press" href="#catalog" data-i18n="nav.apps">Apps</a>
           <a class="button ghost os-press" href="https://github.com/iamsmmh/OmniSource" target="_blank" rel="noopener" data-i18n="hero.github">GitHub</a>
         </div>
 
@@ -212,200 +209,14 @@
                what is overflowing. -->
           <nav class="quick-tabs section-tabs" id="sectionTabs" aria-label="Jump to a section" data-i18n-aria-label="tabs.label" data-scroll-hints>
             <a class="quick-tab section-tab" href="#top" data-section="top" data-target="top" aria-current="true" data-i18n="tabs.overview">Overview</a>
-            <a class="quick-tab section-tab" href="#trending" data-section="trending" data-target="trending">
-              <span class="qt-emoji" aria-hidden="true">🔥</span><span>Trending</span>
-            </a>
-            <a class="quick-tab section-tab" href="#recent" data-section="recent" data-target="recent">
-              <span class="qt-emoji" aria-hidden="true">✨</span><span>Recent</span>
-            </a>
-            <a class="quick-tab section-tab" href="#featured" data-section="featured" data-target="featured">
-              <span class="qt-emoji" aria-hidden="true">⭐</span><span>Featured</span>
-            </a>
-            <a class="quick-tab section-tab is-active" href="#catalog" data-section="catalog" data-target="catalog">
-              <span class="qt-emoji" aria-hidden="true">📱</span><span>All Apps</span>
-            </a>
-            <a href="collections/" class="quick-tab">
-              <span class="qt-emoji" aria-hidden="true">📦</span><span>Collections</span>
-            </a>
-            <a href="favorites/" class="quick-tab">
-              <span class="qt-emoji" aria-hidden="true">❤️</span><span>Saved</span>
-            </a>
-            <a href="sources/" class="quick-tab">
-              <span class="qt-emoji" aria-hidden="true">🗂️</span><span>Sources</span>
-            </a>
+            <a class="quick-tab section-tab is-active" href="#catalog" data-section="catalog" data-target="catalog" data-i18n="nav.apps">Apps</a>
+            <a class="quick-tab section-tab" href="#whats-new" data-section="whats-new" data-target="whats-new" data-i18n="nav.whatsNew">What&rsquo;s new</a>
+            <a class="quick-tab section-tab" href="#installGuide" data-section="installGuide" data-target="installGuide" data-i18n="nav.install">Install</a>
+            <a href="collections/" class="quick-tab" data-i18n="nav.collections">Collections</a>
+            <a href="favorites/" class="quick-tab" data-i18n="nav.favorites">Favorites</a>
+            <a href="sources/" class="quick-tab" data-i18n="nav.sources">Sources</a>
           </nav>
-          <div class="quick-tabs-hint" aria-hidden="true">Jump to section • scroll to browse</div>
         </div>
-      </div>
-    </section>
-
-    <!-- ============================= FEATURE CARDS ========================== -->
-    <section class="section" id="features" aria-label="Platform features">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker" data-i18n="features.kicker">PLATFORM</span>
-            <h2><span data-i18n="features.title">Everything a source needs.</span></h2>
-          </div>
-        </div>
-        <div class="feature-grid">
-          <a class="feature-card panel" href="sources/" data-reveal>
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5L21 12"/><path d="m3 16.5 9 4.5 9-4.5"/></svg></span>
-            <h3 data-i18n="features.discoveryTitle">Source Discovery</h3>
-            <p data-i18n="features.discoveryText">Browse every upstream behind the catalog — maintainer, cadence, health and reputation on one page.</p>
-          </a>
-          <a class="feature-card panel" href="#catalog" data-reveal style="--reveal-delay:60ms">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M10 18h4"/></svg></span>
-            <h3 data-i18n="features.appsTitle">App Explorer</h3>
-            <p data-i18n="features.appsText">Filter every app by category, provenance, iOS version or sort order, with instant fuzzy search.</p>
-          </a>
-          <a class="feature-card panel" href="status/" data-reveal style="--reveal-delay:120ms">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12h4l2.5-6 3 12L15 12h6"/></svg></span>
-            <h3 data-i18n="features.healthTitle">Health Monitoring</h3>
-            <p data-i18n="features.healthText">Downloads are probed every build; broken links open an issue before you ever tap Get.</p>
-          </a>
-          <a class="feature-card panel" href="docs/" data-reveal style="--reveal-delay:180ms">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4.5"/></svg></span>
-            <h3 data-i18n="features.verificationTitle">Verification</h3>
-            <p data-i18n="features.verificationText">Origin, publisher and file hashes are checked end-to-end and labelled per app — never hidden.</p>
-          </a>
-          <a class="feature-card panel" href="collections/" data-reveal style="--reveal-delay:240ms">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></span>
-            <h3 data-i18n="features.collectionsTitle">Collections</h3>
-            <p data-i18n="features.collectionsText">Curated shelves for YouTube, music, emulators and utilities, updated with the catalog.</p>
-          </a>
-          <a class="feature-card panel" href="api/index.json" data-reveal style="--reveal-delay:300ms">
-            <span class="feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m8 9-4 3 4 3M16 9l4 3-4 3M13.5 6l-3 12"/></svg></span>
-            <h3 data-i18n="features.apiTitle">Developer APIs</h3>
-            <p data-i18n="features.apiText">Versioned JSON endpoints, gzip twins and an AltStore-compatible feed — one URL to integrate.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================== TRENDING ============================== -->
-    <section class="section" id="trending" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">TRENDING NOW</span>
-            <h2>Apps everybody is <span class="grad-text">installing</span></h2>
-          </div>
-          <p class="lead">Ranked by recency, reachability, featured status and verification level. Refreshed on every build.</p>
-        </div>
-        <div class="rail" id="trendingRail" aria-live="polite">
-          <div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================ RECENTLY UPDATED ======================= -->
-    <section class="section tinted" id="recent" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">RECENTLY UPDATED</span>
-            <h2>Just <span class="grad-text">shipped</span></h2>
-          </div>
-          <p class="lead">The newest versions that landed in the catalog. Tap a card to see the release notes.</p>
-        </div>
-        <div class="rail" id="recentRail" aria-live="polite">
-          <div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================ FEATURED ============================ -->
-    <section class="section" id="featured" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">FEATURED</span>
-            <h2>Hand-picked by the <span class="grad-text">curator</span></h2>
-          </div>
-          <p class="lead">Apps that earn the spotlight — verified, recently updated and trusted by the community.</p>
-        </div>
-        <div class="featured-rail" id="featuredRail" aria-live="polite">
-          <div class="os-skeleton" style="height:300px"></div><div class="os-skeleton" style="height:300px"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================================ VERIFIED ============================ -->
-    <section class="section tinted" id="verifiedApps" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">VERIFIED APPS</span>
-            <h2>Downloads you can <span class="grad-text">trust</span></h2>
-          </div>
-          <p class="lead">Every entry below is verified end-to-end: the file is reachable, the upstream is the developer&rsquo;s, and the catalog flag is set.</p>
-        </div>
-        <div class="rail" id="verifiedRail" aria-live="polite">
-          <div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div><div class="os-skeleton skeleton-rail"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =============================== STATISTICS =========================== -->
-    <section class="section" id="statistics" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">PLATFORM STATISTICS</span>
-            <h2>By the <span class="grad-text">numbers</span></h2>
-          </div>
-          <p class="lead">Every metric is computed from the catalog, the pipeline state and the rolling health window — never sampled from a third party.</p>
-        </div>
-        <div class="metrics-grid" id="metricsGrid"></div>
-        <p class="mt-4"><a class="button small" href="analytics/">Open the analytics dashboard →</a></p>
-      </div>
-    </section>
-
-    <!-- ============================= SOURCE HEALTH ========================== -->
-    <section class="section tinted" id="sourceHealth" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">SOURCE HEALTH</span>
-            <h2>Upstream <span class="grad-text">reputation</span></h2>
-          </div>
-          <p class="lead">Badges reflect the rolling 30-day reachability, update cadence and broken-release history of each upstream source.</p>
-        </div>
-        <div class="source-grid" id="sourceGrid" aria-live="polite"></div>
-        <p class="mt-4"><a class="button small" id="sourceHealthMore" href="status/" hidden>Open the health center →</a></p>
-      </div>
-    </section>
-
-    <!-- ============================= INSTALL GUIDE ========================== -->
-    <section class="section" id="installGuide" hidden>
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <span class="kicker">INSTALLATION GUIDE</span>
-            <h2>Up and running in <span class="grad-text">three steps</span></h2>
-          </div>
-          <p class="lead">OmniSource works with every major sideloading client. No computer required for the one-tap clients.</p>
-        </div>
-        <div class="install-guide-grid">
-          <article class="panel install-step" data-reveal>
-            <span class="step-num" aria-hidden="true">1</span>
-            <h3>Pick a client</h3>
-            <p>AltStore and SideStore open straight from your phone. Feather, ESign and LiveContainer cover the rest.</p>
-          </article>
-          <article class="panel install-step" data-reveal style="--reveal-delay:80ms">
-            <span class="step-num" aria-hidden="true">2</span>
-            <h3>Add the source</h3>
-            <p>One tap for AltStore, SideStore and Feather — or copy the source URL and paste it in ESign / LiveContainer.</p>
-          </article>
-          <article class="panel install-step" data-reveal style="--reveal-delay:160ms">
-            <span class="step-num" aria-hidden="true">3</span>
-            <h3>Install any app</h3>
-            <p>Browse the catalog, tap Get. Updates flow in automatically on every six-hour sync.</p>
-          </article>
-        </div>
-        <div class="client-row" id="guideClients" style="justify-content:flex-start;margin-top:30px" role="group" aria-label="Add the source in your client"></div>
-        <p class="mt-4"><a class="button" href="install/">Open the installation center →</a></p>
       </div>
     </section>
 
@@ -516,6 +327,43 @@
       </div>
     </section>
 
+    <!-- ============================= INSTALL GUIDE ========================== -->
+    <section class="section" id="installGuide" hidden>
+      <div class="shell">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">INSTALLATION GUIDE</span>
+            <h2>Up and running in <span class="grad-text">three steps</span></h2>
+          </div>
+          <p class="lead">OmniSource works with every major sideloading client. No computer required for the one-tap clients.</p>
+        </div>
+        <div class="install-guide-grid">
+          <article class="panel install-step" data-reveal>
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Pick a client</h3>
+            <p><b>SideStore</b> for most people: free, and it refreshes apps on the phone after a one-time setup.
+              <b>AltStore</b> if you want the reference client or you are in the EU. <b>FlareStore</b> if you would rather not
+              touch a computer or re-sign weekly. <b>Feather</b> on a jailbroken or TrollStore device.</p>
+          </article>
+          <article class="panel install-step" data-reveal style="--reveal-delay:80ms">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Add the source</h3>
+            <p>One tap for AltStore, SideStore, FlareStore and Feather — or copy the source URL and paste it into ESign, Ksign or LiveContainer.</p>
+          </article>
+          <article class="panel install-step" data-reveal style="--reveal-delay:160ms">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Install any app</h3>
+            <p>Browse the catalog, tap Get. Updates flow in automatically on every six-hour sync.</p>
+          </article>
+        </div>
+        <div class="client-row" id="guideClients" style="justify-content:flex-start;margin-top:30px" role="group" aria-label="Add the source in your client"></div>
+        <p class="mt-4">
+          <a class="button primary" href="install/#clientFinder">Which client should I use? →</a>
+          <a class="button" href="install/">Installation center</a>
+        </p>
+      </div>
+    </section>
+
     <!-- ================================ TRUST =============================== -->
     <section class="section trust-section" id="how-it-works" aria-label="How OmniSource works">
       <div class="shell">
@@ -569,7 +417,7 @@
           <a href="#whats-new" data-i18n="footer.releaseTimeline">Release timeline</a>
           <a href="compare/" data-i18n="footer.compareApps">Compare apps</a>
           <a href="graph/" data-i18n="footer.relationGraph">Relationship graph</a>
-          <a href="discover/" data-i18n="features.discoveryTitle">Source Discovery</a>
+          <a href="discover/" data-i18n="nav.discover">Discover</a>
         </div>
         <div class="footer-col">
           <h4 data-i18n="footer.platform">Platform</h4>
@@ -593,39 +441,12 @@
     </div>
   </footer>
 
-  <!-- Bottom tap navigation — easy thumb access on mobile -->
-  <nav class="bottom-nav" aria-label="Quick tap navigation">
-    <a href="#top" class="bn-item" data-bn="home" aria-label="Home">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-5H9v5H4a1 1 0 0 1-1-1v-9.5Z"/></svg>
-      <span>Home</span>
-    </a>
-    <a href="#catalog" class="bn-item" data-bn="apps" aria-label="All apps">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg>
-      <span>Apps</span>
-    </a>
-    <button class="bn-item bn-primary" type="button" data-open-palette aria-label="Search apps">
-      <span class="bn-primary-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4-4"/></svg></span>
-      <span>Search</span>
-    </button>
-    <a href="collections/" class="bn-item" data-bn="collections" aria-label="Collections">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z"/><path d="m3 12 9 4.5L21 12"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
-      <span>Stacks</span>
-    </a>
-    <a href="install/" class="bn-item" data-bn="install" aria-label="Install guide">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
-      <span>Install</span>
-    </a>
-  </nav>
-
-  <!-- Floating tap buttons — quick actions -->
-  <div class="fab-stack" aria-label="Quick actions">
-    <button class="fab" id="fabTop" type="button" aria-label="Back to top" title="Back to top">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5 5 12l1.4 1.4L11 9v10h2V9l4.6 4.4L19 12 12 5Z"/></svg>
-    </button>
-    <button class="fab fab-primary" id="fabBrowse" type="button" aria-label="Browse all apps" title="Browse apps">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="8" cy="6" r="1.6" fill="currentColor"/><circle cx="8" cy="12" r="1.6" fill="currentColor"/><circle cx="8" cy="18" r="1.6" fill="currentColor"/></svg>
-    </button>
-  </div>
+  <!-- The floating tap bars (`.bottom-nav`, `.fab-stack`) were removed: on a
+       phone they covered the last row of the catalog and the footer, and the
+       scroll position had to be padded to compensate. Thumb reach is now
+       covered by the sticky header and the sticky section tabs, which never
+       overlap content; the injected back-to-top bead (js/core.js) remains the
+       only floating control. -->
 
   <!-- App detail dialog -->
   <dialog id="appDialog" class="app-dialog os-dialog" aria-labelledby="dialogTitle">

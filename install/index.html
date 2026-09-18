@@ -159,6 +159,18 @@
          (README badges, QR codes, shared links). Filled in by js/site.js. -->
     <section id="installAutoAdd" hidden aria-live="polite"></section>
 
+    <!-- "Which client?" — a four-question decision tree published in
+         feeds/install.json (src/omnisource/install.py::RECOMMENDER) and walked
+         by js/site.js. Answers the recommendation question in the place a
+         reader asks it, instead of making them compare seven cards. -->
+    <section class="panel client-finder" id="clientFinder" aria-label="Which client should I use?" hidden>
+      <div class="finder-head">
+        <h2>Which client should I use?</h2>
+        <p>Four questions, one recommendation. Answering installs nothing.</p>
+      </div>
+      <div id="clientFinderBody"></div>
+    </section>
+
     <div class="in-clients" id="installClients" aria-live="polite">
       <div class="os-skeleton" style="height:320px"></div><div class="os-skeleton" style="height:320px"></div><div class="os-skeleton" style="height:320px"></div>
     </div>

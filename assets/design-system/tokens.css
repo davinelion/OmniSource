@@ -61,7 +61,7 @@
   --text: #0c0d14;
   --text-2: #2f3242;
   --muted: #5e6578;
-  --faint: #8d91a3;
+  --faint: #666b80;
 
   --line: rgba(255, 255, 255, 0.62);
   --line-strong: rgba(80, 90, 130, 0.16);
@@ -70,6 +70,9 @@
   --accent-2: #8b5cf6;
   --accent-3: #f472b6;
   --accent: #6d5ef5;
+  /* Accent as text on --accent-soft (score pills, links on tinted rows):
+     #6d5ef5 measures 3.5:1 there; this twin clears 4.5:1. */
+  --accent-text: #4c3fd0;
   --accent-ink: #ffffff;
   --accent-soft: rgba(109, 94, 245, 0.10);
   --accent-ring: rgba(109, 94, 245, 0.22);
@@ -262,7 +265,7 @@ html[data-theme="dark"] {
   --text: #f2f3fa;
   --text-2: #d0d2e0;
   --muted: #999eb7;
-  --faint: #6e748a;
+  --faint: #7b8199;
 
   --line: rgba(255, 255, 255, 0.09);
   --line-strong: rgba(255, 255, 255, 0.16);
@@ -328,6 +331,8 @@ html[data-theme="dark"] {
   --accent-2: #a06bff;
   --accent-3: #f0abfc;
   --accent: #9d8fff;
+  /* On dark surfaces the accent is already text-safe on its own tint. */
+  --accent-text: var(--accent);
   --accent-ink: #0c0a14;
   --accent-soft: rgba(157, 143, 255, 0.14);
   --accent-ring: rgba(157, 143, 255, 0.26);
@@ -374,7 +379,7 @@ html[data-theme="dark"] {
     --text: #f2f3fa;
     --text-2: #d0d2e0;
     --muted: #999eb7;
-    --faint: #6e748a;
+    --faint: #7b8199;
     --line: rgba(255, 255, 255, 0.09);
     --line-strong: rgba(255, 255, 255, 0.16);
     --glass: linear-gradient(168deg, rgba(255,255,255,0.10) 0%, rgba(255,255,255,0.04) 42%, rgba(255,255,255,0.02) 100%);
@@ -394,6 +399,8 @@ html[data-theme="dark"] {
     --accent-2: #a06bff;
     --accent-3: #f0abfc;
     --accent: #9d8fff;
+    /* On dark surfaces the accent is already text-safe on its own tint. */
+    --accent-text: var(--accent);
     --accent-ink: #0c0a14;
     --accent-soft: rgba(157, 143, 255, 0.14);
     --accent-ring: rgba(157, 143, 255, 0.26);
