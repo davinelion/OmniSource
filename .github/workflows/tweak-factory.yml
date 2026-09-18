@@ -161,15 +161,9 @@ jobs:
               INDEX=$((INDEX + 1))
               curl -fsSL --proto '=https' --max-time 600 "${EXTRA_URL}" -o "/tmp/extras/${INDEX}.deb"
               EXTRA_SHA="$(shasum -a 256 "/tmp/extras/${INDEX}.deb" | awk '{print $1}')"
-              python3 - "/tmp/extras/plan.json" "${INDEX}" "${EXTRA_SHA}" <<'PYEOF'
-import json, sys
-
-path, index, sha = sys.argv[1], int(sys.argv[2]), sys.argv[3]
-plan = json.loads(open(path, encoding="utf-8").read())
-plan[index - 1]["sha256"] = sha
-with open(path, "w", encoding="utf-8") as handle:
-    handle.write(json.dumps(plan, sort_keys=True))
-PYEOF
+              # One-liner on purpose: a heredoc here would terminate the YAML
+              # block scalar (actionlint caught exactly that).
+              python3 -c 'import json,sys; p,i,s = sys.argv[1],int(sys.argv[2]),sys.argv[3]; d = json.load(open(p,encoding="utf-8")); d[i-1]["sha256"] = s; open(p,"w",encoding="utf-8").write(json.dumps(d,sort_keys=True))' /tmp/extras/plan.json "${INDEX}" "${EXTRA_SHA}"
             done <<< "${M_EXTRA_DEB_URLS}"
             EXTRA_DEBS_JSON="$(cat /tmp/extras/plan.json)"
           fi
