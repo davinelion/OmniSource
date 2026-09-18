@@ -490,11 +490,13 @@
     return OS.fetchJSON('catalog.json', 6000).then(function (meta) {
       if (!meta) {
         state.clients = [
-          { id: 'altstore', name: 'AltStore', icon: 'AltStore.png' },
-          { id: 'sidestore', name: 'SideStore', icon: 'SideStore.png' },
-          { id: 'feather', name: 'Feather', icon: 'Feather.png' },
-          { id: 'esign', name: 'ESign', icon: 'E-Sign.png' },
-          { id: 'livecontainer', name: 'LiveContainer', icon: 'LiveContainer.png' }
+          { id: 'altstore', name: 'AltStore', icon: 'AltStore.webp' },
+          { id: 'sidestore', name: 'SideStore', icon: 'SideStore.webp' },
+          { id: 'flarestore', name: 'FlareStore', icon: 'FlareStore.webp' },
+          { id: 'feather', name: 'Feather', icon: 'Feather.webp' },
+          { id: 'esign', name: 'ESign', icon: 'E-Sign.webp' },
+          { id: 'ksign', name: 'Ksign', icon: 'Ksign.webp' },
+          { id: 'livecontainer', name: 'LiveContainer', icon: 'LiveContainer.webp' }
         ];
         return;
       }
@@ -569,8 +571,10 @@
   var CLIENT_SCHEMES = {
     altstore: 'altstore://source?url={url}',
     sidestore: 'sidestore://source?url={url}',
+    flarestore: 'flarestore://source?url={url}',
     feather: 'feather://source/{hostpath}',
     esign: 'esign://addsource?url={url}',
+    ksign: 'ksign://addsource?url={url}',
     livecontainer: 'livecontainer://sources?url={url}'
   };
 
@@ -2496,7 +2500,7 @@
     },
 
     /* One-tap hand-off used by README badges, QR codes and external links:
-       /install/?add=altstore|sidestore|feather|esign|livecontainer
+       /install/?add=altstore|sidestore|flarestore|feather|esign|ksign|livecontainer
        optionally with &app=<slug> for a single-app feed. GitHub (and most
        chat apps) strip non-http schemes from links, so those badges point
        here and this page performs the scheme navigation itself. The attempt

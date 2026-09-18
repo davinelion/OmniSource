@@ -135,7 +135,7 @@
             "devices": { "type": "array", "items": { "enum": ["iphone", "ipad"] } },
             "clients": {
               "type": "array",
-              "items": { "enum": ["altstore", "sidestore", "feather", "esign", "livecontainer"] }
+              "items": { "enum": ["altstore", "sidestore", "flarestore", "feather", "esign", "ksign", "livecontainer"] }
             },
             "notes": { "type": "string" }
           }

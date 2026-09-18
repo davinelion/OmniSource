@@ -48,6 +48,30 @@
       <enclosure url="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>EscapeOS v0.1.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/escapeos.json</link>
+      <guid isPermaLink="false">escapeos-0.1.6</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[EscapeOS 0.1.6 | EscapeOS-0.1.6
+
+## EscapeOS 0.1.6
+
+v0.1.0, v0.1.1, v0.1.3, v0.1.4, and v0.1.5 are unchanged.
+
+### Changed
+- **Import from Files** asks Replace, Keep Both, or Cancel when that name is already in the folder, instead of silently writing `foo 2.txt`. Replace overwrites the existing file at the same path and name ([#2](https://github.com/pwnapplehat/EscapeOS/issues/2)).
+- A same-named **folder** is not replaced with a file; Keep Both lands beside it.
+
+Theos arm64 IPA (iPhoneOS 16.5 SDK, `MinimumOSVersion` 18.0), same build path as 0.1.5. After install, reconnect LocalDevVPN if the list is empty; iPASide places `pairingFile.plist` again after sideload.
+
+`EscapeOS-0.1.6.ipa` SHA-256:
+
+```
+234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2
+```]]></description>
+      <enclosure url="https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.6/EscapeOS-0.1.6.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Cercube for YouTube v6.1.3</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/cercube.json</link>
       <guid isPermaLink="false">cercube-6.1.3</guid>
@@ -368,30 +392,6 @@ YouTube Music version]]></description>
 > [!WARNING]
 > - 21.34.3+ builds require iOS 17+ now.]]></description>
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.37.4_1.3.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YouMod v21.37.4</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/youmod.json</link>
-      <guid isPermaLink="false">youmod-21.37.4</guid>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.37.4 | YouMod_21.37.4_2.0.0
-
-### Latest Release, ENJOY!!
-
-> [!NOTE]
-> - **YTUHD** is not included. 4K is available for A16+ devices.
-> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Extra tweaks that are bundled may be unstable on newer versions.
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

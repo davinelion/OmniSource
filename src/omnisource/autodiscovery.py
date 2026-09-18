@@ -59,7 +59,7 @@ FEED_FILENAME_HINTS = (
     "source/apps.json",
 )
 
-KNOWN_TYPES = ("altstore", "sidestore", "feather", "esign", "livecontainer", "unknown")
+KNOWN_TYPES = ("altstore", "sidestore", "flarestore", "feather", "esign", "ksign", "livecontainer", "unknown")
 
 HEALTH_UNKNOWN = "unknown"
 HEALTH_ONLINE = "online"

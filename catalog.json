@@ -3,7 +3,7 @@
   "source": {
     "name": "OmniSource",
     "identifier": "com.iamsmmh.omnisource",
-    "subtitle": "A curated iOS app source for AltStore, SideStore, Feather, ESign and LiveContainer",
+    "subtitle": "A curated iOS app source for AltStore, SideStore, FlareStore, Feather, ESign, Ksign and LiveContainer",
     "description": "OmniSource is a curated, automatically maintained AltStore-compatible iOS app source. Every entry is resolved from the app's own official upstream project - GitHub Releases or the developer's official AltStore feed - and each download link is re-verified automatically.",
     "owner": "iamsmmh",
     "repository": "https://github.com/iamsmmh/OmniSource",
@@ -26,6 +26,12 @@
       "url": "https://sidestore.io"
     },
     {
+      "id": "flarestore",
+      "name": "FlareStore",
+      "icon": "FlareStore.webp",
+      "url": "https://flarestore.app"
+    },
+    {
       "id": "feather",
       "name": "Feather",
       "icon": "Feather.webp",
@@ -34,7 +40,14 @@
     {
       "id": "esign",
       "name": "ESign",
-      "icon": "E-Sign.webp"
+      "icon": "E-Sign.webp",
+      "url": "https://github.com/search?q=ESign+iOS"
+    },
+    {
+      "id": "ksign",
+      "name": "Ksign",
+      "icon": "Ksign.webp",
+      "url": "https://github.com/Nyasami/Ksign"
     },
     {
       "id": "livecontainer",
@@ -78,8 +91,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": ""
@@ -127,8 +142,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "uYouEnhanced's official GitHub releases publish release notes only - no .ipa assets - so the IPA served here is a community build of the official release tag (YouTube 21.14.4 / uYou 3.0.5), mirrored on archive.org. Once a 'Build uYouEnhanced' run publishes an IPA in this repository (tag uyouenhanced-v*), the self-built artifact takes over automatically."
@@ -218,8 +235,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official project: dayanch96/YTLite ('YouTube Plus'). The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -296,8 +315,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "YouPro is developed by alibusut (distributed via the developer's Telegram). This source serves a ready-to-sideload IPA built from the official YouPro tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -373,8 +394,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The developer's own AltStore source (repo.ikghd.me) has been unreachable, so this feed resolves from the ready-to-sideload community build of the official tweak at mrdrvt99/YouProEXTRA. YouTube 21.34+ requires iOS 17. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -451,8 +474,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Tracks the official itzzace/ytkace releases. The published build follows the latest YouTube release and needs iOS 17 or newer; upstream also ships a separate iOS 16 IPA (YTKACE_<version>_YouTube_iOS16_<youtube>.ipa) on the same release page."
@@ -497,17 +522,17 @@
     },
     {
       "slug": "youmod",
-      "name": "YouMod",
-      "subtitle": "All-in-one YouTube enhancement tweak",
+      "name": "uPro Plus",
+      "subtitle": "YouTube 21.37.4 extra-tweaks build (YouMod + player stack)",
       "bundleIdentifier": "com.google.ios.youtube",
       "alternativeTo": "ytlite",
       "developerName": "Tonwalter888",
       "category": "photo-video",
       "tintColor": "FF0000",
       "icon": "YouTube.webp",
-      "localizedDescription": "YouMod is a customizable YouTube enhancement tweak by Tonwalter888. It includes ad blocking, background playback, PiP support, UI customization, integrated download manager, and sponsor segment skipping.",
+      "localizedDescription": "uPro Plus is OmniSource's featured YouTube 21.37.4 extra-tweaks IPA. It is the YouProEXTRA YouMod 2.0.0 line on YouTube 21.37.4 with the extra player stack that release publishes: YouPip (Picture-in-Picture), YouQuality and YouChooseQuality, YTHoldForSpeed, YouGetCaption, YTABConfig, YTNativeShare, YTweaks, Return YouTube Dislike, DontEatMyContent, Gonerino, VolumeBoostYT and PleaseDontStopTheMusic. 120 Hz display refresh is used when the device supports it. Native 4K is available on A16+ devices; YTUHD is not bundled on this YouTube version. Requires iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time. YTLite, YTKACE and YouMod are competing main tweaks; stacking all three in one IPA is unstable, so this listing follows the extra-tweaks YouMod 21.37.4 release.",
       "screenshots": [],
-      "featured": false,
+      "featured": true,
       "status": "stable",
       "upstreamURL": "https://github.com/Tonwalter888/YouMod",
       "verification": {
@@ -517,7 +542,7 @@
         "checksumPublished": false
       },
       "compatibility": {
-        "minOSVersion": "16.0",
+        "minOSVersion": "17.0",
         "maxOSVersion": null,
         "devices": [
           "iphone",
@@ -526,11 +551,13 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
-        "notes": "Official project: Tonwalter888/YouMod. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
+        "notes": "Requires iOS 17.0+ (YouTube 21.34.3+). Served from mrdrvt99/YouProEXTRA tags youmod-ipa* (YouMod_21.37.4_2.0.0 extra-tweaks IPA). Catalog name is uPro Plus; slug remains youmod for stable feed URLs. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
       },
       "appPermissions": {
         "entitlements": [
@@ -565,7 +592,8 @@
         ],
         "maxPages": 10,
         "keepVersions": 1,
-        "descriptionTemplate": "YouTube {version} | {label}"
+        "descriptionTemplate": "YouTube {version} | uPro Plus extra tweaks | {label}",
+        "minOSVersion": "17.0"
       }
     },
     {
@@ -603,8 +631,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The upstream repository removed its IPA release assets for legal reasons and now publishes builds on Telegram/TubeVault, so this entry tracks the GitHub mirror of the TubeVault build (MaxTube 1.4.2, YouTube 21.31.3, YTPlus 5.2.2), which publishes a SHA-256. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -681,8 +711,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official project: dayanch96/YTMusicUltimate. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by the mrdrvt99/YTMusicUltimate build fork. Shares com.google.ios.youtubemusic with MaxMusic: install one at a time."
@@ -748,8 +780,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Full MaxMusic build including YouMusicPiP; upstream also publishes a no-YouMusicPiP variant if PiP causes background-playback issues. Shares com.google.ios.youtubemusic with YTMusicUltimate: install one at a time."
@@ -817,8 +851,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Universal IPA. The QEMU (SE) backend runs on any iOS 14+ device; virtualization (HV) acceleration requires a supported device plus a JIT workaround or jailbreak. 4 GB of RAM or more is recommended for usable guest performance."
@@ -896,8 +932,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
@@ -975,8 +1013,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
@@ -1048,8 +1088,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official GPL-3.0 releases from lo-cafe/winston. The last published build is v1.1.5 (June 2024); the project is on hold, so treat it as archived-but-installable. Requires your own Reddit API credentials."
@@ -1096,8 +1138,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official MIT-licensed releases from XITRIX/iTorrent."
@@ -1148,8 +1192,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official releases from StikDebug/StikDebug. Needs a pairing file and the on-device VPN loop; JIT attachment requires iOS 17.4 or newer."
@@ -1200,8 +1246,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official sideloaded build from BandarHL/BHTwitter. The release also ships a TrollStore .tipa, which OmniSource skips - only the -sideloaded.ipa is tracked. The bundled X app is whichever decrypted build the maintainer packaged for that tweak release. Shares com.atebits.Tweetie2 with NeoFreeBird: install one at a time."
@@ -1262,8 +1310,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official AGPL-3.0 releases. The plain LiveContainer.ipa is tracked; the LiveContainer+SideStore.ipa bundle in the same release is skipped. Multitasking needs iPadOS 16 or later, and installing guest apps needs AltStore 2.0+ / SideStore 0.6.0+."
@@ -1320,8 +1370,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official GPL-3.0 releases from claration/Feather (formerly khcrysalis/Feather). You need your own signing certificate; Feather does not provide one."
@@ -1384,8 +1436,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official AGPL-3.0 stable releases; the rolling nightly and alpha tags are pre-releases and are not tracked. Requires a pairing file and, on iOS 17+, a JIT/StikDebug-style enabler for some features."
@@ -1436,8 +1490,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official releases from Aidoku/Aidoku. Sources are added by the user; the app ships none."
@@ -1484,8 +1540,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official stable releases; the rolling alpha tag is a pre-release and is not tracked. The iOS IPA is around 1 GB because every emulator core is bundled, and the tvOS build is skipped. Provenance ships no games - you supply your own ROMs."
@@ -1532,8 +1590,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases. Uses the same bundle identifier as the App Store build of Delta: installing the sideload build replaces the store version. Delta 1.6 targets iOS 14 or newer."
@@ -1579,8 +1639,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official release IPA (PPSSPP-iOS-<version>.ipa) from the developer's GitHub releases, with Metal rendering via the bundled MoltenVK. The upstream CMake config sets the iOS deployment target to 12.0. The same release page also ships a jailbreak .deb package."
@@ -1628,8 +1690,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official iOS IPA (Yattee-<version>-iOS.ipa) from the developer's GitHub releases. Yattee 1.5.1 targets iOS 14 or newer. The same release ships separate macOS and tvOS builds which are not distributed here."
@@ -1677,8 +1741,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned CI IPA (streamyfin-ios.ipa) built by the developer's GitHub release pipeline. Requires a Jellyfin server to connect to. The streamyfin-ios-tv.ipa asset in the same release is a separate Apple TV build and is intentionally not distributed here."
@@ -1726,8 +1792,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official release IPA (Spotube-iOS.ipa, stable flavor) built by the developer's release pipeline and published with SHA-256/MD5 checksum files. It does not conflict with the official Spotify app. Android and desktop builds ship in the same release."
@@ -1775,8 +1843,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA (Jellify-<version>.ipa) from the developer's GitHub releases. Requires a Jellyfin server to connect to. Android builds ship in the same release."
@@ -1823,8 +1893,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA built by the ZeusLN release pipeline (v13.x targets iOS 15.1). A self-custody wallet: point it at your own Lightning node for full sovereignty."
@@ -1872,8 +1944,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA published by the BlueWallet team on GitHub Releases (8.x targets iOS 15.6). Uses the same bundle identifier as the App Store build: installing the sideload build replaces the store version."
@@ -1920,8 +1994,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned iOS IPA (Voyager-iOS-<version>.ipa) from the developer's GitHub releases; 2.x targets iOS 15. The release also ships Android (apk) and watch builds which are intentionally not distributed here."
@@ -1968,8 +2044,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA (Saber_v<version>.ipa) from the developer's GitHub releases; 1.x targets iOS 15. Also available on the App Store under the same bundle identifier."
@@ -2017,8 +2095,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned CI IPA (Anx-Reader-ios-<version>-unsigned.ipa) built by the developer's release pipeline; 1.x targets iOS 15.2."
@@ -2066,8 +2146,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official Apollo-Reborn builds from the project's own GitHub releases (deployment target iOS 14 per the build config). The standard variant is distributed here; the project also publishes Liquid Glass and icon variants on the same release. The long-standing Balackburn/Apollo AltStore source mirrors these same builds."
@@ -2115,8 +2197,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official Non-Jailbroken IPA from the developer's GitHub releases (DolphiniOS 5.0 beta line, iOS 14+). This feed tracks the current 5.0 beta channel — every published build so far is tagged as a pre-release upstream. The same release also ships jailbreak .deb packages and a TrollStore .tipa."
@@ -2165,8 +2249,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The official iSH AltStore source (ish.app/altstore.json) serves exactly this channel: the newest iSH.ipa from the project's builds/* GitHub releases. iSH marks trunk builds as pre-releases; the last promoted stable was 1.3.2 (build 494). Reported version is the upstream build number."
@@ -2216,8 +2302,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official release IPAs from the developer's GitHub releases (release-* tags, iOS 16+). The developer also publishes newer continuous builds under build-ci-* tags; this feed tracks the stable release channel."
@@ -2265,8 +2353,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPAs from the developer's own GitHub releases (iOS 15+ per the Xcode project). The developer's AltStore PAL source may carry newer builds from a separate pipeline; this feed tracks the signed-off GitHub release tags."
@@ -2314,8 +2404,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official iOS IPA (VCMI-iOS.ipa) built by the VCMI project's release pipeline (iOS 13+ per the CMake configuration). You must supply data files from an original Heroes III (Shadow of Death or Complete edition) copy on first launch."
@@ -2362,8 +2454,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the developer's GitHub releases (2022.5 line, iOS 13.4+ per the Xcode project; also distributed via the SideStore Community Source). The same release ships a separate MAME4tvOS build which is intentionally not distributed here."
@@ -2410,8 +2504,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official iOS IPA (qbitcontroller-<version>-ios.ipa) from the developer's GitHub releases; 2.x targets iOS 14. The developer's own AltStore source mirrors these builds. Distinct from qBitControl and qBitConnect, which are separate apps."
@@ -2459,8 +2555,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the developer's GitHub releases (2.6, 2024). Also distributed via the SideStore Community Source. Requires a Macintosh ROM image and system disks from a machine you own."
@@ -2508,8 +2606,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the developer's GitHub releases (2.0 line requires iOS 17+). Also distributed via the SideStore Community Source."
@@ -2557,8 +2657,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPAs from the fork's GitHub releases; the '-noplugins' variant on each release is intentionally not distributed. Replaces the App Store Twitch app (shares tv.twitch). The upstream tweak repo publishes only .deb packages for jailbroken devices; the sideload IPA comes from this maintained fork."
@@ -2606,8 +2708,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPAs from the project's GitHub releases (its own AltStore source mirrors them). The plain build is distributed here; the -noFixTwitterLogin variant on the same release is a troubleshooting fallback. Twitter 11.x builds require iOS 15+. Shares the Twitter bundle identifier with BHTwitter in this catalog — install one at a time."
@@ -2655,8 +2759,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA (conduit.ipa) from the developer's GitHub releases; the debug-flavored bundle (app.cogwheel.conduit.debug) is excluded. Requires a self-hosted Open WebUI/Ollama server or your own API endpoints."
@@ -2704,8 +2810,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official release IPA (Fladder-iOS-<version>.ipa) from the developer's GitHub releases; the 'nightly' tag is excluded so only stable builds are tracked. Requires a Jellyfin server. A natural alternative to Streamyfin."
@@ -2753,8 +2861,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA (AnymeX-iOS-<version>.ipa) built by the developer's release pipeline; the Flutter project targets iOS 12+. Content sources are provided by community extensions."
@@ -2802,8 +2912,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the developer's GitHub releases; current builds ship as Sulfur.ipa (the project's renamed build) with bundle me.cranci.sulfur — the asset pattern also accepts Sora.ipa from older tags. Requires iOS 15+. Content modules are community-maintained."
@@ -2850,8 +2962,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the RainTweak project's own Codeberg releases (its GitHub mirror is tracked as a failover). Discord 343+ builds require iOS 16 or newer. Shares com.hammerandchisel.discord with any other sideloaded Discord build - install one at a time."
@@ -2936,8 +3050,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Tracks the ready-to-sideload Infuse Plus build from the IPA Vault source (the official dayanch96/InfusePlus repo publishes the tweak as .deb only). Current Infuse 8.5 builds require iOS 18 or newer; upstream also publishes an iOS 16-era 7.x build that is not tracked here. Shares com.firecore.infuse with a sideloaded stock Infuse - install one at a time."
@@ -2982,8 +3098,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Tracks the ready-to-sideload Glow build from the IPA Vault source (the official dayanch96/Glow repo publishes the tweak as .deb only). Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
@@ -3053,8 +3171,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Swiftgram's official distribution channels are the App Store and TestFlight and the project publishes no sideload IPA, so this source serves a community-built IPA from the IPA Vault, clearly labelled in the feed. Telegram 12.x requires iOS 13 or newer. Uses its own bundle identifier - installs alongside the stock Telegram app."
@@ -3124,8 +3244,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official project: m1ronx1412/mxgram (publishes the tweak as .deb/.dylib only); this source serves the ready-to-sideload IPA build from the IPA Vault. Telegram 12.x requires iOS 13 or newer. Shares ph.telegra.Telegraph with a sideloaded stock Telegram - install one at a time."
@@ -3195,8 +3317,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Tweak by 7MD; distributed ready-to-sideload via the IPA Vault source. Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
@@ -3266,8 +3390,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official project: faroukbmiled/RyukGram (publishes .deb/.dylib assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Shares com.burbn.instagram with iNKillerPlus in this catalog - install one at a time."
@@ -3337,8 +3463,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official project: efibalogh/sparkle-ig (publishes .deb assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Uses its own bundle identifier (com.burbn.instagram.sparkle) - installs alongside the stock app."
@@ -3408,8 +3536,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the project's GitHub releases. The current Reddit 2025.37 build targets iOS 15+ (older 11.x-era builds on the same release page still support iOS 14). Shares com.atebits.Tweetie2 with BHTwitter and NeoFreeBird in this catalog - install one at a time."
@@ -3478,8 +3608,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "UNOFFICIAL BUILD. NexaSC has no public repository or developer feed - the only distribution channel is the IPA Vault source, so no developer-published download link exists to verify. Not affiliated with or endorsed by SoundCloud Ltd. Current SoundCloud 8.x builds require iOS 16.4 or newer (a pinned 7.68.1 build for iOS 16.0-16.3 also exists in the vault but is not tracked here). Shares com.soundcloud.TouchApp with TTKillerPlus in this catalog - install one at a time."
@@ -3548,8 +3680,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "UNOFFICIAL BUILD. Flow has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses its own bundle identifier, so it installs alongside the stock App Store Messenger."
@@ -3618,8 +3752,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "UNOFFICIAL BUILD. MSGPlusX has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Messenger bundle identifier, so installing it REPLACES the App Store Messenger on device. SNMessenger shares the same stock Messenger bundle id, so those two install over each other one at a time; Messenger Flow keeps its own id and can stay installed."
@@ -3687,8 +3823,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "UNOFFICIAL BUILD. ThreadSaver has no public repository or developer feed - the IPA Vault source is the only distribution channel, so no developer-published download link exists to verify. Not affiliated with or endorsed by Meta. Uses the stock Threads bundle identifier, so installing it REPLACES the App Store Threads on device."
@@ -3758,8 +3896,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "UNOFFICIAL BUILD - TWICE OVER. iMe is itself an unofficial third-party Telegram client (not affiliated with Telegram FZ-LLC), and this is a community rebuild of it with the MxGram tweak injected. The tweak's official project (m1ronx1412/mxgram) publishes .deb/.dylib assets only; the ready-to-sideload IPA exists solely in the IPA Vault source, so no developer-published IPA link exists to verify. Uses its own bundle identifier."
@@ -3829,8 +3969,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "UNOFFICIAL BUILD - TWICE OVER. Turrit is itself an unofficial third-party Telegram client (not affiliated with Telegram FZ-LLC), and this is a community rebuild of it with the MxGram tweak injected. The tweak's official project (m1ronx1412/mxgram) publishes .deb/.dylib assets only; the ready-to-sideload IPA exists solely in the IPA Vault source, so no developer-published IPA link exists to verify. Uses its own bundle identifier."
@@ -3905,8 +4047,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The IG 410 line from the developer's own source (source.ryuksign.com/ig410); versions track the Instagram base build rather than the RyukGram tweak version. Shares com.burbn.instagram with RyukGram, RyukGram Side by Side's sibling builds and iNKillerPlus — install one Instagram mod at a time."
@@ -3963,8 +4107,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Distinct bundle identifier (com.ryuk.ryukgram) from the developer's own source, so it does not clash with Instagram or the other Instagram mods in this catalog. iPadOS is supported by the upstream build."
@@ -4020,8 +4166,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from opa334/Dopamine (the upstream also publishes an identical .tipa for TrollStore; this source serves the .ipa). Supported firmware and device lists change between releases — check the release notes before updating. Sign with your own certificate through SideStore, AltStore, Feather or ESign."
@@ -4072,8 +4220,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from roothide/Dopamine2-roothide. Upstream tags releases by iOS generation (26, 25, …) while the release name carries the real Dopamine version, so this source reads the version from the release name. Installs as com.opa334.Dopamine-roothide, next to (not over) Dopamine — run only one jailbreak environment at a time."
@@ -4125,8 +4275,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned .tipa from roothide/Bootstrap, signed on install like any other sideloaded app. Supports iOS/iPadOS 15.0 – 17.0; requires the Kernel File Descriptor (kfd) exploit support present in the upstream build for your device. Do not combine with a full jailbreak on the same device. Upstream only publishes the TrollStore-named .tipa (the same container as an .ipa); clients that insist on the .ipa extension can rename the downloaded file before installing."
@@ -4177,8 +4329,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official .tipa from mineek/Serotonin. Supported firmware is iOS 16.5.1 – 16.7 RC and 17.0; the upstream release line stopped in January 2024 and later Dopamine versions cover much of the same range, so treat this as a legacy option for devices that cannot run Dopamine. Upstream ships the TrollStore-named .tipa (identical container to an .ipa); rename it to .ipa if your client rejects the extension."
@@ -4229,8 +4383,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official signed-for-sideloading IPA from Odyssey-Team/Taurine, last released in September 2023 — it is the final upstream build, kept here for iOS 14.0 – 14.3 devices. Sideload with AltStore, SideStore, Feather or ESign; a 7-day certificate works because the jailbreak is re-applied from the app."
@@ -4281,8 +4437,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from Odyssey-Team/Odyssey (last release April 2023, kept for iOS 13.0 – 13.7 devices). Sideloaded like any other app and re-signed every 7 days when using a free certificate."
@@ -4333,8 +4491,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from pwn20wndstuff/Undecimus. Development stopped with version 5.2.0 (June 2020), which is the build served here — it covers iOS 11.0 – 14.8.1 depending on the device. Sign with your own certificate and keep in mind that free certificates expire after seven days, after which the app must be re-signed to re-apply the jailbreak."
@@ -4385,8 +4545,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned iOS IPA published on the project's GitHub releases (sameboy_ios_v…). The upstream build targets iOS 11.0 and later (IOS_MIN in the project's Makefile). Brought to you by the same developer whose Game Boy boot ROM is used by other emulators."
@@ -4437,8 +4599,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned iOS IPA from GopeedLab/gopeed (asset Gopeed-<version>-ios.ipa); pre-release tags such as 2.0.0-beta.1 are skipped so only stable builds are served. GPL-3.0 licensed."
@@ -4489,8 +4653,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from Manic-EMU/ManicEMU. Upstream ships two variants per release: SideloadJIT (served here, for AltStore, SideStore, Feather and ESign) and TrollStoreJIT (TrollStore only). Some consoles need a JIT enabler such as StikDebug after installation."
@@ -4541,8 +4707,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from the developer's GitHub releases (xenios_ios_iphone_ipad.ipa). The project publishes a fast-moving preview channel alongside the tagged release line; this feed tracks the stable release-* builds only. Xbox 360 emulation is demanding, so expect low frame rates outside high-end devices, and the upstream currently lists iOS 18.0 as the minimum. No game files are bundled."
@@ -4595,8 +4763,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -4647,8 +4817,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -4699,8 +4871,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -4751,8 +4925,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -4803,8 +4979,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases. The feed tracks the Release build (not the Debug build)."
@@ -4856,8 +5034,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -4908,8 +5088,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -4960,8 +5142,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases. Exploit-based package manager for iOS 15.0–18.x; requires a kernel file descriptor (kfd) compatible device."
@@ -5012,8 +5196,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5064,8 +5250,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5116,8 +5304,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5168,8 +5358,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5220,8 +5412,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from mineek/MuffinStore; install with TrollStore, or rename to .ipa if your client rejects the extension."
@@ -5273,8 +5467,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5325,8 +5521,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5377,8 +5575,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases."
@@ -5429,8 +5629,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA published by the developer on GitHub Releases as iOS.ipa."
@@ -5477,8 +5679,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official .tipa from the project's GitHub releases - a .tipa is byte-identical to an .ipa, so AltStore, SideStore, Feather and ESign install it after re-signing it with your certificate. The injection itself only works where TrollStore exists (upstream states iOS 14.0 - 17.0), so on newer firmware the app installs but cannot patch anything."
@@ -5527,8 +5731,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Firmware support as documented by upstream: iOS/iPadOS 17.0 - 18.7.1 and 26.0 - 26.0.1. iOS 16.x is technically affected by the exploit but has no offsets, and 18.7.2+ / 26.1+ are unsupported. Does not work on M5 or A19 (Pro) devices; on M-series CPUs upstream suggests setting t1sz_boot to 0x11 under Modify Offsets. Early-stage tool (0.x releases), so keep expectations modest."
@@ -5579,8 +5785,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the project's own GitHub releases. Tor circuits, bridges and exit policy live in Orbot, so install Orbot from this source too if you need Obfs4 or Snowflake bridges instead of the defaults."
@@ -5627,8 +5835,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Uses the Network Extension (packet tunnel) entitlement, which a free personal Apple ID cannot sign: expect it to run only where your certificate allows network-extension configurations (AltStore or SideStore with a paid developer account, Feather/ESign with a developer certificate). Network extensions do not run in simulators."
@@ -5676,8 +5886,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "The release ships one unsigned iOS IPA next to Android APKs, flatpaks, a dmg and an msix; only mhabit-unsigned.ipa is distributed here, so the app must be re-signed by a client and cannot run as downloaded."
@@ -5725,8 +5937,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Upstream documents iOS 16.0 or later. Writing into the media database is an unofficial flow: back up anything you cannot lose before mass-importing, and re-run the import after a major iOS update."
@@ -5776,8 +5990,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official project: NguyenASang/SNMessenger. The repository publishes the tweak as a .deb for jailbroken devices plus one ready-to-sideload IPA built from it; that IPA carries whichever Messenger build the maintainer patched for the release, so the version shown here is that build's. Uses the stock com.facebook.Messenger bundle id, so it REPLACES the App Store Messenger."
@@ -5823,8 +6039,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official sideloaded build from BandarHL/BHInstagram. The release also ships a TrollStore .tipa, which OmniSource skips - only the sideloaded .ipa is tracked."
@@ -5872,8 +6090,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from minh-ton/reynard-browser (asset Reynard.ipa). The Jailbroken and TrollStore builds published alongside it are not tracked here."
@@ -5923,8 +6143,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from leminlimez/Pocket-Poster. Screenshot from the upstream repository."
@@ -5972,8 +6194,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from s8ngyu/Mugunghwa. Unmaintained - the last release is 3.0.2 (March 2024)."
@@ -6021,8 +6245,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from ginsudev/WDBFontOverwrite. The font overwrite relies on CVE-2022-46689, so it is limited to the affected firmware range. Unmaintained since v1.10.8 (August 2023)."
@@ -6069,8 +6295,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from haxi0/Jaility. Unmaintained since 3.1.1 (September 2023)."
@@ -6118,8 +6346,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from haxi0/KillMyOTA. Supports the KFD-era firmware range iOS 15.0 - 16.1.2. Unmaintained since 1.1 (January 2023)."
@@ -6166,8 +6396,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from alfiecg24/TrollInstallerX (the plain TrollInstallerX.ipa; the device-specific -20D50 build is not tracked). Intended for iOS 14.0 - 16.6.1 - newer firmware needs a different route to TrollStore."
@@ -6215,8 +6447,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from haxi0/TrollBoard-Reborn (a TrollStore theming app; the same payload also installs on standard clients). Unmaintained since 1.0 (December 2023)."
@@ -6266,8 +6500,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from Avangelista/StatusMagic (the .tipa is not tracked). The upstream documents iOS 14.0 - 16.1.2 support. Unmaintained since 1.0.2 (December 2023)."
@@ -6315,8 +6551,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from Avangelista/CarTube (the .tipa is not tracked). The upstream documents iOS 14.0 - 15.4.1 support for CarPlay."
@@ -6367,8 +6605,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from matteozappia/DynamicCow. The upstream documents iOS 16.0 - 16.1.2 support. Unmaintained since 1.1 (February 2023)."
@@ -6415,8 +6655,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from alexsvitlov/iTransmission (iTransmission.ipa). The upstream also documents a TrollStore install route for iOS 14 - 16.6.1 devices."
@@ -6467,8 +6709,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from leminlimez/Cowabunga. Screenshots from the upstream repository. Unmaintained since v10.3.2 (February 2024)."
@@ -6515,8 +6759,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from sourcelocation/AirTroller; install with TrollStore, or rename to .ipa if your client rejects the extension."
@@ -6564,8 +6810,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/Helium; install with TrollStore, or rename to .ipa if your client rejects the extension. On iOS 16+ you must enable developer mode. Unmaintained since v3.2.5 (February 2024)."
@@ -6616,8 +6864,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/SecondHand; install with TrollStore, or rename to .ipa if your client rejects the extension. The upstream documents iOS 14.0 - 15.4.1 compatibility."
@@ -6664,8 +6914,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from bomberfish/CAPerfHUDSwift, the Swift alternative to the original CAPerfHUD; install with TrollStore, or rename to .ipa if your client rejects the extension. Unmaintained since v1.0.2 (December 2023)."
@@ -6712,8 +6964,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from the developer's own repository CokePokes/AppStorePlus-TrollStore; install with TrollStore, or rename to .ipa if your client rejects the extension. The .deb published alongside is for jailbroken devices."
@@ -6760,8 +7014,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from NuvioMedia/NuvioMobile. The upstream also publishes a companion store.json source for AltStore and SideStore. Android and TV builds are separate releases not tracked here."
@@ -6809,8 +7065,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from pwnapplehat/EscapeOS; each release publishes a SHA256SUMS.txt. After install, import a pairing file from iPASide or iLoader so the PC is no longer required."
@@ -6863,8 +7121,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from YangJiiii/3105. Keep the original bundle identifier when re-signing - it is load-bearing for the app's app-container workflow."
@@ -6913,8 +7173,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official unsigned IPA from GenericCoding/VibeContainers; the build script assigns com.genericcoding.vibecontainers to unsigned builds. Fork of the LiveContainer project."
@@ -6968,8 +7230,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from Torrekie/Battman; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
@@ -7018,8 +7282,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official package com.cercube.ios v6.1.3 from the developer's own repository (apt.cercube.com, SHA256-published). The direct link below is the official arm64 .deb - install it with TrollStore or on a jailbroken device. Without a jailbreak, add the official source https://altstore.cercube.com to AltStore (Classic), SideStore or Feather instead; it injects Cercube into the App Store YouTube app. The sideloaded home-screen icon is the YouTube icon (this entry reuses it); the tweak's own branding icon is published at https://cdn.cercube.com/assets/icon.png."
@@ -7067,8 +7333,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official release build from nicegram/Nicegram-iOS (release name carries the app version, e.g. 'Nicegram 2.6.1 (713)'). The .ipa is unsigned and meant to be signed per the official guide (nicegram.me/download -> 'How to install IPA?'); also published on the App Store (id1608870673) and TestFlight. Requires iOS 15.0+ (App Store listing)."
@@ -7114,8 +7382,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/BatteryInfo; install with TrollStore, or rename to .ipa if your client rejects the extension."
@@ -7164,8 +7434,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/EnableQUIC; install with TrollStore, or rename to .ipa if your client rejects the extension."
@@ -7214,8 +7486,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/AnimationSpeed; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
