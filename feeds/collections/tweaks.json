@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 167001383,
               "sha256": null,
-              "downloads": 17094,
+              "downloads": 17108,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "IPA",
               "size": 166994432,
               "sha256": null,
-              "downloads": 4689,
+              "downloads": 4691,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -81,12 +81,12 @@
               "fileType": "DEB",
               "size": 7336826,
               "sha256": null,
-              "downloads": 2593,
+              "downloads": 2594,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 17094
+          "downloads": 17108
         }
       ],
       "screenshotURLs": [
@@ -166,13 +166,13 @@
               "fileType": "IPA",
               "size": 55704386,
               "sha256": "24c43c66579fcbf8735176b8465b58d20d0b92524e5b32ed64c60993d76ec8f5",
-              "downloads": 8833,
+              "downloads": 8855,
               "mimeType": "application/trollstore-ipa",
               "installable": true
             }
           ],
           "sha256": "24c43c66579fcbf8735176b8465b58d20d0b92524e5b32ed64c60993d76ec8f5",
-          "downloads": 8833
+          "downloads": 8855
         }
       ],
       "screenshotURLs": [],
@@ -288,8 +288,8 @@
           "notes": "Tracks the ready-to-sideload Infuse Plus build from the IPA Vault source (the official dayanch96/InfusePlus repo publishes the tweak as .deb only). Current Infuse 8.5 builds require iOS 18 or newer; upstream also publishes an iOS 16-era 7.x build that is not tracked here. Shares com.firecore.infuse with a sideloaded stock Infuse - install one at a time."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-16"
         }
@@ -392,8 +392,8 @@
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-15"
         }
@@ -434,13 +434,13 @@
               "fileType": "IPA",
               "size": 5474210,
               "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-              "downloads": 15997,
+              "downloads": 16051,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-          "downloads": 15997
+          "downloads": 16051
         }
       ],
       "screenshotURLs": [],
@@ -515,13 +515,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 261,
+              "downloads": 266,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 261
+          "downloads": 266
         }
       ],
       "screenshotURLs": [
@@ -628,13 +628,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 235,
+              "downloads": 237,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 235
+          "downloads": 237
         }
       ],
       "screenshotURLs": [
@@ -738,7 +738,7 @@
               "fileType": "IPA",
               "size": 158452402,
               "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-              "downloads": 22670,
+              "downloads": 22684,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -750,13 +750,13 @@
               "fileType": "IPA",
               "size": 153108663,
               "sha256": "964d8e009113dea7c29924a746bebbf5f50c29d61c1fd8656a91a8a765231db0",
-              "downloads": 21863,
+              "downloads": 21872,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-          "downloads": 22670
+          "downloads": 22684
         }
       ],
       "screenshotURLs": [],
@@ -831,7 +831,7 @@
               "fileType": "IPA",
               "size": 10806164,
               "sha256": null,
-              "downloads": 19526,
+              "downloads": 19536,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -843,7 +843,7 @@
               "fileType": "IPA",
               "size": 3932657,
               "sha256": null,
-              "downloads": 1860,
+              "downloads": 1861,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -860,7 +860,7 @@
               "installable": true
             }
           ],
-          "downloads": 19526
+          "downloads": 19536
         }
       ],
       "screenshotURLs": [],
@@ -913,21 +913,51 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Discord.webp",
       "tintColor": "5865F2",
       "category": "social",
-      "version": "0.9.3",
-      "versionDate": "2026-06-19",
-      "versionDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
-      "size": 107515564,
+      "version": "1.2.0",
+      "versionDate": "2026-09-17",
+      "versionDescription": "Discord 1.2.0 | RainTweak",
+      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+      "size": 107065935,
       "versions": [
         {
-          "version": "0.9.3",
-          "date": "2026-06-19",
-          "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
-          "size": 107515564,
-          "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
+          "version": "1.2.0",
+          "date": "2026-09-17",
+          "localizedDescription": "Discord 1.2.0 | RainTweak",
+          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+          "size": 107065935,
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v0.9.3"
+          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v1.2.0",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
+              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
+              "platform": "linux",
+              "architecture": "arm64",
+              "fileType": "DEB",
+              "size": 41230,
+              "sha256": "73048c2d44806bdf34749f7743067724516098a12311fb51d1f5c37f302d697a",
+              "downloads": 43,
+              "mimeType": "application/vnd.debian.binary-package",
+              "installable": true
+            },
+            {
+              "filename": "RainTweak.ipa",
+              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 107065935,
+              "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+              "downloads": 314,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
+          "downloads": 314
         }
       ],
       "screenshotURLs": [],
@@ -988,7 +1018,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-06-19"
+          "lastUpdatedAt": "2026-09-17"
         }
       }
     },
@@ -1051,13 +1081,13 @@
               "fileType": "IPA",
               "size": 137114565,
               "sha256": "1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3",
-              "downloads": 5683,
+              "downloads": 5694,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3",
-          "downloads": 5683
+          "downloads": 5694
         }
       ],
       "screenshotURLs": [],
@@ -1219,8 +1249,8 @@
           "notes": "Official project: faroukbmiled/RyukGram (publishes .deb/.dylib assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Shares com.burbn.instagram with iNKillerPlus in this catalog - install one at a time."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-16"
         }
@@ -1297,13 +1327,13 @@
               "fileType": "IPA",
               "size": 74865911,
               "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-              "downloads": 765,
+              "downloads": 771,
               "mimeType": "application/x-itunes-ipa",
               "installable": true
             }
           ],
           "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-          "downloads": 765
+          "downloads": 771
         }
       ],
       "screenshotURLs": [
@@ -1380,13 +1410,13 @@
               "fileType": "IPA",
               "size": 6214108,
               "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-              "downloads": 24886,
+              "downloads": 24928,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-          "downloads": 24886
+          "downloads": 24928
         }
       ],
       "screenshotURLs": [],
@@ -1521,8 +1551,8 @@
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 200",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-15"
         }
@@ -1575,13 +1605,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1185,
+              "downloads": 1187,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1185
+          "downloads": 1187
         }
       ],
       "screenshotURLs": [],
@@ -1618,6 +1648,112 @@
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
           "lastUpdatedAt": "2026-08-14"
+        }
+      }
+    },
+    {
+      "name": "uPro Plus",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Tonwalter888",
+      "subtitle": "YouTube 21.37.4 extra-tweaks build (YouMod + player stack)",
+      "localizedDescription": "uPro Plus is OmniSource's featured YouTube 21.37.4 extra-tweaks IPA. It is the YouProEXTRA YouMod 2.0.0 line on YouTube 21.37.4 with the extra player stack that release publishes: YouPip (Picture-in-Picture), YouQuality and YouChooseQuality, YTHoldForSpeed, YouGetCaption, YTABConfig, YTNativeShare, YTweaks, Return YouTube Dislike, DontEatMyContent, Gonerino, VolumeBoostYT and PleaseDontStopTheMusic. 120 Hz display refresh is used when the device supports it. Native 4K is available on A16+ devices; YTUHD is not bundled on this YouTube version. Requires iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time. YTLite, YTKACE and YouMod are competing main tweaks; stacking all three in one IPA is unstable, so this listing follows the extra-tweaks YouMod 21.37.4 release.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "tintColor": "FF0000",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "versionDate": "2026-09-14",
+      "versionDescription": "YouTube 21.37.4 | uPro Plus extra tweaks | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
+      "size": 129607592,
+      "versions": [
+        {
+          "version": "21.37.4",
+          "date": "2026-09-14",
+          "localizedDescription": "YouTube 21.37.4 | uPro Plus extra tweaks | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
+          "size": 129607592,
+          "minOSVersion": "17.0",
+          "releaseUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youmod-ipa2",
+          "source": "github",
+          "isPrerelease": false,
+          "isDraft": false,
+          "assets": [
+            {
+              "filename": "YouMod_21.37.4_2.0.0.ipa",
+              "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 129607592,
+              "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
+              "downloads": 290,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            }
+          ],
+          "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
+          "downloads": 290
+        }
+      ],
+      "screenshotURLs": [],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.declared-age-range",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.group-session",
+          "keychain-access-groups",
+          "com.apple.developer.networking.multicast",
+          "aps-environment",
+          "com.apple.developer.siri",
+          "com.apple.developer.networking.wifi-info"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "Used to record and upload videos to YouTube.",
+          "NSMicrophoneUsageDescription": "Used to record audio for videos.",
+          "NSPhotoLibraryUsageDescription": "Used to upload photos and videos from your library.",
+          "NSPhotoLibraryAddUsageDescription": "Used to save videos to your photo library.",
+          "NSAppleMusicUsageDescription": "Allows access to Apple Music for background playback and media features.",
+          "NSBluetoothPeripheralUsageDescription": "Used for connecting to Bluetooth devices.",
+          "NSLocalNetworkUsageDescription": "Used to discover and connect to devices on your local network."
+        }
+      },
+      "omnisource": {
+        "slug": "youmod",
+        "status": "stable",
+        "featured": true,
+        "upstreamURL": "https://github.com/Tonwalter888/YouMod",
+        "sourceURL": "https://github.com/mrdrvt99/YouProEXTRA",
+        "verification": {
+          "method": "github-release",
+          "publisher": "mrdrvt99/YouProEXTRA",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "17.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "feather",
+            "esign",
+            "livecontainer"
+          ],
+          "notes": "Requires iOS 17.0+ (YouTube 21.34.3+). Served from mrdrvt99/YouProEXTRA tags youmod-ipa* (YouMod_21.37.4_2.0.0 extra-tweaks IPA). Catalog name is uPro Plus; slug remains youmod for stable feed URLs. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "HTTP 302",
+          "statusSince": "2026-09-07",
+          "lastUpdatedAt": "2026-09-14"
         }
       }
     },
@@ -1708,116 +1844,10 @@
           "notes": "uYouEnhanced's official GitHub releases publish release notes only - no .ipa assets - so the IPA served here is a community build of the official release tag (YouTube 21.14.4 / uYou 3.0.5), mirrored on archive.org. Once a 'Build uYouEnhanced' run publishes an IPA in this repository (tag uyouenhanced-v*), the self-built artifact takes over automatically."
         },
         "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 302",
+          "downloadReachable": false,
+          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-08-22"
-        }
-      }
-    },
-    {
-      "name": "YouMod",
-      "bundleIdentifier": "com.google.ios.youtube",
-      "developerName": "Tonwalter888",
-      "subtitle": "All-in-one YouTube enhancement tweak",
-      "localizedDescription": "YouMod is a customizable YouTube enhancement tweak by Tonwalter888. It includes ad blocking, background playback, PiP support, UI customization, integrated download manager, and sponsor segment skipping.",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
-      "tintColor": "FF0000",
-      "category": "photo-video",
-      "version": "21.37.4",
-      "versionDate": "2026-09-14",
-      "versionDescription": "YouTube 21.37.4 | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-      "size": 129607592,
-      "versions": [
-        {
-          "version": "21.37.4",
-          "date": "2026-09-14",
-          "localizedDescription": "YouTube 21.37.4 | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-          "size": 129607592,
-          "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youmod-ipa2",
-          "source": "github",
-          "isPrerelease": false,
-          "isDraft": false,
-          "assets": [
-            {
-              "filename": "YouMod_21.37.4_2.0.0.ipa",
-              "downloadUrl": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
-              "platform": "ios",
-              "architecture": null,
-              "fileType": "IPA",
-              "size": 129607592,
-              "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-              "downloads": 273,
-              "mimeType": "application/octet-stream",
-              "installable": true
-            }
-          ],
-          "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-          "downloads": 273
-        }
-      ],
-      "screenshotURLs": [],
-      "appPermissions": {
-        "entitlements": [
-          "com.apple.security.application-groups",
-          "com.apple.developer.associated-domains",
-          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
-          "com.apple.developer.declared-age-range",
-          "com.apple.developer.storekit.request-data",
-          "com.apple.developer.device-information.user-assigned-device-name",
-          "com.apple.developer.group-session",
-          "keychain-access-groups",
-          "com.apple.developer.networking.multicast",
-          "aps-environment",
-          "com.apple.developer.siri",
-          "com.apple.developer.networking.wifi-info"
-        ],
-        "privacy": {
-          "NSCameraUsageDescription": "Used to record and upload videos to YouTube.",
-          "NSMicrophoneUsageDescription": "Used to record audio for videos.",
-          "NSPhotoLibraryUsageDescription": "Used to upload photos and videos from your library.",
-          "NSPhotoLibraryAddUsageDescription": "Used to save videos to your photo library.",
-          "NSAppleMusicUsageDescription": "Allows access to Apple Music for background playback and media features.",
-          "NSBluetoothPeripheralUsageDescription": "Used for connecting to Bluetooth devices.",
-          "NSLocalNetworkUsageDescription": "Used to discover and connect to devices on your local network."
-        }
-      },
-      "omnisource": {
-        "slug": "youmod",
-        "status": "stable",
-        "featured": false,
-        "upstreamURL": "https://github.com/Tonwalter888/YouMod",
-        "sourceURL": "https://github.com/mrdrvt99/YouProEXTRA",
-        "verification": {
-          "method": "github-release",
-          "publisher": "mrdrvt99/YouProEXTRA",
-          "codeSigned": false,
-          "checksumPublished": false
-        },
-        "compatibility": {
-          "minOSVersion": "16.0",
-          "maxOSVersion": null,
-          "devices": [
-            "iphone",
-            "ipad"
-          ],
-          "clients": [
-            "altstore",
-            "sidestore",
-            "feather",
-            "esign",
-            "livecontainer"
-          ],
-          "notes": "Official project: Tonwalter888/YouMod. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
-        },
-        "health": {
-          "downloadReachable": true,
-          "detail": "HTTP 302",
-          "statusSince": "2026-09-07",
-          "lastUpdatedAt": "2026-09-14"
         }
       }
     },
@@ -1856,13 +1886,13 @@
               "fileType": "IPA",
               "size": 129769811,
               "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-              "downloads": 338,
+              "downloads": 359,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-          "downloads": 338
+          "downloads": 359
         }
       ],
       "screenshotURLs": [],
@@ -1962,13 +1992,13 @@
               "fileType": "IPA",
               "size": 129031075,
               "sha256": "37b4f9a4390c909205a0c93928c941587aa0994eddc99a29097d54ae6be477ba",
-              "downloads": 3409,
+              "downloads": 3488,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "37b4f9a4390c909205a0c93928c941587aa0994eddc99a29097d54ae6be477ba",
-          "downloads": 3409
+          "downloads": 3488
         },
         {
           "version": "20.21.6",
@@ -1990,13 +2020,13 @@
               "fileType": "IPA",
               "size": 115566999,
               "sha256": "9b97fdef5a336ef784621efa8f6afa8e30eff6dbe414a4924ef8020409628355",
-              "downloads": 70,
+              "downloads": 73,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "9b97fdef5a336ef784621efa8f6afa8e30eff6dbe414a4924ef8020409628355",
-          "downloads": 70
+          "downloads": 73
         },
         {
           "version": "19.20.2",
@@ -2018,13 +2048,13 @@
               "fileType": "IPA",
               "size": 106247621,
               "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
-              "downloads": 40,
+              "downloads": 42,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
-          "downloads": 40
+          "downloads": 42
         }
       ],
       "screenshotURLs": [
@@ -2152,7 +2182,7 @@
               "fileType": "IPA",
               "size": 134780934,
               "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-              "downloads": 1613,
+              "downloads": 1662,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -2164,13 +2194,13 @@
               "fileType": "IPA",
               "size": 132513253,
               "sha256": "1e1917b089958f653d81aafb13e82f30dbdc8b45704752ae7625d5c44dbf5323",
-              "downloads": 129,
+              "downloads": 131,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-          "downloads": 1613
+          "downloads": 1662
         }
       ],
       "screenshotURLs": [
@@ -2274,13 +2304,13 @@
               "fileType": "IPA",
               "size": 143259058,
               "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-              "downloads": 205,
+              "downloads": 213,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-          "downloads": 205
+          "downloads": 213
         }
       ],
       "screenshotURLs": [
@@ -2384,13 +2414,13 @@
               "fileType": "IPA",
               "size": 105090579,
               "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-              "downloads": 192,
+              "downloads": 214,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-          "downloads": 192
+          "downloads": 214
         }
       ],
       "screenshotURLs": [

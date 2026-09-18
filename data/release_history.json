@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T11:40:07Z",
+  "generatedAt": "2026-09-18T14:04:17Z",
   "appCount": 130,
-  "releases": 161,
+  "releases": 162,
   "apps": {
     "3105": [
       {
@@ -396,13 +396,23 @@
     ],
     "escapeos": [
       {
+        "version": "0.1.6",
+        "date": "2026-09-18",
+        "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.6/EscapeOS-0.1.6.ipa",
+        "size": 7274676,
+        "sha256": "234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2",
+        "localizedDescription": "EscapeOS 0.1.6 | EscapeOS-0.1.6\n\n## EscapeOS 0.1.6\n\nv0.1.0, v0.1.1, v0.1.3, v0.1.4, and v0.1.5 are unchanged.\n\n### Changed\n- **Import from Files** asks Replace, Keep Both, or Cancel when that name is already in the folder, instead of silently writing `foo 2.txt`. Replace overwrites the existing file at the same path and name ([#2](https://github.com/pwnapplehat/EscapeOS/issues/2)).\n- A same-named **folder** is not replaced with a file; Keep Both lands beside it.\n\nTheos arm64 IPA (iPhoneOS 16.5 SDK, `MinimumOSVersion` 18.0), same build path as 0.1.5. After install, reconnect LocalDevVPN if the list is empty; iPASide places `pairingFile.plist` again after sideload.\n\n`EscapeOS-0.1.6.ipa` SHA-256:\n\n```\n234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2\n```",
+        "status": "current",
+        "firstSeen": "2026-09-18T14:04:17Z"
+      },
+      {
         "version": "0.1.5",
         "date": "2026-08-17",
         "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.1.5/EscapeOS-0.1.5.ipa",
         "size": 7259448,
         "sha256": "231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02",
         "localizedDescription": "EscapeOS 0.1.5 | EscapeOS-0.1.5\n\n## EscapeOS 0.1.5\n\nv0.1.0, v0.1.1, v0.1.3, and v0.1.4 are unchanged.\n\n### Added\n- **Reclaim** tab ranks apps by Safe cache and temp size (`tmp`, `Library/Caches`, logs, splash snapshots, GPU cache)\n- Per-app Reclaim Space from App Detail; Session buckets (cookies, WebKit, HTTP storage) are opt-in\n- Batch reclaim is Safe-only. Documents, Preferences, and Application Support are never reclaimed\n- Opening an app after a tab scan reuses those Safe sizes instead of measuring again\n- Locked cache files (permission denied, e.g. some `Library/Caches/FileData` folders) are skipped instead of failing the whole reclaim\n- **Reset App Data** on App Detail empties Documents, Library, and tmp. Keychain and App Groups are not touched. Resetting EscapeOS itself warns that the pairing file will be deleted\n\nHardware-checked on iPhone 17, iOS 26.5.1. After install, reconnect LocalDevVPN if the list is empty; iPASide places `pairingFile.plist` again after sideload. Close the target app before reclaiming or resetting.\n\n`EscapeOS-0.1.5.ipa` SHA-256:\n\n```\n231d5e56ceb13df6db688d2ba9838bb18d12a364583655b32042ab3b143cdb02\n```",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
@@ -1122,7 +1132,7 @@
         "size": 107065935,
         "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
         "localizedDescription": "Discord 1.2.0 | RainTweak",
-        "status": "removed",
+        "status": "current",
         "firstSeen": "2026-09-17T23:15:53Z"
       },
       {
@@ -1132,7 +1142,7 @@
         "size": 107515564,
         "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
         "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -1717,7 +1727,7 @@
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
         "size": 129607592,
         "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-        "localizedDescription": "YouTube 21.37.4 | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "localizedDescription": "YouTube 21.37.4 | uPro Plus extra tweaks | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
         "status": "current",
         "firstSeen": "2026-09-14T13:13:12Z"
       },
