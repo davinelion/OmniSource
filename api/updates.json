@@ -4,6 +4,21 @@
   "count": 100,
   "updates": [
     {
+      "slug": "manicemu",
+      "name": "Manic EMU",
+      "version": "2.0.1",
+      "previousVersion": "2.0.0",
+      "date": "2026-09-18",
+      "kind": "updated",
+      "changelog": "Manic EMU 2.0.1 | ManicEMU.v2.0.1.SideloadJIT\n\n- Added WonderSwan support\n- Added NAOMI, Atomiswave, and System SP arcade support\n- Added Flash support\n  · Skin button binding\n  · Hardware keyboard input\n  · Software keyboard input\n  · Touch input\n- Built-in, self-contained JIT — no external debugger required\n- Added Slow Motion\n- Improved GameCube and Wii performance\n- GameCube now supports multi-disc games\n- Improved Wii motion controls\n- Simulate the Wii IR pointer by touch\n- Add games from other emulators via a link\n- Fixed some arcade systems that wouldn’t run\n- Fixed Dreamcast games running too fast\n- Fixed PSP crashes\n- Added NDS lid open/close\n- Improved rotation: with orientation lock on in Control Center, the app no longer snaps back to portrait\n- In-game shortcut tips can now be turned off\n- Landscape library can disable carousel style\n- Smoother landscape carousel scrolling\n- MultiDisc Helper supports more formats\n- Hardware keyboard input for Symbian, Amiga, and C64\n- Added RomM support\n  · LAN self-hosted servers only\n  · Sync only for games imported from RomM\n  · Manual sync only, from the service card’s long-press menu\n  · Pull ROMs, covers, metadata, manuals, and game saves\n- Fixed a launch timeout that could quit the app on older devices\n- N64 now supports ROMs larger than 64 MB",
+      "downloadURL": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/ManicEMU.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/manicemu.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/manicemu.xml",
+      "status": "stable",
+      "shortDescription": "All-in-one retro game emulator"
+    },
+    {
       "slug": "cercube",
       "name": "Cercube for YouTube",
       "version": "6.1.3",
@@ -1412,21 +1427,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/youpro.xml",
       "status": "stable",
       "shortDescription": "Feature-rich YouTube tweak by alibusut"
-    },
-    {
-      "slug": "vcmi",
-      "name": "VCMI",
-      "version": "1.7.5",
-      "previousVersion": "",
-      "date": "2026-08-15",
-      "kind": "new",
-      "changelog": "VCMI 1.7.5 | VCMI-iOS\n\nNote: saved games from 1.6 release can be loaded in 1.7\n\n### Changelog\n- Player Changelog: [1.7.4 -> 1.7.5](https://github.com/vcmi/vcmi/blob/master/ChangeLog.md#174---175)\n- Full Changelog: https://github.com/vcmi/vcmi/compare/1.7.4..1.7.5\n\n### Additional builds\n<!-- - Android release will be available on Google Play shortly -->\n<!-- - Linux release will be available on Flathub shortly -->\n<!-- - Ubuntu release will be available on VCMI PPA shortly -->\n<!-- - Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi) -->\n<!-- - Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI) -->\n<!-- - Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa) -->\n\n- Android release is available on [Google Play](https://play.google.com/store/apps/details?id=is.xyz.vcmi) and [F-Droid](https://f-droid.org/en/packages/is.xyz.vcmi/)\n- iOS release is available on [TestFlight](https://testflight.apple.com/join/pJWHSbmu) (AppStore version coming soon)\n- Linux release is available on [Flathub](https://flathub.org/apps/eu.vcmi.VCMI)\n- Ubuntu release is available on [VCMI PPA](https://launchpad.net/~vcmi/+archive/ubuntu/ppa)\n- macOS release can be installed via Homebrew: `brew install --cask vcmi` (official) or `brew install --cask vcmi/vcmi/vcmi` (from our tap)",
-      "downloadURL": "https://github.com/vcmi/vcmi/releases/download/1.7.5/VCMI-iOS.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/VCMI.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/vcmi.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/vcmi.xml",
-      "status": "stable",
-      "shortDescription": "Open-source Heroes of Might & Magic III engine"
     },
     {
       "slug": "maxtube",

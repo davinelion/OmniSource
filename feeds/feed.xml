@@ -8,6 +8,46 @@
     <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Manic EMU v2.0.1</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/manicemu.json</link>
+      <guid isPermaLink="false">manicemu-2.0.1</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Manic EMU 2.0.1 | ManicEMU.v2.0.1.SideloadJIT
+
+- Added WonderSwan support
+- Added NAOMI, Atomiswave, and System SP arcade support
+- Added Flash support
+  · Skin button binding
+  · Hardware keyboard input
+  · Software keyboard input
+  · Touch input
+- Built-in, self-contained JIT — no external debugger required
+- Added Slow Motion
+- Improved GameCube and Wii performance
+- GameCube now supports multi-disc games
+- Improved Wii motion controls
+- Simulate the Wii IR pointer by touch
+- Add games from other emulators via a link
+- Fixed some arcade systems that wouldn’t run
+- Fixed Dreamcast games running too fast
+- Fixed PSP crashes
+- Added NDS lid open/close
+- Improved rotation: with orientation lock on in Control Center, the app no longer snaps back to portrait
+- In-game shortcut tips can now be turned off
+- Landscape library can disable carousel style
+- Smoother landscape carousel scrolling
+- MultiDisc Helper supports more formats
+- Hardware keyboard input for Symbian, Amiga, and C64
+- Added RomM support
+  · LAN self-hosted servers only
+  · Sync only for games imported from RomM
+  · Manual sync only, from the service card’s long-press menu
+  · Pull ROMs, covers, metadata, manuals, and game saves
+- Fixed a launch timeout that could quit the app on older devices
+- N64 now supports ROMs larger than 64 MB]]></description>
+      <enclosure url="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Cercube for YouTube v6.1.3</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/cercube.json</link>
       <guid isPermaLink="false">cercube-6.1.3</guid>
@@ -352,24 +392,6 @@ YouTube Music version]]></description>
 > [!WARNING]
 > - 21.34.3+ builds require iOS 17+ now.]]></description>
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Reynard v0.13.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
-      <guid isPermaLink="false">reynard-0.13.1</guid>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Reynard 0.13.1 | Reynard
-
-## Changes
-
-**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1
-
-This is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).
-
-### Bug Fixes & Improvements
-- Improved the reliability of text input fields repositioning above the software keyboard when editing.
-- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.]]></description>
-      <enclosure url="https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

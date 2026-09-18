@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-18",
-  "feedVersion": "89ca8a1d5364",
+  "feedVersion": "d4cb70eec0d0",
   "apps": {
     "total": 130,
     "reachable": 130,
@@ -9,13 +9,21 @@
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 0,
-    "updated": 0,
+    "incrementalHits": 121,
+    "updated": 1,
     "failed": 0,
-    "apiRequests": 131
+    "apiRequests": 116
   },
   "unreachable": [],
-  "updates": [],
+  "updates": [
+    {
+      "slug": "manicemu",
+      "name": "Manic EMU",
+      "previousVersion": "2.0.0",
+      "version": "2.0.1",
+      "kind": "updated"
+    }
+  ],
   "errors": [],
   "translations": {
     "ar": 100,

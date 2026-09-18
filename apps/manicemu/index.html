@@ -49,9 +49,9 @@
       "name": "Manic EMU",
       "applicationCategory": "UtilitiesApplication",
       "operatingSystem": "iOS",
-      "softwareVersion": "2.0.0",
+      "softwareVersion": "2.0.1",
       "url": "https://iamsmmh.github.io/OmniSource/apps/manicemu/",
-      "downloadUrl": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.0/ManicEMU.v2.0.0.SideloadJIT.ipa",
+      "downloadUrl": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa",
             "author": { "@type": "Organization", "name": "Manic-EMU/ManicEMU" }
     }
   </script>
@@ -112,7 +112,7 @@
 <span class="badge stable">Stable</span><span class="badge verified" title="IPA published by the project&#39;s own upstream release channel">Official build</span><span class="badge ok"><span class="dot"></span>Online</span><span class="badge verified">✓ Verified</span></div>
       </div>
       <div class="ap-install">
-        <a class="get-capsule" href="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.0/ManicEMU.v2.0.0.SideloadJIT.ipa" target="_blank" rel="noopener">Get · v2.0.0<span class="capsule-size">260.7 MB</span></a>
+        <a class="get-capsule" href="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" target="_blank" rel="noopener">Get · v2.0.1<span class="capsule-size">275.2 MB</span></a>
 <a class="button client-button" href="altstore://source?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" title="Add to AltStore"><img src="../../assets/AltStore.webp" alt="" width="20" height="20" loading="lazy">AltStore</a><a class="button client-button" href="sidestore://source?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" title="Add to SideStore"><img src="../../assets/SideStore.webp" alt="" width="20" height="20" loading="lazy">SideStore</a><a class="button client-button" href="feather://source/iamsmmh.github.io/OmniSource/feeds/manicemu.json" title="Add to Feather"><img src="../../assets/Feather.webp" alt="" width="20" height="20" loading="lazy">Feather</a><a class="button client-button" href="esign://addsource?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" title="Add to ESign"><img src="../../assets/E-Sign.webp" alt="" width="20" height="20" loading="lazy">ESign</a><a class="button client-button" href="livecontainer://sources?url=https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" title="Add to LiveContainer"><img src="../../assets/LiveContainer.webp" alt="" width="20" height="20" loading="lazy">LiveContainer</a>        <button class="button ap-copy" type="button" data-copy="https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" data-copy-msg="Source URL copied">Copy source URL</button>
         <button class="button square" type="button" id="qrButton" data-qr-feed="https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" title="Show QR code" aria-label="Show QR code for the source URL">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4z"/><path d="M15 14h2v2h-2zM19 14h1.4v3.4H19zM14 19h3.4v1.4H14zM20 19.6V20h-1.4"/></svg>
@@ -134,88 +134,49 @@
     <section class="ap-section" data-reveal>
       <h2><span class="num">03</span> Release notes</h2>
       <div class="ap-version-list"><article class="ap-version">
-  <div class="ap-version-head"><span class="v">v2.0.0</span><span class="tag">Current</span>
-    <span class="d">Sep 03, 2026</span></div>
-  <div class="meta"><span>260.7 MB</span><code title="SHA-256">7f2adf280dba286e…</code><a class="button small" href="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.0/ManicEMU.v2.0.0.SideloadJIT.ipa" target="_blank" rel="noopener">Download</a></div>
-  <details class="ap-changelog"><summary>Release notes</summary><pre class="ap-notes">Manic EMU 2.0.0 | ManicEMU.v2.0.0.SideloadJIT
+  <div class="ap-version-head"><span class="v">v2.0.1</span><span class="tag">Current</span>
+    <span class="d">Sep 18, 2026</span></div>
+  <div class="meta"><span>275.2 MB</span><code title="SHA-256">b670b1c1c538325d…</code><a class="button small" href="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" target="_blank" rel="noopener">Download</a></div>
+  <details class="ap-changelog"><summary>Release notes</summary><pre class="ap-notes">Manic EMU 2.0.1 | ManicEMU.v2.0.1.SideloadJIT
 
-&gt; [!NOTE]
-&gt; Starting from version 2.0.0, we no longer provide builds of TrollStore JIT. You can package it yourself by following the [guide](https://github.com/Rednick16/TrollStoreJITEnabler).
-
-This is a major release focused on a redesigned interface, expanded platform support, and advanced features. Landscape browsing, library management, and external controller navigation have been rebuilt. It also adds several new systems and brings Netplay to eligible Libretro cores.
-
-
-### Before You Update
-
-- Dreamcast (Flycast): Existing save states will no longer work as of 2.0.0. Convert important save states to in-game saves before updating, or back up the `Flycast/dc` folder yourself.
-- Wii: A BootMii-format `keys.bin` is required.
-- Symbian: Install firmware in Settings first (`.ROM`; S60v2 and later also need `.RPKG`).
-- GameCube / Wii: The core is still being optimized, so heat and frame drops should still be expected.
-- MAME: A number of lesser-used arcade systems have been trimmed. Some obscure titles may no longer run.
-
-### Interface
-
-Landscape
-
-- A new landscape library, with most landscape pages redesigned.
-- Built-in dynamic backgrounds. You can use or upload ShaderToy (GLSL) scripts to customize them. Only single-Image scripts are supported; complex scripts may increase battery use or heat.
-- Multiple customizable card carousel styles.
-- Focused background: when a game is selected, its banner can be used as the landscape focus backdrop.
-- background music feature in landscape mode—besides built-in tracks, you can upload your own music files to use as background music.
-- built in 12 sets of navigation and focus sound effects.
-
-Game Options and Shortcuts
-
-- A unified options list and interaction model throughout the app.
-- Available actions are automatically arranged and regrouped for the current context.
-- Advanced reordering: customize the order and grouping of options.
-- A redesigned in-game shortcut menu. Shortcuts can appear on supported skins and in the in-game menu.
-
-Navigation and Input
-
-- A global focus and navigation system for iPhone and iPad. You can browse and interact entirely with a controller or keyboard.
-- Hold Command or the controller’s Select button to view the shortcut cheatsheet.
-- A unified navigation bar for more consistent browsing and editing.
-- Many long-press and hidden actions have been replaced with more conventional, iOS-style interactions.
-- Batch management and actions.
-- Adaptive rotation throughout the app.
-- Controllers can be assigned to a player slot. On cores that expect a keyboard, controller inputs can be mapped to keyboard events.
-
-### Features
-
-Library and Artwork
-
-- Covers now support separate icon and banner artwork. Box art is used in regular lists, icons in square layouts, and banners as the landscape focus backdrop.
-- Online artwork from Libretro Thumbnails and SteamGridDB (Grids / Heroes / Logos / Icons; SteamGridDB requires your own API key).
-- Switching platform or category rematches cover art.
-
-Game Data
-
-- Game metadata: auto-match, search the database, or edit it yourself (developer, publisher, series, genre, release date, region, overview, and more).
-- ESRB ratings and matching icons. Rating icons can be hidden in Settings.
-- A redesigned save-state manager with import and export.
-- Scoped settings: the same option can be stored at game, platform, or global level, and each can be cleared or reset independently.
-- batch scraping for covers, icons, and banners.
-- 
-
-Shaders and Skins
-
-- Real-time shader preview, without loading the shader first.
-- Redesigned default GBA skin.
-- Flex skins now support customizing button size and position.
-
-Achievements, Cheats, and Netplay
-
-- RetroAchievements pages are easier to read and load faster.
-- MultiSet support: earn subset achievements without a patched ROM. Switching the achievement list only changes what is shown; it does not affect which sets you can unlock while playing.
-- Online c</pre></details>
+- Added WonderSwan support
+- Added NAOMI, Atomiswave, and System SP arcade support
+- Added Flash support
+  · Skin button binding
+  · Hardware keyboard input
+  · Software keyboard input
+  · Touch input
+- Built-in, self-contained JIT — no external debugger required
+- Added Slow Motion
+- Improved GameCube and Wii performance
+- GameCube now supports multi-disc games
+- Improved Wii motion controls
+- Simulate the Wii IR pointer by touch
+- Add games from other emulators via a link
+- Fixed some arcade systems that wouldn’t run
+- Fixed Dreamcast games running too fast
+- Fixed PSP crashes
+- Added NDS lid open/close
+- Improved rotation: with orientation lock on in Control Center, the app no longer snaps back to portrait
+- In-game shortcut tips can now be turned off
+- Landscape library can disable carousel style
+- Smoother landscape carousel scrolling
+- MultiDisc Helper supports more formats
+- Hardware keyboard input for Symbian, Amiga, and C64
+- Added RomM support
+  · LAN self-hosted servers only
+  · Sync only for games imported from RomM
+  · Manual sync only, from the service card’s long-press menu
+  · Pull ROMs, covers, metadata, manuals, and game saves
+- Fixed a launch timeout that could quit the app on older devices
+- N64 now supports ROMs larger than 64 MB</pre></details>
 </article></div>
     </section>
 
     <section class="ap-section" data-reveal>
       <h2><span class="num">04</span> Details</h2>
       <div class="ap-detail-grid">
-<div class="ap-cell"><span>Version</span><strong>v2.0.0</strong></div><div class="ap-cell"><span>Updated</span><strong>Sep 03, 2026</strong></div><div class="ap-cell"><span>Size</span><strong>260.7 MB</strong></div><div class="ap-cell"><span>Requires iOS</span><strong>15.0</strong></div><div class="ap-cell"><span>Category</span><strong>Games</strong></div><div class="ap-cell"><span>Developer</span><strong>Aoshuang Lee (Manic EMU)</strong></div><div class="ap-cell"><span>Bundle ID</span><strong><code>com.aoshuang.manicemu</code></strong></div><div class="ap-cell"><span>Verification</span><strong>VERIFIED</strong></div><div class="ap-cell"><span>Build</span><strong>Official build</strong></div><div class="ap-cell"><span>Checksum</span><strong><code>7f2adf280dba286ef137</code></strong></div><div class="ap-cell"><span>Health</span><strong>Online</strong></div><div class="ap-cell"><span>Version history</span><strong>1</strong></div><div class="ap-cell"><span>Source</span><strong><a class="ap-source-link" href="https://github.com/Manic-EMU/ManicEMU" target="_blank" rel="noopener">Manic-EMU/ManicEMU</a></strong></div></div>
+<div class="ap-cell"><span>Version</span><strong>v2.0.1</strong></div><div class="ap-cell"><span>Updated</span><strong>Sep 18, 2026</strong></div><div class="ap-cell"><span>Size</span><strong>275.2 MB</strong></div><div class="ap-cell"><span>Requires iOS</span><strong>15.0</strong></div><div class="ap-cell"><span>Category</span><strong>Games</strong></div><div class="ap-cell"><span>Developer</span><strong>Aoshuang Lee (Manic EMU)</strong></div><div class="ap-cell"><span>Bundle ID</span><strong><code>com.aoshuang.manicemu</code></strong></div><div class="ap-cell"><span>Verification</span><strong>VERIFIED</strong></div><div class="ap-cell"><span>Build</span><strong>Official build</strong></div><div class="ap-cell"><span>Checksum</span><strong><code>b670b1c1c538325d82ff</code></strong></div><div class="ap-cell"><span>Health</span><strong>Online</strong></div><div class="ap-cell"><span>Version history</span><strong>1</strong></div><div class="ap-cell"><span>Source</span><strong><a class="ap-source-link" href="https://github.com/Manic-EMU/ManicEMU" target="_blank" rel="noopener">Manic-EMU/ManicEMU</a></strong></div></div>
     </section>
 
     <section class="ap-section" data-reveal>
@@ -235,7 +196,7 @@ Achievements, Cheats, and Netplay
     <section class="ap-section" data-reveal>
       <h2><span class="num">07</span> Downloads</h2>
       <div class="ap-links">
-        <a class="button primary" href="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.0/ManicEMU.v2.0.0.SideloadJIT.ipa" target="_blank" rel="noopener">Primary IPA</a>
+        <a class="button primary" href="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" target="_blank" rel="noopener">Primary IPA</a>
         
         <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/manicemu.json" target="_blank" rel="noopener">App feed</a>
         <a class="button" href="https://iamsmmh.github.io/OmniSource/feeds/manicemu.xml" target="_blank" rel="noopener">App RSS</a>
@@ -248,7 +209,7 @@ Achievements, Cheats, and Netplay
 
   <footer class="ap-footer">
     <div class="ap-footer-inner">
-      <span>v2.0.0 of Manic EMU · refreshed automatically.</span>
+      <span>v2.0.1 of Manic EMU · refreshed automatically.</span>
       <a href="../../#catalog">← Back to catalog</a>
       <span>Independent community project. Apps and trademarks belong to their respective owners.</span>
     </div>
