@@ -92,15 +92,17 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Tracks the ready-to-sideload Glow build from the IPA Vault source (the official dayanch96/Glow repo publishes the tweak as .deb only). Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
       },
       "health": {
-        "downloadReachable": false,
-        "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+        "downloadReachable": true,
+        "detail": "HTTP 200",
         "statusSince": "2026-09-18",
         "lastUpdatedAt": "2026-09-05"
       }

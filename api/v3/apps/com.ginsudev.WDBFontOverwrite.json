@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 5348316,
             "sha256": null,
-            "downloads": 69322,
+            "downloads": 69327,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 69322
+        "downloads": 69327
       }
     ],
     "screenshotURLs": [],
@@ -68,8 +68,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from ginsudev/WDBFontOverwrite. The font overwrite relies on CVE-2022-46689, so it is limited to the affected firmware range. Unmaintained since v1.10.8 (August 2023)."

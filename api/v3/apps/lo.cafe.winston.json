@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 50003343,
             "sha256": null,
-            "downloads": 12593,
+            "downloads": 12595,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 12593
+        "downloads": 12595
       }
     ],
     "screenshotURLs": [],
@@ -68,8 +68,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official GPL-3.0 releases from lo-cafe/winston. The last published build is v1.1.5 (June 2024); the project is on hold, so treat it as archived-but-installable. Requires your own Reddit API credentials."

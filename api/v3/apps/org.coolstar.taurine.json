@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 32244737,
             "sha256": null,
-            "downloads": 758038,
+            "downloads": 758054,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 758038
+        "downloads": 758054
       }
     ],
     "screenshotURLs": [],
@@ -72,8 +72,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official signed-for-sideloading IPA from Odyssey-Team/Taurine, last released in September 2023 — it is the final upstream build, kept here for iOS 14.0 – 14.3 devices. Sideload with AltStore, SideStore, Feather or ESign; a 7-day certificate works because the jailbreak is re-applied from the app."

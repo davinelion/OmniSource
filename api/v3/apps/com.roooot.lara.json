@@ -37,13 +37,13 @@
             "fileType": "IPA",
             "size": 5474210,
             "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-            "downloads": 16051,
+            "downloads": 16071,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-        "downloads": 16051
+        "downloads": 16071
       }
     ],
     "screenshotURLs": [],
@@ -69,8 +69,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Firmware support as documented by upstream: iOS/iPadOS 17.0 - 18.7.1 and 26.0 - 26.0.1. iOS 16.x is technically affected by the exploit but has no offsets, and 18.7.2+ / 26.1+ are unsupported. Does not work on M5 or A19 (Pro) devices; on M-series CPUs upstream suggests setting t1sz_boot to 0x11 under Modify Offsets. Early-stage tool (0.x releases), so keep expectations modest."

@@ -65,7 +65,7 @@ _TODAY_OVERRIDE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 
 
 def today() -> str:
-    """The build date, or the ``OMNISOURCE_TODAY`` pin when set.
+    """The build date, or the ``OMNISOURCE_TODAY`` / ``SOURCE_DATE_EPOCH`` pin.
 
     Everything date-derived in the generated set (recency scores, trending
     windows, freshness decay, ``generatedAt``) flows through this clock, so a
@@ -75,10 +75,22 @@ def today() -> str:
     is then genuinely a no-op instead of silently shifting every score at
     UTC midnight. Anything that is not a strict ``YYYY-MM-DD`` is ignored so
     a malformed value can never masquerade as a clock.
+
+    ``SOURCE_DATE_EPOCH`` — the reproducible-builds convention of seconds since
+    the Unix epoch, UTC — is honoured as well, so external tooling can pin this
+    project's clock the way it pins every other project's. ``OMNISOURCE_TODAY``
+    wins when both are set: it is the more specific instruction, and it is what
+    the reproducibility gate itself uses.
     """
     override = os.environ.get("OMNISOURCE_TODAY", "")
     if _TODAY_OVERRIDE_RE.match(override):
         return override
+    epoch = os.environ.get("SOURCE_DATE_EPOCH", "")
+    if epoch.isdigit():
+        try:
+            return datetime.fromtimestamp(int(epoch), UTC).strftime("%Y-%m-%d")
+        except (OSError, OverflowError, ValueError):
+            pass  # out of range for the platform clock: fall through
     return utc_now().strftime("%Y-%m-%d")
 
 

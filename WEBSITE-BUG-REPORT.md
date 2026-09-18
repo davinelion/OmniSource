@@ -38,6 +38,34 @@ a handful of narrower layout/media issues. Details and root causes below.
 
 ---
 
+## Status — re-checked 2026-09-18 (branch `arena/01a0b463-omnisource`)
+
+This report predates the current checkout, and several items in it are fixed.
+The table below is a code-level re-check, not a re-measurement: there is no
+browser in this environment, so nothing here is a rendered-page result. Items
+whose only evidence is a pixel or contrast measurement are marked **not
+re-checkable here** rather than guessed at.
+
+| # | Item | Status | Evidence in the current tree |
+| --- | --- | --- | --- |
+| 1 | Mobile drawer | **Fixed** | `assets/design-system/components.css:3691` locks scroll on `html.nav-open` (the `position: fixed` trick this report recommended); the comment at line 3646 records that `body.nav-open { overflow: hidden }` was the ineffective approach. `tests/js/drawer_smoke.cjs` drives the real drawer in jsdom and passes |
+| 2 | Saved apps never survive a page load | **Fixed** | `js/site.js:39-40` declare `FAVORITES_KEY` / `FAVORITES_LEGACY_KEY` *above* `var state` (line 43), with a comment explaining the `var`-hoisting bug; `state.favorites` initialises at line 61 |
+| 3 | Deep links land short | **Fixed** | `js/site.js` re-pins the target after every feed-driven render (`armHashRepin` / `repinHash`), and stops the moment the reader scrolls. Covered by `tests/js/scroll_pin.cjs` |
+| 8 | Search palette ignores 1-character queries | **Fixed** | `js/core.js:357` `SEARCH_MIN_CHARS = 1`, with a dedicated `SEARCH_SHORT_THRESHOLD = 0.12` for single characters and a comment citing this finding |
+| 9 | Orphan page missing from sitemap | **Fixed** | `sitemap.xml:76` lists `/translation-status/` |
+| 10 | Duplicate source-page metadata | **Fixed** | 114 generated source pages, 114 distinct `<title>` values |
+| 4, 5, 11, 12 | Hero clipping ≤ 340 px, `/sources/` card overflow at 320 px, small-text contrast, target size / `<img>` sizing | **Not re-checkable here** | All four are layout/contrast measurements; they need a rendering engine |
+| 6 | Home page weight and main-thread cost | **Open** | Measurable offline, not yet measured or budgeted |
+| 7 | Third-party hot-linked media | **Open** | A mirroring decision, not a code fix |
+
+The scroll-pin fix came with a regression: the re-pin used to be disarmed only
+by `wheel`, `touchmove` and the scroll keys, so a reader who scrolled by
+**dragging the scrollbar** stayed "armed" and the next deferred feed to land
+yanked the catalog back to its own top — which reads exactly as the page
+reloading and jumping back to the first section. `js/site.js` now ends the
+re-pin on any scroll it did not cause, and a new hash re-arms it. Both
+directions are pinned by `tests/js/scroll_pin.cjs`.
+
 ## 1. Mobile drawer scrolls out of view (High)
 
 **Symptom.** On a phone (< 1180 px), open the ☰ menu, then scroll (trackpad, wheel, or a

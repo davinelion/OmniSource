@@ -201,6 +201,9 @@
      they want to be, and yanking them back would be worse than the drift. */
   var repinTarget = null;
   var repinArmed = false;
+  /* Set while our own scrollIntoView is in flight, so the scroll event it
+     raises is not mistaken for the reader scrolling (see armHashRepin). */
+  var repinOwnScroll = false;
 
   function sectionTargetFor(id) {
     var node = document.getElementById(id);
@@ -213,17 +216,39 @@
   function armHashRepin() {
     if (repinArmed) return;
     repinArmed = true;
-    var stop = function () {
-      repinTarget = null;
-      window.removeEventListener('wheel', stop);
-      window.removeEventListener('touchmove', stop);
+    /* Two lifetimes, deliberately different:
+       - watching the reader's own movement ends the *current* re-pin, and
+       - a new hash is a new request, so it stays listenable for the whole
+         window and re-arms the movement watch. Tearing both down together is
+         what made a deep link clicked after the reader had scrolled once
+         silently unprotected. */
+    var watching = false;
+    var stopWatching = function () {
+      watching = false;
+      window.removeEventListener('wheel', onMove);
+      window.removeEventListener('touchmove', onMove);
       window.removeEventListener('keydown', onKey);
-      window.removeEventListener('hashchange', onHash);
+      window.removeEventListener('scroll', onScroll);
     };
+    function watch() {
+      if (watching) return;
+      watching = true;
+      window.addEventListener('wheel', onMove, { passive: true });
+      window.addEventListener('touchmove', onMove, { passive: true });
+      window.addEventListener('keydown', onKey);
+      window.addEventListener('scroll', onScroll, { passive: true });
+    }
+    function disarm() {
+      repinTarget = null;
+      stopWatching();
+    }
+    function onMove() {
+      disarm();
+    }
     function onKey(event) {
       /* Only keys that actually scroll; Cmd/ctrl-K and friends are not a
          statement about where the reader wants to be. */
-      if (/^(Arrow|Page|Home|End|Spacebar| )/.test(event.key)) stop();
+      if (/^(Arrow|Page|Home|End|Spacebar| )/.test(event.key)) disarm();
     }
     function onHash() {
       /* A new hash is a new request: retarget (or drop the re-pin for an app
@@ -231,25 +256,55 @@
       var raw = (location.hash || '').slice(1);
       var id = raw ? decodeURIComponent(raw) : '';
       repinTarget = id && sectionTargetFor(id) ? id : null;
-      if (repinTarget) repinHash();
+      if (repinTarget) {
+        watch();
+        repinHash();
+      }
     }
-    window.addEventListener('wheel', stop, { passive: true });
-    window.addEventListener('touchmove', stop, { passive: true });
-    window.addEventListener('keydown', onKey);
+    function onScroll() {
+      /* The reader moved. `wheel`, `touchmove` and the scroll keys cover a
+         trackpad, a finger and a keyboard, but *not* a scrollbar drag or
+         middle-click autoscroll — neither raises one of those events. A reader
+         who scrolled that way was still "armed", so the next deferred feed to
+         land (they arrive for several seconds) re-pinned the page to a deep
+         link the reader had already scrolled away from: the catalog snapped
+         back to its own top mid-read, which reads exactly as the page
+         reloading. Any scroll we did not cause ends the re-pin. */
+      if (repinOwnScroll) {
+        repinOwnScroll = false;
+        return;
+      }
+      disarm();
+    }
+    watch();
     window.addEventListener('hashchange', onHash);
     /* Feeds give up after their timeouts (6 s) and the idle tier lands within
        ~2.5 s; after that nothing else moves the page. */
-    setTimeout(stop, 25000);
+    setTimeout(function () {
+      disarm();
+      window.removeEventListener('hashchange', onHash);
+    }, 25000);
   }
 
   function repinHash() {
     if (!repinTarget) return;
     var node = document.getElementById(repinTarget);
     if (!node || node.hidden) return;
+    repinOwnScroll = true;
     try {
       node.scrollIntoView({ behavior: 'auto', block: 'start' });
     } catch (error) {
       try { node.scrollIntoView(); } catch (inner) { /* nothing to scroll */ }
+    }
+    /* scrollIntoView announces itself with one scroll event, dispatched in the
+       same frame's scroll steps — before rAF callbacks — so the flag is
+       consumed there. When the node is already in position no event fires at
+       all, and leaving the flag set would swallow the reader's *next* scroll,
+       so drop it on the next frame as well. */
+    if (window.requestAnimationFrame) {
+      window.requestAnimationFrame(function () { repinOwnScroll = false; });
+    } else {
+      repinOwnScroll = false;
     }
   }
 

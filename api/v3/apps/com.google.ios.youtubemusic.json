@@ -37,13 +37,13 @@
             "fileType": "IPA",
             "size": 106518711,
             "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-            "downloads": 266,
+            "downloads": 279,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-        "downloads": 266
+        "downloads": 279
       }
     ],
     "screenshotURLs": [
@@ -89,8 +89,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Full MaxMusic build including YouMusicPiP; upstream also publishes a no-YouMusicPiP variant if PiP causes background-playback issues. Shares com.google.ios.youtubemusic with YTMusicUltimate: install one at a time."

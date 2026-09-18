@@ -37,13 +37,13 @@
             "fileType": "IPA",
             "size": 129607592,
             "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-            "downloads": 290,
+            "downloads": 296,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-        "downloads": 290
+        "downloads": 296
       }
     ],
     "screenshotURLs": [],
@@ -94,8 +94,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Requires iOS 17.0+ (YouTube 21.34.3+). Served from mrdrvt99/YouProEXTRA tags youmod-ipa* (YouMod_21.37.4_2.0.0 extra-tweaks IPA). Catalog name is uPro Plus; slug remains youmod for stable feed URLs. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."

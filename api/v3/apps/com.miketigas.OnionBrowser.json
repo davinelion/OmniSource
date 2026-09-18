@@ -37,13 +37,13 @@
             "fileType": "IPA",
             "size": 39611914,
             "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
-            "downloads": 612,
+            "downloads": 622,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
-        "downloads": 612
+        "downloads": 622
       }
     ],
     "screenshotURLs": [
@@ -73,8 +73,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from the project's own GitHub releases. Tor circuits, bridges and exit policy live in Orbot, so install Orbot from this source too if you need Obfs4 or Snowflake bridges instead of the defaults."

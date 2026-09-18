@@ -37,12 +37,12 @@
             "fileType": "IPA",
             "size": 27204395,
             "sha256": null,
-            "downloads": 563555,
+            "downloads": 563560,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 563555
+        "downloads": 563560
       }
     ],
     "screenshotURLs": [],
@@ -72,8 +72,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "Official IPA from Odyssey-Team/Odyssey (last release April 2023, kept for iOS 13.0 – 13.7 devices). Sideloaded like any other app and re-signed every 7 days when using a free certificate."

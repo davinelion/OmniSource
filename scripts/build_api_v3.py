@@ -14,6 +14,7 @@ Usage
 from __future__ import annotations
 
 import argparse
+import contextlib
 import sys
 from pathlib import Path
 
@@ -90,15 +91,21 @@ def main(argv: list[str] | None = None) -> int:
         else:
             unchanged += 1
     # Prune records of removed apps/sources so deletions propagate.
+    # Recursive on purpose: before `safe_doc_id` flattened source ids, ids like
+    # `Aidoku/Aidoku` wrote `sources/Aidoku/Aidoku.json`, so a depth-1 glob left
+    # every stale source document behind and its directory with it.
     for subdir in ("apps", "sources"):
         target_dir = out_dir / subdir
         if not target_dir.is_dir():
             continue
         keep = {name for name in documents if name.startswith(f"{subdir}/")}
-        for path in sorted(target_dir.glob("*.json")):
-            if f"{subdir}/{path.name}" not in keep:
+        for path in sorted(target_dir.rglob("*.json")):
+            if path.relative_to(out_dir).as_posix() not in keep:
                 path.unlink()
                 written += 1
+        for path in sorted((p for p in target_dir.rglob("*") if p.is_dir()), reverse=True):
+            with contextlib.suppress(OSError):  # only succeeds once emptied above
+                path.rmdir()
     print(f"api_v3: {len(documents)} document(s), {written} written, {unchanged} unchanged -> {out_dir}")
     return 0
 

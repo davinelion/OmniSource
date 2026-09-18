@@ -82,15 +82,17 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "uYouEnhanced's official GitHub releases publish release notes only - no .ipa assets - so the IPA served here is a community build of the official release tag (YouTube 21.14.4 / uYou 3.0.5), mirrored on archive.org. Once a 'Build uYouEnhanced' run publishes an IPA in this repository (tag uyouenhanced-v*), the self-built artifact takes over automatically."
       },
       "health": {
-        "downloadReachable": false,
-        "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+        "downloadReachable": true,
+        "detail": "HTTP 302",
         "statusSince": "2026-09-18",
         "lastUpdatedAt": "2026-08-22"
       }

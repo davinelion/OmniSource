@@ -37,7 +37,7 @@
             "fileType": "IPA",
             "size": 675573,
             "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
-            "downloads": 2143,
+            "downloads": 2146,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -67,7 +67,7 @@
           }
         ],
         "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
-        "downloads": 2143
+        "downloads": 2146
       }
     ],
     "screenshotURLs": [
@@ -98,8 +98,10 @@
         "clients": [
           "altstore",
           "sidestore",
+          "flarestore",
           "feather",
           "esign",
+          "ksign",
           "livecontainer"
         ],
         "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from Torrekie/Battman; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."
