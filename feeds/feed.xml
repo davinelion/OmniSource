@@ -8,6 +8,19 @@
     <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Nuvio v0.4.24</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.4.24</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.4.24 | nuvio-0.4.24-full-release
+
+- 042144f8 fix(player): remember brightness across playback sessions @tapframe  
+- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  
+- 4c3bd0d0 feat(player): follow design parity @tapframe  
+- 6fb46976 feat(settings): add rating visibility controls @tapframe]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Manic EMU v2.0.1</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/manicemu.json</link>
       <guid isPermaLink="false">manicemu-2.0.1</guid>
@@ -46,6 +59,87 @@
 - Fixed a launch timeout that could quit the app on older devices
 - N64 now supports ROMs larger than 64 MB]]></description>
       <enclosure url="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Mangayomi v0.9.5</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.5</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.5 | Mangayomi-v0.9.5-ios
+
+## What's Changed
+
+## Reader & Novels
+
+* **Smart Double-Page Mode** (#1008):
+  * Automatically switch to double-page view based on screen orientation (landscape/portrait).
+  * Chapter transition pages now remain isolated for a natural, seamless reading experience.
+* **Complete Novel Reader Overhaul** (#1014):
+  * Added double-page reading mode support for novels.
+  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).
+  * Added smooth auto-scroll with fine-tuned speed controls.
+  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.
+  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).
+* **Smooth Webtoon Scrolling**:
+  * Much smoother continuous scrolling without stutter or layout jumps.
+  * Fluid auto-scroll that reacts instantly to touch and drag gestures.
+* **Reliable Page Error Recovery**:
+  * The **Retry** button is now immediately clickable with no menu overlay interference.
+  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.
+* **Dedicated Page Cache**:
+  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.
+
+---
+
+##  Features & User Experience
+
+* **Quick Resume from History** (#1005):
+  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).
+* **One-Tap Global Search**:
+  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).
+  * Warns you before adding an entry that is already in your library.
+* **Customizable Chapter Swipe Actions** (#1005):
+  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Download, or Disable).
+* **Mass Migration from Library** (#1005):
+  * Added a dedicated shortcut button in the multi-select bottom action bar to quickly migrate multiple selected entries at once.
+* **Automatic Sync** (#1012):
+  * Added background auto-sync support and improved sync preference handling.
+
+---
+
+## Video Player & Desktop
+
+* **Desktop Controls & Performance** (#1015):
+  * Eliminated stutter caused by mouse hover on the player controls.
+  * Added a setting to toggle hardware acceleration on Windows.
+* **Audio & Subtitle Tracks**:
+  * Better track synchronization, duplicate removal, and cleaner track labels.
+
+---
+
+##  Localization
+
+* Fully updated and completed translations across **17 languages** (French, German, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, and more).
+
+---
+
+##  Fixes & Stability
+
+* Fixed visual layout overflow issues in settings sheets and bottom bars (#1014).
+* Improved error handling and reliability for Kitsu discovery (#1011).
+* File picker improvements and stability updates (#1010).
+
+---
+
+##  Contributors
+
+* @kodjodevf 
+* @NBA2K1 (#1010, #1011)
+* @not-akari
+
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.4...v0.9.5]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>EscapeOS v0.1.6</title>
@@ -343,55 +437,6 @@ YouTube Music version]]></description>
 
 **Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.4...v4.1.5]]></description>
       <enclosure url="https://github.com/cogwheel0/conduit/releases/download/v4.1.5/conduit.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YTKillerPlus v21.37.4</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ytkp.json</link>
-      <guid isPermaLink="false">ytkp-21.37.4</guid>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.37.4 | YTKillerPlus_21.37.4_6.1
-
-### Latest Release, ENJOY!!
-
-- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)
-
-> [!NOTE]
-> - **Sidestore is no longer supported!!.**
-> - **YTUHD** is not included. 4K is available for A16+ devices.
-> - use **YTKACE or any other mod** for downloading. dev intentionally broke download feature.
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Extra tweaks that are bundled may be unstable on newer versions.
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa2/YTKillerPlus_21.37.4_6.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YouPro v21.37.4</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/youpro.json</link>
-      <guid isPermaLink="false">youpro-21.37.4</guid>
-      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.37.4 | YouProExtra_21.37.4_1.3.1
-
-### Latest Release, ENJOY!!
-> [!NOTE]
-> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.
-> - if you're signed out you can sign in manually. 
-> - no iSponsorBlock. 
-> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` 
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` 
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.37.4_1.3.1.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

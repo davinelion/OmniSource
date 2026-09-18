@@ -5,8 +5,89 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
     <description>Release feed for Mangayomi within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/mangayomi.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mangayomi v0.9.5</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.5</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.5 | Mangayomi-v0.9.5-ios
+
+## What's Changed
+
+## Reader & Novels
+
+* **Smart Double-Page Mode** (#1008):
+  * Automatically switch to double-page view based on screen orientation (landscape/portrait).
+  * Chapter transition pages now remain isolated for a natural, seamless reading experience.
+* **Complete Novel Reader Overhaul** (#1014):
+  * Added double-page reading mode support for novels.
+  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).
+  * Added smooth auto-scroll with fine-tuned speed controls.
+  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.
+  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).
+* **Smooth Webtoon Scrolling**:
+  * Much smoother continuous scrolling without stutter or layout jumps.
+  * Fluid auto-scroll that reacts instantly to touch and drag gestures.
+* **Reliable Page Error Recovery**:
+  * The **Retry** button is now immediately clickable with no menu overlay interference.
+  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.
+* **Dedicated Page Cache**:
+  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.
+
+---
+
+##  Features & User Experience
+
+* **Quick Resume from History** (#1005):
+  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).
+* **One-Tap Global Search**:
+  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).
+  * Warns you before adding an entry that is already in your library.
+* **Customizable Chapter Swipe Actions** (#1005):
+  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Download, or Disable).
+* **Mass Migration from Library** (#1005):
+  * Added a dedicated shortcut button in the multi-select bottom action bar to quickly migrate multiple selected entries at once.
+* **Automatic Sync** (#1012):
+  * Added background auto-sync support and improved sync preference handling.
+
+---
+
+## Video Player & Desktop
+
+* **Desktop Controls & Performance** (#1015):
+  * Eliminated stutter caused by mouse hover on the player controls.
+  * Added a setting to toggle hardware acceleration on Windows.
+* **Audio & Subtitle Tracks**:
+  * Better track synchronization, duplicate removal, and cleaner track labels.
+
+---
+
+##  Localization
+
+* Fully updated and completed translations across **17 languages** (French, German, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, and more).
+
+---
+
+##  Fixes & Stability
+
+* Fixed visual layout overflow issues in settings sheets and bottom bars (#1014).
+* Improved error handling and reliability for Kitsu discovery (#1011).
+* File picker improvements and stability updates (#1010).
+
+---
+
+##  Contributors
+
+* @kodjodevf 
+* @NBA2K1 (#1010, #1011)
+* @not-akari
+
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.4...v0.9.5]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Mangayomi v0.9.4</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>

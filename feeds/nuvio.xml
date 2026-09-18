@@ -5,8 +5,21 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
     <description>Release feed for Nuvio within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/nuvio.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Nuvio v0.4.24</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.4.24</guid>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.4.24 | nuvio-0.4.24-full-release
+
+- 042144f8 fix(player): remember brightness across playback sessions @tapframe  
+- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  
+- 4c3bd0d0 feat(player): follow design parity @tapframe  
+- 6fb46976 feat(settings): add rating visibility controls @tapframe]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Nuvio v0.4.23</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>

@@ -899,7 +899,7 @@
               "fileType": "IPA",
               "size": 114471562,
               "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 1612,
+              "downloads": 1642,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -911,7 +911,7 @@
               "fileType": "IPA",
               "size": 124722640,
               "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 3490,
+              "downloads": 3568,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -923,7 +923,7 @@
               "fileType": "IPA",
               "size": 114471417,
               "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-              "downloads": 67,
+              "downloads": 68,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -935,7 +935,7 @@
               "fileType": "IPA",
               "size": 124722495,
               "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 118,
+              "downloads": 120,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -947,7 +947,7 @@
               "fileType": "IPA",
               "size": 85880995,
               "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 414,
+              "downloads": 427,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -959,7 +959,7 @@
               "fileType": "IPA",
               "size": 96132071,
               "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 632,
+              "downloads": 651,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -971,7 +971,7 @@
               "fileType": "DEB",
               "size": 12186352,
               "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-              "downloads": 25,
+              "downloads": 27,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -983,13 +983,13 @@
               "fileType": "DEB",
               "size": 12187106,
               "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-              "downloads": 29,
+              "downloads": 30,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 632
+          "downloads": 651
         }
       ],
       "screenshotURLs": [],
@@ -5365,7 +5365,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 245,
+              "downloads": 249,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5401,7 +5401,7 @@
               "fileType": "APK",
               "size": 88506651,
               "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-              "downloads": 85,
+              "downloads": 86,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5413,13 +5413,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 125,
+              "downloads": 127,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 125
+          "downloads": 127
         }
       ],
       "screenshotURLs": [],
@@ -5976,195 +5976,195 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
       "tintColor": "4CAF50",
       "category": "other",
-      "version": "0.9.4",
-      "versionDate": "2026-09-15",
-      "versionDescription": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
-      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
-      "size": 114238780,
+      "version": "0.9.5",
+      "versionDate": "2026-09-18",
+      "versionDescription": "Mangayomi 0.9.5 | Mangayomi-v0.9.5-ios\n\n## What's Changed\n\n## Reader & Novels\n\n* **Smart Double-Page Mode** (#1008):\n  * Automatically switch to double-page view based on screen orientation (landscape/portrait).\n  * Chapter transition pages now remain isolated for a natural, seamless reading experience.\n* **Complete Novel Reader Overhaul** (#1014):\n  * Added double-page reading mode support for novels.\n  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).\n  * Added smooth auto-scroll with fine-tuned speed controls.\n  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.\n  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).\n* **Smooth Webtoon Scrolling**:\n  * Much smoother continuous scrolling without stutter or layout jumps.\n  * Fluid auto-scroll that reacts instantly to touch and drag gestures.\n* **Reliable Page Error Recovery**:\n  * The **Retry** button is now immediately clickable with no menu overlay interference.\n  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.\n* **Dedicated Page Cache**:\n  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.\n\n---\n\n##  Features & User Experience\n\n* **Quick Resume from History** (#1005):\n  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).\n* **One-Tap Global Search**:\n  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).\n  * Warns you before adding an entry that is already in your library.\n* **Customizable Chapter Swipe Actions** (#1005):\n  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Download, or Disable).\n* **Mass Migration from Library** (#1005):\n  * Added a dedicated shortcut button in the multi-select bottom action bar to quickly migrate multiple selected entries at once.\n* **Automatic Sync** (#1012):\n  * Added background auto-sync support and improved sync preference handling.\n\n---\n\n## Video Player & Desktop\n\n* **Desktop Controls & Performance** (#1015):\n  * Eliminated stutter caused by mouse hover on the player controls.\n  * Added a setting to toggle hardware acceleration on Windows.\n* **Audio & Subtitle Tracks**:\n  * Better track synchronization, duplicate removal, and cleaner track labels.\n\n---\n\n##  Localization\n\n* Fully updated and completed translations across **17 languages** (French, German, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, and more).\n\n---\n\n##  Fixes & Stability\n\n* Fixed visual layout overflow issues in settings sheets and bottom bars (#1014).\n* Improved error handling and reliability for Kitsu discovery (#1011).\n* File picker improvements and stability updates (#1010).\n\n---\n\n##  Contributors\n\n* @kodjodevf \n* @NBA2K1 (#1010, #1011)\n* @not-akari\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.4...v0.9.5",
+      "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa",
+      "size": 114289495,
       "versions": [
         {
-          "version": "0.9.4",
-          "date": "2026-09-15",
-          "localizedDescription": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
-          "size": 114238780,
+          "version": "0.9.5",
+          "date": "2026-09-18",
+          "localizedDescription": "Mangayomi 0.9.5 | Mangayomi-v0.9.5-ios\n\n## What's Changed\n\n## Reader & Novels\n\n* **Smart Double-Page Mode** (#1008):\n  * Automatically switch to double-page view based on screen orientation (landscape/portrait).\n  * Chapter transition pages now remain isolated for a natural, seamless reading experience.\n* **Complete Novel Reader Overhaul** (#1014):\n  * Added double-page reading mode support for novels.\n  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).\n  * Added smooth auto-scroll with fine-tuned speed controls.\n  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.\n  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).\n* **Smooth Webtoon Scrolling**:\n  * Much smoother continuous scrolling without stutter or layout jumps.\n  * Fluid auto-scroll that reacts instantly to touch and drag gestures.\n* **Reliable Page Error Recovery**:\n  * The **Retry** button is now immediately clickable with no menu overlay interference.\n  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.\n* **Dedicated Page Cache**:\n  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.\n\n---\n\n##  Features & User Experience\n\n* **Quick Resume from History** (#1005):\n  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).\n* **One-Tap Global Search**:\n  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).\n  * Warns you before adding an entry that is already in your library.\n* **Customizable Chapter Swipe Actions** (#1005):\n  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Download, or Disable).\n* **Mass Migration from Library** (#1005):\n  * Added a dedicated shortcut button in the multi-select bottom action bar to quickly migrate multiple selected entries at once.\n* **Automatic Sync** (#1012):\n  * Added background auto-sync support and improved sync preference handling.\n\n---\n\n## Video Player & Desktop\n\n* **Desktop Controls & Performance** (#1015):\n  * Eliminated stutter caused by mouse hover on the player controls.\n  * Added a setting to toggle hardware acceleration on Windows.\n* **Audio & Subtitle Tracks**:\n  * Better track synchronization, duplicate removal, and cleaner track labels.\n\n---\n\n##  Localization\n\n* Fully updated and completed translations across **17 languages** (French, German, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, and more).\n\n---\n\n##  Fixes & Stability\n\n* Fixed visual layout overflow issues in settings sheets and bottom bars (#1014).\n* Improved error handling and reliability for Kitsu discovery (#1011).\n* File picker improvements and stability updates (#1010).\n\n---\n\n##  Contributors\n\n* @kodjodevf \n* @NBA2K1 (#1010, #1011)\n* @not-akari\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.4...v0.9.5",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa",
+          "size": 114289495,
           "minOSVersion": "15.0",
-          "releaseUrl": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.4",
+          "releaseUrl": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.5",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "Mangayomi-v0.9.4-android-arm64-v8a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-arm64-v8a.apk",
+              "filename": "Mangayomi-v0.9.5-android-arm64-v8a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-android-arm64-v8a.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 55175908,
-              "sha256": "24a1309ec897b631b61be5d5b22ed3d222eeb3a2c24a9ee91084aff560ce2a23",
-              "downloads": 1908,
+              "size": 54943364,
+              "sha256": "65ef99c423b0391be477adb12b41d5d112efa647d71cde9710bf115257d6d12c",
+              "downloads": 162,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-android-armeabi-v7a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-armeabi-v7a.apk",
+              "filename": "Mangayomi-v0.9.5-android-armeabi-v7a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-android-armeabi-v7a.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 54425290,
-              "sha256": "8902b11f6902dc035909538e758959913a68a02dcaf6d75f5a73c352e838ad04",
-              "downloads": 95,
+              "size": 54185098,
+              "sha256": "c37078b09f6591e3874e4ba401bd2f519b439dfea80f59677ed829ac619cb45a",
+              "downloads": 8,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-android-tv-arm64-v8a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-arm64-v8a.apk",
+              "filename": "Mangayomi-v0.9.5-android-tv-arm64-v8a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-android-tv-arm64-v8a.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 55195080,
-              "sha256": "72064d6d10286ccdbdfaa81af0a367c458eb9761d8ef12b4c8ef4c52d5fe49c1",
-              "downloads": 94,
+              "size": 54962536,
+              "sha256": "bdbc6ce537d0b86145748f43637ac9050dcb118e1f0e170839dbd0927623f76c",
+              "downloads": 7,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-android-tv-armeabi-v7a.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-armeabi-v7a.apk",
+              "filename": "Mangayomi-v0.9.5-android-tv-armeabi-v7a.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-android-tv-armeabi-v7a.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 54444462,
-              "sha256": "8c460b816b42c977da3a9ba71fbfb8f9b9dfc3c9558c8d6f691a435ea739dc6e",
-              "downloads": 32,
+              "size": 54204270,
+              "sha256": "0acf99464cdc014dee811a8748df8615f2ccade558eb4d0853d3410588d8e2b5",
+              "downloads": 4,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-android-tv-x86_64.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-tv-x86_64.apk",
+              "filename": "Mangayomi-v0.9.5-android-tv-x86_64.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-android-tv-x86_64.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 57293035,
-              "sha256": "ffd9c27c3e2e3c0991e5d231dc8b6deb692b84b14c3b4a36703bd0c78226e170",
-              "downloads": 24,
+              "size": 57060991,
+              "sha256": "5e2c290736fc15851a62ea28f6e240442fc68423a4fcc11689de127c9d394153",
+              "downloads": 2,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-android-x86_64.apk",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-android-x86_64.apk",
+              "filename": "Mangayomi-v0.9.5-android-x86_64.apk",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-android-x86_64.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 57273863,
-              "sha256": "e04e0898171313ee9bb639226f81db8d1af43f16b67ad572d3cbfa6bec2f3665",
-              "downloads": 63,
+              "size": 57041819,
+              "sha256": "c71863c35295a6fd4ce65ee7501bd84329bfbe29028f47ffc2a0abffeb233eb1",
+              "downloads": 5,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-ios.ipa",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
+              "filename": "Mangayomi-v0.9.5-ios.ipa",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 114238780,
-              "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
-              "downloads": 442,
+              "size": 114289495,
+              "sha256": "d95136ebfdf240638bc369c5729e65bb99a17ee430037e615888203070885ac2",
+              "downloads": 38,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-linux.AppImage",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.AppImage",
+              "filename": "Mangayomi-v0.9.5-linux.AppImage",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-linux.AppImage",
               "platform": "linux",
               "architecture": null,
               "fileType": "AppImage",
-              "size": 182995448,
-              "sha256": "f8404c44b3f63d14ee73090f13659ef8e4e769833d02218fc5f1d9747128759f",
-              "downloads": 72,
+              "size": 183032312,
+              "sha256": "863f501cde9611522899cc928e9fb6ce650ee1170d263d9ddb79a39262fd3505",
+              "downloads": 4,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-linux.deb",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.deb",
+              "filename": "Mangayomi-v0.9.5-linux.deb",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-linux.deb",
               "platform": "linux",
               "architecture": null,
               "fileType": "DEB",
-              "size": 34302242,
-              "sha256": "13b13b960610e05e325c42e8c7af853976f135b143adc8b076b9918a72731229",
-              "downloads": 35,
+              "size": 34345702,
+              "sha256": "3570c4e2d853949cac09d460eb9dbf26c695d7e98266f3983c35a49a4499ad75",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-linux.rpm",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.rpm",
+              "filename": "Mangayomi-v0.9.5-linux.rpm",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-linux.rpm",
               "platform": "linux",
               "architecture": null,
               "fileType": "other",
-              "size": 41787386,
-              "sha256": "e8b87eebdf5275dea7ac311a7dca53ec3dfac9dad3a5a63671c8e4c6f0240f48",
-              "downloads": 19,
+              "size": 41832296,
+              "sha256": "26bf3c2b871e3f419f4fa4f72dabbdb97f343f0a97dfa3c385c6ab8379227eaf",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": false
             },
             {
-              "filename": "Mangayomi-v0.9.4-linux.zip",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-linux.zip",
+              "filename": "Mangayomi-v0.9.5-linux.zip",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-linux.zip",
               "platform": "linux",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 41982342,
-              "sha256": "46ed609c2a680899bbffcd9f4f8cc7655f3e831fb3b2df2fd840543b4b57f026",
-              "downloads": 10,
+              "size": 42028218,
+              "sha256": "ca739b6c9372de85aac9e17480434ad018b30b68f1da585d6d2403a8b716d19a",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": false
             },
             {
-              "filename": "Mangayomi-v0.9.4-macos.dmg",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-macos.dmg",
+              "filename": "Mangayomi-v0.9.5-macos.dmg",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-macos.dmg",
               "platform": "macos",
               "architecture": null,
               "fileType": "DMG",
-              "size": 122087840,
-              "sha256": "a3b27413d4fadd52cb222415c5d0906a1fd4229e676c24ebab55e8e99332611b",
-              "downloads": 56,
+              "size": 122174125,
+              "sha256": "d2a85a170646039444c9b5cc58af180276a19d55cb5bfd63c20253fe7ea67013",
+              "downloads": 4,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-windows.exe",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-windows.exe",
+              "filename": "Mangayomi-v0.9.5-windows.exe",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-windows.exe",
               "platform": "windows",
               "architecture": null,
               "fileType": "EXE",
-              "size": 69609569,
-              "sha256": "62cdc446629b7c044412dbb0bf3ba7316a4121ac6f41fb505d52af979027bb2d",
-              "downloads": 436,
+              "size": 69634913,
+              "sha256": "2d8356a47adc3a60a599051ac0f2f1865ed36ea506b4bf97605e8a808c13cb9e",
+              "downloads": 20,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "Mangayomi-v0.9.4-windows.zip",
-              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-windows.zip",
+              "filename": "Mangayomi-v0.9.5-windows.zip",
+              "downloadUrl": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-windows.zip",
               "platform": "windows",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 95552072,
-              "sha256": "0cbb971c269a4cdfde2a3edcf57e7d0e66b3beaf4a2dde1724309633e0e1ed18",
-              "downloads": 137,
+              "size": 95587191,
+              "sha256": "c24e11200b4ca199a26fad06fb1adf7c87d6d0aba57203deb783feabbe916615",
+              "downloads": 9,
               "mimeType": "raw",
               "installable": false
             }
           ],
-          "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
-          "downloads": 442
+          "sha256": "d95136ebfdf240638bc369c5729e65bb99a17ee430037e615888203070885ac2",
+          "downloads": 38
         }
       ],
       "screenshotURLs": [],
@@ -6206,7 +6206,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-13",
-          "lastUpdatedAt": "2026-09-15"
+          "lastUpdatedAt": "2026-09-18"
         }
       }
     },
@@ -6332,13 +6332,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 294,
+              "downloads": 317,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 294
+          "downloads": 317
         }
       ],
       "screenshotURLs": [
@@ -6447,13 +6447,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 245,
+              "downloads": 247,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 245
+          "downloads": 247
         }
       ],
       "screenshotURLs": [
@@ -7550,87 +7550,87 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
       "tintColor": "5B5FE8",
       "category": "photo-video",
-      "version": "0.4.23",
-      "versionDate": "2026-09-17",
-      "versionDescription": "Nuvio 0.4.23 | nuvio-0.4.23-full-release\n\n- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  \n- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  \n- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  \n- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco",
-      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
-      "size": 51420909,
+      "version": "0.4.24",
+      "versionDate": "2026-09-18",
+      "versionDescription": "Nuvio 0.4.24 | nuvio-0.4.24-full-release\n\n- 042144f8 fix(player): remember brightness across playback sessions @tapframe  \n- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  \n- 4c3bd0d0 feat(player): follow design parity @tapframe  \n- 6fb46976 feat(settings): add rating visibility controls @tapframe",
+      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
+      "size": 51517735,
       "versions": [
         {
-          "version": "0.4.23",
-          "date": "2026-09-17",
-          "localizedDescription": "Nuvio 0.4.23 | nuvio-0.4.23-full-release\n\n- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  \n- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  \n- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  \n- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco",
-          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
-          "size": 51420909,
+          "version": "0.4.24",
+          "date": "2026-09-18",
+          "localizedDescription": "Nuvio 0.4.24 | nuvio-0.4.24-full-release\n\n- 042144f8 fix(player): remember brightness across playback sessions @tapframe  \n- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  \n- 4c3bd0d0 feat(player): follow design parity @tapframe  \n- 6fb46976 feat(settings): add rating visibility controls @tapframe",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
+          "size": 51517735,
           "minOSVersion": "16.1",
-          "releaseUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/tag/0.4.23-beta",
+          "releaseUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/tag/0.4.24-beta",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "androidApp-full-x86-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-x86-release.apk",
-              "platform": "android",
-              "architecture": "x86",
-              "fileType": "APK",
-              "size": 42264850,
-              "sha256": "51fc16c075fdb8651bd0a2291b903ac18f8595c997f9d1c0e4fef800c1e32640",
-              "downloads": 426,
-              "mimeType": "application/vnd.android.package-archive",
-              "installable": true
-            },
-            {
               "filename": "androidApp-full-armeabi-v7a-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-armeabi-v7a-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/androidApp-full-armeabi-v7a-release.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 40084162,
-              "sha256": "3201823956b4de701d3b4e5e94cd0caa5cedd410ef40f7ac2da5a738d1730ee6",
-              "downloads": 839,
+              "size": 40109862,
+              "sha256": "5ea61392a010048131b358728951a2ec2b1f54e81da4800880e1a5de884007e3",
+              "downloads": 212,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "androidApp-full-x86_64-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-x86_64-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/androidApp-full-x86_64-release.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 43175541,
-              "sha256": "ab856c6a12143825816e2284bed75ea388b03d82895c68099ac7e84e44fcaa83",
-              "downloads": 510,
+              "size": 43201245,
+              "sha256": "7806ac97da917422a82fa9e55638dcc3c1dd4b244b87e49eab6c0feeedc07aa8",
+              "downloads": 106,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "nuvio-0.4.23-full-release.ipa",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
+              "filename": "nuvio-0.4.24-full-release.ipa",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 51420909,
-              "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
-              "downloads": 1255,
+              "size": 51517735,
+              "sha256": "89c458d16340437f9923a0d8e81c5fa6d4ae77be9db5c0f614e73f4ae792b042",
+              "downloads": 259,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "androidApp-full-arm64-v8a-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/androidApp-full-arm64-v8a-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/androidApp-full-arm64-v8a-release.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 41819720,
-              "sha256": "3deac86ac6bec5546ecd6a87a96e4aa9ea212f41a831483f0eb13d5ca43ec0c0",
-              "downloads": 17617,
+              "size": 41845420,
+              "sha256": "8e4980c5ff4c3ec1619eab696724fdafe15cd89fb3fd7571954678e73734016e",
+              "downloads": 3955,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
+              "filename": "androidApp-full-x86-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/androidApp-full-x86-release.apk",
+              "platform": "android",
+              "architecture": "x86",
+              "fileType": "APK",
+              "size": 42290554,
+              "sha256": "f6046d78c2f47adea8011018aa4de9f14a3d01a149a8b35458c2b544078aef3d",
+              "downloads": 86,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             }
           ],
-          "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
-          "downloads": 1255
+          "sha256": "89c458d16340437f9923a0d8e81c5fa6d4ae77be9db5c0f614e73f4ae792b042",
+          "downloads": 259
         }
       ],
       "screenshotURLs": [],
@@ -7668,7 +7668,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-17"
+          "lastUpdatedAt": "2026-09-18"
         }
       }
     },
@@ -9536,7 +9536,7 @@
               "fileType": "IPA",
               "size": 108119337,
               "sha256": "421d5149dfe8087e18ea2b43cf437e2ea384208a74ee39bcfb23c9bc14cb7ae6",
-              "downloads": 231,
+              "downloads": 240,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9548,7 +9548,7 @@
               "fileType": "IPA",
               "size": 108168749,
               "sha256": "b6b5fa78be22ac11bfdb179884caaa43b69e10d16d47a9079f33df014f57c590",
-              "downloads": 1687,
+              "downloads": 1726,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9560,13 +9560,13 @@
               "fileType": "IPA",
               "size": 108070190,
               "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-              "downloads": 712,
+              "downloads": 742,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-          "downloads": 712
+          "downloads": 742
         }
       ],
       "screenshotURLs": [],
@@ -11454,7 +11454,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 10946,
+              "downloads": 10960,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11502,13 +11502,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 247,
+              "downloads": 249,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 247
+          "downloads": 249
         }
       ],
       "screenshotURLs": [],
@@ -12567,7 +12567,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 364471,
+              "downloads": 364518,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12579,12 +12579,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1243607,
+              "downloads": 1243744,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1243607
+          "downloads": 1243744
         }
       ],
       "screenshotURLs": [],
@@ -12871,7 +12871,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 492,
+              "downloads": 494,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12883,13 +12883,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1202,
+              "downloads": 1215,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1202
+          "downloads": 1215
         }
       ],
       "screenshotURLs": [],
@@ -15177,12 +15177,30 @@
   ],
   "news": [
     {
+      "title": "Nuvio v0.4.24",
+      "identifier": "news-nuvio-0-4-24",
+      "caption": "Open-source media player, bring your own sources",
+      "date": "2026-09-18",
+      "appID": "com.nuvio.app",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
+      "notify": true
+    },
+    {
       "title": "Manic EMU v2.0.1",
       "identifier": "news-manicemu-2-0-1",
       "caption": "All-in-one retro game emulator",
       "date": "2026-09-18",
       "appID": "com.aoshuang.manicemu",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/ManicEMU.webp",
+      "notify": true
+    },
+    {
+      "title": "Mangayomi v0.9.5",
+      "identifier": "news-mangayomi-0-9-5",
+      "caption": "Manga, novel & anime reader",
+      "date": "2026-09-18",
+      "appID": "com.kodjodevf.mangayomi",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
       "notify": true
     },
     {
@@ -15246,24 +15264,6 @@
       "date": "2026-09-16",
       "appID": "com.burbn.instagram.sparkle",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
-      "notify": true
-    },
-    {
-      "title": "RyukGram v447.0.0",
-      "identifier": "news-ryukgram-447-0-0",
-      "caption": "Instagram tweak for power users by faroukbmiled",
-      "date": "2026-09-16",
-      "appID": "com.burbn.instagram",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
-      "notify": true
-    },
-    {
-      "title": "PlayTorrio v1.1.6",
-      "identifier": "news-playtorrio-1-1-6",
-      "caption": "Streaming client",
-      "date": "2026-09-16",
-      "appID": "com.example.playtorrio",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/PlayTorrio.webp",
       "notify": true
     }
   ]
