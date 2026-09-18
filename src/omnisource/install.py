@@ -133,6 +133,46 @@ CLIENT_PROFILES = {
             "Re-sign from the same menu before the certificate expires; nothing happens automatically.",
         ],
     },
+    "flarestore": {
+        "id": "flarestore",
+        "name": "FlareStore",
+        "scheme": "flarestore://source?url={url}",
+        "deepLinkable": True,
+        "instructions": (
+            "Tap to add the source to FlareStore (recommended). "
+            "If nothing happens, paste the feed URL in Sources."
+        ),
+        "manualSetup": False,
+        "description": (
+            "An AltStore-compatible store with extra signing and repo tools. "
+            "OmniSource recommends FlareStore for one-tap source install."
+        ),
+        "requirements": "A signing certificate, TrollStore, or FlareStore's own sideload path.",
+        "steps": [
+            "Install FlareStore from flarestore.app and trust its certificate if asked.",
+            "Add this source: the link below opens FlareStore's importer, or use Sources → Add and paste the URL.",
+            "Browse the catalog and install. Re-sign when your certificate expires.",
+        ],
+    },
+    "ksign": {
+        "id": "ksign",
+        "name": "Ksign",
+        "scheme": "ksign://addsource?url={url}",
+        "deepLinkable": True,
+        "instructions": (
+            "Tap to add the source to Ksign. If nothing happens, open Ksign sources and paste the URL."
+        ),
+        "manualSetup": False,
+        "description": (
+            "An ESign-style on-device signer: import AltStore sources, re-sign IPAs with your certificate, and install."
+        ),
+        "requirements": "A certificate you trust on the device (Apple Account, self-signed or enterprise).",
+        "steps": [
+            "Install Ksign and trust the signing certificate under Settings → General → VPN & Device Management.",
+            "Add this source: the link below asks Ksign to import it; otherwise paste the URL in Sources.",
+            "Open the source and tap install. Re-sign from the same menu before the certificate expires.",
+        ],
+    },
     "livecontainer": {
         "id": "livecontainer",
         "name": "LiveContainer",
@@ -225,7 +265,7 @@ def build_install_doc(
                     "name": client["name"],
                     "icon": client.get("icon", ""),
                     "compatible": True,
-                    "recommended": cid in {"altstore", "sidestore"},
+                    "recommended": cid == "flarestore",
                     "manualSetup": bool(client.get("manualSetup", False)),
                     "url": _build_url(client, feed_url),
                     "feedURL": feed_url,

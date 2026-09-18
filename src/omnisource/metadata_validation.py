@@ -19,7 +19,15 @@ BUNDLE_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9.-]{1,254}$")
 VERSION_RE = re.compile(r"^(?=.*\d)[^\s]{1,128}$")
 HEX_RE = re.compile(r"^[0-9a-fA-F]{64}$")
 INSTALLABLE_SUFFIXES = (".ipa", ".tipa", ".deb")
-CLIENT_TYPES = {"altstore", "sidestore", "feather", "esign", "livecontainer"}
+CLIENT_TYPES = {
+    "altstore",
+    "sidestore",
+    "flarestore",
+    "feather",
+    "esign",
+    "ksign",
+    "livecontainer",
+}
 
 
 @dataclass

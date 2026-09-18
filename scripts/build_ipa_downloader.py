@@ -52,8 +52,10 @@ DOCUMENT = {
 CLIENT_NAMES = {
     "altstore": "AltStore",
     "sidestore": "SideStore",
+    "flarestore": "FlareStore",
     "feather": "Feather",
     "esign": "ESign",
+    "ksign": "Ksign",
     "livecontainer": "LiveContainer",
 }
 

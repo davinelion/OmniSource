@@ -157,7 +157,7 @@ class JsonFeedPlugin:
     """Built-in pass-through normalizer for AltStore-family JSON feeds."""
 
     name = "json-feed"
-    supported_types = ("json-feed", "altstore", "sidestore", "feather", "esign", "livecontainer")
+    supported_types = ("json-feed", "altstore", "sidestore", "flarestore", "feather", "esign", "ksign", "livecontainer")
 
     def detect(self, payload: Any, url: str = "") -> bool:
         return isinstance(payload, dict) and isinstance(payload.get("apps"), list)

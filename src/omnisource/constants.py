@@ -45,7 +45,9 @@ VALID_VERIFICATION_METHODS = frozenset(
         "self-built",
     }
 )
-KNOWN_CLIENTS = frozenset({"altstore", "sidestore", "feather", "esign", "livecontainer"})
+KNOWN_CLIENTS = frozenset(
+    {"altstore", "sidestore", "flarestore", "feather", "esign", "ksign", "livecontainer"}
+)
 IMAGE_EXTENSIONS = frozenset({".png", ".jpg", ".jpeg", ".webp", ".gif"})
 PNG_MAGIC = b"\x89PNG\r\n\x1a\n"
 JPEG_MAGIC = b"\xff\xd8\xff"
