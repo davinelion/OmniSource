@@ -138,10 +138,7 @@ CLIENT_PROFILES = {
         "name": "FlareStore",
         "scheme": "flarestore://source?url={url}",
         "deepLinkable": True,
-        "instructions": (
-            "Tap to add the source to FlareStore. "
-            "If nothing happens, paste the feed URL in Sources."
-        ),
+        "instructions": ("Tap to add the source to FlareStore. If nothing happens, paste the feed URL in Sources."),
         "manualSetup": False,
         "description": (
             "An AltStore-compatible store with extra signing and repo tools. "
@@ -159,9 +156,7 @@ CLIENT_PROFILES = {
         "name": "Ksign",
         "scheme": "ksign://addsource?url={url}",
         "deepLinkable": True,
-        "instructions": (
-            "Tap to add the source to Ksign. If nothing happens, open Ksign sources and paste the URL."
-        ),
+        "instructions": ("Tap to add the source to Ksign. If nothing happens, open Ksign sources and paste the URL."),
         "manualSetup": False,
         "description": (
             "An ESign-style on-device signer: import AltStore sources, re-sign IPAs with your certificate, and install."
