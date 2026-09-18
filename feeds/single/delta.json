@@ -44,12 +44,12 @@
               "fileType": "IPA",
               "size": 87734964,
               "sha256": null,
-              "downloads": 71057,
+              "downloads": 71065,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 71057
+          "downloads": 71065
         }
       ],
       "screenshotURLs": [],
@@ -75,8 +75,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA published by the developer on GitHub Releases. Uses the same bundle identifier as the App Store build of Delta: installing the sideload build replaces the store version. Delta 1.6 targets iOS 14 or newer."

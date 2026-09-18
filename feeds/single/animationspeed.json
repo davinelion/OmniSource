@@ -44,7 +44,7 @@
               "fileType": "IPA",
               "size": 96650,
               "sha256": null,
-              "downloads": 3239,
+              "downloads": 3241,
               "mimeType": "application/zip",
               "installable": true
             },
@@ -61,7 +61,7 @@
               "installable": true
             }
           ],
-          "downloads": 3239
+          "downloads": 3241
         }
       ],
       "screenshotURLs": [],
@@ -87,8 +87,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from DevelopCubeLab/AnimationSpeed; install with TrollStore, or rename to .ipa if your client rejects the extension. Releases also ship .deb builds for jailbroken devices."

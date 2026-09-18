@@ -44,13 +44,13 @@
               "fileType": "IPA",
               "size": 27770821,
               "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
-              "downloads": 25719,
+              "downloads": 26485,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
-          "downloads": 25719
+          "downloads": 26485
         }
       ],
       "screenshotURLs": [
@@ -92,8 +92,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official AGPL-3.0 stable releases; the rolling nightly and alpha tags are pre-releases and are not tracked. Requires a pairing file and, on iOS 17+, a JIT/StikDebug-style enabler for some features."

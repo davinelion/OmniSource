@@ -45,13 +45,13 @@
               "fileType": "IPA",
               "size": 16815108,
               "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
-              "downloads": 610,
+              "downloads": 616,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
-          "downloads": 610
+          "downloads": 616
         }
       ],
       "screenshotURLs": [],
@@ -77,8 +77,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Upstream documents iOS 16.0 or later. Writing into the media database is an unofficial flow: back up anything you cannot lose before mass-importing, and re-run the import after a major iOS update."
@@ -126,13 +128,13 @@
               "fileType": "IPA",
               "size": 12056869,
               "sha256": "e8e2862e1b3a900e96569faf87c9c3e02d90b2c5b52ad854f6710d0ea36c91e9",
-              "downloads": 129,
+              "downloads": 131,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e8e2862e1b3a900e96569faf87c9c3e02d90b2c5b52ad854f6710d0ea36c91e9",
-          "downloads": 129
+          "downloads": 131
         }
       ],
       "screenshotURLs": [],
@@ -162,8 +164,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA published by the developer on GitHub Releases."
@@ -211,13 +215,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 266,
+              "downloads": 279,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 266
+          "downloads": 279
         }
       ],
       "screenshotURLs": [
@@ -263,8 +267,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Full MaxMusic build including YouMusicPiP; upstream also publishes a no-YouMusicPiP variant if PiP causes background-playback issues. Shares com.google.ios.youtubemusic with YTMusicUltimate: install one at a time."
@@ -312,7 +318,7 @@
               "fileType": "APK",
               "size": 102232099,
               "sha256": "dca5575a769d0ef762a8a734bced9128cf3eb118f796aec809d2e347c767e121",
-              "downloads": 7767,
+              "downloads": 7832,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -324,7 +330,7 @@
               "fileType": "APK",
               "size": 81186819,
               "sha256": "5ccfa354b38cf9a7e686fc5cf0806137c83980a2aa9a803f27ecc1f4a5547003",
-              "downloads": 88595,
+              "downloads": 89091,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -336,13 +342,13 @@
               "fileType": "IPA",
               "size": 34171700,
               "sha256": "c25683b5d36f8d1d55deb29058cd601ee23a8b1e3a9e67ded75d8d53f9fa8bef",
-              "downloads": 2918,
+              "downloads": 2954,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "c25683b5d36f8d1d55deb29058cd601ee23a8b1e3a9e67ded75d8d53f9fa8bef",
-          "downloads": 2918
+          "downloads": 2954
         }
       ],
       "screenshotURLs": [
@@ -372,8 +378,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": ""
@@ -421,13 +429,13 @@
               "fileType": "IPA",
               "size": 105090579,
               "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-              "downloads": 214,
+              "downloads": 218,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-          "downloads": 214
+          "downloads": 218
         }
       ],
       "screenshotURLs": [
@@ -473,8 +481,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: dayanch96/YTMusicUltimate. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by the mrdrvt99/YTMusicUltimate build fork. Shares com.google.ios.youtubemusic with MaxMusic: install one at a time."

@@ -44,7 +44,7 @@
               "fileType": "IPA",
               "size": 52332306,
               "sha256": null,
-              "downloads": 37740,
+              "downloads": 37746,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -109,7 +109,7 @@
               "installable": true
             }
           ],
-          "downloads": 37740
+          "downloads": 37746
         }
       ],
       "screenshotURLs": [],
@@ -135,8 +135,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from the developer's GitHub releases (2022.5 line, iOS 13.4+ per the Xcode project; also distributed via the SideStore Community Source). The same release ships a separate MAME4tvOS build which is intentionally not distributed here."

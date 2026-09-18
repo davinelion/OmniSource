@@ -45,13 +45,13 @@
               "fileType": "IPA",
               "size": 14731108,
               "sha256": "86405861d3a0c90876a90aa1ca668bee54f4555a56249fede4444be5382833e8",
-              "downloads": 3614,
+              "downloads": 3643,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "86405861d3a0c90876a90aa1ca668bee54f4555a56249fede4444be5382833e8",
-          "downloads": 3614
+          "downloads": 3643
         }
       ],
       "screenshotURLs": [
@@ -81,8 +81,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official releases from Aidoku/Aidoku. Sources are added by the user; the app ships none."
@@ -130,7 +132,7 @@
               "fileType": "IPA",
               "size": 167001383,
               "sha256": null,
-              "downloads": 17108,
+              "downloads": 17110,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -171,7 +173,7 @@
               "installable": true
             }
           ],
-          "downloads": 17108
+          "downloads": 17110
         }
       ],
       "screenshotURLs": [
@@ -202,8 +204,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official sideloaded build from BandarHL/BHTwitter. The release also ships a TrollStore .tipa, which OmniSource skips - only the -sideloaded.ipa is tracked. The bundled X app is whichever decrypted build the maintainer packaged for that tweak release. Shares com.atebits.Tweetie2 with NeoFreeBird: install one at a time."
@@ -251,13 +255,13 @@
               "fileType": "IPA",
               "size": 12824047,
               "sha256": "2f2e0bec9648b593fe95b55b21d3521b8ecc3b5889b0be53fe6cd22ecf76d845",
-              "downloads": 41361,
+              "downloads": 41555,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "2f2e0bec9648b593fe95b55b21d3521b8ecc3b5889b0be53fe6cd22ecf76d845",
-          "downloads": 41361
+          "downloads": 41555
         }
       ],
       "screenshotURLs": [
@@ -287,8 +291,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official releases from StikDebug/StikDebug. Needs a pairing file and the on-device VPN loop; JIT attachment requires iOS 17.4 or newer."
@@ -336,7 +342,7 @@
               "fileType": "APK",
               "size": 33482969,
               "sha256": "75871d7eaf689160a38a9e12e0ff6424a119f58a92bc955249fa7a396aa5f9f1",
-              "downloads": 1417,
+              "downloads": 1424,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -360,7 +366,7 @@
               "fileType": "APK",
               "size": 94393000,
               "sha256": "41545a363c1861db51e8dd274696301090689a880153dfdbaa984c519657b805",
-              "downloads": 35,
+              "downloads": 36,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -396,7 +402,7 @@
               "fileType": "IPA",
               "size": 14790504,
               "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
-              "downloads": 68,
+              "downloads": 70,
               "mimeType": "raw",
               "installable": true
             },
@@ -432,13 +438,13 @@
               "fileType": "other",
               "size": 23543364,
               "sha256": "42ae38660c879d5df2eec257078d83de1d7fc102634d2e33df75058a43c76f62",
-              "downloads": 50,
+              "downloads": 51,
               "mimeType": "raw",
               "installable": false
             }
           ],
           "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
-          "downloads": 68
+          "downloads": 70
         }
       ],
       "screenshotURLs": [],
@@ -464,8 +470,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "The release ships one unsigned iOS IPA next to Android APKs, flatpaks, a dmg and an msix; only mhabit-unsigned.ipa is distributed here, so the app must be re-signed by a client and cannot run as downloaded."

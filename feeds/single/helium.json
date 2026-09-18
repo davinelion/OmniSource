@@ -44,12 +44,12 @@
               "fileType": "IPA",
               "size": 4168281,
               "sha256": null,
-              "downloads": 27601,
+              "downloads": 27603,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 27601
+          "downloads": 27603
         }
       ],
       "screenshotURLs": [],
@@ -75,8 +75,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from leminlimez/Helium; install with TrollStore, or rename to .ipa if your client rejects the extension. On iOS 16+ you must enable developer mode. Unmaintained since v3.2.5 (February 2024)."

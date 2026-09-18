@@ -44,7 +44,7 @@
               "fileType": "APK",
               "size": 33482969,
               "sha256": "75871d7eaf689160a38a9e12e0ff6424a119f58a92bc955249fa7a396aa5f9f1",
-              "downloads": 1417,
+              "downloads": 1424,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -68,7 +68,7 @@
               "fileType": "APK",
               "size": 94393000,
               "sha256": "41545a363c1861db51e8dd274696301090689a880153dfdbaa984c519657b805",
-              "downloads": 35,
+              "downloads": 36,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -104,7 +104,7 @@
               "fileType": "IPA",
               "size": 14790504,
               "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
-              "downloads": 68,
+              "downloads": 70,
               "mimeType": "raw",
               "installable": true
             },
@@ -140,13 +140,13 @@
               "fileType": "other",
               "size": 23543364,
               "sha256": "42ae38660c879d5df2eec257078d83de1d7fc102634d2e33df75058a43c76f62",
-              "downloads": 50,
+              "downloads": 51,
               "mimeType": "raw",
               "installable": false
             }
           ],
           "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
-          "downloads": 68
+          "downloads": 70
         }
       ],
       "screenshotURLs": [],
@@ -172,8 +172,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "The release ships one unsigned iOS IPA next to Android APKs, flatpaks, a dmg and an msix; only mhabit-unsigned.ipa is distributed here, so the app must be re-signed by a client and cannot run as downloaded."

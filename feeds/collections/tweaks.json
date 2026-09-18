@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 167001383,
               "sha256": null,
-              "downloads": 17108,
+              "downloads": 17110,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -86,7 +86,7 @@
               "installable": true
             }
           ],
-          "downloads": 17108
+          "downloads": 17110
         }
       ],
       "screenshotURLs": [
@@ -117,8 +117,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official sideloaded build from BandarHL/BHTwitter. The release also ships a TrollStore .tipa, which OmniSource skips - only the -sideloaded.ipa is tracked. The bundled X app is whichever decrypted build the maintainer packaged for that tweak release. Shares com.atebits.Tweetie2 with NeoFreeBird: install one at a time."
@@ -166,13 +168,13 @@
               "fileType": "IPA",
               "size": 55704386,
               "sha256": "24c43c66579fcbf8735176b8465b58d20d0b92524e5b32ed64c60993d76ec8f5",
-              "downloads": 8855,
+              "downloads": 8870,
               "mimeType": "application/trollstore-ipa",
               "installable": true
             }
           ],
           "sha256": "24c43c66579fcbf8735176b8465b58d20d0b92524e5b32ed64c60993d76ec8f5",
-          "downloads": 8855
+          "downloads": 8870
         }
       ],
       "screenshotURLs": [],
@@ -202,8 +204,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official unsigned .tipa from roothide/Bootstrap, signed on install like any other sideloaded app. Supports iOS/iPadOS 15.0 – 17.0; requires the Kernel File Descriptor (kfd) exploit support present in the upstream build for your device. Do not combine with a full jailbreak on the same device. Upstream only publishes the TrollStore-named .tipa (the same container as an .ipa); clients that insist on the .ipa extension can rename the downloaded file before installing."
@@ -281,15 +285,17 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Tracks the ready-to-sideload Infuse Plus build from the IPA Vault source (the official dayanch96/InfusePlus repo publishes the tweak as .deb only). Current Infuse 8.5 builds require iOS 18 or newer; upstream also publishes an iOS 16-era 7.x build that is not tracked here. Shares com.firecore.infuse with a sideloaded stock Infuse - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-16"
         }
@@ -385,15 +391,17 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-15"
         }
@@ -434,13 +442,13 @@
               "fileType": "IPA",
               "size": 5474210,
               "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-              "downloads": 16051,
+              "downloads": 16071,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
-          "downloads": 16051
+          "downloads": 16071
         }
       ],
       "screenshotURLs": [],
@@ -466,8 +474,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Firmware support as documented by upstream: iOS/iPadOS 17.0 - 18.7.1 and 26.0 - 26.0.1. iOS 16.x is technically affected by the exploit but has no offsets, and 18.7.2+ / 26.1+ are unsupported. Does not work on M5 or A19 (Pro) devices; on M-series CPUs upstream suggests setting t1sz_boot to 0x11 under Modify Offsets. Early-stage tool (0.x releases), so keep expectations modest."
@@ -515,13 +525,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 266,
+              "downloads": 279,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 266
+          "downloads": 279
         }
       ],
       "screenshotURLs": [
@@ -567,8 +577,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Full MaxMusic build including YouMusicPiP; upstream also publishes a no-YouMusicPiP variant if PiP causes background-playback issues. Shares com.google.ios.youtubemusic with YTMusicUltimate: install one at a time."
@@ -628,13 +640,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 237,
+              "downloads": 239,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 237
+          "downloads": 239
         }
       ],
       "screenshotURLs": [
@@ -689,8 +701,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "The upstream repository removed its IPA release assets for legal reasons and now publishes builds on Telegram/TubeVault, so this entry tracks the GitHub mirror of the TubeVault build (MaxTube 1.4.2, YouTube 21.31.3, YTPlus 5.2.2), which publishes a SHA-256. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -738,7 +752,7 @@
               "fileType": "IPA",
               "size": 158452402,
               "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-              "downloads": 22684,
+              "downloads": 22688,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -750,13 +764,13 @@
               "fileType": "IPA",
               "size": 153108663,
               "sha256": "964d8e009113dea7c29924a746bebbf5f50c29d61c1fd8656a91a8a765231db0",
-              "downloads": 21872,
+              "downloads": 21873,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e5592371a53e770a0ac99242a44b4f6ea27a521058470491f18e1ed661acdaa2",
-          "downloads": 22684
+          "downloads": 22688
         }
       ],
       "screenshotURLs": [],
@@ -782,8 +796,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPAs from the project's GitHub releases (its own AltStore source mirrors them). The plain build is distributed here; the -noFixTwitterLogin variant on the same release is a troubleshooting fallback. Twitter 11.x builds require iOS 15+. Shares the Twitter bundle identifier with BHTwitter in this catalog — install one at a time."
@@ -831,7 +847,7 @@
               "fileType": "IPA",
               "size": 10806164,
               "sha256": null,
-              "downloads": 19536,
+              "downloads": 19538,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -860,7 +876,7 @@
               "installable": true
             }
           ],
-          "downloads": 19536
+          "downloads": 19538
         }
       ],
       "screenshotURLs": [],
@@ -890,8 +906,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA published by the developer on GitHub Releases. Exploit-based package manager for iOS 15.0–18.x; requires a kernel file descriptor (kfd) compatible device."
@@ -913,51 +931,21 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Discord.webp",
       "tintColor": "5865F2",
       "category": "social",
-      "version": "1.2.0",
-      "versionDate": "2026-09-17",
-      "versionDescription": "Discord 1.2.0 | RainTweak",
-      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-      "size": 107065935,
+      "version": "0.9.3",
+      "versionDate": "2026-06-19",
+      "versionDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
+      "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+      "size": 107515564,
       "versions": [
         {
-          "version": "1.2.0",
-          "date": "2026-09-17",
-          "localizedDescription": "Discord 1.2.0 | RainTweak",
-          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-          "size": 107065935,
+          "version": "0.9.3",
+          "date": "2026-06-19",
+          "localizedDescription": "Discord 0.9.3 | RainTweak\n\nRainTweak (Rain for Discord iOS) - themes, appearance tweaks and QoL fixes injected into the official Discord iOS app. Published as a ready-to-sideload IPA by the RainTweak project; official IPA comes from the Codeberg releases page with the GitHub mirror as a failover.",
+          "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v0.9.3/RainTweak.ipa",
+          "size": 107515564,
+          "sha256": "1ac871154ac2649158eea405f2c79e2e1d36ed7771c9b64748ce9f1c3f97703e",
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v1.2.0",
-          "source": "github",
-          "isPrerelease": false,
-          "isDraft": false,
-          "assets": [
-            {
-              "filename": "dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
-              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/dev.raincord.tweak_1.2.0_iphoneos-arm64.deb",
-              "platform": "linux",
-              "architecture": "arm64",
-              "fileType": "DEB",
-              "size": 41230,
-              "sha256": "73048c2d44806bdf34749f7743067724516098a12311fb51d1f5c37f302d697a",
-              "downloads": 43,
-              "mimeType": "application/vnd.debian.binary-package",
-              "installable": true
-            },
-            {
-              "filename": "RainTweak.ipa",
-              "downloadUrl": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa",
-              "platform": "ios",
-              "architecture": null,
-              "fileType": "IPA",
-              "size": 107065935,
-              "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
-              "downloads": 314,
-              "mimeType": "application/octet-stream",
-              "installable": true
-            }
-          ],
-          "sha256": "98225b128f99c0ac0ffe810ddcb781c73f01da4ce56dbf640a52cf84df0d6549",
-          "downloads": 314
+          "releaseUrl": "https://github.com/ra1ncord/RainTweak/releases/tag/v0.9.3"
         }
       ],
       "screenshotURLs": [],
@@ -1008,8 +996,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from the RainTweak project's own Codeberg releases (its GitHub mirror is tracked as a failover). Discord 343+ builds require iOS 16 or newer. Shares com.hammerandchisel.discord with any other sideloaded Discord build - install one at a time."
@@ -1018,7 +1008,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-09-17"
+          "lastUpdatedAt": "2026-06-19"
         }
       }
     },
@@ -1081,13 +1071,13 @@
               "fileType": "IPA",
               "size": 137114565,
               "sha256": "1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3",
-              "downloads": 5694,
+              "downloads": 5696,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "1e33615cc37168e84256fd6c487a77cf8b11fe187532daf7331b707b664c07e3",
-          "downloads": 5694
+          "downloads": 5696
         }
       ],
       "screenshotURLs": [],
@@ -1138,8 +1128,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from the project's GitHub releases. The current Reddit 2025.37 build targets iOS 15+ (older 11.x-era builds on the same release page still support iOS 14). Shares com.atebits.Tweetie2 with BHTwitter and NeoFreeBird in this catalog - install one at a time."
@@ -1242,15 +1234,17 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: faroukbmiled/RyukGram (publishes .deb/.dylib assets); this source serves the ready-to-sideload IPA build from the IPA Vault. Instagram 445.x builds require iOS 15.1 or newer. Shares com.burbn.instagram with iNKillerPlus in this catalog - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-16"
         }
@@ -1327,13 +1321,13 @@
               "fileType": "IPA",
               "size": 74865911,
               "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-              "downloads": 771,
+              "downloads": 773,
               "mimeType": "application/x-itunes-ipa",
               "installable": true
             }
           ],
           "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
-          "downloads": 771
+          "downloads": 773
         }
       ],
       "screenshotURLs": [
@@ -1361,8 +1355,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: NguyenASang/SNMessenger. The repository publishes the tweak as a .deb for jailbroken devices plus one ready-to-sideload IPA built from it; that IPA carries whichever Messenger build the maintainer patched for the release, so the version shown here is that build's. Uses the stock com.facebook.Messenger bundle id, so it REPLACES the App Store Messenger."
@@ -1410,13 +1406,13 @@
               "fileType": "IPA",
               "size": 6214108,
               "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-              "downloads": 24928,
+              "downloads": 24942,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-          "downloads": 24928
+          "downloads": 24942
         }
       ],
       "screenshotURLs": [],
@@ -1442,8 +1438,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official .tipa from the project's GitHub releases - a .tipa is byte-identical to an .ipa, so AltStore, SideStore, Feather and ESign install it after re-signing it with your certificate. The injection itself only works where TrollStore exists (upstream states iOS 14.0 - 17.0), so on newer firmware the app installs but cannot patch anything."
@@ -1544,15 +1542,17 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Resolved from the developer's own AltStore source at repo.ikghd.me."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-15"
         }
@@ -1605,13 +1605,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1187,
+              "downloads": 1192,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1187
+          "downloads": 1192
         }
       ],
       "screenshotURLs": [],
@@ -1637,8 +1637,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPAs from the fork's GitHub releases; the '-noplugins' variant on each release is intentionally not distributed. Replaces the App Store Twitch app (shares tv.twitch). The upstream tweak repo publishes only .deb packages for jailbroken devices; the sideload IPA comes from this maintained fork."
@@ -1686,13 +1688,13 @@
               "fileType": "IPA",
               "size": 129607592,
               "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-              "downloads": 290,
+              "downloads": 296,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-          "downloads": 290
+          "downloads": 296
         }
       ],
       "screenshotURLs": [],
@@ -1743,8 +1745,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Requires iOS 17.0+ (YouTube 21.34.3+). Served from mrdrvt99/YouProEXTRA tags youmod-ipa* (YouMod_21.37.4_2.0.0 extra-tweaks IPA). Catalog name is uPro Plus; slug remains youmod for stable feed URLs. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -1837,15 +1841,17 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "uYouEnhanced's official GitHub releases publish release notes only - no .ipa assets - so the IPA served here is a community build of the official release tag (YouTube 21.14.4 / uYou 3.0.5), mirrored on archive.org. Once a 'Build uYouEnhanced' run publishes an IPA in this repository (tag uyouenhanced-v*), the self-built artifact takes over automatically."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "downloadReachable": true,
+          "detail": "HTTP 302",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-08-22"
         }
@@ -1886,13 +1892,13 @@
               "fileType": "IPA",
               "size": 129769811,
               "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-              "downloads": 359,
+              "downloads": 372,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-          "downloads": 359
+          "downloads": 372
         }
       ],
       "screenshotURLs": [],
@@ -1943,8 +1949,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "YouPro is developed by alibusut (distributed via the developer's Telegram). This source serves a ready-to-sideload IPA built from the official YouPro tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -1992,13 +2000,13 @@
               "fileType": "IPA",
               "size": 129031075,
               "sha256": "37b4f9a4390c909205a0c93928c941587aa0994eddc99a29097d54ae6be477ba",
-              "downloads": 3488,
+              "downloads": 3519,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "37b4f9a4390c909205a0c93928c941587aa0994eddc99a29097d54ae6be477ba",
-          "downloads": 3488
+          "downloads": 3519
         },
         {
           "version": "20.21.6",
@@ -2020,13 +2028,13 @@
               "fileType": "IPA",
               "size": 115566999,
               "sha256": "9b97fdef5a336ef784621efa8f6afa8e30eff6dbe414a4924ef8020409628355",
-              "downloads": 73,
+              "downloads": 74,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "9b97fdef5a336ef784621efa8f6afa8e30eff6dbe414a4924ef8020409628355",
-          "downloads": 73
+          "downloads": 74
         },
         {
           "version": "19.20.2",
@@ -2048,13 +2056,13 @@
               "fileType": "IPA",
               "size": 106247621,
               "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
-              "downloads": 42,
+              "downloads": 43,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f77d827ff61a44fa9a995c5a2aaa0f97968aed7f254cba9d06761b23b70cf1b6",
-          "downloads": 42
+          "downloads": 43
         }
       ],
       "screenshotURLs": [
@@ -2109,8 +2117,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: dayanch96/YTLite ('YouTube Plus'). The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -2158,7 +2168,7 @@
               "fileType": "DEB",
               "size": 889130,
               "sha256": "3e3b0b5c703e78413786ceac9970b99c76c35a3cae797ac5daa06c37d4896111",
-              "downloads": 30,
+              "downloads": 31,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
@@ -2182,7 +2192,7 @@
               "fileType": "IPA",
               "size": 134780934,
               "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-              "downloads": 1662,
+              "downloads": 1680,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -2200,7 +2210,7 @@
             }
           ],
           "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-          "downloads": 1662
+          "downloads": 1680
         }
       ],
       "screenshotURLs": [
@@ -2255,8 +2265,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Tracks the official itzzace/ytkace releases. The published build follows the latest YouTube release and needs iOS 17 or newer; upstream also ships a separate iOS 16 IPA (YTKACE_<version>_YouTube_iOS16_<youtube>.ipa) on the same release page."
@@ -2304,13 +2316,13 @@
               "fileType": "IPA",
               "size": 143259058,
               "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-              "downloads": 213,
+              "downloads": 220,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-          "downloads": 213
+          "downloads": 220
         }
       ],
       "screenshotURLs": [
@@ -2365,8 +2377,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "The developer's own AltStore source (repo.ikghd.me) has been unreachable, so this feed resolves from the ready-to-sideload community build of the official tweak at mrdrvt99/YouProEXTRA. YouTube 21.34+ requires iOS 17. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
@@ -2414,13 +2428,13 @@
               "fileType": "IPA",
               "size": 105090579,
               "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-              "downloads": 214,
+              "downloads": 218,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
-          "downloads": 214
+          "downloads": 218
         }
       ],
       "screenshotURLs": [
@@ -2466,8 +2480,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official project: dayanch96/YTMusicUltimate. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by the mrdrvt99/YTMusicUltimate build fork. Shares com.google.ios.youtubemusic with MaxMusic: install one at a time."
