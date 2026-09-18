@@ -10,7 +10,8 @@
 #
 # Default mode is an offline rebuild from the committed feeds/state (the
 # check_reproducible gate below fails the run if anything else would change,
-# so this workflow can never clobber a concurrent sync.yml run). Feed syncing
+# so this workflow can never clobber a concurrent sync.yml run - and the
+# shared sync-publish concurrency group means it never even overlaps one). Feed syncing
 # itself stays sync.yml's job; dispatch with full_sync=true to force an
 # upstream sync here as well (then the standard generated set is committed
 # alongside the downloader artifacts).
@@ -21,15 +22,6 @@ on:
   schedule:
     # Daily, offset from sync.yml (0 */6) and publish.yml (30 6 * * *).
     - cron: "15 4 * * *"
-  push:
-    branches: [main]
-    paths:
-      - catalog.json
-      - assets/**
-      - scripts/omnisource.py
-      - scripts/build_ipa_downloader.py
-      - src/omnisource/**
-      - .github/workflows/ipa-downloader.yml
   workflow_dispatch:
     inputs:
       full_sync:
@@ -37,9 +29,16 @@ on:
         type: boolean
         default: false
 
-# Never let two downloader runs commit at once; never cancel mid-commit.
+# This workflow writes feeds/ipa-downloader.json + ipa-downloader/index.html,
+# and so does sync.yml (its pipeline regenerates the index on every run and
+# its commit step includes them). Both workflows therefore share sync.yml's
+# concurrency group: GitHub runs them one at a time, so their commits can
+# never race on the same generated files. (A same-line conflict here is
+# unavoidable when they overlap - both stamp generatedAt - and a rebase
+# cannot resolve it; serialization is the fix. Discovered when the two
+# workflows, triggered by one push, raced for the first time.)
 concurrency:
-  group: ipa-downloader
+  group: sync-publish
   cancel-in-progress: false
 
 permissions: {}
