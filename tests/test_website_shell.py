@@ -894,5 +894,65 @@ class TestWebsiteShell(unittest.TestCase):
                 self.assertIn(real, source, path.name + " lost the " + real.split("://")[0] + " scheme")
 
 
+class TestHomeWeightBudget(unittest.TestCase):
+    """F4 #6: the home page parses a bounded amount of JSON on first paint.
+
+    The complaint behind the budget was "about 2.4 MB of JSON, about 1.5 s on
+    the main thread" on a phone. This pins the *sum of the documents the home
+    page fetches for first paint* (the catalog plus the feeds declared
+    ``firstPaint: true`` in ``js/site.js``) to a ceiling, so a generator that
+    starts embedding whole histories or duplicated blobs into a first-paint
+    feed is caught here instead of by a slow phone. ``catalog.json`` is the
+    hand-maintained source of truth; ``apps.json`` is the merged feed - both
+    are read, so both count.
+    """
+
+    # 2.0 MiB ceiling. The measured 2026-09-18 baseline is ~1.5 MiB, leaving
+    # headroom for the catalog to grow without re-tuning, while still far
+    # below the 2.4 MiB that motivated the report.
+    BUDGET_BYTES = 2 * 1024 * 1024
+
+    def _first_paint_paths(self) -> list[str]:
+        site = (ROOT / "js" / "site.js").read_text(encoding="utf-8")
+        paths = ["apps.json", "catalog.json"]
+        for match in re.finditer(r"path:\s*'(feeds/[^']+\.json)'\s*,\s*firstPaint:\s*true", site):
+            paths.append(match.group(1))
+        for match in re.finditer(r"primary:\s*'([^']+\.json)'.*?firstPaint:\s*true", site):
+            if match.group(1) not in paths and (ROOT / match.group(1)).is_file():
+                paths.append(match.group(1))
+        # de-duplicate, preserve order
+        seen: list[str] = []
+        for path in paths:
+            if path not in seen:
+                seen.append(path)
+        return seen
+
+    def test_first_paint_documents_stay_under_the_budget(self) -> None:
+        total = 0
+        details = []
+        for path in self._first_paint_paths():
+            doc = ROOT / path
+            if not doc.is_file():
+                continue
+            size = doc.stat().st_size
+            total += size
+            details.append(f"{path}={size // 1024}KiB")
+        # Sanity: we must have found the catalog and at least one feed, or the
+        # regex above silently drifted and this test is measuring nothing.
+        self.assertGreaterEqual(len(details), 3, "expected catalog + apps + >=1 first-paint feed")
+        self.assertLess(
+            total,
+            self.BUDGET_BYTES,
+            f"home first-paint JSON is {total // 1024}KiB (budget {self.BUDGET_BYTES // 1024}KiB): {' '.join(details)}",
+        )
+
+    def test_apps_json_does_not_embed_per_app_history(self) -> None:
+        # The merged feed is a snapshot of the newest version per app; a
+        # generator that starts serialising full release histories here would
+        # blow the budget above, but this names the regression precisely.
+        doc = (ROOT / "feeds" / "apps.json").read_text(encoding="utf-8")
+        self.assertNotIn('"releaseHistory"', doc, "apps.json embeds release history")
+
+
 if __name__ == "__main__":
     unittest.main()

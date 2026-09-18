@@ -1,11 +1,11 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "d72d28da07e1",
+  "feedVersion": "6ef0755cf2e7",
   "data": {
     "schemaVersion": 1,
     "generatedAt": "2026-09-18",
-    "count": 130,
+    "count": 131,
     "formula": {
       "weights": {
         "recency": 0.4,
@@ -52,7 +52,7 @@
       },
       {
         "slug": "youmod",
-        "name": "uPro Plus",
+        "name": "YouMod",
         "category": "photo-video",
         "version": "21.37.4",
         "releaseDate": "2026-09-14",
@@ -568,7 +568,7 @@
       },
       {
         "slug": "youmod",
-        "name": "uPro Plus",
+        "name": "YouMod",
         "category": "photo-video",
         "version": "21.37.4",
         "releaseDate": "2026-09-14",
@@ -949,6 +949,23 @@
         "score": 0.78,
         "signals": {
           "recency": 0.95,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "uprovid",
+        "name": "uProVid",
+        "category": "photo-video",
+        "version": "21.37.4",
+        "releaseDate": "2026-09-14",
+        "score": 0.7733,
+        "signals": {
+          "recency": 0.9333,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0

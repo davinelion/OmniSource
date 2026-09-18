@@ -1,15 +1,20 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "d72d28da07e1",
+  "feedVersion": "6ef0755cf2e7",
   "data": {
     "id": "iamsmmh/OmniSource",
-    "source": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
+    "source": "iamsmmh/OmniSource (Tweak Factory)",
     "type": "github",
-    "homepage": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
-    "sourceURL": "https://archive.org/details/YouTubeRebornPlus_19.10.5-4.2.6",
-    "publisher": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org",
+    "homepage": "https://github.com/iamsmmh/OmniSource",
+    "sourceURL": "https://github.com/iamsmmh/OmniSource",
+    "publisher": "iamsmmh/OmniSource (Tweak Factory)",
     "apps": [
+      {
+        "slug": "uprovid",
+        "name": "uProVid",
+        "version": "21.37.4"
+      },
       {
         "slug": "uyouenhanced",
         "name": "uYouEnhanced",
@@ -19,16 +24,16 @@
     "slug": "iamsmmh-omnisource",
     "page": "/sources/iamsmmh-omnisource/",
     "appSlugs": [
+      "uprovid",
       "uyouenhanced"
     ],
-    "appCount": 1,
-    "verifiedApps": 0,
-    "healthScore": 68.0,
-    "score": 66.4,
+    "appCount": 2,
+    "verifiedApps": 1,
+    "healthScore": 72.5,
+    "score": 68.9,
     "status": "Maintained",
     "level": "AVERAGE",
     "updateFrequencyDays": null,
-    "lastUpdate": "2026-08-22",
-    "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/uyouenhanced.json"
+    "lastUpdate": "2026-09-14"
   }
 }

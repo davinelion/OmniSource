@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T15:10:01Z",
-  "appCount": 130,
-  "releases": 162,
+  "generatedAt": "2026-09-18T19:44:24Z",
+  "appCount": 131,
+  "releases": 163,
   "apps": {
     "3105": [
       {
@@ -1600,6 +1600,18 @@
         "localizedDescription": "unc0ver 5.2.0 | unc0ver_5.2.0\n\nLast updated at: 06/09/2020\n\n06/09/2020 - v5.2.0 was released for production with the following changes:\n\n### ⚠️ Support development with https://phonerebel.com ⚠️\n\n- Enable iOS 13.5.5~b1 support\n- Fix a logic bug in disabling auto updates\n- Update bundled Cydia to fix crashes on iOS 13.5 with Hardware Keyboard enabled",
         "status": "current",
         "firstSeen": "2026-09-12T17:13:52Z"
+      }
+    ],
+    "uprovid": [
+      {
+        "version": "21.37.4",
+        "date": "2026-09-14",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+        "size": 131694546,
+        "sha256": "",
+        "localizedDescription": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+        "status": "current",
+        "firstSeen": "2026-09-18T19:44:24Z"
       }
     ],
     "utm": [

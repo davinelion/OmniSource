@@ -66,6 +66,19 @@ reloading and jumping back to the first section. `js/site.js` now ends the
 re-pin on any scroll it did not cause, and a new hash re-arms it. Both
 directions are pinned by `tests/js/scroll_pin.cjs`.
 
+**Updated 2026-09-18 (branch `arena/01a0b522-omnisource`).** Item **#6** is now
+*budgeted*: `TestHomeWeightBudget` (`tests/test_website_shell.py`) pins the
+home page's first-paint JSON — the catalog, `apps.json` and every feed
+declared `firstPaint: true` in `js/site.js` — to a 2 MiB ceiling (measured
+baseline this day: ~1.47 MiB; the report's 2.4 MB included idle/lazy feeds).
+The report's laziness suggestions (one home document, defer
+`related`/`reputation`/`verification`) remain follow-ups. Item **#7** is
+now *reviewed rather than open*: screenshots and icons must come from
+developer-owned hosting, enforced by the provenance rule in
+`src/omnisource/validation.py` plus the dated allowlist
+`data/screenshot_hosts.json` (the 15 standing warnings are resolved,
+`validate.py` reports 0 warnings).
+
 ## 1. Mobile drawer scrolls out of view (High)
 
 **Symptom.** On a phone (< 1180 px), open the ☰ menu, then scroll (trackpad, wheel, or a

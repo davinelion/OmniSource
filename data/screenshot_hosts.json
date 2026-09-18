@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "$schema": "../schemas/screenshot-hosts.schema.json",
+  "description": "Confirmed screenshot hosts: the developer's own hosting for an app whose upstream host is elsewhere (the validate.py advisory 'screenshot host is not the app's upstream host - confirm it is the developer's own hosting'). A host here has been reviewed like a source_policy.json rule: the decision is recorded, dated and referenced, and validate.py no longer warns about it. Adding a host is a reviewed decision, not an escape hatch - everything not listed still warns.",
+  "hosts": {
+    "repo.ikghd.me": {
+      "reason": "iKarwan's own depiction server for his killerplus-family tweaks; the YTKillerPlus / InkilkerPlus / TTKillerPlus screenshots live in its /depictions/me.ikghd.ytkplus/ tree, published from his tweak repositories.",
+      "decidedAt": "2026-09-18",
+      "references": [
+        "https://repo.ikghd.me/depictions/me.ikghd.ytkplus/screenshots/1.PNG",
+        "https://github.com/iKarwan/YTKillerPlus"
+      ]
+    },
+    "apps.sidestore.io": {
+      "reason": "SideStore's own project domain; the SideStore screenshots are published there by the project, which ships its source from github.com/julionc/SideStore.",
+      "decidedAt": "2026-09-18",
+      "references": [
+        "https://www.sidestore.io",
+        "https://github.com/julionc/SideStore"
+      ]
+    },
+    "aidoku.app": {
+      "reason": "Aidoku's own project site; the Aidoku screenshots are published on the project's domain, which ships its source from github.com/Aidoku/Aidoku.",
+      "decidedAt": "2026-09-18",
+      "references": [
+        "https://aidoku.app",
+        "https://github.com/Aidoku/Aidoku"
+      ]
+    }
+  }
+}

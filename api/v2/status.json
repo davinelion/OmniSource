@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "generatedAt": "2026-09-18",
   "totals": {
-    "sources": 130,
+    "sources": 131,
     "healthy": 87,
     "degraded": 43,
     "unavailable": 0,
-    "unknown": 0
+    "unknown": 1
   },
   "pipeline": {
     "status": "ok",
     "lastBuild": "2026-09-18",
-    "appsTotal": 130,
+    "appsTotal": 131,
     "appsHealthy": 87,
     "appsFailing": 0
   },
@@ -52,7 +52,7 @@
     },
     {
       "provider": "github",
-      "apps": 111,
+      "apps": 112,
       "healthy": 69,
       "unavailable": 0,
       "lastResolvedFrom": {
@@ -112,13 +112,13 @@
         "trollboard-reborn": "github:haxi0/TrollBoard-Reborn",
         "twitchadblock": "github:gunnerkidBT/TwitchAdBlock",
         "unc0ver": "github:pwn20wndstuff/Undecimus",
-        "youmod": "github:mrdrvt99/YouProEXTRA",
         "uyouenhanced": "manual",
         "vcmi": "github:vcmi/vcmi",
         "vibecontainers": "github:GenericCoding/VibeContainers",
         "voyager": "github:aeharding/voyager",
         "wdbfontoverwrite": "github:ginsudev/WDBFontOverwrite",
         "winston": "github:lo-cafe/winston",
+        "youmod": "github:mrdrvt99/YouProEXTRA",
         "youpro": "github:mrdrvt99/YouProEXTRA",
         "ytlite": "github:mrdrvt99/YouProEXTRA",
         "ytkace": "github:itzzace/ytkace",
@@ -164,6 +164,7 @@
         "thunder": "github:thunder-app/thunder",
         "trollfools": "github:Lessica/TrollFools",
         "trollinstallerx": "github:alfiecg24/TrollInstallerX",
+        "uprovid": "manual",
         "utm": "github:utmapp/UTM",
         "xenios": "github:xenios-jp/XeniOS",
         "yattee": "github:yattee/yattee"
@@ -182,8 +183,8 @@
   "deployment": {
     "platform": "GitHub Pages (static)",
     "status": "ok",
-    "reachable": 130,
-    "total": 130
+    "reachable": 131,
+    "total": 131
   },
   "sources": [
     {
@@ -7735,108 +7736,6 @@
       ]
     },
     {
-      "id": "youmod",
-      "app": "youmod",
-      "name": "uPro Plus",
-      "source": "mrdrvt99/YouProEXTRA",
-      "sourceURL": "https://github.com/mrdrvt99/YouProEXTRA",
-      "type": "github",
-      "status": "healthy",
-      "reachable": true,
-      "latency": 119,
-      "latencyMs": 119,
-      "checkedAt": "2026-09-07",
-      "lastUpdate": "2026-09-14",
-      "valid": true,
-      "detail": "HTTP 302",
-      "history": [
-        {
-          "at": "2026-09-17",
-          "reachable": true,
-          "latencyMs": 315,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 106,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 100,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 101,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 106,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 203,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 225,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 371,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 410,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 267,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 140,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 213,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 95,
-          "detail": "HTTP 302"
-        },
-        {
-          "at": "2026-09-18",
-          "reachable": true,
-          "latencyMs": 119,
-          "detail": "HTTP 302"
-        }
-      ]
-    },
-    {
       "id": "uyouenhanced",
       "app": "uyouenhanced",
       "name": "uYouEnhanced",
@@ -8444,6 +8343,108 @@
           "at": "2026-09-18",
           "reachable": true,
           "latencyMs": 102,
+          "detail": "HTTP 302"
+        }
+      ]
+    },
+    {
+      "id": "youmod",
+      "app": "youmod",
+      "name": "YouMod",
+      "source": "mrdrvt99/YouProEXTRA",
+      "sourceURL": "https://github.com/mrdrvt99/YouProEXTRA",
+      "type": "github",
+      "status": "healthy",
+      "reachable": true,
+      "latency": 119,
+      "latencyMs": 119,
+      "checkedAt": "2026-09-07",
+      "lastUpdate": "2026-09-14",
+      "valid": true,
+      "detail": "HTTP 302",
+      "history": [
+        {
+          "at": "2026-09-17",
+          "reachable": true,
+          "latencyMs": 315,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 106,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 100,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 101,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 106,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 203,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 225,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 371,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 410,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 267,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 140,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 213,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 95,
+          "detail": "HTTP 302"
+        },
+        {
+          "at": "2026-09-18",
+          "reachable": true,
+          "latencyMs": 119,
           "detail": "HTTP 302"
         }
       ]
@@ -13139,6 +13140,23 @@
           "detail": "HTTP 302"
         }
       ]
+    },
+    {
+      "id": "uprovid",
+      "app": "uprovid",
+      "name": "uProVid",
+      "source": "iamsmmh/OmniSource (Tweak Factory)",
+      "sourceURL": "https://github.com/iamsmmh/OmniSource",
+      "type": "github",
+      "status": "unknown",
+      "reachable": null,
+      "latency": null,
+      "latencyMs": null,
+      "checkedAt": "",
+      "lastUpdate": "2026-09-14",
+      "valid": true,
+      "detail": "",
+      "history": []
     },
     {
       "id": "utm",

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "$schema": "../schemas/tweak-builds.schema.json",
-  "description": "Tweak Factory registry: .deb tweaks the scheduled factory may collect from their official upstream, inject into an operator-supplied decrypted base app, and publish as provenance-tagged OmniSource releases. Hand-reviewed like catalog.json; the pipeline never writes this file. A build only runs when its base app (baseApps) is configured — the factory never pulls base IPAs from public decrypted-app stores (blocked by data/source_policy.json).",
+  "description": "Tweak Factory registry: .deb tweaks the scheduled factory may collect from their official upstream, inject into an operator-supplied decrypted base app, and publish as provenance-tagged OmniSource releases. Hand-reviewed like catalog.json; the pipeline never writes this file (the operator's `tweak_factory.py build` helper may, on request). A build only runs when its base app (baseApps) is configured — the factory never pulls base IPAs from public decrypted-app stores (blocked by data/source_policy.json).",
   "baseApps": {
     "youtube": {
       "description": "Decrypted YouTube base app shared by every YouTube tweak injection. Configure ONE of the three sources before enabling builds: (1) 'release' — your own private/public dumps repo where each release tag starts with tagPrefix and holds the decrypted .ipa; (2) 'variable' — a repository variable named envVar holding a direct https URL; (3) 'url' — a fixed https URL. The repo below is the recommended layout and does not exist yet: create it and push your dumps, or repoint the source.",
@@ -11,6 +11,24 @@
       "assetGlob": "*.ipa"
     }
   },
+  "tweaks": [
+    {
+      "id": "youmod",
+      "name": "YouMod",
+      "repo": "Tonwalter888/YouMod",
+      "assetRegex": "^dev\\.water888\\.youmod_[^/]+_iphoneos-(arm64|arm64e|arm)\\.deb$",
+      "archPreference": ["arm64", "arm64e", "arm"],
+      "description": "The uPro line: background playback, ad-free, downloads, 120 Hz, native 4K on A16+"
+    },
+    {
+      "id": "ytlite",
+      "name": "YTLite",
+      "repo": "Dayanch96/YTLite",
+      "assetRegex": "^com\\.dvntm\\.ytlite_[^/]+_iphoneos-(arm64|arm64e|arm)\\.deb$",
+      "archPreference": ["arm64", "arm64e", "arm"],
+      "description": "Lightweight YouTube tweak: no ads, PiP, downloads"
+    }
+  ],
   "builds": [
     {
       "slug": "ytlite",
@@ -28,6 +46,25 @@
       "appName": "",
       "publish": {
         "tagPrefix": "tweak-build/ytlite",
+        "prerelease": true
+      }
+    },
+    {
+      "slug": "uprovid",
+      "name": "uProVid",
+      "enabled": true,
+      "catalogApp": "uprovid",
+      "deb": {
+        "source": "github-release",
+        "repo": "Tonwalter888/YouMod",
+        "assetRegex": "^dev\\.water888\\.youmod_[^/]+_iphoneos-(arm64|arm64e|arm)\\.deb$",
+        "archPreference": ["arm64", "arm64e", "arm"]
+      },
+      "base": "youtube",
+      "bundleId": "",
+      "appName": "uProVid",
+      "publish": {
+        "tagPrefix": "tweak-build/uprovid",
         "prerelease": true
       }
     }

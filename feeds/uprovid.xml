@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>uProVid — Releases</title>
+    <link>https://iamsmmh.github.io/OmniSource/feeds/uprovid.json</link>
+    <description>Release feed for uProVid within OmniSource, curated from official upstream sources.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/uprovid.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>uProVid v21.37.4</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/uprovid.json</link>
+      <guid isPermaLink="false">uprovid-21.37.4</guid>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.
+
+Build yours: python3 scripts/tweak_factory.py build]]></description>
+      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa" length="0" type="application/octet-stream" />
+    </item>
+  </channel>
+</rss>

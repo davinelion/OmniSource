@@ -39,6 +39,22 @@
         ]
       }
     },
+    "tweaks": {
+      "type": "array",
+      "description": "Catalog of selectable tweaks for the operator's `tweak_factory.py build` picker and for `extraDebs` id references. Every entry must resolve from the tweak's own official GitHub releases; anything else enters a build through an `extraDebs` URL entry.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "repo", "assetRegex"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+          "name": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._+-]*$" },
+          "repo": { "type": "string", "pattern": "^[A-Za-z0-9._-]+/[A-Za-z0-9._-]+$" },
+          "assetRegex": { "type": "string" },
+          "archPreference": { "type": "array", "items": { "enum": ["arm64", "arm64e", "arm"] } },
+          "description": { "type": "string" }
+        }
+      }
+    },
     "builds": {
       "type": "array",
       "items": {
@@ -63,6 +79,36 @@
           "base": { "type": "string", "description": "Key into baseApps." },
           "bundleId": { "type": "string" },
           "appName": { "type": "string" },
+          "extraDebs": {
+            "type": "array",
+            "description": "Additional tweaks co-injected into the same IPA (one Cyan pass, all debs). Entries are either an id string / {\"id\"} referencing the tweaks catalog (optionally pinned with \"version\"), or an operator-supplied {\"name\", \"url\"} .deb. `build-tweak.yml` receives them newline-joined as extra_deb_urls.",
+            "items": {
+              "oneOf": [
+                { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+                {
+                  "type": "object",
+                  "oneOf": [
+                    {
+                      "required": ["id"],
+                      "not": { "required": ["url"] },
+                      "properties": {
+                        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+                        "version": { "type": "string" }
+                      }
+                    },
+                    {
+                      "required": ["name", "url"],
+                      "properties": {
+                        "name": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9 ._+-]*$" },
+                        "url": { "type": "string", "pattern": "^https://" },
+                        "version": { "type": "string" }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
           "publish": {
             "type": "object",
             "properties": {

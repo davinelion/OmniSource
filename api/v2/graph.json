@@ -1,8 +1,8 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-18",
-  "count": 353,
-  "edgeCount": 1051,
+  "count": 356,
+  "edgeCount": 1066,
   "nodes": [
     {
       "id": "app:spotiflac",
@@ -23,6 +23,26 @@
       "type": "source",
       "label": "spotiflacapp/SpotiFLAC-Mobile",
       "url": "https://github.com/spotiflacapp/SpotiFLAC-Mobile"
+    },
+    {
+      "id": "app:uprovid",
+      "type": "app",
+      "label": "uProVid",
+      "slug": "uprovid",
+      "bundleId": "com.google.ios.youtube",
+      "category": "photo-video",
+      "version": "21.37.4"
+    },
+    {
+      "id": "dev:iamsmmh",
+      "type": "developer",
+      "label": "iamsmmh"
+    },
+    {
+      "id": "source:iamsmmhomnisourcetweakfactory",
+      "type": "source",
+      "label": "iamsmmh/OmniSource (Tweak Factory)",
+      "url": "https://github.com/iamsmmh/OmniSource"
     },
     {
       "id": "app:uyouenhanced",
@@ -115,7 +135,7 @@
     {
       "id": "app:youmod",
       "type": "app",
-      "label": "uPro Plus",
+      "label": "YouMod",
       "slug": "youmod",
       "bundleId": "com.google.ios.youtube",
       "category": "photo-video",
@@ -2415,6 +2435,16 @@
       "type": "source"
     },
     {
+      "source": "app:uprovid",
+      "target": "dev:iamsmmh",
+      "type": "developer"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "source:iamsmmhomnisourcetweakfactory",
+      "type": "source"
+    },
+    {
       "source": "app:uyouenhanced",
       "target": "dev:arichornlover",
       "type": "developer"
@@ -3705,6 +3735,48 @@
       "type": "source"
     },
     {
+      "source": "app:uprovid",
+      "target": "app:uyouenhanced",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:ytlite",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:youpro",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:ytkp",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:ytkace",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:youmod",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:maxtube",
+      "type": "bundle",
+      "bundleId": "com.google.ios.youtube"
+    },
+    {
       "source": "app:uyouenhanced",
       "target": "app:ytlite",
       "type": "bundle",
@@ -3909,6 +3981,36 @@
       "type": "related"
     },
     {
+      "source": "app:uprovid",
+      "target": "app:ytkp",
+      "type": "related"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:ytkace",
+      "type": "related"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:ytlite",
+      "type": "related"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:youpro",
+      "type": "related"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:youmod",
+      "type": "related"
+    },
+    {
+      "source": "app:uprovid",
+      "target": "app:uyouenhanced",
+      "type": "related"
+    },
+    {
       "source": "app:uyouenhanced",
       "target": "app:ytkp",
       "type": "related"
@@ -3935,7 +4037,7 @@
     },
     {
       "source": "app:uyouenhanced",
-      "target": "app:maxtube",
+      "target": "app:uprovid",
       "type": "related"
     },
     {
@@ -3955,17 +4057,17 @@
     },
     {
       "source": "app:ytlite",
-      "target": "app:uyouenhanced",
-      "type": "related"
-    },
-    {
-      "source": "app:ytlite",
       "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:ytlite",
-      "target": "app:maxtube",
+      "target": "app:uyouenhanced",
+      "type": "related"
+    },
+    {
+      "source": "app:ytlite",
+      "target": "app:uprovid",
       "type": "related"
     },
     {
@@ -3985,17 +4087,17 @@
     },
     {
       "source": "app:youpro",
-      "target": "app:uyouenhanced",
-      "type": "related"
-    },
-    {
-      "source": "app:youpro",
       "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:youpro",
-      "target": "app:maxtube",
+      "target": "app:uyouenhanced",
+      "type": "related"
+    },
+    {
+      "source": "app:youpro",
+      "target": "app:uprovid",
       "type": "related"
     },
     {
@@ -4015,17 +4117,17 @@
     },
     {
       "source": "app:ytkp",
-      "target": "app:uyouenhanced",
-      "type": "related"
-    },
-    {
-      "source": "app:ytkp",
       "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:ytkp",
-      "target": "app:maxtube",
+      "target": "app:uyouenhanced",
+      "type": "related"
+    },
+    {
+      "source": "app:ytkp",
+      "target": "app:uprovid",
       "type": "related"
     },
     {
@@ -4045,17 +4147,17 @@
     },
     {
       "source": "app:ytkace",
-      "target": "app:uyouenhanced",
-      "type": "related"
-    },
-    {
-      "source": "app:ytkace",
       "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:ytkace",
-      "target": "app:maxtube",
+      "target": "app:uyouenhanced",
+      "type": "related"
+    },
+    {
+      "source": "app:ytkace",
+      "target": "app:uprovid",
       "type": "related"
     },
     {
@@ -4085,7 +4187,7 @@
     },
     {
       "source": "app:youmod",
-      "target": "app:maxtube",
+      "target": "app:uprovid",
       "type": "related"
     },
     {
@@ -4110,12 +4212,12 @@
     },
     {
       "source": "app:maxtube",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:maxtube",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -4595,12 +4697,12 @@
     },
     {
       "source": "app:yattee",
-      "target": "app:uyouenhanced",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:yattee",
-      "target": "app:youmod",
+      "target": "app:uyouenhanced",
       "type": "related"
     },
     {
@@ -4625,12 +4727,12 @@
     },
     {
       "source": "app:streamyfin",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:streamyfin",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -5235,12 +5337,12 @@
     },
     {
       "source": "app:fladder",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:fladder",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -5295,12 +5397,12 @@
     },
     {
       "source": "app:sora",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:sora",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -5355,12 +5457,12 @@
     },
     {
       "source": "app:infuseplus",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:infuseplus",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -6395,12 +6497,12 @@
     },
     {
       "source": "app:synkplay",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:synkplay",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -6485,12 +6587,12 @@
     },
     {
       "source": "app:animegen",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:animegen",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -6545,12 +6647,12 @@
     },
     {
       "source": "app:playtorrio",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:playtorrio",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -6605,12 +6707,12 @@
     },
     {
       "source": "app:nebuloiptv",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:nebuloiptv",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -6925,12 +7027,12 @@
     },
     {
       "source": "app:pocketposter",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:pocketposter",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -7165,12 +7267,12 @@
     },
     {
       "source": "app:cartube",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:cartube",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -7410,12 +7512,12 @@
     },
     {
       "source": "app:nuvio",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:nuvio",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {
@@ -7560,12 +7662,12 @@
     },
     {
       "source": "app:cercube",
-      "target": "app:yattee",
+      "target": "app:youmod",
       "type": "related"
     },
     {
       "source": "app:cercube",
-      "target": "app:uyouenhanced",
+      "target": "app:yattee",
       "type": "related"
     },
     {

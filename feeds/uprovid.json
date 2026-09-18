@@ -1,0 +1,103 @@
+{
+  "name": "OmniSource - uProVid",
+  "identifier": "com.iamsmmh.omnisource.uprovid",
+  "apiVersion": "v2",
+  "subtitle": "Your YouTube, your tweaks: base IPA + the mods you pick",
+  "description": "Standalone distribution feed for uProVid, curated within OmniSource.",
+  "iconURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.webp",
+  "bannerURL": "https://iamsmmh.github.io/OmniSource/assets/OmniSource.png",
+  "tintColor": "5B5BD6",
+  "website": "https://iamsmmh.github.io/OmniSource/",
+  "sourceURL": "https://iamsmmh.github.io/OmniSource/uprovid.json",
+  "apps": [
+    {
+      "name": "uProVid",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "iamsmmh",
+      "subtitle": "Your YouTube, your tweaks: base IPA + the mods you pick",
+      "localizedDescription": "uProVid is a build-it-yourself YouTube mod. Bring your own decrypted YouTube base IPA (local file or link), pick the tweaks you want - YouMod and YTLite resolve from their official upstream releases, anything else by direct .deb link - set the app name, bundle ID and version, and the Tweak Factory injects the selection with Cyan and publishes the result back to this source as a provenance-tagged release with digests. Until the first uProVid factory build ships (tag tweak-build/uprovid/* in this repository), the listing serves ASJTube 1.2.1 on YouTube 21.37.4 - the same publisher's ready-to-sideload YouTube enhancer with the YouPip / YouQuality / dislikes/privacy tweak stack - as a stand-in. Build one: python3 scripts/tweak_factory.py build (docs/TWEAK-FACTORY.md). Requires iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time.",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "tintColor": "FF0000",
+      "category": "photo-video",
+      "version": "21.37.4",
+      "versionDate": "2026-09-14",
+      "versionDescription": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+      "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+      "size": 131694546,
+      "versions": [
+        {
+          "version": "21.37.4",
+          "date": "2026-09-14",
+          "localizedDescription": "Stand-in until the first uProVid factory release ships: ASJTube 1.2.1 by asjrx on YouTube 21.37.4 (ready-to-sideload build served by mrdrvt99/YouProEXTRA), with YouPip, YTABConfig, YouQuality, YouChooseQuality, YouGetCaptions, YTHoldForSpeed, YTNativeShare, YTweaks, VolumeBoostYT, Return YouTube Dislikes, DontEatMyContent, PleaseDontStopTheMusic and Gonerino. Once this repository publishes a tweak-build/uprovid/* release, this listing serves your own build instead.\n\nBuild yours: python3 scripts/tweak_factory.py build",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ASJTube-ipa3/ASJTube_21.37.4_1.2.1.ipa",
+          "size": 131694546,
+          "minOSVersion": "17.0"
+        }
+      ],
+      "screenshotURLs": [],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.declared-age-range",
+          "com.apple.developer.storekit.request-data",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.group-session",
+          "keychain-access-groups",
+          "com.apple.developer.networking.multicast",
+          "aps-environment",
+          "com.apple.developer.siri",
+          "com.apple.developer.networking.wifi-info"
+        ],
+        "privacy": {
+          "NSCameraUsageDescription": "Used to record and upload videos to YouTube.",
+          "NSMicrophoneUsageDescription": "Used to record audio for videos.",
+          "NSPhotoLibraryUsageDescription": "Used to upload photos and videos from your library.",
+          "NSPhotoLibraryAddUsageDescription": "Used to save videos to your photo library.",
+          "NSAppleMusicUsageDescription": "Allows access to Apple Music for background playback and media features.",
+          "NSBluetoothPeripheralUsageDescription": "Used for connecting to Bluetooth devices.",
+          "NSLocalNetworkUsageDescription": "Used to discover and connect to devices on your local network."
+        }
+      },
+      "omnisource": {
+        "slug": "uprovid",
+        "status": "manual",
+        "featured": false,
+        "upstreamURL": "https://github.com/iamsmmh/OmniSource",
+        "sourceURL": "https://github.com/iamsmmh/OmniSource",
+        "verification": {
+          "method": "github-release",
+          "publisher": "iamsmmh/OmniSource (Tweak Factory)",
+          "codeSigned": false,
+          "checksumPublished": false
+        },
+        "compatibility": {
+          "minOSVersion": "17.0",
+          "maxOSVersion": null,
+          "devices": [
+            "iphone",
+            "ipad"
+          ],
+          "clients": [
+            "altstore",
+            "sidestore",
+            "flarestore",
+            "feather",
+            "esign",
+            "ksign",
+            "livecontainer"
+          ],
+          "notes": "Self-built lane: the base IPA is operator-supplied (a decrypted YouTube dump) and the tweaks are collected from their official upstreams by the Tweak Factory, then injected with Cyan. Factory builds publish under tag tweak-build/uprovid/* in this repository and take over automatically; until then the manualRelease stand-in below is served. Bases of YouTube 21.34.3+ require iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
+        },
+        "health": {
+          "downloadReachable": true,
+          "detail": "not probed",
+          "statusSince": "2026-09-14",
+          "lastUpdatedAt": "2026-09-14"
+        }
+      }
+    }
+  ],
+  "news": []
+}

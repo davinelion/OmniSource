@@ -2,11 +2,11 @@
   "generatedAt": "2026-09-18",
   "lastEventAt": "2026-09-18",
   "totals": {
-    "apps": 130,
-    "reachable": 130,
+    "apps": 131,
+    "reachable": 131,
     "unreachable": 0,
     "featured": 7,
-    "healthy": 113,
+    "healthy": 114,
     "warning": 17,
     "critical": 0
   },
@@ -30,6 +30,28 @@
         "updateFrequency": 0.5,
         "releaseAvailability": 1.0,
         "metadataCompleteness": 0.75,
+        "sourceReliability": 0.5
+      }
+    },
+    {
+      "slug": "uprovid",
+      "name": "uProVid",
+      "status": "manual",
+      "version": "21.37.4",
+      "updatedAt": "2026-09-14",
+      "sizeBytes": 131694546,
+      "downloadReachable": true,
+      "detail": "not probed",
+      "statusSince": "2026-09-14",
+      "updatedDaysAgo": 4,
+      "stale": false,
+      "healthScore": 77,
+      "healthStatus": "healthy",
+      "scoreBreakdown": {
+        "downloadSuccess": 1.0,
+        "updateFrequency": 0.5,
+        "releaseAvailability": 1.0,
+        "metadataCompleteness": 0.625,
         "sourceReliability": 0.5
       }
     },
@@ -145,7 +167,7 @@
     },
     {
       "slug": "youmod",
-      "name": "uPro Plus",
+      "name": "YouMod",
       "status": "stable",
       "version": "21.37.4",
       "updatedAt": "2026-09-14",

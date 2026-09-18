@@ -1,21 +1,29 @@
 {
   "generatedAt": "2026-09-18",
-  "feedVersion": "4ecaa2846e9a",
+  "feedVersion": "363aded817bc",
   "apps": {
-    "total": 130,
-    "reachable": 130,
+    "total": 131,
+    "reachable": 131,
     "unreachable": 0,
-    "verified": 129
+    "verified": 130
   },
   "sync": {
-    "synced": 130,
+    "synced": 1,
     "incrementalHits": 0,
-    "updated": 0,
+    "updated": 1,
     "failed": 0,
-    "apiRequests": 131
+    "apiRequests": 1
   },
   "unreachable": [],
-  "updates": [],
+  "updates": [
+    {
+      "slug": "uprovid",
+      "name": "uProVid",
+      "previousVersion": null,
+      "version": "21.37.4",
+      "kind": "new"
+    }
+  ],
   "errors": [],
   "translations": {
     "ar": 100,
