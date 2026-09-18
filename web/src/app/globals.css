@@ -4,11 +4,56 @@
   color-scheme: light dark;
 }
 
+html {
+  /* A fast downward fling at the top of the page must not hand the gesture to
+     the browser's pull-to-refresh (which reloads the document); `contain` keeps
+     it inside the page. The reserved gutter keeps the layout width identical
+     when the body leaves the flow for the mobile drawer. */
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Long feed URLs, bundle identifiers and hashes wrap instead of widening the
+     page. Nothing in this app should ever produce a horizontal scrollbar. */
+  overflow-wrap: break-word;
+}
+
+/* Mobile drawer scroll lock: pinning the body out of flow at its current
+   offset is the only technique that stops iOS touch scrolling without breaking
+   `position: sticky` on the header. Applied by components/Nav.tsx only while
+   the drawer is open; the offset is restored on close. */
+body.nav-lock {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* One motion system: short, transform/opacity based, and switched off for
+   readers who ask for reduced motion (the utilities above already use
+   `motion-reduce:` variants; this is the global backstop). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .prose-omni p {
   margin-bottom: 0.75rem;
   line-height: 1.7;
+}
+
+/* Code and identifiers can be long; keep them inside their box. */
+code,
+kbd,
+pre {
+  overflow-wrap: anywhere;
 }
