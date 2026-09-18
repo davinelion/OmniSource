@@ -1,30 +1,68 @@
 {
   "generatedAt": "2026-09-18",
-  "feedVersion": "d4cb70eec0d0",
+  "feedVersion": "d1610614b2c6",
   "apps": {
     "total": 130,
-    "reachable": 130,
-    "unreachable": 0,
-    "verified": 129
+    "reachable": 111,
+    "unreachable": 19,
+    "verified": 111
   },
   "sync": {
-    "synced": 130,
-    "incrementalHits": 121,
+    "synced": 113,
+    "incrementalHits": 0,
     "updated": 1,
-    "failed": 0,
-    "apiRequests": 116
+    "failed": 17,
+    "apiRequests": 181
   },
-  "unreachable": [],
+  "unreachable": [
+    "cercube",
+    "glow",
+    "ime",
+    "infuseplus",
+    "inkillerplus",
+    "iqface",
+    "messenger-flow",
+    "msgplusx",
+    "nexasc",
+    "ryukgram",
+    "ryukgram-ig410",
+    "ryukgram-sidebyside",
+    "sparkle",
+    "swiftgram",
+    "telegram-mxgram",
+    "threadsaver",
+    "ttkillerplus",
+    "turrit-mxgram",
+    "uyouenhanced"
+  ],
   "updates": [
     {
-      "slug": "manicemu",
-      "name": "Manic EMU",
-      "previousVersion": "2.0.0",
-      "version": "2.0.1",
+      "slug": "escapeos",
+      "name": "EscapeOS",
+      "previousVersion": "0.1.5",
+      "version": "0.1.6",
       "kind": "updated"
     }
   ],
-  "errors": [],
+  "errors": [
+    "inkillerplus: all sources failed: altstore:https://repo.ikghd.me/repo.json error: HTTP request failed after 3 attempts: https://repo.ikghd.me/repo.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "ttkillerplus: all sources failed: altstore:https://repo.ikghd.me/repo.json error: HTTP request failed after 3 attempts: https://repo.ikghd.me/repo.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "infuseplus: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "glow: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "swiftgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "telegram-mxgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "iqface: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "ryukgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "sparkle: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "nexasc: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "messenger-flow: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "msgplusx: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "threadsaver: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "ime: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "turrit-mxgram: all sources failed: altstore:https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json error: HTTP request failed after 3 attempts: https://raw.githubusercontent.com/927tx/IPA-Vault/main/ipavaultsource.json (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "ryukgram-ig410: all sources failed: altstore:https://source.ryuksign.com/ig410 error: HTTP request failed after 3 attempts: https://source.ryuksign.com/ig410 (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)",
+    "ryukgram-sidebyside: all sources failed: altstore:https://source.ryuksign.com/duplicate error: HTTP request failed after 3 attempts: https://source.ryuksign.com/duplicate (<urlopen error TLS/SSL connection has been closed (EOF) (_ssl.c:992)>)"
+  ],
   "translations": {
     "ar": 100,
     "bn": 100,

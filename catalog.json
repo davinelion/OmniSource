@@ -497,17 +497,17 @@
     },
     {
       "slug": "youmod",
-      "name": "YouMod",
-      "subtitle": "All-in-one YouTube enhancement tweak",
+      "name": "uPro Plus",
+      "subtitle": "YouTube 21.37.4 extra-tweaks build (YouMod + player stack)",
       "bundleIdentifier": "com.google.ios.youtube",
       "alternativeTo": "ytlite",
       "developerName": "Tonwalter888",
       "category": "photo-video",
       "tintColor": "FF0000",
       "icon": "YouTube.webp",
-      "localizedDescription": "YouMod is a customizable YouTube enhancement tweak by Tonwalter888. It includes ad blocking, background playback, PiP support, UI customization, integrated download manager, and sponsor segment skipping.",
+      "localizedDescription": "uPro Plus is OmniSource's featured YouTube 21.37.4 extra-tweaks IPA. It is the YouProEXTRA YouMod 2.0.0 line on YouTube 21.37.4 with the extra player stack that release publishes: YouPip (Picture-in-Picture), YouQuality and YouChooseQuality, YTHoldForSpeed, YouGetCaption, YTABConfig, YTNativeShare, YTweaks, Return YouTube Dislike, DontEatMyContent, Gonerino, VolumeBoostYT and PleaseDontStopTheMusic. 120 Hz display refresh is used when the device supports it. Native 4K is available on A16+ devices; YTUHD is not bundled on this YouTube version. Requires iOS 17.0+. Shares com.google.ios.youtube with the other YouTube mods: install one at a time. YTLite, YTKACE and YouMod are competing main tweaks; stacking all three in one IPA is unstable, so this listing follows the extra-tweaks YouMod 21.37.4 release.",
       "screenshots": [],
-      "featured": false,
+      "featured": true,
       "status": "stable",
       "upstreamURL": "https://github.com/Tonwalter888/YouMod",
       "verification": {
@@ -517,7 +517,7 @@
         "checksumPublished": false
       },
       "compatibility": {
-        "minOSVersion": "16.0",
+        "minOSVersion": "17.0",
         "maxOSVersion": null,
         "devices": [
           "iphone",
@@ -530,7 +530,7 @@
           "esign",
           "livecontainer"
         ],
-        "notes": "Official project: Tonwalter888/YouMod. The upstream repo publishes the tweak as a .deb only; this source serves a ready-to-sideload IPA built from the official tweak by mrdrvt99/YouProEXTRA. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
+        "notes": "Requires iOS 17.0+ (YouTube 21.34.3+). Served from mrdrvt99/YouProEXTRA tags youmod-ipa* (YouMod_21.37.4_2.0.0 extra-tweaks IPA). Catalog name is uPro Plus; slug remains youmod for stable feed URLs. Shares com.google.ios.youtube with the other YouTube mods: install one at a time."
       },
       "appPermissions": {
         "entitlements": [
@@ -565,7 +565,8 @@
         ],
         "maxPages": 10,
         "keepVersions": 1,
-        "descriptionTemplate": "YouTube {version} | {label}"
+        "descriptionTemplate": "YouTube {version} | uPro Plus extra tweaks | {label}",
+        "minOSVersion": "17.0"
       }
     },
     {
