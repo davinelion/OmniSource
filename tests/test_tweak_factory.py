@@ -14,14 +14,13 @@ each is pinned here:
 from __future__ import annotations
 
 import json
+import re
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
-
-import yaml
 
 _SCRIPTS = Path(__file__).resolve().parents[1] / "scripts"
 _ROOT = Path(__file__).resolve().parents[1]
@@ -352,7 +351,14 @@ class PublishAndMergeTests(unittest.TestCase):
 
 
 class WorkflowContractTests(unittest.TestCase):
-    """The YAML side of the factory cannot drift from the script contract."""
+    """The YAML side of the factory cannot drift from the script contract.
+
+    Parsed with regexes on purpose: the suite is stdlib-only (CI installs no
+    PyYAML), and the workflows are flat enough that anchored text checks are
+    the honest way to pin them.
+    """
+
+    _INJECT_INPUTS = ("app_name", "base_ipa_url", "bundle_id", "tweak_deb_url", "tweak_name")
 
     def _factory(self) -> str:
         return (_ROOT / ".github" / "workflows" / "tweak-factory.yml").read_text(encoding="utf-8")
@@ -360,48 +366,68 @@ class WorkflowContractTests(unittest.TestCase):
     def _inject(self) -> str:
         return (_ROOT / ".github" / "workflows" / "build-tweak.yml").read_text(encoding="utf-8")
 
-    def test_workflows_are_valid_yaml(self) -> None:
+    @staticmethod
+    def _section(text: str, header: str, terminator: str) -> str:
+        start = text.index(header)
+        stop = text.find(terminator, start + len(header))
+        return text[start : stop if stop != -1 else len(text)]
+
+    def test_both_workflows_declare_a_name_and_jobs(self) -> None:
         for label, text in (("tweak-factory.yml", self._factory()), ("build-tweak.yml", self._inject())):
             with self.subTest(workflow=label):
-                self.assertTrue(yaml.safe_load(text), f"{label} must parse")
+                self.assertRegex(text, r"(?m)^name: ")
+                self.assertRegex(text, r"(?m)^jobs:")
+                self.assertIn("set -euo pipefail", text)
 
     def test_the_inject_workflow_is_reusable_with_matching_inputs(self) -> None:
-        doc = yaml.safe_load(self._inject())
-        dispatch = set((_on(doc)["workflow_dispatch"]["inputs"] or {}).keys())
-        call = _on(doc).get("workflow_call") or {}
-        self.assertIn("inputs", call, "build-tweak.yml must declare workflow_call inputs")
-        self.assertEqual(set(call["inputs"].keys()), dispatch)
-        self.assertEqual(call["outputs"]["safe_name"]["value"], "${{ jobs.build.outputs.safe_name }}")
-        self.assertEqual(doc["jobs"]["build"]["outputs"]["safe_name"], "${{ steps.sanitize.outputs.safe_name }}")
+        text = self._inject()
+        dispatch_inputs = set(
+            re.findall(r"(?m)^      (\w+):", self._section(text, "  workflow_dispatch:", "  workflow_call:"))
+        )
+        call = self._section(text, "  workflow_call:", "    outputs:")
+        call_inputs = set(re.findall(r"(?m)^      (\w+):", call))
+        self.assertEqual(
+            sorted(dispatch_inputs),
+            list(self._INJECT_INPUTS),
+            "dispatch inputs changed - update the workflow_call mirror and this pin",
+        )
+        self.assertEqual(
+            sorted(call_inputs),
+            list(self._INJECT_INPUTS),
+            "workflow_call must mirror the dispatch inputs exactly",
+        )
+        self.assertIn("value: ${{ jobs.build.outputs.safe_name }}", self._section(text, "    outputs:", "permissions:"))
+        self.assertIn("safe_name: ${{ steps.sanitize.outputs.safe_name }}", text)
 
     def test_the_factory_calls_the_inject_workflow_with_every_input(self) -> None:
-        factory = yaml.safe_load(self._factory())
-        call = _step(factory, "./.github/workflows/build-tweak.yml")["with"]
-        inject = yaml.safe_load(self._inject())
-        expected = set(_on(inject)["workflow_call"]["inputs"].keys())
-        self.assertEqual(set(call.keys()), expected)
+        factory = self._factory()
+        step = self._section(factory, "uses: ./.github/workflows/build-tweak.yml", "      - name:")
+        wired = set(re.findall(r"(?m)^          (\w+):", step))
+        self.assertEqual(sorted(wired), list(self._INJECT_INPUTS), "the inject call must wire every input, by name")
 
     def test_the_factory_keeps_its_safety_rails(self) -> None:
         text = self._factory()
-        self.assertIn("set -euo pipefail", text)
         self.assertIn("group: tweak-factory", text)
-        self.assertRegex(text, r"cron: \"\d+ \d+ \* \* \d\"")
+        self.assertRegex(text, r'cron: "\d+ \d+ \* \* \d"')
         self.assertIn("needs.plan.outputs.has_builds == 'true'", text)
         self.assertIn("source_policy check-url", text, "publishing must re-run the sourcing policy gate")
         self.assertIn("[skip ci]", text)
         self.assertIn("GH_TOKEN: ${{ github.token }}", text)
-        # Matrix fields must reach scripts through env:, never inline ${{ }}.
-        build = yaml.safe_load(text)["jobs"]["build"]
-        for step in build["steps"]:
-            run = (step.get("run") or "") if isinstance(step, dict) else ""
-            self.assertNotIn("${{ matrix.", run, "matrix values must go through env:")
+        # Matrix values may only appear as YAML mapping values (name/if/env:/with:),
+        # never inside a run: script - those must read the M_* environment.
+        offenders = [
+            line
+            for line in text.splitlines()
+            if (
+                "${{ matrix." in line
+                and not line.lstrip().startswith("#")
+                and not re.match(r"^\s*(?:- )?[A-Za-z_][\w.-]*:\s", line)
+            )
+        ]
+        self.assertEqual(offenders, [], "matrix values must go through env:, never into run: scripts")
 
     def test_the_plan_script_is_the_only_matrix_source(self) -> None:
-        factory = yaml.safe_load(self._factory())
-        matrix = factory["jobs"]["build"]["strategy"]["matrix"]["include"]
-        # plan writes {"include": [...]} — the mapping must reach into .include,
-        # otherwise every matrix job would receive the wrapper object.
-        self.assertEqual(matrix, "${{ fromJSON(needs.plan.outputs.matrix).include }}")
+        self.assertIn("include: ${{ fromJSON(needs.plan.outputs.matrix).include }}", self._factory())
 
 
 class CliTests(unittest.TestCase):
