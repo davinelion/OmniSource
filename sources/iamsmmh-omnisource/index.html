@@ -7,18 +7,18 @@
   <meta name="theme-color" content="#e8eef8" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#07070f" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#07070f" id="themeColor">
-  <title>Community build of arichornlover/uYouEnhanced, mirrored on archive.org — OmniSource</title>
-  <meta name="description" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.">
+  <title>Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 — OmniSource</title>
+  <meta name="description" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.">
   <link rel="canonical" href="https://iamsmmh.github.io/OmniSource/sources/iamsmmh-omnisource/">
   <meta property="og:site_name" content="OmniSource">
-  <meta property="og:title" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — OmniSource">
-  <meta property="og:description" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.">
+  <meta property="og:title" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 — OmniSource">
+  <meta property="og:description" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://iamsmmh.github.io/OmniSource/sources/iamsmmh-omnisource/">
   <meta property="og:image" content="https://iamsmmh.github.io/OmniSource/assets/OmniSource.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — OmniSource">
-  <meta name="twitter:description" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.">
+  <meta name="twitter:title" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 — OmniSource">
+  <meta name="twitter:description" content="Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.">
   <meta name="twitter:image" content="https://iamsmmh.github.io/OmniSource/assets/OmniSource.png">
   <link rel="icon" type="image/png" href="../../assets/OmniSource.png">
   <link rel="apple-touch-icon" href="../../assets/OmniSource.png">
@@ -33,12 +33,21 @@
   <style>
     .src-hero{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap}
     .src-hero img{width:88px;height:88px;border-radius:22px;box-shadow:var(--shadow-md)}
+    /* A flex item's automatic minimum size is its content's min-content size,
+       so a long source name ("https://source.ryuksign.com/ig410") kept the text
+       block wider than the phone viewport and the heading was clipped off the
+       right edge (measured 353px wide at 320px). min-width:0 lets the block
+       shrink and overflow-wrap lets an unbreakable URL break. */
+    .src-hero > div{min-width:0;flex:1 1 220px}
+    .src-hero h1,.src-hero p{overflow-wrap:anywhere}
     .src-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:26px 0}
     .src-meta .panel{padding:16px 18px;display:flex;flex-direction:column;gap:4px}
     .src-meta small{color:var(--muted);font:600 10.5px var(--font-mono);
       letter-spacing:.12em;text-transform:uppercase}
     .src-meta b{font-size:17px;letter-spacing:-.01em}
-    .src-app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+    /* min() so the track can never demand more than the container: at 320px a
+       bare 300px minimum overflowed the padded main column. */
+    .src-app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
     .src-app{display:flex;gap:12px;padding:14px;border-radius:var(--radius-md);
       text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);
       transition:transform var(--dur-fast) var(--ease)}
@@ -58,7 +67,7 @@
   </script>
   <script src="../../js/core.js" defer></script>
   <script src="../../src/js/i18n.js" defer></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org — OmniSource source", "description": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.", "url": "https://iamsmmh.github.io/OmniSource/sources/iamsmmh-omnisource/", "provider": {"@type": "Organization", "name": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Dataset", "name": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 — OmniSource source", "description": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.", "url": "https://iamsmmh.github.io/OmniSource/sources/iamsmmh-omnisource/", "provider": {"@type": "Organization", "name": "Community build of arichornlover/uYouEnhanced, mirrored on archive.org"}}</script>
 </head>
 <body data-page="source-detail">
   <a class="skip-link" href="#main">Skip to source details</a>
@@ -104,8 +113,8 @@
       <img src="https://iamsmmh.github.io/OmniSource/assets/OmniSource.png" alt="" width="88" height="88">
       <div>
         <span class="kicker">SOURCE EXPLORER</span>
-        <h1 style="margin:6px 0 8px;letter-spacing:var(--track-tighter)">Community build of arichornlover/uYouEnhanced, mirrored on archive.org</h1>
-        <p class="text-muted">Community build of arichornlover/uYouEnhanced, mirrored on archive.org on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.</p>
+        <h1 style="margin:6px 0 8px;letter-spacing:var(--track-tighter)">Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6</h1>
+        <p class="text-muted">Community build of arichornlover/uYouEnhanced, mirrored on archive.org — YouTubeRebornPlus_19.10.5-4.2.6 on OmniSource — 1 app, status Maintained, health 70/100, reputation 68/100.</p>
         <p style="margin-top:10px"><span class="badge blue">Maintained</span></p>
       </div>
     </section>

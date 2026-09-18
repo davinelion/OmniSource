@@ -30,6 +30,7 @@ import re
 import shutil
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 from omnisource.discovery import build_sources_doc as _build_base_sources_doc
 from omnisource.io import atomic_write_text
@@ -178,12 +179,21 @@ def build_sources_doc(
 _PAGE_STYLE = """
     .src-hero{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap}
     .src-hero img{width:88px;height:88px;border-radius:22px;box-shadow:var(--shadow-md)}
+    /* A flex item's automatic minimum size is its content's min-content size,
+       so a long source name ("https://source.ryuksign.com/ig410") kept the text
+       block wider than the phone viewport and the heading was clipped off the
+       right edge (measured 353px wide at 320px). min-width:0 lets the block
+       shrink and overflow-wrap lets an unbreakable URL break. */
+    .src-hero > div{min-width:0;flex:1 1 220px}
+    .src-hero h1,.src-hero p{overflow-wrap:anywhere}
     .src-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:26px 0}
     .src-meta .panel{padding:16px 18px;display:flex;flex-direction:column;gap:4px}
     .src-meta small{color:var(--muted);font:600 10.5px var(--font-mono);
       letter-spacing:.12em;text-transform:uppercase}
     .src-meta b{font-size:17px;letter-spacing:-.01em}
-    .src-app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+    /* min() so the track can never demand more than the container: at 320px a
+       bare 300px minimum overflowed the padded main column. */
+    .src-app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
     .src-app{display:flex;gap:12px;padding:14px;border-radius:var(--radius-md);
       text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);
       transition:transform var(--dur-fast) var(--ease)}
@@ -352,8 +362,20 @@ def render_source_page(
     cadence = source.get("updateFrequencyDays")
     last_update = str(source.get("lastUpdate") or "")
     plural = "s" if app_count != 1 else ""
+    # A host can publish several feeds under the same display name — both
+    # source.ryuksign.com/duplicate and /ig410 call themselves "Ryuk / RyukSign
+    # (source.ryuksign.com)" — which gave two different pages byte-identical
+    # <title> and meta description. The feed's own path is the only thing that
+    # tells them apart, so it is appended when the name does not already carry
+    # it; sources on a bare host (AltStore) are untouched.
+    label = name
+    feed_path = urlsplit(source_url).path.strip("/")
+    if feed_path:
+        segment = feed_path.rsplit("/", 1)[-1]
+        if segment and segment.lower() not in name.lower():
+            label = f"{name} — {segment}"
     description = (
-        f"{name} on OmniSource — {app_count} app{plural}, status {status}, "
+        f"{label} on OmniSource — {app_count} app{plural}, status {status}, "
         f"health {_fmt_score(health)}, reputation {_fmt_score(score)}."
     )
     json_ld = (
@@ -362,7 +384,7 @@ def render_source_page(
             {
                 "@context": "https://schema.org",
                 "@type": "Dataset",
-                "name": f"{name} — OmniSource source",
+                "name": f"{label} — OmniSource source",
                 "description": description,
                 "url": page_url,
                 "provider": {"@type": "Organization", "name": publisher},
@@ -401,7 +423,7 @@ def render_source_page(
     parts = [
         _head(
             base=base,
-            title=name,
+            title=label,
             description=description,
             page_url=page_url,
             json_ld=json_ld,
@@ -419,7 +441,7 @@ def render_source_page(
         f'      <img src="{html.escape(base + "/assets/OmniSource.png")}" alt="" width="88" height="88">',
         "      <div>",
         '        <span class="kicker">SOURCE EXPLORER</span>',
-        f'        <h1 style="margin:6px 0 8px;letter-spacing:var(--track-tighter)">{html.escape(name)}</h1>',
+        f'        <h1 style="margin:6px 0 8px;letter-spacing:var(--track-tighter)">{html.escape(label)}</h1>',
         f'        <p class="text-muted">{html.escape(description)}</p>',
         f'        <p style="margin-top:10px">{_status_badge(status)}</p>',
         "      </div>",

@@ -152,6 +152,19 @@
   --cyan: #0891b2;
   --cyan-soft: rgba(8, 145, 178, 0.10);
 
+  /* Text-safe twins of the semantic colors above.
+     The tones above are tuned for fills, dots, bars and borders, where WCAG
+     asks for 3:1; as *text* they only reach 3.3-3.9:1 on the light surfaces
+     (cyan 2.8-3.2:1), and the badges and status pills that use them set them at
+     9.5-10.5px. These twins clear 4.5:1 on both the plain background and their
+     own soft tint, so small status text stays legible without changing the
+     color of every chart, dot and wash on the site. */
+  --green-text: #166534;
+  --amber-text: #92400e;
+  --red-text: #b91c1c;
+  --blue-text: #1d4ed8;
+  --cyan-text: #155e75;
+
   /* -------------------------------------------------------------- surface */
   --radius-xxl: 32px;
   --radius-xl: 22px;
@@ -329,6 +342,13 @@ html[data-theme="dark"] {
   --blue-soft: rgba(10, 132, 255, 0.14);
   --cyan: #64d2ff;
   --cyan-soft: rgba(100, 210, 255, 0.11);
+  /* See the light palette: text-safe twins. On dark surfaces the base tones
+     are already ≥4.5:1, so these alias them. */
+  --green-text: var(--green);
+  --amber-text: var(--amber);
+  --red-text: var(--red);
+  --blue-text: var(--blue);
+  --cyan-text: var(--cyan);
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.42), 0 8px 20px rgba(0, 0, 0, 0.32);
   --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.48), 0 24px 64px rgba(0, 0, 0, 0.48);
@@ -382,6 +402,10 @@ html[data-theme="dark"] {
     --red: #ff453a; --red-soft: rgba(255, 69, 58, 0.12);
     --blue: #0a84ff; --blue-soft: rgba(10, 132, 255, 0.14);
     --cyan: #64d2ff; --cyan-soft: rgba(100, 210, 255, 0.11);
+    /* On the dark surfaces the base tones are already text-safe (4.9-10:1),
+       including on their own soft tints, so the twins just alias them. */
+    --green-text: var(--green); --amber-text: var(--amber);
+    --red-text: var(--red); --blue-text: var(--blue); --cyan-text: var(--cyan);
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.42), 0 8px 20px rgba(0,0,0,0.32);
     --shadow-md: 0 4px 14px rgba(0,0,0,0.48), 0 24px 64px rgba(0,0,0,0.48);
     --shadow-lg: 0 8px 24px rgba(0,0,0,0.48), 0 48px 120px rgba(0,0,0,0.58);
@@ -427,7 +451,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: hidden;
+  /* Horizontal overflow is clipped by the `html` rule above, which is enough:
+     the viewport is the element that owns the scrollbar. This used to be
+     `overflow-x: hidden` here as well, and that silently broke every sticky
+     element on the site — an element with `overflow-x: hidden` computes
+     `overflow-y: auto` (CSS Overflow §3), so the body became a scroll
+     container whose scrollport never scrolls: the header's `position: sticky;
+     top: 8px` had nothing to stick to. Measured before the fix: scrolling the
+     home page 600 px left the header at y = -592 instead of 8. `clip` clips
+     exactly the same overflow without creating a scroll container (and is
+     simply ignored by engines that predate it), so sticky works again. */
+  overflow-x: clip;
   /* Isolate scrolling to avoid backdrop-filter repainting entire page */
   position: relative;
 }
@@ -522,6 +556,17 @@ textarea {
 }
 
 button { cursor: pointer; }
+
+/* WCAG 2.2 "target size (minimum)" asks for 24x24 CSS px. A single-line input
+   with generous padding can still land just under it — the four search fields
+   measured 23.7px tall — so the floor is set once, here, instead of per
+   component. It never shrinks a control that is already larger. */
+input[type="search"],
+input[type="text"],
+input[type="url"],
+input[type="email"] {
+  min-height: 24px;
+}
 
 img,
 svg,

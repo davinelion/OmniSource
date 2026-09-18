@@ -23,6 +23,22 @@
   var $ = OS.$;
   var $$ = OS.$$;
 
+  /* Favorites are shared with js/features.js (favorites/collections pages).
+     'omnisource-favorites' is canonical (raw JSON array); 'os:favorites' is
+     the prefixed legacy key features.js used on its own. Both are kept in
+     sync and merged on read so hearts agree on every page.
+
+     These two constants have to be declared before `state` below: `var`
+     hoists the *binding*, not the assignment, so when they were declared
+     after the literal every page booted with both keys `undefined` and
+     `loadFavorites()` read `localStorage.getItem(undefined)`. The set was
+     therefore always empty on load - hearts showed hollow, the "Saved" chip
+     said 0 and the Saved shelf was empty - even though both storage keys held
+     the list, which is why /favorites/ (features.js, which reads the literal
+     key names) still showed the apps. */
+  var FAVORITES_KEY = 'omnisource-favorites';
+  var FAVORITES_LEGACY_KEY = 'os:favorites';
+
   /* ---------------------------------------------------------------- state */
   var state = {
     apps: [],
@@ -58,12 +74,8 @@
     pendingOpen: null
   };
 
-  /* Favorites are shared with js/features.js (favorites/collections pages).
-     'omnisource-favorites' is canonical (raw JSON array); 'os:favorites' is
-     the prefixed legacy key features.js used on its own. Both are kept in
-     sync and merged on read so hearts agree on every page. */
-  var FAVORITES_KEY = 'omnisource-favorites';
-  var FAVORITES_LEGACY_KEY = 'os:favorites';
+  /* Favorites are shared with js/features.js (favorites/collections pages) —
+     see the key declarations above for why they come first. */
   function readFavoriteList(key) {
     try {
       var list = JSON.parse(localStorage.getItem(key) || '[]');
@@ -175,6 +187,72 @@
     } catch (e) { /* sandboxed frame: the URL is a nicety, not the point */ }
   }
 
+  /* ------------------------------------------------------------ deep links */
+  /* The browser resolves `/#catalog` (and `/#trending`, `/#whats-new`, …) the
+     moment the document parses — while every section above the target is still
+     collapsed, waiting for its feed. Each feed that lands afterwards un-hides
+     thousands of pixels over the reader's head, so the reader who asked for the
+     catalog used to stop just past the hero: measured 5693 px short for
+     `/#catalog` and 494 px short for `/#trending`. The same applies when a
+     section is entered from another page (`../../#catalog`, 5578 px short).
+
+     Re-pin the target after every render that can still move it, and stop as
+     soon as the reader scrolls on their own — at that point they are where
+     they want to be, and yanking them back would be worse than the drift. */
+  var repinTarget = null;
+  var repinArmed = false;
+
+  function sectionTargetFor(id) {
+    var node = document.getElementById(id);
+    if (!node || node.hidden) return null;
+    /* `#<slug>` app deep links open the in-page dialog instead of scrolling;
+       js/core.js owns those and they never name a section id. */
+    return node;
+  }
+
+  function armHashRepin() {
+    if (repinArmed) return;
+    repinArmed = true;
+    var stop = function () {
+      repinTarget = null;
+      window.removeEventListener('wheel', stop);
+      window.removeEventListener('touchmove', stop);
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('hashchange', onHash);
+    };
+    function onKey(event) {
+      /* Only keys that actually scroll; Cmd/ctrl-K and friends are not a
+         statement about where the reader wants to be. */
+      if (/^(Arrow|Page|Home|End|Spacebar| )/.test(event.key)) stop();
+    }
+    function onHash() {
+      /* A new hash is a new request: retarget (or drop the re-pin for an app
+         slug, which js/core.js opens as a dialog instead). */
+      var raw = (location.hash || '').slice(1);
+      var id = raw ? decodeURIComponent(raw) : '';
+      repinTarget = id && sectionTargetFor(id) ? id : null;
+      if (repinTarget) repinHash();
+    }
+    window.addEventListener('wheel', stop, { passive: true });
+    window.addEventListener('touchmove', stop, { passive: true });
+    window.addEventListener('keydown', onKey);
+    window.addEventListener('hashchange', onHash);
+    /* Feeds give up after their timeouts (6 s) and the idle tier lands within
+       ~2.5 s; after that nothing else moves the page. */
+    setTimeout(stop, 25000);
+  }
+
+  function repinHash() {
+    if (!repinTarget) return;
+    var node = document.getElementById(repinTarget);
+    if (!node || node.hidden) return;
+    try {
+      node.scrollIntoView({ behavior: 'auto', block: 'start' });
+    } catch (error) {
+      try { node.scrollIntoView(); } catch (inner) { /* nothing to scroll */ }
+    }
+  }
+
   /* ?category=<id> lands the reader on a shelf — applied once, before the
      first full render, and validated against the catalog so a stale or
      invented value cannot leave the grid and the tabs disagreeing. */
@@ -235,7 +313,7 @@
       set: function (doc) { state.trending = doc; }
     },
     {
-      key: 'updates', path: 'feeds/updates.json',
+      key: 'updates', path: 'feeds/updates.json', idle: true,
       pages: ['home'],
       set: function (doc) { state.updates = doc; }
     },
@@ -250,11 +328,6 @@
       }
     },
     {
-      key: 'related', path: 'feeds/related.json',
-      pages: ['home'],
-      set: function (doc) { state.related = doc; }
-    },
-    {
       key: 'reputation', path: 'feeds/reputation.json',
       pages: ['home', 'status'],
       set: function (doc) { state.reputation = doc; }
@@ -265,12 +338,7 @@
       set: function (doc) { state.downloadIntel = doc; }
     },
     {
-      key: 'community', path: 'feeds/community.json',
-      pages: ['home'],
-      set: function (doc) { state.community = doc; }
-    },
-    {
-      key: 'install', path: 'feeds/install.json',
+      key: 'install', path: 'feeds/install.json', idle: true,
       pages: ['home', 'install'],
       set: function (doc) { state.install = doc; }
     },
@@ -285,10 +353,16 @@
       set: function (doc) { state.compare = doc; }
     },
     {
-      key: 'searchIndex', path: 'feeds/search-index.json',
+      /* The palette's index: 120 KB that only matters once the search UI is
+         opened. js/core.js fetches it on demand (Search.load) and now reuses
+         whatever is already in OS.Search.docs, so the id-timed fetch here is
+         purely a head start for the first Cmd/ctrl-K. */
+      key: 'searchIndex', path: 'feeds/search-index.json', idle: true,
       pages: ['home', 'search'],
       set: function (doc) {
-        if (doc && Array.isArray(doc.documents)) OS.Search.docs = doc.documents;
+        if (doc && Array.isArray(doc.documents) && !OS.Search.docs.length) {
+          OS.Search.docs = doc.documents;
+        }
       }
     }
   ];
@@ -357,6 +431,9 @@
     if (OS.refreshSectionTabs) {
       try { OS.refreshSectionTabs(); } catch (error) { /* no tab bar here */ }
     }
+    // …and it also moved every section below it, including the one a deep link
+    // asked for. Put the reader back on their target (see armHashRepin).
+    repinHash();
   }
 
   function loadData() {
@@ -367,7 +444,14 @@
     // they render exactly once with everything present.
     var split = page === 'home';
     var primary = split ? wanted.filter(function (feed) { return feed.firstPaint; }) : wanted;
-    var deferred = split ? wanted.filter(function (feed) { return !feed.firstPaint; }) : [];
+    var deferred = split ? wanted.filter(function (feed) { return !feed.firstPaint && !feed.idle; }) : [];
+    /* Idle-tier feeds (`idle: true`) are the ones nothing on the first screen
+       reads: the install cards, the release timeline and the palette index.
+       Together they were ~600 KB of JSON parsed while the catalog was still
+       painting. They now arrive on the browser's idle callback (with a
+       timeout, and a plain timer where requestIdleCallback is missing), and
+       render through the same refresh path as the deferred feeds. */
+    var idle = split ? wanted.filter(function (feed) { return feed.idle; }) : [];
 
     var catalog = fetchFeed('apps.json', 'feeds/apps.json').then(function (feedDoc) {
       if (!feedDoc || !Array.isArray(feedDoc.apps)) throw new Error('Feed unavailable');
@@ -380,7 +464,26 @@
       loadFeed(feed).then(scheduleRefresh);
     });
 
+    if (idle.length) {
+      scheduleIdle(function () {
+        idle.forEach(function (feed) {
+          loadFeed(feed).then(scheduleRefresh);
+        });
+      });
+    }
+
     return Promise.all([catalog].concat(primary.map(loadFeed)));
+  }
+
+  /* Run `work` when the main thread is free. requestIdleCallback is missing on
+     Safari before 15.4 and in older WebViews, so it falls back to a timer that
+     still lands after the first paint. */
+  function scheduleIdle(work) {
+    if (typeof window.requestIdleCallback === 'function') {
+      window.requestIdleCallback(work, { timeout: 2500 });
+      return;
+    }
+    setTimeout(work, 1200);
   }
 
   function loadCatalogMeta() {
@@ -875,6 +978,87 @@
       Home.openApp(target.dataset.slug);
     });
 
+    /* Roving tabindex for the catalog grid.
+       Every card carries a title link, a save button, a detail link and a
+       download button, so a plain tab order through the catalog was 505 stops
+       (101 cards x 5) on the home page alone — the report measured 725 tabbable
+       elements overall. The grid now behaves like the category tablist above
+       it: one tab stop for the whole grid, arrow keys (or Home/End) to move
+       between cards, and the card you are on brings its own controls along. */
+    var gridCursor = 0;
+
+    function gridCards() {
+      var grid = $('#appsGrid');
+      return grid ? $$('.app-card', grid) : [];
+    }
+
+    function paintGridRoving(moveFocus) {
+      var cards = gridCards();
+      if (!cards.length) { gridCursor = 0; return; }
+      if (gridCursor < 0 || gridCursor >= cards.length) gridCursor = 0;
+      cards.forEach(function (card, index) {
+        var current = index === gridCursor;
+        card.tabIndex = current ? 0 : -1;
+        // Inner controls ride along with their card: a heart or download button
+        // on a card the reader has not reached is not a tab stop either.
+        $$('a, button, input, select', card).forEach(function (control) {
+          if (current) control.removeAttribute('tabindex');
+          else control.setAttribute('tabindex', '-1');
+        });
+      });
+      if (moveFocus) {
+        try { cards[gridCursor].focus(); } catch (error) { /* detached frame */ }
+      }
+    }
+
+    // Exposed so every render path (filters, sort, search, favourites,
+    // deferred feeds, language change) can restore the single tab stop.
+    OS.syncGridRoving = paintGridRoving;
+
+    document.addEventListener('focusin', function (event) {
+      var target = event.target;
+      if (!target || !target.closest) return;
+      var card = target.closest('#appsGrid .app-card');
+      if (!card) return;
+      var index = gridCards().indexOf(card);
+      if (index !== -1 && index !== gridCursor) {
+        gridCursor = index;
+        paintGridRoving(false);
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      var key = event.key;
+      if (['ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown', 'Home', 'End'].indexOf(key) === -1) return;
+      var current = event.target;
+      if (!current || !current.closest) return;
+      var card = current.closest('#appsGrid .app-card');
+      if (!card) return;
+      var cards = gridCards();
+      var index = cards.indexOf(card);
+      if (index === -1 || cards.length < 2) return;
+      var next = null;
+      if (key === 'Home') next = cards[0];
+      else if (key === 'End') next = cards[cards.length - 1];
+      else if (key === 'ArrowRight' || key === 'ArrowLeft') {
+        var rtl = document.documentElement.dir === 'rtl';
+        var forward = rtl ? key === 'ArrowLeft' : key === 'ArrowRight';
+        next = cards[index + (forward ? 1 : -1)] || null;
+      } else {
+        // Vertical movement goes to the *nearest card in the row above/below*,
+        // so a filtered grid (2 cards in the last row) still behaves.
+        var step = key === 'ArrowDown' ? 1 : -1;
+        var rowTop = card.offsetTop;
+        for (var i = index + step; i >= 0 && i < cards.length; i += step) {
+          if (Math.abs(cards[i].offsetTop - rowTop) > 4) { next = cards[i]; break; }
+        }
+      }
+      if (!next) return;
+      event.preventDefault();
+      gridCursor = cards.indexOf(next);
+      paintGridRoving(true);
+    });
+
     /* Arrow-key navigation for the category tablist. The chips are real
        buttons, so Enter/Space already activate them, but a tablist also owes
        its keyboard users Home/End and left/right — and the roving tabindex
@@ -1350,6 +1534,9 @@
         grid.setAttribute('aria-busy', 'false');
         grid.innerHTML = apps.map(appCard).join('');
         grid.hidden = apps.length === 0;
+        // A fresh grid has tabindex="0" on every card; collapse it back to the
+        // single tab stop the roving pattern promises (see bindCatalog).
+        if (OS.syncGridRoving) OS.syncGridRoving(false);
       }
       var count = $('#resultCount');
       if (count) {
@@ -2624,12 +2811,18 @@
         if (OS.refreshSectionTabs) {
           try { OS.refreshSectionTabs(); } catch (error) { /* tab bar not ready */ }
         }
-        // Deep link: #slug opens the dialog.
+        // Deep link: #slug opens the dialog, #section is re-pinned to the
+        // place the section ended up once the feeds above it had rendered.
         var hash = location.hash.slice(1);
         if (hash) {
           var slug = decodeURIComponent(hash);
           if (appForSlug(slug)) Home.openApp(slug);
+          else if (sectionTargetFor(slug)) {
+            repinTarget = slug;
+            repinHash();
+          }
         }
+        armHashRepin();
       } else if (page === 'compare') {
         Compare.load();
       } else if (page === 'status') {

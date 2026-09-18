@@ -166,6 +166,9 @@ SITE_PAGES = (
     ("/graph/", 0.5, "weekly"),
     ("/collections/", 0.6, "weekly"),
     ("/favorites/", 0.4, "monthly"),
+    # Hand-maintained and reachable only from the home footer; without this
+    # entry the page is an orphan in the sitemap as well as in the crawl.
+    ("/translation-status/", 0.3, "monthly"),
 )
 
 

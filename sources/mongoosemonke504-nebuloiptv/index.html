@@ -33,12 +33,21 @@
   <style>
     .src-hero{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap}
     .src-hero img{width:88px;height:88px;border-radius:22px;box-shadow:var(--shadow-md)}
+    /* A flex item's automatic minimum size is its content's min-content size,
+       so a long source name ("https://source.ryuksign.com/ig410") kept the text
+       block wider than the phone viewport and the heading was clipped off the
+       right edge (measured 353px wide at 320px). min-width:0 lets the block
+       shrink and overflow-wrap lets an unbreakable URL break. */
+    .src-hero > div{min-width:0;flex:1 1 220px}
+    .src-hero h1,.src-hero p{overflow-wrap:anywhere}
     .src-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:26px 0}
     .src-meta .panel{padding:16px 18px;display:flex;flex-direction:column;gap:4px}
     .src-meta small{color:var(--muted);font:600 10.5px var(--font-mono);
       letter-spacing:.12em;text-transform:uppercase}
     .src-meta b{font-size:17px;letter-spacing:-.01em}
-    .src-app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+    /* min() so the track can never demand more than the container: at 320px a
+       bare 300px minimum overflowed the padded main column. */
+    .src-app-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:12px}
     .src-app{display:flex;gap:12px;padding:14px;border-radius:var(--radius-md);
       text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);
       transition:transform var(--dur-fast) var(--ease)}

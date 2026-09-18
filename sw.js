@@ -72,11 +72,14 @@
 // stylesheet and pick up the fixed one.
 // v14: findability pass — sticky section tabs + category tablist on the home
 // page, reading-progress line and back-to-top injected on every page, scroll
-// position held across the deferred-feed re-renders, and [data-reveal] now
-// self-heals for markup injected after boot (the release feed used to render
-// invisible). index.html, both stylesheets, core.js and site.js all changed,
-// so returning clients must drop the cached shell.
-const VERSION = 'omnisource-v14';
+// The scroll-lock and drawer work in this release: the sticky header sticks
+// again (body no longer clips its own overflow), the drawer consumes scroll
+// gestures instead of relying on a layout lock that un-stuck the header,
+// favorites survive a reload, /#catalog & friends re-pin after the deferred
+// feeds render, and the palette answers one-character queries. tokens.css,
+// components.css, core.js, site.js, index.html and every generated app/source
+// page changed, so returning clients must drop the cached shell.
+const VERSION = 'omnisource-v15';
 const CORE_CACHE = `${VERSION}-core`;
 const DATA_CACHE = `${VERSION}-data`;
 const ASSET_CACHE = `${VERSION}-assets`;
