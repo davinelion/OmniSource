@@ -174,7 +174,20 @@
       return pending;
     },
 
-    toast: function (message) {
+    /* Toast. A non-blocking, fixed-position status line: it never takes part
+       in layout, so showing one cannot shift the page (requirement: the
+       "new version" notice must not move what the reader is looking at).
+
+       Options (all optional):
+         actions:    [{ label, primary, onSelect, keepOpen }] — rendered as real
+                     <button>s inside the toast. Used by the service-worker
+                     update prompt; without them the toast is what it always
+                     was, a two-second confirmation line.
+         persistent: keep it on screen until an action is chosen or
+                     OS.hideToast() runs.
+         duration:   override the auto-hide delay in ms (0 = persistent). */
+    toast: function (message, options) {
+      var opts = options || {};
       var node = $('#toast');
       if (!node) {
         // Pages that do not ship the toast markup (favorites / collections)
@@ -184,32 +197,100 @@
         node.id = 'toast';
         node.setAttribute('role', 'status');
         node.setAttribute('aria-live', 'polite');
-        node.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span></span>';
+        node.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></svg><span class="toast-text"></span>';
         document.body.appendChild(node);
       }
-      var label = node.querySelector('span');
-      if (label) label.textContent = message;
+      var label = node.querySelector('.toast-text') || node.querySelector('span');
+      if (label) {
+        label.classList.add('toast-text');
+        label.textContent = String(message == null ? '' : message);
+      }
+
+      var actions = Array.isArray(opts.actions) ? opts.actions : [];
+      var tray = node.querySelector('.toast-actions');
+      if (!tray) {
+        tray = document.createElement('div');
+        tray.className = 'toast-actions';
+        node.appendChild(tray);
+      }
+      tray.textContent = '';
+      tray.hidden = !actions.length;
+      actions.forEach(function (action) {
+        if (!action || !action.label) return;
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'toast-action' + (action.primary ? ' primary' : '');
+        button.textContent = String(action.label);
+        button.addEventListener('click', function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          if (button.disabled) return;
+          if (!action.keepOpen) OS.hideToast();
+          try {
+            if (typeof action.onSelect === 'function') action.onSelect();
+          } catch (error) { /* an action must never break the page */ }
+        });
+        tray.appendChild(button);
+      });
+
+      node.classList.toggle('has-actions', actions.length > 0);
       node.classList.add('show');
       clearTimeout(OS._toastTimer);
-      OS._toastTimer = setTimeout(function () { node.classList.remove('show'); }, 2600);
+      var duration = opts.persistent ? 0 : (opts.duration == null ? 2600 : opts.duration);
+      if (duration > 0) {
+        OS._toastTimer = setTimeout(function () { node.classList.remove('show'); }, duration);
+      }
+      return node;
+    },
+
+    hideToast: function () {
+      clearTimeout(OS._toastTimer);
+      var node = $('#toast');
+      if (!node) return;
+      node.classList.remove('show');
+      // Drop stale action handlers so a dismissed prompt cannot be triggered
+      // by a later click on a hidden button.
+      var tray = node.querySelector('.toast-actions');
+      node.classList.remove('has-actions');
+      if (tray) {
+        setTimeout(function () {
+          if (node.classList.contains('show')) return;
+          tray.textContent = '';
+          tray.hidden = true;
+        }, 320);
+      }
     },
 
     copy: function (text, successMsg) {
+      var value = String(text == null ? '' : text);
+      function copied() { OS.toast(successMsg || 'Copied to clipboard'); }
+      /* The Clipboard API needs a secure context and a user gesture, and it is
+         absent in older WebViews — the source URL is the one thing a reader
+         copies on a phone, so a failure must not be reported as a success.
+         `execCommand` is the fallback; when that fails too, the value is left
+         selected so the reader can copy it by hand. */
       function fallback() {
+        var y = window.scrollY || window.pageYOffset || 0;
         var input = document.createElement('textarea');
-        input.value = text;
-        input.style.cssText = 'position:fixed;opacity:0';
+        input.value = value;
+        input.setAttribute('readonly', 'readonly');
+        input.setAttribute('aria-hidden', 'true');
+        input.style.cssText = 'position:fixed;top:0;left:0;width:1px;height:1px;opacity:0';
         document.body.appendChild(input);
-        input.select();
-        try { document.execCommand('copy'); } catch (e) { /* ignore */ }
-        input.remove();
-        OS.toast(successMsg || 'Copied to clipboard');
+        var ok = false;
+        try {
+          input.select();
+          if (input.setSelectionRange) input.setSelectionRange(0, value.length);
+          ok = document.execCommand('copy');
+        } catch (error) { ok = false; }
+        // Selecting a fixed node can nudge the viewport on iOS; put it back.
+        if ((window.scrollY || 0) !== y) window.scrollTo(0, y);
+        if (ok) input.remove();
+        if (ok) copied();
+        else OS.toast('Copy blocked — press and hold the URL to copy it', { duration: 4200 });
       }
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(
-          function () { OS.toast(successMsg || 'Copied to clipboard'); },
-          fallback
-        );
+        navigator.clipboard.writeText(value).then(copied, fallback);
       } else {
         fallback();
       }
@@ -701,16 +782,87 @@
 
   /* --------------------------------------------------------------------- PWA */
 
-  /* One reload per worker version per tab. `activate` can fire more than once
-     for a worker that is already in charge, and reloading the same page again
-     (with the browser restoring the scroll position) is pure déjà vu. */
-  function alreadyReloadedFor(version) {
-    var key = 'omnisource-sw-reloaded:' + (version || 'unknown');
+  /* Service-worker updates are opt-in, never automatic.
+
+     What used to be here: the worker's `omnisource-sw-updated` message was
+     answered with
+
+         OS.toast('A new version is ready. Reloading…');
+         setTimeout(function () { location.reload(); }, 1200);
+
+     i.e. the page reloaded itself, wherever the reader happened to be — mid
+     scroll, mid search, mid language choice — and again for every freshly
+     activated worker. A reload is only the reader's decision to make, so the
+     flow is now:
+
+         new worker detected → keep the page exactly as it is
+                             → unobtrusive toast: Update / Later
+                             → Update → activate + ONE reload
+                             → Later  → remembered for this tab session
+
+     The notification itself is a fixed-position toast (no layout shift, no
+     focus steal, no scroll interruption) and is raised at most once per
+     worker version per tab. Nothing in this flow runs on scroll, touch or
+     pointer events. */
+
+  var SW_KEYS = {
+    prompted: 'omnisource-sw-prompted:',
+    later: 'omnisource-sw-later:',
+    reloaded: 'omnisource-sw-reloaded:'
+  };
+
+  function readFlag(key) {
+    try { return sessionStorage.getItem(key) === '1'; } catch (error) { return false; }
+  }
+
+  function writeFlag(key) {
+    try { sessionStorage.setItem(key, '1'); } catch (error) { /* private mode */ }
+  }
+
+  /* One reload per worker version per tab, and only ever from a user choice. */
+  var swReloading = false;
+
+  function applyServiceWorkerUpdate(worker, version) {
+    if (swReloading) return;
+    swReloading = true;
+    writeFlag(SW_KEYS.reloaded + (version || 'unknown'));
+    var done = false;
+    function reload() {
+      if (done) return;
+      done = true;
+      location.reload();
+    }
+    // The new worker takes over asynchronously: reload as soon as it is in
+    // charge, and at the latest after a short grace period, so the button
+    // always does something visible even if `controllerchange` never fires.
+    if (navigator.serviceWorker.addEventListener) {
+      navigator.serviceWorker.addEventListener('controllerchange', reload);
+    }
     try {
-      if (sessionStorage.getItem(key)) return true;
-      sessionStorage.setItem(key, '1');
-    } catch (error) { /* private mode: allow the reload */ }
-    return false;
+      if (worker && worker.postMessage) worker.postMessage({ type: 'omnisource-skip-waiting' });
+    } catch (error) { /* the worker may already be active */ }
+    setTimeout(reload, 1400);
+  }
+
+  function offerServiceWorkerUpdate(worker, version) {
+    var tag = version || 'unknown';
+    if (readFlag(SW_KEYS.reloaded + tag) || readFlag(SW_KEYS.later + tag)) return;
+    if (readFlag(SW_KEYS.prompted + tag)) return; // never nag twice per tab
+    writeFlag(SW_KEYS.prompted + tag);
+    OS.toast(OS.t('pwa.updateReady', null, 'A new version of OmniSource is ready.'), {
+      persistent: true,
+      actions: [
+        {
+          label: OS.t('pwa.update', null, 'Update'),
+          primary: true,
+          onSelect: function () { applyServiceWorkerUpdate(worker, version); }
+        },
+        {
+          label: OS.t('pwa.later', null, 'Later'),
+          onSelect: function () { writeFlag(SW_KEYS.later + tag); }
+        }
+      ]
+    });
   }
 
   function registerServiceWorker() {
@@ -721,43 +873,40 @@
     /* Was this page already under a service worker when it booted?
 
        A first-ever visit installs the worker, `activate` claims the page and
-       broadcasts `omnisource-sw-updated`; the page then toasted "A new version
-       is ready. Reloading…" and reloaded itself — for a visitor who had just
-       opened the site, and once for every freshly activated worker. The reload
-       also restored the previous scroll position, so the page came back ~50px
-       down. Only a page that was already controlled can be *updated*: on a
-       first visit the new worker is an install, not an upgrade, and the page
-       keeps what it has. */
+       broadcasts `omnisource-sw-updated`. Only a page that was already
+       controlled can be *updated*: on a first visit the new worker is an
+       install, not an upgrade. */
     var hadController = Boolean(navigator.serviceWorker.controller);
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register(url('sw.js'))
+      navigator.serviceWorker.register(url('sw.js'), { updateViaCache: 'none' })
         .then(function (reg) {
-          if (reg.waiting && hadController) promptUpdate(reg.waiting);
+          // The worker that is about to take over, if any: it is the one that
+          // has to be told to skip waiting when the reader chooses Update.
+          function pending() { return reg.waiting || reg.installing || navigator.serviceWorker.controller; }
+
+          if (reg.waiting && hadController) offerServiceWorkerUpdate(pending(), reg.waiting.scriptURL);
+
           reg.addEventListener('updatefound', function () {
             var next = reg.installing;
             if (!next) return;
             next.addEventListener('statechange', function () {
-              if (next.state === 'installed' && navigator.serviceWorker.controller) {
-                promptUpdate(next);
-              }
+              if (next.state !== 'installed') return;
+              if (!navigator.serviceWorker.controller) return;
+              offerServiceWorkerUpdate(next, next.scriptURL);
             });
           });
+
           navigator.serviceWorker.addEventListener('message', function (event) {
             if (!event.data || event.data.type !== 'omnisource-sw-updated') return;
+            // A first visit installs the worker (no previous controller): only
+            // an already-controlled page is being *updated*, and only that page
+            // is ever offered a reload.
             if (!hadController || !navigator.serviceWorker.controller) return;
-            if (alreadyReloadedFor(event.data.version)) return;
-            OS.toast('A new version is ready. Reloading…');
-            setTimeout(function () { location.reload(); }, 1200);
+            offerServiceWorkerUpdate(pending(), event.data.version);
           });
         })
         .catch(function () { /* offline support is progressive */ });
     });
-  }
-
-  function promptUpdate(worker) {
-    // The page already has the new version available: ask the new worker to
-    // take over; the SW posts an update message that reloads the page.
-    try { worker.postMessage({ type: 'omnisource-skip-waiting' }); } catch (e) { /* ignore */ }
   }
 
   /* Generic QR dialog (static app pages).
@@ -839,20 +988,95 @@
     // phone drawer its items must always be visible (CSS hides the summary),
     // while on desktop it behaves as a hover/click menu.
     var moreMenus = $$('.nav-more', links);
+
+    /* Focusable items inside the drawer, in DOM order (the "More" menu is a
+       <details> whose links are always visible in drawer mode). */
+    function focusables() {
+      return $$('a[href], button:not([disabled]), summary, [tabindex]:not([tabindex="-1"])', links)
+        .filter(function (node) { return node.getClientRects().length > 0; });
+    }
+
+    /* The scroll lock.
+
+       A drawer that is open must not let the page behind it move — that is the
+       whole point of the backdrop — but the lock must not cost native
+       scrolling either. The two techniques that look obvious are both wrong
+       here:
+
+       - `body { overflow: hidden }` turns the body into a scroll container
+         that never scrolls, which is exactly what `position: sticky` resolves
+         against: the header un-sticks and the drawer (a fixed child of the
+         header capsule) rides off the top of the screen while the page still
+         believes the menu is open;
+       - swallowing `wheel` / `touchmove` at the document level, plus
+         `touch-action: none` on <html>, disables native panning for the whole
+         document. `touch-action` is resolved as the *intersection* of the
+         element and its ancestors, so `touch-action: none` on <html> also
+         froze the drawer's own list: on iOS the menu could not be scrolled by
+         finger at all, and a stray `touchend` could still trigger Safari's
+         rubber-band / pull-to-refresh.
+
+       What is left is the one lock that is both iOS-proof and layout-neutral:
+       pinning the body out of flow at its current scroll offset for as long as
+       the drawer is open, then putting the offset back on close. The document
+       has nothing left to scroll (so wheel, touch and scroll keys all do
+       nothing, without a single preventDefault), the header keeps its sticky
+       position, and the drawer scrolls natively with `overscroll-behavior:
+       contain` on the list so its momentum never chains to the page. */
+    var lockY = 0;
+    var locked = false;
+
+    function lockPage() {
+      if (locked) return;
+      locked = true;
+      lockY = window.scrollY || window.pageYOffset || 0;
+      var style = document.body.style;
+      style.top = -lockY + 'px';
+      document.body.classList.add('nav-lock');
+      document.documentElement.classList.add('nav-lock');
+    }
+
+    function unlockPage() {
+      if (!locked) return;
+      locked = false;
+      document.body.classList.remove('nav-lock');
+      document.documentElement.classList.remove('nav-lock');
+      document.body.style.top = '';
+      // Put the reader back exactly where they were: no jump, no scroll event
+      // storm, no reflow of the content they were reading.
+      if (lockY) window.scrollTo(0, lockY);
+      lockY = 0;
+    }
+
+    var lastFocus = null;
+
     function closeNav() {
+      if (!document.body.classList.contains('nav-open')) return;
       document.body.classList.remove('nav-open');
       document.documentElement.classList.remove('nav-open');
       btn.setAttribute('aria-expanded', 'false');
       btn.setAttribute('aria-label', 'Open menu');
       if (window.innerWidth > NAV_DRAWER_WIDTH) moreMenus.forEach(function (d) { d.open = false; });
+      unlockPage();
+      // Return focus to the control that opened the drawer, unless the reader
+      // already moved on (e.g. they followed a link).
+      if (lastFocus && lastFocus.isConnected && !links.contains(document.activeElement)) {
+        try { lastFocus.focus({ preventScroll: true }); } catch (error) { /* ignore */ }
+      }
+      lastFocus = null;
     }
+
     function openNav() {
+      if (document.body.classList.contains('nav-open')) return;
+      lastFocus = document.activeElement;
+      lockPage();
       document.body.classList.add('nav-open');
       document.documentElement.classList.add('nav-open');
       btn.setAttribute('aria-expanded', 'true');
       btn.setAttribute('aria-label', 'Close menu');
       if (window.innerWidth <= NAV_DRAWER_WIDTH) moreMenus.forEach(function (d) { d.open = true; });
     }
+
     btn.addEventListener('click', function () {
       document.body.classList.contains('nav-open') ? closeNav() : openNav();
     });
@@ -871,43 +1095,43 @@
       if (event.key === 'Escape') moreMenus.forEach(function (d) { d.open = false; });
     });
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') closeNav();
+      if (event.key !== 'Escape') return;
+      if (!document.body.classList.contains('nav-open')) return;
+      closeNav();
+      try { btn.focus({ preventScroll: true }); } catch (error) { /* ignore */ }
     });
+    /* Keyboard containment while the drawer is open: Tab cycles through the
+       drawer instead of walking into the page hidden behind the backdrop.
+       This is a keydown listener, not a scroll/touch interception, so it
+       cannot interfere with panning or momentum. */
+    document.addEventListener('keydown', function (event) {
+      if (event.key !== 'Tab') return;
+      if (!document.body.classList.contains('nav-open')) return;
+      var items = focusables();
+      if (!items.length) return;
+      var first = items[0];
+      var last = items[items.length - 1];
+      var active = document.activeElement;
+      if (!links.contains(active)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      } else if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+    /* Escape when a <details> "More" menu swallowed it, and prevent the drawer
+       from surviving into desktop layout. */
     window.addEventListener('resize', function () {
       if (window.innerWidth > NAV_DRAWER_WIDTH) closeNav();
     });
-
-    /* Scroll lock. The classic layout lock (overflow/position on html or body)
-       is what used to be here in CSS, and it made things worse: it turns the
-       root or the body into a scroll container, and Chromium then stops
-       honouring `position: sticky` for the header — measured with the drawer
-       open at scrollY 600: header y = -592, drawer y = -521, backdrop up,
-       nothing clickable. The drawer is a fixed child of the header capsule, so
-       it can only be used while the header is on screen; the page is therefore
-       locked by consuming the scroll gestures instead, which leaves layout (and
-       the sticky header) alone. The CSS keeps overscroll-behavior/touch-action
-       guards for gestures this listener never sees. */
-    var SCROLL_KEYS = {
-      ArrowDown: 1, ArrowUp: 1, PageDown: 1, PageUp: 1, Home: 1, End: 1, ' ': 1, Spacebar: 1
-    };
-    function lockOwns(event) {
-      if (!document.body.classList.contains('nav-open')) return false;
-      /* The drawer scrolls its own list: those gestures belong to it. */
-      var target = event.target;
-      if (target && target.closest && target.closest('.nav-links')) return false;
-      return true;
-    }
-    function swallow(event) {
-      if (lockOwns(event)) event.preventDefault();
-    }
-    function swallowKey(event) {
-      if (SCROLL_KEYS[event.key]) swallow(event);
-    }
-    document.addEventListener('wheel', swallow, { passive: false });
-    document.addEventListener('touchmove', swallow, { passive: false });
-    document.addEventListener('keydown', swallowKey);
+    window.addEventListener('pagehide', unlockPage);
 
     OS.closeNav = closeNav;
+    OS.openNav = openNav;
   }
 
   /* Nav fit guard.
@@ -1352,7 +1576,9 @@
               location.href = target;
             }
           } catch (e) {
-            location.href = '/#catalog';
+            // Root-relative, so the fallback still lands on the catalog when
+            // the site is served from a sub-path (GitHub Pages project sites).
+            location.href = url('/#catalog');
           }
         }
       });

@@ -15,7 +15,8 @@
  *   • per-app pages (apps/<slug>/) are still captured on first visit so the
  *     whole catalog stays browsable offline;
  *   • skipWaiting + clients.claim + the update message protocol are kept,
- *     which powers the “new version ready” toast in js/core.js.
+ *     which powers the “new version ready” toast in js/core.js. Since v16
+ *     that toast is opt-in: the page never reloads itself.
  *
  * v4 changes (sub-path deploy fix):
  *   • the site is served from a sub-path (/OmniSource/), so every pathname
@@ -71,15 +72,23 @@
 // opened the dialog off-screen). Bump so returning clients drop the cached
 // stylesheet and pick up the fixed one.
 // v14: findability pass — sticky section tabs + category tablist on the home
-// page, reading-progress line and back-to-top injected on every page, scroll
-// The scroll-lock and drawer work in this release: the sticky header sticks
-// again (body no longer clips its own overflow), the drawer consumes scroll
-// gestures instead of relying on a layout lock that un-stuck the header,
-// favorites survive a reload, /#catalog & friends re-pin after the deferred
-// feeds render, and the palette answers one-character queries. tokens.css,
+// page, plus the reading-progress line and back-to-top bead injected on every
+// page, scroll The scroll-lock and drawer work in this release: the sticky
+// header sticks again (body no longer clips its own overflow), the drawer
+// consumes scroll gestures instead of relying on a layout lock that un-stuck
+// the header, favorites survive a reload, /#catalog & friends re-pin after the
+// deferred feeds render, and the palette answers one-character queries.
+// tokens.css,
 // components.css, core.js, site.js, index.html and every generated app/source
 // page changed, so returning clients must drop the cached shell.
-const VERSION = 'omnisource-v15';
+// v15: the drawer consumes native scrolling through a body pin + CSS
+// containment instead of document-level wheel/touchmove interception (its list
+// pans normally on iOS again, and a fast fling no longer reaches Safari's
+// pull-to-refresh); the page-level update notice stopped reloading by itself
+// and became an opt-in Update / Later toast in js/core.js. tokens.css,
+// components.css, core.js, index.html and the generated app/source pages all
+// changed, so the shell version has to move with them.
+const VERSION = 'omnisource-v16';
 const CORE_CACHE = `${VERSION}-core`;
 const DATA_CACHE = `${VERSION}-data`;
 const ASSET_CACHE = `${VERSION}-assets`;

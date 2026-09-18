@@ -198,7 +198,23 @@ class UpdateProtocolTests(unittest.TestCase):
         self.assertIn(marker, self.core)
         handler = self._code(self.core.split(marker, 1)[1].split("\n          });", 1)[0])
         self.assertIn("hadController", handler)
-        self.assertLess(handler.index("hadController"), handler.index("location.reload()"))
+        # The handler only *offers* the update to a page that was already
+        # controlled; what reloads is the reader choosing Update, not the
+        # message (see the test below). An `assertLess` against a reload that
+        # lives in a different function would pass while the reload came back.
+        self.assertNotIn("location.reload()", handler)
+        self.assertIn("offerServiceWorkerUpdate", handler)
+
+    def test_the_only_reload_in_the_runtime_is_the_reader_choosing_update(self) -> None:
+        code = self._code(self.core)
+        self.assertEqual(1, code.count("location.reload()"), "an automatic reload path came back")
+        update = code.split("function applyServiceWorkerUpdate", 1)[1].split("\n  }", 1)[0]
+        self.assertIn("location.reload()", update)
+        # ...and the prompt that leads to it is a persistent Update/Later
+        # choice, never a timed notice that reloads on its own.
+        prompt = code.split("function offerServiceWorkerUpdate", 1)[1].split("\n  }", 1)[0]
+        self.assertIn("persistent: true", prompt)
+        self.assertIn("pwa.later", prompt)
 
     def test_reload_happens_at_most_once_per_version_and_tab(self) -> None:
         self.assertIn("omnisource-sw-reloaded:", self.core)

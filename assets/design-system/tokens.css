@@ -431,6 +431,16 @@ html {
   -webkit-text-size-adjust: 100%;
   /* Prevent horizontal scroll without using clip which breaks sticky on iOS */
   overflow-x: hidden;
+  /* Pull-to-refresh / scroll chaining. On a phone, a fast downward fling at the
+     top of the page used to hand the gesture to the browser, which answered it
+     by reloading the whole document — the "the site refreshed itself while I
+     was scrolling" report. `contain` keeps the gesture inside the page instead
+     of chaining it to the browser's own reload affordance. */
+  overscroll-behavior-y: contain;
+  /* The drawer's body lock takes the body out of flow; reserving the gutter
+     keeps the viewport width — and therefore the layout — identical before,
+     during and after the drawer, so nothing shifts sideways. */
+  scrollbar-gutter: stable;
 }
 
 body {
