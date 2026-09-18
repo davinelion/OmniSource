@@ -48,6 +48,33 @@ on:
         required: false
         type: string
         default: ""
+  # The Tweak Factory (tweak-factory.yml) calls this workflow once per build
+  # with the URLs it resolved from the registry. Inputs mirror the dispatch
+  # inputs exactly; safe_name is exported so the caller can find the IPA.
+  workflow_call:
+    inputs:
+      base_ipa_url:
+        required: true
+        type: string
+      tweak_deb_url:
+        required: true
+        type: string
+      tweak_name:
+        required: false
+        type: string
+        default: "Tweak"
+      app_name:
+        required: false
+        type: string
+        default: ""
+      bundle_id:
+        required: false
+        type: string
+        default: ""
+    outputs:
+      safe_name:
+        description: "Sanitized tweak name, also used for the uploaded artifact"
+        value: ${{ jobs.build.outputs.safe_name }}
 
 permissions:
   contents: read
@@ -57,6 +84,9 @@ jobs:
     name: Inject tweak into IPA
     runs-on: macos-14
     timeout-minutes: 30
+    outputs:
+      safe_name: ${{ steps.sanitize.outputs.safe_name }}
+
 
     steps:
       - uses: actions/checkout@v6
@@ -146,7 +176,9 @@ jobs:
           fi
 
           echo "Injecting tweak with Cyan..."
-          cyan -i base.ipa -o output.ipa -d tweak.deb "${FLAGS[@]}"
+          # ${FLAGS[@]+"..."} guards empty arrays under `set -u` on the macOS
+          # runner's bash 3.2 (a bare "${FLAGS[@]}" would abort as unbound).
+          cyan -i base.ipa -o output.ipa -d tweak.deb ${FLAGS[@]+"${FLAGS[@]}"}
 
       - name: Upload Patched IPA Artifact
         uses: actions/upload-artifact@v6

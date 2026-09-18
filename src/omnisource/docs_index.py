@@ -40,6 +40,11 @@ DOCUMENTS = (
         "Source builds",
         "The separate lane for projects that publish source but no binary: recipes, digests, signing.",
     ),
+    (
+        "TWEAK-FACTORY.md",
+        "Tweak factory",
+        "The scheduled lane that collects official .deb tweaks, injects them and publishes provenance releases.",
+    ),
 )
 
 _HEADING = re.compile(r"^#\s+(.+)$", re.M)
