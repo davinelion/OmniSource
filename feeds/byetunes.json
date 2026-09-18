@@ -45,13 +45,13 @@
               "fileType": "IPA",
               "size": 16815108,
               "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
-              "downloads": 610,
+              "downloads": 616,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
-          "downloads": 610
+          "downloads": 616
         }
       ],
       "screenshotURLs": [],
@@ -77,8 +77,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Upstream documents iOS 16.0 or later. Writing into the media database is an unofficial flow: back up anything you cannot lose before mass-importing, and re-run the import after a major iOS update."

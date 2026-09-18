@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 1076407494,
               "sha256": "2aaf7fe05cbe86a5d8c5c012c4b87a688d68fd160f53cca1f486d2e7d0f70f8c",
-              "downloads": 10403,
+              "downloads": 10414,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,13 +57,13 @@
               "fileType": "IPA",
               "size": 781548550,
               "sha256": "fc2108d908843737d916c77444f79de4c1fc99b4681b2ba9eed10db5cb3e9f81",
-              "downloads": 705,
+              "downloads": 707,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "2aaf7fe05cbe86a5d8c5c012c4b87a688d68fd160f53cca1f486d2e7d0f70f8c",
-          "downloads": 10403
+          "downloads": 10414
         }
       ],
       "screenshotURLs": [],
@@ -89,8 +89,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official stable releases; the rolling alpha tag is a pre-release and is not tracked. The iOS IPA is around 1 GB because every emulator core is bundled, and the tvOS build is skipped. Provenance ships no games - you supply your own ROMs."

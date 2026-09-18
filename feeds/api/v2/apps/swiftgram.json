@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-18",
-  "feedVersion": "d1610614b2c6",
+  "feedVersion": "4ecaa2846e9a",
   "app": {
     "id": "swiftgram",
     "name": "Swiftgram",
@@ -30,8 +30,8 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/swiftgram/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/swiftgram.json",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+      "reachable": true,
+      "detail": "HTTP 200",
       "updatedAt": "2026-09-05"
     }
   },
@@ -52,8 +52,8 @@
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }

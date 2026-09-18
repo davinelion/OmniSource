@@ -45,12 +45,12 @@
               "fileType": "IPA",
               "size": 1058266,
               "sha256": null,
-              "downloads": 2983,
+              "downloads": 2985,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 2983
+          "downloads": 2985
         }
       ],
       "screenshotURLs": [],
@@ -76,8 +76,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "TrollStore-named .tipa (byte-identical to an .ipa) from bomberfish/CAPerfHUDSwift, the Swift alternative to the original CAPerfHUD; install with TrollStore, or rename to .ipa if your client rejects the extension. Unmaintained since v1.0.2 (December 2023)."

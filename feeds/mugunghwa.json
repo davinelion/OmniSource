@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 3889341,
               "sha256": null,
-              "downloads": 158442,
+              "downloads": 158476,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,12 +57,12 @@
               "fileType": "IPA",
               "size": 3889341,
               "sha256": null,
-              "downloads": 32642,
+              "downloads": 32648,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 158442
+          "downloads": 158476
         }
       ],
       "screenshotURLs": [],
@@ -88,8 +88,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from s8ngyu/Mugunghwa. Unmaintained - the last release is 3.0.2 (March 2024)."

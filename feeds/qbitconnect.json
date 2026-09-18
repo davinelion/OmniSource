@@ -69,13 +69,13 @@
               "fileType": "IPA",
               "size": 11798221,
               "sha256": "683361416e6816c167f4dd72b5d4742a59c3a10faaa0823f8c5ec0754ba941c4",
-              "downloads": 168,
+              "downloads": 170,
               "mimeType": "binary/octet-stream",
               "installable": true
             }
           ],
           "sha256": "683361416e6816c167f4dd72b5d4742a59c3a10faaa0823f8c5ec0754ba941c4",
-          "downloads": 168
+          "downloads": 170
         }
       ],
       "screenshotURLs": [],
@@ -101,8 +101,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPAs from the developer's own GitHub releases (iOS 15+ per the Xcode project). The developer's AltStore PAL source may carry newer builds from a separate pipeline; this feed tracks the signed-off GitHub release tags."

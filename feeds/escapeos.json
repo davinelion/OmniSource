@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 7274676,
               "sha256": "234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2",
-              "downloads": 0,
+              "downloads": 7,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "other",
               "size": 97089368,
               "sha256": "6524066d54ef23e00d46445c04dfc694e180196d54119d718f68434fa225be35",
-              "downloads": 0,
+              "downloads": 1,
               "mimeType": "application/x-archive",
               "installable": false
             },
@@ -69,12 +69,13 @@
               "fileType": "other",
               "size": 168,
               "sha256": "a8fb24260a20a9f36a45f9b0aeef89ea4da47f07353254221898504a31e6e3b6",
-              "downloads": 0,
+              "downloads": 1,
               "mimeType": "text/plain; charset=utf-8",
               "installable": false
             }
           ],
-          "sha256": "234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2"
+          "sha256": "234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2",
+          "downloads": 7
         }
       ],
       "screenshotURLs": [],
@@ -100,8 +101,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from pwnapplehat/EscapeOS; each release publishes a SHA256SUMS.txt. After install, import a pairing file from iPASide or iLoader so the PC is no longer required."

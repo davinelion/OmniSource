@@ -45,13 +45,13 @@
               "fileType": "IPA",
               "size": 6214108,
               "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-              "downloads": 24928,
+              "downloads": 24942,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
-          "downloads": 24928
+          "downloads": 24942
         }
       ],
       "screenshotURLs": [],
@@ -77,8 +77,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official .tipa from the project's GitHub releases - a .tipa is byte-identical to an .ipa, so AltStore, SideStore, Feather and ESign install it after re-signing it with your certificate. The injection itself only works where TrollStore exists (upstream states iOS 14.0 - 17.0), so on newer firmware the app installs but cannot patch anything."

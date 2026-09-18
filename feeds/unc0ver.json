@@ -45,12 +45,12 @@
               "fileType": "IPA",
               "size": 43235739,
               "sha256": null,
-              "downloads": 524944,
+              "downloads": 524950,
               "mimeType": "application/binary",
               "installable": true
             }
           ],
-          "downloads": 524944
+          "downloads": 524950
         }
       ],
       "screenshotURLs": [],
@@ -80,8 +80,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from pwn20wndstuff/Undecimus. Development stopped with version 5.2.0 (June 2020), which is the build served here — it covers iOS 11.0 – 14.8.1 depending on the device. Sign with your own certificate and keep in mind that free certificates expire after seven days, after which the app must be re-signed to re-apply the jailbreak."

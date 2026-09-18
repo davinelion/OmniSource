@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 55409206,
               "sha256": "ad0c4ea182b232346470df10439cfa2c1b7952e6b586113edfbc2720e455b201",
-              "downloads": 174131,
+              "downloads": 174732,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -57,13 +57,13 @@
               "fileType": "IPA",
               "size": 55409206,
               "sha256": "ad0c4ea182b232346470df10439cfa2c1b7952e6b586113edfbc2720e455b201",
-              "downloads": 11129,
+              "downloads": 11168,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ad0c4ea182b232346470df10439cfa2c1b7952e6b586113edfbc2720e455b201",
-          "downloads": 174131
+          "downloads": 174732
         }
       ],
       "screenshotURLs": [],
@@ -93,8 +93,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official unsigned IPA from opa334/Dopamine (the upstream also publishes an identical .tipa for TrollStore; this source serves the .ipa). Supported firmware and device lists change between releases — check the release notes before updating. Sign with your own certificate through SideStore, AltStore, Feather or ESign."

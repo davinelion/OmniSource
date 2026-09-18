@@ -45,7 +45,7 @@
               "fileType": "other",
               "size": 811,
               "sha256": "9056b0106032cd126a87d513e3d1a4025bba16689376e70b33e4113379a72599",
-              "downloads": 2295,
+              "downloads": 2297,
               "mimeType": "raw",
               "installable": false
             },
@@ -69,7 +69,7 @@
               "fileType": "APK",
               "size": 128388471,
               "sha256": "20de38abd2eea0c0998174c8a34b324f4a9531665110f67176257e7ecc5bf0fe",
-              "downloads": 216248,
+              "downloads": 216415,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -81,7 +81,7 @@
               "fileType": "IPA",
               "size": 34853093,
               "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0",
-              "downloads": 13488,
+              "downloads": 13504,
               "mimeType": "raw",
               "installable": true
             },
@@ -93,7 +93,7 @@
               "fileType": "other",
               "size": 34254800,
               "sha256": "aba4a987e064c32852fb73a1847a3b77500f6f838e613faeffe4d0ca28b56518",
-              "downloads": 501,
+              "downloads": 502,
               "mimeType": "raw",
               "installable": false
             },
@@ -105,7 +105,7 @@
               "fileType": "other",
               "size": 35261468,
               "sha256": "cc04df17e43a8f36447942045cf81f514a0c88aeaa950cb17083510760dd25f5",
-              "downloads": 5419,
+              "downloads": 5422,
               "mimeType": "raw",
               "installable": false
             },
@@ -129,7 +129,7 @@
               "fileType": "DEB",
               "size": 37636312,
               "sha256": "71bf6a3cd275c01df3511bc108b10922bf8be01198c2d82301ecd2466e104031",
-              "downloads": 563,
+              "downloads": 564,
               "mimeType": "raw",
               "installable": true
             },
@@ -141,7 +141,7 @@
               "fileType": "AppImage",
               "size": 106015224,
               "sha256": "a14dc29d7778fad748062159541cd47e797719f37175df2726c74cd3c5519a48",
-              "downloads": 3758,
+              "downloads": 3763,
               "mimeType": "raw",
               "installable": true
             },
@@ -153,7 +153,7 @@
               "fileType": "DEB",
               "size": 37996550,
               "sha256": "1446f998f986380330e279c5274902fb29a0e3305d5175a3bc83b4b06392e8cd",
-              "downloads": 7090,
+              "downloads": 7097,
               "mimeType": "raw",
               "installable": true
             },
@@ -177,7 +177,7 @@
               "fileType": "DMG",
               "size": 63167099,
               "sha256": "27627dfd44190040af1a6ba6a86cdc4450399296a43a616940a94ae687ac0913",
-              "downloads": 7595,
+              "downloads": 7603,
               "mimeType": "raw",
               "installable": true
             },
@@ -201,7 +201,7 @@
               "fileType": "EXE",
               "size": 38294732,
               "sha256": "e5641f3841ec724fcb5e00a22d980f410ee507fdd00669b86db0c29f9b741162",
-              "downloads": 60823,
+              "downloads": 60883,
               "mimeType": "raw",
               "installable": true
             },
@@ -213,13 +213,13 @@
               "fileType": "other",
               "size": 37749819,
               "sha256": "0d338156b2284863d3e4cc63020190e83f6ddcc71ceff048cb73ee882cabb5e9",
-              "downloads": 408,
+              "downloads": 410,
               "mimeType": "raw",
               "installable": false
             }
           ],
           "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0",
-          "downloads": 13488
+          "downloads": 13504
         }
       ],
       "screenshotURLs": [],
@@ -245,8 +245,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official release IPA (Spotube-iOS.ipa, stable flavor) built by the developer's release pipeline and published with SHA-256/MD5 checksum files. It does not conflict with the official Spotify app. Android and desktop builds ship in the same release."

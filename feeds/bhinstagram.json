@@ -45,7 +45,7 @@
               "fileType": "IPA",
               "size": 228416558,
               "sha256": null,
-              "downloads": 10955,
+              "downloads": 10959,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -86,7 +86,7 @@
               "installable": true
             }
           ],
-          "downloads": 10955
+          "downloads": 10959
         }
       ],
       "screenshotURLs": [],
@@ -112,8 +112,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official sideloaded build from BandarHL/BHInstagram. The release also ships a TrollStore .tipa, which OmniSource skips - only the sideloaded .ipa is tracked."

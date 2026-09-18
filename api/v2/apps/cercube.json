@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-18",
-  "feedVersion": "d1610614b2c6",
+  "feedVersion": "4ecaa2846e9a",
   "app": {
     "id": "cercube",
     "name": "Cercube for YouTube",
@@ -30,8 +30,8 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/cercube/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/cercube.json",
     "health": {
-      "reachable": false,
-      "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+      "reachable": true,
+      "detail": "HTTP 302",
       "updatedAt": "2026-09-18"
     }
   },
@@ -52,8 +52,8 @@
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }

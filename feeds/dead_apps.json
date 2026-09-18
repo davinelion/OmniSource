@@ -6,14 +6,27 @@
     "stale": 180,
     "archived": 365
   },
-  "count": 58,
+  "count": 59,
   "summary": {
     "warning": 10,
     "stale": 13,
     "archived": 35,
-    "critical": 0
+    "critical": 1
   },
   "deadApps": [
+    {
+      "slug": "raintweak",
+      "name": "RainTweak",
+      "lastUpdate": "2026-06-19",
+      "daysSinceUpdate": 91,
+      "classification": "critical",
+      "removedReleases": 1,
+      "supersededReleases": 0,
+      "reasons": [
+        "removed upstream release(s): 1.2.0 (newer than 0.9.3)",
+        "no update for 91 days (threshold 90)"
+      ]
+    },
     {
       "slug": "airtroller",
       "name": "AirTroller",
@@ -1237,12 +1250,15 @@
     {
       "slug": "raintweak",
       "name": "RainTweak",
-      "lastUpdate": "2026-09-17",
-      "daysSinceUpdate": 1,
-      "classification": "healthy",
-      "removedReleases": 0,
+      "lastUpdate": "2026-06-19",
+      "daysSinceUpdate": 91,
+      "classification": "critical",
+      "removedReleases": 1,
       "supersededReleases": 0,
-      "reasons": []
+      "reasons": [
+        "removed upstream release(s): 1.2.0 (newer than 0.9.3)",
+        "no update for 91 days (threshold 90)"
+      ]
     },
     {
       "slug": "infuseplus",

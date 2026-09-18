@@ -45,7 +45,7 @@
               "fileType": "APK",
               "size": 37702413,
               "sha256": "cb19e0b910a53da5a8b8c7616565b4c014fdb4cb9b013df32c20e924b2b0c715",
-              "downloads": 11805,
+              "downloads": 11847,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -57,7 +57,7 @@
               "fileType": "APK",
               "size": 36621609,
               "sha256": "fa9a7993843f12e9bd05149c90914485bf170540169b8ca2f7ef89b9ff5128d3",
-              "downloads": 266,
+              "downloads": 267,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -69,7 +69,7 @@
               "fileType": "APK",
               "size": 97025621,
               "sha256": "4ae7cb174483fa2fd191855e13b4a468950ca0da090886f27579be3a28a4f219",
-              "downloads": 939,
+              "downloads": 944,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -93,7 +93,7 @@
               "fileType": "IPA",
               "size": 39662751,
               "sha256": "72d546ba01fb33c82c80fa02332bd9aecc80fd16157d39ac4af901e28f554ece",
-              "downloads": 1156,
+              "downloads": 1160,
               "mimeType": "raw",
               "installable": true
             },
@@ -105,7 +105,7 @@
               "fileType": "AppImage",
               "size": 44075512,
               "sha256": "38efc71e213a49f52aa5adcaae1261067d2acc32e5f447c9df489939e867ad85",
-              "downloads": 425,
+              "downloads": 429,
               "mimeType": "raw",
               "installable": true
             },
@@ -141,7 +141,7 @@
               "fileType": "ZIP",
               "size": 52983094,
               "sha256": "4777e6bc19df964e0d2d1c9411bb1ba23a4ca7c09ff947844d0ccb594d73bb8b",
-              "downloads": 1160,
+              "downloads": 1165,
               "mimeType": "raw",
               "installable": false
             },
@@ -153,7 +153,7 @@
               "fileType": "EXE",
               "size": 39141844,
               "sha256": "c1780331d3614177b92286563b6788ef90ff566b3ba3a8ddf116ba73ea5611e7",
-              "downloads": 1622,
+              "downloads": 1625,
               "mimeType": "raw",
               "installable": true
             },
@@ -165,7 +165,7 @@
               "fileType": "DMG",
               "size": 92783072,
               "sha256": "612ced0df6b66b91d807061a37ab794c9cf6105c7c4251200c6da814ebaa6f72",
-              "downloads": 313,
+              "downloads": 314,
               "mimeType": "raw",
               "installable": true
             },
@@ -183,7 +183,7 @@
             }
           ],
           "sha256": "72d546ba01fb33c82c80fa02332bd9aecc80fd16157d39ac4af901e28f554ece",
-          "downloads": 1156
+          "downloads": 1160
         }
       ],
       "screenshotURLs": [],
@@ -209,8 +209,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official unsigned IPA (AnymeX-iOS-<version>.ipa) built by the developer's release pipeline; the Flutter project targets iOS 12+. Content sources are provided by community extensions."

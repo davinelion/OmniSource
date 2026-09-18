@@ -45,12 +45,12 @@
               "fileType": "IPA",
               "size": 7141231,
               "sha256": null,
-              "downloads": 9538,
+              "downloads": 9542,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 9538
+          "downloads": 9542
         }
       ],
       "screenshotURLs": [],
@@ -76,8 +76,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official IPA from the developer's GitHub releases (2.0 line requires iOS 17+). Also distributed via the SideStore Community Source."

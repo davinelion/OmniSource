@@ -100,15 +100,17 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "UNOFFICIAL BUILD. NexaSC has no public repository or developer feed - the only distribution channel is the IPA Vault source, so no developer-published download link exists to verify. Not affiliated with or endorsed by SoundCloud Ltd. Current SoundCloud 8.x builds require iOS 16.4 or newer (a pinned 7.68.1 build for iOS 16.0-16.3 also exists in the vault but is not tracked here). Shares com.soundcloud.TouchApp with TTKillerPlus in this catalog - install one at a time."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "TLS/SSL connection has been closed (EOF) (_ssl.c:992)",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-18",
           "lastUpdatedAt": "2026-09-16"
         }

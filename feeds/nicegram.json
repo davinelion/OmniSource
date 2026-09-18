@@ -57,13 +57,13 @@
               "fileType": "IPA",
               "size": 126339077,
               "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
-              "downloads": 197,
+              "downloads": 200,
               "mimeType": "application/zip",
               "installable": true
             }
           ],
           "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
-          "downloads": 197
+          "downloads": 200
         }
       ],
       "screenshotURLs": [],
@@ -89,8 +89,10 @@
           "clients": [
             "altstore",
             "sidestore",
+            "flarestore",
             "feather",
             "esign",
+            "ksign",
             "livecontainer"
           ],
           "notes": "Official release build from nicegram/Nicegram-iOS (release name carries the app version, e.g. 'Nicegram 2.6.1 (713)'). The .ipa is unsigned and meant to be signed per the official guide (nicegram.me/download -> 'How to install IPA?'); also published on the App Store (id1608870673) and TestFlight. Requires iOS 15.0+ (App Store listing)."
