@@ -1,11 +1,11 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "d72d28da07e1",
+  "feedVersion": "15b634cd728b",
   "data": {
     "schemaVersion": 1,
-    "generatedAt": "2026-09-18",
-    "lastSync": "2026-09-18",
+    "generatedAt": "2026-09-19",
+    "lastSync": "2026-09-19",
     "totals": {
       "apps": 130,
       "sources": 114,
@@ -20,7 +20,7 @@
       "downloadsReachable": 130,
       "deadLinks": 0,
       "newAppsThisWeek": 6,
-      "updatedAppsThisWeek": 30,
+      "updatedAppsThisWeek": 34,
       "clientsSupported": 7
     },
     "newThisWeek": [
@@ -75,12 +75,52 @@
     ],
     "updatedThisWeek": [
       {
+        "slug": "youmod",
+        "name": "uPro Plus",
+        "version": "21.37.5",
+        "previousVersion": "21.37.4",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.37.5_2.0.0.ipa"
+      },
+      {
+        "slug": "youpro",
+        "name": "YouPro",
+        "version": "21.37.5",
+        "previousVersion": "21.37.4",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa3/YouProExtra_21.37.5_1.3.1.ipa"
+      },
+      {
+        "slug": "ytkp",
+        "name": "YTKillerPlus",
+        "version": "21.37.5",
+        "previousVersion": "21.37.4",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.37.5_6.1.ipa"
+      },
+      {
+        "slug": "nuvio",
+        "name": "Nuvio",
+        "version": "0.4.24",
+        "previousVersion": "0.4.23",
+        "date": "2026-09-18",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa"
+      },
+      {
         "slug": "manicemu",
         "name": "Manic EMU",
         "version": "2.0.1",
         "previousVersion": "2.0.0",
         "date": "2026-09-18",
         "downloadURL": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa"
+      },
+      {
+        "slug": "mangayomi",
+        "name": "Mangayomi",
+        "version": "0.9.5",
+        "previousVersion": "0.9.4",
+        "date": "2026-09-18",
+        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa"
       },
       {
         "slug": "escapeos",
@@ -305,14 +345,6 @@
         "previousVersion": "2.4.9.26",
         "date": "2026-09-12",
         "downloadURL": "https://github.com/roothide/Dopamine2-roothide/releases/download/27/Dopamine.ipa"
-      },
-      {
-        "slug": "apollo",
-        "name": "Apollo",
-        "version": "3.7.0",
-        "previousVersion": "3.6.0",
-        "date": "2026-09-11",
-        "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.0/Apollo-Reborn-3.7.0.ipa"
       }
     ],
     "topCategories": [
@@ -408,13 +440,13 @@
     ],
     "history": [
       {
-        "date": "2026-09-18",
+        "date": "2026-09-19",
         "apps": 130,
         "sources": 114,
         "verified": 129,
         "deadLinks": 0,
         "newThisWeek": 6,
-        "updatedThisWeek": 30
+        "updatedThisWeek": 34
       }
     ]
   }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-18T15:10:01Z",
+  "generatedAt": "2026-09-19T11:22:48Z",
   "appCount": 130,
-  "releases": 162,
+  "releases": 167,
   "apps": {
     "3105": [
       {
@@ -710,13 +710,23 @@
     ],
     "mangayomi": [
       {
+        "version": "0.9.5",
+        "date": "2026-09-18",
+        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa",
+        "size": 114289495,
+        "sha256": "d95136ebfdf240638bc369c5729e65bb99a17ee430037e615888203070885ac2",
+        "localizedDescription": "Mangayomi 0.9.5 | Mangayomi-v0.9.5-ios\n\n## What's Changed\n\n## Reader & Novels\n\n* **Smart Double-Page Mode** (#1008):\n  * Automatically switch to double-page view based on screen orientation (landscape/portrait).\n  * Chapter transition pages now remain isolated for a natural, seamless reading experience.\n* **Complete Novel Reader Overhaul** (#1014):\n  * Added double-page reading mode support for novels.\n  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).\n  * Added smooth auto-scroll with fine-tuned speed controls.\n  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.\n  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).\n* **Smooth Webtoon Scrolling**:\n  * Much smoother continuous scrolling without stutter or layout jumps.\n  * Fluid auto-scroll that reacts instantly to touch and drag gestures.\n* **Reliable Page Error Recovery**:\n  * The **Retry** button is now immediately clickable with no menu overlay interference.\n  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.\n* **Dedicated Page Cache**:\n  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.\n\n---\n\n##  Features & User Experience\n\n* **Quick Resume from History** (#1005):\n  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).\n* **One-Tap Global Search**:\n  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).\n  * Warns you before adding an entry that is already in your library.\n* **Customizable Chapter Swipe Actions** (#1005):\n  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Downl",
+        "status": "current",
+        "firstSeen": "2026-09-19T11:22:48Z"
+      },
+      {
         "version": "0.9.4",
         "date": "2026-09-15",
         "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
         "size": 114238780,
         "sha256": "dbaa10d7a8efc3e799917bf4e28dd8728946521abfd84988ca98abf9ba7ec41f",
         "localizedDescription": "Mangayomi 0.9.4 | Mangayomi-v0.9.4-ios\n\n## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-15T22:43:23Z"
       },
       {
@@ -948,13 +958,23 @@
     ],
     "nuvio": [
       {
+        "version": "0.4.24",
+        "date": "2026-09-18",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
+        "size": 51517735,
+        "sha256": "89c458d16340437f9923a0d8e81c5fa6d4ae77be9db5c0f614e73f4ae792b042",
+        "localizedDescription": "Nuvio 0.4.24 | nuvio-0.4.24-full-release\n\n- 042144f8 fix(player): remember brightness across playback sessions @tapframe  \n- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  \n- 4c3bd0d0 feat(player): follow design parity @tapframe  \n- 6fb46976 feat(settings): add rating visibility controls @tapframe",
+        "status": "current",
+        "firstSeen": "2026-09-19T11:22:48Z"
+      },
+      {
         "version": "0.4.23",
         "date": "2026-09-17",
         "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.23-beta/nuvio-0.4.23-full-release.ipa",
         "size": 51420909,
         "sha256": "5b47a730e6467ca18baf39ee2ef589714761fdb4d0ff5b2040800a8c994c1e40",
         "localizedDescription": "Nuvio 0.4.23 | nuvio-0.4.23-full-release\n\n- 542aa570 fix(simkl): retain posters when marking items watched @tapframe  \n- 08bdd629 fix(home): restore wide continue watching sizing @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1975)](https://github.com/NuvioMedia/NuvioMobile/pull/1975) @blueocean2308  \n- a599340e fix(ui): use filled chips and consistent surface colors @tapframe  \n- [feat(playback): support IntroDB movie segments and external forwarding (#1963)](https://github.com/NuvioMedia/NuvioMobile/pull/1963) @Laskco",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-17T23:15:53Z"
       }
     ],
@@ -1722,13 +1742,23 @@
     ],
     "youmod": [
       {
+        "version": "21.37.5",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.37.5_2.0.0.ipa",
+        "size": 129607654,
+        "sha256": "ff1fbc8cf3b3a01485a516361896151e0a87df620c21d2282adcb33b3b474f74",
+        "localizedDescription": "YouTube 21.37.5 | uPro Plus extra tweaks | YouMod_21.37.5_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - no standalone iSponsorBlock. (unstable in newer builds)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "status": "current",
+        "firstSeen": "2026-09-19T11:22:48Z"
+      },
+      {
         "version": "21.37.4",
         "date": "2026-09-14",
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.37.4_2.0.0.ipa",
         "size": 129607592,
         "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
         "localizedDescription": "YouTube 21.37.4 | uPro Plus extra tweaks | YouMod_21.37.4_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-14T13:13:12Z"
       },
       {
@@ -1744,13 +1774,23 @@
     ],
     "youpro": [
       {
+        "version": "21.37.5",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa3/YouProExtra_21.37.5_1.3.1.ipa",
+        "size": 129768863,
+        "sha256": "e7b5f08dfc70eda967ef49882a4c1046ae8e0849af8c86fb4ebb9fa4dcc61fc7",
+        "localizedDescription": "YouTube 21.37.5 | YouProExtra_21.37.5_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. (unstable in newer builds)\n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "status": "current",
+        "firstSeen": "2026-09-19T11:22:48Z"
+      },
+      {
         "version": "21.37.4",
         "date": "2026-09-14",
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa0/YouProExtra_21.37.4_1.3.1.ipa",
         "size": 129769811,
         "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
         "localizedDescription": "YouTube 21.37.4 | YouProExtra_21.37.4_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. \n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "removed",
+        "status": "superseded",
         "firstSeen": "2026-09-14T13:13:12Z"
       },
       {
@@ -1760,7 +1800,7 @@
         "size": 129769811,
         "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
         "localizedDescription": "YouTube 21.37.4 | YouProExtra_21.37.4_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. \n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-15T12:00:00Z"
       },
       {
@@ -1798,13 +1838,23 @@
     ],
     "ytkp": [
       {
+        "version": "21.37.5",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.37.5_6.1.ipa",
+        "size": 143258392,
+        "sha256": "fd3823a64212f763c02bbce9d14609dc2a4262abf61b045f67771f0ed3e2d53b",
+        "localizedDescription": "YouTube 21.37.5 | YTKillerPlus_21.37.5_6.1\n\n### Latest Release, ENJOY!!\n\n- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)\n\n> [!NOTE]\n> - **Sidestore is no longer supported!!.**\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - use **YTKACE or any other mod** for downloading. dev intentionally broke download feature.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "status": "current",
+        "firstSeen": "2026-09-19T11:22:48Z"
+      },
+      {
         "version": "21.37.4",
         "date": "2026-09-14",
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa2/YTKillerPlus_21.37.4_6.1.ipa",
         "size": 143259058,
         "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
         "localizedDescription": "YouTube 21.37.4 | YTKillerPlus_21.37.4_6.1\n\n### Latest Release, ENJOY!!\n\n- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)\n\n> [!NOTE]\n> - **Sidestore is no longer supported!!.**\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - use **YTKACE or any other mod** for downloading. dev intentionally broke download feature.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-14T13:13:12Z"
       },
       {
