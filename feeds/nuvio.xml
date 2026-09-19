@@ -5,8 +5,25 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
     <description>Release feed for Nuvio within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/nuvio.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Nuvio v0.4.25</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.4.25</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.4.25 | nuvio-0.4.25-full-release
+
+- b5163558 fix(home): prevent hero flash when cycling @tapframe  
+- 656f368c fix(pr): update workflow @tapframe  
+- [i18n(el): sync Greek translations with the current English strings (#1991)](https://github.com/NuvioMedia/NuvioMobile/pull/1991) @nosvasedis  
+- 98be8514 revert(ui): restore previous surface and chip styles @tapframe  
+- [i18n(vi): update latest Vietnamese strings (#1990)](https://github.com/NuvioMedia/NuvioMobile/pull/1990) @blueocean2308  
+- [fix(simkl): three bugs in the shared Simkl read and write paths (#1988)](https://github.com/NuvioMedia/NuvioMobile/pull/1988) @Judzim  
+- 99ced26a feat(player): add Infuse playback callbacks @tapframe  
+- [fix(ios): bundle CJK font for subtitles (#1833)](https://github.com/NuvioMedia/NuvioMobile/pull/1833) @tinyKyuu]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Nuvio v0.4.24</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>

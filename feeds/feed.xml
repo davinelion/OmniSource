@@ -82,6 +82,99 @@
       <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.37.5_2.0.0.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>Nuvio v0.4.25</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.4.25</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.4.25 | nuvio-0.4.25-full-release
+
+- b5163558 fix(home): prevent hero flash when cycling @tapframe  
+- 656f368c fix(pr): update workflow @tapframe  
+- [i18n(el): sync Greek translations with the current English strings (#1991)](https://github.com/NuvioMedia/NuvioMobile/pull/1991) @nosvasedis  
+- 98be8514 revert(ui): restore previous surface and chip styles @tapframe  
+- [i18n(vi): update latest Vietnamese strings (#1990)](https://github.com/NuvioMedia/NuvioMobile/pull/1990) @blueocean2308  
+- [fix(simkl): three bugs in the shared Simkl read and write paths (#1988)](https://github.com/NuvioMedia/NuvioMobile/pull/1988) @Judzim  
+- 99ced26a feat(player): add Infuse playback callbacks @tapframe  
+- [fix(ios): bundle CJK font for subtitles (#1833)](https://github.com/NuvioMedia/NuvioMobile/pull/1833) @tinyKyuu]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Mangayomi v0.9.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.6</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.6 | Mangayomi-v0.9.6-ios
+
+# What's New
+
+## 📖 Reader & Manga
+
+* **Intelligent Double-Page Spreads & RTL Reading** (#1018, #1008):
+  * Wide and landscape double-page spreads are now shown seamlessly on their own full-width screen instead of being awkwardly paired with single pages.
+  * Switching between single and double-page view, rotating your device, or changing reading modes no longer resets your progress back to chapter 1.
+  * Resuming chapters in Right-to-Left (manga) reading mode now starts in the correct direction without layout flipping.
+* **Instant Border Cropping & Cache Improvements**:
+  * Turning border crop on or off in Webtoon / continuous reading now applies instantly without re-downloading the images.
+  * Fixed an issue where resuming a chapter at a saved page could cause an infinite loading spinner for already cached images.
+* **Smoother Reading Experience**:
+  * Fixed page flickering and display glitches when scrolling quickly through continuous chapters.
+
+---
+
+## Novel Reader
+
+* **Scroll-Free E-Reader Paged Mode** (#1019):
+  * Read novels like a real book with page-turning swipes and taps instead of endless vertical scrolling.
+  * Quickly switch between **Continuous Scroll** and **Paged Reading** directly from the novel settings sheet.
+* **Single & Double-Page Column Layouts** (#1019):
+  * Added single-page and side-by-side double-page reading modes, optimized for tablets, foldable devices, and landscape screens.
+  * Settings sheet changes (reading mode, page mode) are now applied and previewed instantly.
+
+---
+
+## Video Player & Anime
+
+* **Player Screen Lock (Mobile)**:
+  * Added a dedicated screen lock button to the mobile controls to prevent accidental touches while watching.
+  * When locked, all on-screen controls, touch gestures (swiping to seek, volume/brightness, double-tap jump, 2x speed hold), and the skip button are completely disabled.
+  * Protects against accidentally exiting the player with the back button or back gesture.
+  * Tap anywhere on the locked screen to display a quick-unlock button in the top-left corner.
+* **Cleaner Seek Indicator**:
+  * Simplified and streamlined the swipe-to-seek visual overlay on the player.
+
+---
+
+## Features & User Experience
+
+* **Smoother Category Management**:
+  * Reordering categories in settings is now much more responsive and intuitive using dedicated drag handles.
+* **Details Header Polish**:
+  * Improved visual layout and formatting in the manga/anime details header.
+
+---
+
+## Fixes & Stability
+
+* **Reliable Background Sync**:
+  * Fixed occasional crashes and errors that could occur when closing screens or navigating away during library synchronization.
+
+---
+
+## Localization
+
+* Added translations for the new player screen lock feature across all supported languages.
+
+---
+
+## Contributors
+
+* @kodjodevf
+* @jikkun (#1018, #1019)
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.5...v0.9.6]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.6/Mangayomi-v0.9.6-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Nuvio v0.4.24</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
       <guid isPermaLink="false">nuvio-0.4.24</guid>
@@ -435,37 +528,6 @@ IPA Vault build for Infuse Plus (8.5.5), version 8.5.5]]></description>
 • Other fixes & improvements.
 • Update base IPA to TikTok v46.9]]></description>
       <enclosure url="https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>SideStore v0.7.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/sidestore.json</link>
-      <guid isPermaLink="false">sidestore-0.7.0</guid>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[SideStore 0.7.0 | SideStore
-
-## Build Info
-
-Built at (UTC): `Fri Sep 11 21:25:58 2026`
-Built at (UTC date): `2026-09-11`
-Commit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`
-Version: `0.7.0-20260911.328+6032424a`
-
-#### What's Changed:
-- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code
-
-#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)]]></description>
-      <enclosure url="https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>MaxMusic v9.37.2</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/maxmusic.json</link>
-      <guid isPermaLink="false">maxmusic-9.37.2</guid>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[MaxMusic 9.37.2 | YTMusic 2.4.1 | MaxMusic_2.4.1_9.37.2
-
-**Changed**
-YouTube Music version]]></description>
-      <enclosure url="https://github.com/Mark02-2012/MaxMusic/releases/download/MaxMusic_9.37.2_2.4.1_%2893%29/MaxMusic_2.4.1_9.37.2.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

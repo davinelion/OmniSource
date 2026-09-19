@@ -5,8 +5,84 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
     <description>Release feed for Mangayomi within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/mangayomi.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mangayomi v0.9.6</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.6</guid>
+      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.6 | Mangayomi-v0.9.6-ios
+
+# What's New
+
+## 📖 Reader & Manga
+
+* **Intelligent Double-Page Spreads & RTL Reading** (#1018, #1008):
+  * Wide and landscape double-page spreads are now shown seamlessly on their own full-width screen instead of being awkwardly paired with single pages.
+  * Switching between single and double-page view, rotating your device, or changing reading modes no longer resets your progress back to chapter 1.
+  * Resuming chapters in Right-to-Left (manga) reading mode now starts in the correct direction without layout flipping.
+* **Instant Border Cropping & Cache Improvements**:
+  * Turning border crop on or off in Webtoon / continuous reading now applies instantly without re-downloading the images.
+  * Fixed an issue where resuming a chapter at a saved page could cause an infinite loading spinner for already cached images.
+* **Smoother Reading Experience**:
+  * Fixed page flickering and display glitches when scrolling quickly through continuous chapters.
+
+---
+
+## Novel Reader
+
+* **Scroll-Free E-Reader Paged Mode** (#1019):
+  * Read novels like a real book with page-turning swipes and taps instead of endless vertical scrolling.
+  * Quickly switch between **Continuous Scroll** and **Paged Reading** directly from the novel settings sheet.
+* **Single & Double-Page Column Layouts** (#1019):
+  * Added single-page and side-by-side double-page reading modes, optimized for tablets, foldable devices, and landscape screens.
+  * Settings sheet changes (reading mode, page mode) are now applied and previewed instantly.
+
+---
+
+## Video Player & Anime
+
+* **Player Screen Lock (Mobile)**:
+  * Added a dedicated screen lock button to the mobile controls to prevent accidental touches while watching.
+  * When locked, all on-screen controls, touch gestures (swiping to seek, volume/brightness, double-tap jump, 2x speed hold), and the skip button are completely disabled.
+  * Protects against accidentally exiting the player with the back button or back gesture.
+  * Tap anywhere on the locked screen to display a quick-unlock button in the top-left corner.
+* **Cleaner Seek Indicator**:
+  * Simplified and streamlined the swipe-to-seek visual overlay on the player.
+
+---
+
+## Features & User Experience
+
+* **Smoother Category Management**:
+  * Reordering categories in settings is now much more responsive and intuitive using dedicated drag handles.
+* **Details Header Polish**:
+  * Improved visual layout and formatting in the manga/anime details header.
+
+---
+
+## Fixes & Stability
+
+* **Reliable Background Sync**:
+  * Fixed occasional crashes and errors that could occur when closing screens or navigating away during library synchronization.
+
+---
+
+## Localization
+
+* Added translations for the new player screen lock feature across all supported languages.
+
+---
+
+## Contributors
+
+* @kodjodevf
+* @jikkun (#1018, #1019)
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.5...v0.9.6]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.6/Mangayomi-v0.9.6-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Mangayomi v0.9.5</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
