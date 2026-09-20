@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-20",
-  "feedVersion": "d658c04cab20",
+  "feedVersion": "299146a7a2cd",
   "apps": {
     "total": 130,
     "reachable": 130,
@@ -9,18 +9,25 @@
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 122,
-    "updated": 1,
+    "incrementalHits": 120,
+    "updated": 2,
     "failed": 0,
     "apiRequests": 116
   },
   "unreachable": [],
   "updates": [
     {
-      "slug": "reynard",
-      "name": "Reynard",
-      "previousVersion": "0.13.1",
-      "version": "0.14.0",
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "previousVersion": "21.36.6",
+      "version": "21.37.5",
+      "kind": "updated"
+    },
+    {
+      "slug": "anymex",
+      "name": "AnymeX",
+      "previousVersion": "3.1.7",
+      "version": "3.1.8",
       "kind": "updated"
     }
   ],
