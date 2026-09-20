@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-19T11:22:48Z",
+  "generatedAt": "2026-09-20T11:43:44Z",
   "appCount": 130,
-  "releases": 167,
+  "releases": 170,
   "apps": {
     "3105": [
       {
@@ -424,8 +424,18 @@
         "size": 14241853,
         "sha256": "833c57d3c4bf4b4a9fe408be72e1c720cbb949f736a00286750f50e7915730ea",
         "localizedDescription": "Feather 2.9.0 | Feather\n\nThank you for all your feedback and contributions!\n\n> [!TIP]\n> For `idevice` configuration, you can use [Impactor](https://github.com/claration/Impactor?tab=readme-ov-file#pairing-file) for easily retrieving a pairing file for installing!\n\n## What's Changed\n* Added tweak options in default signing options.\n* Added ability to search for identifier's in Library @ismailcarlik in https://github.com/claration/Feather/pull/652\n* Fixed issue in the file enumeration logic, by using the path property instead of method.\n* Fixed credit links.\n* Fixed duplicate repository in recommended repositories.\n\n## New Contributors\n* @xiangfeidexiaohuo made their first contribution in https://github.com/claration/Feather/pull/634\n* @osageling made their first contribution in https://github.com/claration/Feather/pull/642\n\n**Full Changelog**: https://github.com/claration/Feather/compare/v2.8.2...v2.9.0",
-        "status": "current",
+        "status": "removed",
         "firstSeen": "2026-09-12T17:13:52Z"
+      },
+      {
+        "version": "2.9.0",
+        "date": "2026-07-05",
+        "downloadURL": "https://github.com/claration/feather/releases/download/v2.9.0/Feather.ipa",
+        "size": 14241853,
+        "sha256": "833c57d3c4bf4b4a9fe408be72e1c720cbb949f736a00286750f50e7915730ea",
+        "localizedDescription": "Feather 2.9.0 | Feather\n\nThank you for all your feedback and contributions!\n\n> [!TIP]\n> For `idevice` configuration, you can use [Impactor](https://github.com/claration/Impactor?tab=readme-ov-file#pairing-file) for easily retrieving a pairing file for installing!\n\n## What's Changed\n* Added tweak options in default signing options.\n* Added ability to search for identifier's in Library @ismailcarlik in https://github.com/claration/Feather/pull/652\n* Fixed issue in the file enumeration logic, by using the path property instead of method.\n* Fixed credit links.\n* Fixed duplicate repository in recommended repositories.\n\n## New Contributors\n* @xiangfeidexiaohuo made their first contribution in https://github.com/claration/Feather/pull/634\n* @osageling made their first contribution in https://github.com/claration/Feather/pull/642\n\n**Full Changelog**: https://github.com/claration/Feather/compare/v2.8.2...v2.9.0",
+        "status": "current",
+        "firstSeen": "2026-09-20T11:43:44Z"
       }
     ],
     "fladder": [
@@ -710,13 +720,23 @@
     ],
     "mangayomi": [
       {
+        "version": "0.9.6",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.6/Mangayomi-v0.9.6-ios.ipa",
+        "size": 114296014,
+        "sha256": "dbea3b1243ee3be2e75ad0b6d97681aafb5b94ed942cb16e747b03bda130adf8",
+        "localizedDescription": "Mangayomi 0.9.6 | Mangayomi-v0.9.6-ios\n\n# What's New\n\n## 📖 Reader & Manga\n\n* **Intelligent Double-Page Spreads & RTL Reading** (#1018, #1008):\n  * Wide and landscape double-page spreads are now shown seamlessly on their own full-width screen instead of being awkwardly paired with single pages.\n  * Switching between single and double-page view, rotating your device, or changing reading modes no longer resets your progress back to chapter 1.\n  * Resuming chapters in Right-to-Left (manga) reading mode now starts in the correct direction without layout flipping.\n* **Instant Border Cropping & Cache Improvements**:\n  * Turning border crop on or off in Webtoon / continuous reading now applies instantly without re-downloading the images.\n  * Fixed an issue where resuming a chapter at a saved page could cause an infinite loading spinner for already cached images.\n* **Smoother Reading Experience**:\n  * Fixed page flickering and display glitches when scrolling quickly through continuous chapters.\n\n---\n\n## Novel Reader\n\n* **Scroll-Free E-Reader Paged Mode** (#1019):\n  * Read novels like a real book with page-turning swipes and taps instead of endless vertical scrolling.\n  * Quickly switch between **Continuous Scroll** and **Paged Reading** directly from the novel settings sheet.\n* **Single & Double-Page Column Layouts** (#1019):\n  * Added single-page and side-by-side double-page reading modes, optimized for tablets, foldable devices, and landscape screens.\n  * Settings sheet changes (reading mode, page mode) are now applied and previewed instantly.\n\n---\n\n## Video Player & Anime\n\n* **Player Screen Lock (Mobile)**:\n  * Added a dedicated screen lock button to the mobile controls to prevent accidental touches while watching.\n  * When locked, all on-screen controls, touch gestures (swiping to seek, volume/brightness, double-tap jump, 2x speed hold), and the skip button are completely disabled.\n  * Protects against accidentally exiting the player with the back button or back gesture.",
+        "status": "current",
+        "firstSeen": "2026-09-20T11:43:44Z"
+      },
+      {
         "version": "0.9.5",
         "date": "2026-09-18",
         "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa",
         "size": 114289495,
         "sha256": "d95136ebfdf240638bc369c5729e65bb99a17ee430037e615888203070885ac2",
         "localizedDescription": "Mangayomi 0.9.5 | Mangayomi-v0.9.5-ios\n\n## What's Changed\n\n## Reader & Novels\n\n* **Smart Double-Page Mode** (#1008):\n  * Automatically switch to double-page view based on screen orientation (landscape/portrait).\n  * Chapter transition pages now remain isolated for a natural, seamless reading experience.\n* **Complete Novel Reader Overhaul** (#1014):\n  * Added double-page reading mode support for novels.\n  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).\n  * Added smooth auto-scroll with fine-tuned speed controls.\n  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.\n  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).\n* **Smooth Webtoon Scrolling**:\n  * Much smoother continuous scrolling without stutter or layout jumps.\n  * Fluid auto-scroll that reacts instantly to touch and drag gestures.\n* **Reliable Page Error Recovery**:\n  * The **Retry** button is now immediately clickable with no menu overlay interference.\n  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.\n* **Dedicated Page Cache**:\n  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.\n\n---\n\n##  Features & User Experience\n\n* **Quick Resume from History** (#1005):\n  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).\n* **One-Tap Global Search**:\n  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).\n  * Warns you before adding an entry that is already in your library.\n* **Customizable Chapter Swipe Actions** (#1005):\n  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Downl",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-19T11:22:48Z"
       },
       {
@@ -958,13 +978,23 @@
     ],
     "nuvio": [
       {
+        "version": "0.4.25",
+        "date": "2026-09-19",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa",
+        "size": 65152407,
+        "sha256": "794c90209bc4ae414bf97576257e045696bb8b3be1e385c981f84de897340626",
+        "localizedDescription": "Nuvio 0.4.25 | nuvio-0.4.25-full-release\n\n- b5163558 fix(home): prevent hero flash when cycling @tapframe  \n- 656f368c fix(pr): update workflow @tapframe  \n- [i18n(el): sync Greek translations with the current English strings (#1991)](https://github.com/NuvioMedia/NuvioMobile/pull/1991) @nosvasedis  \n- 98be8514 revert(ui): restore previous surface and chip styles @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1990)](https://github.com/NuvioMedia/NuvioMobile/pull/1990) @blueocean2308  \n- [fix(simkl): three bugs in the shared Simkl read and write paths (#1988)](https://github.com/NuvioMedia/NuvioMobile/pull/1988) @Judzim  \n- 99ced26a feat(player): add Infuse playback callbacks @tapframe  \n- [fix(ios): bundle CJK font for subtitles (#1833)](https://github.com/NuvioMedia/NuvioMobile/pull/1833) @tinyKyuu",
+        "status": "current",
+        "firstSeen": "2026-09-20T11:43:44Z"
+      },
+      {
         "version": "0.4.24",
         "date": "2026-09-18",
         "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa",
         "size": 51517735,
         "sha256": "89c458d16340437f9923a0d8e81c5fa6d4ae77be9db5c0f614e73f4ae792b042",
         "localizedDescription": "Nuvio 0.4.24 | nuvio-0.4.24-full-release\n\n- 042144f8 fix(player): remember brightness across playback sessions @tapframe  \n- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  \n- 4c3bd0d0 feat(player): follow design parity @tapframe  \n- 6fb46976 feat(settings): add rating visibility controls @tapframe",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-19T11:22:48Z"
       },
       {
