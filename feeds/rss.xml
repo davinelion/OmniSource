@@ -5,8 +5,34 @@
     <link>https://iamsmmh.github.io/OmniSource/</link>
     <description>OmniSource is a curated, automatically maintained AltStore-compatible iOS app source. Every entry is resolved from the app&#x27;s own official upstream project - GitHub Releases or the developer&#x27;s official AltStore feed - and each download link is re-verified automatically.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Reynard v0.14.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
+      <guid isPermaLink="false">reynard-0.14.0</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Reynard 0.14.0 | Reynard
+
+## Changes
+**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0
+
+### New Features
+- Added Reader Mode.
+- Added preliminary support for Apple Pencil.
+
+### Bug Fixes & Improvements
+- Improved the reliability of navigation history restoration on startup.
+- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.
+- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.
+- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.
+- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.
+- Fixed a crash that could occur during audio playback.
+
+### Engine
+Updated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).]]></description>
+      <enclosure url="https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>YTKillerPlus v21.37.5</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/ytkp.json</link>
@@ -512,22 +538,6 @@ IPA Vault build for Infuse Plus (8.5.5), version 8.5.5]]></description>
 - YouMusicPiP is only available in custom build
 - iOS14+ build is available in releases page]]></description>
       <enclosure url="https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>TTKillerPlus v46.9.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json</link>
-      <guid isPermaLink="false">ttkillerplus-46.9.0</guid>
-      <pubDate>Tue, 15 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[TikTok 46.9.0 | TikTok_46.9_TTKillerPlus_2.2
-
-• Add follow status to new profile style user name.
-• Fix like confirmation bypass on double tap.
-• Fix post date display format.
-• Fix settings localization & toggles.
-• Fix flag button not tappable.
-• Other fixes & improvements.
-• Update base IPA to TikTok v46.9]]></description>
-      <enclosure url="https://ikghd.site/ipa/TikTok_46.9_TTKillerPlus_2.2.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

@@ -36,7 +36,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 82,
+      "latencyMs": 60,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -190,6 +190,12 @@
         "reachable": true,
         "latencyMs": 82,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 60,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -230,16 +236,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 254,
+      "latencyMs": 394,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 126,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -413,6 +413,12 @@
         "reachable": true,
         "latencyMs": 254,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 394,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Aidoku/Aidoku",
@@ -465,7 +471,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 174,
+      "latencyMs": 126,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -631,6 +637,12 @@
         "reachable": true,
         "latencyMs": 174,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 126,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -642,7 +654,7 @@
       "verified": 129,
       "deadLinks": 0,
       "newThisWeek": 6,
-      "updatedThisWeek": 33
+      "updatedThisWeek": 34
     }
   ],
   "animationspeed": {
@@ -835,6 +847,12 @@
         "reachable": true,
         "latencyMs": 132,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 132,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -874,17 +892,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 130,
+      "latencyMs": 169,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 166,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -1058,6 +1070,12 @@
         "reachable": true,
         "latencyMs": 130,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 169,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1218,17 +1236,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 134,
+      "latencyMs": 390,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 132,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -1401,6 +1413,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 134,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 390,
         "detail": "HTTP 302"
       }
     ],
@@ -1586,17 +1604,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 131,
+      "latencyMs": 134,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 122,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -1770,6 +1782,12 @@
         "reachable": true,
         "latencyMs": 131,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 134,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -1821,7 +1839,7 @@
             "fileType": "IPA",
             "size": 114471562,
             "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-            "downloads": 1916,
+            "downloads": 1955,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1833,7 +1851,7 @@
             "fileType": "IPA",
             "size": 124722640,
             "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-            "downloads": 4282,
+            "downloads": 4323,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1845,7 +1863,7 @@
             "fileType": "IPA",
             "size": 114471417,
             "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-            "downloads": 77,
+            "downloads": 78,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1869,7 +1887,7 @@
             "fileType": "IPA",
             "size": 85880995,
             "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-            "downloads": 511,
+            "downloads": 514,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1881,7 +1899,7 @@
             "fileType": "IPA",
             "size": 96132071,
             "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-            "downloads": 773,
+            "downloads": 786,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -1911,24 +1929,18 @@
           }
         ],
         "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-        "downloads": 773
+        "downloads": 786
       }
     ],
     "syncedAt": "2026-09-20",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 98,
+      "latencyMs": 148,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 92,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -2102,6 +2114,12 @@
         "reachable": true,
         "latencyMs": 98,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 148,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -2166,7 +2184,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 85,
+      "latencyMs": 93,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -2332,6 +2350,12 @@
         "reachable": true,
         "latencyMs": 85,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 93,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -2372,7 +2396,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 150,
+      "latencyMs": 105,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -2514,6 +2538,12 @@
         "reachable": true,
         "latencyMs": 150,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 105,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -2578,7 +2608,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 125,
+      "latencyMs": 92,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -2732,6 +2762,12 @@
         "reachable": true,
         "latencyMs": 125,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 92,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -2807,7 +2843,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 125,
+      "latencyMs": 88,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -2973,6 +3009,12 @@
         "reachable": true,
         "latencyMs": 125,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 88,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -3048,16 +3090,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 142,
+      "latencyMs": 149,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 142,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -3231,6 +3267,12 @@
         "reachable": true,
         "latencyMs": 142,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 149,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:BandarHL/BHTwitter",
@@ -3320,17 +3362,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 121,
+      "latencyMs": 126,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 136,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -3504,6 +3540,12 @@
         "reachable": true,
         "latencyMs": 121,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 126,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3556,17 +3598,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 98,
+      "latencyMs": 124,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 105,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -3740,6 +3776,12 @@
         "reachable": true,
         "latencyMs": 98,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 124,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -3792,7 +3834,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 153,
+      "latencyMs": 97,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -3958,6 +4000,12 @@
         "reachable": true,
         "latencyMs": 153,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 97,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -3997,7 +4045,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 107,
+      "latencyMs": 133,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -4163,6 +4211,12 @@
         "reachable": true,
         "latencyMs": 107,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 133,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -4214,7 +4268,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 112,
+      "latencyMs": 140,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -4380,6 +4434,12 @@
         "reachable": true,
         "latencyMs": 112,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 140,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -4404,7 +4464,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 170,
+      "latencyMs": 228,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
@@ -4546,6 +4606,12 @@
         "reachable": true,
         "latencyMs": 170,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 228,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -4622,17 +4688,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 138,
+      "latencyMs": 84,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 145,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -4806,6 +4866,12 @@
         "reachable": true,
         "latencyMs": 138,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 84,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -4870,17 +4936,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 184,
+      "latencyMs": 217,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 185,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -5054,6 +5114,12 @@
         "reachable": true,
         "latencyMs": 184,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 217,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5154,17 +5220,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 115,
+      "latencyMs": 160,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 141,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -5338,6 +5398,12 @@
         "reachable": true,
         "latencyMs": 115,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 160,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5390,17 +5456,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 128,
+      "latencyMs": 157,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 152,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -5574,6 +5634,12 @@
         "reachable": true,
         "latencyMs": 128,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 157,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -5625,7 +5691,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 101,
+      "latencyMs": 137,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -5791,6 +5857,12 @@
         "reachable": true,
         "latencyMs": 101,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 137,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -5830,17 +5902,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 133,
+      "latencyMs": 227,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 161,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -6014,6 +6080,12 @@
         "reachable": true,
         "latencyMs": 133,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 227,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6102,17 +6174,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 131,
+      "latencyMs": 106,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 126,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -6286,6 +6352,12 @@
         "reachable": true,
         "latencyMs": 131,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 106,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6350,17 +6422,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 95,
+      "latencyMs": 62,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 115,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -6534,6 +6600,12 @@
         "reachable": true,
         "latencyMs": 95,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 62,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6598,17 +6670,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 114,
+      "latencyMs": 73,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 114,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -6782,6 +6848,12 @@
         "reachable": true,
         "latencyMs": 114,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 73,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -6833,7 +6905,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 130,
+      "latencyMs": 103,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -6999,6 +7071,12 @@
         "reachable": true,
         "latencyMs": 130,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -7038,7 +7116,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 138,
+      "latencyMs": 120,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -7180,6 +7258,12 @@
         "reachable": true,
         "latencyMs": 138,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 120,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -7244,7 +7328,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 231,
+      "latencyMs": 180,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -7398,6 +7482,12 @@
         "reachable": true,
         "latencyMs": 231,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 180,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -7450,16 +7540,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 101,
+      "latencyMs": 265,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 90,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -7632,6 +7716,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 101,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 265,
         "detail": "HTTP 302"
       }
     ],
@@ -7830,17 +7920,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 194,
+      "latencyMs": 108,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 152,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -8014,6 +8098,12 @@
         "reachable": true,
         "latencyMs": 194,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -8064,17 +8154,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 116,
+      "latencyMs": 183,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 151,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -8247,6 +8331,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 116,
+        "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 183,
         "detail": "HTTP 200"
       }
     ],
@@ -8648,17 +8738,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 116,
+      "latencyMs": 112,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 82,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -8832,6 +8916,12 @@
         "reachable": true,
         "latencyMs": 116,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 112,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -8883,17 +8973,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 118,
+      "latencyMs": 171,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 145,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -9067,6 +9151,12 @@
         "reachable": true,
         "latencyMs": 118,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 171,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -9118,7 +9208,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 93,
+      "latencyMs": 129,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -9284,6 +9374,12 @@
         "reachable": true,
         "latencyMs": 93,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 129,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -9322,17 +9418,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 102,
+      "latencyMs": 107,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 130,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -9506,6 +9596,12 @@
         "reachable": true,
         "latencyMs": 102,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 107,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -9556,17 +9652,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 160,
+      "latencyMs": 124,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 146,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -9740,6 +9830,12 @@
         "reachable": true,
         "latencyMs": 160,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 124,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -9790,16 +9886,10 @@
       "reachable": true,
       "detail": "HTTP 200",
       "since": "2026-09-18",
-      "latencyMs": 210,
+      "latencyMs": 833,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 207,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -9973,6 +10063,12 @@
         "reachable": true,
         "latencyMs": 210,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 833,
+        "detail": "HTTP 200"
       }
     ],
     "lastResolvedSource": "altstore:https://repo.ikghd.me/repo.json",
@@ -10024,17 +10120,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 102,
+      "latencyMs": 96,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 131,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -10208,6 +10298,12 @@
         "reachable": true,
         "latencyMs": 102,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 96,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -10272,17 +10368,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 126,
+      "latencyMs": 80,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 136,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -10456,6 +10546,12 @@
         "reachable": true,
         "latencyMs": 126,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 80,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -10532,16 +10628,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 154,
+      "latencyMs": 128,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 113,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -10715,6 +10805,12 @@
         "reachable": true,
         "latencyMs": 154,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 128,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:XITRIX/iTorrent",
@@ -10767,7 +10863,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 212,
+      "latencyMs": 122,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -10933,6 +11029,12 @@
         "reachable": true,
         "latencyMs": 212,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 122,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -10972,7 +11074,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 109,
+      "latencyMs": 116,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -11138,6 +11240,12 @@
         "reachable": true,
         "latencyMs": 109,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 116,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -11238,17 +11346,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 149,
+      "latencyMs": 134,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 111,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -11422,6 +11524,12 @@
         "reachable": true,
         "latencyMs": 149,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 134,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -11557,7 +11665,7 @@
             "fileType": "APK",
             "size": 33275119,
             "sha256": "ad71c9f73d5e3879fd7f025cd0ce38c02c017f1228d48bdd8d041a01190ee86d",
-            "downloads": 16,
+            "downloads": 17,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -11593,30 +11701,24 @@
             "fileType": "IPA",
             "size": 14640159,
             "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-            "downloads": 146,
+            "downloads": 148,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-        "downloads": 146
+        "downloads": 148
       }
     ],
     "syncedAt": "2026-09-20",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 124,
+      "latencyMs": 122,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 146,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -11790,6 +11892,12 @@
         "reachable": true,
         "latencyMs": 124,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 122,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -11841,7 +11949,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 120,
+      "latencyMs": 138,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -12007,6 +12115,12 @@
         "reachable": true,
         "latencyMs": 120,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 138,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -12047,17 +12161,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 161,
+      "latencyMs": 94,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 110,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -12231,6 +12339,12 @@
         "reachable": true,
         "latencyMs": 161,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 94,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -12283,7 +12397,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 121,
+      "latencyMs": 165,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -12449,6 +12563,12 @@
         "reachable": true,
         "latencyMs": 121,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 165,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -12501,16 +12621,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 143,
+      "latencyMs": 113,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 163,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -12684,6 +12798,12 @@
         "reachable": true,
         "latencyMs": 143,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 113,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:LiveContainer/LiveContainer",
@@ -12796,17 +12916,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 183,
+      "latencyMs": 110,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 119,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -12979,6 +13093,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 183,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 110,
         "detail": "HTTP 302"
       }
     ],
@@ -13188,17 +13308,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 134,
+      "latencyMs": 151,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 124,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -13372,6 +13486,12 @@
         "reachable": true,
         "latencyMs": 134,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 151,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -13424,17 +13544,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 85,
+      "latencyMs": 91,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 173,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -13608,6 +13722,12 @@
         "reachable": true,
         "latencyMs": 85,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -13646,13 +13766,13 @@
             "fileType": "IPA",
             "size": 106518711,
             "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-            "downloads": 473,
+            "downloads": 508,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-        "downloads": 473
+        "downloads": 508
       }
     ],
     "syncedAt": "2026-09-20",
@@ -13660,16 +13780,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 101,
+      "latencyMs": 157,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 143,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -13843,6 +13957,12 @@
         "reachable": true,
         "latencyMs": 101,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 157,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Mark02-2012/MaxMusic",
@@ -13894,13 +14014,13 @@
             "fileType": "IPA",
             "size": 133357787,
             "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-            "downloads": 267,
+            "downloads": 269,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-        "downloads": 267
+        "downloads": 269
       }
     ],
     "syncedAt": "2026-09-20",
@@ -13908,16 +14028,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 123,
+      "latencyMs": 100,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 162,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -14091,6 +14205,12 @@
         "reachable": true,
         "latencyMs": 123,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 100,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Ashreq/ashstore-repo",
@@ -14142,17 +14262,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 152,
+      "latencyMs": 104,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 133,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -14326,6 +14440,12 @@
         "reachable": true,
         "latencyMs": 152,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 104,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -14389,17 +14509,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 128,
+      "latencyMs": 148,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 146,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -14573,6 +14687,12 @@
         "reachable": true,
         "latencyMs": 128,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 148,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14673,17 +14793,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 154,
+      "latencyMs": 221,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 161,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -14857,6 +14971,12 @@
         "reachable": true,
         "latencyMs": 154,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 221,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -14907,17 +15027,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 105,
+      "latencyMs": 103,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 121,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -15091,6 +15205,12 @@
         "reachable": true,
         "latencyMs": 105,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -15143,17 +15263,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 105,
+      "latencyMs": 150,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 145,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -15327,6 +15441,12 @@
         "reachable": true,
         "latencyMs": 105,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 150,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -15390,7 +15510,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 102,
+      "latencyMs": 138,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -15556,6 +15676,12 @@
         "reachable": true,
         "latencyMs": 102,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 138,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -15608,17 +15734,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 160,
+      "latencyMs": 118,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 158,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -15792,6 +15912,12 @@
         "reachable": true,
         "latencyMs": 160,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 118,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -15856,17 +15982,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 105,
+      "latencyMs": 143,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 147,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -16040,6 +16160,12 @@
         "reachable": true,
         "latencyMs": 105,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 143,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16090,17 +16216,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 111,
+      "latencyMs": 108,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 135,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -16274,6 +16394,12 @@
         "reachable": true,
         "latencyMs": 111,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 108,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -16338,7 +16464,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 131,
+      "latencyMs": 92,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -16480,6 +16606,12 @@
         "reachable": true,
         "latencyMs": 131,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 92,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -16568,7 +16700,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 90,
+      "latencyMs": 92,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -16722,6 +16854,12 @@
         "reachable": true,
         "latencyMs": 90,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 92,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -16761,17 +16899,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 112,
+      "latencyMs": 102,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 106,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -16945,6 +17077,12 @@
         "reachable": true,
         "latencyMs": 112,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 102,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -16997,7 +17135,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 168,
+      "latencyMs": 100,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -17163,6 +17301,12 @@
         "reachable": true,
         "latencyMs": 168,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 100,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -17215,7 +17359,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 144,
+      "latencyMs": 217,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -17381,6 +17525,12 @@
         "reachable": true,
         "latencyMs": 144,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 217,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -17469,17 +17619,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 115,
+      "latencyMs": 145,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 145,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -17653,6 +17797,12 @@
         "reachable": true,
         "latencyMs": 115,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 145,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -17777,17 +17927,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 110,
+      "latencyMs": 168,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 172,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -17961,6 +18105,12 @@
         "reachable": true,
         "latencyMs": 110,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 168,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18133,17 +18283,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 93,
+      "latencyMs": 91,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 107,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -18317,6 +18461,12 @@
         "reachable": true,
         "latencyMs": 93,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18369,7 +18519,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 122,
+      "latencyMs": 81,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -18535,6 +18685,12 @@
         "reachable": true,
         "latencyMs": 122,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 81,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -18683,17 +18839,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 91,
+      "latencyMs": 176,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 75,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -18867,6 +19017,12 @@
         "reachable": true,
         "latencyMs": 91,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 176,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -18931,16 +19087,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 146,
+      "latencyMs": 95,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 166,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -19114,6 +19264,12 @@
         "reachable": true,
         "latencyMs": 146,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 95,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:Provenance-Emu/Provenance",
@@ -19190,17 +19346,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 148,
+      "latencyMs": 131,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 115,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -19374,6 +19524,12 @@
         "reachable": true,
         "latencyMs": 148,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 131,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -19450,17 +19606,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 118,
+      "latencyMs": 111,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 123,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -19634,6 +19784,12 @@
         "reachable": true,
         "latencyMs": 118,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 111,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -19686,17 +19842,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 130,
+      "latencyMs": 116,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 144,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -19870,6 +20020,12 @@
         "reachable": true,
         "latencyMs": 130,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 116,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20006,17 +20162,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 104,
+      "latencyMs": 116,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 120,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -20190,6 +20340,12 @@
         "reachable": true,
         "latencyMs": 104,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 116,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20224,17 +20380,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 115,
+      "latencyMs": 130,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 98,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -20408,6 +20558,12 @@
         "reachable": true,
         "latencyMs": 115,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 130,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20491,17 +20647,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 128,
+      "latencyMs": 129,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 97,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -20675,6 +20825,12 @@
         "reachable": true,
         "latencyMs": 128,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 129,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -20695,63 +20851,63 @@
     "lastResolvedSource": "github:minh-ton/reynard-browser",
     "versions": [
       {
-        "version": "0.13.1",
-        "date": "2026-09-14",
-        "localizedDescription": "Reynard 0.13.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1\n\nThis is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).\n\n### Bug Fixes & Improvements\n- Improved the reliability of text input fields repositioning above the software keyboard when editing.\n- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.",
-        "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
-        "size": 108070190,
+        "version": "0.14.0",
+        "date": "2026-09-20",
+        "localizedDescription": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
+        "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
+        "size": 108453095,
         "minOSVersion": "13.0",
-        "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.13.1",
+        "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.14.0",
         "source": "github",
         "isPrerelease": false,
         "isDraft": false,
         "assets": [
           {
             "filename": "Reynard-Jailbroken.ipa",
-            "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard-Jailbroken.ipa",
+            "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard-Jailbroken.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 108119337,
-            "sha256": "421d5149dfe8087e18ea2b43cf437e2ea384208a74ee39bcfb23c9bc14cb7ae6",
-            "downloads": 292,
+            "size": 108506406,
+            "sha256": "1ea44eb29cfb9d0cf3d8913c879619a440e8edb705b290c23e1ba8e41a276b45",
+            "downloads": 12,
             "mimeType": "application/octet-stream",
             "installable": true
           },
           {
             "filename": "Reynard-TrollStore.tipa",
-            "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard-TrollStore.tipa",
+            "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard-TrollStore.tipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 108168749,
-            "sha256": "b6b5fa78be22ac11bfdb179884caaa43b69e10d16d47a9079f33df014f57c590",
-            "downloads": 1975,
+            "size": 108552657,
+            "sha256": "c69e3066b1fcdbe3545b183df13d8a6352c8f28b39137c69cf28fc778f7b1300",
+            "downloads": 147,
             "mimeType": "application/octet-stream",
             "installable": true
           },
           {
             "filename": "Reynard.ipa",
-            "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+            "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
             "platform": "ios",
             "architecture": null,
             "fileType": "IPA",
-            "size": 108070190,
-            "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-            "downloads": 951,
+            "size": 108453095,
+            "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
+            "downloads": 46,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-        "downloads": 951
+        "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
+        "downloads": 46
       }
     ],
     "syncedAt": "2026-09-20",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 101,
+      "latencyMs": 69,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -20917,6 +21073,12 @@
         "reachable": true,
         "latencyMs": 101,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 69,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -20955,17 +21117,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 118,
+      "latencyMs": 91,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 116,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -21139,6 +21295,12 @@
         "reachable": true,
         "latencyMs": 118,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -21190,17 +21352,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 454,
+      "latencyMs": 371,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 286,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -21374,6 +21530,12 @@
         "reachable": true,
         "latencyMs": 454,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 371,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -21425,17 +21587,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 435,
+      "latencyMs": 371,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 317,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -21609,6 +21765,12 @@
         "reachable": true,
         "latencyMs": 435,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 371,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -21769,17 +21931,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 100,
+      "latencyMs": 147,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 142,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -21953,6 +22109,12 @@
         "reachable": true,
         "latencyMs": 100,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 147,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -22053,17 +22215,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 183,
+      "latencyMs": 122,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 98,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -22237,6 +22393,12 @@
         "reachable": true,
         "latencyMs": 183,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 122,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -22288,7 +22450,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 149,
+      "latencyMs": 110,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -22454,6 +22616,12 @@
         "reachable": true,
         "latencyMs": 149,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 110,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -22493,17 +22661,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 196,
+      "latencyMs": 111,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 151,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -22677,6 +22839,12 @@
         "reachable": true,
         "latencyMs": 196,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 111,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -22729,16 +22897,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 111,
+      "latencyMs": 332,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 157,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -22912,6 +23074,12 @@
         "reachable": true,
         "latencyMs": 111,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 332,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:SideStore/SideStore",
@@ -23001,7 +23169,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 152,
+      "latencyMs": 141,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -23167,6 +23335,12 @@
         "reachable": true,
         "latencyMs": 152,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 141,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -23207,17 +23381,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 127,
+      "latencyMs": 122,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 147,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -23391,6 +23559,12 @@
         "reachable": true,
         "latencyMs": 127,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 122,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -23441,17 +23615,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 108,
+      "latencyMs": 113,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 142,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -23625,6 +23793,12 @@
         "reachable": true,
         "latencyMs": 108,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 113,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -23701,16 +23875,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 95,
+      "latencyMs": 77,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 132,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -23883,6 +24051,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 95,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 77,
         "detail": "HTTP 302"
       }
     ],
@@ -24105,17 +24279,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 190,
+      "latencyMs": 105,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 132,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -24289,6 +24457,12 @@
         "reachable": true,
         "latencyMs": 190,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 105,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -24352,7 +24526,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 104,
+      "latencyMs": 150,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -24518,6 +24692,12 @@
         "reachable": true,
         "latencyMs": 104,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 150,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -24558,16 +24738,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 99,
+      "latencyMs": 86,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 117,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -24741,6 +24915,12 @@
         "reachable": true,
         "latencyMs": 99,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 86,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:StikDebug/StikDebug",
@@ -24793,17 +24973,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 126,
+      "latencyMs": 78,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 140,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -24977,6 +25151,12 @@
         "reachable": true,
         "latencyMs": 126,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 78,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -25016,7 +25196,7 @@
             "fileType": "APK",
             "size": 197174334,
             "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-            "downloads": 11044,
+            "downloads": 11049,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -25028,7 +25208,7 @@
             "fileType": "APK",
             "size": 191577143,
             "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-            "downloads": 1509,
+            "downloads": 1510,
             "mimeType": "application/vnd.android.package-archive",
             "installable": true
           },
@@ -25064,30 +25244,24 @@
             "fileType": "IPA",
             "size": 53931137,
             "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-            "downloads": 268,
+            "downloads": 270,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-        "downloads": 268
+        "downloads": 270
       }
     ],
     "syncedAt": "2026-09-20",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 93,
+      "latencyMs": 143,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 104,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -25261,6 +25435,12 @@
         "reachable": true,
         "latencyMs": 93,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 143,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -25311,17 +25491,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 106,
+      "latencyMs": 124,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 117,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -25495,6 +25669,12 @@
         "reachable": true,
         "latencyMs": 106,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 124,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -25578,17 +25758,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 118,
+      "latencyMs": 137,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 141,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -25762,6 +25936,12 @@
         "reachable": true,
         "latencyMs": 118,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 137,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -25910,7 +26090,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 247,
+      "latencyMs": 129,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -26076,6 +26256,12 @@
         "reachable": true,
         "latencyMs": 247,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 129,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -26115,17 +26301,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 74,
+      "latencyMs": 155,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 87,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -26299,6 +26479,12 @@
         "reachable": true,
         "latencyMs": 74,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 155,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -26349,17 +26535,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 106,
+      "latencyMs": 112,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 108,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -26533,6 +26713,12 @@
         "reachable": true,
         "latencyMs": 106,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 112,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -26588,12 +26774,6 @@
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 137,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -26767,6 +26947,12 @@
         "reachable": true,
         "latencyMs": 100,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 100,
+        "detail": "HTTP 200"
       }
     ],
     "lastFullVerification": {
@@ -26855,17 +27041,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 125,
+      "latencyMs": 132,
       "measuredAt": "2026-09-20",
       "since": "2026-09-13"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 146,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -27039,6 +27219,12 @@
         "reachable": true,
         "latencyMs": 125,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 132,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -27090,7 +27276,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 123,
+      "latencyMs": 129,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -27250,6 +27436,12 @@
         "reachable": true,
         "latencyMs": 123,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 129,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -27290,7 +27482,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 149,
+      "latencyMs": 84,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -27456,6 +27648,12 @@
         "reachable": true,
         "latencyMs": 149,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 84,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -27483,7 +27681,7 @@
             "fileType": "IPA",
             "size": 27098183,
             "sha256": null,
-            "downloads": 365071,
+            "downloads": 365172,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -27495,19 +27693,19 @@
             "fileType": "IPA",
             "size": 6889214,
             "sha256": null,
-            "downloads": 1245281,
+            "downloads": 1245519,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
-        "downloads": 1245281
+        "downloads": 1245519
       }
     ],
     "syncedAt": "2026-09-20",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 179,
+      "latencyMs": 103,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -27673,6 +27871,12 @@
         "reachable": true,
         "latencyMs": 179,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -27711,16 +27915,10 @@
       "reachable": true,
       "detail": "HTTP 200",
       "since": "2026-09-18",
-      "latencyMs": 203,
+      "latencyMs": 212,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 199,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -27894,6 +28092,12 @@
         "reachable": true,
         "latencyMs": 203,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 212,
+        "detail": "HTTP 200"
       }
     ],
     "lastResolvedSource": "altstore:https://repo.ikghd.me/repo.json",
@@ -27945,17 +28149,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 200",
-      "latencyMs": 98,
+      "latencyMs": 91,
       "measuredAt": "2026-09-20",
       "since": "2026-09-18"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 115,
-        "detail": "HTTP 200"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -28129,6 +28327,12 @@
         "reachable": true,
         "latencyMs": 98,
         "detail": "HTTP 200"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 91,
+        "detail": "HTTP 200"
       }
     ],
     "removedReleases": [
@@ -28175,7 +28379,7 @@
             "fileType": "IPA",
             "size": 143381478,
             "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-            "downloads": 521,
+            "downloads": 523,
             "mimeType": "application/octet-stream",
             "installable": true
           },
@@ -28187,30 +28391,24 @@
             "fileType": "IPA",
             "size": 152372292,
             "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-            "downloads": 1298,
+            "downloads": 1306,
             "mimeType": "application/octet-stream",
             "installable": true
           }
         ],
         "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-        "downloads": 1298
+        "downloads": 1306
       }
     ],
     "syncedAt": "2026-09-20",
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 133,
+      "latencyMs": 131,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 146,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -28384,6 +28582,12 @@
         "reachable": true,
         "latencyMs": 133,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 131,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -28435,17 +28639,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 132,
+      "latencyMs": 86,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 147,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -28619,6 +28817,12 @@
         "reachable": true,
         "latencyMs": 132,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 86,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -28635,6 +28839,16 @@
     }
   },
   "updateHistory": [
+    {
+      "appId": "reynard",
+      "name": "Reynard",
+      "version": "0.14.0",
+      "previousVersion": "0.13.1",
+      "releaseDate": "2026-09-20",
+      "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
+      "changelog": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
+      "kind": "updated"
+    },
     {
       "appId": "ytkp",
       "name": "YTKillerPlus",
@@ -29624,16 +29838,6 @@
       "downloadUrl": "https://github.com/saber-notes/saber/releases/download/v1.36.1/Saber_v1.36.1.ipa",
       "changelog": "Saber 1.36.1 | Saber_v1.36.1\n\n## External links\n\n[<img src='https://github.com/adil192/saber/blob/main/assets_raw/badges/google-play-badge.svg'\n    alt='Get it on Google Play'\n    height=50>][google_play]&nbsp;[<img src=\"https://github.com/adil192/saber/blob/main/assets_raw/badges/f-droid-badge.svg\"\n    alt=\"Get it on F-Droid\"\n    height=50>][f-droid]&nbsp;[<img src=\"https://github.com/adil192/saber/blob/main/assets_raw/badges/app-store-badge.svg\"\n    alt=\"Download on the App Store\"\n    height=50>][app_store]&nbsp;[<img src=\"https://github.com/adil192/saber/blob/main/assets_raw/badges/flathub-badge.svg\"\n    alt=\"Download on Flathub\"\n    height=50>][flathub]\n\nFor other downloads, scroll down and find the relevant file under \"Assets\".\n\n[f-droid]: https://f-droid.org/packages/com.adilhanney.saber/\n[flathub]: https://flathub.org/apps/details/com.adilhanney.saber\n[google_play]: https://play.google.com/store/apps/details?id=com.adilhanney.saber\n[app_store]: https://apps.apple.com/us/app/saber/id1671523739\n[releases]: https://github.com/adil192/saber/releases\n\n## Changelog\n\n- Improved the design of the login flow, making better use of space on landscape/desktop screens.\n- Tweaked scrolling friction in the editor to make it less slippery. #1785\n- Fixed handling of accounts with unlimited storage quota. #1796 \n- Fixed folders not being sorted in the browse page. #1809 \n- Fixed parts of the app using a hardcoded Ubuntu font. eafaf264b19a35cbf8e8831daa4118e1446fe16d and https://github.com/ubuntu/yaru.dart/pull/1075.\n- Fixed non-Latin language fonts and inconsistent UI elements in Flathub screenshots.\n- Improved build system... Now fewer custom patches are needed for various stores. Enabled the `--enforce-lockfile` flag for F-Droid for more reproducible builds. #1799 \n- Fixed Android 16KB page size support by forcing a newer NDK version. 87fcb037ba8792cd24ef3af66335007854dbdabc\n- Continued code cleanup, refactoring, testing, and small UX improvements.\n- Various fixes from [Flutter 3.47.2](https://github.com/flutter/flutter/blob/stable/CHANGELOG.md#3472)\n- Translations:\n  - i18n: Update French metadata by @ArTuPSly in d092314beecfbbafec179ec5b17841aa90265805\n  - i18n: Various small tweaks to fix Weblate lints (e.g. adding a trailing colon to match the English equivalent)\n\n- Full changelog: https://github.com/saber-notes/saber/compare/v1.36.0...v1.36.1",
       "kind": "new"
-    },
-    {
-      "appId": "anymex",
-      "name": "AnymeX",
-      "version": "3.1.7",
-      "previousVersion": null,
-      "releaseDate": "2026-08-30",
-      "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-iOS-v3.1.7.ipa",
-      "changelog": "AnymeX 3.1.7 | AnymeX-iOS-v3.1.7\n\n### 🆕 Changelog\n### 🌟 Features\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/36754206) enhanced new episode released cards, fixed bugs when deleting history items and more by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0837dcf8) server remember for episodes and some ui changes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e3ec2a4e) new episode released on home page for any anime you watch from app by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/91224c3f) enhanced the tab system and ui of headers on pages by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7af109c1) nav bar layout switcher, improved ui of media type selector and organized ui settings page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/4380f646) added extensive data of user's usage by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/97d7d054) user xp system by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2eac3561) add AniList profile compatibility checker (#547) by @Shebyyy\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f8226772) stats record implementation on anime and manga by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3427750b) user app statistics by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1774abfb) history tab implemented by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/465d66cc) new tabs system (home, discover, library, history, stats) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1582c7eb) sync subtitle sentence progress controller by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/20df44bf) local subtitle import by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/64740546) bottom nav bar margin adjustment setting by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c0389949) more fields like country, popularity, source for media details and fixed issues like sequel repeating, and recommendation opening wrong pages by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a585abee) font family change option by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fc7649b9) improved user experience on player by consolidating audio, subs, servers by @RyanYuuki\n\n\n### 🔧 Bug Fixes & Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5acd1120) inconsistency bug on header and major refactor of header by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0cadc7f3) fixed a issue where offline database was not saving title of ep/chps by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c47225a5) fixed bad redirect on manga pages when clicking on genre/tags by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/98914683) fixed manga chapter selector and chapter navigation logic by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/261af6e0) fixed join dialog behaviour by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/480eb738) hero tag duplicate fix (probably) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7b36bf18) fixed some stats not tracking properly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/834a5522) fixed scanlator not being respected issue by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0e6495fe) fixed minor desync issues between user rec section by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ee2c22dd) fixed updater not showing proper toast and proper beta updates by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/afb580ce) fixed ui not reflecting on pallete change on theme page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1970de1e) fixed profile page activity opening anime page on manga entries by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a21009b1) fixed mapper mappng to wrong medias by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1dff1f52) fixed rpc for desktop users by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fa60bf90) fixed show entries in community recommandation opening manga page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/22236d7f) fixed delete entry not working by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/47d42453) fixed dupe entries in tracking lists by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e5d0945b) fixed tracking dialog not respecting preference by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3631e005) fixed follower, following count on profile by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/696f2991) fixed splash logo animation not applying by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2265209a) fixed al, mal, simkl card not getting saved properly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/895001c0) fixed speed not persisting in a session and speed configs not persisting app restarts by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c5d70d7a) fixed anify kitsu button not reflecting instantly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/32b8ba93) fixed cover not showing up on episodes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8d71bc38) fixed staff not appearing, characters not showing roles in anilist by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/63ab2d18) fixed sub parser it was not showing cues before by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5053aaf7) fixed novel search sending to anime search by @RyanYuuki\n\n\n### 🔧 Refactors\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/24cd99eb) refactored card styles by @RyanYuuki\n\n\n### 🎨 Style Changes\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a3614a65) minor ui tweak by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/105b5775) improved list editor ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/169a6122) improved library ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3be13154) media mode selector ui improvement by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a0fd1926) improved ui of image button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f0894ef3) added bouncy animation on tab change by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f51ed12b) extension settings page elements harmonized with the rest of the app's ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8461f0fd) improved ui and performance of all the source, audio, subtitle panes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/6b74c1a8) improved the stretched tab bar on desktop by @RyanYuuki\n\n\n### 🚀 Performance Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/aaf2174a) snappy gestures for pan and zoom on manga pages even on continous mode by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/68eeffea) player controls overlay should feel snappier by @RyanYuuki\n\n\n### 🧹 Chores & Documentation\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c7d2690a) bump version to v3.1.7 (patch release) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0bde25cf) library changes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/704415da) update sideloading source by @ghost\n\n\n![Total Downloads](https://img.shields.io/github/downloads/RyanYuuki/AnymeX/total?style=for-the-badge&label=TOTAL%20DOWNLOADS&labelColor=black&color=white) ![Current Release](https://img.shields.io/github/downloads/RyanYuuki/AnymeX/v3.1.7/total?style=for-the-badge&label=CURRENT%20RELEASE&labelColor=black&color=white)",
-      "kind": "new"
     }
   ],
   "utm": {
@@ -29769,16 +29973,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 80,
+      "latencyMs": 145,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 90,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -29952,6 +30150,12 @@
         "reachable": true,
         "latencyMs": 80,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 145,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:utmapp/UTM",
@@ -29988,16 +30192,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-18",
-      "latencyMs": 300,
+      "latencyMs": 3724,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 471,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -30170,6 +30368,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 300,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 3724,
         "detail": "HTTP 302"
       }
     ],
@@ -30404,17 +30608,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 115,
+      "latencyMs": 69,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 149,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -30588,6 +30786,12 @@
         "reachable": true,
         "latencyMs": 115,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 69,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -30640,7 +30844,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 136,
+      "latencyMs": 121,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -30793,6 +30997,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 136,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 121,
         "detail": "HTTP 302"
       }
     ]
@@ -30954,17 +31164,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 117,
+      "latencyMs": 181,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 125,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -31138,6 +31342,12 @@
         "reachable": true,
         "latencyMs": 117,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 181,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -31189,7 +31399,7 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 141,
+      "latencyMs": 157,
       "measuredAt": "2026-09-20",
       "since": "2026-09-17"
     },
@@ -31355,6 +31565,12 @@
         "reachable": true,
         "latencyMs": 141,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 157,
+        "detail": "HTTP 302"
       }
     ]
   },
@@ -31394,16 +31610,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 210,
+      "latencyMs": 122,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 128,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -31577,6 +31787,12 @@
         "reachable": true,
         "latencyMs": 210,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 122,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:lo-cafe/winston",
@@ -31666,17 +31882,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 100,
+      "latencyMs": 133,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 78,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -31850,6 +32060,12 @@
         "reachable": true,
         "latencyMs": 100,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 133,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -31925,17 +32141,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 91,
+      "latencyMs": 160,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 187,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -32109,6 +32319,12 @@
         "reachable": true,
         "latencyMs": 91,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 160,
+        "detail": "HTTP 302"
       }
     ],
     "lastFullVerification": {
@@ -32161,16 +32377,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 161,
+      "latencyMs": 76,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 187,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -32344,6 +32554,12 @@
         "reachable": true,
         "latencyMs": 161,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 76,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -32397,16 +32613,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 150,
+      "latencyMs": 125,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 108,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -32580,6 +32790,12 @@
         "reachable": true,
         "latencyMs": 150,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 125,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -32669,16 +32885,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 130,
+      "latencyMs": 103,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 139,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -32852,6 +33062,12 @@
         "reachable": true,
         "latencyMs": 130,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 103,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:itzzace/ytkace",
@@ -32905,16 +33121,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 143,
+      "latencyMs": 83,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 102,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -33088,6 +33298,12 @@
         "reachable": true,
         "latencyMs": 143,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 83,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -33197,16 +33413,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-07",
-      "latencyMs": 169,
+      "latencyMs": 153,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 114,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -33380,6 +33590,12 @@
         "reachable": true,
         "latencyMs": 169,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 153,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YouProEXTRA",
@@ -33433,16 +33649,10 @@
       "reachable": true,
       "detail": "HTTP 302",
       "since": "2026-09-14",
-      "latencyMs": 139,
+      "latencyMs": 184,
       "measuredAt": "2026-09-20"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 145,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -33616,6 +33826,12 @@
         "reachable": true,
         "latencyMs": 139,
         "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 184,
+        "detail": "HTTP 302"
       }
     ],
     "lastResolvedSource": "github:mrdrvt99/YTMusicUltimate",
@@ -33753,17 +33969,11 @@
     "health": {
       "reachable": true,
       "detail": "HTTP 302",
-      "latencyMs": 98,
+      "latencyMs": 142,
       "measuredAt": "2026-09-20",
       "since": "2026-09-10"
     },
     "healthHistory": [
-      {
-        "at": "2026-09-15",
-        "reachable": true,
-        "latencyMs": 138,
-        "detail": "HTTP 302"
-      },
       {
         "at": "2026-09-15",
         "reachable": true,
@@ -33936,6 +34146,12 @@
         "at": "2026-09-20",
         "reachable": true,
         "latencyMs": 98,
+        "detail": "HTTP 302"
+      },
+      {
+        "at": "2026-09-20",
+        "reachable": true,
+        "latencyMs": 142,
         "detail": "HTTP 302"
       }
     ],

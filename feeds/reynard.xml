@@ -5,8 +5,34 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
     <description>Release feed for Reynard within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/reynard.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Reynard v0.14.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
+      <guid isPermaLink="false">reynard-0.14.0</guid>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Reynard 0.14.0 | Reynard
+
+## Changes
+**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0
+
+### New Features
+- Added Reader Mode.
+- Added preliminary support for Apple Pencil.
+
+### Bug Fixes & Improvements
+- Improved the reliability of navigation history restoration on startup.
+- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.
+- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.
+- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.
+- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.
+- Fixed a crash that could occur during audio playback.
+
+### Engine
+Updated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).]]></description>
+      <enclosure url="https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Reynard v0.13.1</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
