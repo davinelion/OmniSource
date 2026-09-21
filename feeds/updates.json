@@ -4,6 +4,21 @@
   "count": 100,
   "updates": [
     {
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "version": "21.38.2",
+      "previousVersion": "21.37.5",
+      "date": "2026-09-21",
+      "kind": "updated",
+      "changelog": "YouTube 21.38.2 | YTKACE 1.0.1 | YTKACE_1.0.1_YouTube_21.38.2\n\nby @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.38.2\n• Download subtitles with your videos\n• Transcript button to copy or share a video's captions\n• Added toggle to Open videos paused instead of playing right away\n• Search bar in YTKACE settings\n\nFixed:\n• Crash on iOS 15\n• Prevent Open in Shorts doing nothing\n• Stop Autoplay doing nothing\n• Queue not appearing until the video was reopened\n• Captions turning off after Playback Fix recovers a video\n\nYouTube 21.38.2 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.0.1_YouTube_21.38.2.ipa` for iOS 17 and newer\n• `YTKACE_1.0.1_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+      "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.1/YTKACE_1.0.1_YouTube_21.38.2.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/ytkace.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/ytkace.xml",
+      "status": "stable",
+      "shortDescription": "YTKACE"
+    },
+    {
       "slug": "turrit-mxgram",
       "name": "Turrit MxGram",
       "version": "1.5.4",
@@ -1397,21 +1412,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/maxmusic.xml",
       "status": "stable",
       "shortDescription": "YTMusicUltimate with extra tweaks"
-    },
-    {
-      "slug": "inkillerplus",
-      "name": "iNKillerPlus",
-      "version": "445.0.0",
-      "previousVersion": "",
-      "date": "2026-09-01",
-      "kind": "new",
-      "changelog": "Instagram 445.0.0 | Instagram_445.0_iNKillerPlus_5.2\n\n• Fix profile bio long press to copy detect email and links\n• Fix read DM icon\n• Fix user exception for direct message\n• Add roothide & relaxin JB support\n• Add full compatibility with IG v440+\n• Add tab configuration for hide & launch\n• Fix swipe between tabs\n• Fix story mention button crashes on v440+\n• Fix story download button\n• Fix eye long-press user exception on v440+\n• Fix follow confirmation toggle\n• Fix long-press profile picture expand & download\n• Fix grid button in main navbar\n• Fix 2x2 grid handling in 3x3 position style\n• Fix photo picker with music on multiple posts for iOS 27 Liquid Glass\n• Other fixes & improvements\n• Updated base IPA to Instagram v445.0",
-      "downloadURL": "https://ikghd.site/ipa/Instagram_445.0_iNKillerPlus_5.2.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/inkillerplus.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/inkillerplus.xml",
-      "status": "stable",
-      "shortDescription": "Instagram with downloads, ghost mode and no ads"
     },
     {
       "slug": "stikdebug",

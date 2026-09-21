@@ -1,22 +1,39 @@
 {
   "generatedAt": "2026-09-21",
-  "feedVersion": "d830e375cac2",
+  "feedVersion": "7ee8ed6fe09e",
   "apps": {
     "total": 130,
-    "reachable": 130,
-    "unreachable": 0,
-    "verified": 129
+    "reachable": 125,
+    "unreachable": 5,
+    "verified": 124
   },
   "sync": {
-    "synced": 130,
-    "incrementalHits": 122,
-    "updated": 0,
-    "failed": 0,
-    "apiRequests": 116
+    "synced": 128,
+    "incrementalHits": 119,
+    "updated": 1,
+    "failed": 2,
+    "apiRequests": 120
   },
-  "unreachable": [],
-  "updates": [],
-  "errors": [],
+  "unreachable": [
+    "ryukgram",
+    "ryukgram-ig410",
+    "ryukgram-sidebyside",
+    "sparkle",
+    "threadsaver"
+  ],
+  "updates": [
+    {
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "previousVersion": "21.37.5",
+      "version": "21.38.2",
+      "kind": "updated"
+    }
+  ],
+  "errors": [
+    "ryukgram-ig410: all sources failed: altstore:https://source.ryuksign.com/ig410 error: HTTP request failed after 3 attempts: https://source.ryuksign.com/ig410 (<urlopen error timed out>)",
+    "ryukgram-sidebyside: all sources failed: altstore:https://source.ryuksign.com/duplicate error: HTTP request failed after 3 attempts: https://source.ryuksign.com/duplicate (<urlopen error timed out>)"
+  ],
   "translations": {
     "ar": 100,
     "bn": 100,
