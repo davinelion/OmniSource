@@ -26,7 +26,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991",
+        "expectedSha512": null,
+        "expectedSize": 4604223,
+        "size": 4604223,
+        "sha256": "239cd9a10ad91bdd708bd84e1b75d6e8416a95d2b1e46e34e5e80cc58c324991",
+        "sha512": "05764d8fcf6530353d5d2616cd003eb44d4c7d9c65a41654a167faf034c2a7110bf20a70b1c7e542c87e50a6726405cc1521e07e1285177a06cafbd46d3bca1e",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 418
+      }
     },
     {
       "slug": "aidoku",
@@ -54,8 +66,8 @@
         "sha512": "ea50092f10cc7f08b4de02fbe457c073e0ea131f65c1912ec97254eca3569a19cd3e8535f667aebc0574c8622d75fa7c2d539c4e7b694b70c7894354c3139337",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 260
+        "at": "2026-09-21",
+        "durationMs": 455
       }
     },
     {
@@ -74,7 +86,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 782388,
+        "size": 782388,
+        "sha256": "33220d81d2583c6d674222ce6d8db3d8d0987a52d2624b489367e1514aebdbf7",
+        "sha512": "e28262b59e54da41510e2481438788df4f3a85f82715b881cbdf5d6f06b54cfcd0104d71f729d957f559c50b946fa24a934179e0ebbf88098edaebf8e79d9a19",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 310
+      }
     },
     {
       "slug": "animationspeed",
@@ -92,7 +116,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 96650,
+        "size": 96650,
+        "sha256": "df0423974a26a71a7e35b60fa80a11f32a536830eaf043d8e91cf83a54ce6595",
+        "sha512": "7f91369604bf195fd3df564b44df57bc9b68273b6fdc8f02eed059bc1bd82e3a6969cebc33971786185dbadfab3f1462eff939a067c1ad89f8f0c1a9ff3d7d52",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 241
+      }
     },
     {
       "slug": "animegen",
@@ -120,8 +156,8 @@
         "sha512": "5e898337d68cf562b7987f5a75eb206cc32720398b35d6045459dbe2319f898043dd416313a832586b7a2df0c8d713b4139baa4090d13ac1e90dcfc3bddda715",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 220
+        "at": "2026-09-21",
+        "durationMs": 341
       }
     },
     {
@@ -150,8 +186,8 @@
         "sha512": "b7f509245730583876c315b478f6aa0fbba7c6d442b583a6939d32a6f6a9365d3fb7460cc5f51058ff578a2dc0c0a5e47aeb326d332424ff0b2e55c027656e32",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 432
+        "at": "2026-09-21",
+        "durationMs": 516
       }
     },
     {
@@ -172,16 +208,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "72d546ba01fb33c82c80fa02332bd9aecc80fd16157d39ac4af901e28f554ece",
+        "expectedSha256": "b844eba2cde7ea276aeb79fc5ae5ee47c257eba7d9f3b49eae0af96ab13389b2",
         "expectedSha512": null,
-        "expectedSize": 39662751,
-        "size": 39662751,
-        "sha256": "72d546ba01fb33c82c80fa02332bd9aecc80fd16157d39ac4af901e28f554ece",
-        "sha512": "9af4beebf458a24fe77059873174ed40730ad6bdff589f61df141e0a650c153bb93fdb866502849938aa29b4771431353fd6fdfa3d5bead2f7a16c1d71221e28",
+        "expectedSize": 39830598,
+        "size": 39830598,
+        "sha256": "b844eba2cde7ea276aeb79fc5ae5ee47c257eba7d9f3b49eae0af96ab13389b2",
+        "sha512": "c536eacd2168905616d906776951e1082238ed49c9f7c3b509dcc96c6db2242c34a108b74a55b2d899877e0392efc7ebdab738ea17fdacab5d18f6bf5bbf7b18",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 336
+        "at": "2026-09-21",
+        "durationMs": 528
       }
     },
     {
@@ -210,8 +246,8 @@
         "sha512": "ab044821dad9e448bf6a1fd4f9e7ae94ccaa7a24a148a50c56d2ede85c7317e0e2e27fb27aa02bcddab875e15299d0557db28460f61e258743cd639f773ec63b",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 631
+        "at": "2026-09-21",
+        "durationMs": 1052
       }
     },
     {
@@ -230,7 +266,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
+        "expectedSha512": null,
+        "expectedSize": 11078209,
+        "size": 11078209,
+        "sha256": "0fedb3241f6f8830803182f74add916fb8ddfc2328940baa6be9d0e8663f6627",
+        "sha512": "fa4cb5b360ad5852f2ea913c8bf6bedefdc398c158e2db69723a4b0f7b33c503462ee2f062b10f3a30e632da38ba65efb6366bfe6b0ef9760afe3da9eaa9ff31",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 383
+      }
     },
     {
       "slug": "batteryinfo",
@@ -248,7 +296,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+        "expectedSha512": null,
+        "expectedSize": 346882,
+        "size": 346882,
+        "sha256": "ba602ebc25ff74e4c990efc6506a0c5efe5b61e95dd81ce9f96193c8cce67905",
+        "sha512": "63d4f75e40613fcaf4f6cd4fc9f925ac8faea5bd49877eb50aeab58cf9ab409725f53f6ac5e2f432e376fc76be260ceead8ef62d47bdef14274a454bf27e6a38",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 257
+      }
     },
     {
       "slug": "battman",
@@ -266,7 +326,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+        "expectedSha512": null,
+        "expectedSize": 675573,
+        "size": 675573,
+        "sha256": "e290fec1b389c0c33e1af635c598f72fee1f39cfe22a7c0ca17c1919c5d8c060",
+        "sha512": "0ad250758e177ce9611ea9dcfd732e7a257576ff8f575aed6a7e864c31983ba4dd25fbf1bc13ebef42b8e48bb008629ee739972ffd0a469697c210c2ca4f0d95",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 322
+      }
     },
     {
       "slug": "bhinstagram",
@@ -284,7 +356,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 228416558,
+        "size": 228416558,
+        "sha256": "33cfd88c5f9ea965b8d116567c7c725e17a2ed3994a7fd934911180b9dffb453",
+        "sha512": "233d5c87691bc6a78ca5e39316133fab9fb0a4bba3be2b7bcc58658927c2dc90a6f6a665fed7bee444405773b11b5793231baea5d32249eabfd332a3dabe6bff",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 1217
+      }
     },
     {
       "slug": "bhtwitter",
@@ -312,8 +396,8 @@
         "sha512": "3c5f52c4234890d9f158d44d50abf571e27f379beed5cdde30cb13ac9763ef71d2f321a2a879622ec1c65362bea9dbebb6375e6158d5eba2c1c4a27316c8a4d4",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 932
+        "at": "2026-09-21",
+        "durationMs": 1686
       }
     },
     {
@@ -342,8 +426,8 @@
         "sha512": "3c83b30d65f66f3a83e870190e95cb0b01272eb55d62accb33d31651b026acec638338dfaa2176716f0e746444f69cc2de962b67b460f7c06f630884ccedabcc",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 402
+        "at": "2026-09-21",
+        "durationMs": 764
       }
     },
     {
@@ -372,8 +456,8 @@
         "sha512": "e2689621804093cf7438ba206ac4631aa10bcfcd8c6937f5e19654a104162896fa410de1e99d65c32d4dd36a517e54c8b8ba456245dd8031f113df97edc5c465",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 405
+        "at": "2026-09-21",
+        "durationMs": 769
       }
     },
     {
@@ -392,7 +476,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+        "expectedSha512": null,
+        "expectedSize": 16815108,
+        "size": 16815108,
+        "sha256": "e21fb481fc6a1ba8d5702dc34c33afa522c8b799479e0f0a38ed4c98525a56fa",
+        "sha512": "f327f53b2a15567c2de63bd1ed7f150cd68e272a40a9ea874913eb9821472b2efd47282a212dcc04fb54f8bf80ccf1898621e6d0d1201735e0db7ae3ff4b0bc4",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 476
+      }
     },
     {
       "slug": "caperfhud",
@@ -410,7 +506,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 1058266,
+        "size": 1058266,
+        "sha256": "8ad15dec66f392dc31dd2e5fed94b978a09255400fbdd8cae0b2ae509f34c530",
+        "sha512": "0223dba47c4652edc5db25ab05a12da0e36c1aa10508f1a7b2c35095142f6e95171c4d2518d18b8d9ef470f6f67c58fa1d99bbc122f2dc512df1bb296f3867ee",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 313
+      }
     },
     {
       "slug": "cartube",
@@ -428,7 +536,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 574441,
+        "size": 574441,
+        "sha256": "84256ae4820e9e5d5dcc44e43ea2f7ac4bdff06a6e209fdbc8fffef8a927c4be",
+        "sha512": "01416dc3f752ac12ff8e9b4c226c1625a9012a935d68522273586757f7051fa7a6a6baba9409b8a68708af9b544cf6a7b5970a763ffd5ac1c5c8eb48719552d7",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 312
+      }
     },
     {
       "slug": "cercube",
@@ -446,7 +566,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 2017412,
+        "size": 2017412,
+        "sha256": "87b63c705bf65b25fbff5d4e16e88b2d92b2ae2a76136f348f8f58148751eab7",
+        "sha512": "3b5f515ef73270b96fe4c883dd0703bbf2fa0ad70d15129a3d5da7329c3e89e5e5f201f18a747ff113c261fa610d38dc8545c24318de874a32761f9e2158eeb6",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 799
+      }
     },
     {
       "slug": "chan",
@@ -474,8 +606,8 @@
         "sha512": "fc4d77fbf4ee95ed8f1992c9ccc55a23be65071f849c48afb4a7deb03f6fffe087157e6c081f319ff7832cbc0f3056ea306450faf5fe4a2b5985c409f1ab1a53",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 387
+        "at": "2026-09-21",
+        "durationMs": 601
       }
     },
     {
@@ -504,8 +636,8 @@
         "sha512": "6f781b6f9b52339e039c9d7f6ec4f0fc23f336742ef251f7b828b7ae26b4a98b7fbc1f61218a06a584431a16f24b813a7c7b3d7154de85435e7c87af36fff52c",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 229
+        "at": "2026-09-21",
+        "durationMs": 400
       }
     },
     {
@@ -526,16 +658,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "8657f3cbe68a00f6b965581ccbd417f42ff525823c80335e5e8efdb5e371d811",
+        "expectedSha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
         "expectedSha512": null,
-        "expectedSize": 35794270,
-        "size": 35794270,
-        "sha256": "8657f3cbe68a00f6b965581ccbd417f42ff525823c80335e5e8efdb5e371d811",
-        "sha512": "eaf4a5d12f0fb290e38c1054b1b6d9340c57caecc5f6bf804454bee80a5fd6d0f83814e48557963ea35d18c6d3382ff9e2360d6b2eb5808ab2c457d29867e457",
+        "expectedSize": 35930568,
+        "size": 35930568,
+        "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
+        "sha512": "144134ee20deb16649178e83c42cbb7fe33ff9b7c56d2588617dd2aefd1b46fe249b5a0eea45c3d97e997917beb700bb688b5d62e42852589b736ecadaded321",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 425
+        "at": "2026-09-21",
+        "durationMs": 778
       }
     },
     {
@@ -564,8 +696,8 @@
         "sha512": "27f3ab189f6b2858e834fef5faac978d7260bc241e52b772ecb7da21cdfeda4e1cf3f9fa920f21fac9bf2bb05e13c9e780479c4d1a63089d16f3c72e12067df8",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 283
+        "at": "2026-09-21",
+        "durationMs": 606
       }
     },
     {
@@ -584,7 +716,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 16288960,
+        "size": 16288960,
+        "sha256": "49f6ef56a97acf72e3390cc5fc7d281fb7adf8ab817b74511ff381b0e0bd019c",
+        "sha512": "8da37e1c4514c1a985c8c4d3e66bb4c8ec8bf0a3e187c3d0c566e5f403800151a492c024078f6c8ed4071a3eb41bf624f13cba1b0bf0697d40f436b2bb2b7bf3",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 389
+      }
     },
     {
       "slug": "delta",
@@ -612,8 +756,8 @@
         "sha512": "b9f899daa5b6c55b8ce7c363d26b9f586242094228cc8da4906560730b051080bdf610872819ee072e7ee7902b3f0e1fef917a1238c23ec419d659168d0fa95f",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 572
+        "at": "2026-09-21",
+        "durationMs": 791
       }
     },
     {
@@ -642,8 +786,8 @@
         "sha512": "6977dca172960feb611cea309e78c6e0581fd226d508a186bbfb6a4b26804893c3cee3444bbdc54180227e754598a7210c41c1809407e18ee8a05c0afa6c99b8",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 300
+        "at": "2026-09-21",
+        "durationMs": 469
       }
     },
     {
@@ -672,8 +816,8 @@
         "sha512": "0fcf5c54eafb2cf377915575d55d391714c428431ceec11669be8a506462c34241e49fc341c15870896cca55e83f11566f810e2c339d48f1f495cfb1fb8f9683",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 379
+        "at": "2026-09-21",
+        "durationMs": 547
       }
     },
     {
@@ -702,8 +846,8 @@
         "sha512": "bced08006cc62862f52abca0efd6f1b7c7b3738afd7ead6324957243d45576fc2a49eb02ec66b17c2bd65318dc8d5542aafa3c6f8d96c10996d5d9bcaf5eeb2e",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 357
+        "at": "2026-09-21",
+        "durationMs": 585
       }
     },
     {
@@ -722,7 +866,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 915515,
+        "size": 915515,
+        "sha256": "96e5321593046b58a3732d4a27ba229fafb52b17c36b4e3ba17d9c2f7b83bb74",
+        "sha512": "de035d1001710ea0f1d27147271f3fc7405305aa9922bfb0b0e137580b57530e4e465cc167e2794ca71f83835d701476acad833563a887abbad66238303ba413",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 323
+      }
     },
     {
       "slug": "enablequic",
@@ -740,7 +896,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 362372,
+        "size": 362372,
+        "sha256": "9eb4fbce1a75780893d2bc36c8d39c645f1551ad4807e82135e1b3a64cf255a9",
+        "sha512": "140a45606a67b89780d189efea5b80a1e0dfe6851201ddbb246cdf6b8bba62dbdfdd579f8cbd6a99f368b36649ca7425f7cb36a98cd86401d5b04b3330c14472",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 305
+      }
     },
     {
       "slug": "escapeos",
@@ -758,7 +926,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2",
+        "expectedSha512": null,
+        "expectedSize": 7274676,
+        "size": 7274676,
+        "sha256": "234b2f0dc379fc4ea818eeff6f712edbe9e7d6d63d614ea74c7b717ecc73bbf2",
+        "sha512": "92c7cb0659d77faf41403facb2aa73b9532ffc14709512a60f068c68d9f156c22cbfa753ecf55ca3922833b3b250fece964bc5d6d23fd78204b131b0a2c4fbf7",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 357
+      }
     },
     {
       "slug": "feather",
@@ -786,8 +966,8 @@
         "sha512": "eec1669597ab1b81bc4328f6f001db8fc9db0e72649dc5e3a84a816f8e47756471f7281e7ea83997df4be8d5f84289988186d16a28117b3248a80b4e2a6c7800",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 285
+        "at": "2026-09-21",
+        "durationMs": 419
       }
     },
     {
@@ -816,8 +996,8 @@
         "sha512": "a63ae726a67dc16c8c03facf99f1deed38c43656934fd0c441ecce1f68e56e553e23f155b231a22a4de142c18f779b6733f9317d1879f852da9fedad5789112b",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 390
+        "at": "2026-09-21",
+        "durationMs": 518
       }
     },
     {
@@ -846,8 +1026,8 @@
         "sha512": "309cc680b553edc0d7ec9ae298410820d2e83d233acc5f3021eb565172b308444fabc8fdc4e28b0806214a3872c983fa22dace4a8570f1206cfb3b3b050eb2f8",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 7217
+        "at": "2026-09-21",
+        "durationMs": 4622
       }
     },
     {
@@ -876,8 +1056,8 @@
         "sha512": "cf8ee14a0d2a8c362cfd42abeb47fd18e89daa0dc58d490a4716b4694be67f6c64b56b9298a1b018056435fe8e5a1ed68e998c2d41f5b9b396d61588ecc25275",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 254
+        "at": "2026-09-21",
+        "durationMs": 528
       }
     },
     {
@@ -906,8 +1086,8 @@
         "sha512": "b8be761302214dd28e48213caf43118d454d0c6c1495433bed490c8c37cd6656099f59362e02d19ce81682afaabcbf36b53f19101ea55670bc2270ff6ed59c2e",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 238
+        "at": "2026-09-21",
+        "durationMs": 423
       }
     },
     {
@@ -926,7 +1106,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 4168281,
+        "size": 4168281,
+        "sha256": "120a6c1002885d6c3ac1b8dbbe62cc91b66c8bd79955f3034a191dec93fc77fd",
+        "sha512": "28206120f6e3ba4d3b33957ec9babf4d8768c78a996738b9905ded422680fa45091961dc9a3ab8a2e20971890bdd7ce3c71617eb9b2a7e4103ceddadd528dbc1",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 394
+      }
     },
     {
       "slug": "ime",
@@ -954,8 +1146,8 @@
         "sha512": "8fb688cb6f649f15e69aa9e40495132e0813ba4efb2b09202b44be5479597d083e28f9b82210ac8405b538716e96cee193954e7be51bdfd85dc1282fb428e141",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3235
+        "at": "2026-09-21",
+        "durationMs": 3105
       }
     },
     {
@@ -978,14 +1170,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 100074036,
-        "size": 100074036,
-        "sha256": "460f72f05ede4ef8802194c52c65f7c8c8392dfcb9ab2a7e7062407c7ad29047",
-        "sha512": "74c2064e713ed8aa0d1914fbf93fc062e424a09c1060cac7569d9150d4e560b38e964b46a78e7c27d278a46a19e3d6661e97cecbf0956cb9aa3780e30c7ad64f",
+        "expectedSize": 99611121,
+        "size": 99611121,
+        "sha256": "bf46327b23aad2a86478b69f3542adee6bc84410afd5ce9870c1e3ace36b8304",
+        "sha512": "d4e6c04a29f7ca2d64904028798fe644fd0bd4a672d825c944dfd7be729ce732b411ff3411a0e3144b477032789bbefb3fc06c0dcda49422b02aa369669a6bc0",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3367
+        "at": "2026-09-21",
+        "durationMs": 2286
       }
     },
     {
@@ -1008,14 +1200,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 247800840,
-        "size": 247800840,
-        "sha256": "ca3ee59f1efc7158d8d2a9c0c1ca4ce3dff2bf645416834731cccb180ac63928",
-        "sha512": "1f61598ddd1354f90d7f5a1d4981e831350c314bff9ecd4e285638f0cdf420be9c783400aca9eb5399590a5eba56bb15116c42a94c0846642a566529ef9eb8c9",
+        "expectedSize": 247462182,
+        "size": 247462182,
+        "sha256": "3c1eeecf033521c2ff14f0e6d06c0a4cf2ca23abb1a7d39c630da6069b78d070",
+        "sha512": "b22e07fb1a5ae4873d156e5801fd904c6bc835a2637725886b6451553852e67280730d61b63f09bcd0096b2c63d8344e7465e0451ebf1330a152d5c260f80133",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 1756
+        "at": "2026-09-21",
+        "durationMs": 3421
       }
     },
     {
@@ -1038,14 +1230,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 227299291,
-        "size": 227299291,
-        "sha256": "13861f237cbbe18dd6e0afea6a12947e255417b3ecbfb28971afe778a322872e",
-        "sha512": "fec0b78f5c458074808921837f19aca6f62893fd552e28f041a24d44f770409bd22947cc4190e4cb542a8a407b31fc97f0c2001e8c24e36566a573f8b04191c0",
+        "expectedSize": 228632105,
+        "size": 228632105,
+        "sha256": "6f6e5c4a02b3d9a096b317c31da468aadc17445a53dde0cd797312534617ae4b",
+        "sha512": "a90eee340b29502ea39ec9ad35334d6ecc7b851f8601c51893ad45050c12faf07ca5c5681596bfd0558fd5c0a9d472c2c71dd77e6aa393e88294c4aab51c5178",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 7199
+        "at": "2026-09-21",
+        "durationMs": 15642
       }
     },
     {
@@ -1074,8 +1266,8 @@
         "sha512": "6dabf01134b155334f7e8255873c908653a9b875475559bb3298c10bc056e120d05997e09da76a38ab8e3b331b07fd40fd1ea829c682bf389539558cfb9e0df0",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 636
+        "at": "2026-09-21",
+        "durationMs": 425
       }
     },
     {
@@ -1104,8 +1296,8 @@
         "sha512": "1ab157d739677214df510f74171061b1bc8a6105cf698cf96d7ed9c504b537fc71b63eb0d66cbb60fa5f2f6dcf5a3e7333c3966fa3014bec28601751923cf955",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 312
+        "at": "2026-09-21",
+        "durationMs": 444
       }
     },
     {
@@ -1124,7 +1316,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 3718662,
+        "size": 3718662,
+        "sha256": "ded952869d151799271a31534f0d3ac2de18399171fba0c4351132eecf82bd48",
+        "sha512": "dea33b6b22b75f68f204db98e183ff6c9ed4314d01acfb2513ab7d809470ebd874c365feb75adab0ec3e66b889b45948df26fc89a42d54a16b79a3c5cf882cf9",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 393
+      }
     },
     {
       "slug": "jaility",
@@ -1142,7 +1346,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 108606,
+        "size": 108606,
+        "sha256": "54b98b5931345e4076c86161da193f7329da9fe6106c92c9c5d630b06b1e4503",
+        "sha512": "8777926bacbf0ed3f1bb874dbf4c1e398b53fe4662f1ce2463eae85b4ffc71b011f092c76e1a21d869eaf84c0fcf546d2cad34185b252f36a82bd37beb828b29",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 376
+      }
     },
     {
       "slug": "jellify",
@@ -1170,8 +1386,8 @@
         "sha512": "714620e1053dc70886a61198a6755e7fab5e46ced9df841aedb52d26f571703cb447b2a14787b3019819d801c5a31b0738e0ee83f39305b94b280aa12fd26e13",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 382
+        "at": "2026-09-21",
+        "durationMs": 685
       }
     },
     {
@@ -1200,8 +1416,8 @@
         "sha512": "1064a6e08b2091c6823112ecc92e7edbd76d044225822a1cfdef1e33bc57246f2cac8f7840c52420289dd8810ef7ddd08f6174245326f7c57b99bab098982ab2",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 348
+        "at": "2026-09-21",
+        "durationMs": 523
       }
     },
     {
@@ -1220,7 +1436,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 339440,
+        "size": 339440,
+        "sha256": "dde09186162f539fabcc3641296db387757cc756475b2ca8ada4fa72c48cbf6a",
+        "sha512": "364b26c20169284372645b9fda97120bd53da32eba445b89da587766ca229de4f4a0532bce17adf1a435129e8a96216173a4c6ef47aa70a0f42eb333db105539",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 334
+      }
     },
     {
       "slug": "ksign",
@@ -1248,8 +1476,8 @@
         "sha512": "5a3a4a929a3059066aa6675b7cc283f1147018c9acdcb117ec4dc721646f8c867e07c559baa30a0c234e27e2ac66b38ecc6a44517b45183bc082859bd6d2b8ce",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 222
+        "at": "2026-09-21",
+        "durationMs": 468
       }
     },
     {
@@ -1268,7 +1496,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+        "expectedSha512": null,
+        "expectedSize": 5474210,
+        "size": 5474210,
+        "sha256": "c8ba0fec11137d36732108afa8cb3da1947779745bc368ba7e78f1af993298a2",
+        "sha512": "4b1f5d4c05961f4ae73914c2e7adb0754fb00a2bc7cb52352e29a7fc3262728d2bd4fe66fef771089f8fbd7d167c5723894f0af0b58e5c7efbbb14353be881fa",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 328
+      }
     },
     {
       "slug": "livecontainer",
@@ -1296,8 +1536,8 @@
         "sha512": "2d61a82e88094e60be2f003c97dec6ecac7b405c5751ab7dffeb09c550c0a4946eb16adfdb5fa249c26e7cc2e99d60d179b57b5d0be79f929ddfd6ed84e95607",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 190
+        "at": "2026-09-21",
+        "durationMs": 406
       }
     },
     {
@@ -1326,8 +1566,8 @@
         "sha512": "b7bcd146073aea4b7df214df363d685e89bc3973cab82aa994aee3e1a31da732a409b92af09564c5a9052f806cada2b11f8950d573bdabe83cd10bd0bf7dcc71",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 480
+        "at": "2026-09-21",
+        "durationMs": 718
       }
     },
     {
@@ -1348,16 +1588,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "840470f2146171d6cccb6c9d9a310fe0686b8012dd07369d7dd1b669ffab56c6",
+        "expectedSha256": "dbea3b1243ee3be2e75ad0b6d97681aafb5b94ed942cb16e747b03bda130adf8",
         "expectedSha512": null,
-        "expectedSize": 114010180,
-        "size": 114010180,
-        "sha256": "840470f2146171d6cccb6c9d9a310fe0686b8012dd07369d7dd1b669ffab56c6",
-        "sha512": "49f24c997c84fd6ddf5cefd1964f78f2ab07464afc018de387bdce3fe304b7c1e926e20b0e0a8133ac8cabb0daa64c0e6be982203fe7bd443272222e2ea33e52",
+        "expectedSize": 114296014,
+        "size": 114296014,
+        "sha256": "dbea3b1243ee3be2e75ad0b6d97681aafb5b94ed942cb16e747b03bda130adf8",
+        "sha512": "74b0311324cdd2957d1e7285e9003af4e1498c6c5fb1e4e731e3260cb78b70a3207ab89ee29c695b0ccb73251a17f4b9b5976fadfd5448b4baf12a2a5c6a0e1b",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 640
+        "at": "2026-09-21",
+        "durationMs": 1088
       }
     },
     {
@@ -1378,16 +1618,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "7f2adf280dba286ef1374fac874b87af9be535bae39f62139e0e68b4ae324a9f",
+        "expectedSha256": "b670b1c1c538325d82ff2c74ebacd97c9fb338af6dc8516cccbfade882147b71",
         "expectedSha512": null,
-        "expectedSize": 273393210,
-        "size": 273393210,
-        "sha256": "7f2adf280dba286ef1374fac874b87af9be535bae39f62139e0e68b4ae324a9f",
-        "sha512": "a9c23352b5839341362309890fc76f29080aaaff38b5504076f38e1830ab7efd514fee351e8fa9fea28dbd2aa7ceee3a257c0f4426974e87b798eae7f21c216b",
+        "expectedSize": 288525117,
+        "size": 288525117,
+        "sha256": "b670b1c1c538325d82ff2c74ebacd97c9fb338af6dc8516cccbfade882147b71",
+        "sha512": "8e3355e2aada07d02c4d607ab47060ee3d464801c2ced973704668f4351e9c47dfc5c36f760a22667be5ff088d837e1c535a04d0700ffcf21cc499d806b13793",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 1213
+        "at": "2026-09-21",
+        "durationMs": 1596
       }
     },
     {
@@ -1408,16 +1648,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
+        "expectedSha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
         "expectedSha512": null,
-        "expectedSize": 106420283,
-        "size": 106420283,
-        "sha256": "677272934813c6f1890fa73ae1c8c47aead4630f266d27dc9002a0e278ccf4b5",
-        "sha512": "6f8ecaa664a43d591e808f1f915d0a6ae8d8568d71972797886fe6566a1371b07664b3c6675fc18431d0c77b1798f8e630063559094339466d29fbd08d992add",
+        "expectedSize": 106518711,
+        "size": 106518711,
+        "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
+        "sha512": "354d547a9f48087cd3a2af9d850fa017d6b3c0dd3948fd3d54cce95112bab658f50869db7a8341cac24b4b04a3e4df194c2706ca11833b03e74ea27a3def1023",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 603
+        "at": "2026-09-21",
+        "durationMs": 870
       }
     },
     {
@@ -1446,8 +1686,8 @@
         "sha512": "22c467318a245a81a3e4b95f8eddfdfc57d785f22f82ed9726c6a3b23ee2ffdb95765d255bd080ca5ab2d905d5c6072d92f7dd21ec64e82ecac29f2f2ed27e17",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 2167
+        "at": "2026-09-21",
+        "durationMs": 2118
       }
     },
     {
@@ -1470,14 +1710,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 113359444,
-        "size": 113359444,
-        "sha256": "68049505c91eaaf1273a63c826a2eef7f8eeb69e10eb4c79ed7529cdd4e50953",
-        "sha512": "ce44faeaf13606e86fc8ccea26d103bd69528f5e1f1956413584bc4cca45536dae229c0a2a7d0c5acd981177e8b5b023d2868e59f210bc16a3c479a8408a001e",
+        "expectedSize": 112483407,
+        "size": 112483407,
+        "sha256": "92e54f153b2daadc71b9bed796a63a18aa47ffe911681ee0040455a5c36f8da9",
+        "sha512": "4efe9a0b2ad7e34a533eb58f06bffa69251793dca94ea3a24a33fb56f55e17fd8047937a5cbffa7c2cd5322b91181626c6de6ed5b729a08945fe0d241670332f",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3020
+        "at": "2026-09-21",
+        "durationMs": 5928
       }
     },
     {
@@ -1506,8 +1746,8 @@
         "sha512": "6d94b07f6e47f9a65adfc88114882633a7da181d7dca3fe7d3cd49140479a47e11d9a62a0ed902d5ede7d7a0e276e9245f34e5423944ab6ef20e41df20fa4a89",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 201
+        "at": "2026-09-21",
+        "durationMs": 320
       }
     },
     {
@@ -1536,8 +1776,8 @@
         "sha512": "a1bf6a8f5deea88bcf01abb2e3fe63292d3eed44327f64a15dbb9b81becaa31deb8e6c1dff01a4bbc975937827c8277088ba2587a4311d1a91f5180cb8931786",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 519
+        "at": "2026-09-21",
+        "durationMs": 889
       }
     },
     {
@@ -1560,14 +1800,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 113236064,
-        "size": 113236064,
-        "sha256": "cb555d9e971282b1e664206a615dfa209b39c70e6d3f30b5bcf61fa113455d2d",
-        "sha512": "63e60510e6e56816c0a17c205ecdc9bd8d1de70b88e9f715b267c75278d86c2a1f1f9e26e1501f7960564c10324a215c4d32aa2ecd2aef82ddfc5354d14351b6",
+        "expectedSize": 112520493,
+        "size": 112520493,
+        "sha256": "9e807b9f8e4b42c97791529209120965d41d9c707d391d5ffb45e3063fc52363",
+        "sha512": "53f87268251ff23e78a4bd7b841d8c420460596f52481b5cf7688c04b6729b011d1dfae0546fa3e07f0ae1469545f3a89e3d5532d38928ddeb98049538778e18",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3402
+        "at": "2026-09-21",
+        "durationMs": 3413
       }
     },
     {
@@ -1596,8 +1836,8 @@
         "sha512": "ad210c958585f232be505b246b04eebaf66cb803ce0e968ed7bb3573c2be30239f0d1ebb98ed2077f7bc23de48e8463774e0e3616b754c9a0c43aba4a5028b93",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 141
+        "at": "2026-09-21",
+        "durationMs": 275
       }
     },
     {
@@ -1616,7 +1856,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 3889341,
+        "size": 3889341,
+        "sha256": "df6d6273ccb7bb77d4de9426822f68b343890ea180992fdecffe822706c9f636",
+        "sha512": "4ac8fecf74fa063cf78924c8eeec50d404f470b56e79f58485942400927f99db6c0f915c1fbbe452d82f58ba3e5c29739bf5c26cfc5506de27e1a2f22f620f34",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 378
+      }
     },
     {
       "slug": "nebuloiptv",
@@ -1644,8 +1896,8 @@
         "sha512": "01df80aa1d9b44726ee12da95b8f7d135acef5c253fdafdd7603265dc16344796791b8c7348f1b00870d3631b3add6ba8accac42229ace6a1a702a27dd8bd23d",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 688
+        "at": "2026-09-21",
+        "durationMs": 860
       }
     },
     {
@@ -1674,8 +1926,8 @@
         "sha512": "4367d7d88322945a3920e88dc20498bbbb9b4d5db63d28699c2ac116dd78c78d87bd10676aaf4cddf729e9d78a28d0e0e8a2344fd0c4d85ae3fb4fc3ec18c12a",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 966
+        "at": "2026-09-21",
+        "durationMs": 1961
       }
     },
     {
@@ -1698,14 +1950,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 107196182,
-        "size": 107196182,
-        "sha256": "0e50ed66be78c8835dfff7d590df34b29d2adfc04c95e354e570ed1e4887d615",
-        "sha512": "76507e04b5da870868161c8e477cf2df16ebf9e9dca35aea463fac2579c9114b8f5c7c647de14d28166446b23414366f27295f80a44f2759375adb6518053822",
+        "expectedSize": 115827879,
+        "size": 115827879,
+        "sha256": "e3afd789944c65d5c6109826e49211878f989b9eeaf64107cbfc69f6808d6a40",
+        "sha512": "3b26181a4f904386c684aa357cae53426dc7d6c8e0b439b286bc56c2a2147bc4238181e0106595bc66f97a12a9c4dd47d201557e8853438c8c42182a08c81277",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3172
+        "at": "2026-09-21",
+        "durationMs": 2729
       }
     },
     {
@@ -1724,7 +1976,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+        "expectedSha512": null,
+        "expectedSize": 126339077,
+        "size": 126339077,
+        "sha256": "2e884638cdbf264ef472449f83d244d5e8e32766fef7b29f76109db788f614cb",
+        "sha512": "25ba6d3af28bf01140500de4517ec7ae9c43c17460759cd052553e7d8ded9c8f773f84882190090fbb160fafa71500aa0ae5e0c6997ea827f655ea8e457a833c",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 984
+      }
     },
     {
       "slug": "nuvio",
@@ -1742,7 +2006,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "50bb70d89a4201070840b7530ea730e1bf2c603c72a1bdfed48126740d6dde07",
+        "expectedSha512": null,
+        "expectedSize": 65234840,
+        "size": 65234840,
+        "sha256": "50bb70d89a4201070840b7530ea730e1bf2c603c72a1bdfed48126740d6dde07",
+        "sha512": "6a6f88997e30aa48e557c95caab9105870134f4ebb173081d31ea7257b1b9cc72db3aeac1d05d09b89dea539c61cf00cbaed7e5538d50c51a1cef4b6a1a4f5a2",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 662
+      }
     },
     {
       "slug": "odyssey",
@@ -1770,8 +2046,8 @@
         "sha512": "5e159afc854537f5f93c47105853987cc367eb978f657ec4ade34905929b90a5b9d463ef55cc430b8eecf761148312830d1e97a0cfc25c33ebc1c9ce62a366a8",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 299
+        "at": "2026-09-21",
+        "durationMs": 425
       }
     },
     {
@@ -1790,7 +2066,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+        "expectedSha512": null,
+        "expectedSize": 39611914,
+        "size": 39611914,
+        "sha256": "b3fa3d346b1a3b17353feb5e398f0bb752e149024b4241c4441c8dea494971c3",
+        "sha512": "7d3f7b3d251a70217d41b3c659d49aa37cbb0341b4da5e7ad7115fb9cb692ec7105b27e9e45fb88039728bbf4b7961f94ec38267bf3bc1d7e826639728566eee",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 682
+      }
     },
     {
       "slug": "orbot",
@@ -1808,7 +2096,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+        "expectedSha512": null,
+        "expectedSize": 48820768,
+        "size": 48820768,
+        "sha256": "d8d5d55f3ad92f36f5a8146e88771652635601de40639446ed73c3297a82555e",
+        "sha512": "b0d6410dc82177fcdcdcc98c4b13a7da5eaa2564961a127076af01e028d11e1fc58fd9b21c0b369f40d3b672d1c3eac560cd90cc9635fc5eae7110428be12c17",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 746
+      }
     },
     {
       "slug": "otraku",
@@ -1836,8 +2136,8 @@
         "sha512": "1a1e68310d6bb9de9a4d0cbb661a839ca1147fdc24d9d45125b78a0cec0d10adc80529e311ed43fefd602d483dd9fc41275959e2b3e3ad2077b71b49de439377",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 240
+        "at": "2026-09-21",
+        "durationMs": 415
       }
     },
     {
@@ -1866,8 +2166,8 @@
         "sha512": "4ae7dfc99bea24ae36f4ad6dca96c56adc35f68dccaff4dd74b1e664f1c19d90e66d4923b7666b2287fb745ebb8adb79058250c4a5f6fe2c66a631139742128c",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 397
+        "at": "2026-09-21",
+        "durationMs": 685
       }
     },
     {
@@ -1888,16 +2188,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "3d6568b6f872fe089cdc3a8692f187abab004e178555bc861a3d6c6c5623aeda",
+        "expectedSha256": "dfb6ca4f282ebb82bcdbad5fd1abd82b17ee2ebb42b28c3b8cbffda11a95463c",
         "expectedSha512": null,
-        "expectedSize": 48421258,
-        "size": 48421258,
-        "sha256": "3d6568b6f872fe089cdc3a8692f187abab004e178555bc861a3d6c6c5623aeda",
-        "sha512": "5948f5e8c7865c8ffd2b2aec6de34cda4a2314c8da9fa814acc439eaffac50c0dc53b0a1476198a148474a7d91f7a5766c52b6c661104839820fc23c6f66167f",
+        "expectedSize": 48685274,
+        "size": 48685274,
+        "sha256": "dfb6ca4f282ebb82bcdbad5fd1abd82b17ee2ebb42b28c3b8cbffda11a95463c",
+        "sha512": "6469a5ffd6c2d4d8f38064e8f7008916d4eeeee4e50c83c101fa2f85665d1b5d2f8013eb0108804f14d855873f4a807ac7aee27e3451c8e1e04edcbbfa6059ec",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 354
+        "at": "2026-09-21",
+        "durationMs": 547
       }
     },
     {
@@ -1916,7 +2216,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "0306c349a4292ca3c40647a48bf8959f4b8d9fa7793cab444d2f79f23d4aaaf7",
+        "expectedSha512": null,
+        "expectedSize": 13686800,
+        "size": 13686800,
+        "sha256": "0306c349a4292ca3c40647a48bf8959f4b8d9fa7793cab444d2f79f23d4aaaf7",
+        "sha512": "cf08a15ef69cc1aae07f1a8419d13b6f68e6b343da47f60d170a851089d07a58a55a08a5fccf2da7b8100a0f06dce67959fd16575ea74b6cece3b0acdb41bfc4",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 437
+      }
     },
     {
       "slug": "ppsspp",
@@ -1944,8 +2256,8 @@
         "sha512": "c10c6ee4a48e64c1e161bf376b8cd5810e37e68b361ea1f2312bfdaf148725521cb0d71725e0291f0233395951ae0acdf7aba9aa533f26671ea1e68a07b24928",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 363
+        "at": "2026-09-21",
+        "durationMs": 486
       }
     },
     {
@@ -1974,8 +2286,8 @@
         "sha512": "7a219752c6fdd3a7a810dce4c0d65b819e84ae471c1d542f17dc837270069b7678084c02391c4305449814488354953ba938e29e80605ca91b20c1934769ce36",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 4543
+        "at": "2026-09-21",
+        "durationMs": 5679
       }
     },
     {
@@ -2004,8 +2316,8 @@
         "sha512": "5b05320c98c9fd83f6021cd9b97dcbaaeecc061b462399cefa2a7cae3762641b96841e4b672e96b6b2bdbab1c36d60f5e841aa5de2e75992fe682b5aabdae703",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 267
+        "at": "2026-09-21",
+        "durationMs": 366
       }
     },
     {
@@ -2034,8 +2346,8 @@
         "sha512": "76bf59f8139c3e172d2fa6ce65ff63f17268f9a7b924714fa14076e63ed35c1874cd52dae727bd5206bd13e13c08024812992d20824516425314ba19f0e90e01",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 426
+        "at": "2026-09-21",
+        "durationMs": 477
       }
     },
     {
@@ -2064,8 +2376,8 @@
         "sha512": "62b579db2527091424b18b50ae6a63789e481bcfc6137fd12e7501f732cd63f6da61c18be3e981d90f275641bec60068ae8a2ee4c4a8a488bbac2936af3d4dd7",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 231
+        "at": "2026-09-21",
+        "durationMs": 366
       }
     },
     {
@@ -2094,8 +2406,8 @@
         "sha512": "54d29bafd79f765d9db18f7d928bad0b72e2be74d9b8d7b2a45ede142b21e07b0012f12f0aacf482716cee31d6ce591099c1f3a9f97a6f7277a6a9b08676393a",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 291
+        "at": "2026-09-21",
+        "durationMs": 421
       }
     },
     {
@@ -2124,8 +2436,8 @@
         "sha512": "77bed103610d6878763807023a57071fd9c0cf5787ff10216ad0952eb9c80c299c059ad22ab236414398bc4fe14b234424014478235feae53f13e77bd8d50a80",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 684
+        "at": "2026-09-21",
+        "durationMs": 1376
       }
     },
     {
@@ -2154,8 +2466,8 @@
         "sha512": "610901383abc4d7e0f89a77279c443e0282f63017f8496aec780682b9afd29cfa033b9bbbabf5d7d34507ef39bb1723e62da5966984e5351e6c504d4c19fe666",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 807
+        "at": "2026-09-21",
+        "durationMs": 1551
       }
     },
     {
@@ -2174,7 +2486,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
+        "expectedSha512": null,
+        "expectedSize": 108453095,
+        "size": 108453095,
+        "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
+        "sha512": "f5d9db183ccadd9951d0c0b05881a37f0a851a63264b76cbb28ce0be58c2ab97f5797a85e9add940752aca9463246065aa57815f96d4e48528d4d30016cb368a",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 1024
+      }
     },
     {
       "slug": "ryukgram",
@@ -2196,14 +2520,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 325835336,
-        "size": 325835336,
-        "sha256": "3b8ad38866171918a37f45dd40421fe3a5dd3b86f5ff39eb93eca20ac77876a3",
-        "sha512": "50bf292bb6580eabdef2a332811a6cfe3ebccc28c192725a7ef0fb0a79b904ab54f879fae428f2fc570c7d95921f85005a9cbf8d4b8e2f8dee6cd58bcdd2c88a",
+        "expectedSize": 320995960,
+        "size": 320995960,
+        "sha256": "3ec1d483343eb098275ba2d56108c0260f2cdd152624d146a1504516c6ea48cb",
+        "sha512": "5c42d88acd442d38dd3e3c580f497b252f80abfa092851ad55ca1083054f6e96d561a125f5531981ee7d6a3ba115b623cc6ad7c021fd732c6f55e05dbffada8b",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 7510
+        "at": "2026-09-21",
+        "durationMs": 11975
       }
     },
     {
@@ -2232,8 +2556,8 @@
         "sha512": "9df7f3f6306316cd2d7166dcb5b4f35649b4095e8623e6442d41b28488d7f221671a0ec8fb428171039cdafde453139be415b654af6fc3391187793543feb440",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 25428
+        "at": "2026-09-21",
+        "durationMs": 19245
       }
     },
     {
@@ -2262,8 +2586,8 @@
         "sha512": "5800324175529ff97d3c44478cf3f47ef96e16252e088563daf131a0fc523b964ecc05152f3a4c71eb25257af894ec185cacab20b1f71682d7bcb40258782d0d",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 18176
+        "at": "2026-09-21",
+        "durationMs": 19054
       }
     },
     {
@@ -2292,8 +2616,8 @@
         "sha512": "5f9e8e00fe3518b10dafdc42d85c218858c9896bcb1ab7c7c609b1efdd0f4218ee1e1620846f262579cca749035fa73083a8d2b89ffa8922eb9b4045129789e0",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 522
+        "at": "2026-09-21",
+        "durationMs": 1181
       }
     },
     {
@@ -2322,8 +2646,8 @@
         "sha512": "df7c86dfd4af7865df1b38b5512069c034ceaefe3094dc4b9707dbdcb9803adea8f7670ebed8bee4edca9bee82b7353e1654a6dc7b26194a9db73d74488371a5",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 229
+        "at": "2026-09-21",
+        "durationMs": 363
       }
     },
     {
@@ -2342,7 +2666,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 2786937,
+        "size": 2786937,
+        "sha256": "5ea276d7c5230b4eb17dd03fae0b23333d505a05dd82c08ae2a66f46b75d9ec0",
+        "sha512": "ad9e3d31d4b9689a9766f5471ac46c3caa718483d47912ca65c686f490dd98efafb6dde16b5424da4e8158a41863b4b3c36dc64af9d9e990cd283a191859a9e5",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 328
+      }
     },
     {
       "slug": "serotonin",
@@ -2370,8 +2706,8 @@
         "sha512": "a6a6b3d868d5ba0819186a14ebdf82ea79d424e5c0b52a8ebf98c414b3234503776aba89f35a1c2c843fe034c187df14a5df45c0a89fedf74586ba9185b19141",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 234
+        "at": "2026-09-21",
+        "durationMs": 504
       }
     },
     {
@@ -2392,16 +2728,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9",
+        "expectedSha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
         "expectedSha512": null,
-        "expectedSize": 27609918,
-        "size": 27609918,
-        "sha256": "316d0dbe75ac6a5f05dc2946754cf7d5b634eeec5370f02cf1a91f9a0ed913b9",
-        "sha512": "c634e0d161bbe5835f6b6d7cdfb5f69bf910a6163bdd68b40a92dc3a8130f63dd71f4d321e728f7031aaa1d5a0bf1a1f708726128b9fe995a3766d560a70be82",
+        "expectedSize": 27770821,
+        "size": 27770821,
+        "sha256": "e334f86e6ceeab2e0d886c07611246533f474bb18838cf13ebc09ed1f0d622b5",
+        "sha512": "9740f9385c5e8e82b056dc3637e3c82a49f096ad4278ce3537f3e2283dcb641143bb26287f0e9560d20b4a77151a6ab9d01d5849545bf07b83225134de1531db",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 347
+        "at": "2026-09-21",
+        "durationMs": 399
       }
     },
     {
@@ -2420,7 +2756,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+        "expectedSha512": null,
+        "expectedSize": 74865911,
+        "size": 74865911,
+        "sha256": "e0a10b3c3593d077e65e8f541f77e1b27a79b5cfb76630082402201476918834",
+        "sha512": "41e1abdcc0b2813c7cdaac2e32370a0ce7d1bb0fffeb0bcae5d35b2d573d1e5c70e5924996cb0cc3fb99e90dcd472ee65f93bce8b4fa6c7bf25ad230c79bb8bc",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 1213
+      }
     },
     {
       "slug": "sora",
@@ -2448,8 +2796,8 @@
         "sha512": "ab2f66dad9c37d9851f56f76e0e2c86e213234c653fe250207de720232976a464abe172753bebe319540c124a371687e831fd8023acd2004e848414a2198fb4d",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 213
+        "at": "2026-09-21",
+        "durationMs": 361
       }
     },
     {
@@ -2472,14 +2820,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 318531474,
-        "size": 318531474,
-        "sha256": "6d03c1978d1b5f5f8f0fd434cefbaf038b951bd78692c730e9fc492f93ac638e",
-        "sha512": "bdc3ed631abb5a487f6bcca58fff1d6ff56ac19b30bbadc1cff7d0fd40b2cfcb04d98350eff27ad35a8cafe57e97b1cd075ec47ef3a852bf877d00c14f604e52",
+        "expectedSize": 312339573,
+        "size": 312339573,
+        "sha256": "94417d59f794275acbbacbafe4b3697b068d0e76f7936dbf769d7e985a17c679",
+        "sha512": "e596e17c70a99f3cf19b477d6ab89add8beab044f00c0ab57414359c9c3bd412a446c6695e8b26d8f762d63d2ccb8eb63c2ce094c96cdada686dfad69a5e2317",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 11854
+        "at": "2026-09-21",
+        "durationMs": 18712
       }
     },
     {
@@ -2508,8 +2856,8 @@
         "sha512": "5a2413127de96e0fc26bf9f83b99f7318ba5783f773b920d9eedba61a6385fffccd236cc1f9a65691b428d3b19aa6b38304fed3ca4b171eee722cba38d462110",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 381
+        "at": "2026-09-21",
+        "durationMs": 496
       }
     },
     {
@@ -2538,8 +2886,8 @@
         "sha512": "caab9e0ab888ef060f88509d12f767670c56b1e2005805930991b966a4d3faebdacd17e947fb5e460e28ad3fd3303cae3c9996b9553b792ad0f7feafdec94a07",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 367
+        "at": "2026-09-21",
+        "durationMs": 634
       }
     },
     {
@@ -2558,7 +2906,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 1218528,
+        "size": 1218528,
+        "sha256": "77d5b23737ff1c0cac3bcb020096720d215bcc6a3d1cdb37c28835876ab3370c",
+        "sha512": "96219cff85292978f56c14aebae9de07b298b91f89db9f7eaebf8abef36db947e44e0fd4008f175c2914d6058e5398b82ed3582cc103c097e203e2f340237651",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 383
+      }
     },
     {
       "slug": "stikdebug",
@@ -2586,8 +2946,8 @@
         "sha512": "d5f97f767f7d4eb262e5e24f09ac0200505ac7204de0d7a059356037b01a25c0e9c67de0d3696a97dd877e8364d22c81e7d38a2517980f940a2983fc203f74ae",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 240
+        "at": "2026-09-21",
+        "durationMs": 435
       }
     },
     {
@@ -2616,8 +2976,8 @@
         "sha512": "0761476a63c84cf928a854bcdc0e60439ee83914068801ccd35b3437a060564b18ec5a8cbe95630f3374ba0e5aab23b383847e4f9c13664438bb7e403b6dc510",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 272
+        "at": "2026-09-21",
+        "durationMs": 1320
       }
     },
     {
@@ -2646,8 +3006,8 @@
         "sha512": "f7766c82b32e2d61dc01956d5efbee8127cf2005266db1e793f60ab90c242780d14a7d1e01e870c977e31e49e91bb4683366f46b002df7d6fdbffb32a6b11ccc",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 578
+        "at": "2026-09-21",
+        "durationMs": 1531
       }
     },
     {
@@ -2670,14 +3030,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 82653568,
-        "size": 82653568,
-        "sha256": "67ddb44d138a0a62afec5dbb700c269900c4dc33d34d16d15bd81209c1744fd4",
-        "sha512": "76a19345ed0879e4e4e3a16387e6e6f90c6f18ef850425fab9cea95f8106d96b79deb890e43e1c17f624492f158f7bb8fb81b4be4a84fbb00986aa21ce4eb506",
+        "expectedSize": 75578339,
+        "size": 75578339,
+        "sha256": "17674f4073c5dd3f3db807af52a5acdb548b803413712fca078244d0b95dcd0e",
+        "sha512": "20022efc0574f46976a61f804053fb33896c242d952c0a9cb6081b6331b02c20dca7ff6f6fe3894a1feeb6e9f201fa665f6145ff2f0b9800234d04b6e340e278",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3051
+        "at": "2026-09-21",
+        "durationMs": 1757
       }
     },
     {
@@ -2706,8 +3066,8 @@
         "sha512": "3a724fc512002537c26110bf619ad05007eebd8899b0b3f55458bd1d894b6f83e11397fdaeba115e1a004e83a9fb2d9640e699f521a0fc2c5f5c9d8bc14a2b5b",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 1077
+        "at": "2026-09-21",
+        "durationMs": 1697
       }
     },
     {
@@ -2726,7 +3086,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "85e8c4067880f6697dd01e8de480c252512dbc49ea2f4463d1a9f4815d98b123",
+        "expectedSha512": null,
+        "expectedSize": 15044222,
+        "size": 15044222,
+        "sha256": "85e8c4067880f6697dd01e8de480c252512dbc49ea2f4463d1a9f4815d98b123",
+        "sha512": "1494748337124798908f8f152640b7cbeed58bff5e3d25613ffa7c0e8f8b4acb5d56b81f74a85e9f7be36236f2b9b20aabfc912060100073be7d46539f53fddc",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 479
+      }
     },
     {
       "slug": "taurine",
@@ -2754,8 +3126,8 @@
         "sha512": "18533b18dce92b71888ac60f9610f18ba105732b723593e804aa1cb9eb160cf467b864aeba951f8c89be69f9a234b51860bd116ab8cf6b6901869d35a2049744",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 302
+        "at": "2026-09-21",
+        "durationMs": 580
       }
     },
     {
@@ -2784,8 +3156,8 @@
         "sha512": "d784046b3d14484c776f1f389c5783f9b3f862b2201a51471d5844b332c5984e693e007c8089b732df3b0050470672b6a86a048f20fba436c2676c7bf0ae4406",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3315
+        "at": "2026-09-21",
+        "durationMs": 2233
       }
     },
     {
@@ -2808,14 +3180,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 105719166,
-        "size": 105719166,
-        "sha256": "52b3e703c0db75ea143198720e9af263438da065b6c65d9e6faa5b3ba214fd9a",
-        "sha512": "8150482543c085dc10dea2d9e076d36e2669ddb284e920d28754c6b50ba31cbc173cf4a8b5c41118075f9a282d06ea55dcb2b290173ef07e232e42f32d917f56",
+        "expectedSize": 107906677,
+        "size": 107906677,
+        "sha256": "728a261c31a3ef64511e0319af8b73a7c2f1f5e51d46f0448fa0ce3323a225e2",
+        "sha512": "d2bad42f1b51354e0270c6c087e53895d3bc0f01cd000bb59f6a8b8600b6720fa005de32cffcadaece98e0c2e52875ebef5e4fa4b6812bb9d0ff686962adf2e0",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3267
+        "at": "2026-09-21",
+        "durationMs": 2250
       }
     },
     {
@@ -2844,8 +3216,8 @@
         "sha512": "70e7264bab856ca3b9269db726d24d6bce412347ca6457acbbbe22f3d168176057364d8afa374a2300d60f238c7951f2f43939b867456140793b1a1a2af425fc",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 437
+        "at": "2026-09-21",
+        "durationMs": 525
       }
     },
     {
@@ -2864,7 +3236,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 542040,
+        "size": 542040,
+        "sha256": "94721e92777d0a454cdbe40f34143296e70465212daf9f4232bd44f9d2de1d47",
+        "sha512": "f52f6a6531172554e7b3c7341b7e1674ae2b85ae29795c6f42c6ea27ffed38145755b3f235ea23c6ddc616267a8d959e2096e35f70996d7524518d885e7968b5",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 316
+      }
     },
     {
       "slug": "trollfools",
@@ -2882,7 +3266,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+        "expectedSha512": null,
+        "expectedSize": 6214108,
+        "size": 6214108,
+        "sha256": "a823203994b3f48b5c13295f11c7f105c3137e9884152bbe97488c8c143fc9b6",
+        "sha512": "d48d95a902e83095c5f4ebdfd0ccce3f8b0a7e212ec824f3c4cfd55b46fa06867c930391478691f68888a84a20b9b992d783602ef38f5e898f9086294183bf53",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 392
+      }
     },
     {
       "slug": "trollinstallerx",
@@ -2900,7 +3296,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 6889214,
+        "size": 6889214,
+        "sha256": "7107251c6db1ca5536526d00d902956f4e7d1c9159d085ab5aed332dd097734e",
+        "sha512": "1117f12d5e705038c1f650908041445b6542d2b3b5aeda1f2b44002be9945987f94e28ec24cc5971a1bac661ff59503ca2a76ced27c782fb4961ba21d695a75f",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 342
+      }
     },
     {
       "slug": "ttkillerplus",
@@ -2922,14 +3330,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 453011354,
-        "size": 453011354,
-        "sha256": "1c07d2cf17ae784906993fba0f1edf98117decc0f55eb06175f2d9c1c6091824",
-        "sha512": "76263f4db3c63657e39f185e8e4722fbe7f5536e8be0cea22c41c53a10b5fc453dc18062696262d3cdadb1a27e6813f0ee18aec4867b75bf165243e00adb74d0",
+        "expectedSize": 466535207,
+        "size": 466535207,
+        "sha256": "df30ec51d0c183c1711e1194f04e6179bc6fbad25b72fbd4510f5280468ea5e2",
+        "sha512": "652a6bd7e01700a7d71e91a33a98dc8313dc2ff7b28d5bc721d1b1732e7fd550c021c85d5cc2292208618a85021339c694941ad2cf49baba78ddf13de789c521",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 2308
+        "at": "2026-09-21",
+        "durationMs": 2435
       }
     },
     {
@@ -2952,14 +3360,14 @@
       "fullVerification": {
         "expectedSha256": null,
         "expectedSha512": null,
-        "expectedSize": 85350833,
-        "size": 85350833,
-        "sha256": "1c257f53846638625fa41468e021abe67ee583abe4b2d082d7518bc493589981",
-        "sha512": "1c39452d0fdc06c58fac0f8334ee69cf8e33beaa7d90ebf82f5bcdd369c668fbff06e796b3183a63940b9bacbd06dc230f628aad64a7e32211a72c69a876846a",
+        "expectedSize": 97226634,
+        "size": 97226634,
+        "sha256": "6c009ce4b640b67b78044f22f96818d237290b306fe66e26fd7bdeee2ff2b1c1",
+        "sha512": "70f36fe4b4567fbd07c79219c7e3f86ef7235554e78576c4e5d6f31dd138700cd90b2780181bb356f4d8083a77a2078a40c4314769e24f0c6428ab65a5fa3a2b",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 3943
+        "at": "2026-09-21",
+        "durationMs": 2849
       }
     },
     {
@@ -2988,8 +3396,8 @@
         "sha512": "ba9b16dc95ab0d07298870f314a511d844eb32102fedce66043d1541a9dc0c3e203b63898b090c09c1e7dc37016bf8684a0f908050404a6d999dc7371a173f96",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 1146
+        "at": "2026-09-21",
+        "durationMs": 1314
       }
     },
     {
@@ -3018,8 +3426,8 @@
         "sha512": "43ea736b58dcea376cbe7e43d906582d60c1bf5257bf86ded728b2d0590bfb30dc71b40574fa673cff0cf4233191ca8b6c3e337ce631298f0d48164899cd95e3",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 377
+        "at": "2026-09-21",
+        "durationMs": 687
       }
     },
     {
@@ -3048,8 +3456,8 @@
         "sha512": "df02336924a4de8d770d3abee28cee605bc3dbdee42c80c14a296a2ab4b53b61711b5d7653ab3422d5f96719e33ad7ff820e4edaee4dcfb0c7c4e19c9ae9c897",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 711
+        "at": "2026-09-21",
+        "durationMs": 896
       }
     },
     {
@@ -3078,8 +3486,8 @@
         "sha512": "6b1a8eb384bd600f35454a1b40dd9c8db303acf440f924d36e4af8d0ece856089fb70376adda13f11df786102ba212d541649041de013aa27a229ced1fa34bc6",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 6243
+        "at": "2026-09-21",
+        "durationMs": 4040
       }
     },
     {
@@ -3108,8 +3516,8 @@
         "sha512": "b5ffab1fa4467d6ee1e75115d1a75f3a95a0e6063250dc8c550ccc760d3d6fec9b2bb1b0e97862158b72fb7b2645d118dccc56422aab5be265fbb5db64493ec2",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 325
+        "at": "2026-09-21",
+        "durationMs": 442
       }
     },
     {
@@ -3128,7 +3536,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "pass"
+      "status": "pass",
+      "fullVerification": {
+        "expectedSha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+        "expectedSha512": null,
+        "expectedSize": 8948447,
+        "size": 8948447,
+        "sha256": "b6a1b4d42353500060eb1a890cc5350cc4bdbd5e331a1310930bd8eb814509bb",
+        "sha512": "151810a94504189221ada2b01bae497f83f098dd97b88d051c0f0f664e6389a1eec853e48ece79fa21e3511fc9005d17cb397528dbc09df59c9efb52d50bb4e6",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 389
+      }
     },
     {
       "slug": "voyager",
@@ -3156,8 +3576,8 @@
         "sha512": "219dad9d58ceefadbd8d9e0528d8bb83508c6c2617eef6c30b0c311cadd123a41bfa6af356b8a91d2f7e28f5046f79dd66bb75fe14320dfc74daeb13a4b1851a",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 250
+        "at": "2026-09-21",
+        "durationMs": 369
       }
     },
     {
@@ -3176,7 +3596,19 @@
         "digestFormat": true,
         "reachable": true
       },
-      "status": "warn"
+      "status": "warn",
+      "fullVerification": {
+        "expectedSha256": null,
+        "expectedSha512": null,
+        "expectedSize": 5348316,
+        "size": 5348316,
+        "sha256": "c0247494c3852c200aeececaada8476b0967958154a28cfd260b21a9c20392ec",
+        "sha512": "88668cc0fb840d0dfbfa186426f5786ee05d935ec3230df91a674bb9141fda32e1fe5bfadd2ebac1aa3a11e9fc8b7dc6299eabb07e0d6e8e694d3315c4d40e1e",
+        "ok": true,
+        "detail": "ok",
+        "at": "2026-09-21",
+        "durationMs": 325
+      }
     },
     {
       "slug": "winston",
@@ -3204,8 +3636,8 @@
         "sha512": "b178f518d997be1f299a719dc798f4aa4aaea6c43b4071bb64c64daa7247fd323e67554b24c073cce594b24741ead0443c99107e954ad16943123d1aca577e9e",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 473
+        "at": "2026-09-21",
+        "durationMs": 565
       }
     },
     {
@@ -3234,8 +3666,8 @@
         "sha512": "ee80ab65c4194a925f33753168d2e61e640d4c915db21021a0350f8dcd2b1b9aee1916aac926fc9f42d64d982022e0edb30097240f4c4934cc3e8b5b0f42c8b3",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 356
+        "at": "2026-09-21",
+        "durationMs": 515
       }
     },
     {
@@ -3264,8 +3696,8 @@
         "sha512": "6725db218f076092343e5c95132624b714b763f540ceb1ad2bb6571d721731c66c49bdc7e717e74dea871538fdfc5b1d9dbf61cf65a31f7a4b3bf8b579b05b7f",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 282
+        "at": "2026-09-21",
+        "durationMs": 479
       }
     },
     {
@@ -3286,16 +3718,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
+        "expectedSha256": "ff1fbc8cf3b3a01485a516361896151e0a87df620c21d2282adcb33b3b474f74",
         "expectedSha512": null,
-        "expectedSize": 129607592,
-        "size": 129607592,
-        "sha256": "0ca5da6e72e87bce3973e3994f6919bb6c43847f85fbe91bfc887e7a3fe63d87",
-        "sha512": "d2fb2eb282b2dd2db616468d1cd5b0bf37f32f30fec42db80218be1bb42df41a441f7ffd3aab7b2dd3dd6dfa58ece1cc1e331c8fbc194653a8e7dc35b101abd1",
+        "expectedSize": 129607654,
+        "size": 129607654,
+        "sha256": "ff1fbc8cf3b3a01485a516361896151e0a87df620c21d2282adcb33b3b474f74",
+        "sha512": "c9601e74e5ebad7fce800efc531317c0e3b9494fbd8d54eacd1464926311e2679998dc63825e5b273c907984e331b3e2fb0dc9a5eef2d60e3aabab1537190082",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 922
+        "at": "2026-09-21",
+        "durationMs": 2139
       }
     },
     {
@@ -3316,16 +3748,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
+        "expectedSha256": "e7b5f08dfc70eda967ef49882a4c1046ae8e0849af8c86fb4ebb9fa4dcc61fc7",
         "expectedSha512": null,
-        "expectedSize": 129769811,
-        "size": 129769811,
-        "sha256": "7119b55d2c49122f331131b0ce4d0e2a2e628ef94d9926a7c7993888a166fb81",
-        "sha512": "ea2f97b3705fda86c4348a26ded82e2f8c8b9a2217e2db72a6745283731630732476b960f7c0dc0a8478f3a61bfd232082d89de2367a433626476196bfdd7420",
+        "expectedSize": 129768863,
+        "size": 129768863,
+        "sha256": "e7b5f08dfc70eda967ef49882a4c1046ae8e0849af8c86fb4ebb9fa4dcc61fc7",
+        "sha512": "d1736d5bb2ea4c75a47b465b3db664b04871b20b42296751ca1a5712b877da67205f2c50d2ed193490afe6417888bfb20277d906e53214e0ea5fd40938ad5f76",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 819
+        "at": "2026-09-21",
+        "durationMs": 1045
       }
     },
     {
@@ -3346,16 +3778,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
+        "expectedSha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
         "expectedSha512": null,
-        "expectedSize": 134780934,
-        "size": 134780934,
-        "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-        "sha512": "aa8b2760fa7e51ddb2e1811d02b340920b73f474a9c272af801cd15ed1c6c2ed737a7dba5baf004cac76364867a5ee205e5edde1ffadcde5e0bcf0491f7174c4",
+        "expectedSize": 136694474,
+        "size": 136694474,
+        "sha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
+        "sha512": "05f159163dc3d8a081d58a2ddfbb72518a0811e609aa3c0b99a5c72e8f2276e8ed07ba9010465232e82aa69b3dc51c03c558dc2a5180ae247005279bf208e69a",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 677
+        "at": "2026-09-21",
+        "durationMs": 1255
       }
     },
     {
@@ -3376,16 +3808,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
+        "expectedSha256": "fd3823a64212f763c02bbce9d14609dc2a4262abf61b045f67771f0ed3e2d53b",
         "expectedSha512": null,
-        "expectedSize": 143259058,
-        "size": 143259058,
-        "sha256": "be024cf8bf478acd4fb30a49671e2186fab965d2294db4f04ea45205b1641f3d",
-        "sha512": "90f5581e6755d2a9ac120707cf8f8d1ba1c2a3becd3edff8897db4ed6fffb59c338695a34947e8ffab325741afefb62b87dd35c2c5acee916a374762d1b6916c",
+        "expectedSize": 143258392,
+        "size": 143258392,
+        "sha256": "fd3823a64212f763c02bbce9d14609dc2a4262abf61b045f67771f0ed3e2d53b",
+        "sha512": "31366207bfe2488577d5495eb481df1be84d24f2214bbbb5614d55c8137dfe00959b1c98f488abc6fa199083fb6e95a11e15e66ff71464acd8d173222413c795",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 939
+        "at": "2026-09-21",
+        "durationMs": 1175
       }
     },
     {
@@ -3414,8 +3846,8 @@
         "sha512": "8270963035bd6e2971bc20dd718fd5c6ba32fa8715fd1dc9567d2ea1ec91eea880f1e7f13c5e280444de0d5db16619b17196a7211c19a74def7246d749df25d5",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 895
+        "at": "2026-09-21",
+        "durationMs": 1287
       }
     },
     {
@@ -3436,16 +3868,16 @@
       },
       "status": "pass",
       "fullVerification": {
-        "expectedSha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
+        "expectedSha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
         "expectedSha512": null,
-        "expectedSize": 104992686,
-        "size": 104992686,
-        "sha256": "c098eb3877d4e6526af83cfb1ff2e3eaa547c3e266dd01770a87acd2f9cf3944",
-        "sha512": "68d8b271fab1cc3000cdcfa374f4dad8b11d27600f7ba5b36dcdc19dc6b9dcd20207130b3af4736d9aaf3507556c97a60c3daaaaac90fe98b9c587932648d7ae",
+        "expectedSize": 105090579,
+        "size": 105090579,
+        "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
+        "sha512": "81f9703a7e72aebf1b47b2715d51acf4359cde573c57c5f2e4184bb837fd4b83296be3fad6981a5939a60d09d5bc90cbe56fb08ff92236c638af3dcd1ef6f6e1",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 675
+        "at": "2026-09-21",
+        "durationMs": 1148
       }
     },
     {
@@ -3474,8 +3906,8 @@
         "sha512": "9ac23bb162624ac2c5163a1c86520ffdc98eeafa12cf66419749c161957d43c67e6bc9cfe8c06cdc0dec91df618177a24f582c3db88be5fbb3f4a1b18bc5ed17",
         "ok": true,
         "detail": "ok",
-        "at": "2026-09-14",
-        "durationMs": 1034
+        "at": "2026-09-21",
+        "durationMs": 1387
       }
     }
   ]
