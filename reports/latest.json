@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-21",
-  "feedVersion": "65c0906bc5d8",
+  "feedVersion": "d830e375cac2",
   "apps": {
     "total": 130,
     "reachable": 130,
@@ -9,18 +9,39 @@
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 121,
-    "updated": 1,
+    "incrementalHits": 118,
+    "updated": 4,
     "failed": 0,
-    "apiRequests": 117
+    "apiRequests": 116
   },
   "unreachable": [],
   "updates": [
     {
-      "slug": "tablehabit",
-      "name": "Table Habit",
-      "previousVersion": "1.27.6",
-      "version": "1.27.9",
+      "slug": "swiftgram",
+      "name": "Swiftgram",
+      "previousVersion": "12.9.2",
+      "version": "12.9.3",
+      "kind": "updated"
+    },
+    {
+      "slug": "nexasc",
+      "name": "NexaSC",
+      "previousVersion": "8.78.0",
+      "version": "8.79.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "turrit-mxgram",
+      "name": "Turrit MxGram",
+      "previousVersion": "1.5.3",
+      "version": "1.5.4",
+      "kind": "updated"
+    },
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "previousVersion": "0.4.25",
+      "version": "0.4.26",
       "kind": "updated"
     }
   ],
