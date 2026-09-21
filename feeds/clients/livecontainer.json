@@ -647,7 +647,7 @@
       "bundleIdentifier": "com.ryan.anymex",
       "category": "other",
       "developerName": "RyanYuuki",
-      "downloadURL": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-iOS-v3.1.7.ipa",
+      "downloadURL": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-iOS-v3.1.8.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/AnymeX.webp",
       "localizedDescription": "AnymeX is an open-source, cross-platform app for streaming anime and reading manga, manhwa, light and web novels, with deep integration for tracking services (AniList, MyAnimeList, Simkl and Kitsu). Extensions keep sources working, and your library, progress and statistics stay in sync across services.",
       "name": "AnymeX",
@@ -685,177 +685,177 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-08-30"
+          "lastUpdatedAt": "2026-09-20"
         },
         "bundleAlias": "com.ryan.anymex"
       },
       "screenshotURLs": [],
-      "size": 39662751,
+      "size": 39830598,
       "subtitle": "Anime, manga, novels & tracking, open source",
       "tintColor": "131313",
-      "version": "3.1.7",
-      "versionDate": "2026-08-30",
-      "versionDescription": "AnymeX 3.1.7 | AnymeX-iOS-v3.1.7\n\n### 🆕 Changelog\n### 🌟 Features\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/36754206) enhanced new episode released cards, fixed bugs when deleting history items and more by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0837dcf8) server remember for episodes and some ui changes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e3ec2a4e) new episode released on home page for any anime you watch from app by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/91224c3f) enhanced the tab system and ui of headers on pages by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7af109c1) nav bar layout switcher, improved ui of media type selector and organized ui settings page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/4380f646) added extensive data of user's usage by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/97d7d054) user xp system by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2eac3561) add AniList profile compatibility checker (#547) by @Shebyyy\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f8226772) stats record implementation on anime and manga by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3427750b) user app statistics by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1774abfb) history tab implemented by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/465d66cc) new tabs system (home, discover, library, history, stats) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1582c7eb) sync subtitle sentence progress controller by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/20df44bf) local subtitle import by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/64740546) bottom nav bar margin adjustment setting by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c0389949) more fields like country, popularity, source for media details and fixed issues like sequel repeating, and recommendation opening wrong pages by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a585abee) font family change option by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fc7649b9) improved user experience on player by consolidating audio, subs, servers by @RyanYuuki\n\n\n### 🔧 Bug Fixes & Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5acd1120) inconsistency bug on header and major refactor of header by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0cadc7f3) fixed a issue where offline database was not saving title of ep/chps by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c47225a5) fixed bad redirect on manga pages when clicking on genre/tags by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/98914683) fixed manga chapter selector and chapter navigation logic by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/261af6e0) fixed join dialog behaviour by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/480eb738) hero tag duplicate fix (probably) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7b36bf18) fixed some stats not tracking properly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/834a5522) fixed scanlator not being respected issue by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0e6495fe) fixed minor desync issues between user rec section by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ee2c22dd) fixed updater not showing proper toast and proper beta updates by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/afb580ce) fixed ui not reflecting on pallete change on theme page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1970de1e) fixed profile page activity opening anime page on manga entries by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a21009b1) fixed mapper mappng to wrong medias by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1dff1f52) fixed rpc for desktop users by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fa60bf90) fixed show entries in community recommandation opening manga page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/22236d7f) fixed delete entry not working by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/47d42453) fixed dupe entries in tracking lists by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e5d0945b) fixed tracking dialog not respecting preference by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3631e005) fixed follower, following count on profile by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/696f2991) fixed splash logo animation not applying by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2265209a) fixed al, mal, simkl card not getting saved properly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/895001c0) fixed speed not persisting in a session and speed configs not persisting app restarts by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c5d70d7a) fixed anify kitsu button not reflecting instantly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/32b8ba93) fixed cover not showing up on episodes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8d71bc38) fixed staff not appearing, characters not showing roles in anilist by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/63ab2d18) fixed sub parser it was not showing cues before by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5053aaf7) fixed novel search sending to anime search by @RyanYuuki\n\n\n### 🔧 Refactors\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/24cd99eb) refactored card styles by @RyanYuuki\n\n\n### 🎨 Style Changes\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a3614a65) minor ui tweak by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/105b5775) improved list editor ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/169a6122) improved library ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3be13154) media mode selector ui improvement by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a0fd1926) improved ui of image button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f0894ef3) added bouncy animation on tab change by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f51ed12b) extension settings page elements harmonized with the rest of the app's ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8461f0fd) improved ui and performance of all the source, audio, subtitle panes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/6b74c1a8) improved the stretched tab bar on desktop by @RyanYuuki\n\n\n### 🚀 Performance Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/aaf2174a) snappy gestures for pan and zoom on manga pages even on continous mode by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/68eeffea) player controls overlay should feel snappier by @RyanYuuki\n\n\n### 🧹 Chores & Documentation\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c7d2690a) bump version to v3.1.7 (patch release) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0bde25cf) library changes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/704415da) update sideloading source by @ghost\n\n\n![Total Downloads](https://img.shields.io/github/downloads/RyanYuuki/AnymeX/total?style=for-the-badge&label=TOTAL%20DOWNLOADS&labelColor=black&color=white) ![Current Release](https://img.shields.io/github/downloads/RyanYuuki/AnymeX/v3.1.7/total?style=for-the-badge&label=CURRENT%20RELEASE&labelColor=black&color=white)",
+      "version": "3.1.8",
+      "versionDate": "2026-09-20",
+      "versionDescription": "AnymeX 3.1.8 | AnymeX-iOS-v3.1.8\n\n### 🆕 Changelog\n### 🌟 Features\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/84601c75) full cast support by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a8d6b9db) option to hide/show continue watching by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5b39e824) enhanced orientation control by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d2c4fd5c) Full download support on metadata services, lots of fixes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d1e44740) continue watching bar on home by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/6f030199) improved episode releases cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/64de01b2) fcm support so i can notify users anytime i want by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ff1551de) external font support (bring your own font for the entire app) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/674b53a6) add Smoke Trace logo animation, custom animated logo support (#578) by @Shebyyy\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ec836e49) persistent ui mode on wrong title sheet and fix title not showing up fully by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9d7868f7) discord rpc settings by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d10a6f0c) custom font import for subtitles font style by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e2cbbe56) proper progress, total released total episode count in cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9fd0c0b2) proper message handler for anilist errors by @RyanYuuki\n\n\n### 🔧 Bug Fixes & Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/79e96c3c) repeated search calls on errror fixed by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9605b5f1) fixed tracking issues and new episode release stale states by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5b69789a) fixed speed and audio pane not showing for downloaded media by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a277be02) overflow fix on anime and manga list by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f6741885) fixed repos showing as added yet empty list by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5106cde0) wait until login info is loaded for deeplink by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fd46a39a) fixed animation delay for tabs on calendar page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c40c855b) safe guarding media type by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a9627284) fixed ai picks redirecting to wrong page and fixed ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/12f79048) fixed dialog jank when keyboard opens by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d8294db8) fix:: fixed ui not reflecting instant changes and header ui overflow by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/984de5b2) fixed no sound issue on some sources by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2cbdfc02) fixed bad logic for episode watch detection by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7998b5a1) fixed stale condition of bridge by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2608a048) fixed downloader causing issues on background by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/10850745) fixed app not working when offline by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/32bd38ca) fixed season wise bindings for proper tracking across seasons by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7864902f) fixed lists not being reactive and duplicated by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/561f9f69) fixed torrent by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/feb5f8ed) fixed a fatal isar error when saving stats by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c20aa252) fixed swipe indicator theme not persisting by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/05656a18) fixed welcome dialog reappearing by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/da404c0a) fixed audio delay on player by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/b3a76f2b) fixed sub/dub not persisting across all episodes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d34afa8c) fixed episode comparison logic to include season in the picture by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f8fa1d6a) fixed anilist breaking for filters and calendar by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/325a838f) fixed repeated fetch calls when pages fails to load, and add retry button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/56347499) fixed cs sources not installing by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/23e76434) fixed inaccurate info on episode releases cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/052e2664) fixed broken padding causing overflow on user stats cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/93112761) filters fallback for anilist by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d3d207d5) proper error handler on calendar page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7809faa7) fixed appbar disappear even on media tab change by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2d804281) synced scanlator with continue chapter button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/998f7a81) fixed a minor database startup error by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3f022eba) fixed some minor ui issues by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/b34fe002) removed reference to old novel search page causing issues by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2dd4b8ee) fixed lines truncate in desc by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a7e38c19) fixed fatal io crash when updating stats by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/74f65399) fixed the issue of pages not loading on reader, fixed tracker not changing to CURRENT on chapter read by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8b741ac6) fixed updater showing extra 'v' prefix by @RyanYuuki\n\n\n### 🔧 Refactors\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8d6c014f) migration for bottom nav bar on scaffold by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/69c3cc94) structure improvement of big caruosel by @RyanYuuki\n\n\n### 🎨 Style Changes\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8f320a49) minimal ui for new episode releases by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a53ad2e3) some ui changes and scroll fixes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/19da8e2a) little improvement to info below title on media details page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/4335f1ef) calendar ui revamp by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2710c8df) improved ui of anime list and manga list page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1fc0abd1) tidied up the ui of history editor and list editor page and some fixes by @RyanYuuki\n\n\n### 🚀 Performance Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/66392e33) switched downloader to rhttp for faster download speed by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9008b1d0) player enhancement by @RyanYuuki\n\n\n### 🧹 Chores & Documentation\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3081f6e5) bump version to v3.1.8 (patch release) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/869066b0) dropped bridge mode by …",
       "versions": [
         {
-          "version": "3.1.7",
-          "date": "2026-08-30",
-          "localizedDescription": "AnymeX 3.1.7 | AnymeX-iOS-v3.1.7\n\n### 🆕 Changelog\n### 🌟 Features\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/36754206) enhanced new episode released cards, fixed bugs when deleting history items and more by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0837dcf8) server remember for episodes and some ui changes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e3ec2a4e) new episode released on home page for any anime you watch from app by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/91224c3f) enhanced the tab system and ui of headers on pages by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7af109c1) nav bar layout switcher, improved ui of media type selector and organized ui settings page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/4380f646) added extensive data of user's usage by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/97d7d054) user xp system by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2eac3561) add AniList profile compatibility checker (#547) by @Shebyyy\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f8226772) stats record implementation on anime and manga by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3427750b) user app statistics by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1774abfb) history tab implemented by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/465d66cc) new tabs system (home, discover, library, history, stats) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1582c7eb) sync subtitle sentence progress controller by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/20df44bf) local subtitle import by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/64740546) bottom nav bar margin adjustment setting by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c0389949) more fields like country, popularity, source for media details and fixed issues like sequel repeating, and recommendation opening wrong pages by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a585abee) font family change option by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fc7649b9) improved user experience on player by consolidating audio, subs, servers by @RyanYuuki\n\n\n### 🔧 Bug Fixes & Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5acd1120) inconsistency bug on header and major refactor of header by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0cadc7f3) fixed a issue where offline database was not saving title of ep/chps by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c47225a5) fixed bad redirect on manga pages when clicking on genre/tags by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/98914683) fixed manga chapter selector and chapter navigation logic by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/261af6e0) fixed join dialog behaviour by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/480eb738) hero tag duplicate fix (probably) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7b36bf18) fixed some stats not tracking properly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/834a5522) fixed scanlator not being respected issue by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0e6495fe) fixed minor desync issues between user rec section by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ee2c22dd) fixed updater not showing proper toast and proper beta updates by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/afb580ce) fixed ui not reflecting on pallete change on theme page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1970de1e) fixed profile page activity opening anime page on manga entries by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a21009b1) fixed mapper mappng to wrong medias by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1dff1f52) fixed rpc for desktop users by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fa60bf90) fixed show entries in community recommandation opening manga page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/22236d7f) fixed delete entry not working by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/47d42453) fixed dupe entries in tracking lists by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e5d0945b) fixed tracking dialog not respecting preference by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3631e005) fixed follower, following count on profile by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/696f2991) fixed splash logo animation not applying by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2265209a) fixed al, mal, simkl card not getting saved properly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/895001c0) fixed speed not persisting in a session and speed configs not persisting app restarts by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c5d70d7a) fixed anify kitsu button not reflecting instantly by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/32b8ba93) fixed cover not showing up on episodes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8d71bc38) fixed staff not appearing, characters not showing roles in anilist by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/63ab2d18) fixed sub parser it was not showing cues before by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5053aaf7) fixed novel search sending to anime search by @RyanYuuki\n\n\n### 🔧 Refactors\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/24cd99eb) refactored card styles by @RyanYuuki\n\n\n### 🎨 Style Changes\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a3614a65) minor ui tweak by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/105b5775) improved list editor ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/169a6122) improved library ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3be13154) media mode selector ui improvement by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a0fd1926) improved ui of image button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f0894ef3) added bouncy animation on tab change by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f51ed12b) extension settings page elements harmonized with the rest of the app's ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8461f0fd) improved ui and performance of all the source, audio, subtitle panes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/6b74c1a8) improved the stretched tab bar on desktop by @RyanYuuki\n\n\n### 🚀 Performance Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/aaf2174a) snappy gestures for pan and zoom on manga pages even on continous mode by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/68eeffea) player controls overlay should feel snappier by @RyanYuuki\n\n\n### 🧹 Chores & Documentation\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c7d2690a) bump version to v3.1.7 (patch release) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/0bde25cf) library changes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/704415da) update sideloading source by @ghost\n\n\n![Total Downloads](https://img.shields.io/github/downloads/RyanYuuki/AnymeX/total?style=for-the-badge&label=TOTAL%20DOWNLOADS&labelColor=black&color=white) ![Current Release](https://img.shields.io/github/downloads/RyanYuuki/AnymeX/v3.1.7/total?style=for-the-badge&label=CURRENT%20RELEASE&labelColor=black&color=white)",
-          "downloadURL": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-iOS-v3.1.7.ipa",
-          "size": 39662751,
+          "version": "3.1.8",
+          "date": "2026-09-20",
+          "localizedDescription": "AnymeX 3.1.8 | AnymeX-iOS-v3.1.8\n\n### 🆕 Changelog\n### 🌟 Features\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/84601c75) full cast support by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a8d6b9db) option to hide/show continue watching by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5b39e824) enhanced orientation control by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d2c4fd5c) Full download support on metadata services, lots of fixes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d1e44740) continue watching bar on home by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/6f030199) improved episode releases cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/64de01b2) fcm support so i can notify users anytime i want by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ff1551de) external font support (bring your own font for the entire app) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/674b53a6) add Smoke Trace logo animation, custom animated logo support (#578) by @Shebyyy\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/ec836e49) persistent ui mode on wrong title sheet and fix title not showing up fully by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9d7868f7) discord rpc settings by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d10a6f0c) custom font import for subtitles font style by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/e2cbbe56) proper progress, total released total episode count in cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9fd0c0b2) proper message handler for anilist errors by @RyanYuuki\n\n\n### 🔧 Bug Fixes & Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/79e96c3c) repeated search calls on errror fixed by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9605b5f1) fixed tracking issues and new episode release stale states by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5b69789a) fixed speed and audio pane not showing for downloaded media by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a277be02) overflow fix on anime and manga list by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f6741885) fixed repos showing as added yet empty list by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/5106cde0) wait until login info is loaded for deeplink by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/fd46a39a) fixed animation delay for tabs on calendar page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c40c855b) safe guarding media type by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a9627284) fixed ai picks redirecting to wrong page and fixed ui by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/12f79048) fixed dialog jank when keyboard opens by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d8294db8) fix:: fixed ui not reflecting instant changes and header ui overflow by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/984de5b2) fixed no sound issue on some sources by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2cbdfc02) fixed bad logic for episode watch detection by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7998b5a1) fixed stale condition of bridge by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2608a048) fixed downloader causing issues on background by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/10850745) fixed app not working when offline by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/32bd38ca) fixed season wise bindings for proper tracking across seasons by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7864902f) fixed lists not being reactive and duplicated by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/561f9f69) fixed torrent by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/feb5f8ed) fixed a fatal isar error when saving stats by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/c20aa252) fixed swipe indicator theme not persisting by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/05656a18) fixed welcome dialog reappearing by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/da404c0a) fixed audio delay on player by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/b3a76f2b) fixed sub/dub not persisting across all episodes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d34afa8c) fixed episode comparison logic to include season in the picture by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/f8fa1d6a) fixed anilist breaking for filters and calendar by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/325a838f) fixed repeated fetch calls when pages fails to load, and add retry button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/56347499) fixed cs sources not installing by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/23e76434) fixed inaccurate info on episode releases cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/052e2664) fixed broken padding causing overflow on user stats cards by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/93112761) filters fallback for anilist by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/d3d207d5) proper error handler on calendar page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/7809faa7) fixed appbar disappear even on media tab change by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2d804281) synced scanlator with continue chapter button by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/998f7a81) fixed a minor database startup error by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3f022eba) fixed some minor ui issues by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/b34fe002) removed reference to old novel search page causing issues by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2dd4b8ee) fixed lines truncate in desc by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a7e38c19) fixed fatal io crash when updating stats by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/74f65399) fixed the issue of pages not loading on reader, fixed tracker not changing to CURRENT on chapter read by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8b741ac6) fixed updater showing extra 'v' prefix by @RyanYuuki\n\n\n### 🔧 Refactors\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8d6c014f) migration for bottom nav bar on scaffold by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/69c3cc94) structure improvement of big caruosel by @RyanYuuki\n\n\n### 🎨 Style Changes\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/8f320a49) minimal ui for new episode releases by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/a53ad2e3) some ui changes and scroll fixes by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/19da8e2a) little improvement to info below title on media details page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/4335f1ef) calendar ui revamp by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/2710c8df) improved ui of anime list and manga list page by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/1fc0abd1) tidied up the ui of history editor and list editor page and some fixes by @RyanYuuki\n\n\n### 🚀 Performance Improvements\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/66392e33) switched downloader to rhttp for faster download speed by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/9008b1d0) player enhancement by @RyanYuuki\n\n\n### 🧹 Chores & Documentation\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/3081f6e5) bump version to v3.1.8 (patch release) by @RyanYuuki\n- [֍](https://github.com/RyanYuuki/AnymeX/commit/869066b0) dropped bridge mode by …",
+          "downloadURL": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-iOS-v3.1.8.ipa",
+          "size": 39830598,
           "minOSVersion": "12.0",
-          "releaseUrl": "https://github.com/RyanYuuki/AnymeX/releases/tag/v3.1.7",
+          "releaseUrl": "https://github.com/RyanYuuki/AnymeX/releases/tag/v3.1.8",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "AnymeX-Android-arm64-v8a.apk",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Android-arm64-v8a.apk",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Android-arm64-v8a.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 37702413,
-              "sha256": "cb19e0b910a53da5a8b8c7616565b4c014fdb4cb9b013df32c20e924b2b0c715",
-              "downloads": 11896,
+              "size": 38009443,
+              "sha256": "1e2eb5cb896b198f1e2c1919b0fa9bb724dce4e14db90642f30cbecd5b3eed95",
+              "downloads": 334,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "AnymeX-Android-armeabi-v7a.apk",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Android-armeabi-v7a.apk",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Android-armeabi-v7a.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 36621609,
-              "sha256": "fa9a7993843f12e9bd05149c90914485bf170540169b8ca2f7ef89b9ff5128d3",
-              "downloads": 267,
+              "size": 36846085,
+              "sha256": "128a50385d347b9aa6e165c981131856023473999ffc06f4d51dabfc4317fb67",
+              "downloads": 3,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "AnymeX-Android-universal.apk",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Android-universal.apk",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Android-universal.apk",
               "platform": "android",
               "architecture": "universal",
               "fileType": "APK",
-              "size": 97025621,
-              "sha256": "4ae7cb174483fa2fd191855e13b4a468950ca0da090886f27579be3a28a4f219",
-              "downloads": 945,
+              "size": 96188474,
+              "sha256": "96d5c1351a88847fa19a80a66bbbc1afa08af284a1d4705fd3585221785da0f6",
+              "downloads": 11,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "AnymeX-Android-x86_64.apk",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Android-x86_64.apk",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Android-x86_64.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 39068891,
-              "sha256": "cc1be457c7465da537a5f64d3a2a6f3e8dc36c0052997c031348d47f572ef04a",
-              "downloads": 83,
+              "size": 39368716,
+              "sha256": "9b1e57bf84c594205ab4da732190a2ecf2cc73aff23c6b3bd7e88a9f5440a977",
+              "downloads": 3,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "AnymeX-iOS-v3.1.7.ipa",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-iOS-v3.1.7.ipa",
+              "filename": "AnymeX-iOS-v3.1.8.ipa",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-iOS-v3.1.8.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 39662751,
-              "sha256": "72d546ba01fb33c82c80fa02332bd9aecc80fd16157d39ac4af901e28f554ece",
-              "downloads": 1168,
+              "size": 39830598,
+              "sha256": "b844eba2cde7ea276aeb79fc5ae5ee47c257eba7d9f3b49eae0af96ab13389b2",
+              "downloads": 17,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "AnymeX-Linux.AppImage",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Linux.AppImage",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Linux.AppImage",
               "platform": "linux",
               "architecture": null,
               "fileType": "AppImage",
-              "size": 44075512,
-              "sha256": "38efc71e213a49f52aa5adcaae1261067d2acc32e5f447c9df489939e867ad85",
-              "downloads": 430,
+              "size": 44009976,
+              "sha256": "c1cf0520c4ffa70f85e2f88803d3199c67a86543b9467ba481a95e4a9c28451b",
+              "downloads": 9,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "AnymeX-Linux.rpm",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Linux.rpm",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Linux.rpm",
               "platform": "linux",
               "architecture": null,
               "fileType": "other",
-              "size": 37928596,
-              "sha256": "8a8725903922d0cb942d1bb6b226e035548794da412f95cd792811e27f3b9d4b",
-              "downloads": 22,
+              "size": 37769367,
+              "sha256": "db58cef211f45b216a1736e6452603b117322a726055ef3e4f4c352212587239",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "AnymeX-Linux.zip",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Linux.zip",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Linux.zip",
               "platform": "linux",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 47552768,
-              "sha256": "6a99a13689df5d3de7f44f5689ef65784021568c39c4df4ee921af8d2d7ff783",
-              "downloads": 38,
+              "size": 47387451,
+              "sha256": "36f8a85f300555f2d4b4617d2877737cba8670a8897f7153ac72b107cddf7b90",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "AnymeX-Windows.zip",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-Windows.zip",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-Windows.zip",
               "platform": "windows",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 52983094,
-              "sha256": "4777e6bc19df964e0d2d1c9411bb1ba23a4ca7c09ff947844d0ccb594d73bb8b",
-              "downloads": 1178,
+              "size": 52985098,
+              "sha256": "5ef0b8ee18da9b4ef5233c7a9daf202d86a0a40d72263981fdd71821d0a20faa",
+              "downloads": 12,
               "mimeType": "raw",
               "installable": false
             },
             {
-              "filename": "AnymeX-x86_64-3.1.7-Installer.exe",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX-x86_64-3.1.7-Installer.exe",
+              "filename": "AnymeX-x86_64-3.1.8-Installer.exe",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-x86_64-3.1.8-Installer.exe",
               "platform": "windows",
               "architecture": "x86_64",
               "fileType": "EXE",
-              "size": 39141844,
-              "sha256": "c1780331d3614177b92286563b6788ef90ff566b3ba3a8ddf116ba73ea5611e7",
-              "downloads": 1640,
+              "size": 39278986,
+              "sha256": "fff19e1988690bc4a353b0b561dac914da4fc71641951c067ebec125b5bb848e",
+              "downloads": 37,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "AnymeX.dmg",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/AnymeX.dmg",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX.dmg",
               "platform": "macos",
               "architecture": null,
               "fileType": "DMG",
-              "size": 92783072,
-              "sha256": "612ced0df6b66b91d807061a37ab794c9cf6105c7c4251200c6da814ebaa6f72",
-              "downloads": 315,
+              "size": 92996971,
+              "sha256": "326ec2b45144002dfc8509ef3dc14022a4ee9d6bde4b70271bc984bdd6eb08e2",
+              "downloads": 3,
               "mimeType": "raw",
               "installable": true
             },
             {
-              "filename": "com.ryan.anymex.3.1.7.nupkg",
-              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.7/com.ryan.anymex.3.1.7.nupkg",
+              "filename": "com.ryan.anymex.3.1.8.nupkg",
+              "downloadUrl": "https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/com.ryan.anymex.3.1.8.nupkg",
               "platform": "unknown",
               "architecture": null,
               "fileType": "other",
-              "size": 3239,
-              "sha256": "d14ce9208f1586978b753088316a1179824e93d3c190371938b9950d21b33d87",
-              "downloads": 7,
+              "size": 3237,
+              "sha256": "0545bb82458c6bfd89269fce1be5d226b87bc479c57bac9c5e346206e8bf65d2",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": false
             }
           ],
-          "sha256": "72d546ba01fb33c82c80fa02332bd9aecc80fd16157d39ac4af901e28f554ece",
-          "downloads": 1168
+          "sha256": "b844eba2cde7ea276aeb79fc5ae5ee47c257eba7d9f3b49eae0af96ab13389b2",
+          "downloads": 17
         }
       ]
     },
@@ -933,7 +933,7 @@
               "fileType": "ZIP",
               "size": 20365290,
               "sha256": "3852fb61c3f2294359cca0683719d51ea4b57d97c8f79467f4d0cd4c163f45fc",
-              "downloads": 30,
+              "downloads": 31,
               "mimeType": "application/zip",
               "installable": false
             },
@@ -945,7 +945,7 @@
               "fileType": "IPA",
               "size": 114471562,
               "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 1916,
+              "downloads": 2067,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -957,7 +957,7 @@
               "fileType": "IPA",
               "size": 124722640,
               "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 4282,
+              "downloads": 4599,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -969,7 +969,7 @@
               "fileType": "IPA",
               "size": 114471417,
               "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-              "downloads": 77,
+              "downloads": 85,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -981,7 +981,7 @@
               "fileType": "IPA",
               "size": 124722495,
               "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 140,
+              "downloads": 144,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -993,7 +993,7 @@
               "fileType": "IPA",
               "size": 85880995,
               "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 511,
+              "downloads": 559,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -1005,7 +1005,7 @@
               "fileType": "IPA",
               "size": 96132071,
               "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 773,
+              "downloads": 851,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -1035,7 +1035,7 @@
             }
           ],
           "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 773
+          "downloads": 851
         }
       ]
     },
@@ -5382,7 +5382,7 @@
               "fileType": "APK",
               "size": 108612022,
               "sha256": "d89ffb0f4c7d73099b4227f04599fa24fb9fbc85618d72797c8bba6b55921460",
-              "downloads": 56,
+              "downloads": 61,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5430,7 +5430,7 @@
               "fileType": "IPA",
               "size": 56199092,
               "sha256": "2418b6a4c8648bcad63a7b818dd017e7756953d7b5aa8e0f261f37b11e687d67",
-              "downloads": 6,
+              "downloads": 7,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -5454,7 +5454,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 297,
+              "downloads": 317,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5466,7 +5466,7 @@
               "fileType": "APK",
               "size": 33275119,
               "sha256": "ad71c9f73d5e3879fd7f025cd0ce38c02c017f1228d48bdd8d041a01190ee86d",
-              "downloads": 16,
+              "downloads": 18,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5490,7 +5490,7 @@
               "fileType": "APK",
               "size": 88506651,
               "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-              "downloads": 99,
+              "downloads": 101,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5502,13 +5502,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 146,
+              "downloads": 159,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 146
+          "downloads": 159
         }
       ]
     },
@@ -6445,13 +6445,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 473,
+              "downloads": 631,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 473
+          "downloads": 631
         }
       ]
     },
@@ -6570,13 +6570,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 267,
+              "downloads": 279,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 267
+          "downloads": 279
         }
       ]
     },
@@ -7433,7 +7433,7 @@
       "bundleIdentifier": "com.soundcloud.TouchApp",
       "category": "social",
       "developerName": "cielogic & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.79.0-NexaSC.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/SoundCloud.webp",
       "localizedDescription": "NexaSC is a community SoundCloud tweak by cielogic: it unlocks SoundCloud Go+ features, removes ads, adds track downloads and can fetch lyrics automatically (via LRCLIB). The tweak is opened by long-pressing the home icon.",
       "name": "NexaSC",
@@ -7471,24 +7471,24 @@
           "downloadReachable": true,
           "detail": "HTTP 200",
           "statusSince": "2026-09-18",
-          "lastUpdatedAt": "2026-09-16"
+          "lastUpdatedAt": "2026-09-21"
         },
         "bundleAlias": "com.soundcloud.TouchApp"
       },
       "screenshotURLs": [],
-      "size": 115772654,
+      "size": 115827879,
       "subtitle": "SoundCloud Go+ unlock and ad removal (unofficial build)",
       "tintColor": "FF5500",
-      "version": "8.78.0",
-      "versionDate": "2026-09-16",
-      "versionDescription": "SoundCloud 8.78.0 | SoundCloud-8.78.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.78.0",
+      "version": "8.79.0",
+      "versionDate": "2026-09-21",
+      "versionDescription": "SoundCloud 8.79.0 | SoundCloud-8.79.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.79.0",
       "versions": [
         {
-          "version": "8.78.0",
-          "date": "2026-09-16",
-          "localizedDescription": "SoundCloud 8.78.0 | SoundCloud-8.78.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.78.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
-          "size": 115772654,
+          "version": "8.79.0",
+          "date": "2026-09-21",
+          "localizedDescription": "SoundCloud 8.79.0 | SoundCloud-8.79.0-NexaSC\n\nIPA Vault build for SoundCloud (NexaSC), version 8.79.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.79.0-NexaSC.ipa",
+          "size": 115827879,
           "minOSVersion": "16.4",
           "releaseUrl": null,
           "source": "altstore",
@@ -7496,12 +7496,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "SoundCloud-8.78.0-NexaSC.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa",
+              "filename": "SoundCloud-8.79.0-NexaSC.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.79.0-NexaSC.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 115772654,
+              "size": 115827879,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -7611,7 +7611,7 @@
       "bundleIdentifier": "com.nuvio.app",
       "category": "photo-video",
       "developerName": "Nuvio Media",
-      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa",
+      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/nuvio-0.4.26-full-release.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
       "localizedDescription": "Nuvio is a free, open-source media app for your phone, desktop and the TV you already own. Bring your own sources - Nuvio turns them into a library with artwork, ratings, subtitles and your place saved on every screen.",
       "name": "Nuvio",
@@ -7649,93 +7649,93 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-19"
+          "lastUpdatedAt": "2026-09-21"
         },
         "bundleAlias": "com.nuvio.app"
       },
       "screenshotURLs": [],
-      "size": 65152407,
+      "size": 65234840,
       "subtitle": "Open-source media player, bring your own sources",
       "tintColor": "5B5FE8",
-      "version": "0.4.25",
-      "versionDate": "2026-09-19",
-      "versionDescription": "Nuvio 0.4.25 | nuvio-0.4.25-full-release\n\n- b5163558 fix(home): prevent hero flash when cycling @tapframe  \n- 656f368c fix(pr): update workflow @tapframe  \n- [i18n(el): sync Greek translations with the current English strings (#1991)](https://github.com/NuvioMedia/NuvioMobile/pull/1991) @nosvasedis  \n- 98be8514 revert(ui): restore previous surface and chip styles @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1990)](https://github.com/NuvioMedia/NuvioMobile/pull/1990) @blueocean2308  \n- [fix(simkl): three bugs in the shared Simkl read and write paths (#1988)](https://github.com/NuvioMedia/NuvioMobile/pull/1988) @Judzim  \n- 99ced26a feat(player): add Infuse playback callbacks @tapframe  \n- [fix(ios): bundle CJK font for subtitles (#1833)](https://github.com/NuvioMedia/NuvioMobile/pull/1833) @tinyKyuu",
+      "version": "0.4.26",
+      "versionDate": "2026-09-21",
+      "versionDescription": "Nuvio 0.4.26 | nuvio-0.4.26-full-release\n\n- 458f810b fix(streams): share addon filtering across pickers @tapframe  \n- [i18n(nb): complete missing Norwegian Bokmål strings (#2005)](https://github.com/NuvioMedia/NuvioMobile/pull/2005) @SimSalabimse",
       "versions": [
         {
-          "version": "0.4.25",
-          "date": "2026-09-19",
-          "localizedDescription": "Nuvio 0.4.25 | nuvio-0.4.25-full-release\n\n- b5163558 fix(home): prevent hero flash when cycling @tapframe  \n- 656f368c fix(pr): update workflow @tapframe  \n- [i18n(el): sync Greek translations with the current English strings (#1991)](https://github.com/NuvioMedia/NuvioMobile/pull/1991) @nosvasedis  \n- 98be8514 revert(ui): restore previous surface and chip styles @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#1990)](https://github.com/NuvioMedia/NuvioMobile/pull/1990) @blueocean2308  \n- [fix(simkl): three bugs in the shared Simkl read and write paths (#1988)](https://github.com/NuvioMedia/NuvioMobile/pull/1988) @Judzim  \n- 99ced26a feat(player): add Infuse playback callbacks @tapframe  \n- [fix(ios): bundle CJK font for subtitles (#1833)](https://github.com/NuvioMedia/NuvioMobile/pull/1833) @tinyKyuu",
-          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa",
-          "size": 65152407,
+          "version": "0.4.26",
+          "date": "2026-09-21",
+          "localizedDescription": "Nuvio 0.4.26 | nuvio-0.4.26-full-release\n\n- 458f810b fix(streams): share addon filtering across pickers @tapframe  \n- [i18n(nb): complete missing Norwegian Bokmål strings (#2005)](https://github.com/NuvioMedia/NuvioMobile/pull/2005) @SimSalabimse",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/nuvio-0.4.26-full-release.ipa",
+          "size": 65234840,
           "minOSVersion": "16.1",
-          "releaseUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/tag/0.4.25-beta",
+          "releaseUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/tag/0.4.26-beta",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "androidApp-full-armeabi-v7a-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/androidApp-full-armeabi-v7a-release.apk",
-              "platform": "android",
-              "architecture": "armv7",
-              "fileType": "APK",
-              "size": 40135910,
-              "sha256": "39d36c36333ffeb6588d966cd591ebab47cc2c8da91af71e057e8a172fdd9b10",
-              "downloads": 224,
-              "mimeType": "application/vnd.android.package-archive",
-              "installable": true
-            },
-            {
               "filename": "androidApp-full-arm64-v8a-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/androidApp-full-arm64-v8a-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/androidApp-full-arm64-v8a-release.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 41871468,
-              "sha256": "c3cf73d44ef2417317c5d47d642ec336bb2804f7a2fcf6a51392e4485f8a779a",
-              "downloads": 5346,
+              "size": 41948384,
+              "sha256": "9e6c46ef916e88f2510a1ea852d9213777950b9c5edbdfa840413b158f66de44",
+              "downloads": 1718,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
-              "filename": "androidApp-full-x86_64-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/androidApp-full-x86_64-release.apk",
-              "platform": "android",
-              "architecture": "x86_64",
-              "fileType": "APK",
-              "size": 43227293,
-              "sha256": "8d8b781dee6d0fd80637ab3d42b9332374015a717e1f9b18add27c3a45fc04d7",
-              "downloads": 128,
-              "mimeType": "application/vnd.android.package-archive",
-              "installable": true
-            },
-            {
-              "filename": "nuvio-0.4.25-full-release.ipa",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa",
+              "filename": "nuvio-0.4.26-full-release.ipa",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/nuvio-0.4.26-full-release.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 65152407,
-              "sha256": "794c90209bc4ae414bf97576257e045696bb8b3be1e385c981f84de897340626",
-              "downloads": 301,
+              "size": 65234840,
+              "sha256": "50bb70d89a4201070840b7530ea730e1bf2c603c72a1bdfed48126740d6dde07",
+              "downloads": 79,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
+              "filename": "androidApp-full-x86_64-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/androidApp-full-x86_64-release.apk",
+              "platform": "android",
+              "architecture": "x86_64",
+              "fileType": "APK",
+              "size": 43304205,
+              "sha256": "d6d5b50d01dd3cc243bc903ada3d0d00a1597b50e0dbc42313dbef0092d5bc20",
+              "downloads": 40,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
               "filename": "androidApp-full-x86-release.apk",
-              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/androidApp-full-x86-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/androidApp-full-x86-release.apk",
               "platform": "android",
               "architecture": "x86",
               "fileType": "APK",
-              "size": 42316602,
-              "sha256": "f57aa9f894d040706d942f7cf1dcfcabad45ca623062eac7bf5fad1f21e83891",
-              "downloads": 99,
+              "size": 42393514,
+              "sha256": "18ff579969d40c1b3474480c0456d19900991a935f4a10dc2234d2b19a8dc05f",
+              "downloads": 31,
+              "mimeType": "application/vnd.android.package-archive",
+              "installable": true
+            },
+            {
+              "filename": "androidApp-full-armeabi-v7a-release.apk",
+              "downloadUrl": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/androidApp-full-armeabi-v7a-release.apk",
+              "platform": "android",
+              "architecture": "armv7",
+              "fileType": "APK",
+              "size": 40212826,
+              "sha256": "44d5940a688e5b182a33879678a7dae75abe9043a4b8553267d5d3b49075808a",
+              "downloads": 69,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             }
           ],
-          "sha256": "794c90209bc4ae414bf97576257e045696bb8b3be1e385c981f84de897340626",
-          "downloads": 301
+          "sha256": "50bb70d89a4201070840b7530ea730e1bf2c603c72a1bdfed48126740d6dde07",
+          "downloads": 79
         }
       ]
     },
@@ -9587,7 +9587,7 @@
       "bundleIdentifier": "com.minh-ton.Reynard",
       "category": "utilities",
       "developerName": "Minh Ton",
-      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Reynard.webp",
       "localizedDescription": "Reynard is an experimental Gecko-based web browser for iOS 13 and up, rendering pages with the same engine Firefox uses instead of Safari's WebKit. It is actively developed and published from the project's own GitHub releases.",
       "name": "Reynard",
@@ -9625,69 +9625,69 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-14"
+          "lastUpdatedAt": "2026-09-20"
         },
         "bundleAlias": "com.minh-ton.Reynard"
       },
       "screenshotURLs": [],
-      "size": 108070190,
+      "size": 108453095,
       "subtitle": "Gecko-based browser, a real WebKit alternative",
       "tintColor": "FB3828",
-      "version": "0.13.1",
-      "versionDate": "2026-09-14",
-      "versionDescription": "Reynard 0.13.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1\n\nThis is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).\n\n### Bug Fixes & Improvements\n- Improved the reliability of text input fields repositioning above the software keyboard when editing.\n- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.",
+      "version": "0.14.0",
+      "versionDate": "2026-09-20",
+      "versionDescription": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
       "versions": [
         {
-          "version": "0.13.1",
-          "date": "2026-09-14",
-          "localizedDescription": "Reynard 0.13.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.0...0.13.1\n\nThis is a minor release that addresses issues found in 0.13.0. For the full changelog, see the [0.13.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.13.0).\n\n### Bug Fixes & Improvements\n- Improved the reliability of text input fields repositioning above the software keyboard when editing.\n- Fixed issues with the new toolbar minimizing behavior introduced in 0.13.0, including mistaken taps, misaligned page elements, and out-of-place sticky headers and menus, along with better behavior when resizing or zooming.",
-          "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
-          "size": 108070190,
+          "version": "0.14.0",
+          "date": "2026-09-20",
+          "localizedDescription": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
+          "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
+          "size": 108453095,
           "minOSVersion": "13.0",
-          "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.13.1",
+          "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.14.0",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "Reynard-Jailbroken.ipa",
-              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard-Jailbroken.ipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard-Jailbroken.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 108119337,
-              "sha256": "421d5149dfe8087e18ea2b43cf437e2ea384208a74ee39bcfb23c9bc14cb7ae6",
-              "downloads": 292,
+              "size": 108506406,
+              "sha256": "1ea44eb29cfb9d0cf3d8913c879619a440e8edb705b290c23e1ba8e41a276b45",
+              "downloads": 75,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "Reynard-TrollStore.tipa",
-              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard-TrollStore.tipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard-TrollStore.tipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 108168749,
-              "sha256": "b6b5fa78be22ac11bfdb179884caaa43b69e10d16d47a9079f33df014f57c590",
-              "downloads": 1975,
+              "size": 108552657,
+              "sha256": "c69e3066b1fcdbe3545b183df13d8a6352c8f28b39137c69cf28fc778f7b1300",
+              "downloads": 703,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "Reynard.ipa",
-              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.13.1/Reynard.ipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 108070190,
-              "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-              "downloads": 951,
+              "size": 108453095,
+              "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
+              "downloads": 231,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "0bf3c005961380943ad4ddfe6d2fac3cff31411ec92ef64adcdd9509f225afac",
-          "downloads": 951
+          "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
+          "downloads": 231
         }
       ]
     },
@@ -11592,7 +11592,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 11044,
+              "downloads": 11106,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11604,7 +11604,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1509,
+              "downloads": 1514,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11640,13 +11640,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 268,
+              "downloads": 280,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 268
+          "downloads": 280
         }
       ]
     },
@@ -11679,7 +11679,7 @@
       "bundleIdentifier": "app.swiftgram.ios",
       "category": "social",
       "developerName": "Swiftgram & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.2-iQTele.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.3-iQTele.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Swiftgram.webp",
       "localizedDescription": "Swiftgram is a supercharged, open-source Telegram fork: ghost mode, hide read receipts and online status, save protected media, unlimited account switching and deep interface customization. The project officially ships through the App Store and TestFlight; this entry serves a ready-to-sideload IPA build (Swiftgram base with the MxGram tweak).",
       "name": "Swiftgram",
@@ -11717,24 +11717,24 @@
           "downloadReachable": true,
           "detail": "HTTP 200",
           "statusSince": "2026-09-18",
-          "lastUpdatedAt": "2026-09-05"
+          "lastUpdatedAt": "2026-09-21"
         },
         "bundleAlias": "app.swiftgram.ios"
       },
       "screenshotURLs": [],
-      "size": 82653568,
+      "size": 75578339,
       "subtitle": "Supercharged open-source Telegram fork",
       "tintColor": "F85C2C",
-      "version": "12.9.2",
-      "versionDate": "2026-09-05",
-      "versionDescription": "Swiftgram 12.9.2 | Swiftgram-12.9.2-iQTele\n\nIPA Vault build for Swiftgram (iQTele), version 12.9.2",
+      "version": "12.9.3",
+      "versionDate": "2026-09-21",
+      "versionDescription": "Swiftgram 12.9.3 | Swiftgram-12.9.3-iQTele\n\nIPA Vault build for Swiftgram (iQTele), version 12.9.3",
       "versions": [
         {
-          "version": "12.9.2",
-          "date": "2026-09-05",
-          "localizedDescription": "Swiftgram 12.9.2 | Swiftgram-12.9.2-iQTele\n\nIPA Vault build for Swiftgram (iQTele), version 12.9.2",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.2-iQTele.ipa",
-          "size": 82653568,
+          "version": "12.9.3",
+          "date": "2026-09-21",
+          "localizedDescription": "Swiftgram 12.9.3 | Swiftgram-12.9.3-iQTele\n\nIPA Vault build for Swiftgram (iQTele), version 12.9.3",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.3-iQTele.ipa",
+          "size": 75578339,
           "minOSVersion": "13.0",
           "releaseUrl": null,
           "source": "altstore",
@@ -11742,12 +11742,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Swiftgram-12.9.2-iQTele.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.2-iQTele.ipa",
+              "filename": "Swiftgram-12.9.3-iQTele.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.3-iQTele.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 82653568,
+              "size": 75578339,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -11873,7 +11873,7 @@
       "bundleIdentifier": "io.github.friesi23.mhabit",
       "category": "utilities",
       "developerName": "FriesI23",
-      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+      "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit-unsigned.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
       "localizedDescription": "Table Habit is a free, open-source habit tracker for building micro habits: a scoring system grades consistency rather than raw streaks, growth charts show the trend, and everything syncs across devices through any WebDAV endpoint - Nextcloud, Koofr or a self-hosted one. Offline-first, no ads, no in-app purchases and no account required, licensed under Apache-2.0. The iOS build OmniSource tracks is the project's own unsigned IPA from its GitHub releases, which AltStore, SideStore, Feather and ESign sign with your certificate at install time.",
       "name": "Table Habit",
@@ -11911,141 +11911,141 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-07"
+          "lastUpdatedAt": "2026-09-20"
         },
         "bundleAlias": "io.github.friesi23.mhabit"
       },
       "screenshotURLs": [],
-      "size": 14790504,
+      "size": 15044222,
       "subtitle": "Open-source micro-habit tracker with WebDAV sync",
       "tintColor": "3DDC97",
-      "version": "1.27.6",
-      "versionDate": "2026-09-07",
-      "versionDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
+      "version": "1.27.9",
+      "versionDate": "2026-09-20",
+      "versionDescription": "Table Habit 1.27.9 | mhabit-unsigned\n\n# Release: v1.27.9+198\n\n> Includes updates since the previous stable release, v1.27.6+195.\n\n## ✨ Features\n\n- Cycle check-ins from unknown to done, skipped, and back to unknown (#657)\n  - Delete a single check-in or several at once with confirmation\n  - Sync deletions across devices and keep record identity for later check-ins\n- Improve dialogs and page layouts across window sizes (#661)\n  - Adapt sheets and dialogs when resizing while preserving the open form\n    and navigation state\n  - Migrate group management, sync editing, changelog, donation, and about\n    dialogs to shared adaptive presentation\n  - Keep nested navigation and close confirmation within the active dialog\n  - Align scrolling page headers, safe areas, and window-control avoidance\n- Improve habit detail actions and refresh retained details when returning\n  to them (#662)\n- Improve Settings, grouped lists, and dialogs across window sizes (#663)\n  - Add date format, reminder, export, import progress, and group editing flows\n  - Keep import results and group actions tied to the selected items\n- Preserve unknown WebDAV fields when syncing groups and records, improving\n  compatibility with newer app versions (#665)\n\n## 🐛 Fixes\n\n- Restore batch check-in actions for selected habits in Apple layouts (#661)\n- Preserve Settings scroll position when rebuilding the page (#661)\n- Prevent a delayed group save from closing the group selector after the\n  user has already returned from the creation form (#661)\n- Improve loading error recovery (#662)\n- Bound import concurrency and expose failures for individual items (#663)\n\n## 🌐 Localization\n\n- Update Italian translation, thanks to Simone De Carli's contribution on\n  Weblate (#664)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.6+195...v1.27.9+198)",
       "versions": [
         {
-          "version": "1.27.6",
-          "date": "2026-09-07",
-          "localizedDescription": "Table Habit 1.27.6 | mhabit-unsigned\n\n# Release: v1.27.6+195\n\n## ✨ Features\n\n- Complete the adaptive interface migration across navigation, settings, page\n  headers, search, selection, and habit actions\n  - Preserve branch state and improve back navigation across nested pages\n  - Keep actions and menus responsive across window sizes and input modes\n- Add quick theme mode controls to app bars and wider navigation layouts (#659)\n- Add resizable side navigation for wider layouts (#653)\n  - Keep navigation aligned with window controls, safe areas, and layout\n    direction changes\n  - Improve text rendering and theme behavior across desktop layouts\n- Improve app bars, habit actions, and batch status changes across window sizes\n  (#655)\n  - Keep localized action labels readable and move extra actions into overflow\n    menus when space is limited\n  - Refine page backgrounds and scroll-under transitions\n\n## 🐛 Fixes\n\n- Keep dialogs above app navigation and refresh selection state consistently\n  after reordering or regrouping habits (#656)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.3+192...v1.27.6+195)",
-          "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
-          "size": 14790504,
+          "version": "1.27.9",
+          "date": "2026-09-20",
+          "localizedDescription": "Table Habit 1.27.9 | mhabit-unsigned\n\n# Release: v1.27.9+198\n\n> Includes updates since the previous stable release, v1.27.6+195.\n\n## ✨ Features\n\n- Cycle check-ins from unknown to done, skipped, and back to unknown (#657)\n  - Delete a single check-in or several at once with confirmation\n  - Sync deletions across devices and keep record identity for later check-ins\n- Improve dialogs and page layouts across window sizes (#661)\n  - Adapt sheets and dialogs when resizing while preserving the open form\n    and navigation state\n  - Migrate group management, sync editing, changelog, donation, and about\n    dialogs to shared adaptive presentation\n  - Keep nested navigation and close confirmation within the active dialog\n  - Align scrolling page headers, safe areas, and window-control avoidance\n- Improve habit detail actions and refresh retained details when returning\n  to them (#662)\n- Improve Settings, grouped lists, and dialogs across window sizes (#663)\n  - Add date format, reminder, export, import progress, and group editing flows\n  - Keep import results and group actions tied to the selected items\n- Preserve unknown WebDAV fields when syncing groups and records, improving\n  compatibility with newer app versions (#665)\n\n## 🐛 Fixes\n\n- Restore batch check-in actions for selected habits in Apple layouts (#661)\n- Preserve Settings scroll position when rebuilding the page (#661)\n- Prevent a delayed group save from closing the group selector after the\n  user has already returned from the creation form (#661)\n- Improve loading error recovery (#662)\n- Bound import concurrency and expose failures for individual items (#663)\n\n## 🌐 Localization\n\n- Update Italian translation, thanks to Simone De Carli's contribution on\n  Weblate (#664)\n\n[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.6+195...v1.27.9+198)",
+          "downloadURL": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit-unsigned.ipa",
+          "size": 15044222,
           "minOSVersion": "15.0",
-          "releaseUrl": "https://github.com/FriesI23/mhabit/releases/tag/v1.27.6%2B195",
+          "releaseUrl": "https://github.com/FriesI23/mhabit/releases/tag/v1.27.9%2B198",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "app-arm64-v8a-release.apk",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-arm64-v8a-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/app-arm64-v8a-release.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 33482969,
-              "sha256": "75871d7eaf689160a38a9e12e0ff6424a119f58a92bc955249fa7a396aa5f9f1",
-              "downloads": 1431,
+              "size": 34139889,
+              "sha256": "b16c367f5d507c4b8ed6fe581ba844a699bc32a1ec7135d02be68e88f705d8ed",
+              "downloads": 45,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-armeabi-v7a-release.apk",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-armeabi-v7a-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/app-armeabi-v7a-release.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 32071715,
-              "sha256": "cc444d2b55524353430454d17dba66c23bf3227f69b9312f49d5db013099824a",
-              "downloads": 3,
+              "size": 32695867,
+              "sha256": "be984b1c3ea0b22129d13caf837cc4d67ff9e1c1d59779499c2c972dfef6c5c7",
+              "downloads": 1,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-release.apk",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/app-release.apk",
               "platform": "android",
               "architecture": null,
               "fileType": "APK",
-              "size": 94393000,
-              "sha256": "41545a363c1861db51e8dd274696301090689a880153dfdbaa984c519657b805",
-              "downloads": 36,
+              "size": 96262336,
+              "sha256": "05332a6f594b8a15b5f5873329585ab6424772b88639832728dfaf473a9c5b08",
+              "downloads": 2,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-x86_64-release.apk",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/app-x86_64-release.apk",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/app-x86_64-release.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 34983850,
-              "sha256": "9b90eb8e2ce7c8b9d50d87386cafb9ea3c6bdd7d6dcca88555237f93730f9762",
-              "downloads": 11,
+              "size": 35575234,
+              "sha256": "3a0ebdc0d929dcc40c182959f6d24885ebf6e370a2ad5d9a1572e3ba440e967a",
+              "downloads": 2,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "mhabit-aarch64.flatpak",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-aarch64.flatpak",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit-aarch64.flatpak",
               "platform": "unknown",
               "architecture": "arm64",
               "fileType": "other",
-              "size": 22757976,
-              "sha256": "14f9883a2d6c1238bec38beeb016e51360212a030cefa76710b92fac5b0c1e2e",
-              "downloads": 2,
+              "size": 22901032,
+              "sha256": "83273445350c9bbb70f5ccb62b0078adc508dd125ec8a912343dab04f0614ac6",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "mhabit-unsigned.ipa",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-unsigned.ipa",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit-unsigned.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 14790504,
-              "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
-              "downloads": 77,
+              "size": 15044222,
+              "sha256": "85e8c4067880f6697dd01e8de480c252512dbc49ea2f4463d1a9f4815d98b123",
+              "downloads": 2,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "mhabit-x86_64.flatpak",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit-x86_64.flatpak",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit-x86_64.flatpak",
               "platform": "unknown",
               "architecture": "x86_64",
               "fileType": "other",
-              "size": 23616064,
-              "sha256": "292035474d44ee40474a5df19bba6668b33de83220f50729dd00b1fc5a67f620",
-              "downloads": 7,
+              "size": 23782000,
+              "sha256": "9decf396b27f2f66a739de2d5d1b50a458b5ce63cc140d8a4e27a4e596b92ca0",
+              "downloads": 1,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "mhabit.dmg",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit.dmg",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit.dmg",
               "platform": "macos",
               "architecture": null,
               "fileType": "DMG",
-              "size": 30203158,
-              "sha256": "2de165866dfcd2fd751eb831ade79f39cab5f8a4c4fd4927d8cb72c95c31dd90",
-              "downloads": 48,
+              "size": 30693283,
+              "sha256": "a2499d0955a37ffd472000a2805af6a4d3da6c2f148ab7caa4f22e0e05957f0d",
+              "downloads": 4,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "mhabit_x64.msix",
-              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.6%2B195/mhabit_x64.msix",
+              "downloadUrl": "https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit_x64.msix",
               "platform": "unknown",
               "architecture": null,
               "fileType": "other",
-              "size": 23543364,
-              "sha256": "42ae38660c879d5df2eec257078d83de1d7fc102634d2e33df75058a43c76f62",
-              "downloads": 51,
+              "size": 23790189,
+              "sha256": "49ff47e81c272c66520d1ae956e6e22e67b431935f498407eca2e0f14760ebf6",
+              "downloads": 2,
               "mimeType": "raw",
               "installable": false
             }
           ],
-          "sha256": "ac227b2e1e7ab956e6926d2a24b173ca8ad9495b0dd042c064a53404507f8560",
-          "downloads": 77
+          "sha256": "85e8c4067880f6697dd01e8de480c252512dbc49ea2f4463d1a9f4815d98b123",
+          "downloads": 2
         }
       ]
     },
@@ -12715,7 +12715,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 365071,
+              "downloads": 365411,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12727,12 +12727,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1245281,
+              "downloads": 1246227,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1245281
+          "downloads": 1246227
         }
       ]
     },
@@ -12870,7 +12870,7 @@
       "bundleIdentifier": "com.seastar.turrit",
       "category": "social",
       "developerName": "m1ronx1412 & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.3-iQTele.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.4-iQTele.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Turrit.webp",
       "localizedDescription": "Turrit MxGram is the third-party Turrit messenger with the MxGram tweak (by m1ronx1412) injected: ghost mode with per-user exceptions, anti-revoke, saving of protected media and more, on top of the Turrit Telegram client.",
       "name": "Turrit MxGram",
@@ -12908,24 +12908,24 @@
           "downloadReachable": true,
           "detail": "HTTP 200",
           "statusSince": "2026-09-18",
-          "lastUpdatedAt": "2026-09-05"
+          "lastUpdatedAt": "2026-09-21"
         },
         "bundleAlias": "com.seastar.turrit"
       },
       "screenshotURLs": [],
-      "size": 85350833,
+      "size": 97226634,
       "subtitle": "MxGram-tweaked Turrit client (unofficial build)",
       "tintColor": "0088CC",
-      "version": "1.5.3",
-      "versionDate": "2026-09-05",
-      "versionDescription": "Turrit 1.5.3 | Turrit-1.5.3-iQTele\n\nIPA Vault build for Turrit (iQTele), version 1.5.3",
+      "version": "1.5.4",
+      "versionDate": "2026-09-21",
+      "versionDescription": "Turrit 1.5.4 | Turrit-1.5.4-iQTele\n\nIPA Vault build for Turrit (iQTele), version 1.5.4",
       "versions": [
         {
-          "version": "1.5.3",
-          "date": "2026-09-05",
-          "localizedDescription": "Turrit 1.5.3 | Turrit-1.5.3-iQTele\n\nIPA Vault build for Turrit (iQTele), version 1.5.3",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.3-iQTele.ipa",
-          "size": 85350833,
+          "version": "1.5.4",
+          "date": "2026-09-21",
+          "localizedDescription": "Turrit 1.5.4 | Turrit-1.5.4-iQTele\n\nIPA Vault build for Turrit (iQTele), version 1.5.4",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.4-iQTele.ipa",
+          "size": 97226634,
           "minOSVersion": "13.0",
           "releaseUrl": null,
           "source": "altstore",
@@ -12933,12 +12933,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Turrit-1.5.3-iQTele.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.3-iQTele.ipa",
+              "filename": "Turrit-1.5.4-iQTele.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.4-iQTele.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 85350833,
+              "size": 97226634,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -13022,7 +13022,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 521,
+              "downloads": 531,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -13034,13 +13034,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1298,
+              "downloads": 1344,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1298
+          "downloads": 1344
         }
       ]
     },
@@ -14799,7 +14799,7 @@
       "bundleIdentifier": "com.google.ios.youtube",
       "category": "photo-video",
       "developerName": "itzzace",
-      "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa",
+      "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
       "localizedDescription": "YTKACE is a free, open-source YouTube enhancer and downloader for iOS. No ads, background playback, video and audio downloads, SponsorBlock, Picture in Picture, player gestures and deep interface customization.",
       "name": "YTKACE",
@@ -14837,7 +14837,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-07",
-          "lastUpdatedAt": "2026-09-12"
+          "lastUpdatedAt": "2026-09-20"
         },
         "bundleAlias": "com.google.ios.youtube"
       },
@@ -14846,76 +14846,76 @@
         "https://raw.githubusercontent.com/itzzace/ytkace/main/screenshots/framed/audio-queue.png",
         "https://raw.githubusercontent.com/itzzace/ytkace/main/screenshots/framed/download-library.png"
       ],
-      "size": 134780934,
+      "size": 136694474,
       "subtitle": "YTKACE",
       "tintColor": "FF0000",
-      "version": "21.36.6",
-      "versionDate": "2026-09-12",
-      "versionDescription": "YouTube 21.36.6 | YTKACE 0.9.3 | YTKACE_0.9.3_YouTube_21.36.6\n\nby @itzzace0\n\nWhat's new:\n• Updated for YouTube 21.36.6\n• Added a toggle to remove the Save button from Shorts\n\nFixed:\n• Fixed the feed lagging while scrolling with Remove Shorts, Products, Mixes or Community Posts on\n• Fixed the You tab moving to the end of the tab bar after changing other tabs\n• Fixed hold to speed staying stuck at the held speed after letting go\n• Fixed the Save button in Shorts overlapping the other buttons\n• Fixed Block Premium Prompts stopping community post images from opening\n• Fixed Clear Cache saying there was nothing to clear while YouTube's video cache kept growing\n\nYouTube 21.36.6 requires iOS 17, so there are two IPAs:\n• `YTKACE_0.9.3_YouTube_21.36.6.ipa` for iOS 17 and newer\n• `YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+      "version": "21.37.5",
+      "versionDate": "2026-09-20",
+      "versionDescription": "YouTube 21.37.5 | YTKACE 1.0.0 | YTKACE_1.0.0_YouTube_21.37.5\n\nby @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.37.5\n• Queue videos without Premium — play next, play last, reorder, shuffle, loop and clear\n• Playlist downloads — grab every video or pick the ones you want\n• YouTube's Download button can now open the YTKACE menu\n• Choose where the download button lives: player overlay, YouTube's button, or both\n• Save downloads to the share sheet, with separate video and audio destinations\n• Hide the products shelf\n• iOS 15 support for the tweak packages\n\nFixed:\n• 2K and 4K missing from the download quality list\n• Shorts Save button not removed unless YouTube was in English\n• Community posts breaking with Block Premium Prompts on\n• Action bar disappearing while scrolling the feed\n• Settings unreachable if both the YTKACE and Library tabs were removed\n• YTKACE settings opening another tweak's settings when both were installed\n\nYouTube 21.37.5 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.0.0_YouTube_21.37.5.ipa` for iOS 17 and newer\n• `YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa` for iOS 16",
       "versions": [
         {
-          "version": "21.36.6",
-          "date": "2026-09-12",
-          "localizedDescription": "YouTube 21.36.6 | YTKACE 0.9.3 | YTKACE_0.9.3_YouTube_21.36.6\n\nby @itzzace0\n\nWhat's new:\n• Updated for YouTube 21.36.6\n• Added a toggle to remove the Save button from Shorts\n\nFixed:\n• Fixed the feed lagging while scrolling with Remove Shorts, Products, Mixes or Community Posts on\n• Fixed the You tab moving to the end of the tab bar after changing other tabs\n• Fixed hold to speed staying stuck at the held speed after letting go\n• Fixed the Save button in Shorts overlapping the other buttons\n• Fixed Block Premium Prompts stopping community post images from opening\n• Fixed Clear Cache saying there was nothing to clear while YouTube's video cache kept growing\n\nYouTube 21.36.6 requires iOS 17, so there are two IPAs:\n• `YTKACE_0.9.3_YouTube_21.36.6.ipa` for iOS 17 and newer\n• `YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa` for iOS 16",
-          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa",
-          "size": 134780934,
+          "version": "21.37.5",
+          "date": "2026-09-20",
+          "localizedDescription": "YouTube 21.37.5 | YTKACE 1.0.0 | YTKACE_1.0.0_YouTube_21.37.5\n\nby @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.37.5\n• Queue videos without Premium — play next, play last, reorder, shuffle, loop and clear\n• Playlist downloads — grab every video or pick the ones you want\n• YouTube's Download button can now open the YTKACE menu\n• Choose where the download button lives: player overlay, YouTube's button, or both\n• Save downloads to the share sheet, with separate video and audio destinations\n• Hide the products shelf\n• iOS 15 support for the tweak packages\n\nFixed:\n• 2K and 4K missing from the download quality list\n• Shorts Save button not removed unless YouTube was in English\n• Community posts breaking with Block Premium Prompts on\n• Action bar disappearing while scrolling the feed\n• Settings unreachable if both the YTKACE and Library tabs were removed\n• YTKACE settings opening another tweak's settings when both were installed\n\nYouTube 21.37.5 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.0.0_YouTube_21.37.5.ipa` for iOS 17 and newer\n• `YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+          "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa",
+          "size": 136694474,
           "minOSVersion": "17.0",
-          "releaseUrl": "https://github.com/itzzace/ytkace/releases/tag/v0.9.3",
+          "releaseUrl": "https://github.com/itzzace/ytkace/releases/tag/v1.0.0",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "com.itzzace.ytkace_0.9.3_roothide.deb",
-              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/com.itzzace.ytkace_0.9.3_roothide.deb",
+              "filename": "com.itzzace.ytkace_1.0.0_roothide.deb",
+              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/com.itzzace.ytkace_1.0.0_roothide.deb",
               "platform": "linux",
               "architecture": null,
               "fileType": "DEB",
-              "size": 889130,
-              "sha256": "3e3b0b5c703e78413786ceac9970b99c76c35a3cae797ac5daa06c37d4896111",
-              "downloads": 31,
+              "size": 1727566,
+              "sha256": "9b8d5439b1c928c07337664b39091fe380c16c64af89205bbfdc37ba962d8d89",
+              "downloads": 3,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
             {
-              "filename": "com.itzzace.ytkace_0.9.3_rootless.deb",
-              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/com.itzzace.ytkace_0.9.3_rootless.deb",
+              "filename": "com.itzzace.ytkace_1.0.0_rootless.deb",
+              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/com.itzzace.ytkace_1.0.0_rootless.deb",
               "platform": "linux",
               "architecture": null,
               "fileType": "DEB",
-              "size": 889138,
-              "sha256": "2afe189ce4f6ad5f4c3937dd46d78f82784cf23ab01c4737b226a02d613ccb64",
-              "downloads": 48,
+              "size": 1727360,
+              "sha256": "0792ad2434092fbf77f15b3b36261d274cd17c470541823d973203e3854f7774",
+              "downloads": 3,
               "mimeType": "application/x-debian-package",
               "installable": true
             },
             {
-              "filename": "YTKACE_0.9.3_YouTube_21.36.6.ipa",
-              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_21.36.6.ipa",
+              "filename": "YTKACE_1.0.0_YouTube_21.37.5.ipa",
+              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 134780934,
-              "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-              "downloads": 1707,
+              "size": 136694474,
+              "sha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
+              "downloads": 82,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa",
-              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v0.9.3/YTKACE_0.9.3_YouTube_iOS16_21.33.6.ipa",
+              "filename": "YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa",
+              "downloadUrl": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 132513253,
-              "sha256": "1e1917b089958f653d81aafb13e82f30dbdc8b45704752ae7625d5c44dbf5323",
-              "downloads": 133,
+              "size": 133666448,
+              "sha256": "25551bd30a85ebb82e955d4e4b1d68ea12783012edca4b74ade306b1844c411d",
+              "downloads": 7,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "11efe88e6b621f3f12d0972ef19530b078f2f8d4a38d3b5115e89c9748f44720",
-          "downloads": 1707
+          "sha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
+          "downloads": 82
         }
       ]
     },
@@ -15307,6 +15307,78 @@
   ],
   "news": [
     {
+      "title": "Turrit MxGram v1.5.4",
+      "identifier": "news-turrit-mxgram-1-5-4",
+      "caption": "MxGram-tweaked Turrit client (unofficial build)",
+      "date": "2026-09-21",
+      "appID": "com.seastar.turrit",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Turrit.webp",
+      "notify": true
+    },
+    {
+      "title": "Swiftgram v12.9.3",
+      "identifier": "news-swiftgram-12-9-3",
+      "caption": "Supercharged open-source Telegram fork",
+      "date": "2026-09-21",
+      "appID": "app.swiftgram.ios",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Swiftgram.webp",
+      "notify": true
+    },
+    {
+      "title": "Nuvio v0.4.26",
+      "identifier": "news-nuvio-0-4-26",
+      "caption": "Open-source media player, bring your own sources",
+      "date": "2026-09-21",
+      "appID": "com.nuvio.app",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
+      "notify": true
+    },
+    {
+      "title": "NexaSC v8.79.0",
+      "identifier": "news-nexasc-8-79-0",
+      "caption": "SoundCloud Go+ unlock and ad removal (unofficial build)",
+      "date": "2026-09-21",
+      "appID": "com.soundcloud.TouchApp",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/SoundCloud.webp",
+      "notify": true
+    },
+    {
+      "title": "YTKACE v21.37.5",
+      "identifier": "news-ytkace-21-37-5",
+      "caption": "YTKACE",
+      "date": "2026-09-20",
+      "appID": "com.google.ios.youtube",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "notify": true
+    },
+    {
+      "title": "Table Habit v1.27.9",
+      "identifier": "news-tablehabit-1-27-9",
+      "caption": "Open-source micro-habit tracker with WebDAV sync",
+      "date": "2026-09-20",
+      "appID": "io.github.friesi23.mhabit",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/TableHabit.webp",
+      "notify": true
+    },
+    {
+      "title": "Reynard v0.14.0",
+      "identifier": "news-reynard-0-14-0",
+      "caption": "Gecko-based browser, a real WebKit alternative",
+      "date": "2026-09-20",
+      "appID": "com.minh-ton.Reynard",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Reynard.webp",
+      "notify": true
+    },
+    {
+      "title": "AnymeX v3.1.8",
+      "identifier": "news-anymex-3-1-8",
+      "caption": "Anime, manga, novels & tracking, open source",
+      "date": "2026-09-20",
+      "appID": "com.ryan.anymex",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/AnymeX.webp",
+      "notify": true
+    },
+    {
       "title": "YTKillerPlus v21.37.5",
       "identifier": "news-ytkp-21-37-5",
       "caption": "Advanced YouTube tweak with extensive controls",
@@ -15321,78 +15393,6 @@
       "caption": "Feature-rich YouTube tweak by alibusut",
       "date": "2026-09-19",
       "appID": "com.google.ios.youtube",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
-      "notify": true
-    },
-    {
-      "title": "uPro Plus v21.37.5",
-      "identifier": "news-youmod-21-37-5",
-      "caption": "YouTube 21.37.4 extra-tweaks build (YouMod + player stack)",
-      "date": "2026-09-19",
-      "appID": "com.google.ios.youtube",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
-      "notify": true
-    },
-    {
-      "title": "Nuvio v0.4.25",
-      "identifier": "news-nuvio-0-4-25",
-      "caption": "Open-source media player, bring your own sources",
-      "date": "2026-09-19",
-      "appID": "com.nuvio.app",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
-      "notify": true
-    },
-    {
-      "title": "Mangayomi v0.9.6",
-      "identifier": "news-mangayomi-0-9-6",
-      "caption": "Manga, novel & anime reader",
-      "date": "2026-09-19",
-      "appID": "com.kodjodevf.mangayomi",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
-      "notify": true
-    },
-    {
-      "title": "Nuvio v0.4.24",
-      "identifier": "news-nuvio-0-4-24",
-      "caption": "Open-source media player, bring your own sources",
-      "date": "2026-09-18",
-      "appID": "com.nuvio.app",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
-      "notify": true
-    },
-    {
-      "title": "Manic EMU v2.0.1",
-      "identifier": "news-manicemu-2-0-1",
-      "caption": "All-in-one retro game emulator",
-      "date": "2026-09-18",
-      "appID": "com.aoshuang.manicemu",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/ManicEMU.webp",
-      "notify": true
-    },
-    {
-      "title": "Mangayomi v0.9.5",
-      "identifier": "news-mangayomi-0-9-5",
-      "caption": "Manga, novel & anime reader",
-      "date": "2026-09-18",
-      "appID": "com.kodjodevf.mangayomi",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
-      "notify": true
-    },
-    {
-      "title": "EscapeOS v0.1.6",
-      "identifier": "news-escapeos-0-1-6",
-      "caption": "App-data browser and backup for sideloaded apps",
-      "date": "2026-09-18",
-      "appID": "com.ipaside.escapeos",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/EscapeOS.webp",
-      "notify": true
-    },
-    {
-      "title": "Cercube for YouTube v6.1.3",
-      "identifier": "news-cercube-6-1-3",
-      "caption": "Offline, PiP, background play and no ads for YouTube",
-      "date": "2026-09-18",
-      "appID": "com.cercube.ios",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
       "notify": true
     }
