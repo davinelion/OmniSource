@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-22",
-  "feedVersion": "40a2a32a2c2c",
+  "feedVersion": "5e3243e407a7",
   "app": {
     "id": "ryukgram-ig410",
     "name": "RyukGram (IG 410)",
@@ -30,8 +30,8 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/ryukgram-ig410/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/ryukgram-ig410.json",
     "health": {
-      "reachable": false,
-      "detail": "timed out",
+      "reachable": true,
+      "detail": "HTTP 200",
       "updatedAt": "2026-07-25"
     }
   },
@@ -52,8 +52,8 @@
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }

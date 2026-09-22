@@ -5,8 +5,26 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
     <description>Release feed for Nuvio within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/nuvio.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Nuvio v0.5.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.5.0</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.5.0 | nuvio-0.5.0-full-release
+
+- 4c82f9ac feat(settings): collapse tracker cards by default @tapframe  
+- c9d6f5f6 fix(player): restore subtitles for each episode @tapframe  
+- [feat(mdblist): add tracking and library support (#1900)](https://github.com/NuvioMedia/NuvioMobile/pull/1900) @tapframe  
+- [remove inaccurate TMDB release date enrichment option (#2032)](https://github.com/NuvioMedia/NuvioMobile/pull/2032) @skoruppa  
+- [Fix(player) record mx player completion when no position is returned (#2031)](https://github.com/NuvioMedia/NuvioMobile/pull/2031) @zuko726  
+- 4178d5cd fix(tmdb): sort blank collection release dates last @tapframe  
+- fb9f859e fix(ios): use clean player framework archive @tapframe  
+- 6ff7882a fix(player): preserve iOS audio during calls @tapframe  
+- [Custom poster URL pattern support (#2025)](https://github.com/NuvioMedia/NuvioMobile/pull/2025) @skoruppa]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.0-beta/nuvio-0.5.0-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Nuvio v0.4.26</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>

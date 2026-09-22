@@ -1,78 +1,37 @@
 {
   "generatedAt": "2026-09-22",
-  "feedVersion": "40a2a32a2c2c",
+  "feedVersion": "5e3243e407a7",
   "apps": {
     "total": 130,
-    "reachable": 128,
-    "unreachable": 2,
-    "verified": 127
+    "reachable": 130,
+    "unreachable": 0,
+    "verified": 129
   },
   "sync": {
-    "synced": 128,
-    "incrementalHits": 113,
-    "updated": 7,
-    "failed": 2,
-    "apiRequests": 118
+    "synced": 130,
+    "incrementalHits": 121,
+    "updated": 2,
+    "failed": 0,
+    "apiRequests": 116
   },
-  "unreachable": [
-    "ryukgram-ig410",
-    "ryukgram-sidebyside"
-  ],
+  "unreachable": [],
   "updates": [
     {
-      "slug": "youpro",
-      "name": "YouPro",
-      "previousVersion": "21.37.5",
-      "version": "21.38.2",
+      "slug": "reynard",
+      "name": "Reynard",
+      "previousVersion": "0.14.0",
+      "version": "0.14.1",
       "kind": "updated"
     },
     {
-      "slug": "ytkp",
-      "name": "YTKillerPlus",
-      "previousVersion": "21.37.5",
-      "version": "21.38.2",
-      "kind": "updated"
-    },
-    {
-      "slug": "youmod",
-      "name": "uPro Plus",
-      "previousVersion": "21.37.5",
-      "version": "21.38.2",
-      "kind": "updated"
-    },
-    {
-      "slug": "ytmusic",
-      "name": "YTMusicUltimate",
-      "previousVersion": "9.37.2",
-      "version": "9.38.1",
-      "kind": "updated"
-    },
-    {
-      "slug": "ryukgram",
-      "name": "RyukGram",
-      "previousVersion": "447.0.0",
-      "version": "448.0.0",
-      "kind": "updated"
-    },
-    {
-      "slug": "sparkle",
-      "name": "Sparkle",
-      "previousVersion": "447.0.0",
-      "version": "448.0.0",
-      "kind": "updated"
-    },
-    {
-      "slug": "threadsaver",
-      "name": "ThreadSaver",
-      "previousVersion": "447.0",
-      "version": "448.0",
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "previousVersion": "0.4.26",
+      "version": "0.5.0",
       "kind": "updated"
     }
   ],
-  "errors": [
-    "ryukgram-ig410: all sources failed: altstore:https://source.ryuksign.com/ig410 error: HTTP request failed after 3 attempts: https://source.ryuksign.com/ig410 (<urlopen error timed out>)",
-    "ryukgram-sidebyside: all sources failed: altstore:https://source.ryuksign.com/duplicate error: HTTP request failed after 3 attempts: https://source.ryuksign.com/duplicate (<urlopen error timed out>)"
-  ],
+  "errors": [],
   "translations": {
     "ar": 100,
     "bn": 100,

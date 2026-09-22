@@ -3,13 +3,13 @@
   "generatedAt": "2026-09-22",
   "totals": {
     "apps": 130,
-    "verified": 127,
+    "verified": 129,
     "communityVerified": 1,
-    "unverified": 2,
+    "unverified": 0,
     "hashVerified": 81,
     "official": 111,
     "communityBuilds": 19,
-    "avgTrustScore": 6.87,
+    "avgTrustScore": 6.92,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -1421,7 +1421,7 @@
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/nuvio-0.4.26-full-release.ipa",
+      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.0-beta/nuvio-0.5.0-full-release.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1757,7 +1757,7 @@
       "reasons": [
         "official upstream (github-release)"
       ],
-      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
+      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
     },
@@ -1779,7 +1779,49 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-RyukGram.ipa",
-      "trustScore": 5.7,
+      "trustScore": 5.8,
+      "trustBadge": "Community"
+    },
+    {
+      "app": "ryukgram-ig410",
+      "name": "RyukGram (IG 410)",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "altstore",
+      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (altstore)"
+      ],
+      "downloadURL": "https://source.ryuksign.com/ipas/959abf1407579dbd3f46.ipa",
+      "trustScore": 7.2,
+      "trustBadge": "Community"
+    },
+    {
+      "app": "ryukgram-sidebyside",
+      "name": "RyukGram Side by Side",
+      "status": "VERIFIED",
+      "provenance": "official",
+      "hash_verified": true,
+      "method": "altstore",
+      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": true
+      },
+      "reasons": [
+        "official upstream (altstore)"
+      ],
+      "downloadURL": "https://source.ryuksign.com/ipas/86bd8282219bf3b32dca.ipa",
+      "trustScore": 7.2,
       "trustBadge": "Community"
     },
     {
@@ -1947,7 +1989,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-Sparkle.ipa",
-      "trustScore": 5.7,
+      "trustScore": 5.8,
       "trustBadge": "Community"
     },
     {
@@ -2199,7 +2241,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-448.0-ThreadSaver.ipa",
-      "trustScore": 5.7,
+      "trustScore": 5.8,
       "trustBadge": "Community"
     },
     {
@@ -2684,48 +2726,6 @@
       "downloadURL": "https://github.com/ZeusLN/zeus/releases/download/v13.2.1/zeus-v13.2.1.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
-    },
-    {
-      "app": "ryukgram-ig410",
-      "name": "RyukGram (IG 410)",
-      "status": "UNVERIFIED",
-      "provenance": "official",
-      "hash_verified": true,
-      "method": "altstore",
-      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": true
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://source.ryuksign.com/ipas/959abf1407579dbd3f46.ipa",
-      "trustScore": 4.2,
-      "trustBadge": "Experimental"
-    },
-    {
-      "app": "ryukgram-sidebyside",
-      "name": "RyukGram Side by Side",
-      "status": "UNVERIFIED",
-      "provenance": "official",
-      "hash_verified": true,
-      "method": "altstore",
-      "publisher": "Ryuk / RyukSign (source.ryuksign.com)",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": true
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://source.ryuksign.com/ipas/86bd8282219bf3b32dca.ipa",
-      "trustScore": 4.2,
-      "trustBadge": "Experimental"
     },
     {
       "app": "uyouenhanced",

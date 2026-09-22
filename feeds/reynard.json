@@ -19,63 +19,63 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Reynard.webp",
       "tintColor": "FB3828",
       "category": "utilities",
-      "version": "0.14.0",
-      "versionDate": "2026-09-20",
-      "versionDescription": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
-      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
-      "size": 108453095,
+      "version": "0.14.1",
+      "versionDate": "2026-09-22",
+      "versionDescription": "Reynard 0.14.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.14.0...0.14.1\n\nThis is a minor release that fixes issues found in 0.14.0. For the complete list of changes, see the [0.14.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.14.0).\n\n### Bug Fixes & Improvements\n- Fixed a crash when opening Reader Mode settings on some older iOS versions.\n- Fixed the system serif font not being looked up correctly on webpages and in Reader Mode.\n- Fixed a misleading JIT enablement banner appearing on jailbroken iOS 17.4 and later.\n- Fixed media playback not resuming automatically after interruptions such as dictation.",
+      "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard.ipa",
+      "size": 108452990,
       "versions": [
         {
-          "version": "0.14.0",
-          "date": "2026-09-20",
-          "localizedDescription": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
-          "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
-          "size": 108453095,
+          "version": "0.14.1",
+          "date": "2026-09-22",
+          "localizedDescription": "Reynard 0.14.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.14.0...0.14.1\n\nThis is a minor release that fixes issues found in 0.14.0. For the complete list of changes, see the [0.14.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.14.0).\n\n### Bug Fixes & Improvements\n- Fixed a crash when opening Reader Mode settings on some older iOS versions.\n- Fixed the system serif font not being looked up correctly on webpages and in Reader Mode.\n- Fixed a misleading JIT enablement banner appearing on jailbroken iOS 17.4 and later.\n- Fixed media playback not resuming automatically after interruptions such as dictation.",
+          "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard.ipa",
+          "size": 108452990,
           "minOSVersion": "13.0",
-          "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.14.0",
+          "releaseUrl": "https://github.com/minh-ton/reynard-browser/releases/tag/0.14.1",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "Reynard-Jailbroken.ipa",
-              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard-Jailbroken.ipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard-Jailbroken.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 108506406,
-              "sha256": "1ea44eb29cfb9d0cf3d8913c879619a440e8edb705b290c23e1ba8e41a276b45",
-              "downloads": 137,
+              "size": 108503085,
+              "sha256": "04ca6071def9ea560686ccdb7ba04dd7c9a30dfec77bde1b19b5238daa76dbd0",
+              "downloads": 33,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "Reynard-TrollStore.tipa",
-              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard-TrollStore.tipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard-TrollStore.tipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 108552657,
-              "sha256": "c69e3066b1fcdbe3545b183df13d8a6352c8f28b39137c69cf28fc778f7b1300",
-              "downloads": 1016,
+              "size": 108552628,
+              "sha256": "1904c54ab760b996dc436721d48a705a50f7a6b378e7502c91c563dc0c8eba3e",
+              "downloads": 248,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "Reynard.ipa",
-              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
+              "downloadUrl": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 108453095,
-              "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
-              "downloads": 359,
+              "size": 108452990,
+              "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
+              "downloads": 88,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
-          "downloads": 359
+          "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
+          "downloads": 88
         }
       ],
       "screenshotURLs": [],
@@ -113,7 +113,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-17",
-          "lastUpdatedAt": "2026-09-20"
+          "lastUpdatedAt": "2026-09-22"
         }
       }
     }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "generatedAt": "2026-09-22",
-  "feedVersion": "40a2a32a2c2c",
+  "feedVersion": "5e3243e407a7",
   "app": {
     "id": "ryukgram-sidebyside",
     "name": "RyukGram Side by Side",
@@ -30,8 +30,8 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/ryukgram-sidebyside/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/ryukgram-sidebyside.json",
     "health": {
-      "reachable": false,
-      "detail": "timed out",
+      "reachable": true,
+      "detail": "HTTP 200",
       "updatedAt": "2026-09-09"
     }
   },
@@ -52,8 +52,8 @@
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }
