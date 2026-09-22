@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T13:12:18Z",
+  "generatedAt": "2026-09-22T11:58:25Z",
   "appCount": 130,
-  "releases": 178,
+  "releases": 188,
   "apps": {
     "3105": [
       {
@@ -998,13 +998,23 @@
     ],
     "nuvio": [
       {
+        "version": "0.5.0",
+        "date": "2026-09-22",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.0-beta/nuvio-0.5.0-full-release.ipa",
+        "size": 66006978,
+        "sha256": "14cc46e4098e4568e2e20a86a8b5dc7dba3da7e28ab7567972338fba460421ef",
+        "localizedDescription": "Nuvio 0.5.0 | nuvio-0.5.0-full-release\n\n- 4c82f9ac feat(settings): collapse tracker cards by default @tapframe  \n- c9d6f5f6 fix(player): restore subtitles for each episode @tapframe  \n- [feat(mdblist): add tracking and library support (#1900)](https://github.com/NuvioMedia/NuvioMobile/pull/1900) @tapframe  \n- [remove inaccurate TMDB release date enrichment option (#2032)](https://github.com/NuvioMedia/NuvioMobile/pull/2032) @skoruppa  \n- [Fix(player) record mx player completion when no position is returned (#2031)](https://github.com/NuvioMedia/NuvioMobile/pull/2031) @zuko726  \n- 4178d5cd fix(tmdb): sort blank collection release dates last @tapframe  \n- fb9f859e fix(ios): use clean player framework archive @tapframe  \n- 6ff7882a fix(player): preserve iOS audio during calls @tapframe  \n- [Custom poster URL pattern support (#2025)](https://github.com/NuvioMedia/NuvioMobile/pull/2025) @skoruppa",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "0.4.26",
         "date": "2026-09-21",
         "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.26-beta/nuvio-0.4.26-full-release.ipa",
         "size": 65234840,
         "sha256": "50bb70d89a4201070840b7530ea730e1bf2c603c72a1bdfed48126740d6dde07",
         "localizedDescription": "Nuvio 0.4.26 | nuvio-0.4.26-full-release\n\n- 458f810b fix(streams): share addon filtering across pickers @tapframe  \n- [i18n(nb): complete missing Norwegian Bokmål strings (#2005)](https://github.com/NuvioMedia/NuvioMobile/pull/2005) @SimSalabimse",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-21T13:12:18Z"
       },
       {
@@ -1240,13 +1250,23 @@
     ],
     "reynard": [
       {
+        "version": "0.14.1",
+        "date": "2026-09-22",
+        "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.1/Reynard.ipa",
+        "size": 108452990,
+        "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
+        "localizedDescription": "Reynard 0.14.1 | Reynard\n\n## Changes\n\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.14.0...0.14.1\n\nThis is a minor release that fixes issues found in 0.14.0. For the complete list of changes, see the [0.14.0 release notes](https://github.com/minh-ton/reynard-browser/releases/tag/0.14.0).\n\n### Bug Fixes & Improvements\n- Fixed a crash when opening Reader Mode settings on some older iOS versions.\n- Fixed the system serif font not being looked up correctly on webpages and in Reader Mode.\n- Fixed a misleading JIT enablement banner appearing on jailbroken iOS 17.4 and later.\n- Fixed media playback not resuming automatically after interruptions such as dictation.",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "0.14.0",
         "date": "2026-09-20",
         "downloadURL": "https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa",
         "size": 108453095,
         "sha256": "441414e6caa0896d8d4e6552d1937627765775d7c3485d27c37ace9460ece97f",
         "localizedDescription": "Reynard 0.14.0 | Reynard\n\n## Changes\n**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0\n\n### New Features\n- Added Reader Mode.\n- Added preliminary support for Apple Pencil.\n\n### Bug Fixes & Improvements\n- Improved the reliability of navigation history restoration on startup.\n- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.\n- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.\n- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.\n- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.\n- Fixed a crash that could occur during audio playback.\n\n### Engine\nUpdated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-21T13:12:18Z"
       },
       {
@@ -1262,13 +1282,23 @@
     ],
     "ryukgram": [
       {
+        "version": "448.0.0",
+        "date": "2026-09-21",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-RyukGram.ipa",
+        "size": 324729745,
+        "sha256": "",
+        "localizedDescription": "Instagram 448.0.0 | Instagram-448.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 448.0.0",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "447.0.0",
         "date": "2026-09-16",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa",
         "size": 320995960,
         "sha256": "",
         "localizedDescription": "Instagram 447.0.0 | Instagram-447.0.0-RyukGram\n\nIPA Vault build for Instagram (RyukGram), version 447.0.0",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-18T04:29:51Z"
       },
       {
@@ -1402,13 +1432,23 @@
     ],
     "sparkle": [
       {
+        "version": "448.0.0",
+        "date": "2026-09-21",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-Sparkle.ipa",
+        "size": 316037173,
+        "sha256": "",
+        "localizedDescription": "Instagram 448.0.0 | Instagram-448.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 448.0.0",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "447.0.0",
         "date": "2026-09-16",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa",
         "size": 312339573,
         "sha256": "",
         "localizedDescription": "Instagram 447.0.0 | Instagram-447.0.0-Sparkle\n\nIPA Vault build for Instagram (Sparkle), version 447.0.0",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-18T04:29:51Z"
       },
       {
@@ -1586,13 +1626,23 @@
     ],
     "threadsaver": [
       {
+        "version": "448.0",
+        "date": "2026-09-21",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-448.0-ThreadSaver.ipa",
+        "size": 109017316,
+        "sha256": "",
+        "localizedDescription": "Threads 448.0 | Threads-448.0-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 448.0",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "447.0",
         "date": "2026-09-16",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
         "size": 107906677,
         "sha256": "",
         "localizedDescription": "Threads 447.0 | Threads-447.0-ThreadSaver\n\nIPA Vault build for Threads (ThreadSaver), version 447.0",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-18T04:29:51Z"
       },
       {
@@ -1842,13 +1892,23 @@
     ],
     "youmod": [
       {
+        "version": "21.38.2",
+        "date": "2026-09-21",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa2/YouMod_21.38.2_2.0.0.ipa",
+        "size": 129928188,
+        "sha256": "64106690f2e6b28afda9a175070f8fcd0be26662edb9b2f64f0fdf6c507d5bc2",
+        "localizedDescription": "YouTube 21.38.2 | uPro Plus extra tweaks | YouMod_21.38.2_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - no standalone iSponsorBlock. (unstable in newer builds)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "21.37.5",
         "date": "2026-09-19",
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youmod-ipa1/YouMod_21.37.5_2.0.0.ipa",
         "size": 129607654,
         "sha256": "ff1fbc8cf3b3a01485a516361896151e0a87df620c21d2282adcb33b3b474f74",
         "localizedDescription": "YouTube 21.37.5 | uPro Plus extra tweaks | YouMod_21.37.5_2.0.0\n\n### Latest Release, ENJOY!!\n\n> [!NOTE]\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - [v2.0.0 release notes](https://github.com/Tonwalter888/YouMod/releases/tag/v2.0.0)\n> - no standalone iSponsorBlock. (unstable in newer builds)\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-19T11:22:48Z"
       },
       {
@@ -1874,13 +1934,23 @@
     ],
     "youpro": [
       {
+        "version": "21.38.2",
+        "date": "2026-09-21",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.38.2_1.3.1.ipa",
+        "size": 130071393,
+        "sha256": "7cdd74cc1ec7d79ed2ccd728aadf5195011084a262d833291541eb9fd890739e",
+        "localizedDescription": "YouTube 21.38.2 | YouProExtra_21.38.2_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. (unstable in newer builds)\n> - for <A15 devices press share button in the arrow down panel and use external player for AV1 videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "21.37.5",
         "date": "2026-09-19",
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa3/YouProExtra_21.37.5_1.3.1.ipa",
         "size": 129768863,
         "sha256": "e7b5f08dfc70eda967ef49882a4c1046ae8e0849af8c86fb4ebb9fa4dcc61fc7",
         "localizedDescription": "YouTube 21.37.5 | YouProExtra_21.37.5_1.3.1\n\n### Latest Release, ENJOY!!\n> [!NOTE]\n> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.\n> - if you're signed out you can sign in manually. \n> - no iSponsorBlock. (unstable in newer builds)\n> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-19T11:22:48Z"
       },
       {
@@ -1916,13 +1986,23 @@
     ],
     "ytkace": [
       {
+        "version": "21.38.2",
+        "date": "2026-09-21",
+        "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.1/YTKACE_1.0.1_YouTube_21.38.2.ipa",
+        "size": 137039590,
+        "sha256": "1fef63df79e36a575dca65ff3584b1a293958e3dc6dc597af9ba05f4a2e56dbb",
+        "localizedDescription": "YouTube 21.38.2 | YTKACE 1.0.1 | YTKACE_1.0.1_YouTube_21.38.2\n\nby @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.38.2\n• Download subtitles with your videos\n• Transcript button to copy or share a video's captions\n• Added toggle to Open videos paused instead of playing right away\n• Search bar in YTKACE settings\n\nFixed:\n• Crash on iOS 15\n• Prevent Open in Shorts doing nothing\n• Stop Autoplay doing nothing\n• Queue not appearing until the video was reopened\n• Captions turning off after Playback Fix recovers a video\n\nYouTube 21.38.2 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.0.1_YouTube_21.38.2.ipa` for iOS 17 and newer\n• `YTKACE_1.0.1_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "21.37.5",
         "date": "2026-09-20",
         "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa",
         "size": 136694474,
         "sha256": "7b1bab46cd819f147ad3abc0e30cae1a2b861b0d2c554daaf4eba548205516c0",
         "localizedDescription": "YouTube 21.37.5 | YTKACE 1.0.0 | YTKACE_1.0.0_YouTube_21.37.5\n\nby @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.37.5\n• Queue videos without Premium — play next, play last, reorder, shuffle, loop and clear\n• Playlist downloads — grab every video or pick the ones you want\n• YouTube's Download button can now open the YTKACE menu\n• Choose where the download button lives: player overlay, YouTube's button, or both\n• Save downloads to the share sheet, with separate video and audio destinations\n• Hide the products shelf\n• iOS 15 support for the tweak packages\n\nFixed:\n• 2K and 4K missing from the download quality list\n• Shorts Save button not removed unless YouTube was in English\n• Community posts breaking with Block Premium Prompts on\n• Action bar disappearing while scrolling the feed\n• Settings unreachable if both the YTKACE and Library tabs were removed\n• YTKACE settings opening another tweak's settings when both were installed\n\nYouTube 21.37.5 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.0.0_YouTube_21.37.5.ipa` for iOS 17 and newer\n• `YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa` for iOS 16",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-21T13:12:18Z"
       },
       {
@@ -1948,13 +2028,23 @@
     ],
     "ytkp": [
       {
+        "version": "21.38.2",
+        "date": "2026-09-21",
+        "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa2/YTKillerPlus_21.38.2_6.1.ipa",
+        "size": 143560582,
+        "sha256": "89fa1d1564e6ed8e06c5696b6c8d87d558189161e1ba53287849c814d468670c",
+        "localizedDescription": "YouTube 21.38.2 | YTKillerPlus_21.38.2_6.1\n\n### Latest Release, ENJOY!!\n\n- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)\n\n> [!NOTE]\n> - **Sidestore is no longer supported!!.**\n> - **YTUHD** is not included.\n> - use **YTKACE or any other mod** for downloading. dev intentionally broke download feature.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "21.37.5",
         "date": "2026-09-19",
         "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.37.5_6.1.ipa",
         "size": 143258392,
         "sha256": "fd3823a64212f763c02bbce9d14609dc2a4262abf61b045f67771f0ed3e2d53b",
         "localizedDescription": "YouTube 21.37.5 | YTKillerPlus_21.37.5_6.1\n\n### Latest Release, ENJOY!!\n\n- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)\n\n> [!NOTE]\n> - **Sidestore is no longer supported!!.**\n> - **YTUHD** is not included. 4K is available for A16+ devices.\n> - use **YTKACE or any other mod** for downloading. dev intentionally broke download feature.\n> - - -\n> #### Extra Tweaks:\n> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`\n\n> [!WARNING]\n> - Extra tweaks that are bundled may be unstable on newer versions.\n\n> [!WARNING]\n> - 21.34.3+ builds require iOS 17+ now.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-19T11:22:48Z"
       },
       {
@@ -2012,13 +2102,23 @@
     ],
     "ytmusic": [
       {
+        "version": "9.38.1",
+        "date": "2026-09-22",
+        "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa31/YTMusicUltimate_9.38.1_2.4.1.ipa",
+        "size": 105863052,
+        "sha256": "3f5ee3b422de83ae099891bc55e338fbf2f0918a512f6af0c6f3d46a484800a8",
+        "localizedDescription": "YTMusicUltimate 9.38.1 | YTMusic 2.4.1 | YTMusicUltimate_9.38.1_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
+        "status": "current",
+        "firstSeen": "2026-09-22T11:58:25Z"
+      },
+      {
         "version": "9.37.2",
         "date": "2026-09-15",
         "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa30/YTMusicUltimate_9.37.2_2.4.1.ipa",
         "size": 105090579,
         "sha256": "f541b3ee932312cb5705b50af00065fa284dfcaf647bf1db474b5a6f0cfad887",
         "localizedDescription": "YTMusicUltimate 9.37.2 | YTMusic 2.4.1 | YTMusicUltimate_9.37.2_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-15T12:00:00Z"
       },
       {
