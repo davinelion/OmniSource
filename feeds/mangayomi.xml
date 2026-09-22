@@ -5,8 +5,54 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
     <description>Release feed for Mangayomi within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 19 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/mangayomi.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Mangayomi v0.9.7</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.7</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.7 | Mangayomi-v0.9.7-ios
+
+# What's New
+
+## Reader
+
+* **Reliable Resume to Saved Position** :
+  * Reopening a chapter in continuous vertical reading now jumps directly and instantly to the page where you left off, even before all images have finished loading.
+  * Eliminated the issue where the reader would land on a neighboring page or spinner instead of the correct saved position.
+
+* **Smoother Zoomed Panning & Inertia** (#1021):
+  * Dragging a zoomed page now follows your finger precisely using real movement delta instead of an accumulated offset, making panning far more responsive.
+  * Flinging a zoomed page now carries natural momentum with a longer, smoother coast animation.
+  * Overscrolling past the edge of a zoomed page automatically transfers the momentum to the page list scroll, allowing seamless continued scrolling without lifting your finger.
+
+* **Fixed Grey Screen in Double-Page Mode**:
+  * Chapter transition pages in vertical double-page reading no longer cause a crash or a blank grey screen when the spread is reached.
+
+* **Reader Bottom Bar Positioning**:
+  * The page slider and quick-action bar now correctly sit above the system gesture area and home indicator on all devices, preventing them from being hidden behind system UI.
+
+* **Novel Reader Performance**:
+  * Page swipes in paged novel mode no longer trigger a full rebuild of the reader tree, making navigation between pages considerably faster.
+
+---
+
+## Fixes & Stability
+
+* Fixed infinite loading spinner when resuming a continuous vertical chapter mid-chapter.
+* Corrected the visible range check that was preventing the initial scroll anchor from being applied reliably.
+* Page image load events now correctly trigger a re-jump to the saved position if the list had not yet settled on the right page.
+
+---
+
+## Contributors
+
+* @kodjodevf
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.6...v0.9.7]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.7/Mangayomi-v0.9.7-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Mangayomi v0.9.6</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>

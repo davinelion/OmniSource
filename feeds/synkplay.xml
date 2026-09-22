@@ -5,8 +5,89 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/synkplay.json</link>
     <description>Release feed for Synkplay within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/synkplay.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Synkplay v0.25.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/synkplay.json</link>
+      <guid isPermaLink="false">synkplay-0.25.0</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Synkplay 0.25.0 | synkplay-0.25.0-ios
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="96" alt="Synkplay">
+</p>
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.yuroyami.syncplay"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/google-play.png" width="150" alt="Get it on Google Play"></a>
+  &nbsp;&nbsp;
+  <a href="https://apps.apple.com/us/app/synkplay/id6760187432"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/app-store.png" width="150" alt="Download on the App Store"></a>
+  &nbsp;&nbsp;
+  <a href="https://apt.izzysoft.de/fdroid/index/apk/com.reddnek.syncplay"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/IzzyOnDroid.png" width="150" alt="Get it on IzzyOnDroid"></a>
+  &nbsp;&nbsp;
+  <a href="https://celloserenity.github.io/altdirect/?url=https://raw.githubusercontent.com/yuroyami/syncplay-mobile/refs/heads/master/altstore_yuroyami.json"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/AltSource_Blue.png" width="150" alt="Add the AltStore source"></a>
+</p>
+
+## Downloads
+
+| File | Platform | What it is | Size |
+|---|---|---|---|
+| [`synkplay-0.25.0-full-universal.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-full-universal.apk) | Android 8.0 and up | The full app: ExoPlayer, mpv and KitePlayer, every CPU type in one file. Pick this one. | 89 MB |
+| [`syncplay-0.25.0-exo-only.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/syncplay-0.25.0-exo-only.apk) | Android 8.0 and up | ExoPlayer only, and much smaller. This is the build IzzyOnDroid carries. It installs beside the full app as a separate app. | 22 MB |
+| [`synkplay-0.25.0-ios.ipa`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-ios.ipa) | iOS 14.1 and up | Sideload with AltStore or install it directly. The [install guide](https://github.com/yuroyami/syncplay-mobile/wiki/How-to-install-the-app-on-iOS) covers both. | 85 MB |
+
+## Changelog
+
+<details><summary><b>Everything since v0.24.0</b>. Click to unfold.</summary>
+
+### 0.25.0
+
+- Audio files can be picked and played, not only video.
+- Music gets a picture. KitePlayer draws the sound while an audio file plays, and the drawing follows the song. A switch in the room's player settings turns it off.
+- The drawing changes with the music on its own, or you pick one yourself from the pattern row.
+- A remote reaches every control in the room and on Home, so the app works on Android TV.
+- Where Android TV offers no file picker, the app lists the videos on the device instead.
+- An invite link now opens a web page that hands you into the room, so a friend without the app still lands somewhere useful.
+- The room's side panels are one thing now, with one set of controls and one place they open from.
+- Chat colours are yours to set, and an event line colours the names it mentions.
+- A long press on a GIF keeps it or copies its link, and a long press on a message copies it.
+- Messages arriving over the video fade after a moment, and new ones are marked.
+- The GIF and sticker controls share one row, so results get more space, and sending one clears its search text from the chat input.
+- The shared playlist reorders by dragging a row, and offers your list back after a dropout.
+- Every track says what it is, and a video track can be selected.
+- Android mpv comes prebuilt from libmpvKt, which also fixed its video track selection.
+- iOS holds the screen on through every room entry and through a switch between players.
+- iOS VLC reads its clock from the engine, so a stalled notification no longer freezes the seek bar or pulls the room backward.
+- Rapid seeks keep the newest room update, and a replacement file no longer inherits an unfinished seek gesture.
+- iOS VLC finishes its seeks in Picture-in-Picture, and watching alone offers your saved position again.
+- Home says what each player is and what it can do.
+- A join link is accepted only when it is ours, and a port outside 1 to 65535 is refused with a reason.
+- A screen reader reaches the join form.
+- The ExoPlayer-only APK can be rebuilt from source and compared with the published file, so IzzyOnDroid can verify what it ships.
+
+
+</details>
+
+## Dependencies
+
+<details><summary><b>The main ones</b>: toolchain, network stack, video engines. Click to unfold.</summary>
+
+| Component | Where | Version |
+|---|---|---|
+| Kotlin | Toolchain | 2.4.20 |
+| Compose Multiplatform | Toolchain | 1.12.1 |
+| Android Gradle Plugin | Toolchain | 9.3.2 |
+| Gradle | Toolchain | 9.7.1 |
+| Ktor | Network, all platforms | 3.5.2 |
+| Netty | Network, Android and desktop | 4.1.131.Final |
+| SwiftNIO | Network, iOS | 2.95.0 |
+| ExoPlayer (Media3) | Video engine, Android | 1.11.0 |
+| libmpvKt (mpv, FFmpeg, libass and libplacebo inside) | Video engine, Android, full build only | 0.2.0 |
+| VLCKit | Video engine, iOS | 4.0.0a19 |
+| KitePlayer, with KiteFFmpeg inside | Video engine, all platforms, experimental | 0.0.26 |
+
+</details>]]></description>
+      <enclosure url="https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Synkplay v0.24.0</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/synkplay.json</link>

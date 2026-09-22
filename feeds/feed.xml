@@ -25,6 +25,87 @@
       <enclosure url="https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa31/YTMusicUltimate_9.38.1_2.4.1.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>Synkplay v0.25.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/synkplay.json</link>
+      <guid isPermaLink="false">synkplay-0.25.0</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Synkplay 0.25.0 | synkplay-0.25.0-ios
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png" width="96" alt="Synkplay">
+</p>
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=com.yuroyami.syncplay"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/google-play.png" width="150" alt="Get it on Google Play"></a>
+  &nbsp;&nbsp;
+  <a href="https://apps.apple.com/us/app/synkplay/id6760187432"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/app-store.png" width="150" alt="Download on the App Store"></a>
+  &nbsp;&nbsp;
+  <a href="https://apt.izzysoft.de/fdroid/index/apk/com.reddnek.syncplay"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/IzzyOnDroid.png" width="150" alt="Get it on IzzyOnDroid"></a>
+  &nbsp;&nbsp;
+  <a href="https://celloserenity.github.io/altdirect/?url=https://raw.githubusercontent.com/yuroyami/syncplay-mobile/refs/heads/master/altstore_yuroyami.json"><img src="https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/AltSource_Blue.png" width="150" alt="Add the AltStore source"></a>
+</p>
+
+## Downloads
+
+| File | Platform | What it is | Size |
+|---|---|---|---|
+| [`synkplay-0.25.0-full-universal.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-full-universal.apk) | Android 8.0 and up | The full app: ExoPlayer, mpv and KitePlayer, every CPU type in one file. Pick this one. | 89 MB |
+| [`syncplay-0.25.0-exo-only.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/syncplay-0.25.0-exo-only.apk) | Android 8.0 and up | ExoPlayer only, and much smaller. This is the build IzzyOnDroid carries. It installs beside the full app as a separate app. | 22 MB |
+| [`synkplay-0.25.0-ios.ipa`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-ios.ipa) | iOS 14.1 and up | Sideload with AltStore or install it directly. The [install guide](https://github.com/yuroyami/syncplay-mobile/wiki/How-to-install-the-app-on-iOS) covers both. | 85 MB |
+
+## Changelog
+
+<details><summary><b>Everything since v0.24.0</b>. Click to unfold.</summary>
+
+### 0.25.0
+
+- Audio files can be picked and played, not only video.
+- Music gets a picture. KitePlayer draws the sound while an audio file plays, and the drawing follows the song. A switch in the room's player settings turns it off.
+- The drawing changes with the music on its own, or you pick one yourself from the pattern row.
+- A remote reaches every control in the room and on Home, so the app works on Android TV.
+- Where Android TV offers no file picker, the app lists the videos on the device instead.
+- An invite link now opens a web page that hands you into the room, so a friend without the app still lands somewhere useful.
+- The room's side panels are one thing now, with one set of controls and one place they open from.
+- Chat colours are yours to set, and an event line colours the names it mentions.
+- A long press on a GIF keeps it or copies its link, and a long press on a message copies it.
+- Messages arriving over the video fade after a moment, and new ones are marked.
+- The GIF and sticker controls share one row, so results get more space, and sending one clears its search text from the chat input.
+- The shared playlist reorders by dragging a row, and offers your list back after a dropout.
+- Every track says what it is, and a video track can be selected.
+- Android mpv comes prebuilt from libmpvKt, which also fixed its video track selection.
+- iOS holds the screen on through every room entry and through a switch between players.
+- iOS VLC reads its clock from the engine, so a stalled notification no longer freezes the seek bar or pulls the room backward.
+- Rapid seeks keep the newest room update, and a replacement file no longer inherits an unfinished seek gesture.
+- iOS VLC finishes its seeks in Picture-in-Picture, and watching alone offers your saved position again.
+- Home says what each player is and what it can do.
+- A join link is accepted only when it is ours, and a port outside 1 to 65535 is refused with a reason.
+- A screen reader reaches the join form.
+- The ExoPlayer-only APK can be rebuilt from source and compared with the published file, so IzzyOnDroid can verify what it ships.
+
+
+</details>
+
+## Dependencies
+
+<details><summary><b>The main ones</b>: toolchain, network stack, video engines. Click to unfold.</summary>
+
+| Component | Where | Version |
+|---|---|---|
+| Kotlin | Toolchain | 2.4.20 |
+| Compose Multiplatform | Toolchain | 1.12.1 |
+| Android Gradle Plugin | Toolchain | 9.3.2 |
+| Gradle | Toolchain | 9.7.1 |
+| Ktor | Network, all platforms | 3.5.2 |
+| Netty | Network, Android and desktop | 4.1.131.Final |
+| SwiftNIO | Network, iOS | 2.95.0 |
+| ExoPlayer (Media3) | Video engine, Android | 1.11.0 |
+| libmpvKt (mpv, FFmpeg, libass and libplacebo inside) | Video engine, Android, full build only | 0.2.0 |
+| VLCKit | Video engine, iOS | 4.0.0a19 |
+| KitePlayer, with KiteFFmpeg inside | Video engine, all platforms, experimental | 0.0.26 |
+
+</details>]]></description>
+      <enclosure url="https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-ios.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Reynard v0.14.1</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
       <guid isPermaLink="false">reynard-0.14.1</guid>
@@ -61,6 +142,52 @@ This is a minor release that fixes issues found in 0.14.0. For the complete list
 - 6ff7882a fix(player): preserve iOS audio during calls @tapframe  
 - [Custom poster URL pattern support (#2025)](https://github.com/NuvioMedia/NuvioMobile/pull/2025) @skoruppa]]></description>
       <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.0-beta/nuvio-0.5.0-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Mangayomi v0.9.7</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
+      <guid isPermaLink="false">mangayomi-0.9.7</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Mangayomi 0.9.7 | Mangayomi-v0.9.7-ios
+
+# What's New
+
+## Reader
+
+* **Reliable Resume to Saved Position** :
+  * Reopening a chapter in continuous vertical reading now jumps directly and instantly to the page where you left off, even before all images have finished loading.
+  * Eliminated the issue where the reader would land on a neighboring page or spinner instead of the correct saved position.
+
+* **Smoother Zoomed Panning & Inertia** (#1021):
+  * Dragging a zoomed page now follows your finger precisely using real movement delta instead of an accumulated offset, making panning far more responsive.
+  * Flinging a zoomed page now carries natural momentum with a longer, smoother coast animation.
+  * Overscrolling past the edge of a zoomed page automatically transfers the momentum to the page list scroll, allowing seamless continued scrolling without lifting your finger.
+
+* **Fixed Grey Screen in Double-Page Mode**:
+  * Chapter transition pages in vertical double-page reading no longer cause a crash or a blank grey screen when the spread is reached.
+
+* **Reader Bottom Bar Positioning**:
+  * The page slider and quick-action bar now correctly sit above the system gesture area and home indicator on all devices, preventing them from being hidden behind system UI.
+
+* **Novel Reader Performance**:
+  * Page swipes in paged novel mode no longer trigger a full rebuild of the reader tree, making navigation between pages considerably faster.
+
+---
+
+## Fixes & Stability
+
+* Fixed infinite loading spinner when resuming a continuous vertical chapter mid-chapter.
+* Corrected the visible range check that was preventing the initial scroll anchor from being applied reliably.
+* Page image load events now correctly trigger a re-jump to the saved position if the list had not yet settled on the right page.
+
+---
+
+## Contributors
+
+* @kodjodevf
+
+**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.6...v0.9.7]]></description>
+      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.7/Mangayomi-v0.9.7-ios.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>YTKillerPlus v21.38.2</title>
@@ -600,59 +727,6 @@ Updated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREF
 
 **Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.5...v0.9.6]]></description>
       <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.6/Mangayomi-v0.9.6-ios.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Nuvio v0.4.24</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
-      <guid isPermaLink="false">nuvio-0.4.24</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Nuvio 0.4.24 | nuvio-0.4.24-full-release
-
-- 042144f8 fix(player): remember brightness across playback sessions @tapframe  
-- 2a3bb965 fix(player): reset auto-hide timer on control interactions @tapframe  
-- 4c3bd0d0 feat(player): follow design parity @tapframe  
-- 6fb46976 feat(settings): add rating visibility controls @tapframe]]></description>
-      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.24-beta/nuvio-0.4.24-full-release.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Manic EMU v2.0.1</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/manicemu.json</link>
-      <guid isPermaLink="false">manicemu-2.0.1</guid>
-      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Manic EMU 2.0.1 | ManicEMU.v2.0.1.SideloadJIT
-
-- Added WonderSwan support
-- Added NAOMI, Atomiswave, and System SP arcade support
-- Added Flash support
-  · Skin button binding
-  · Hardware keyboard input
-  · Software keyboard input
-  · Touch input
-- Built-in, self-contained JIT — no external debugger required
-- Added Slow Motion
-- Improved GameCube and Wii performance
-- GameCube now supports multi-disc games
-- Improved Wii motion controls
-- Simulate the Wii IR pointer by touch
-- Add games from other emulators via a link
-- Fixed some arcade systems that wouldn’t run
-- Fixed Dreamcast games running too fast
-- Fixed PSP crashes
-- Added NDS lid open/close
-- Improved rotation: with orientation lock on in Control Center, the app no longer snaps back to portrait
-- In-game shortcut tips can now be turned off
-- Landscape library can disable carousel style
-- Smoother landscape carousel scrolling
-- MultiDisc Helper supports more formats
-- Hardware keyboard input for Symbian, Amiga, and C64
-- Added RomM support
-  · LAN self-hosted servers only
-  · Sync only for games imported from RomM
-  · Manual sync only, from the service card’s long-press menu
-  · Pull ROMs, covers, metadata, manuals, and game saves
-- Fixed a launch timeout that could quit the app on older devices
-- N64 now supports ROMs larger than 64 MB]]></description>
-      <enclosure url="https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
