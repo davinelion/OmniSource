@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-21",
-  "feedVersion": "7ee8ed6fe09e",
+  "generatedAt": "2026-09-22",
+  "feedVersion": "40a2a32a2c2c",
   "app": {
     "id": "threadsaver",
     "name": "ThreadSaver",
     "developer": "swiftleopard & IPA Vault",
     "subtitle": "Threads enhancement tweak (unofficial build)",
     "bundleIdentifier": "com.burbn.barcelona",
-    "version": "447.0",
-    "versionDate": "2026-09-16",
+    "version": "448.0",
+    "versionDate": "2026-09-21",
     "description": "ThreadSaver (by swiftleopard) is a tweaked Threads build distributed ready-to-sideload through the IPA Vault on a current Threads base version. The tweak's feature set is defined by its build; no official public documentation exists.",
     "shortDescription": "Threads enhancement tweak (unofficial build)",
     "category": "social",
@@ -18,8 +18,8 @@
     ],
     "icon": "https://iamsmmh.github.io/OmniSource/assets/Threads.webp",
     "screenshots": [],
-    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
-    "size": 107906677,
+    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-448.0-ThreadSaver.ipa",
+    "size": 109017316,
     "source": "927tx/IPA-Vault",
     "sourceURL": "",
     "checksum": null,
@@ -30,30 +30,30 @@
     "pageURL": "https://iamsmmh.github.io/OmniSource/apps/threadsaver/",
     "feedURL": "https://iamsmmh.github.io/OmniSource/threadsaver.json",
     "health": {
-      "reachable": false,
-      "detail": "HTTP 404",
-      "updatedAt": "2026-09-16"
+      "reachable": true,
+      "detail": "HTTP 200",
+      "updatedAt": "2026-09-21"
     }
   },
   "newest": {
-    "version": "447.0",
-    "date": "2026-09-16",
-    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
-    "size": 107906677,
+    "version": "448.0",
+    "date": "2026-09-21",
+    "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-448.0-ThreadSaver.ipa",
+    "size": 109017316,
     "sha256": null
   },
   "versions": [
     {
-      "version": "447.0",
-      "date": "2026-09-16",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa",
-      "size": 107906677,
+      "version": "448.0",
+      "date": "2026-09-21",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-448.0-ThreadSaver.ipa",
+      "size": 109017316,
       "sha256": null
     }
   ],
   "verification": {
-    "status": "UNVERIFIED",
-    "level": "UNVERIFIED",
+    "status": "VERIFIED",
+    "level": "VERIFIED",
     "method": "altstore"
   }
 }

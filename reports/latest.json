@@ -1,32 +1,71 @@
 {
-  "generatedAt": "2026-09-21",
-  "feedVersion": "7ee8ed6fe09e",
+  "generatedAt": "2026-09-22",
+  "feedVersion": "40a2a32a2c2c",
   "apps": {
     "total": 130,
-    "reachable": 125,
-    "unreachable": 5,
-    "verified": 124
+    "reachable": 128,
+    "unreachable": 2,
+    "verified": 127
   },
   "sync": {
     "synced": 128,
-    "incrementalHits": 119,
-    "updated": 1,
+    "incrementalHits": 113,
+    "updated": 7,
     "failed": 2,
-    "apiRequests": 120
+    "apiRequests": 118
   },
   "unreachable": [
-    "ryukgram",
     "ryukgram-ig410",
-    "ryukgram-sidebyside",
-    "sparkle",
-    "threadsaver"
+    "ryukgram-sidebyside"
   ],
   "updates": [
     {
-      "slug": "ytkace",
-      "name": "YTKACE",
+      "slug": "youpro",
+      "name": "YouPro",
       "previousVersion": "21.37.5",
       "version": "21.38.2",
+      "kind": "updated"
+    },
+    {
+      "slug": "ytkp",
+      "name": "YTKillerPlus",
+      "previousVersion": "21.37.5",
+      "version": "21.38.2",
+      "kind": "updated"
+    },
+    {
+      "slug": "youmod",
+      "name": "uPro Plus",
+      "previousVersion": "21.37.5",
+      "version": "21.38.2",
+      "kind": "updated"
+    },
+    {
+      "slug": "ytmusic",
+      "name": "YTMusicUltimate",
+      "previousVersion": "9.37.2",
+      "version": "9.38.1",
+      "kind": "updated"
+    },
+    {
+      "slug": "ryukgram",
+      "name": "RyukGram",
+      "previousVersion": "447.0.0",
+      "version": "448.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "sparkle",
+      "name": "Sparkle",
+      "previousVersion": "447.0.0",
+      "version": "448.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "threadsaver",
+      "name": "ThreadSaver",
+      "previousVersion": "447.0",
+      "version": "448.0",
       "kind": "updated"
     }
   ],
