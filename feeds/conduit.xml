@@ -5,8 +5,24 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
     <description>Release feed for Conduit within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/conduit.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Conduit v4.1.7</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
+      <guid isPermaLink="false">conduit-4.1.7</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Conduit 4.1.7 | conduit
+
+## What's Changed
+* Add iOS native Barge in toggle by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/737
+* Support Open WebUI 0.11.4 and fix user-settings clears by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/748
+* Fix native dropdown crash, composer overflow artifact, and stale streaming state by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/749
+
+
+**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.6...v4.1.7]]></description>
+      <enclosure url="https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Conduit v4.1.6</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>

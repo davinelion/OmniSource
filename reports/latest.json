@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-22",
-  "feedVersion": "19754c6dd637",
+  "feedVersion": "1880e771b468",
   "apps": {
     "total": 130,
     "reachable": 130,
@@ -9,25 +9,18 @@
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 119,
-    "updated": 2,
+    "incrementalHits": 120,
+    "updated": 1,
     "failed": 0,
-    "apiRequests": 116
+    "apiRequests": 117
   },
   "unreachable": [],
   "updates": [
     {
-      "slug": "synkplay",
-      "name": "Synkplay",
-      "previousVersion": "0.24.0",
-      "version": "0.25.0",
-      "kind": "updated"
-    },
-    {
-      "slug": "mangayomi",
-      "name": "Mangayomi",
-      "previousVersion": "0.9.6",
-      "version": "0.9.7",
+      "slug": "conduit",
+      "name": "Conduit",
+      "previousVersion": "4.1.6",
+      "version": "4.1.7",
       "kind": "updated"
     }
   ],

@@ -79,6 +79,21 @@
       "shortDescription": "Manga, novel & anime reader"
     },
     {
+      "slug": "conduit",
+      "name": "Conduit",
+      "version": "4.1.7",
+      "previousVersion": "4.1.6",
+      "date": "2026-09-22",
+      "kind": "updated",
+      "changelog": "Conduit 4.1.7 | conduit\n\n## What's Changed\n* Add iOS native Barge in toggle by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/737\n* Support Open WebUI 0.11.4 and fix user-settings clears by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/748\n* Fix native dropdown crash, composer overflow artifact, and stale streaming state by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/749\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.6...v4.1.7",
+      "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Conduit.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/conduit.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/conduit.xml",
+      "status": "stable",
+      "shortDescription": "Native client for Open WebUI & Ollama"
+    },
+    {
       "slug": "ytkp",
       "name": "YTKillerPlus",
       "version": "21.38.2",
@@ -1472,21 +1487,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/jellify.xml",
       "status": "stable",
       "shortDescription": "Native Jellyfin music player for iOS"
-    },
-    {
-      "slug": "ytmusic",
-      "name": "YTMusicUltimate",
-      "version": "9.35.2",
-      "previousVersion": "",
-      "date": "2026-09-01",
-      "kind": "new",
-      "changelog": "YTMusicUltimate 9.35.2 | YTMusic 2.4.1 | YTMusicUltimate_9.35.2_2.4.1\n\n> [!NOTE]\n> ### Extra tweaks:\n> - Return YouTubeMusic Dislikes\n> - YTMABConfig\n> - VolumeBoostYT\n- - -\n- YouMusicPiP is only available in custom build\n- iOS14+ build is available in releases page",
-      "downloadURL": "https://github.com/mrdrvt99/YTMusicUltimate/releases/download/ytmu-ipa28/YTMusicUltimate_9.35.2_2.4.1.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTubeMusic.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/ytmusic.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/ytmusic.xml",
-      "status": "stable",
-      "shortDescription": "Lightweight YouTube Music tweak"
     },
     {
       "slug": "uyouenhanced",

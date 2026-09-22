@@ -899,7 +899,7 @@
               "fileType": "IPA",
               "size": 114471562,
               "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 2243,
+              "downloads": 2262,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -911,7 +911,7 @@
               "fileType": "IPA",
               "size": 124722640,
               "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 5026,
+              "downloads": 5089,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -935,7 +935,7 @@
               "fileType": "IPA",
               "size": 124722495,
               "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 154,
+              "downloads": 157,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -947,7 +947,7 @@
               "fileType": "IPA",
               "size": 85880995,
               "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 597,
+              "downloads": 608,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -959,7 +959,7 @@
               "fileType": "IPA",
               "size": 96132071,
               "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 924,
+              "downloads": 933,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -989,7 +989,7 @@
             }
           ],
           "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 924
+          "downloads": 933
         }
       ],
       "screenshotURLs": [],
@@ -2329,87 +2329,86 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Conduit.webp",
       "tintColor": "7794F0",
       "category": "utilities",
-      "version": "4.1.6",
-      "versionDate": "2026-09-16",
-      "versionDescription": "Conduit 4.1.6 | conduit\n\n## What's Changed\n* Collapse raw reasoning tags client-side and stop re-escaping stored content by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/731\n* Fix attachments, STT, TTS, citations, proxy re-auth, and Hermes probe by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/732\n* Keep chat scrollbar thumb stable and inset it from the composer by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/734\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.5...v4.1.6",
-      "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa",
-      "size": 35930568,
+      "version": "4.1.7",
+      "versionDate": "2026-09-22",
+      "versionDescription": "Conduit 4.1.7 | conduit\n\n## What's Changed\n* Add iOS native Barge in toggle by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/737\n* Support Open WebUI 0.11.4 and fix user-settings clears by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/748\n* Fix native dropdown crash, composer overflow artifact, and stale streaming state by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/749\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.6...v4.1.7",
+      "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa",
+      "size": 35926535,
       "versions": [
         {
-          "version": "4.1.6",
-          "date": "2026-09-16",
-          "localizedDescription": "Conduit 4.1.6 | conduit\n\n## What's Changed\n* Collapse raw reasoning tags client-side and stop re-escaping stored content by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/731\n* Fix attachments, STT, TTS, citations, proxy re-auth, and Hermes probe by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/732\n* Keep chat scrollbar thumb stable and inset it from the composer by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/734\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.5...v4.1.6",
-          "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa",
-          "size": 35930568,
+          "version": "4.1.7",
+          "date": "2026-09-22",
+          "localizedDescription": "Conduit 4.1.7 | conduit\n\n## What's Changed\n* Add iOS native Barge in toggle by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/737\n* Support Open WebUI 0.11.4 and fix user-settings clears by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/748\n* Fix native dropdown crash, composer overflow artifact, and stale streaming state by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/749\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.6...v4.1.7",
+          "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa",
+          "size": 35926535,
           "minOSVersion": "16.0",
-          "releaseUrl": "https://github.com/cogwheel0/conduit/releases/tag/v4.1.6",
+          "releaseUrl": "https://github.com/cogwheel0/conduit/releases/tag/v4.1.7",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "app-arm64-v8a-release.apk",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/app-arm64-v8a-release.apk",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/app-arm64-v8a-release.apk",
               "platform": "android",
               "architecture": "arm64",
               "fileType": "APK",
-              "size": 77757928,
-              "sha256": "09b0a21c4ad2fbae9855cfc37549f3f12c9cf78faa5c408a2b1758e3f91ae963",
-              "downloads": 1001,
+              "size": 77828460,
+              "sha256": "e9d5cd9f97c4cfb44b292f80190938f288c7870a75e41b53d25ce532ba3f61c2",
+              "downloads": 69,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-armeabi-v7a-release.apk",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/app-armeabi-v7a-release.apk",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/app-armeabi-v7a-release.apk",
               "platform": "android",
               "architecture": "armv7",
               "fileType": "APK",
-              "size": 70235448,
-              "sha256": "8d94f7ba324ad75d00745590f5db1e38b514883ac3c80536872cd2137c1432a3",
-              "downloads": 3,
+              "size": 70256824,
+              "sha256": "d7991ed935ffa9c328fa86f066ee3e5691a1b49314b7e0ec55623621d834740d",
+              "downloads": 0,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "app-release.aab",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/app-release.aab",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/app-release.aab",
               "platform": "android",
               "architecture": null,
               "fileType": "AAB",
-              "size": 171985717,
-              "sha256": "51b93da8a9f81feecc5d91fdb0e69b75b9c54d8394803bed36d1f50247775c5b",
-              "downloads": 3,
+              "size": 172017638,
+              "sha256": "a24ac2bd7daa5278a91b120b8b6708930ba841c56fbac565417763897f9d228e",
+              "downloads": 2,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "app-x86_64-release.apk",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/app-x86_64-release.apk",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/app-x86_64-release.apk",
               "platform": "android",
               "architecture": "x86_64",
               "fileType": "APK",
-              "size": 83698864,
-              "sha256": "91c7a41607223f92bf43b43047be7693591d547801c61c3b827508f1e6534d99",
-              "downloads": 2,
+              "size": 83703860,
+              "sha256": "b4f088c4bcc69a849e87a7ec93ec86118be7517dfb9be24ffa9c90716e82c8ac",
+              "downloads": 0,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "conduit.ipa",
-              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa",
+              "downloadUrl": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 35930568,
-              "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
-              "downloads": 51,
+              "size": 35926535,
+              "sha256": "041d08d4dce6d2ae4a0fe597a78fd37a5c69382e65f0e664fd60d35f2f4a66dd",
+              "downloads": 0,
               "mimeType": "raw",
               "installable": true
             }
           ],
-          "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
-          "downloads": 51
+          "sha256": "041d08d4dce6d2ae4a0fe597a78fd37a5c69382e65f0e664fd60d35f2f4a66dd"
         }
       ],
       "screenshotURLs": [],
@@ -2447,7 +2446,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-09-16"
+          "lastUpdatedAt": "2026-09-22"
         }
       }
     },
@@ -5293,7 +5292,7 @@
               "fileType": "APK",
               "size": 108612022,
               "sha256": "d89ffb0f4c7d73099b4227f04599fa24fb9fbc85618d72797c8bba6b55921460",
-              "downloads": 62,
+              "downloads": 63,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5329,7 +5328,7 @@
               "fileType": "APK",
               "size": 185536712,
               "sha256": "92cd4924c1c2a22f6ad88f2268bc0d4d77d5de27efc38af7fa010dcdae073c13",
-              "downloads": 4,
+              "downloads": 5,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5365,7 +5364,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 346,
+              "downloads": 349,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5389,7 +5388,7 @@
               "fileType": "AAB",
               "size": 80537688,
               "sha256": "76200e3f88f25ab40dc074bfc48f934239983db60fd9b03a2327bc8b029e5d01",
-              "downloads": 3,
+              "downloads": 4,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -5401,7 +5400,7 @@
               "fileType": "APK",
               "size": 88506651,
               "sha256": "00d612973399f6157b82cc6573ce13b8d98f0cd04e27f1c623e5d5bcd4000bd5",
-              "downloads": 112,
+              "downloads": 115,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5413,13 +5412,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 173,
+              "downloads": 176,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 173
+          "downloads": 176
         }
       ],
       "screenshotURLs": [],
@@ -6332,13 +6331,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 737,
+              "downloads": 763,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 737
+          "downloads": 763
         }
       ],
       "screenshotURLs": [
@@ -6447,13 +6446,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 292,
+              "downloads": 295,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 292
+          "downloads": 295
         }
       ],
       "screenshotURLs": [
@@ -7975,7 +7974,7 @@
               "fileType": "APK",
               "size": 23415109,
               "sha256": "5e969ddec02119291af2b7a8d52522dbb6e2ec61a7b74b6afa73d9f2e581129f",
-              "downloads": 1439,
+              "downloads": 1441,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -7999,7 +7998,7 @@
               "fileType": "IPA",
               "size": 9414861,
               "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-              "downloads": 448,
+              "downloads": 451,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -8029,7 +8028,7 @@
             }
           ],
           "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-          "downloads": 448
+          "downloads": 451
         }
       ],
       "screenshotURLs": [],
@@ -9536,7 +9535,7 @@
               "fileType": "IPA",
               "size": 108503085,
               "sha256": "04ca6071def9ea560686ccdb7ba04dd7c9a30dfec77bde1b19b5238daa76dbd0",
-              "downloads": 58,
+              "downloads": 75,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9548,7 +9547,7 @@
               "fileType": "IPA",
               "size": 108552628,
               "sha256": "1904c54ab760b996dc436721d48a705a50f7a6b378e7502c91c563dc0c8eba3e",
-              "downloads": 489,
+              "downloads": 609,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9560,13 +9559,13 @@
               "fileType": "IPA",
               "size": 108452990,
               "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-              "downloads": 160,
+              "downloads": 213,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-          "downloads": 160
+          "downloads": 213
         }
       ],
       "screenshotURLs": [],
@@ -11454,7 +11453,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 11155,
+              "downloads": 11172,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11466,7 +11465,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1519,
+              "downloads": 1520,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11502,13 +11501,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 294,
+              "downloads": 297,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 294
+          "downloads": 297
         }
       ],
       "screenshotURLs": [],
@@ -12566,7 +12565,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 365779,
+              "downloads": 365825,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12578,12 +12577,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1247450,
+              "downloads": 1247604,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1247450
+          "downloads": 1247604
         }
       ],
       "screenshotURLs": [],
@@ -12870,7 +12869,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 545,
+              "downloads": 546,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12882,13 +12881,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1383,
+              "downloads": 1391,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1383
+          "downloads": 1391
         }
       ],
       "screenshotURLs": [],
@@ -15221,6 +15220,15 @@
       "notify": true
     },
     {
+      "title": "Conduit v4.1.7",
+      "identifier": "news-conduit-4-1-7",
+      "caption": "Native client for Open WebUI & Ollama",
+      "date": "2026-09-22",
+      "appID": "app.cogwheel.conduit",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Conduit.webp",
+      "notify": true
+    },
+    {
       "title": "YTKillerPlus v21.38.2",
       "identifier": "news-ytkp-21-38-2",
       "caption": "Advanced YouTube tweak with extensive controls",
@@ -15254,15 +15262,6 @@
       "date": "2026-09-21",
       "appID": "com.google.ios.youtube",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
-      "notify": true
-    },
-    {
-      "title": "Turrit MxGram v1.5.4",
-      "identifier": "news-turrit-mxgram-1-5-4",
-      "caption": "MxGram-tweaked Turrit client (unofficial build)",
-      "date": "2026-09-21",
-      "appID": "com.seastar.turrit",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Turrit.webp",
       "notify": true
     }
   ]

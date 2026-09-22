@@ -190,6 +190,22 @@ This is a minor release that fixes issues found in 0.14.0. For the complete list
       <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.7/Mangayomi-v0.9.7-ios.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>Conduit v4.1.7</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/conduit.json</link>
+      <guid isPermaLink="false">conduit-4.1.7</guid>
+      <pubDate>Tue, 22 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Conduit 4.1.7 | conduit
+
+## What's Changed
+* Add iOS native Barge in toggle by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/737
+* Support Open WebUI 0.11.4 and fix user-settings clears by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/748
+* Fix native dropdown crash, composer overflow artifact, and stale streaming state by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/749
+
+
+**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.6...v4.1.7]]></description>
+      <enclosure url="https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>YTKillerPlus v21.38.2</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/ytkp.json</link>
       <guid isPermaLink="false">ytkp-21.38.2</guid>
@@ -651,82 +667,6 @@ Updated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREF
 - 99ced26a feat(player): add Infuse playback callbacks @tapframe  
 - [fix(ios): bundle CJK font for subtitles (#1833)](https://github.com/NuvioMedia/NuvioMobile/pull/1833) @tinyKyuu]]></description>
       <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.4.25-beta/nuvio-0.4.25-full-release.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Mangayomi v0.9.6</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/mangayomi.json</link>
-      <guid isPermaLink="false">mangayomi-0.9.6</guid>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Mangayomi 0.9.6 | Mangayomi-v0.9.6-ios
-
-# What's New
-
-## 📖 Reader & Manga
-
-* **Intelligent Double-Page Spreads & RTL Reading** (#1018, #1008):
-  * Wide and landscape double-page spreads are now shown seamlessly on their own full-width screen instead of being awkwardly paired with single pages.
-  * Switching between single and double-page view, rotating your device, or changing reading modes no longer resets your progress back to chapter 1.
-  * Resuming chapters in Right-to-Left (manga) reading mode now starts in the correct direction without layout flipping.
-* **Instant Border Cropping & Cache Improvements**:
-  * Turning border crop on or off in Webtoon / continuous reading now applies instantly without re-downloading the images.
-  * Fixed an issue where resuming a chapter at a saved page could cause an infinite loading spinner for already cached images.
-* **Smoother Reading Experience**:
-  * Fixed page flickering and display glitches when scrolling quickly through continuous chapters.
-
----
-
-## Novel Reader
-
-* **Scroll-Free E-Reader Paged Mode** (#1019):
-  * Read novels like a real book with page-turning swipes and taps instead of endless vertical scrolling.
-  * Quickly switch between **Continuous Scroll** and **Paged Reading** directly from the novel settings sheet.
-* **Single & Double-Page Column Layouts** (#1019):
-  * Added single-page and side-by-side double-page reading modes, optimized for tablets, foldable devices, and landscape screens.
-  * Settings sheet changes (reading mode, page mode) are now applied and previewed instantly.
-
----
-
-## Video Player & Anime
-
-* **Player Screen Lock (Mobile)**:
-  * Added a dedicated screen lock button to the mobile controls to prevent accidental touches while watching.
-  * When locked, all on-screen controls, touch gestures (swiping to seek, volume/brightness, double-tap jump, 2x speed hold), and the skip button are completely disabled.
-  * Protects against accidentally exiting the player with the back button or back gesture.
-  * Tap anywhere on the locked screen to display a quick-unlock button in the top-left corner.
-* **Cleaner Seek Indicator**:
-  * Simplified and streamlined the swipe-to-seek visual overlay on the player.
-
----
-
-## Features & User Experience
-
-* **Smoother Category Management**:
-  * Reordering categories in settings is now much more responsive and intuitive using dedicated drag handles.
-* **Details Header Polish**:
-  * Improved visual layout and formatting in the manga/anime details header.
-
----
-
-## Fixes & Stability
-
-* **Reliable Background Sync**:
-  * Fixed occasional crashes and errors that could occur when closing screens or navigating away during library synchronization.
-
----
-
-## Localization
-
-* Added translations for the new player screen lock feature across all supported languages.
-
----
-
-## Contributors
-
-* @kodjodevf
-* @jikkun (#1018, #1019)
-
-**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.5...v0.9.6]]></description>
-      <enclosure url="https://github.com/kodjodevf/mangayomi/releases/download/v0.9.6/Mangayomi-v0.9.6-ios.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
