@@ -1,10 +1,10 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "291f1abe6dfc",
+  "feedVersion": "2a61debc5b37",
   "data": {
     "schemaVersion": 1,
-    "generatedAt": "2026-09-22",
+    "generatedAt": "2026-09-23",
     "count": 130,
     "formula": {
       "weights": {
@@ -22,9 +22,9 @@
         "category": "music",
         "version": "9.38.1",
         "releaseDate": "2026-09-22",
-        "score": 1.0,
+        "score": 0.9933,
         "signals": {
-          "recency": 1.0,
+          "recency": 0.9833,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -39,9 +39,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -56,9 +56,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -73,9 +73,9 @@
         "category": "photo-video",
         "version": "21.24.3",
         "releaseDate": "2026-09-09",
-        "score": 0.9133,
+        "score": 0.9067,
         "signals": {
-          "recency": 0.7833,
+          "recency": 0.7667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -90,9 +90,9 @@
         "category": "music",
         "version": "4.9.6",
         "releaseDate": "2026-09-07",
-        "score": 0.9,
+        "score": 0.8933,
         "signals": {
-          "recency": 0.75,
+          "recency": 0.7333,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -102,79 +102,79 @@
         "downloadReachable": true
       },
       {
+        "slug": "nuvio",
+        "name": "Nuvio",
+        "category": "photo-video",
+        "version": "0.5.1",
+        "releaseDate": "2026-09-23",
+        "score": 0.8,
+        "signals": {
+          "recency": 1.0,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "conduit",
+        "name": "Conduit",
+        "category": "utilities",
+        "version": "4.1.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "synkplay",
+        "name": "Synkplay",
+        "category": "photo-video",
+        "version": "0.25.0",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "mangayomi",
+        "name": "Mangayomi",
+        "category": "other",
+        "version": "0.9.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
         "slug": "reynard",
         "name": "Reynard",
         "category": "utilities",
         "version": "0.14.1",
         "releaseDate": "2026-09-22",
-        "score": 0.8,
-        "signals": {
-          "recency": 1.0,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "nuvio",
-        "name": "Nuvio",
-        "category": "photo-video",
-        "version": "0.5.0",
-        "releaseDate": "2026-09-22",
-        "score": 0.8,
-        "signals": {
-          "recency": 1.0,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "ytkp",
-        "name": "YTKillerPlus",
-        "category": "photo-video",
-        "version": "21.38.2",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "ytkace",
-        "name": "YTKACE",
-        "category": "photo-video",
-        "version": "21.38.2",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "swiftgram",
-        "name": "Swiftgram",
-        "category": "social",
-        "version": "12.9.3",
-        "releaseDate": "2026-09-21",
         "score": 0.7933,
         "signals": {
           "recency": 0.9833,
@@ -189,28 +189,11 @@
     ],
     "rising": [
       {
-        "slug": "ytmusic",
-        "name": "YTMusicUltimate",
-        "category": "music",
-        "version": "9.38.1",
-        "releaseDate": "2026-09-22",
-        "score": 1.0,
-        "signals": {
-          "recency": 1.0,
-          "availability": 1.0,
-          "featured": 1.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": true,
-        "downloadReachable": true
-      },
-      {
-        "slug": "reynard",
-        "name": "Reynard",
-        "category": "utilities",
-        "version": "0.14.1",
-        "releaseDate": "2026-09-22",
+        "slug": "nuvio",
+        "name": "Nuvio",
+        "category": "photo-video",
+        "version": "0.5.1",
+        "releaseDate": "2026-09-23",
         "score": 0.8,
         "signals": {
           "recency": 1.0,
@@ -223,14 +206,82 @@
         "downloadReachable": true
       },
       {
-        "slug": "nuvio",
-        "name": "Nuvio",
-        "category": "photo-video",
-        "version": "0.5.0",
+        "slug": "ytmusic",
+        "name": "YTMusicUltimate",
+        "category": "music",
+        "version": "9.38.1",
         "releaseDate": "2026-09-22",
-        "score": 0.8,
+        "score": 0.9933,
         "signals": {
-          "recency": 1.0,
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 1.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": true,
+        "downloadReachable": true
+      },
+      {
+        "slug": "conduit",
+        "name": "Conduit",
+        "category": "utilities",
+        "version": "4.1.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "synkplay",
+        "name": "Synkplay",
+        "category": "photo-video",
+        "version": "0.25.0",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "mangayomi",
+        "name": "Mangayomi",
+        "category": "other",
+        "version": "0.9.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "reynard",
+        "name": "Reynard",
+        "category": "utilities",
+        "version": "0.14.1",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -245,9 +296,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -262,9 +313,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -279,9 +330,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -296,60 +347,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "swiftgram",
-        "name": "Swiftgram",
-        "category": "social",
-        "version": "12.9.3",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "ryukgram",
-        "name": "RyukGram",
-        "category": "social",
-        "version": "448.0.0",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "sparkle",
-        "name": "Sparkle",
-        "category": "social",
-        "version": "448.0.0",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -361,28 +361,11 @@
     ],
     "recentlyUpdated": [
       {
-        "slug": "ytmusic",
-        "name": "YTMusicUltimate",
-        "category": "music",
-        "version": "9.38.1",
-        "releaseDate": "2026-09-22",
-        "score": 1.0,
-        "signals": {
-          "recency": 1.0,
-          "availability": 1.0,
-          "featured": 1.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": true,
-        "downloadReachable": true
-      },
-      {
-        "slug": "reynard",
-        "name": "Reynard",
-        "category": "utilities",
-        "version": "0.14.1",
-        "releaseDate": "2026-09-22",
+        "slug": "nuvio",
+        "name": "Nuvio",
+        "category": "photo-video",
+        "version": "0.5.1",
+        "releaseDate": "2026-09-23",
         "score": 0.8,
         "signals": {
           "recency": 1.0,
@@ -395,14 +378,82 @@
         "downloadReachable": true
       },
       {
-        "slug": "nuvio",
-        "name": "Nuvio",
-        "category": "photo-video",
-        "version": "0.5.0",
+        "slug": "ytmusic",
+        "name": "YTMusicUltimate",
+        "category": "music",
+        "version": "9.38.1",
         "releaseDate": "2026-09-22",
-        "score": 0.8,
+        "score": 0.9933,
         "signals": {
-          "recency": 1.0,
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 1.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": true,
+        "downloadReachable": true
+      },
+      {
+        "slug": "conduit",
+        "name": "Conduit",
+        "category": "utilities",
+        "version": "4.1.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "synkplay",
+        "name": "Synkplay",
+        "category": "photo-video",
+        "version": "0.25.0",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "mangayomi",
+        "name": "Mangayomi",
+        "category": "other",
+        "version": "0.9.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "reynard",
+        "name": "Reynard",
+        "category": "utilities",
+        "version": "0.14.1",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -417,9 +468,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -434,9 +485,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -451,9 +502,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -468,60 +519,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "swiftgram",
-        "name": "Swiftgram",
-        "category": "social",
-        "version": "12.9.3",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "ryukgram",
-        "name": "RyukGram",
-        "category": "social",
-        "version": "448.0.0",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "sparkle",
-        "name": "Sparkle",
-        "category": "social",
-        "version": "448.0.0",
-        "releaseDate": "2026-09-21",
-        "score": 0.7933,
-        "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -538,9 +538,9 @@
         "category": "music",
         "version": "9.38.1",
         "releaseDate": "2026-09-22",
-        "score": 1.0,
+        "score": 0.9933,
         "signals": {
-          "recency": 1.0,
+          "recency": 0.9833,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -555,9 +555,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -572,9 +572,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.9933,
+        "score": 0.9867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -589,9 +589,9 @@
         "category": "photo-video",
         "version": "21.24.3",
         "releaseDate": "2026-09-09",
-        "score": 0.9133,
+        "score": 0.9067,
         "signals": {
-          "recency": 0.7833,
+          "recency": 0.7667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -606,9 +606,9 @@
         "category": "music",
         "version": "4.9.6",
         "releaseDate": "2026-09-07",
-        "score": 0.9,
+        "score": 0.8933,
         "signals": {
-          "recency": 0.75,
+          "recency": 0.7333,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 1.0
@@ -618,11 +618,11 @@
         "downloadReachable": true
       },
       {
-        "slug": "reynard",
-        "name": "Reynard",
-        "category": "utilities",
-        "version": "0.14.1",
-        "releaseDate": "2026-09-22",
+        "slug": "nuvio",
+        "name": "Nuvio",
+        "category": "photo-video",
+        "version": "0.5.1",
+        "releaseDate": "2026-09-23",
         "score": 0.8,
         "signals": {
           "recency": 1.0,
@@ -635,14 +635,65 @@
         "downloadReachable": true
       },
       {
-        "slug": "nuvio",
-        "name": "Nuvio",
-        "category": "photo-video",
-        "version": "0.5.0",
+        "slug": "conduit",
+        "name": "Conduit",
+        "category": "utilities",
+        "version": "4.1.7",
         "releaseDate": "2026-09-22",
-        "score": 0.8,
+        "score": 0.7933,
         "signals": {
-          "recency": 1.0,
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "synkplay",
+        "name": "Synkplay",
+        "category": "photo-video",
+        "version": "0.25.0",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "mangayomi",
+        "name": "Mangayomi",
+        "category": "other",
+        "version": "0.9.7",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "reynard",
+        "name": "Reynard",
+        "category": "utilities",
+        "version": "0.14.1",
+        "releaseDate": "2026-09-22",
+        "score": 0.7933,
+        "signals": {
+          "recency": 0.9833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -657,9 +708,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -674,9 +725,9 @@
         "category": "photo-video",
         "version": "21.38.2",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -691,9 +742,9 @@
         "category": "social",
         "version": "12.9.3",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -708,9 +759,9 @@
         "category": "social",
         "version": "448.0.0",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -725,9 +776,9 @@
         "category": "social",
         "version": "448.0.0",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -742,9 +793,9 @@
         "category": "social",
         "version": "8.79.0",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -759,9 +810,9 @@
         "category": "social",
         "version": "448.0",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -776,9 +827,9 @@
         "category": "social",
         "version": "1.5.4",
         "releaseDate": "2026-09-21",
-        "score": 0.7933,
+        "score": 0.7867,
         "signals": {
-          "recency": 0.9833,
+          "recency": 0.9667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -793,9 +844,9 @@
         "category": "other",
         "version": "3.1.8",
         "releaseDate": "2026-09-20",
-        "score": 0.7867,
+        "score": 0.78,
         "signals": {
-          "recency": 0.9667,
+          "recency": 0.95,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -810,23 +861,6 @@
         "category": "utilities",
         "version": "1.27.9",
         "releaseDate": "2026-09-20",
-        "score": 0.7867,
-        "signals": {
-          "recency": 0.9667,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "mangayomi",
-        "name": "Mangayomi",
-        "category": "other",
-        "version": "0.9.6",
-        "releaseDate": "2026-09-19",
         "score": 0.78,
         "signals": {
           "recency": 0.95,
@@ -844,9 +878,9 @@
         "category": "games",
         "version": "2.0.1",
         "releaseDate": "2026-09-18",
-        "score": 0.7733,
+        "score": 0.7667,
         "signals": {
-          "recency": 0.9333,
+          "recency": 0.9167,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -861,9 +895,9 @@
         "category": "utilities",
         "version": "0.1.6",
         "releaseDate": "2026-09-18",
-        "score": 0.7733,
+        "score": 0.7667,
         "signals": {
-          "recency": 0.9333,
+          "recency": 0.9167,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -878,9 +912,9 @@
         "category": "photo-video",
         "version": "6.1.3",
         "releaseDate": "2026-09-18",
-        "score": 0.7733,
+        "score": 0.7667,
         "signals": {
-          "recency": 0.9333,
+          "recency": 0.9167,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -895,23 +929,6 @@
         "category": "utilities",
         "version": "2.3.15",
         "releaseDate": "2026-09-17",
-        "score": 0.7667,
-        "signals": {
-          "recency": 0.9167,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "conduit",
-        "name": "Conduit",
-        "category": "utilities",
-        "version": "4.1.6",
-        "releaseDate": "2026-09-16",
         "score": 0.76,
         "signals": {
           "recency": 0.9,
@@ -929,9 +946,9 @@
         "category": "photo-video",
         "version": "8.5.5",
         "releaseDate": "2026-09-16",
-        "score": 0.76,
+        "score": 0.7533,
         "signals": {
-          "recency": 0.9,
+          "recency": 0.8833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -946,9 +963,9 @@
         "category": "social",
         "version": "579.0.0",
         "releaseDate": "2026-09-16",
-        "score": 0.76,
+        "score": 0.7533,
         "signals": {
-          "recency": 0.9,
+          "recency": 0.8833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -963,9 +980,9 @@
         "category": "social",
         "version": "579.0.0",
         "releaseDate": "2026-09-16",
-        "score": 0.76,
+        "score": 0.7533,
         "signals": {
-          "recency": 0.9,
+          "recency": 0.8833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -980,9 +997,9 @@
         "category": "social",
         "version": "579.0.0",
         "releaseDate": "2026-09-16",
-        "score": 0.76,
+        "score": 0.7533,
         "signals": {
-          "recency": 0.9,
+          "recency": 0.8833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -997,9 +1014,9 @@
         "category": "photo-video",
         "version": "1.1.6",
         "releaseDate": "2026-09-16",
-        "score": 0.76,
+        "score": 0.7533,
         "signals": {
-          "recency": 0.9,
+          "recency": 0.8833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1014,9 +1031,9 @@
         "category": "music",
         "version": "9.37.2",
         "releaseDate": "2026-09-15",
-        "score": 0.7533,
+        "score": 0.7467,
         "signals": {
-          "recency": 0.8833,
+          "recency": 0.8667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1031,9 +1048,9 @@
         "category": "social",
         "version": "447.0.0",
         "releaseDate": "2026-09-15",
-        "score": 0.7533,
+        "score": 0.7467,
         "signals": {
-          "recency": 0.8833,
+          "recency": 0.8667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1048,9 +1065,9 @@
         "category": "social",
         "version": "46.9.0",
         "releaseDate": "2026-09-15",
-        "score": 0.7533,
+        "score": 0.7467,
         "signals": {
-          "recency": 0.8833,
+          "recency": 0.8667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1065,9 +1082,9 @@
         "category": "utilities",
         "version": "0.7.0",
         "releaseDate": "2026-09-15",
-        "score": 0.7533,
+        "score": 0.7467,
         "signals": {
-          "recency": 0.8833,
+          "recency": 0.8667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1082,9 +1099,9 @@
         "category": "utilities",
         "version": "2.0",
         "releaseDate": "2026-09-14",
-        "score": 0.7467,
+        "score": 0.74,
         "signals": {
-          "recency": 0.8667,
+          "recency": 0.85,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1099,9 +1116,9 @@
         "category": "social",
         "version": "2.49.1",
         "releaseDate": "2026-09-13",
-        "score": 0.74,
+        "score": 0.7333,
         "signals": {
-          "recency": 0.85,
+          "recency": 0.8333,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1116,9 +1133,9 @@
         "category": "social",
         "version": "3.7.1",
         "releaseDate": "2026-09-13",
-        "score": 0.74,
+        "score": 0.7333,
         "signals": {
-          "recency": 0.85,
+          "recency": 0.8333,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1133,9 +1150,9 @@
         "category": "social",
         "version": "12.9.4",
         "releaseDate": "2026-09-12",
-        "score": 0.7333,
+        "score": 0.7267,
         "signals": {
-          "recency": 0.8333,
+          "recency": 0.8167,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1150,9 +1167,9 @@
         "category": "utilities",
         "version": "2.4.9.27",
         "releaseDate": "2026-09-12",
-        "score": 0.7333,
+        "score": 0.7267,
         "signals": {
-          "recency": 0.8333,
+          "recency": 0.8167,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1167,9 +1184,9 @@
         "category": "social",
         "version": "446.0.0",
         "releaseDate": "2026-09-09",
-        "score": 0.7133,
+        "score": 0.7067,
         "signals": {
-          "recency": 0.7833,
+          "recency": 0.7667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1184,9 +1201,9 @@
         "category": "other",
         "version": "1.4.1",
         "releaseDate": "2026-09-09",
-        "score": 0.7133,
+        "score": 0.7067,
         "signals": {
-          "recency": 0.7833,
+          "recency": 0.7667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1201,9 +1218,9 @@
         "category": "photo-video",
         "version": "0.11.1",
         "releaseDate": "2026-09-08",
-        "score": 0.7067,
+        "score": 0.7,
         "signals": {
-          "recency": 0.7667,
+          "recency": 0.75,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1218,9 +1235,9 @@
         "category": "music",
         "version": "1.2.5",
         "releaseDate": "2026-09-08",
-        "score": 0.7067,
+        "score": 0.7,
         "signals": {
-          "recency": 0.7667,
+          "recency": 0.75,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1235,23 +1252,6 @@
         "category": "social",
         "version": "2.6.1",
         "releaseDate": "2026-09-07",
-        "score": 0.7,
-        "signals": {
-          "recency": 0.75,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "synkplay",
-        "name": "Synkplay",
-        "category": "photo-video",
-        "version": "0.24.0",
-        "releaseDate": "2026-09-06",
         "score": 0.6933,
         "signals": {
           "recency": 0.7333,
@@ -1269,9 +1269,9 @@
         "category": "social",
         "version": "577.1",
         "releaseDate": "2026-09-05",
-        "score": 0.6867,
+        "score": 0.68,
         "signals": {
-          "recency": 0.7167,
+          "recency": 0.7,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1286,9 +1286,9 @@
         "category": "other",
         "version": "0.9",
         "releaseDate": "2026-09-03",
-        "score": 0.6733,
+        "score": 0.6667,
         "signals": {
-          "recency": 0.6833,
+          "recency": 0.6667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1303,9 +1303,9 @@
         "category": "music",
         "version": "1.2.10",
         "releaseDate": "2026-09-02",
-        "score": 0.6667,
+        "score": 0.66,
         "signals": {
-          "recency": 0.6667,
+          "recency": 0.65,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1320,9 +1320,9 @@
         "category": "utilities",
         "version": "13.2.1",
         "releaseDate": "2026-09-02",
-        "score": 0.6667,
+        "score": 0.66,
         "signals": {
-          "recency": 0.6667,
+          "recency": 0.65,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1337,9 +1337,9 @@
         "category": "social",
         "version": "12.8.1",
         "releaseDate": "2026-09-01",
-        "score": 0.66,
+        "score": 0.6533,
         "signals": {
-          "recency": 0.65,
+          "recency": 0.6333,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1354,9 +1354,9 @@
         "category": "music",
         "version": "2.5",
         "releaseDate": "2026-08-31",
-        "score": 0.6533,
+        "score": 0.6467,
         "signals": {
-          "recency": 0.6333,
+          "recency": 0.6167,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1371,9 +1371,9 @@
         "category": "utilities",
         "version": "1.36.1",
         "releaseDate": "2026-08-30",
-        "score": 0.6467,
+        "score": 0.64,
         "signals": {
-          "recency": 0.6167,
+          "recency": 0.6,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1388,9 +1388,9 @@
         "category": "social",
         "version": "1.2.9",
         "releaseDate": "2026-08-28",
-        "score": 0.6333,
+        "score": 0.6267,
         "signals": {
-          "recency": 0.5833,
+          "recency": 0.5667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1405,9 +1405,9 @@
         "category": "utilities",
         "version": "1.0",
         "releaseDate": "2026-08-28",
-        "score": 0.6333,
+        "score": 0.6267,
         "signals": {
-          "recency": 0.5833,
+          "recency": 0.5667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1422,9 +1422,9 @@
         "category": "developer-tools",
         "version": "3.1.10",
         "releaseDate": "2026-08-27",
-        "score": 0.6267,
+        "score": 0.62,
         "signals": {
-          "recency": 0.5667,
+          "recency": 0.55,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1456,9 +1456,9 @@
         "category": "photo-video",
         "version": "21.14.4",
         "releaseDate": "2026-08-22",
-        "score": 0.5933,
+        "score": 0.5867,
         "signals": {
-          "recency": 0.4833,
+          "recency": 0.4667,
           "availability": 1.0,
           "featured": 1.0,
           "verification": 0.0
@@ -1473,9 +1473,9 @@
         "category": "developer-tools",
         "version": "813",
         "releaseDate": "2026-08-22",
-        "score": 0.5933,
+        "score": 0.5867,
         "signals": {
-          "recency": 0.4833,
+          "recency": 0.4667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1490,9 +1490,9 @@
         "category": "utilities",
         "version": "3.0.9",
         "releaseDate": "2026-08-22",
-        "score": 0.5933,
+        "score": 0.5867,
         "signals": {
-          "recency": 0.4833,
+          "recency": 0.4667,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1507,9 +1507,9 @@
         "category": "photo-video",
         "version": "1.3.0",
         "releaseDate": "2026-08-20",
-        "score": 0.58,
+        "score": 0.5733,
         "signals": {
-          "recency": 0.45,
+          "recency": 0.4333,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1524,9 +1524,9 @@
         "category": "games",
         "version": "1.7.5",
         "releaseDate": "2026-08-15",
-        "score": 0.5467,
+        "score": 0.54,
         "signals": {
-          "recency": 0.3667,
+          "recency": 0.35,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1541,9 +1541,9 @@
         "category": "social",
         "version": "30.7",
         "releaseDate": "2026-08-14",
-        "score": 0.54,
+        "score": 0.5333,
         "signals": {
-          "recency": 0.35,
+          "recency": 0.3333,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1558,9 +1558,9 @@
         "category": "social",
         "version": "1.1.107",
         "releaseDate": "2026-08-12",
-        "score": 0.5267,
+        "score": 0.52,
         "signals": {
-          "recency": 0.3167,
+          "recency": 0.3,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1575,9 +1575,9 @@
         "category": "networking",
         "version": "3.4.1",
         "releaseDate": "2026-08-11",
-        "score": 0.52,
+        "score": 0.5133,
         "signals": {
-          "recency": 0.3,
+          "recency": 0.2833,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1592,9 +1592,9 @@
         "category": "photo-video",
         "version": "21.31.3",
         "releaseDate": "2026-08-03",
-        "score": 0.4667,
+        "score": 0.46,
         "signals": {
-          "recency": 0.1667,
+          "recency": 0.15,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -1609,26 +1609,9 @@
         "category": "utilities",
         "version": "2.2.1",
         "releaseDate": "2026-07-28",
-        "score": 0.4267,
+        "score": 0.42,
         "signals": {
-          "recency": 0.0667,
-          "availability": 1.0,
-          "featured": 0.0,
-          "verification": 1.0
-        },
-        "verificationLevel": "VERIFIED",
-        "featured": false,
-        "downloadReachable": true
-      },
-      {
-        "slug": "ryukgram-ig410",
-        "name": "RyukGram (IG 410)",
-        "category": "social",
-        "version": "410.1.0",
-        "releaseDate": "2026-07-25",
-        "score": 0.4067,
-        "signals": {
-          "recency": 0.0167,
+          "recency": 0.05,
           "availability": 1.0,
           "featured": 0.0,
           "verification": 1.0
@@ -2000,6 +1983,23 @@
         "category": "social",
         "version": "2025.37.0",
         "releaseDate": "2025-09-26",
+        "score": 0.4,
+        "signals": {
+          "recency": 0.0,
+          "availability": 1.0,
+          "featured": 0.0,
+          "verification": 1.0
+        },
+        "verificationLevel": "VERIFIED",
+        "featured": false,
+        "downloadReachable": true
+      },
+      {
+        "slug": "ryukgram-ig410",
+        "name": "RyukGram (IG 410)",
+        "category": "social",
+        "version": "410.1.0",
+        "releaseDate": "2026-07-25",
         "score": 0.4,
         "signals": {
           "recency": 0.0,

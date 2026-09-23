@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-22T11:58:25Z",
+  "generatedAt": "2026-09-23T11:59:38Z",
   "appCount": 130,
-  "releases": 188,
+  "releases": 192,
   "apps": {
     "3105": [
       {
@@ -278,13 +278,23 @@
     ],
     "conduit": [
       {
+        "version": "4.1.7",
+        "date": "2026-09-22",
+        "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.7/conduit.ipa",
+        "size": 35926535,
+        "sha256": "041d08d4dce6d2ae4a0fe597a78fd37a5c69382e65f0e664fd60d35f2f4a66dd",
+        "localizedDescription": "Conduit 4.1.7 | conduit\n\n## What's Changed\n* Add iOS native Barge in toggle by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/737\n* Support Open WebUI 0.11.4 and fix user-settings clears by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/748\n* Fix native dropdown crash, composer overflow artifact, and stale streaming state by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/749\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.6...v4.1.7",
+        "status": "current",
+        "firstSeen": "2026-09-23T11:59:38Z"
+      },
+      {
         "version": "4.1.6",
         "date": "2026-09-16",
         "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa",
         "size": 35930568,
         "sha256": "49eb748fa6f6787db236e23079083bcfb5129064092b69e04881750774b557cc",
         "localizedDescription": "Conduit 4.1.6 | conduit\n\n## What's Changed\n* Collapse raw reasoning tags client-side and stop re-escaping stored content by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/731\n* Fix attachments, STT, TTS, citations, proxy re-auth, and Hermes probe by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/732\n* Keep chat scrollbar thumb stable and inset it from the composer by @cogwheel0 in https://github.com/cogwheel0/conduit/pull/734\n\n\n**Full Changelog**: https://github.com/cogwheel0/conduit/compare/v4.1.5...v4.1.6",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-17T23:15:53Z"
       },
       {
@@ -730,13 +740,23 @@
     ],
     "mangayomi": [
       {
+        "version": "0.9.7",
+        "date": "2026-09-22",
+        "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.7/Mangayomi-v0.9.7-ios.ipa",
+        "size": 114301894,
+        "sha256": "52f126352cce94f9a0772eea5786c17eee02337401cda735fbd44a77dc2465dd",
+        "localizedDescription": "Mangayomi 0.9.7 | Mangayomi-v0.9.7-ios\n\n# What's New\n\n## Reader\n\n* **Reliable Resume to Saved Position** :\n  * Reopening a chapter in continuous vertical reading now jumps directly and instantly to the page where you left off, even before all images have finished loading.\n  * Eliminated the issue where the reader would land on a neighboring page or spinner instead of the correct saved position.\n\n* **Smoother Zoomed Panning & Inertia** (#1021):\n  * Dragging a zoomed page now follows your finger precisely using real movement delta instead of an accumulated offset, making panning far more responsive.\n  * Flinging a zoomed page now carries natural momentum with a longer, smoother coast animation.\n  * Overscrolling past the edge of a zoomed page automatically transfers the momentum to the page list scroll, allowing seamless continued scrolling without lifting your finger.\n\n* **Fixed Grey Screen in Double-Page Mode**:\n  * Chapter transition pages in vertical double-page reading no longer cause a crash or a blank grey screen when the spread is reached.\n\n* **Reader Bottom Bar Positioning**:\n  * The page slider and quick-action bar now correctly sit above the system gesture area and home indicator on all devices, preventing them from being hidden behind system UI.\n\n* **Novel Reader Performance**:\n  * Page swipes in paged novel mode no longer trigger a full rebuild of the reader tree, making navigation between pages considerably faster.\n\n---\n\n## Fixes & Stability\n\n* Fixed infinite loading spinner when resuming a continuous vertical chapter mid-chapter.\n* Corrected the visible range check that was preventing the initial scroll anchor from being applied reliably.\n* Page image load events now correctly trigger a re-jump to the saved position if the list had not yet settled on the right page.\n\n---\n\n## Contributors\n\n* @kodjodevf\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.6...v0.9.7",
+        "status": "current",
+        "firstSeen": "2026-09-23T11:59:38Z"
+      },
+      {
         "version": "0.9.6",
         "date": "2026-09-19",
         "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.6/Mangayomi-v0.9.6-ios.ipa",
         "size": 114296014,
         "sha256": "dbea3b1243ee3be2e75ad0b6d97681aafb5b94ed942cb16e747b03bda130adf8",
         "localizedDescription": "Mangayomi 0.9.6 | Mangayomi-v0.9.6-ios\n\n# What's New\n\n## 📖 Reader & Manga\n\n* **Intelligent Double-Page Spreads & RTL Reading** (#1018, #1008):\n  * Wide and landscape double-page spreads are now shown seamlessly on their own full-width screen instead of being awkwardly paired with single pages.\n  * Switching between single and double-page view, rotating your device, or changing reading modes no longer resets your progress back to chapter 1.\n  * Resuming chapters in Right-to-Left (manga) reading mode now starts in the correct direction without layout flipping.\n* **Instant Border Cropping & Cache Improvements**:\n  * Turning border crop on or off in Webtoon / continuous reading now applies instantly without re-downloading the images.\n  * Fixed an issue where resuming a chapter at a saved page could cause an infinite loading spinner for already cached images.\n* **Smoother Reading Experience**:\n  * Fixed page flickering and display glitches when scrolling quickly through continuous chapters.\n\n---\n\n## Novel Reader\n\n* **Scroll-Free E-Reader Paged Mode** (#1019):\n  * Read novels like a real book with page-turning swipes and taps instead of endless vertical scrolling.\n  * Quickly switch between **Continuous Scroll** and **Paged Reading** directly from the novel settings sheet.\n* **Single & Double-Page Column Layouts** (#1019):\n  * Added single-page and side-by-side double-page reading modes, optimized for tablets, foldable devices, and landscape screens.\n  * Settings sheet changes (reading mode, page mode) are now applied and previewed instantly.\n\n---\n\n## Video Player & Anime\n\n* **Player Screen Lock (Mobile)**:\n  * Added a dedicated screen lock button to the mobile controls to prevent accidental touches while watching.\n  * When locked, all on-screen controls, touch gestures (swiping to seek, volume/brightness, double-tap jump, 2x speed hold), and the skip button are completely disabled.\n  * Protects against accidentally exiting the player with the back button or back gesture.",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-20T11:43:44Z"
       },
       {
@@ -998,13 +1018,23 @@
     ],
     "nuvio": [
       {
+        "version": "0.5.1",
+        "date": "2026-09-23",
+        "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.1-beta/nuvio-0.5.1-full-release.ipa",
+        "size": 66042992,
+        "sha256": "801bb9d82efddbc0698ce92a4a8e6a741209b40bf5e7b6053d33a68b81d905fc",
+        "localizedDescription": "Nuvio 0.5.1 | nuvio-0.5.1-full-release\n\n- 0b427905 fix(mdblist): correct library sorting @tapframe  \n- 647e4c09 fix(mdblist): batch and reuse rating requests @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#2037)](https://github.com/NuvioMedia/NuvioMobile/pull/2037) @blueocean2308  \n- [Fix custom posters missing in tmdb/trakt collections (#2035)](https://github.com/NuvioMedia/NuvioMobile/pull/2035) @skoruppa  \n- [fix(details) adapt to the new aiom season poster method (#2038)](https://github.com/NuvioMedia/NuvioMobile/pull/2038) @chrisk325  \n- [Feature/spanish es translation (#2039)](https://github.com/NuvioMedia/NuvioMobile/pull/2039) @IberianSoldierPC",
+        "status": "current",
+        "firstSeen": "2026-09-23T11:59:38Z"
+      },
+      {
         "version": "0.5.0",
         "date": "2026-09-22",
         "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.0-beta/nuvio-0.5.0-full-release.ipa",
         "size": 66006978,
         "sha256": "14cc46e4098e4568e2e20a86a8b5dc7dba3da7e28ab7567972338fba460421ef",
         "localizedDescription": "Nuvio 0.5.0 | nuvio-0.5.0-full-release\n\n- 4c82f9ac feat(settings): collapse tracker cards by default @tapframe  \n- c9d6f5f6 fix(player): restore subtitles for each episode @tapframe  \n- [feat(mdblist): add tracking and library support (#1900)](https://github.com/NuvioMedia/NuvioMobile/pull/1900) @tapframe  \n- [remove inaccurate TMDB release date enrichment option (#2032)](https://github.com/NuvioMedia/NuvioMobile/pull/2032) @skoruppa  \n- [Fix(player) record mx player completion when no position is returned (#2031)](https://github.com/NuvioMedia/NuvioMobile/pull/2031) @zuko726  \n- 4178d5cd fix(tmdb): sort blank collection release dates last @tapframe  \n- fb9f859e fix(ios): use clean player framework archive @tapframe  \n- 6ff7882a fix(player): preserve iOS audio during calls @tapframe  \n- [Custom poster URL pattern support (#2025)](https://github.com/NuvioMedia/NuvioMobile/pull/2025) @skoruppa",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-22T11:58:25Z"
       },
       {
@@ -1558,13 +1588,23 @@
     ],
     "synkplay": [
       {
+        "version": "0.25.0",
+        "date": "2026-09-22",
+        "downloadURL": "https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-ios.ipa",
+        "size": 89425662,
+        "sha256": "37cb2b5c6c61c38f43804a57ed030097525ce0ff0e07c75cae3ec9db264038db",
+        "localizedDescription": "Synkplay 0.25.0 | synkplay-0.25.0-ios\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/androidApp/src/main/res/mipmap-xxxhdpi/ic_launcher.png\" width=\"96\" alt=\"Synkplay\">\n</p>\n<p align=\"center\">\n  <a href=\"https://play.google.com/store/apps/details?id=com.yuroyami.syncplay\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/google-play.png\" width=\"150\" alt=\"Get it on Google Play\"></a>\n  &nbsp;&nbsp;\n  <a href=\"https://apps.apple.com/us/app/synkplay/id6760187432\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/app-store.png\" width=\"150\" alt=\"Download on the App Store\"></a>\n  &nbsp;&nbsp;\n  <a href=\"https://apt.izzysoft.de/fdroid/index/apk/com.reddnek.syncplay\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/IzzyOnDroid.png\" width=\"150\" alt=\"Get it on IzzyOnDroid\"></a>\n  &nbsp;&nbsp;\n  <a href=\"https://celloserenity.github.io/altdirect/?url=https://raw.githubusercontent.com/yuroyami/syncplay-mobile/refs/heads/master/altstore_yuroyami.json\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/dda03b8986b08feeafaf8671a4009cf9982401c7/art/badges/AltSource_Blue.png\" width=\"150\" alt=\"Add the AltStore source\"></a>\n</p>\n\n## Downloads\n\n| File | Platform | What it is | Size |\n|---|---|---|---|\n| [`synkplay-0.25.0-full-universal.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/synkplay-0.25.0-full-universal.apk) | Android 8.0 and up | The full app: ExoPlayer, mpv and KitePlayer, every CPU type in one file. Pick this one. | 89 MB |\n| [`syncplay-0.25.0-exo-only.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.25.0/syncplay-0.25.0-exo-only.apk) | Android 8.0 and up | ExoPlayer only, and much smaller. This is the build IzzyOn",
+        "status": "current",
+        "firstSeen": "2026-09-23T11:59:38Z"
+      },
+      {
         "version": "0.24.0",
         "date": "2026-09-06",
         "downloadURL": "https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/synkplay-0.24.0-ios.ipa",
         "size": 89476842,
         "sha256": "44c7f63bf911ee4f0495226551df91cebf6b1c46bf7a81bbe319454bcb613e52",
         "localizedDescription": "Synkplay 0.24.0 | synkplay-0.24.0-ios\n\n<p align=\"center\">\n  <img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/ffd4c612dcc653267006b125e5b7572371cf528b/art/synkplay_app_badge_512.png\" width=\"128\" height=\"128\" alt=\"Synkplay logo\">\n</p>\n<p align=\"center\">\n  <a href=\"https://play.google.com/store/apps/details?id=com.yuroyami.syncplay\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/google-play.png\" width=\"150\" alt=\"Get it on Google Play\"></a>\n  &nbsp;&nbsp;\n  <a href=\"https://apps.apple.com/us/app/synkplay/id6760187432\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/app-store.png\" width=\"150\" alt=\"Download on the App Store\"></a>\n  &nbsp;&nbsp;\n  <a href=\"https://apt.izzysoft.de/fdroid/index/apk/com.reddnek.syncplay\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/IzzyOnDroid.png\" width=\"150\" alt=\"Get it on IzzyOnDroid\"></a>\n  &nbsp;&nbsp;\n  <a href=\"https://celloserenity.github.io/altdirect/?url=https://raw.githubusercontent.com/yuroyami/syncplay-mobile/refs/heads/master/altstore_yuroyami.json\"><img src=\"https://raw.githubusercontent.com/yuroyami/syncplay-mobile/2a24d89ca25c48a9230d6c72ac8d82840d1802cc/art/badges/AltSource_Blue.png\" width=\"150\" alt=\"Add the AltStore source\"></a>\n</p>\n\n## Downloads\n\n| File | Platform | What it is | Size |\n|---|---|---|---|\n| [`synkplay-0.24.0-full-universal.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/synkplay-0.24.0-full-universal.apk) | Android 8.0 and up | The full app: ExoPlayer, mpv and KitePlayer, every CPU type in one file. Pick this one. | 89 MB |\n| [`syncplay-0.24.0-exo-only.apk`](https://github.com/yuroyami/syncplay-mobile/releases/download/v0.24.0/syncplay-0.24.0-exo-only.apk) | Android 8.0 and up | ExoPlayer only, and much smaller. This is the build IzzyOnDroid",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
