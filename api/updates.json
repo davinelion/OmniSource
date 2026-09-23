@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-22",
+  "generatedAt": "2026-09-23",
   "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
   "count": 100,
   "updates": [
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "version": "0.5.1",
+      "previousVersion": "0.5.0",
+      "date": "2026-09-23",
+      "kind": "updated",
+      "changelog": "Nuvio 0.5.1 | nuvio-0.5.1-full-release\n\n- 0b427905 fix(mdblist): correct library sorting @tapframe  \n- 647e4c09 fix(mdblist): batch and reuse rating requests @tapframe  \n- [i18n(vi): update latest Vietnamese strings (#2037)](https://github.com/NuvioMedia/NuvioMobile/pull/2037) @blueocean2308  \n- [Fix custom posters missing in tmdb/trakt collections (#2035)](https://github.com/NuvioMedia/NuvioMobile/pull/2035) @skoruppa  \n- [fix(details) adapt to the new aiom season poster method (#2038)](https://github.com/NuvioMedia/NuvioMobile/pull/2038) @chrisk325  \n- [Feature/spanish es translation (#2039)](https://github.com/NuvioMedia/NuvioMobile/pull/2039) @IberianSoldierPC",
+      "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.1-beta/nuvio-0.5.1-full-release.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/nuvio.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/nuvio.xml",
+      "status": "stable",
+      "shortDescription": "Open-source media player, bring your own sources"
+    },
     {
       "slug": "ytmusic",
       "name": "YTMusicUltimate",
@@ -1472,21 +1487,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/zeus.xml",
       "status": "stable",
       "shortDescription": "Self-custodial Bitcoin and Lightning wallet"
-    },
-    {
-      "slug": "jellify",
-      "name": "Jellify",
-      "version": "1.2.10",
-      "previousVersion": "",
-      "date": "2026-09-02",
-      "kind": "new",
-      "changelog": "Jellify 1.2.10 | Jellify-1.2.10\n\nWelcome to Jellify 1.2.10\n\nHey music lovers! I've polished up some underlying bits and have made a key fix to boost stability across the board. Get ready for an even smoother listening experience when you’re exploring your Jellyfin collection!\n\n*   **Android Crash Fixes:** We detected and patched out a crash that was occurring on Android devices, so you can now enjoy uninterrupted music playback no matter how deep you dive into your library.\n*   **Optimized Performance:** Several dependency updates have been implemented behind the scenes to enhance overall app performance and make navigation feel snappier than ever before.\n*   **App General Polish:** We've made various quality-of-life improvements in various components, ensuring Jellify remains robust and reliable for years of listening fun!",
-      "downloadURL": "https://github.com/Jellify-Music/App/releases/download/1.2.10/Jellify-1.2.10.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Jellify.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/jellify.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/jellify.xml",
-      "status": "stable",
-      "shortDescription": "Native Jellyfin music player for iOS"
     },
     {
       "slug": "uyouenhanced",
