@@ -3,6 +3,12 @@
   "generatedAt": "2026-09-23",
   "popular": [
     {
+      "slug": "zeus",
+      "name": "Zeus",
+      "category": "utilities",
+      "score": 1.0
+    },
+    {
       "slug": "nuvio",
       "name": "Nuvio",
       "category": "photo-video",
@@ -67,15 +73,15 @@
       "name": "Table Habit",
       "category": "utilities",
       "score": 0.9825
-    },
-    {
-      "slug": "anymex",
-      "name": "AnymeX",
-      "category": "other",
-      "score": 0.9825
     }
   ],
   "recentlyAdded": [
+    {
+      "slug": "zeus",
+      "name": "Zeus",
+      "firstSeen": "2026-09-23",
+      "category": "utilities"
+    },
     {
       "slug": "nuvio",
       "name": "Nuvio",
@@ -139,12 +145,6 @@
     {
       "slug": "swiftgram",
       "name": "Swiftgram",
-      "firstSeen": "2026-09-21",
-      "category": "social"
-    },
-    {
-      "slug": "ryukgram",
-      "name": "RyukGram",
       "firstSeen": "2026-09-21",
       "category": "social"
     }
@@ -226,7 +226,7 @@
   "requested": [],
   "counts": {
     "popular": 130,
-    "recentlyAdded": 39,
+    "recentlyAdded": 40,
     "rising": 53,
     "requested": 0
   }

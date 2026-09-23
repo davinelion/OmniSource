@@ -5,25 +5,48 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/zeus.json</link>
     <description>Release feed for Zeus within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/zeus.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Zeus v13.2.1</title>
+      <title>Zeus v13.2.2</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/zeus.json</link>
-      <guid isPermaLink="false">zeus-13.2.1</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Zeus 13.2.1 | zeus-v13.2.1
+      <guid isPermaLink="false">zeus-13.2.2</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Zeus 13.2.2 | zeus-v13.2.2
 
-<img width="1100" height="614" alt="ZEUS v13.2.1" src="https://github.com/user-attachments/assets/8c7a0358-df6e-40c7-93bd-9371721143e7" />
+<img width="1200" height="670" alt="ZEUS v13.2.2" src="https://github.com/user-attachments/assets/8923813a-db5e-4984-a78d-7586e075f2f8" />
 
-## v13.2.1 Highlights:
+> [!WARNING]
+> **iOS users running ZEUS on more than one device are advised to read the warning below!**
 
-- LDK Node: BOLT 12 fixes
-- Boltcard fixes
-- Improved clipboard value UI
+## v13.2.2 Highlights:
+
+- Embedded LND v0.21.3-beta
+- Swaps: SATS Routing (new default) and Coinos added as providers
+- iOS: automatic cleanup of stale iCloud Keychain wallet data (**see note below**)
+- Nostr Wallet Connect: view connection secrets after creation, stricter connection string validation
+- Cashu: P2PK locked token fixes
+- LND: imported account receive fixes
+- Seed recovery: catch typos before restoring
+- Channel migration export when the node won't start
 - Further security hardening measures
 - Miscellaneous bug fixes
 - Miscellaneous UI improvements
+
+> [!WARNING]
+> ### iOS users running ZEUS on more than one device
+>
+> Due to a bug in a third-party dependency, older versions of ZEUS unintentionally stored wallet data (including seeds and connection credentials) in the iCloud-synced keychain rather than in device-only storage. iCloud Keychain is end-to-end encrypted: the data was only readable by your own trusted devices, not by Apple or anyone else, and we have no indication that any user data was exposed. It did, however, have unintended side effects, such as stale or deleted wallet data reappearing on new or restored devices signed into the same Apple ID. It also ran against our principle that seeds should never leave your device. This release moves that data into device-local storage and then **automatically and permanently deletes the iCloud-synced copies**. No prompt is shown.
+>
+> If iCloud Keychain is enabled, that deletion propagates to every device signed into the same Apple ID. The first device you open on v13.2.2 keeps a local copy of everything and then removes the iCloud copies. **Any other device that has not yet been opened on v13.2.2 will lose its saved wallet configurations**, because older versions kept that data only in the synced keychain and had no separate on-device copy. This applies whether that device is still on an older version or has only auto-updated in the background. Because whichever device opens first performs the cleanup, no update order avoids this. Devices with iCloud Keychain turned off are not affected.
+>
+> **Before updating, on each device:**
+> - Make sure you have your seed phrase backed up for every embedded wallet (and your Cashu seed, if you use ecash)
+> - Export your wallet configurations via `Menu` > `Tools` > `Export/Import Wallet Configurations`
+>
+> **If a device loses its wallets:** your funds are not affected. Restore from your seed phrase, or import a wallet configuration export. The first device you opened on v13.2.2 still holds all of the data and can produce that export.
+>
+> Going forward, ZEUS wallet data will no longer appear automatically on new devices signed into your Apple ID. That behavior was never an intended feature, and embedded node wallets never transferred correctly through it. Single-device and Android users are not affected.
 
 ## What's Changed
 * chore(deps): bump js-yaml from 3.14.2 to 3.15.0 in /zeus_modules/@lightninglabs/lnc-core by @dependabot[bot] in https://github.com/ZeusLN/zeus/pull/4206
@@ -66,31 +89,8 @@
 * [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4265
 * [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4266
 * chore(deps): bump json from 2.19.2 to 2.19.9 by @dependabot[bot] in https://github.com/ZeusLN/zeus/pull/4267
-* chore(deps): bump valibot from 1.2.0 to 1.4.2 by @dependabot[bot] in https://github.com/ZeusLN/zeus/pull/4268
-* chore(deps): migrate lnc-rn from deprecated tslint to eslint v9 by @kaloudis in https://github.com/ZeusLN/zeus/pull/4271
-* chore(deps): clear Dependabot alerts on transitive dependencies by @kaloudis in https://github.com/ZeusLN/zeus/pull/4274
-* chore(deps): bump protobufjs to v8 + protobufjs-cli 2.5.1, regenerate bindings by @kaloudis in https://github.com/ZeusLN/zeus/pull/4262
-* build: fix vendored lnc-rn bob build + add mocha test suite by @kaloudis in https://github.com/ZeusLN/zeus/pull/4275
-* LDK: Add support for 24 word seed phrases by @shubhamkmr04 in https://github.com/ZeusLN/zeus/pull/4212
-* [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4282
-* [feat] fix(LNC): route register callbacks through events to avoid new-arch crash by @kaloudis in https://github.com/ZeusLN/zeus/pull/4205
-* [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4283
-* build: run prettier on generated proto types after gen-proto by @kaloudis in https://github.com/ZeusLN/zeus/pull/4284
-* deps: fix shell-quote DoS, clean up minimatch pins by @kaloudis in https://github.com/ZeusLN/zeus/pull/4281
-* [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4290
-* fix(CLN): include unpaid invoices in Activity by @ajaysehwal in https://github.com/ZeusLN/zeus/pull/4291
-* fix: show the correct seed when backing up an inactive wallet by @ajaysehwal in https://github.com/ZeusLN/zeus/pull/4280
-* Lockscreen: prevent duress wipe in security management flows by @kaloudis in https://github.com/ZeusLN/zeus/pull/4293
-* [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4295
-* views: WalletConfiguration: lock interface for initialized LDK Node by @kaloudis in https://github.com/ZeusLN/zeus/pull/4296
-* chore(deps): bump @react-native-documents/picker from 11.0.3 to 12.0.2 by @dependabot[bot] in https://github.com/ZeusLN/zeus/pull/4249
-* [Transifex] Updates for project ZEUS by @transifex-integration[bot] in https://github.com/ZeusLN/zeus/pull/4299
-* fix(nwc): fix lookup_invoice, list_transactions, and backend invoice lookup by @ajaysehwal in https://github.com/ZeusLN/zeus/pull/4294
-* docs: add SECURITY.md with vulnerability disclosure policy by @kaloudis in https://github.com/ZeusLN/zeus/pull/4310
-* fix(CLN/LND): poll lookupInvoice in the Receive payment watcher by @kaloudis in https://github.com/ZeusLN/zeus/pull/4300
-* utils: disable REST proxy in embedded LND config by @kaloudis in https://github.com/ZeusLN/zeus/pull/4311
-* fix(swaps): always generate an independent swap rescue key by @kaloudis in https://github.com/ZeusL…]]></description>
-      <enclosure url="https://github.com/ZeusLN/zeus/releases/download/v13.2.1/zeus-v13.2.1.ipa" length="0" type="application/octet-stream" />
+* chore(deps): bump valibot from 1.2.0 to 1.4.2 by @dependabot[bot] in https://github.com/Ze…]]></description>
+      <enclosure url="https://github.com/ZeusLN/zeus/releases/download/v13.2.2/zeus-v13.2.2.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
