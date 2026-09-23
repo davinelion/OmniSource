@@ -5,8 +5,131 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json</link>
     <description>Release feed for SpotiFLAC Mobile within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/spotiflac.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>SpotiFLAC Mobile v5.0.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json</link>
+      <guid isPermaLink="false">spotiflac-5.0.0</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[SpotiFLAC 5.0.0 | SpotiFLAC-v5.0.0-ios-unsigned
+
+### New Features
+
+- **onboarding**: Add theme-aware 5.0 upgrade introduction
+- **library**: Add Mornye browsing and contextual compact navigation
+- **home**: Add large featured cards for extension feeds
+- **mornye**: Separate Search into a circular navigation button
+- **profile**: Add local profiles with backup and restore
+- **player**: Add beat-matched AutoMix and refine Mornye navigation
+- **artists**: Add branded headers and incremental release loading
+- **mornye**: Cache motion covers and refine player and search
+- **ui**: Add Mornye glass theme and adaptive music player
+- Add opt-in Discord Rich Presence on Android
+- **metadata**: Display saved ReplayGain values and refresh after analysis
+- **backend**: Migrate production backend to Rust
+- **backup**: Allow selecting categories and settings-only backups
+
+### Bug Fixes
+
+- **ci**: Audit stripped iOS archives and configure FFmpeg tests
+- Retry verification browser launch and failed searches
+- Sync lyric romanization and clear stale selection menus
+- **mornye**: Show track summary and update welcome branding
+- **metadata**: Remove nested barcode card background
+- **mornye**: Preserve icon meaning and use consistent settings accents
+- **settings**: Simplify player copy and add glass library info card
+- **ui**: Resolve album titles and show Home explicit badges
+- **ui**: Align local lyrics and refine Mornye selection
+- **player**: Preserve offline motion artwork and smooth cover changes
+- **ios**: Keep release feed bundle identity in sync
+- **android**: Validate native metadata editor results
+- Preserve source artist credits when downloading
+- **library**: Reset checkpoints and artwork on forced full scans
+- **metadata**: Read tags and covers from MP4 files named opus
+- **library**: Preserve cached covers across directory aliases
+- **download**: Log provider failures before fallback
+- **extensions**: Restore URL globals for provider link resolution
+- **download**: Preserve filenames after automatic SAF conversion
+- **backup**: Allow selecting SFLB archives for restore
+
+### Performance
+
+- **rust**: Stream discarded FLAC artwork during replacement
+- **extensions**: Avoid copying unwrapped Base64 input
+- **bridge**: Reduce metadata copies and decode large JSON off the UI isolate
+- **analysis**: Reuse sorted spectral percentile windows
+- **audio**: Share the Opus artwork metadata buffer
+- **search**: Release derived caches when track results change
+- **library**: Dispose unused playback row subscriptions
+- **metadata**: Move normalized Rust values into response envelopes
+- **rust**: Reduce peak allocations when resizing cover artwork
+- **mornye**: Reuse exact luminance contributions for contrast sampling
+- **mornye**: Release outgoing artwork decoders when replaced
+- **player**: Scope position and contrast rebuilds to controls
+- **extensions**: Collect unreachable JavaScript cycles after idle bursts
+- **images**: Decode local covers to their fitted display size
+- **extensions**: Share retained source text across manager and VMs
+- **extensions**: Reuse owned UTF-8 buffers at text boundaries
+- **metadata**: Preserve typed values across the Rust extension bridge
+- **extensions**: Validate JSON without allocating argument trees
+- **cue**: Parse SAF previews without copying audio
+- **android**: Batch SAF library recovery metadata queries
+- **library**: Batch album deletion and refresh once
+- **android**: Batch SAF lookups during download publication
+- **downloads**: Log finalization stage durations
+- **audio**: Validate FLAC remuxes before encoder fallback
+- **downloads**: Reuse lyrics supplied by the backend
+- **downloads**: Reuse HTTP connections between tracks
+- **lyrics**: Stream MP3 audio when updating ID3 lyrics
+- **analysis**: Serialize and cancel owned FFmpeg sessions
+- **backup**: Move archive processing off the UI isolate
+- **player**: Commit seek gestures once after scrubbing
+- **ui**: Pause motion headers when collapsed
+- **theme**: Bound cover palette decoding and coalesce requests
+- **rust**: Skip audio rewrites for identical FLAC metadata
+
+### Refactoring
+
+- **ui**: Unify theme styling and enlarge profile button
+
+### Styling
+
+- Remove trailing whitespace
+
+### Dependencies
+
+- **deps**: Update Flutter and iOS plugin dependencies
+
+### Chores
+
+- **rust**: Update crypto, network and UniFFI dependencies
+- **android**: Update native dependencies and build tooling
+- **analyzer**: Exclude archived internal sources
+- **release**: Set app version to 5.0.0+152
+- Update AltStore source to v4.9.6 by [@github-actions[bot]](https://github.com/github-actions[bot])
+
+
+
+
+**Full Changelog**: [v4.9.6...v5.0.0](https://github.com/spotiflacapp/SpotiFLAC-Mobile/compare/v4.9.6...v5.0.0)
+
+---
+
+### Downloads
+
+#### Android
+- **arm64**: `SpotiFLAC-v5.0.0-arm64.apk` (recommended for modern devices)
+- **arm32**: `SpotiFLAC-v5.0.0-arm32.apk` (older devices)
+
+#### iOS
+- **iOS**: `SpotiFLAC-v5.0.0-ios-unsigned.ipa` (sideload required)
+
+### Installation
+**Android**: Enable "Install from unknown sources" and install the APK
+**iOS**: Use AltStore, Sideloadly, or similar tools to sideload the IPA]]></description>
+      <enclosure url="https://github.com/spotiflacapp/SpotiFLAC-Mobile/releases/download/v5.0.0/SpotiFLAC-v5.0.0-ios-unsigned.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>SpotiFLAC Mobile v4.9.6</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json</link>

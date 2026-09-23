@@ -13,6 +13,23 @@
   },
   "trending": [
     {
+      "slug": "spotiflac",
+      "name": "SpotiFLAC Mobile",
+      "category": "music",
+      "version": "5.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
       "slug": "ytmusic",
       "name": "YTMusicUltimate",
       "category": "music",
@@ -81,20 +98,37 @@
       "downloadReachable": true
     },
     {
-      "slug": "spotiflac",
-      "name": "SpotiFLAC Mobile",
-      "category": "music",
-      "version": "4.9.6",
-      "releaseDate": "2026-09-07",
-      "score": 0.8933,
+      "slug": "inkillerplus",
+      "name": "iNKillerPlus",
+      "category": "social",
+      "version": "448.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
       "signals": {
-        "recency": 0.7333,
+        "recency": 1.0,
         "availability": 1.0,
-        "featured": 1.0,
+        "featured": 0.0,
         "verification": 1.0
       },
       "verificationLevel": "VERIFIED",
-      "featured": true,
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ttkillerplus",
+      "name": "TTKillerPlus",
+      "category": "social",
+      "version": "47.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
       "downloadReachable": true
     },
     {
@@ -136,40 +170,6 @@
       "name": "Conduit",
       "category": "utilities",
       "version": "4.1.7",
-      "releaseDate": "2026-09-22",
-      "score": 0.7933,
-      "signals": {
-        "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "synkplay",
-      "name": "Synkplay",
-      "category": "photo-video",
-      "version": "0.25.0",
-      "releaseDate": "2026-09-22",
-      "score": 0.7933,
-      "signals": {
-        "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "mangayomi",
-      "name": "Mangayomi",
-      "category": "other",
-      "version": "0.9.7",
       "releaseDate": "2026-09-22",
       "score": 0.7933,
       "signals": {
@@ -185,6 +185,57 @@
   ],
   "rising": [
     {
+      "slug": "spotiflac",
+      "name": "SpotiFLAC Mobile",
+      "category": "music",
+      "version": "5.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "inkillerplus",
+      "name": "iNKillerPlus",
+      "category": "social",
+      "version": "448.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ttkillerplus",
+      "name": "TTKillerPlus",
+      "category": "social",
+      "version": "47.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "zeus",
       "name": "Zeus",
       "category": "utilities",
@@ -295,57 +346,6 @@
       "score": 0.7933,
       "signals": {
         "recency": 0.9833,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "youpro",
-      "name": "YouPro",
-      "category": "photo-video",
-      "version": "21.38.2",
-      "releaseDate": "2026-09-21",
-      "score": 0.9867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
-      "slug": "youmod",
-      "name": "uPro Plus",
-      "category": "photo-video",
-      "version": "21.38.2",
-      "releaseDate": "2026-09-21",
-      "score": 0.9867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ytkp",
-      "name": "YTKillerPlus",
-      "category": "photo-video",
-      "version": "21.38.2",
-      "releaseDate": "2026-09-21",
-      "score": 0.7867,
-      "signals": {
-        "recency": 0.9667,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -357,6 +357,57 @@
   ],
   "recentlyUpdated": [
     {
+      "slug": "spotiflac",
+      "name": "SpotiFLAC Mobile",
+      "category": "music",
+      "version": "5.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
+    {
+      "slug": "inkillerplus",
+      "name": "iNKillerPlus",
+      "category": "social",
+      "version": "448.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ttkillerplus",
+      "name": "TTKillerPlus",
+      "category": "social",
+      "version": "47.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
       "slug": "zeus",
       "name": "Zeus",
       "category": "utilities",
@@ -474,60 +525,26 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
-    },
-    {
-      "slug": "youpro",
-      "name": "YouPro",
-      "category": "photo-video",
-      "version": "21.38.2",
-      "releaseDate": "2026-09-21",
-      "score": 0.9867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
-      "slug": "youmod",
-      "name": "uPro Plus",
-      "category": "photo-video",
-      "version": "21.38.2",
-      "releaseDate": "2026-09-21",
-      "score": 0.9867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 1.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": true,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ytkp",
-      "name": "YTKillerPlus",
-      "category": "photo-video",
-      "version": "21.38.2",
-      "releaseDate": "2026-09-21",
-      "score": 0.7867,
-      "signals": {
-        "recency": 0.9667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
     }
   ],
   "all": [
+    {
+      "slug": "spotiflac",
+      "name": "SpotiFLAC Mobile",
+      "category": "music",
+      "version": "5.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 1.0,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 1.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": true,
+      "downloadReachable": true
+    },
     {
       "slug": "ytmusic",
       "name": "YTMusicUltimate",
@@ -597,20 +614,37 @@
       "downloadReachable": true
     },
     {
-      "slug": "spotiflac",
-      "name": "SpotiFLAC Mobile",
-      "category": "music",
-      "version": "4.9.6",
-      "releaseDate": "2026-09-07",
-      "score": 0.8933,
+      "slug": "inkillerplus",
+      "name": "iNKillerPlus",
+      "category": "social",
+      "version": "448.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
       "signals": {
-        "recency": 0.7333,
+        "recency": 1.0,
         "availability": 1.0,
-        "featured": 1.0,
+        "featured": 0.0,
         "verification": 1.0
       },
       "verificationLevel": "VERIFIED",
-      "featured": true,
+      "featured": false,
+      "downloadReachable": true
+    },
+    {
+      "slug": "ttkillerplus",
+      "name": "TTKillerPlus",
+      "category": "social",
+      "version": "47.0.0",
+      "releaseDate": "2026-09-23",
+      "score": 0.8,
+      "signals": {
+        "recency": 1.0,
+        "availability": 1.0,
+        "featured": 0.0,
+        "verification": 1.0
+      },
+      "verificationLevel": "VERIFIED",
+      "featured": false,
       "downloadReachable": true
     },
     {
@@ -1043,40 +1077,6 @@
       "name": "MaxMusic",
       "category": "music",
       "version": "9.37.2",
-      "releaseDate": "2026-09-15",
-      "score": 0.7467,
-      "signals": {
-        "recency": 0.8667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "inkillerplus",
-      "name": "iNKillerPlus",
-      "category": "social",
-      "version": "447.0.0",
-      "releaseDate": "2026-09-15",
-      "score": 0.7467,
-      "signals": {
-        "recency": 0.8667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "ttkillerplus",
-      "name": "TTKillerPlus",
-      "category": "social",
-      "version": "46.9.0",
       "releaseDate": "2026-09-15",
       "score": 0.7467,
       "signals": {

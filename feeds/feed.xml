@@ -93,6 +93,147 @@
       <enclosure url="https://github.com/ZeusLN/zeus/releases/download/v13.2.2/zeus-v13.2.2.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>TTKillerPlus v47.0.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/ttkillerplus.json</link>
+      <guid isPermaLink="false">ttkillerplus-47.0.0</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[TikTok 47.0.0 | TikTok_47.0_TTKillerPlus_2.2
+
+• Fixes injection for jailbreaks may not be injected due to bundle iD missing
+- Add country flag to the profile page to know the creator origin country
+- Add follow status to new profile style user name
+- Add v46.7+ compatibility.
+- Fix like confirmation bypass on double tap.
+- Fix post date display format.
+- Fix flag button not tappable.
+- Other fixes & improvements.
+- Update base IPA to TikTok v47.0]]></description>
+      <enclosure url="https://ikghd.site/ipa/TikTok_47.0_TTKillerPlus_2.2.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>SpotiFLAC Mobile v5.0.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json</link>
+      <guid isPermaLink="false">spotiflac-5.0.0</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[SpotiFLAC 5.0.0 | SpotiFLAC-v5.0.0-ios-unsigned
+
+### New Features
+
+- **onboarding**: Add theme-aware 5.0 upgrade introduction
+- **library**: Add Mornye browsing and contextual compact navigation
+- **home**: Add large featured cards for extension feeds
+- **mornye**: Separate Search into a circular navigation button
+- **profile**: Add local profiles with backup and restore
+- **player**: Add beat-matched AutoMix and refine Mornye navigation
+- **artists**: Add branded headers and incremental release loading
+- **mornye**: Cache motion covers and refine player and search
+- **ui**: Add Mornye glass theme and adaptive music player
+- Add opt-in Discord Rich Presence on Android
+- **metadata**: Display saved ReplayGain values and refresh after analysis
+- **backend**: Migrate production backend to Rust
+- **backup**: Allow selecting categories and settings-only backups
+
+### Bug Fixes
+
+- **ci**: Audit stripped iOS archives and configure FFmpeg tests
+- Retry verification browser launch and failed searches
+- Sync lyric romanization and clear stale selection menus
+- **mornye**: Show track summary and update welcome branding
+- **metadata**: Remove nested barcode card background
+- **mornye**: Preserve icon meaning and use consistent settings accents
+- **settings**: Simplify player copy and add glass library info card
+- **ui**: Resolve album titles and show Home explicit badges
+- **ui**: Align local lyrics and refine Mornye selection
+- **player**: Preserve offline motion artwork and smooth cover changes
+- **ios**: Keep release feed bundle identity in sync
+- **android**: Validate native metadata editor results
+- Preserve source artist credits when downloading
+- **library**: Reset checkpoints and artwork on forced full scans
+- **metadata**: Read tags and covers from MP4 files named opus
+- **library**: Preserve cached covers across directory aliases
+- **download**: Log provider failures before fallback
+- **extensions**: Restore URL globals for provider link resolution
+- **download**: Preserve filenames after automatic SAF conversion
+- **backup**: Allow selecting SFLB archives for restore
+
+### Performance
+
+- **rust**: Stream discarded FLAC artwork during replacement
+- **extensions**: Avoid copying unwrapped Base64 input
+- **bridge**: Reduce metadata copies and decode large JSON off the UI isolate
+- **analysis**: Reuse sorted spectral percentile windows
+- **audio**: Share the Opus artwork metadata buffer
+- **search**: Release derived caches when track results change
+- **library**: Dispose unused playback row subscriptions
+- **metadata**: Move normalized Rust values into response envelopes
+- **rust**: Reduce peak allocations when resizing cover artwork
+- **mornye**: Reuse exact luminance contributions for contrast sampling
+- **mornye**: Release outgoing artwork decoders when replaced
+- **player**: Scope position and contrast rebuilds to controls
+- **extensions**: Collect unreachable JavaScript cycles after idle bursts
+- **images**: Decode local covers to their fitted display size
+- **extensions**: Share retained source text across manager and VMs
+- **extensions**: Reuse owned UTF-8 buffers at text boundaries
+- **metadata**: Preserve typed values across the Rust extension bridge
+- **extensions**: Validate JSON without allocating argument trees
+- **cue**: Parse SAF previews without copying audio
+- **android**: Batch SAF library recovery metadata queries
+- **library**: Batch album deletion and refresh once
+- **android**: Batch SAF lookups during download publication
+- **downloads**: Log finalization stage durations
+- **audio**: Validate FLAC remuxes before encoder fallback
+- **downloads**: Reuse lyrics supplied by the backend
+- **downloads**: Reuse HTTP connections between tracks
+- **lyrics**: Stream MP3 audio when updating ID3 lyrics
+- **analysis**: Serialize and cancel owned FFmpeg sessions
+- **backup**: Move archive processing off the UI isolate
+- **player**: Commit seek gestures once after scrubbing
+- **ui**: Pause motion headers when collapsed
+- **theme**: Bound cover palette decoding and coalesce requests
+- **rust**: Skip audio rewrites for identical FLAC metadata
+
+### Refactoring
+
+- **ui**: Unify theme styling and enlarge profile button
+
+### Styling
+
+- Remove trailing whitespace
+
+### Dependencies
+
+- **deps**: Update Flutter and iOS plugin dependencies
+
+### Chores
+
+- **rust**: Update crypto, network and UniFFI dependencies
+- **android**: Update native dependencies and build tooling
+- **analyzer**: Exclude archived internal sources
+- **release**: Set app version to 5.0.0+152
+- Update AltStore source to v4.9.6 by [@github-actions[bot]](https://github.com/github-actions[bot])
+
+
+
+
+**Full Changelog**: [v4.9.6...v5.0.0](https://github.com/spotiflacapp/SpotiFLAC-Mobile/compare/v4.9.6...v5.0.0)
+
+---
+
+### Downloads
+
+#### Android
+- **arm64**: `SpotiFLAC-v5.0.0-arm64.apk` (recommended for modern devices)
+- **arm32**: `SpotiFLAC-v5.0.0-arm32.apk` (older devices)
+
+#### iOS
+- **iOS**: `SpotiFLAC-v5.0.0-ios-unsigned.ipa` (sideload required)
+
+### Installation
+**Android**: Enable "Install from unknown sources" and install the APK
+**iOS**: Use AltStore, Sideloadly, or similar tools to sideload the IPA]]></description>
+      <enclosure url="https://github.com/spotiflacapp/SpotiFLAC-Mobile/releases/download/v5.0.0/SpotiFLAC-v5.0.0-ios-unsigned.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>Nuvio v0.5.1</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
       <guid isPermaLink="false">nuvio-0.5.1</guid>
@@ -106,6 +247,24 @@
 - [fix(details) adapt to the new aiom season poster method (#2038)](https://github.com/NuvioMedia/NuvioMobile/pull/2038) @chrisk325  
 - [Feature/spanish es translation (#2039)](https://github.com/NuvioMedia/NuvioMobile/pull/2039) @IberianSoldierPC]]></description>
       <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.1-beta/nuvio-0.5.1-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>iNKillerPlus v448.0.0</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/inkillerplus.json</link>
+      <guid isPermaLink="false">inkillerplus-448.0.0</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Instagram 448.0.0 | Instagram_448.0_iNKillerPlus_5.2
+
+• Fixes a possible crash on rootless JB
+- Add alternative icon to jailbreak since iG include the icon inside the app
+- Fixes show app icon in settings for ios 26 - 27 as was disabled in previous versions
+- Fixes show email open in profiles or copied text to detect emails automaticlly
+- Fixes profile bio long press to copy detect email and links
+- Fixes read DM icon
+- Fixes user exception for direct message
+- Add full compatibility with IG v445+
+- Updated base IPA to Instagram v448.0]]></description>
+      <enclosure url="https://ikghd.site/ipa/Instagram_448.0_iNKillerPlus_5.2.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>YTMusicUltimate v9.38.1</title>
@@ -583,148 +742,6 @@ YouTube 21.37.5 requires iOS 17, so there are two IPAs:
 ### Engine
 Updated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).]]></description>
       <enclosure url="https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>AnymeX v3.1.8</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/anymex.json</link>
-      <guid isPermaLink="false">anymex-3.1.8</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[AnymeX 3.1.8 | AnymeX-iOS-v3.1.8
-
-### 🆕 Changelog
-### 🌟 Features
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/84601c75) full cast support by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/a8d6b9db) option to hide/show continue watching by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/5b39e824) enhanced orientation control by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/d2c4fd5c) Full download support on metadata services, lots of fixes by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/d1e44740) continue watching bar on home by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/6f030199) improved episode releases cards by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/64de01b2) fcm support so i can notify users anytime i want by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/ff1551de) external font support (bring your own font for the entire app) by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/674b53a6) add Smoke Trace logo animation, custom animated logo support (#578) by @Shebyyy
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/ec836e49) persistent ui mode on wrong title sheet and fix title not showing up fully by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/9d7868f7) discord rpc settings by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/d10a6f0c) custom font import for subtitles font style by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/e2cbbe56) proper progress, total released total episode count in cards by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/9fd0c0b2) proper message handler for anilist errors by @RyanYuuki
-
-
-### 🔧 Bug Fixes & Improvements
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/79e96c3c) repeated search calls on errror fixed by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/9605b5f1) fixed tracking issues and new episode release stale states by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/5b69789a) fixed speed and audio pane not showing for downloaded media by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/a277be02) overflow fix on anime and manga list by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/f6741885) fixed repos showing as added yet empty list by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/5106cde0) wait until login info is loaded for deeplink by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/fd46a39a) fixed animation delay for tabs on calendar page by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/c40c855b) safe guarding media type by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/a9627284) fixed ai picks redirecting to wrong page and fixed ui by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/12f79048) fixed dialog jank when keyboard opens by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/d8294db8) fix:: fixed ui not reflecting instant changes and header ui overflow by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/984de5b2) fixed no sound issue on some sources by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/2cbdfc02) fixed bad logic for episode watch detection by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/7998b5a1) fixed stale condition of bridge by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/2608a048) fixed downloader causing issues on background by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/10850745) fixed app not working when offline by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/32bd38ca) fixed season wise bindings for proper tracking across seasons by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/7864902f) fixed lists not being reactive and duplicated by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/561f9f69) fixed torrent by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/feb5f8ed) fixed a fatal isar error when saving stats by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/c20aa252) fixed swipe indicator theme not persisting by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/05656a18) fixed welcome dialog reappearing by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/da404c0a) fixed audio delay on player by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/b3a76f2b) fixed sub/dub not persisting across all episodes by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/d34afa8c) fixed episode comparison logic to include season in the picture by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/f8fa1d6a) fixed anilist breaking for filters and calendar by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/325a838f) fixed repeated fetch calls when pages fails to load, and add retry button by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/56347499) fixed cs sources not installing by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/23e76434) fixed inaccurate info on episode releases cards by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/052e2664) fixed broken padding causing overflow on user stats cards by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/93112761) filters fallback for anilist by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/d3d207d5) proper error handler on calendar page by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/7809faa7) fixed appbar disappear even on media tab change by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/2d804281) synced scanlator with continue chapter button by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/998f7a81) fixed a minor database startup error by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/3f022eba) fixed some minor ui issues by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/b34fe002) removed reference to old novel search page causing issues by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/2dd4b8ee) fixed lines truncate in desc by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/a7e38c19) fixed fatal io crash when updating stats by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/74f65399) fixed the issue of pages not loading on reader, fixed tracker not changing to CURRENT on chapter read by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/8b741ac6) fixed updater showing extra 'v' prefix by @RyanYuuki
-
-
-### 🔧 Refactors
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/8d6c014f) migration for bottom nav bar on scaffold by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/69c3cc94) structure improvement of big caruosel by @RyanYuuki
-
-
-### 🎨 Style Changes
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/8f320a49) minimal ui for new episode releases by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/a53ad2e3) some ui changes and scroll fixes by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/19da8e2a) little improvement to info below title on media details page by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/4335f1ef) calendar ui revamp by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/2710c8df) improved ui of anime list and manga list page by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/1fc0abd1) tidied up the ui of history editor and list editor page and some fixes by @RyanYuuki
-
-
-### 🚀 Performance Improvements
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/66392e33) switched downloader to rhttp for faster download speed by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/9008b1d0) player enhancement by @RyanYuuki
-
-
-### 🧹 Chores & Documentation
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/3081f6e5) bump version to v3.1.8 (patch release) by @RyanYuuki
-- [֍](https://github.com/RyanYuuki/AnymeX/commit/869066b0) dropped bridge mode by …]]></description>
-      <enclosure url="https://github.com/RyanYuuki/AnymeX/releases/download/v3.1.8/AnymeX-iOS-v3.1.8.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YTKillerPlus v21.37.5</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/ytkp.json</link>
-      <guid isPermaLink="false">ytkp-21.37.5</guid>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.37.5 | YTKillerPlus_21.37.5_6.1
-
-### Latest Release, ENJOY!!
-
-- **Cracked by** [u/lowiqentity](https://www.reddit.com/user/lowiqentity/)
-
-> [!NOTE]
-> - **Sidestore is no longer supported!!.**
-> - **YTUHD** is not included. 4K is available for A16+ devices.
-> - use **YTKACE or any other mod** for downloading. dev intentionally broke download feature.
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` `YTHoldForSpeed` `YTNativeShare` `YTweaks`
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino`  `VolumeBoostYT` `PleaseDontStopTheMusic`
-
-> [!WARNING]
-> - Extra tweaks that are bundled may be unstable on newer versions.
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/ytkp-ipa1/YTKillerPlus_21.37.5_6.1.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>YouPro v21.37.5</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/youpro.json</link>
-      <guid isPermaLink="false">youpro-21.37.5</guid>
-      <pubDate>Sat, 19 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[YouTube 21.37.5 | YouProExtra_21.37.5_1.3.1
-
-### Latest Release, ENJOY!!
-> [!NOTE]
-> - **YTUHD** is not included. 4K60HDR is available for A12+ devices.
-> - if you're signed out you can sign in manually. 
-> - no iSponsorBlock. (unstable in newer builds)
-> - for <A15 devices press share button in the arrow down panel and use external player for downloaded videos.
-> - - -
-> #### Extra Tweaks:
-> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` 
-> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` 
-
-> [!WARNING]
-> - 21.34.3+ builds require iOS 17+ now.]]></description>
-      <enclosure url="https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa3/YouProExtra_21.37.5_1.3.1.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
