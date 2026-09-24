@@ -3,13 +3,13 @@
   "generatedAt": "2026-09-24",
   "totals": {
     "apps": 130,
-    "verified": 127,
+    "verified": 129,
     "communityVerified": 1,
-    "unverified": 2,
+    "unverified": 0,
     "hashVerified": 81,
     "official": 111,
     "communityBuilds": 19,
-    "avgTrustScore": 6.88,
+    "avgTrustScore": 6.94,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -414,7 +414,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://apt.cercube.com/files/com.cercube.ios_6.1.3_iphoneos-arm64.deb",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -712,6 +712,27 @@
       "trustBadge": "Trusted"
     },
     {
+      "app": "glow",
+      "name": "Glow",
+      "status": "VERIFIED",
+      "provenance": "community",
+      "hash_verified": false,
+      "method": "altstore",
+      "publisher": "927tx/IPA-Vault",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": false
+      },
+      "reasons": [
+        "official upstream (altstore)"
+      ],
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
+      "trustScore": 5.9,
+      "trustBadge": "Community"
+    },
+    {
       "app": "gopeed",
       "name": "Gopeed",
       "status": "VERIFIED",
@@ -792,7 +813,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/iMe-12.8.1-MxGram.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -813,7 +834,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -834,6 +855,27 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://ikghd.site/ipa/Instagram_448.0_iNKillerPlus_5.2.ipa",
+      "trustScore": 6.0,
+      "trustBadge": "Community"
+    },
+    {
+      "app": "iqface",
+      "name": "iQFace",
+      "status": "VERIFIED",
+      "provenance": "community",
+      "hash_verified": false,
+      "method": "altstore",
+      "publisher": "927tx/IPA-Vault",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": true,
+        "hashVerified": false
+      },
+      "reasons": [
+        "official upstream (altstore)"
+      ],
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-580.0.0-iQFace.ipa",
       "trustScore": 5.9,
       "trustBadge": "Community"
     },
@@ -1169,8 +1211,8 @@
       "reasons": [
         "official upstream (altstore)"
       ],
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
-      "trustScore": 5.9,
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-Flow.ipa",
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -1232,8 +1274,8 @@
       "reasons": [
         "official upstream (altstore)"
       ],
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
-      "trustScore": 5.9,
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-MSGPlusX.ipa",
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -1338,7 +1380,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.79.0-NexaSC.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -1737,7 +1779,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-RyukGram.ipa",
-      "trustScore": 5.8,
+      "trustScore": 5.9,
       "trustBadge": "Community"
     },
     {
@@ -1947,7 +1989,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-448.0.0-Sparkle.ipa",
-      "trustScore": 5.8,
+      "trustScore": 5.9,
       "trustBadge": "Community"
     },
     {
@@ -2094,7 +2136,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Swiftgram-12.9.3-iQTele.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -2178,7 +2220,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Telegram-12.9.4-iQTele.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -2199,7 +2241,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-448.0-ThreadSaver.ipa",
-      "trustScore": 5.8,
+      "trustScore": 5.9,
       "trustBadge": "Community"
     },
     {
@@ -2304,7 +2346,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://ikghd.site/ipa/TikTok_47.0_TTKillerPlus_2.2.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -2325,7 +2367,7 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Turrit-1.5.4-iQTele.ipa",
-      "trustScore": 5.9,
+      "trustScore": 6.0,
       "trustBadge": "Community"
     },
     {
@@ -2686,48 +2728,6 @@
       "trustBadge": "Trusted"
     },
     {
-      "app": "glow",
-      "name": "Glow",
-      "status": "UNVERIFIED",
-      "provenance": "community",
-      "hash_verified": false,
-      "method": "altstore",
-      "publisher": "927tx/IPA-Vault",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": false
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-      "trustScore": 2.9,
-      "trustBadge": "Experimental"
-    },
-    {
-      "app": "iqface",
-      "name": "iQFace",
-      "status": "UNVERIFIED",
-      "provenance": "community",
-      "hash_verified": false,
-      "method": "altstore",
-      "publisher": "927tx/IPA-Vault",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": false,
-        "hashVerified": false
-      },
-      "reasons": [
-        "failed check: fileAvailable"
-      ],
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
-      "trustScore": 2.9,
-      "trustBadge": "Experimental"
-    },
-    {
       "app": "uyouenhanced",
       "name": "uYouEnhanced",
       "status": "COMMUNITY VERIFIED",
@@ -2745,8 +2745,8 @@
         "community package (manual-mirror) — build provenance is not the upstream developer"
       ],
       "downloadURL": "https://archive.org/download/YouTubeRebornPlus_19.10.5-4.2.6/yt-uYE-21144-305.ipa",
-      "trustScore": 4.9,
-      "trustBadge": "Experimental"
+      "trustScore": 5.0,
+      "trustBadge": "Community"
     }
   ]
 }

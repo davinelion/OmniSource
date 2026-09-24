@@ -1,24 +1,50 @@
 {
   "generatedAt": "2026-09-24",
-  "feedVersion": "ba8890071198",
+  "feedVersion": "523f2ab99454",
   "apps": {
     "total": 130,
-    "reachable": 128,
-    "unreachable": 2,
-    "verified": 127
+    "reachable": 130,
+    "unreachable": 0,
+    "verified": 129
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 121,
-    "updated": 0,
+    "incrementalHits": 117,
+    "updated": 4,
     "failed": 0,
     "apiRequests": 116
   },
-  "unreachable": [
-    "glow",
-    "iqface"
+  "unreachable": [],
+  "updates": [
+    {
+      "slug": "glow",
+      "name": "Glow",
+      "previousVersion": "577.1",
+      "version": "2026.38.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "iqface",
+      "name": "iQFace",
+      "previousVersion": "579.0.0",
+      "version": "580.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "messenger-flow",
+      "name": "Messenger Flow",
+      "previousVersion": "579.0.0",
+      "version": "580.0.0",
+      "kind": "updated"
+    },
+    {
+      "slug": "msgplusx",
+      "name": "MSGPlusX",
+      "previousVersion": "579.0.0",
+      "version": "580.0.0",
+      "kind": "updated"
+    }
   ],
-  "updates": [],
   "errors": [],
   "translations": {
     "ar": 100,
