@@ -6,9 +6,9 @@
     "stale": 180,
     "archived": 365
   },
-  "count": 59,
+  "count": 58,
   "summary": {
-    "warning": 10,
+    "warning": 9,
     "stale": 13,
     "archived": 35,
     "critical": 1
@@ -649,18 +649,6 @@
       "supersededReleases": 0,
       "reasons": [
         "no update for 125 days (threshold 90)"
-      ]
-    },
-    {
-      "slug": "monal",
-      "name": "Monal",
-      "lastUpdate": "2026-05-27",
-      "daysSinceUpdate": 120,
-      "classification": "warning",
-      "removedReleases": 0,
-      "supersededReleases": 0,
-      "reasons": [
-        "no update for 120 days (threshold 90)"
       ]
     },
     {
@@ -1585,14 +1573,12 @@
     {
       "slug": "monal",
       "name": "Monal",
-      "lastUpdate": "2026-05-27",
-      "daysSinceUpdate": 120,
-      "classification": "warning",
+      "lastUpdate": "2026-09-24",
+      "daysSinceUpdate": 0,
+      "classification": "healthy",
       "removedReleases": 0,
       "supersededReleases": 0,
-      "reasons": [
-        "no update for 120 days (threshold 90)"
-      ]
+      "reasons": []
     },
     {
       "slug": "jellybook",

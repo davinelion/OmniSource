@@ -5,22 +5,19 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/monal.json</link>
     <description>Release feed for Monal within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/monal.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Monal v6.4.21</title>
+      <title>Monal v6.4.22</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/monal.json</link>
-      <guid isPermaLink="false">monal-6.4.21</guid>
-      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Monal 6.4.21 | Monal
+      <guid isPermaLink="false">monal-6.4.22</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Monal 6.4.22 | Monal
 
-- Show last usage timestamp of OMEMO keys
-- Use the iOS 18 UI in the share sheet
-- Allow using any language in the Display Name field in account settings
-- Try to improve location sharing accuracy
-- Improve contact last activity timestamps
-- Fix several bugs]]></description>
-      <enclosure url="https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa" length="38349660" type="application/octet-stream" />
+- Improve SRV-record handling for dot records
+- Allow voice-over localization of loading spinner in the chats overview
+- Obfuscate upload filenames when sending encrypted files]]></description>
+      <enclosure url="https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>
