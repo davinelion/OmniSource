@@ -3,13 +3,13 @@
   "generatedAt": "2026-09-24",
   "totals": {
     "apps": 130,
-    "verified": 129,
+    "verified": 127,
     "communityVerified": 1,
-    "unverified": 0,
+    "unverified": 2,
     "hashVerified": 81,
     "official": 111,
     "communityBuilds": 19,
-    "avgTrustScore": 6.93,
+    "avgTrustScore": 6.88,
     "trustLevels": [
       "Verified",
       "Trusted",
@@ -712,27 +712,6 @@
       "trustBadge": "Trusted"
     },
     {
-      "app": "glow",
-      "name": "Glow",
-      "status": "VERIFIED",
-      "provenance": "community",
-      "hash_verified": false,
-      "method": "altstore",
-      "publisher": "927tx/IPA-Vault",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": true,
-        "hashVerified": false
-      },
-      "reasons": [
-        "official upstream (altstore)"
-      ],
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-      "trustScore": 5.9,
-      "trustBadge": "Community"
-    },
-    {
       "app": "gopeed",
       "name": "Gopeed",
       "status": "VERIFIED",
@@ -855,27 +834,6 @@
         "official upstream (altstore)"
       ],
       "downloadURL": "https://ikghd.site/ipa/Instagram_448.0_iNKillerPlus_5.2.ipa",
-      "trustScore": 5.9,
-      "trustBadge": "Community"
-    },
-    {
-      "app": "iqface",
-      "name": "iQFace",
-      "status": "VERIFIED",
-      "provenance": "community",
-      "hash_verified": false,
-      "method": "altstore",
-      "publisher": "927tx/IPA-Vault",
-      "checks": {
-        "metadata": true,
-        "urls": true,
-        "fileAvailable": true,
-        "hashVerified": false
-      },
-      "reasons": [
-        "official upstream (altstore)"
-      ],
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
       "trustScore": 5.9,
       "trustBadge": "Community"
     },
@@ -2726,6 +2684,48 @@
       "downloadURL": "https://github.com/ZeusLN/zeus/releases/download/v13.2.2/zeus-v13.2.2.ipa",
       "trustScore": 7.5,
       "trustBadge": "Trusted"
+    },
+    {
+      "app": "glow",
+      "name": "Glow",
+      "status": "UNVERIFIED",
+      "provenance": "community",
+      "hash_verified": false,
+      "method": "altstore",
+      "publisher": "927tx/IPA-Vault",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": false,
+        "hashVerified": false
+      },
+      "reasons": [
+        "failed check: fileAvailable"
+      ],
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
+      "trustScore": 2.9,
+      "trustBadge": "Experimental"
+    },
+    {
+      "app": "iqface",
+      "name": "iQFace",
+      "status": "UNVERIFIED",
+      "provenance": "community",
+      "hash_verified": false,
+      "method": "altstore",
+      "publisher": "927tx/IPA-Vault",
+      "checks": {
+        "metadata": true,
+        "urls": true,
+        "fileAvailable": false,
+        "hashVerified": false
+      },
+      "reasons": [
+        "failed check: fileAvailable"
+      ],
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+      "trustScore": 2.9,
+      "trustBadge": "Experimental"
     },
     {
       "app": "uyouenhanced",

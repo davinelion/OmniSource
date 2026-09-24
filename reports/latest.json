@@ -3,34 +3,22 @@
   "feedVersion": "ba8890071198",
   "apps": {
     "total": 130,
-    "reachable": 130,
-    "unreachable": 0,
-    "verified": 129
+    "reachable": 128,
+    "unreachable": 2,
+    "verified": 127
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 119,
-    "updated": 2,
+    "incrementalHits": 121,
+    "updated": 0,
     "failed": 0,
     "apiRequests": 116
   },
-  "unreachable": [],
-  "updates": [
-    {
-      "slug": "stikdebug",
-      "name": "StikDebug",
-      "previousVersion": "3.1.10",
-      "version": "3.1.11",
-      "kind": "updated"
-    },
-    {
-      "slug": "dopamine",
-      "name": "Dopamine",
-      "previousVersion": "3.0.9",
-      "version": "3.0.10",
-      "kind": "updated"
-    }
+  "unreachable": [
+    "glow",
+    "iqface"
   ],
+  "updates": [],
   "errors": [],
   "translations": {
     "ar": 100,

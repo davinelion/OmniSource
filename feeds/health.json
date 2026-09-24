@@ -1,13 +1,13 @@
 {
   "generatedAt": "2026-09-24",
-  "lastEventAt": "2026-09-23",
+  "lastEventAt": "2026-09-24",
   "totals": {
     "apps": 130,
-    "reachable": 130,
-    "unreachable": 0,
+    "reachable": 128,
+    "unreachable": 2,
     "featured": 7,
-    "healthy": 130,
-    "warning": 0,
+    "healthy": 128,
+    "warning": 2,
     "critical": 0
   },
   "apps": [
@@ -1140,17 +1140,17 @@
       "version": "577.1",
       "updatedAt": "2026-09-05",
       "sizeBytes": 226667533,
-      "downloadReachable": true,
-      "detail": "HTTP 200",
-      "statusSince": "2026-09-18",
+      "downloadReachable": false,
+      "detail": "HTTP 404",
+      "statusSince": "2026-09-24",
       "updatedDaysAgo": 19,
       "stale": false,
-      "healthScore": 75,
-      "healthStatus": "healthy",
+      "healthScore": 54,
+      "healthStatus": "warning",
       "scoreBreakdown": {
-        "downloadSuccess": 0.9333,
+        "downloadSuccess": 0.9,
         "updateFrequency": 0.5,
-        "releaseAvailability": 1.0,
+        "releaseAvailability": 0.0,
         "metadataCompleteness": 0.625,
         "sourceReliability": 0.5
       }
@@ -1206,17 +1206,17 @@
       "version": "579.0.0",
       "updatedAt": "2026-09-16",
       "sizeBytes": 228632105,
-      "downloadReachable": true,
-      "detail": "HTTP 200",
-      "statusSince": "2026-09-18",
+      "downloadReachable": false,
+      "detail": "HTTP 404",
+      "statusSince": "2026-09-24",
       "updatedDaysAgo": 8,
       "stale": false,
-      "healthScore": 75,
-      "healthStatus": "healthy",
+      "healthScore": 54,
+      "healthStatus": "warning",
       "scoreBreakdown": {
-        "downloadSuccess": 0.9333,
+        "downloadSuccess": 0.9,
         "updateFrequency": 0.5,
-        "releaseAvailability": 1.0,
+        "releaseAvailability": 0.0,
         "metadataCompleteness": 0.625,
         "sourceReliability": 0.5
       }

@@ -1039,23 +1039,6 @@
       "downloadReachable": true
     },
     {
-      "slug": "iqface",
-      "name": "iQFace",
-      "category": "social",
-      "version": "579.0.0",
-      "releaseDate": "2026-09-16",
-      "score": 0.7467,
-      "signals": {
-        "recency": 0.8667,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
       "slug": "messenger-flow",
       "name": "Messenger Flow",
       "category": "social",
@@ -1302,23 +1285,6 @@
       "score": 0.6867,
       "signals": {
         "recency": 0.7167,
-        "availability": 1.0,
-        "featured": 0.0,
-        "verification": 1.0
-      },
-      "verificationLevel": "VERIFIED",
-      "featured": false,
-      "downloadReachable": true
-    },
-    {
-      "slug": "glow",
-      "name": "Glow",
-      "category": "social",
-      "version": "577.1",
-      "releaseDate": "2026-09-05",
-      "score": 0.6733,
-      "signals": {
-        "recency": 0.6833,
         "availability": 1.0,
         "featured": 0.0,
         "verification": 1.0
@@ -2737,6 +2703,40 @@
       "verificationLevel": "VERIFIED",
       "featured": false,
       "downloadReachable": true
+    },
+    {
+      "slug": "iqface",
+      "name": "iQFace",
+      "category": "social",
+      "version": "579.0.0",
+      "releaseDate": "2026-09-16",
+      "score": 0.3467,
+      "signals": {
+        "recency": 0.8667,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
+    },
+    {
+      "slug": "glow",
+      "name": "Glow",
+      "category": "social",
+      "version": "577.1",
+      "releaseDate": "2026-09-05",
+      "score": 0.2733,
+      "signals": {
+        "recency": 0.6833,
+        "availability": 0.0,
+        "featured": 0.0,
+        "verification": 0.0
+      },
+      "verificationLevel": "UNVERIFIED",
+      "featured": false,
+      "downloadReachable": false
     }
   ]
 }
