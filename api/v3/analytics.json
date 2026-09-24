@@ -1,26 +1,26 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "2a61debc5b37",
+  "feedVersion": "12338d3505e1",
   "data": {
     "schemaVersion": 1,
-    "generatedAt": "2026-09-23",
-    "lastSync": "2026-09-23",
+    "generatedAt": "2026-09-24",
+    "lastSync": "2026-09-24",
     "totals": {
       "apps": 130,
       "sources": 114,
-      "verifiedApps": 129,
+      "verifiedApps": 127,
       "communityVerifiedApps": 1,
-      "unverifiedApps": 0,
+      "unverifiedApps": 2,
       "hashVerifiedApps": 81,
-      "verified": 129,
+      "verified": 127,
       "community_verified": 1,
-      "unverified": 0,
+      "unverified": 2,
       "featuredApps": 7,
-      "downloadsReachable": 130,
-      "deadLinks": 0,
+      "downloadsReachable": 128,
+      "deadLinks": 2,
       "newAppsThisWeek": 3,
-      "updatedAppsThisWeek": 42,
+      "updatedAppsThisWeek": 38,
       "clientsSupported": 7
     },
     "newThisWeek": [
@@ -51,12 +51,60 @@
     ],
     "updatedThisWeek": [
       {
+        "slug": "inkillerplus",
+        "name": "iNKillerPlus",
+        "version": "448.0.0",
+        "previousVersion": "447.0.0",
+        "date": "2026-09-23",
+        "downloadURL": "https://ikghd.site/ipa/Instagram_448.0_iNKillerPlus_5.2.ipa"
+      },
+      {
+        "slug": "zeus",
+        "name": "Zeus",
+        "version": "13.2.2",
+        "previousVersion": "13.2.1",
+        "date": "2026-09-23",
+        "downloadURL": "https://github.com/ZeusLN/zeus/releases/download/v13.2.2/zeus-v13.2.2.ipa"
+      },
+      {
+        "slug": "ttkillerplus",
+        "name": "TTKillerPlus",
+        "version": "47.0.0",
+        "previousVersion": "46.9.0",
+        "date": "2026-09-23",
+        "downloadURL": "https://ikghd.site/ipa/TikTok_47.0_TTKillerPlus_2.2.ipa"
+      },
+      {
+        "slug": "stikdebug",
+        "name": "StikDebug",
+        "version": "3.1.11",
+        "previousVersion": "3.1.10",
+        "date": "2026-09-23",
+        "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa"
+      },
+      {
+        "slug": "spotiflac",
+        "name": "SpotiFLAC Mobile",
+        "version": "5.0.0",
+        "previousVersion": "4.9.6",
+        "date": "2026-09-23",
+        "downloadURL": "https://github.com/spotiflacapp/SpotiFLAC-Mobile/releases/download/v5.0.0/SpotiFLAC-v5.0.0-ios-unsigned.ipa"
+      },
+      {
         "slug": "nuvio",
         "name": "Nuvio",
         "version": "0.5.1",
         "previousVersion": "0.5.0",
         "date": "2026-09-23",
         "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.1-beta/nuvio-0.5.1-full-release.ipa"
+      },
+      {
+        "slug": "dopamine",
+        "name": "Dopamine",
+        "version": "3.0.10",
+        "previousVersion": "3.0.9",
+        "date": "2026-09-23",
+        "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa"
       },
       {
         "slug": "ytmusic",
@@ -305,86 +353,6 @@
         "previousVersion": "0.9.3",
         "date": "2026-09-17",
         "downloadURL": "https://github.com/ra1ncord/RainTweak/releases/download/v1.2.0/RainTweak.ipa"
-      },
-      {
-        "slug": "iqface",
-        "name": "iQFace",
-        "version": "579.0.0",
-        "previousVersion": "578.1",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa"
-      },
-      {
-        "slug": "threadsaver",
-        "name": "ThreadSaver",
-        "version": "447.0",
-        "previousVersion": "446.1",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Threads-447.0-ThreadSaver.ipa"
-      },
-      {
-        "slug": "sparkle",
-        "name": "Sparkle",
-        "version": "447.0.0",
-        "previousVersion": "446.0.0",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-Sparkle.ipa"
-      },
-      {
-        "slug": "ryukgram",
-        "name": "RyukGram",
-        "version": "447.0.0",
-        "previousVersion": "446.0.0",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Instagram-447.0.0-RyukGram.ipa"
-      },
-      {
-        "slug": "playtorrio",
-        "name": "PlayTorrio",
-        "version": "1.1.6",
-        "previousVersion": "1.1.5",
-        "date": "2026-09-16",
-        "downloadURL": "https://github.com/ayman708-UX/PlayTorrioV3/releases/download/v1.1.6/PlayTorrio-iOS.ipa"
-      },
-      {
-        "slug": "nexasc",
-        "name": "NexaSC",
-        "version": "8.78.0",
-        "previousVersion": "8.77.0",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/SoundCloud-8.78.0-NexaSC.ipa"
-      },
-      {
-        "slug": "messenger-flow",
-        "name": "Messenger Flow",
-        "version": "579.0.0",
-        "previousVersion": "578.1.0",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa"
-      },
-      {
-        "slug": "msgplusx",
-        "name": "MSGPlusX",
-        "version": "579.0.0",
-        "previousVersion": "578.1.0",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa"
-      },
-      {
-        "slug": "infuseplus",
-        "name": "Infuse Plus",
-        "version": "8.5.5",
-        "previousVersion": "8.5.3",
-        "date": "2026-09-16",
-        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Infuse-8.5.5-Infuse-Plus.ipa"
-      },
-      {
-        "slug": "conduit",
-        "name": "Conduit",
-        "version": "4.1.6",
-        "previousVersion": "4.1.5",
-        "date": "2026-09-16",
-        "downloadURL": "https://github.com/cogwheel0/conduit/releases/download/v4.1.6/conduit.ipa"
       }
     ],
     "topCategories": [
@@ -422,9 +390,9 @@
       }
     ],
     "verification": {
-      "VERIFIED": 129,
+      "VERIFIED": 127,
       "COMMUNITY VERIFIED": 1,
-      "UNVERIFIED": 0
+      "UNVERIFIED": 2
     },
     "recentUpdates": [
       {
@@ -480,13 +448,13 @@
     ],
     "history": [
       {
-        "date": "2026-09-23",
+        "date": "2026-09-24",
         "apps": 130,
         "sources": 114,
-        "verified": 129,
-        "deadLinks": 0,
+        "verified": 127,
+        "deadLinks": 2,
         "newThisWeek": 3,
-        "updatedThisWeek": 42
+        "updatedThisWeek": 38
       }
     ]
   }
