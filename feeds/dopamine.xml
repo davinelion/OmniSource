@@ -5,17 +5,18 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/dopamine.json</link>
     <description>Release feed for Dopamine within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 22 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/dopamine.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>Dopamine v3.0.9</title>
+      <title>Dopamine v3.0.10</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/dopamine.json</link>
-      <guid isPermaLink="false">dopamine-3.0.9</guid>
-      <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Dopamine 3.0.9 | Dopamine
+      <guid isPermaLink="false">dopamine-3.0.10</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Dopamine 3.0.10 | Dopamine
 
-- Fix jailbreak apps not being removed from home screen when removing the jailbreak on iOS 18.0 - 18.3.1 too]]></description>
-      <enclosure url="https://github.com/opa334/Dopamine/releases/download/3.0.9/Dopamine.ipa" length="55409206" type="application/octet-stream" />
+- Expose an API to frida that allows it to hook memory over hookd, fixes panics when using frida on iOS 26+ (Fix is in frida-gum upstream but a stable build on fridas end is still pending) (contributed by @devnoname120)
+- Fix Xcode debugging being broken on iOS 17+ after a userspace reboot if a developer disk image was already mounted before the userspace reboot]]></description>
+      <enclosure url="https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

@@ -111,6 +111,24 @@
       <enclosure url="https://ikghd.site/ipa/TikTok_47.0_TTKillerPlus_2.2.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
+      <title>StikDebug v3.1.11</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json</link>
+      <guid isPermaLink="false">stikdebug-3.1.11</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[StikDebug 3.1.11 | StikDebug-3.1.11
+
+Transitions to mounting the DDI via cryptex, should fix issues with the iPhone 18 Pro series.
+
+## What's Changed
+* Add Malloc Debugging by @Leviidev in https://github.com/StikDebug/StikDebug/pull/460
+
+## New Contributors
+* @Leviidev made their first contribution in https://github.com/StikDebug/StikDebug/pull/460
+
+**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.10...3.1.11]]></description>
+      <enclosure url="https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
       <title>SpotiFLAC Mobile v5.0.0</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/spotiflac.json</link>
       <guid isPermaLink="false">spotiflac-5.0.0</guid>
@@ -265,6 +283,17 @@
 - Add full compatibility with IG v445+
 - Updated base IPA to Instagram v448.0]]></description>
       <enclosure url="https://ikghd.site/ipa/Instagram_448.0_iNKillerPlus_5.2.ipa" length="0" type="application/octet-stream" />
+    </item>
+    <item>
+      <title>Dopamine v3.0.10</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/dopamine.json</link>
+      <guid isPermaLink="false">dopamine-3.0.10</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Dopamine 3.0.10 | Dopamine
+
+- Expose an API to frida that allows it to hook memory over hookd, fixes panics when using frida on iOS 26+ (Fix is in frida-gum upstream but a stable build on fridas end is still pending) (contributed by @devnoname120)
+- Fix Xcode debugging being broken on iOS 17+ after a userspace reboot if a developer disk image was already mounted before the userspace reboot]]></description>
+      <enclosure url="https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa" length="0" type="application/octet-stream" />
     </item>
     <item>
       <title>YTMusicUltimate v9.38.1</title>
@@ -668,80 +697,6 @@ YouTube 21.37.5 requires iOS 17, so there are two IPAs:
 • `YTKACE_1.0.0_YouTube_21.37.5.ipa` for iOS 17 and newer
 • `YTKACE_1.0.0_YouTube_iOS16_21.33.6.ipa` for iOS 16]]></description>
       <enclosure url="https://github.com/itzzace/ytkace/releases/download/v1.0.0/YTKACE_1.0.0_YouTube_21.37.5.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Table Habit v1.27.9</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/tablehabit.json</link>
-      <guid isPermaLink="false">tablehabit-1.27.9</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Table Habit 1.27.9 | mhabit-unsigned
-
-# Release: v1.27.9+198
-
-> Includes updates since the previous stable release, v1.27.6+195.
-
-## ✨ Features
-
-- Cycle check-ins from unknown to done, skipped, and back to unknown (#657)
-  - Delete a single check-in or several at once with confirmation
-  - Sync deletions across devices and keep record identity for later check-ins
-- Improve dialogs and page layouts across window sizes (#661)
-  - Adapt sheets and dialogs when resizing while preserving the open form
-    and navigation state
-  - Migrate group management, sync editing, changelog, donation, and about
-    dialogs to shared adaptive presentation
-  - Keep nested navigation and close confirmation within the active dialog
-  - Align scrolling page headers, safe areas, and window-control avoidance
-- Improve habit detail actions and refresh retained details when returning
-  to them (#662)
-- Improve Settings, grouped lists, and dialogs across window sizes (#663)
-  - Add date format, reminder, export, import progress, and group editing flows
-  - Keep import results and group actions tied to the selected items
-- Preserve unknown WebDAV fields when syncing groups and records, improving
-  compatibility with newer app versions (#665)
-
-## 🐛 Fixes
-
-- Restore batch check-in actions for selected habits in Apple layouts (#661)
-- Preserve Settings scroll position when rebuilding the page (#661)
-- Prevent a delayed group save from closing the group selector after the
-  user has already returned from the creation form (#661)
-- Improve loading error recovery (#662)
-- Bound import concurrency and expose failures for individual items (#663)
-
-## 🌐 Localization
-
-- Update Italian translation, thanks to Simone De Carli's contribution on
-  Weblate (#664)
-
-[Full Changelog](https://github.com/FriesI23/mhabit/compare/v1.27.6+195...v1.27.9+198)]]></description>
-      <enclosure url="https://github.com/FriesI23/mhabit/releases/download/v1.27.9%2B198/mhabit-unsigned.ipa" length="0" type="application/octet-stream" />
-    </item>
-    <item>
-      <title>Reynard v0.14.0</title>
-      <link>https://iamsmmh.github.io/OmniSource/feeds/reynard.json</link>
-      <guid isPermaLink="false">reynard-0.14.0</guid>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[Reynard 0.14.0 | Reynard
-
-## Changes
-**Full Changelog**: https://github.com/minh-ton/reynard-browser/compare/0.13.1...0.14.0
-
-### New Features
-- Added Reader Mode.
-- Added preliminary support for Apple Pencil.
-
-### Bug Fixes & Improvements
-- Improved the reliability of navigation history restoration on startup.
-- Fixed taps and the text cursor sometimes landing in the wrong spot on pages with sticky headers or menus.
-- Fixed pinned headers, footers, and menus sometimes showing up in the wrong place when the toolbar size changes or during scrolling.
-- Fixed pages sometimes settling in the wrong spot after a jump, zoom, or reload, which left part of the page hidden behind the toolbar.
-- Fixed an issue where webpages could open with the wrong light or dark appearance on startup when the appearance chosen in Settings differs from the system's.
-- Fixed a crash that could occur during audio playback.
-
-### Engine
-Updated Gecko to [156.0](https://github.com/mozilla-firefox/firefox/commit/FIREFOX_156_0_RELEASE) (released Sep 15, 2026).]]></description>
-      <enclosure url="https://github.com/minh-ton/reynard-browser/releases/download/0.14.0/Reynard.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

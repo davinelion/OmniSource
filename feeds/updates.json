@@ -34,6 +34,21 @@
       "shortDescription": "TikTok with downloads, no ads and region switch"
     },
     {
+      "slug": "stikdebug",
+      "name": "StikDebug",
+      "version": "3.1.11",
+      "previousVersion": "3.1.10",
+      "date": "2026-09-23",
+      "kind": "updated",
+      "changelog": "StikDebug 3.1.11 | StikDebug-3.1.11\n\nTransitions to mounting the DDI via cryptex, should fix issues with the iPhone 18 Pro series.\n\n## What's Changed\n* Add Malloc Debugging by @Leviidev in https://github.com/StikDebug/StikDebug/pull/460\n\n## New Contributors\n* @Leviidev made their first contribution in https://github.com/StikDebug/StikDebug/pull/460\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.10...3.1.11",
+      "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/StikDebug.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/stikdebug.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/stikdebug.xml",
+      "status": "stable",
+      "shortDescription": "On-device JIT enabler and debugger"
+    },
+    {
       "slug": "spotiflac",
       "name": "SpotiFLAC Mobile",
       "version": "5.0.0",
@@ -77,6 +92,21 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/inkillerplus.xml",
       "status": "stable",
       "shortDescription": "Instagram with downloads, ghost mode and no ads"
+    },
+    {
+      "slug": "dopamine",
+      "name": "Dopamine",
+      "version": "3.0.10",
+      "previousVersion": "3.0.9",
+      "date": "2026-09-23",
+      "kind": "updated",
+      "changelog": "Dopamine 3.0.10 | Dopamine\n\n- Expose an API to frida that allows it to hook memory over hookd, fixes panics when using frida on iOS 26+ (Fix is in frida-gum upstream but a stable build on fridas end is still pending) (contributed by @devnoname120)\n- Fix Xcode debugging being broken on iOS 17+ after a userspace reboot if a developer disk image was already mounted before the userspace reboot",
+      "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Dopamine.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/dopamine.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/dopamine.xml",
+      "status": "stable",
+      "shortDescription": "Semi-untethered jailbreak for iOS 15 – 26"
     },
     {
       "slug": "ytmusic",
@@ -1457,36 +1487,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/iqface.xml",
       "status": "stable",
       "shortDescription": "Facebook tweak build by 7MD"
-    },
-    {
-      "slug": "glow",
-      "name": "Glow",
-      "version": "577.1",
-      "previousVersion": "",
-      "date": "2026-09-05",
-      "kind": "new",
-      "changelog": "Facebook 577.1 | Facebook-577.1-Glow\n\nIPA Vault build for Facebook (Glow), version 577.1",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/glow.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/glow.xml",
-      "status": "stable",
-      "shortDescription": "Clean, powerful Facebook tweak by dayanch96"
-    },
-    {
-      "slug": "msgplusx",
-      "name": "MSGPlusX",
-      "version": "577.0.0",
-      "previousVersion": "",
-      "date": "2026-09-03",
-      "kind": "new",
-      "changelog": "Messenger 577.0.0 | Messenger-577.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 577.0.0",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-577.0.0-MSGPlusX.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/msgplusx.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/msgplusx.xml",
-      "status": "stable",
-      "shortDescription": "Messenger tweak by Dens0r & lucaspedrosa (unofficial build)"
     },
     {
       "slug": "uyouenhanced",

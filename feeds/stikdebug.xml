@@ -5,17 +5,25 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json</link>
     <description>Release feed for StikDebug within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 27 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/stikdebug.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>StikDebug v3.1.10</title>
+      <title>StikDebug v3.1.11</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/stikdebug.json</link>
-      <guid isPermaLink="false">stikdebug-3.1.10</guid>
-      <pubDate>Thu, 27 Aug 2026 00:00:00 +0000</pubDate>
-      <description><![CDATA[StikDebug 3.1.10 | StikDebug-3.1.10
+      <guid isPermaLink="false">stikdebug-3.1.11</guid>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[StikDebug 3.1.11 | StikDebug-3.1.11
 
-**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.9...3.1.10]]></description>
-      <enclosure url="https://github.com/StikDebug/StikDebug/releases/download/3.1.10/StikDebug-3.1.10.ipa" length="12824047" type="application/octet-stream" />
+Transitions to mounting the DDI via cryptex, should fix issues with the iPhone 18 Pro series.
+
+## What's Changed
+* Add Malloc Debugging by @Leviidev in https://github.com/StikDebug/StikDebug/pull/460
+
+## New Contributors
+* @Leviidev made their first contribution in https://github.com/StikDebug/StikDebug/pull/460
+
+**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.10...3.1.11]]></description>
+      <enclosure url="https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa" length="0" type="application/octet-stream" />
     </item>
   </channel>
 </rss>

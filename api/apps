@@ -899,7 +899,7 @@
               "fileType": "IPA",
               "size": 114471562,
               "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 2383,
+              "downloads": 2404,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -911,7 +911,7 @@
               "fileType": "IPA",
               "size": 124722640,
               "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 5382,
+              "downloads": 5445,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -935,7 +935,7 @@
               "fileType": "IPA",
               "size": 124722495,
               "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 161,
+              "downloads": 163,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -947,7 +947,7 @@
               "fileType": "IPA",
               "size": 85880995,
               "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 636,
+              "downloads": 643,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -959,7 +959,7 @@
               "fileType": "IPA",
               "size": 96132071,
               "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 967,
+              "downloads": 976,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -989,7 +989,7 @@
             }
           ],
           "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 967
+          "downloads": 976
         }
       ],
       "screenshotURLs": [],
@@ -2833,51 +2833,51 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Dopamine.webp",
       "tintColor": "6A4CFF",
       "category": "utilities",
-      "version": "3.0.9",
-      "versionDate": "2026-08-22",
-      "versionDescription": "Dopamine 3.0.9 | Dopamine\n\n- Fix jailbreak apps not being removed from home screen when removing the jailbreak on iOS 18.0 - 18.3.1 too",
-      "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.9/Dopamine.ipa",
-      "size": 55409206,
+      "version": "3.0.10",
+      "versionDate": "2026-09-23",
+      "versionDescription": "Dopamine 3.0.10 | Dopamine\n\n- Expose an API to frida that allows it to hook memory over hookd, fixes panics when using frida on iOS 26+ (Fix is in frida-gum upstream but a stable build on fridas end is still pending) (contributed by @devnoname120)\n- Fix Xcode debugging being broken on iOS 17+ after a userspace reboot if a developer disk image was already mounted before the userspace reboot",
+      "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa",
+      "size": 55415420,
       "versions": [
         {
-          "version": "3.0.9",
-          "date": "2026-08-22",
-          "localizedDescription": "Dopamine 3.0.9 | Dopamine\n\n- Fix jailbreak apps not being removed from home screen when removing the jailbreak on iOS 18.0 - 18.3.1 too",
-          "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.9/Dopamine.ipa",
-          "size": 55409206,
+          "version": "3.0.10",
+          "date": "2026-09-23",
+          "localizedDescription": "Dopamine 3.0.10 | Dopamine\n\n- Expose an API to frida that allows it to hook memory over hookd, fixes panics when using frida on iOS 26+ (Fix is in frida-gum upstream but a stable build on fridas end is still pending) (contributed by @devnoname120)\n- Fix Xcode debugging being broken on iOS 17+ after a userspace reboot if a developer disk image was already mounted before the userspace reboot",
+          "downloadURL": "https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa",
+          "size": 55415420,
           "minOSVersion": "15.0",
-          "releaseUrl": "https://github.com/opa334/Dopamine/releases/tag/3.0.9",
+          "releaseUrl": "https://github.com/opa334/Dopamine/releases/tag/3.0.10",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "Dopamine.ipa",
-              "downloadUrl": "https://github.com/opa334/Dopamine/releases/download/3.0.9/Dopamine.ipa",
+              "downloadUrl": "https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 55409206,
-              "sha256": "ad0c4ea182b232346470df10439cfa2c1b7952e6b586113edfbc2720e455b201",
-              "downloads": 175580,
+              "size": 55415420,
+              "sha256": "de8c87b564326e6b15bfc523ba764d343113bb2fa7582f637727d6fdc385f4b9",
+              "downloads": 1352,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "Dopamine.tipa",
-              "downloadUrl": "https://github.com/opa334/Dopamine/releases/download/3.0.9/Dopamine.tipa",
+              "downloadUrl": "https://github.com/opa334/Dopamine/releases/download/3.0.10/Dopamine.tipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 55409206,
-              "sha256": "ad0c4ea182b232346470df10439cfa2c1b7952e6b586113edfbc2720e455b201",
-              "downloads": 11219,
+              "size": 55415420,
+              "sha256": "de8c87b564326e6b15bfc523ba764d343113bb2fa7582f637727d6fdc385f4b9",
+              "downloads": 123,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "ad0c4ea182b232346470df10439cfa2c1b7952e6b586113edfbc2720e455b201",
-          "downloads": 175580
+          "sha256": "de8c87b564326e6b15bfc523ba764d343113bb2fa7582f637727d6fdc385f4b9",
+          "downloads": 1352
         }
       ],
       "screenshotURLs": [],
@@ -2919,7 +2919,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-08-22"
+          "lastUpdatedAt": "2026-09-23"
         }
       }
     },
@@ -5364,7 +5364,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 354,
+              "downloads": 355,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5412,13 +5412,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 187,
+              "downloads": 190,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 187
+          "downloads": 190
         }
       ],
       "screenshotURLs": [],
@@ -6331,13 +6331,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 889,
+              "downloads": 913,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 889
+          "downloads": 913
         }
       ],
       "screenshotURLs": [
@@ -6446,13 +6446,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 305,
+              "downloads": 308,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 305
+          "downloads": 308
         }
       ],
       "screenshotURLs": [
@@ -7998,7 +7998,7 @@
               "fileType": "IPA",
               "size": 9414861,
               "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-              "downloads": 461,
+              "downloads": 464,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -8028,7 +8028,7 @@
             }
           ],
           "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-          "downloads": 461
+          "downloads": 464
         }
       ],
       "screenshotURLs": [],
@@ -9535,7 +9535,7 @@
               "fileType": "IPA",
               "size": 108503085,
               "sha256": "04ca6071def9ea560686ccdb7ba04dd7c9a30dfec77bde1b19b5238daa76dbd0",
-              "downloads": 143,
+              "downloads": 148,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9547,7 +9547,7 @@
               "fileType": "IPA",
               "size": 108552628,
               "sha256": "1904c54ab760b996dc436721d48a705a50f7a6b378e7502c91c563dc0c8eba3e",
-              "downloads": 1025,
+              "downloads": 1084,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9559,13 +9559,13 @@
               "fileType": "IPA",
               "size": 108452990,
               "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-              "downloads": 374,
+              "downloads": 405,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-          "downloads": 374
+          "downloads": 405
         }
       ],
       "screenshotURLs": [],
@@ -11258,39 +11258,39 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/StikDebug.webp",
       "tintColor": "3B82F6",
       "category": "developer-tools",
-      "version": "3.1.10",
-      "versionDate": "2026-08-27",
-      "versionDescription": "StikDebug 3.1.10 | StikDebug-3.1.10\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.9...3.1.10",
-      "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.10/StikDebug-3.1.10.ipa",
-      "size": 12824047,
+      "version": "3.1.11",
+      "versionDate": "2026-09-23",
+      "versionDescription": "StikDebug 3.1.11 | StikDebug-3.1.11\n\nTransitions to mounting the DDI via cryptex, should fix issues with the iPhone 18 Pro series.\n\n## What's Changed\n* Add Malloc Debugging by @Leviidev in https://github.com/StikDebug/StikDebug/pull/460\n\n## New Contributors\n* @Leviidev made their first contribution in https://github.com/StikDebug/StikDebug/pull/460\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.10...3.1.11",
+      "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa",
+      "size": 13515131,
       "versions": [
         {
-          "version": "3.1.10",
-          "date": "2026-08-27",
-          "localizedDescription": "StikDebug 3.1.10 | StikDebug-3.1.10\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.9...3.1.10",
-          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.10/StikDebug-3.1.10.ipa",
-          "size": 12824047,
+          "version": "3.1.11",
+          "date": "2026-09-23",
+          "localizedDescription": "StikDebug 3.1.11 | StikDebug-3.1.11\n\nTransitions to mounting the DDI via cryptex, should fix issues with the iPhone 18 Pro series.\n\n## What's Changed\n* Add Malloc Debugging by @Leviidev in https://github.com/StikDebug/StikDebug/pull/460\n\n## New Contributors\n* @Leviidev made their first contribution in https://github.com/StikDebug/StikDebug/pull/460\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.1.10...3.1.11",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa",
+          "size": 13515131,
           "minOSVersion": "17.4",
-          "releaseUrl": "https://github.com/StikDebug/StikDebug/releases/tag/3.1.10",
+          "releaseUrl": "https://github.com/StikDebug/StikDebug/releases/tag/3.1.11",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "StikDebug-3.1.10.ipa",
-              "downloadUrl": "https://github.com/StikDebug/StikDebug/releases/download/3.1.10/StikDebug-3.1.10.ipa",
+              "filename": "StikDebug-3.1.11.ipa",
+              "downloadUrl": "https://github.com/StikDebug/StikDebug/releases/download/3.1.11/StikDebug-3.1.11.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 12824047,
-              "sha256": "2f2e0bec9648b593fe95b55b21d3521b8ecc3b5889b0be53fe6cd22ecf76d845",
-              "downloads": 41822,
+              "size": 13515131,
+              "sha256": "e3f9b6553f143c0a9f130ab459f7e83bd7d95b8ce8fc816a890ddbbe63bf2ff0",
+              "downloads": 309,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "2f2e0bec9648b593fe95b55b21d3521b8ecc3b5889b0be53fe6cd22ecf76d845",
-          "downloads": 41822
+          "sha256": "e3f9b6553f143c0a9f130ab459f7e83bd7d95b8ce8fc816a890ddbbe63bf2ff0",
+          "downloads": 309
         }
       ],
       "screenshotURLs": [
@@ -11332,7 +11332,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-07",
-          "lastUpdatedAt": "2026-08-27"
+          "lastUpdatedAt": "2026-09-23"
         }
       }
     },
@@ -11453,7 +11453,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 11223,
+              "downloads": 11234,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11465,7 +11465,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1527,
+              "downloads": 1529,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11501,13 +11501,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 308,
+              "downloads": 311,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 308
+          "downloads": 311
         }
       ],
       "screenshotURLs": [],
@@ -12565,7 +12565,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 366075,
+              "downloads": 366114,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12577,12 +12577,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1248527,
+              "downloads": 1248641,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1248527
+          "downloads": 1248641
         }
       ],
       "screenshotURLs": [],
@@ -12869,7 +12869,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 556,
+              "downloads": 558,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12881,13 +12881,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1437,
+              "downloads": 1444,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1437
+          "downloads": 1444
         }
       ],
       "screenshotURLs": [],
@@ -15180,6 +15180,15 @@
       "notify": true
     },
     {
+      "title": "StikDebug v3.1.11",
+      "identifier": "news-stikdebug-3-1-11",
+      "caption": "On-device JIT enabler and debugger",
+      "date": "2026-09-23",
+      "appID": "com.stik.stikdebug",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/StikDebug.webp",
+      "notify": true
+    },
+    {
       "title": "SpotiFLAC Mobile v5.0.0",
       "identifier": "news-spotiflac-5-0-0",
       "caption": "FLAC Downloader for iOS",
@@ -15207,6 +15216,15 @@
       "notify": true
     },
     {
+      "title": "Dopamine v3.0.10",
+      "identifier": "news-dopamine-3-0-10",
+      "caption": "Semi-untethered jailbreak for iOS 15 – 26",
+      "date": "2026-09-23",
+      "appID": "com.opa334.Dopamine",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Dopamine.webp",
+      "notify": true
+    },
+    {
       "title": "YTMusicUltimate v9.38.1",
       "identifier": "news-ytmusic-9-38-1",
       "caption": "Lightweight YouTube Music tweak",
@@ -15231,24 +15249,6 @@
       "date": "2026-09-22",
       "appID": "com.minh-ton.Reynard",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Reynard.webp",
-      "notify": true
-    },
-    {
-      "title": "Nuvio v0.5.0",
-      "identifier": "news-nuvio-0-5-0",
-      "caption": "Open-source media player, bring your own sources",
-      "date": "2026-09-22",
-      "appID": "com.nuvio.app",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
-      "notify": true
-    },
-    {
-      "title": "Mangayomi v0.9.7",
-      "identifier": "news-mangayomi-0-9-7",
-      "caption": "Manga, novel & anime reader",
-      "date": "2026-09-22",
-      "appID": "com.kodjodevf.mangayomi",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Mangayomi.webp",
       "notify": true
     }
   ]
