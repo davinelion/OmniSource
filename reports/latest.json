@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-25",
-  "feedVersion": "4fbf9261a416",
+  "feedVersion": "61a197836ccf",
   "apps": {
     "total": 130,
     "reachable": 130,
@@ -9,18 +9,25 @@
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 121,
-    "updated": 1,
+    "incrementalHits": 119,
+    "updated": 2,
     "failed": 0,
     "apiRequests": 116
   },
   "unreachable": [],
   "updates": [
     {
-      "slug": "apollo",
-      "name": "Apollo",
-      "previousVersion": "3.7.1",
-      "version": "3.8.0",
+      "slug": "spotube",
+      "name": "Spotube",
+      "previousVersion": "5.1.2",
+      "version": "5.1.2",
+      "kind": "updated"
+    },
+    {
+      "slug": "nebuloiptv",
+      "name": "Nebulo",
+      "previousVersion": "2.3",
+      "version": "2.3",
       "kind": "updated"
     }
   ],
