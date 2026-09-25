@@ -861,135 +861,135 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Apollo.webp",
       "tintColor": "F0542D",
       "category": "social",
-      "version": "3.7.1",
-      "versionDate": "2026-09-13",
-      "versionDescription": "Apollo 3.7.1 | Apollo-Reborn-3.7.1\n\n### Features\n\n- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)\n  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row\n  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls\n\n### Fixes\n\n- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)\n- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)\n- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)\n- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)\n  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there\n- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be created, seen when tapping the Posts tab to return to the top of a long Popular feed; the element is left blank instead (#1099: @icpryde)\n- Fix **Keep in Floating Tab** and the other Apollo Reborn rows in the legacy ⋯ sheet crashing the app when a third-party menu tweak such as Translomatic is installed (#1076: @icpryde)\n- Fix **videos going quiet** after rotating the phone with the fullscreen viewer open, and stop a second video under the viewer from starting its own audio (#1080: @icpryde)\n- Fix **Add to Multireddit** reporting \"Error adding to multireddit\" even though the subreddit was added, and the multireddit's subtitle lagging until the next refresh (#1081: @icpryde)\n- Keep the Liquid Glass action pill **expanded by default** again — collapsing it into the ⋯ is now the opt-in **Collapse Navigation Actions** switch (Interface → Display & Navigation), and **Center Title Between Buttons** is back for the expanded layout (#1105: @IllIIllIllIllII)\n  - Titles stay centered unless the expanded actions need the room, the pill no longer flashes when the subreddit picker opens or closes, and a startup recursion on the always-expanded path is fixed\n- Restore **Hidden** as a **Header Style** option on Liquid Glass — it removes the top scroll-edge effect without adding a blur, and existing Hidden preferences and backups work again (#1074: @IllIIllIllIllII)\n- Fix the Liquid Glass tab bar popping open and snapping back on iOS 27 when a **Two-Gesture** reveal starts with the Left or Right hide style (#1078: @IllIIllIllIllII)\n- Show the **+N new-comment count** on Community Highlights again after a refresh (#1098: @IllIIllIllIllII)",
-      "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
-      "size": 96132071,
+      "version": "3.8.0",
+      "versionDate": "2026-09-25",
+      "versionDescription": "Apollo 3.8.0 | Apollo-Reborn-3.8.0\n\n### Features\n\n- Add **Save All Media** to save every image, GIF, and video in a Reddit gallery, Imgur album, or ImageChest post at once, from the fullscreen viewer's menus or an album's long-press menu, with a progress ring and Cancel (#1048: @IllIIllIllIllII)\n  - Fullscreen images offer Save Image next to Share, and holding an image in the viewer or a feed gallery offers Copy Image and Save Image for that image instead of jumping straight to the share sheet\n  - Also fixes **Download Video** when only Reddit's copy is available, **Save GIF** in the share sheet, and missing post controls on albums opened from a link in a post\n- Add **Action Menus** (Interface → Menus) to reorder and hide the actions in Apollo's ••• menus and, for moderators, its moderator menus, one menu at a time with a live preview (#1131: @icpryde)\n- Redesign the **Account Switcher** as a themed bottom sheet with larger avatars, Add Account and Edit at the top, and drag-to-reorder that no longer refreshes your feed (#1077: @IllIIllIllIllII)\n  - Also fixes a crash when switching accounts\n- Add **Automatic Backups** (Data → Backup Settings) — pick a folder in Files and your settings are backed up there every day, three days, or seven days, keeping the ten most recent automatic backups (#1060, #1148, #1152: @IllIIllIllIllII)\n  - Backups now save as `.apollobackup` files with the Apollo icon, and opening one from Files asks before restoring; existing `.zip` backups still restore\n- Add **Settings Shortcuts** — press and hold the Settings tab to jump straight to up to 15 settings pages, chosen and reordered under Interface → Tab Bar → Settings Shortcuts (#1150: @IllIIllIllIllII)\n- Add a **Return Button** that appears beside Back after a status-bar tap takes you to the top; tap it, or the status bar again, to jump back to where you were reading, now on Liquid Glass too (#1116: @icpryde, @IllIIllIllIllII)\n  - Turn the button off under Interface → Display & Navigation; the second status-bar tap keeps working either way\n- Rework **Hidden & Deleted** into a profile row that opens one combined feed of archived posts and comments, labeled Hidden, Removed, or Deleted, with inline images and swipeable albums (#1137: @IllIIllIllIllII)\n- Add **Profile Picture Shape** (Interface → Display & Navigation) to show profile pictures as Full, Circle, or rounded Square across posts, comments, messages, the profile tab, and the Account Switcher (#1136: @IllIIllIllIllII)\n- Extend **Immersive** profile artwork behind the status and navigation bars with a wider crop and smoother fade, and long-press a profile banner to view it fullscreen and save it (#1186: @IllIIllIllIllII)\n- Play GIF and video tiles silently in **Gallery View**'s grid while they're on screen, with separate **Play Videos in Gallery View** and **Play GIFs in Gallery View** switches (Media → Browsing, on by default) (#1142: @icpryde)\n- Speed up opening and closing **images and albums** — albums zoom straight out of the feed thumbnail like single images, the background fades as you swipe media away, and closing an album returns the feed carousel to the last image you viewed (#1143: @IllIIllIllIllII)\n- Smooth out scrolling through **video-heavy feeds** — playing videos take far less of the app's time, and the new **Smoother Video Scrolling** switch (Posts & Feeds → Feed, on by default) prepares players in the background and lets video posts draw without stalling the scroll (#1168: @icpryde)\n- Keep unsent **Chat** drafts in modern Direct Chat, saved per account and conversation and restored when you come back (#1207: @Thetromboneman1)\n- Add **Swipe Tab Bar to Navigate** (Interface → Tab Bar, Liquid Glass, off by default) to swipe the tab bar back and forward again in place of the native drag-to-switch-tabs gesture; takes effect after relaunching (#1075: @DeltAndy123)\n- Add **Confirm Favorite Changes** (Subreddits → Favorites, off by default) so the star on the Subreddits list asks before adding or removing a favorite (#1173: @nunoo)\n\n### Fixes\n\n- Fix a **startup crash loop** after adding an account while Reddit is rate-limiting; an unexpected listing response now fails like any other load (#1147: @icpryde)\n- Fix a crash on launch or when switching accounts after changing your **Reddit password**; Apollo now tries to recover the expired session and asks you to sign in again if it can't (#1200: @IllIIllIllIllII)\n- Fix crashes loading older comments in **Live Update** mode and choosing Open in Safari on a shared GIF or other downloaded media (#1171: @IllIIllIllIllII)\n- Fix a crash when touching and holding a post while the feed scrolls (#1193: @icpryde)\n- Fix a crash tapping **Cancel** on a subreddit search with results on non-Liquid-Glass builds (#1133: @icpryde)\n- Bring back **Copy with Account** in Copy Widget Setup Code, lost in 3.7.1, so Home and multireddit widgets can use your account again (#1195: @icpryde)\n- Fix **Gallery View** hiding its first row of tiles under the navigation bar since 3.7.1, and its spinner staying up after changing the filter while it loads (#1140, #1194: @icpryde)\n  - Holding a video in the viewer opens Save/Share without letting go, and dragging down with that sheet open no longer leaves the viewer black and unresponsive\n- Fix the Liquid Glass **feed search bar** springing back open after you scroll it away, staying pinned when you scroll right after cancelling a search, and the Hard header style cutting off the top of the field (#1130, #1146: @icpryde)\n  - Collapsing a comment no longer jumps the thread or flashes a band across the top, Find in Comments swaps its buttons smoothly, and a cancelled swipe-back keeps the search field's glass\n- Keep the **Settings** search field below the title while searching on Liquid Glass instead of sliding up over it (#1156: @icpryde)\n- Make **Apollo Reborn settings** follow Apollo's Text Size and match the native rows' font weight and text colors, including the softer gray in Pure Black mode (#1165: @IllIIllIllIllII)\n- Fix Apollo Reborn settings screens stuttering or refusing to scroll back up, footer text drawing over the rows above it, and the list shifting after a swipe back (#1170: @icpryde)\n- Soften the **row highlight** when you tap a row — stock themes use Apollo's original gray again and custom themes a lighter tint of their accent (#1166: @IllIIllIllIllII)\n- Fix **subreddit list editing** — favorite stars stay aligned, long names stop short of the star, confirmation buttons stay tappable, rows no longer stay highlighted, and removals animate smoothly (#1174: @IllIIllIllIllII)\n- Keep the header visible while editing the subreddit list with **Hide Header on Scroll** on, and bring the header and tab bar back as soon as you tap the status bar (#1120: @IllIIllIllIllII)\n- Fix a brief stall when scrolling back down right after reaching the top of a post, and a stutter where Hide Header on Scroll kept hiding and revealing the header (#1119: @IllIIllIllIllII)\n- Make the **Posts** tab scroll to the top and then go back on profiles, trophies, multireddits, and posts opened from a profile, like it does on feeds (#1153: @IllIIllIllIllII)\n- Fix a cancelled forward swipe erasing your navigation history, so swiping forward again reopens the page (#1128: @IllIIllIllIllII)\n- Reopen **Floating Post Tabs** on the comment sort you left them on, Live Update included, instead of the default sort (#1125: @icpryde)\n- Fade a newly **posted comment** into the thread with its avatar and flair already in place, instead of the thread jumping and the avatar popping in afterwards (#1196: @icpryde)\n- Fix collapsing a comment thread sliding its replies down before the comments below move up (#1180: @IllIIllIllIllII)\n- Keep the **comment age** visible next to long usernames, which now truncate instead (#1162: @IllIIllIllIllII)\n- Keep recovered **deleted comments** readable when Apollo switches between light and dark mode while the thread is open (#1206: @Thetromboneman1)\n- Fix feed usernames drifting right…",
+      "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
+      "size": 96553795,
       "versions": [
         {
-          "version": "3.7.1",
-          "date": "2026-09-13",
-          "localizedDescription": "Apollo 3.7.1 | Apollo-Reborn-3.7.1\n\n### Features\n\n- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)\n  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row\n  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls\n\n### Fixes\n\n- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)\n- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)\n- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)\n- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)\n  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there\n- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be created, seen when tapping the Posts tab to return to the top of a long Popular feed; the element is left blank instead (#1099: @icpryde)\n- Fix **Keep in Floating Tab** and the other Apollo Reborn rows in the legacy ⋯ sheet crashing the app when a third-party menu tweak such as Translomatic is installed (#1076: @icpryde)\n- Fix **videos going quiet** after rotating the phone with the fullscreen viewer open, and stop a second video under the viewer from starting its own audio (#1080: @icpryde)\n- Fix **Add to Multireddit** reporting \"Error adding to multireddit\" even though the subreddit was added, and the multireddit's subtitle lagging until the next refresh (#1081: @icpryde)\n- Keep the Liquid Glass action pill **expanded by default** again — collapsing it into the ⋯ is now the opt-in **Collapse Navigation Actions** switch (Interface → Display & Navigation), and **Center Title Between Buttons** is back for the expanded layout (#1105: @IllIIllIllIllII)\n  - Titles stay centered unless the expanded actions need the room, the pill no longer flashes when the subreddit picker opens or closes, and a startup recursion on the always-expanded path is fixed\n- Restore **Hidden** as a **Header Style** option on Liquid Glass — it removes the top scroll-edge effect without adding a blur, and existing Hidden preferences and backups work again (#1074: @IllIIllIllIllII)\n- Fix the Liquid Glass tab bar popping open and snapping back on iOS 27 when a **Two-Gesture** reveal starts with the Left or Right hide style (#1078: @IllIIllIllIllII)\n- Show the **+N new-comment count** on Community Highlights again after a refresh (#1098: @IllIIllIllIllII)",
-          "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
-          "size": 96132071,
+          "version": "3.8.0",
+          "date": "2026-09-25",
+          "localizedDescription": "Apollo 3.8.0 | Apollo-Reborn-3.8.0\n\n### Features\n\n- Add **Save All Media** to save every image, GIF, and video in a Reddit gallery, Imgur album, or ImageChest post at once, from the fullscreen viewer's menus or an album's long-press menu, with a progress ring and Cancel (#1048: @IllIIllIllIllII)\n  - Fullscreen images offer Save Image next to Share, and holding an image in the viewer or a feed gallery offers Copy Image and Save Image for that image instead of jumping straight to the share sheet\n  - Also fixes **Download Video** when only Reddit's copy is available, **Save GIF** in the share sheet, and missing post controls on albums opened from a link in a post\n- Add **Action Menus** (Interface → Menus) to reorder and hide the actions in Apollo's ••• menus and, for moderators, its moderator menus, one menu at a time with a live preview (#1131: @icpryde)\n- Redesign the **Account Switcher** as a themed bottom sheet with larger avatars, Add Account and Edit at the top, and drag-to-reorder that no longer refreshes your feed (#1077: @IllIIllIllIllII)\n  - Also fixes a crash when switching accounts\n- Add **Automatic Backups** (Data → Backup Settings) — pick a folder in Files and your settings are backed up there every day, three days, or seven days, keeping the ten most recent automatic backups (#1060, #1148, #1152: @IllIIllIllIllII)\n  - Backups now save as `.apollobackup` files with the Apollo icon, and opening one from Files asks before restoring; existing `.zip` backups still restore\n- Add **Settings Shortcuts** — press and hold the Settings tab to jump straight to up to 15 settings pages, chosen and reordered under Interface → Tab Bar → Settings Shortcuts (#1150: @IllIIllIllIllII)\n- Add a **Return Button** that appears beside Back after a status-bar tap takes you to the top; tap it, or the status bar again, to jump back to where you were reading, now on Liquid Glass too (#1116: @icpryde, @IllIIllIllIllII)\n  - Turn the button off under Interface → Display & Navigation; the second status-bar tap keeps working either way\n- Rework **Hidden & Deleted** into a profile row that opens one combined feed of archived posts and comments, labeled Hidden, Removed, or Deleted, with inline images and swipeable albums (#1137: @IllIIllIllIllII)\n- Add **Profile Picture Shape** (Interface → Display & Navigation) to show profile pictures as Full, Circle, or rounded Square across posts, comments, messages, the profile tab, and the Account Switcher (#1136: @IllIIllIllIllII)\n- Extend **Immersive** profile artwork behind the status and navigation bars with a wider crop and smoother fade, and long-press a profile banner to view it fullscreen and save it (#1186: @IllIIllIllIllII)\n- Play GIF and video tiles silently in **Gallery View**'s grid while they're on screen, with separate **Play Videos in Gallery View** and **Play GIFs in Gallery View** switches (Media → Browsing, on by default) (#1142: @icpryde)\n- Speed up opening and closing **images and albums** — albums zoom straight out of the feed thumbnail like single images, the background fades as you swipe media away, and closing an album returns the feed carousel to the last image you viewed (#1143: @IllIIllIllIllII)\n- Smooth out scrolling through **video-heavy feeds** — playing videos take far less of the app's time, and the new **Smoother Video Scrolling** switch (Posts & Feeds → Feed, on by default) prepares players in the background and lets video posts draw without stalling the scroll (#1168: @icpryde)\n- Keep unsent **Chat** drafts in modern Direct Chat, saved per account and conversation and restored when you come back (#1207: @Thetromboneman1)\n- Add **Swipe Tab Bar to Navigate** (Interface → Tab Bar, Liquid Glass, off by default) to swipe the tab bar back and forward again in place of the native drag-to-switch-tabs gesture; takes effect after relaunching (#1075: @DeltAndy123)\n- Add **Confirm Favorite Changes** (Subreddits → Favorites, off by default) so the star on the Subreddits list asks before adding or removing a favorite (#1173: @nunoo)\n\n### Fixes\n\n- Fix a **startup crash loop** after adding an account while Reddit is rate-limiting; an unexpected listing response now fails like any other load (#1147: @icpryde)\n- Fix a crash on launch or when switching accounts after changing your **Reddit password**; Apollo now tries to recover the expired session and asks you to sign in again if it can't (#1200: @IllIIllIllIllII)\n- Fix crashes loading older comments in **Live Update** mode and choosing Open in Safari on a shared GIF or other downloaded media (#1171: @IllIIllIllIllII)\n- Fix a crash when touching and holding a post while the feed scrolls (#1193: @icpryde)\n- Fix a crash tapping **Cancel** on a subreddit search with results on non-Liquid-Glass builds (#1133: @icpryde)\n- Bring back **Copy with Account** in Copy Widget Setup Code, lost in 3.7.1, so Home and multireddit widgets can use your account again (#1195: @icpryde)\n- Fix **Gallery View** hiding its first row of tiles under the navigation bar since 3.7.1, and its spinner staying up after changing the filter while it loads (#1140, #1194: @icpryde)\n  - Holding a video in the viewer opens Save/Share without letting go, and dragging down with that sheet open no longer leaves the viewer black and unresponsive\n- Fix the Liquid Glass **feed search bar** springing back open after you scroll it away, staying pinned when you scroll right after cancelling a search, and the Hard header style cutting off the top of the field (#1130, #1146: @icpryde)\n  - Collapsing a comment no longer jumps the thread or flashes a band across the top, Find in Comments swaps its buttons smoothly, and a cancelled swipe-back keeps the search field's glass\n- Keep the **Settings** search field below the title while searching on Liquid Glass instead of sliding up over it (#1156: @icpryde)\n- Make **Apollo Reborn settings** follow Apollo's Text Size and match the native rows' font weight and text colors, including the softer gray in Pure Black mode (#1165: @IllIIllIllIllII)\n- Fix Apollo Reborn settings screens stuttering or refusing to scroll back up, footer text drawing over the rows above it, and the list shifting after a swipe back (#1170: @icpryde)\n- Soften the **row highlight** when you tap a row — stock themes use Apollo's original gray again and custom themes a lighter tint of their accent (#1166: @IllIIllIllIllII)\n- Fix **subreddit list editing** — favorite stars stay aligned, long names stop short of the star, confirmation buttons stay tappable, rows no longer stay highlighted, and removals animate smoothly (#1174: @IllIIllIllIllII)\n- Keep the header visible while editing the subreddit list with **Hide Header on Scroll** on, and bring the header and tab bar back as soon as you tap the status bar (#1120: @IllIIllIllIllII)\n- Fix a brief stall when scrolling back down right after reaching the top of a post, and a stutter where Hide Header on Scroll kept hiding and revealing the header (#1119: @IllIIllIllIllII)\n- Make the **Posts** tab scroll to the top and then go back on profiles, trophies, multireddits, and posts opened from a profile, like it does on feeds (#1153: @IllIIllIllIllII)\n- Fix a cancelled forward swipe erasing your navigation history, so swiping forward again reopens the page (#1128: @IllIIllIllIllII)\n- Reopen **Floating Post Tabs** on the comment sort you left them on, Live Update included, instead of the default sort (#1125: @icpryde)\n- Fade a newly **posted comment** into the thread with its avatar and flair already in place, instead of the thread jumping and the avatar popping in afterwards (#1196: @icpryde)\n- Fix collapsing a comment thread sliding its replies down before the comments below move up (#1180: @IllIIllIllIllII)\n- Keep the **comment age** visible next to long usernames, which now truncate instead (#1162: @IllIIllIllIllII)\n- Keep recovered **deleted comments** readable when Apollo switches between light and dark mode while the thread is open (#1206: @Thetromboneman1)\n- Fix feed usernames drifting right…",
+          "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
+          "size": 96553795,
           "minOSVersion": "14.0",
-          "releaseUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.7.1",
+          "releaseUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.8.0",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "Apollo-Reborn-3.7.1-dSYMs.zip",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-dSYMs.zip",
+              "filename": "Apollo-Reborn-3.8.0-dSYMs.zip",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-dSYMs.zip",
               "platform": "unknown",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 20365290,
-              "sha256": "3852fb61c3f2294359cca0683719d51ea4b57d97c8f79467f4d0cd4c163f45fc",
-              "downloads": 33,
+              "size": 21642028,
+              "sha256": "d41f8dd138b48bf7dec4dcc39f02eb728975bc0565527d34113a9f8e672f8536",
+              "downloads": 0,
               "mimeType": "application/zip",
               "installable": false
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASS-NOEXTENSIONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASS-NOEXTENSIONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASS-NOEXTENSIONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASS-NOEXTENSIONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 114471562,
-              "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 2478,
+              "size": 114893279,
+              "sha256": "5519339a5b6966123a4d88ff30c4569d65a55de5455e987133f117754779ea03",
+              "downloads": 12,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 124722640,
-              "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 5600,
+              "size": 125144343,
+              "sha256": "f58a601faebb451b61c466313bab2a0327f81c5cd63e4ab6c5795f510684aaf0",
+              "downloads": 50,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASSICONS-NOEXTENSIONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASSICONS-NOEXTENSIONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASSICONS-NOEXTENSIONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASSICONS-NOEXTENSIONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 114471417,
-              "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-              "downloads": 94,
+              "size": 114893134,
+              "sha256": "3880a10eb714c0c23deebd5e60bf4535790eed78a6aa7a910fafa7110459063d",
+              "downloads": 1,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASSICONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASSICONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASSICONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASSICONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 124722495,
-              "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 167,
+              "size": 125144200,
+              "sha256": "4f7aa35bd46a12b7d7bd777a3fc5c49d985c230a5f6dfc9132cbc60c83ecdeba",
+              "downloads": 5,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-NOEXTENSIONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-NOEXTENSIONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-NOEXTENSIONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-NOEXTENSIONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 85880995,
-              "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 662,
+              "size": 86302731,
+              "sha256": "6c84e709af692613a14eafe3e212b02e85076110a508bbe96c0521f3add1a68f",
+              "downloads": 2,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
+              "filename": "Apollo-Reborn-3.8.0.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 96132071,
-              "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 1007,
+              "size": 96553795,
+              "sha256": "3c6a855d7e19351a966f7e833d1d27199a8e34e981e94af005d8d756bf5f9de7",
+              "downloads": 9,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "com.apollo.reborn_3.7.1_iphoneos-arm.deb",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/com.apollo.reborn_3.7.1_iphoneos-arm.deb",
+              "filename": "com.apollo.reborn_3.8.0_iphoneos-arm.deb",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/com.apollo.reborn_3.8.0_iphoneos-arm.deb",
               "platform": "linux",
               "architecture": null,
               "fileType": "DEB",
-              "size": 12186352,
-              "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-              "downloads": 34,
+              "size": 12481156,
+              "sha256": "6ef0dbf4054bf7b5fca9bda7c5431834bebb845060391f4100a3de57319d4d8f",
+              "downloads": 1,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "com.apollo.reborn_3.7.1_iphoneos-arm64_rootless.deb",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/com.apollo.reborn_3.7.1_iphoneos-arm64_rootless.deb",
+              "filename": "com.apollo.reborn_3.8.0_iphoneos-arm64_rootless.deb",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/com.apollo.reborn_3.8.0_iphoneos-arm64_rootless.deb",
               "platform": "linux",
               "architecture": "arm64",
               "fileType": "DEB",
-              "size": 12187106,
-              "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-              "downloads": 41,
+              "size": 12482962,
+              "sha256": "9415603c16b542890104aec39e06c953085a5a1b14ceeadf5dc2e8e68c56edb7",
+              "downloads": 0,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 1007
+          "sha256": "3c6a855d7e19351a966f7e833d1d27199a8e34e981e94af005d8d756bf5f9de7",
+          "downloads": 9
         }
       ],
       "screenshotURLs": [],
@@ -1027,7 +1027,7 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-09-13"
+          "lastUpdatedAt": "2026-09-25"
         }
       }
     },
@@ -5364,7 +5364,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 360,
+              "downloads": 362,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5412,13 +5412,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 199,
+              "downloads": 202,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 199
+          "downloads": 202
         }
       ],
       "screenshotURLs": [],
@@ -6331,13 +6331,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 1032,
+              "downloads": 1063,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 1032
+          "downloads": 1063
         }
       ],
       "screenshotURLs": [
@@ -6446,13 +6446,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 316,
+              "downloads": 319,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 316
+          "downloads": 319
         }
       ],
       "screenshotURLs": [
@@ -7998,7 +7998,7 @@
               "fileType": "IPA",
               "size": 9414861,
               "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-              "downloads": 472,
+              "downloads": 475,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -8028,7 +8028,7 @@
             }
           ],
           "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-          "downloads": 472
+          "downloads": 475
         }
       ],
       "screenshotURLs": [],
@@ -9535,7 +9535,7 @@
               "fileType": "IPA",
               "size": 108503085,
               "sha256": "04ca6071def9ea560686ccdb7ba04dd7c9a30dfec77bde1b19b5238daa76dbd0",
-              "downloads": 173,
+              "downloads": 184,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9547,7 +9547,7 @@
               "fileType": "IPA",
               "size": 108552628,
               "sha256": "1904c54ab760b996dc436721d48a705a50f7a6b378e7502c91c563dc0c8eba3e",
-              "downloads": 1310,
+              "downloads": 1395,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9559,13 +9559,13 @@
               "fileType": "IPA",
               "size": 108452990,
               "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-              "downloads": 503,
+              "downloads": 534,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-          "downloads": 503
+          "downloads": 534
         }
       ],
       "screenshotURLs": [],
@@ -11453,7 +11453,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 11274,
+              "downloads": 11287,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11465,7 +11465,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1541,
+              "downloads": 1545,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11477,7 +11477,7 @@
               "fileType": "AAB",
               "size": 117678831,
               "sha256": "f2048d65a565ee5e9425b284b34e401bd21ef0e91cdb89660925eab47c40f469",
-              "downloads": 71,
+              "downloads": 72,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -11501,13 +11501,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 321,
+              "downloads": 324,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 321
+          "downloads": 324
         }
       ],
       "screenshotURLs": [],
@@ -12565,7 +12565,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 366334,
+              "downloads": 366375,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12577,12 +12577,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1249362,
+              "downloads": 1249492,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1249362
+          "downloads": 1249492
         }
       ],
       "screenshotURLs": [],
@@ -12869,7 +12869,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 573,
+              "downloads": 577,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12881,13 +12881,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1465,
+              "downloads": 1474,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1465
+          "downloads": 1474
         }
       ],
       "screenshotURLs": [],
@@ -15162,6 +15162,15 @@
   ],
   "news": [
     {
+      "title": "Apollo v3.8.0",
+      "identifier": "news-apollo-3-8-0",
+      "caption": "The beloved Reddit client, continued by Apollo-Reborn",
+      "date": "2026-09-25",
+      "appID": "com.christianselig.Apollo",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Apollo.webp",
+      "notify": true
+    },
+    {
       "title": "MSGPlusX v580.0.0",
       "identifier": "news-msgplusx-580-0-0",
       "caption": "Messenger tweak by Dens0r & lucaspedrosa (unofficial build)",
@@ -15240,15 +15249,6 @@
       "date": "2026-09-23",
       "appID": "com.zarz.spotiflacAndroid",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/SpotiFLAC.webp",
-      "notify": true
-    },
-    {
-      "title": "Nuvio v0.5.1",
-      "identifier": "news-nuvio-0-5-1",
-      "caption": "Open-source media player, bring your own sources",
-      "date": "2026-09-23",
-      "appID": "com.nuvio.app",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
       "notify": true
     }
   ]

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-24",
+  "generatedAt": "2026-09-25",
   "count": 114,
   "feed": {
     "name": "OmniSource",
@@ -176,10 +176,10 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 89.4,
-      "status": "Verified",
-      "level": "TRUSTED",
-      "updateFrequencyDays": 7.0,
+      "score": 73.9,
+      "status": "Community Verified",
+      "level": "RELIABLE",
+      "updateFrequencyDays": null,
       "lastUpdate": "2026-09-13",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/voyager.json"
     },
@@ -310,7 +310,7 @@
         {
           "slug": "apollo",
           "name": "Apollo",
-          "version": "3.7.1"
+          "version": "3.8.0"
         }
       ],
       "slug": "apollo-reborn-apollo-reborn",
@@ -321,11 +321,11 @@
       "appCount": 1,
       "verifiedApps": 1,
       "healthScore": 77.0,
-      "score": 89.4,
+      "score": 91.9,
       "status": "Verified",
       "level": "TRUSTED",
-      "updateFrequencyDays": 2.0,
-      "lastUpdate": "2026-09-13",
+      "updateFrequencyDays": 7.0,
+      "lastUpdate": "2026-09-25",
       "feedURL": "https://iamsmmh.github.io/OmniSource/feeds/apollo.json"
     },
     {
@@ -3455,8 +3455,8 @@
     }
   ],
   "statuses": {
-    "Verified": 15,
-    "Community Verified": 63,
+    "Verified": 14,
+    "Community Verified": 64,
     "Inactive": 20,
     "Deprecated": 15,
     "Warning": 1
