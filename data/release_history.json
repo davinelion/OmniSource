@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-24T12:05:34Z",
+  "generatedAt": "2026-09-25T12:05:51Z",
   "appCount": 130,
-  "releases": 198,
+  "releases": 206,
   "apps": {
     "3105": [
       {
@@ -100,13 +100,23 @@
     ],
     "apollo": [
       {
+        "version": "3.8.0",
+        "date": "2026-09-25",
+        "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
+        "size": 96553795,
+        "sha256": "3c6a855d7e19351a966f7e833d1d27199a8e34e981e94af005d8d756bf5f9de7",
+        "localizedDescription": "Apollo 3.8.0 | Apollo-Reborn-3.8.0\n\n### Features\n\n- Add **Save All Media** to save every image, GIF, and video in a Reddit gallery, Imgur album, or ImageChest post at once, from the fullscreen viewer's menus or an album's long-press menu, with a progress ring and Cancel (#1048: @IllIIllIllIllII)\n  - Fullscreen images offer Save Image next to Share, and holding an image in the viewer or a feed gallery offers Copy Image and Save Image for that image instead of jumping straight to the share sheet\n  - Also fixes **Download Video** when only Reddit's copy is available, **Save GIF** in the share sheet, and missing post controls on albums opened from a link in a post\n- Add **Action Menus** (Interface → Menus) to reorder and hide the actions in Apollo's ••• menus and, for moderators, its moderator menus, one menu at a time with a live preview (#1131: @icpryde)\n- Redesign the **Account Switcher** as a themed bottom sheet with larger avatars, Add Account and Edit at the top, and drag-to-reorder that no longer refreshes your feed (#1077: @IllIIllIllIllII)\n  - Also fixes a crash when switching accounts\n- Add **Automatic Backups** (Data → Backup Settings) — pick a folder in Files and your settings are backed up there every day, three days, or seven days, keeping the ten most recent automatic backups (#1060, #1148, #1152: @IllIIllIllIllII)\n  - Backups now save as `.apollobackup` files with the Apollo icon, and opening one from Files asks before restoring; existing `.zip` backups still restore\n- Add **Settings Shortcuts** — press and hold the Settings tab to jump straight to up to 15 settings pages, chosen and reordered under Interface → Tab Bar → Settings Shortcuts (#1150: @IllIIllIllIllII)\n- Add a **Return Button** that appears beside Back after a status-bar tap takes you to the top; tap it, or the status bar again, to jump back to where you were reading, now on Liquid Glass too (#1116: @icpryde, @IllIIllIllIllII)\n  - Turn the button off under Interface → Display & Navigation; t",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
+      },
+      {
         "version": "3.7.1",
         "date": "2026-09-13",
         "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
         "size": 96132071,
         "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
         "localizedDescription": "Apollo 3.7.1 | Apollo-Reborn-3.7.1\n\n### Features\n\n- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)\n  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row\n  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls\n\n### Fixes\n\n- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)\n- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)\n- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)\n- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)\n  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there\n- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-14T04:21:48Z"
       },
       {
@@ -482,13 +492,23 @@
     ],
     "glow": [
       {
+        "version": "2026.38.0",
+        "date": "2026-09-24",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
+        "size": 144273472,
+        "sha256": "",
+        "localizedDescription": "Facebook 2026.38.0 | Reddit-2026.38.0-RedditFilter\n\nIPA Vault build for Reddit (RedditFilter), version 2026.38.0",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
+      },
+      {
         "version": "577.1",
         "date": "2026-09-05",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
         "size": 226667533,
         "sha256": "",
         "localizedDescription": "Facebook 577.1 | Facebook-577.1-Glow\n\nIPA Vault build for Facebook (Glow), version 577.1",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
@@ -596,13 +616,23 @@
     ],
     "iqface": [
       {
+        "version": "580.0.0",
+        "date": "2026-09-24",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-580.0.0-iQFace.ipa",
+        "size": 232578756,
+        "sha256": "",
+        "localizedDescription": "Facebook 580.0.0 | Facebook-580.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 580.0.0",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
+      },
+      {
         "version": "579.0.0",
         "date": "2026-09-16",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
         "size": 228632105,
         "sha256": "",
         "localizedDescription": "Facebook 579.0.0 | Facebook-579.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 579.0.0",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-18T04:29:51Z"
       },
       {
@@ -878,13 +908,23 @@
     ],
     "messenger-flow": [
       {
+        "version": "580.0.0",
+        "date": "2026-09-24",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-Flow.ipa",
+        "size": 115010861,
+        "sha256": "",
+        "localizedDescription": "Messenger 580.0.0 | Messenger-580.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 580.0.0",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
+      },
+      {
         "version": "579.0.0",
         "date": "2026-09-16",
         "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
         "size": 112483407,
         "sha256": "",
         "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 579.0.0",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-18T04:29:51Z"
       },
       {
@@ -912,17 +952,37 @@
     ],
     "monal": [
       {
+        "version": "6.4.22",
+        "date": "2026-09-24",
+        "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
+        "size": 38407335,
+        "sha256": "5c05702731ef44fd203b3691b3462f56e0e238863f69083479cdd1712f428b08",
+        "localizedDescription": "Monal 6.4.22 | Monal\n\n- Improve SRV-record handling for dot records\n- Allow voice-over localization of loading spinner in the chats overview\n- Obfuscate upload filenames when sending encrypted files",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
+      },
+      {
         "version": "6.4.21",
         "date": "2026-05-27",
         "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
         "size": 38349660,
         "sha256": "73c1d4e53ed347094ef2240574f8006b740ef33b896869bcdf94b4c099ce2d50",
         "localizedDescription": "Monal 6.4.21 | Monal\n\n- Show last usage timestamp of OMEMO keys\n- Use the iOS 18 UI in the share sheet\n- Allow using any language in the Display Name field in account settings\n- Try to improve location sharing accuracy\n- Improve contact last activity timestamps\n- Fix several bugs",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-12T17:13:52Z"
       }
     ],
     "msgplusx": [
+      {
+        "version": "580.0.0",
+        "date": "2026-09-24",
+        "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-MSGPlusX.ipa",
+        "size": 114887462,
+        "sha256": "",
+        "localizedDescription": "Messenger 580.0.0 | Messenger-580.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 580.0.0",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
+      },
       {
         "version": "579.0.0",
         "date": "2026-09-16",
@@ -930,7 +990,7 @@
         "size": 112520493,
         "sha256": "",
         "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 579.0.0",
-        "status": "current",
+        "status": "superseded",
         "firstSeen": "2026-09-18T04:29:51Z"
       },
       {
@@ -976,8 +1036,18 @@
         "size": 56279112,
         "sha256": "e174466ca2d39a1229e3b52a4d3ef28b1dcd74cc4f8438777bf3526c3eef88e4",
         "localizedDescription": "Nebulo 2.3 | Nebulo_V2.3\n\n### **What's New in V2.3?**\n\n### **If the main ipa does is unable to be verified, try the backup it will work with users using signing apps**\n\n### **Major Improvements**\n- **Expanded Sports Section:** New categories for soccer and more sports added\n       - Settings to customize sports tabs, press and hold on a game for more options, language and resolution tags added, improved the searching for game.\n\n- **Stronger recording abilities:** The user can now record in the background when the phone is off, can now watch another stream while one is recording, recording will start again if app is force quit, replaced the recording function with one that can fill in any gaps leading to a much more stable experience.\n\n- **Fixed KSPlayer bug:** KSPlayer is much more reliable now with some bug fixes.\n\n- **Increased Multi-view reliability:** Multi-view should now work smoother with bug fixed. Made the layout much cleaner and more optimized\n\n### **UI/UX Improvements**\n- **Significantly Quicker Startup:** After logging in for the first time, loading is much faster and the epg updates either manually or once every 24 hours.\n\n- **Smart Progress Bar:** Progress bar is accurate after the first time it loads.\n\n- **Settings Upgrades:** \n       - Added a \"System Up to Date\" confirmation for manual update checks.\n       - Consolidated EPG loading status into the main overlay.\n       - Added a \"System Up to Date\" confirmation for manual update checks.\n\n### **Bug Fixes and Stability**\n- **EPG Parsing:** EPG parsing is faster and more efficient.\n- **KSPlayer Stalling:** KSPlayer would stop working after 30 seconds but it is much more stable now\n- **Memory Optimization:** Fixed memory leaks in the recording manager that would mess things up and crash app.\n\n### **Under the Hood**\n- **Update Checker Connected to GitHub:** Checks github to see if any updates have been released.\n- **FFmpegKit:** Switched to a more stable and up to date version of FFmpegKit which helped ",
-        "status": "current",
+        "status": "removed",
         "firstSeen": "2026-09-12T17:13:52Z"
+      },
+      {
+        "version": "2.3",
+        "date": "2026-02-01",
+        "downloadURL": "https://github.com/mongoosemonke504/OnsideTV/releases/download/V2.3/Nebulo_V2.3.ipa",
+        "size": 56279112,
+        "sha256": "e174466ca2d39a1229e3b52a4d3ef28b1dcd74cc4f8438777bf3526c3eef88e4",
+        "localizedDescription": "Nebulo 2.3 | Nebulo_V2.3\n\n### **What's New in V2.3?**\n\n### **If the main ipa does is unable to be verified, try the backup it will work with users using signing apps**\n\n### **Major Improvements**\n- **Expanded Sports Section:** New categories for soccer and more sports added\n       - Settings to customize sports tabs, press and hold on a game for more options, language and resolution tags added, improved the searching for game.\n\n- **Stronger recording abilities:** The user can now record in the background when the phone is off, can now watch another stream while one is recording, recording will start again if app is force quit, replaced the recording function with one that can fill in any gaps leading to a much more stable experience.\n\n- **Fixed KSPlayer bug:** KSPlayer is much more reliable now with some bug fixes.\n\n- **Increased Multi-view reliability:** Multi-view should now work smoother with bug fixed. Made the layout much cleaner and more optimized\n\n### **UI/UX Improvements**\n- **Significantly Quicker Startup:** After logging in for the first time, loading is much faster and the epg updates either manually or once every 24 hours.\n\n- **Smart Progress Bar:** Progress bar is accurate after the first time it loads.\n\n- **Settings Upgrades:** \n       - Added a \"System Up to Date\" confirmation for manual update checks.\n       - Consolidated EPG loading status into the main overlay.\n       - Added a \"System Up to Date\" confirmation for manual update checks.\n\n### **Bug Fixes and Stability**\n- **EPG Parsing:** EPG parsing is faster and more efficient.\n- **KSPlayer Stalling:** KSPlayer would stop working after 30 seconds but it is much more stable now\n- **Memory Optimization:** Fixed memory leaks in the recording manager that would mess things up and crash app.\n\n### **Under the Hood**\n- **Update Checker Connected to GitHub:** Checks github to see if any updates have been released.\n- **FFmpegKit:** Switched to a more stable and up to date version of FFmpegKit which helped ",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
       }
     ],
     "neofreebird": [
@@ -1542,8 +1612,18 @@
         "size": 34853093,
         "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0",
         "localizedDescription": "Spotube 5.1.2 | Spotube-iOS\n\n### Bug Fixes\n\n- **newpipe**: Fallback to muxed streams if no audio stream is available\n- Dismiss search dropdown and keyboard on submission\n- Custom image helper null exception\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.1...v5.1.2",
-        "status": "current",
+        "status": "removed",
         "firstSeen": "2026-09-12T17:13:52Z"
+      },
+      {
+        "version": "5.1.2",
+        "date": "2026-06-05",
+        "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+        "size": 34853093,
+        "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0",
+        "localizedDescription": "Spotube 5.1.2 | Spotube-iOS\n\n### Bug Fixes\n\n- **newpipe**: Fallback to muxed streams if no audio stream is available\n- Dismiss search dropdown and keyboard on submission\n- Custom image helper null exception\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.1...v5.1.2",
+        "status": "current",
+        "firstSeen": "2026-09-25T12:05:51Z"
       }
     ],
     "statusmagic": [

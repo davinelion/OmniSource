@@ -863,7 +863,7 @@
       "bundleIdentifier": "com.christianselig.Apollo",
       "category": "social",
       "developerName": "Christian Selig (& Apollo-Reborn contributors)",
-      "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
+      "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Apollo.webp",
       "localizedDescription": "Apollo was the beloved, award-winning Reddit client for iPhone and iPad known for its beautiful native interface, powerful gestures, jump-to-comments, inline media reading and fanatic attention to detail. After Reddit's API changes ended the original app, the Apollo-Reborn project now publishes official continuation builds that work against Reddit's public API — keeping the classic Apollo experience alive.",
       "name": "Apollo",
@@ -901,141 +901,141 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-10",
-          "lastUpdatedAt": "2026-09-13"
+          "lastUpdatedAt": "2026-09-25"
         },
         "bundleAlias": "com.christianselig.Apollo"
       },
       "screenshotURLs": [],
-      "size": 96132071,
+      "size": 96553795,
       "subtitle": "The beloved Reddit client, continued by Apollo-Reborn",
       "tintColor": "F0542D",
-      "version": "3.7.1",
-      "versionDate": "2026-09-13",
-      "versionDescription": "Apollo 3.7.1 | Apollo-Reborn-3.7.1\n\n### Features\n\n- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)\n  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row\n  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls\n\n### Fixes\n\n- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)\n- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)\n- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)\n- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)\n  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there\n- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be created, seen when tapping the Posts tab to return to the top of a long Popular feed; the element is left blank instead (#1099: @icpryde)\n- Fix **Keep in Floating Tab** and the other Apollo Reborn rows in the legacy ⋯ sheet crashing the app when a third-party menu tweak such as Translomatic is installed (#1076: @icpryde)\n- Fix **videos going quiet** after rotating the phone with the fullscreen viewer open, and stop a second video under the viewer from starting its own audio (#1080: @icpryde)\n- Fix **Add to Multireddit** reporting \"Error adding to multireddit\" even though the subreddit was added, and the multireddit's subtitle lagging until the next refresh (#1081: @icpryde)\n- Keep the Liquid Glass action pill **expanded by default** again — collapsing it into the ⋯ is now the opt-in **Collapse Navigation Actions** switch (Interface → Display & Navigation), and **Center Title Between Buttons** is back for the expanded layout (#1105: @IllIIllIllIllII)\n  - Titles stay centered unless the expanded actions need the room, the pill no longer flashes when the subreddit picker opens or closes, and a startup recursion on the always-expanded path is fixed\n- Restore **Hidden** as a **Header Style** option on Liquid Glass — it removes the top scroll-edge effect without adding a blur, and existing Hidden preferences and backups work again (#1074: @IllIIllIllIllII)\n- Fix the Liquid Glass tab bar popping open and snapping back on iOS 27 when a **Two-Gesture** reveal starts with the Left or Right hide style (#1078: @IllIIllIllIllII)\n- Show the **+N new-comment count** on Community Highlights again after a refresh (#1098: @IllIIllIllIllII)",
+      "version": "3.8.0",
+      "versionDate": "2026-09-25",
+      "versionDescription": "Apollo 3.8.0 | Apollo-Reborn-3.8.0\n\n### Features\n\n- Add **Save All Media** to save every image, GIF, and video in a Reddit gallery, Imgur album, or ImageChest post at once, from the fullscreen viewer's menus or an album's long-press menu, with a progress ring and Cancel (#1048: @IllIIllIllIllII)\n  - Fullscreen images offer Save Image next to Share, and holding an image in the viewer or a feed gallery offers Copy Image and Save Image for that image instead of jumping straight to the share sheet\n  - Also fixes **Download Video** when only Reddit's copy is available, **Save GIF** in the share sheet, and missing post controls on albums opened from a link in a post\n- Add **Action Menus** (Interface → Menus) to reorder and hide the actions in Apollo's ••• menus and, for moderators, its moderator menus, one menu at a time with a live preview (#1131: @icpryde)\n- Redesign the **Account Switcher** as a themed bottom sheet with larger avatars, Add Account and Edit at the top, and drag-to-reorder that no longer refreshes your feed (#1077: @IllIIllIllIllII)\n  - Also fixes a crash when switching accounts\n- Add **Automatic Backups** (Data → Backup Settings) — pick a folder in Files and your settings are backed up there every day, three days, or seven days, keeping the ten most recent automatic backups (#1060, #1148, #1152: @IllIIllIllIllII)\n  - Backups now save as `.apollobackup` files with the Apollo icon, and opening one from Files asks before restoring; existing `.zip` backups still restore\n- Add **Settings Shortcuts** — press and hold the Settings tab to jump straight to up to 15 settings pages, chosen and reordered under Interface → Tab Bar → Settings Shortcuts (#1150: @IllIIllIllIllII)\n- Add a **Return Button** that appears beside Back after a status-bar tap takes you to the top; tap it, or the status bar again, to jump back to where you were reading, now on Liquid Glass too (#1116: @icpryde, @IllIIllIllIllII)\n  - Turn the button off under Interface → Display & Navigation; the second status-bar tap keeps working either way\n- Rework **Hidden & Deleted** into a profile row that opens one combined feed of archived posts and comments, labeled Hidden, Removed, or Deleted, with inline images and swipeable albums (#1137: @IllIIllIllIllII)\n- Add **Profile Picture Shape** (Interface → Display & Navigation) to show profile pictures as Full, Circle, or rounded Square across posts, comments, messages, the profile tab, and the Account Switcher (#1136: @IllIIllIllIllII)\n- Extend **Immersive** profile artwork behind the status and navigation bars with a wider crop and smoother fade, and long-press a profile banner to view it fullscreen and save it (#1186: @IllIIllIllIllII)\n- Play GIF and video tiles silently in **Gallery View**'s grid while they're on screen, with separate **Play Videos in Gallery View** and **Play GIFs in Gallery View** switches (Media → Browsing, on by default) (#1142: @icpryde)\n- Speed up opening and closing **images and albums** — albums zoom straight out of the feed thumbnail like single images, the background fades as you swipe media away, and closing an album returns the feed carousel to the last image you viewed (#1143: @IllIIllIllIllII)\n- Smooth out scrolling through **video-heavy feeds** — playing videos take far less of the app's time, and the new **Smoother Video Scrolling** switch (Posts & Feeds → Feed, on by default) prepares players in the background and lets video posts draw without stalling the scroll (#1168: @icpryde)\n- Keep unsent **Chat** drafts in modern Direct Chat, saved per account and conversation and restored when you come back (#1207: @Thetromboneman1)\n- Add **Swipe Tab Bar to Navigate** (Interface → Tab Bar, Liquid Glass, off by default) to swipe the tab bar back and forward again in place of the native drag-to-switch-tabs gesture; takes effect after relaunching (#1075: @DeltAndy123)\n- Add **Confirm Favorite Changes** (Subreddits → Favorites, off by default) so the star on the Subreddits list asks before adding or removing a favorite (#1173: @nunoo)\n\n### Fixes\n\n- Fix a **startup crash loop** after adding an account while Reddit is rate-limiting; an unexpected listing response now fails like any other load (#1147: @icpryde)\n- Fix a crash on launch or when switching accounts after changing your **Reddit password**; Apollo now tries to recover the expired session and asks you to sign in again if it can't (#1200: @IllIIllIllIllII)\n- Fix crashes loading older comments in **Live Update** mode and choosing Open in Safari on a shared GIF or other downloaded media (#1171: @IllIIllIllIllII)\n- Fix a crash when touching and holding a post while the feed scrolls (#1193: @icpryde)\n- Fix a crash tapping **Cancel** on a subreddit search with results on non-Liquid-Glass builds (#1133: @icpryde)\n- Bring back **Copy with Account** in Copy Widget Setup Code, lost in 3.7.1, so Home and multireddit widgets can use your account again (#1195: @icpryde)\n- Fix **Gallery View** hiding its first row of tiles under the navigation bar since 3.7.1, and its spinner staying up after changing the filter while it loads (#1140, #1194: @icpryde)\n  - Holding a video in the viewer opens Save/Share without letting go, and dragging down with that sheet open no longer leaves the viewer black and unresponsive\n- Fix the Liquid Glass **feed search bar** springing back open after you scroll it away, staying pinned when you scroll right after cancelling a search, and the Hard header style cutting off the top of the field (#1130, #1146: @icpryde)\n  - Collapsing a comment no longer jumps the thread or flashes a band across the top, Find in Comments swaps its buttons smoothly, and a cancelled swipe-back keeps the search field's glass\n- Keep the **Settings** search field below the title while searching on Liquid Glass instead of sliding up over it (#1156: @icpryde)\n- Make **Apollo Reborn settings** follow Apollo's Text Size and match the native rows' font weight and text colors, including the softer gray in Pure Black mode (#1165: @IllIIllIllIllII)\n- Fix Apollo Reborn settings screens stuttering or refusing to scroll back up, footer text drawing over the rows above it, and the list shifting after a swipe back (#1170: @icpryde)\n- Soften the **row highlight** when you tap a row — stock themes use Apollo's original gray again and custom themes a lighter tint of their accent (#1166: @IllIIllIllIllII)\n- Fix **subreddit list editing** — favorite stars stay aligned, long names stop short of the star, confirmation buttons stay tappable, rows no longer stay highlighted, and removals animate smoothly (#1174: @IllIIllIllIllII)\n- Keep the header visible while editing the subreddit list with **Hide Header on Scroll** on, and bring the header and tab bar back as soon as you tap the status bar (#1120: @IllIIllIllIllII)\n- Fix a brief stall when scrolling back down right after reaching the top of a post, and a stutter where Hide Header on Scroll kept hiding and revealing the header (#1119: @IllIIllIllIllII)\n- Make the **Posts** tab scroll to the top and then go back on profiles, trophies, multireddits, and posts opened from a profile, like it does on feeds (#1153: @IllIIllIllIllII)\n- Fix a cancelled forward swipe erasing your navigation history, so swiping forward again reopens the page (#1128: @IllIIllIllIllII)\n- Reopen **Floating Post Tabs** on the comment sort you left them on, Live Update included, instead of the default sort (#1125: @icpryde)\n- Fade a newly **posted comment** into the thread with its avatar and flair already in place, instead of the thread jumping and the avatar popping in afterwards (#1196: @icpryde)\n- Fix collapsing a comment thread sliding its replies down before the comments below move up (#1180: @IllIIllIllIllII)\n- Keep the **comment age** visible next to long usernames, which now truncate instead (#1162: @IllIIllIllIllII)\n- Keep recovered **deleted comments** readable when Apollo switches between light and dark mode while the thread is open (#1206: @Thetromboneman1)\n- Fix feed usernames drifting right…",
       "versions": [
         {
-          "version": "3.7.1",
-          "date": "2026-09-13",
-          "localizedDescription": "Apollo 3.7.1 | Apollo-Reborn-3.7.1\n\n### Features\n\n- Add **Hide Header on Scroll** (Interface → Tab Bar) so the Liquid Glass navigation bar follows the tab bar as it hides and reappears, in both Two-Gesture and Classic scroll modes (#1079: @IllIIllIllIllII)\n  - Hide Bars on Scroll, Hide Style, Hide Header on Scroll, and Scroll Behavior are separate controls now, and Hide Style, Scroll Behavior, and Header Style pick from native glass menus that show the current choice in the row\n  - Gallery View honors the selected Header Style while scrolling and after the bars come back, instead of leaving an opaque strip under the navigation controls\n\n### Fixes\n\n- Fix **swipe navigation** feeling sluggish since 3.7.0 — pages settle with Apollo's original easing again after you lift your finger, on back, forward, and cancelled swipes (#1073: @IllIIllIllIllII)\n- Fix the **comment jump button** stalling on the first parent comment since 3.7.0 — consecutive taps advance again without scrolling past the current comment first, and long-press to jump back uses the corrected position (#1094: @IllIIllIllIllII)\n- Fix posts opened from **Community Highlights**, deep links, Recently Read, Floating Post Tabs, and other `apollo://` routes ignoring the subreddit's suggested sort and your Remember Post Sort and Remember Subreddit Sort choices — they now open on the same comment sort a feed tap would (#1102: @icpryde)\n- Fix several **crashes**: opening 3.7.0 on TrollStore and other ElleKit installs, a profile page still loading when you switch accounts or refresh, expanding or collapsing a multireddit in the subreddit list, and the notification fetcher reading settings that had just been replaced (#1089: @IllIIllIllIllII)\n  - Classic (non-glass) builds running under LiveContainer no longer mistake themselves for Liquid Glass builds, the suspected cause of crashes opening search, settings, posts, and subreddits there\n- Keep **Liquid Glass** builds from crashing when a feed element's bitmap can't be created, seen when tapping the Posts tab to return to the top of a long Popular feed; the element is left blank instead (#1099: @icpryde)\n- Fix **Keep in Floating Tab** and the other Apollo Reborn rows in the legacy ⋯ sheet crashing the app when a third-party menu tweak such as Translomatic is installed (#1076: @icpryde)\n- Fix **videos going quiet** after rotating the phone with the fullscreen viewer open, and stop a second video under the viewer from starting its own audio (#1080: @icpryde)\n- Fix **Add to Multireddit** reporting \"Error adding to multireddit\" even though the subreddit was added, and the multireddit's subtitle lagging until the next refresh (#1081: @icpryde)\n- Keep the Liquid Glass action pill **expanded by default** again — collapsing it into the ⋯ is now the opt-in **Collapse Navigation Actions** switch (Interface → Display & Navigation), and **Center Title Between Buttons** is back for the expanded layout (#1105: @IllIIllIllIllII)\n  - Titles stay centered unless the expanded actions need the room, the pill no longer flashes when the subreddit picker opens or closes, and a startup recursion on the always-expanded path is fixed\n- Restore **Hidden** as a **Header Style** option on Liquid Glass — it removes the top scroll-edge effect without adding a blur, and existing Hidden preferences and backups work again (#1074: @IllIIllIllIllII)\n- Fix the Liquid Glass tab bar popping open and snapping back on iOS 27 when a **Two-Gesture** reveal starts with the Left or Right hide style (#1078: @IllIIllIllIllII)\n- Show the **+N new-comment count** on Community Highlights again after a refresh (#1098: @IllIIllIllIllII)",
-          "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
-          "size": 96132071,
+          "version": "3.8.0",
+          "date": "2026-09-25",
+          "localizedDescription": "Apollo 3.8.0 | Apollo-Reborn-3.8.0\n\n### Features\n\n- Add **Save All Media** to save every image, GIF, and video in a Reddit gallery, Imgur album, or ImageChest post at once, from the fullscreen viewer's menus or an album's long-press menu, with a progress ring and Cancel (#1048: @IllIIllIllIllII)\n  - Fullscreen images offer Save Image next to Share, and holding an image in the viewer or a feed gallery offers Copy Image and Save Image for that image instead of jumping straight to the share sheet\n  - Also fixes **Download Video** when only Reddit's copy is available, **Save GIF** in the share sheet, and missing post controls on albums opened from a link in a post\n- Add **Action Menus** (Interface → Menus) to reorder and hide the actions in Apollo's ••• menus and, for moderators, its moderator menus, one menu at a time with a live preview (#1131: @icpryde)\n- Redesign the **Account Switcher** as a themed bottom sheet with larger avatars, Add Account and Edit at the top, and drag-to-reorder that no longer refreshes your feed (#1077: @IllIIllIllIllII)\n  - Also fixes a crash when switching accounts\n- Add **Automatic Backups** (Data → Backup Settings) — pick a folder in Files and your settings are backed up there every day, three days, or seven days, keeping the ten most recent automatic backups (#1060, #1148, #1152: @IllIIllIllIllII)\n  - Backups now save as `.apollobackup` files with the Apollo icon, and opening one from Files asks before restoring; existing `.zip` backups still restore\n- Add **Settings Shortcuts** — press and hold the Settings tab to jump straight to up to 15 settings pages, chosen and reordered under Interface → Tab Bar → Settings Shortcuts (#1150: @IllIIllIllIllII)\n- Add a **Return Button** that appears beside Back after a status-bar tap takes you to the top; tap it, or the status bar again, to jump back to where you were reading, now on Liquid Glass too (#1116: @icpryde, @IllIIllIllIllII)\n  - Turn the button off under Interface → Display & Navigation; the second status-bar tap keeps working either way\n- Rework **Hidden & Deleted** into a profile row that opens one combined feed of archived posts and comments, labeled Hidden, Removed, or Deleted, with inline images and swipeable albums (#1137: @IllIIllIllIllII)\n- Add **Profile Picture Shape** (Interface → Display & Navigation) to show profile pictures as Full, Circle, or rounded Square across posts, comments, messages, the profile tab, and the Account Switcher (#1136: @IllIIllIllIllII)\n- Extend **Immersive** profile artwork behind the status and navigation bars with a wider crop and smoother fade, and long-press a profile banner to view it fullscreen and save it (#1186: @IllIIllIllIllII)\n- Play GIF and video tiles silently in **Gallery View**'s grid while they're on screen, with separate **Play Videos in Gallery View** and **Play GIFs in Gallery View** switches (Media → Browsing, on by default) (#1142: @icpryde)\n- Speed up opening and closing **images and albums** — albums zoom straight out of the feed thumbnail like single images, the background fades as you swipe media away, and closing an album returns the feed carousel to the last image you viewed (#1143: @IllIIllIllIllII)\n- Smooth out scrolling through **video-heavy feeds** — playing videos take far less of the app's time, and the new **Smoother Video Scrolling** switch (Posts & Feeds → Feed, on by default) prepares players in the background and lets video posts draw without stalling the scroll (#1168: @icpryde)\n- Keep unsent **Chat** drafts in modern Direct Chat, saved per account and conversation and restored when you come back (#1207: @Thetromboneman1)\n- Add **Swipe Tab Bar to Navigate** (Interface → Tab Bar, Liquid Glass, off by default) to swipe the tab bar back and forward again in place of the native drag-to-switch-tabs gesture; takes effect after relaunching (#1075: @DeltAndy123)\n- Add **Confirm Favorite Changes** (Subreddits → Favorites, off by default) so the star on the Subreddits list asks before adding or removing a favorite (#1173: @nunoo)\n\n### Fixes\n\n- Fix a **startup crash loop** after adding an account while Reddit is rate-limiting; an unexpected listing response now fails like any other load (#1147: @icpryde)\n- Fix a crash on launch or when switching accounts after changing your **Reddit password**; Apollo now tries to recover the expired session and asks you to sign in again if it can't (#1200: @IllIIllIllIllII)\n- Fix crashes loading older comments in **Live Update** mode and choosing Open in Safari on a shared GIF or other downloaded media (#1171: @IllIIllIllIllII)\n- Fix a crash when touching and holding a post while the feed scrolls (#1193: @icpryde)\n- Fix a crash tapping **Cancel** on a subreddit search with results on non-Liquid-Glass builds (#1133: @icpryde)\n- Bring back **Copy with Account** in Copy Widget Setup Code, lost in 3.7.1, so Home and multireddit widgets can use your account again (#1195: @icpryde)\n- Fix **Gallery View** hiding its first row of tiles under the navigation bar since 3.7.1, and its spinner staying up after changing the filter while it loads (#1140, #1194: @icpryde)\n  - Holding a video in the viewer opens Save/Share without letting go, and dragging down with that sheet open no longer leaves the viewer black and unresponsive\n- Fix the Liquid Glass **feed search bar** springing back open after you scroll it away, staying pinned when you scroll right after cancelling a search, and the Hard header style cutting off the top of the field (#1130, #1146: @icpryde)\n  - Collapsing a comment no longer jumps the thread or flashes a band across the top, Find in Comments swaps its buttons smoothly, and a cancelled swipe-back keeps the search field's glass\n- Keep the **Settings** search field below the title while searching on Liquid Glass instead of sliding up over it (#1156: @icpryde)\n- Make **Apollo Reborn settings** follow Apollo's Text Size and match the native rows' font weight and text colors, including the softer gray in Pure Black mode (#1165: @IllIIllIllIllII)\n- Fix Apollo Reborn settings screens stuttering or refusing to scroll back up, footer text drawing over the rows above it, and the list shifting after a swipe back (#1170: @icpryde)\n- Soften the **row highlight** when you tap a row — stock themes use Apollo's original gray again and custom themes a lighter tint of their accent (#1166: @IllIIllIllIllII)\n- Fix **subreddit list editing** — favorite stars stay aligned, long names stop short of the star, confirmation buttons stay tappable, rows no longer stay highlighted, and removals animate smoothly (#1174: @IllIIllIllIllII)\n- Keep the header visible while editing the subreddit list with **Hide Header on Scroll** on, and bring the header and tab bar back as soon as you tap the status bar (#1120: @IllIIllIllIllII)\n- Fix a brief stall when scrolling back down right after reaching the top of a post, and a stutter where Hide Header on Scroll kept hiding and revealing the header (#1119: @IllIIllIllIllII)\n- Make the **Posts** tab scroll to the top and then go back on profiles, trophies, multireddits, and posts opened from a profile, like it does on feeds (#1153: @IllIIllIllIllII)\n- Fix a cancelled forward swipe erasing your navigation history, so swiping forward again reopens the page (#1128: @IllIIllIllIllII)\n- Reopen **Floating Post Tabs** on the comment sort you left them on, Live Update included, instead of the default sort (#1125: @icpryde)\n- Fade a newly **posted comment** into the thread with its avatar and flair already in place, instead of the thread jumping and the avatar popping in afterwards (#1196: @icpryde)\n- Fix collapsing a comment thread sliding its replies down before the comments below move up (#1180: @IllIIllIllIllII)\n- Keep the **comment age** visible next to long usernames, which now truncate instead (#1162: @IllIIllIllIllII)\n- Keep recovered **deleted comments** readable when Apollo switches between light and dark mode while the thread is open (#1206: @Thetromboneman1)\n- Fix feed usernames drifting right…",
+          "downloadURL": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
+          "size": 96553795,
           "minOSVersion": "14.0",
-          "releaseUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.7.1",
+          "releaseUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.8.0",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
-              "filename": "Apollo-Reborn-3.7.1-dSYMs.zip",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-dSYMs.zip",
+              "filename": "Apollo-Reborn-3.8.0-dSYMs.zip",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-dSYMs.zip",
               "platform": "unknown",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 20365290,
-              "sha256": "3852fb61c3f2294359cca0683719d51ea4b57d97c8f79467f4d0cd4c163f45fc",
-              "downloads": 33,
+              "size": 21642028,
+              "sha256": "d41f8dd138b48bf7dec4dcc39f02eb728975bc0565527d34113a9f8e672f8536",
+              "downloads": 0,
               "mimeType": "application/zip",
               "installable": false
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASS-NOEXTENSIONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASS-NOEXTENSIONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASS-NOEXTENSIONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASS-NOEXTENSIONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 114471562,
-              "sha256": "af0dde2b2811c1bdcc10d7c522797b133110bb19a3b3acd4ae03224ca4e4db21",
-              "downloads": 2442,
+              "size": 114893279,
+              "sha256": "5519339a5b6966123a4d88ff30c4569d65a55de5455e987133f117754779ea03",
+              "downloads": 193,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 124722640,
-              "sha256": "ab72d1794c9872bc915b74f812c5eda4a1a969061c836f5046bbc3f0c4969e33",
-              "downloads": 5512,
+              "size": 125144343,
+              "sha256": "f58a601faebb451b61c466313bab2a0327f81c5cd63e4ab6c5795f510684aaf0",
+              "downloads": 488,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASSICONS-NOEXTENSIONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASSICONS-NOEXTENSIONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASSICONS-NOEXTENSIONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASSICONS-NOEXTENSIONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 114471417,
-              "sha256": "c6043bf47be4f1efc913b15717df66140798eea097101f26ead352e920601834",
-              "downloads": 94,
+              "size": 114893134,
+              "sha256": "3880a10eb714c0c23deebd5e60bf4535790eed78a6aa7a910fafa7110459063d",
+              "downloads": 6,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-GLASSICONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-GLASSICONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-GLASSICONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-GLASSICONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 124722495,
-              "sha256": "1bb3344abfe518d0e179e9474368831d9066f8f620f14af729cf7944242bce9f",
-              "downloads": 165,
+              "size": 125144200,
+              "sha256": "4f7aa35bd46a12b7d7bd777a3fc5c49d985c230a5f6dfc9132cbc60c83ecdeba",
+              "downloads": 24,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1-NOEXTENSIONS.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1-NOEXTENSIONS.ipa",
+              "filename": "Apollo-Reborn-3.8.0-NOEXTENSIONS.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0-NOEXTENSIONS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 85880995,
-              "sha256": "d027fcdfc63bed3fc49821e34eba3e156f28ad97eb9987e07c26e06b66a2c12d",
-              "downloads": 656,
+              "size": 86302731,
+              "sha256": "6c84e709af692613a14eafe3e212b02e85076110a508bbe96c0521f3add1a68f",
+              "downloads": 46,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "Apollo-Reborn-3.7.1.ipa",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/Apollo-Reborn-3.7.1.ipa",
+              "filename": "Apollo-Reborn-3.8.0.ipa",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/Apollo-Reborn-3.8.0.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 96132071,
-              "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-              "downloads": 992,
+              "size": 96553795,
+              "sha256": "3c6a855d7e19351a966f7e833d1d27199a8e34e981e94af005d8d756bf5f9de7",
+              "downloads": 72,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "com.apollo.reborn_3.7.1_iphoneos-arm.deb",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/com.apollo.reborn_3.7.1_iphoneos-arm.deb",
+              "filename": "com.apollo.reborn_3.8.0_iphoneos-arm.deb",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/com.apollo.reborn_3.8.0_iphoneos-arm.deb",
               "platform": "linux",
               "architecture": null,
               "fileType": "DEB",
-              "size": 12186352,
-              "sha256": "04fac071afc127b8ba32585d8e13ad94542bea36bb0c75264dd84064a74501aa",
-              "downloads": 33,
+              "size": 12481156,
+              "sha256": "6ef0dbf4054bf7b5fca9bda7c5431834bebb845060391f4100a3de57319d4d8f",
+              "downloads": 6,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
-              "filename": "com.apollo.reborn_3.7.1_iphoneos-arm64_rootless.deb",
-              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.7.1/com.apollo.reborn_3.7.1_iphoneos-arm64_rootless.deb",
+              "filename": "com.apollo.reborn_3.8.0_iphoneos-arm64_rootless.deb",
+              "downloadUrl": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/download/v1.15.11_3.8.0/com.apollo.reborn_3.8.0_iphoneos-arm64_rootless.deb",
               "platform": "linux",
               "architecture": "arm64",
               "fileType": "DEB",
-              "size": 12187106,
-              "sha256": "2ac1a3f4151ca3e67aaaa5d54e2966fdfaa5b6b9bf6f49f5aaa96120d3805a70",
-              "downloads": 41,
+              "size": 12482962,
+              "sha256": "9415603c16b542890104aec39e06c953085a5a1b14ceeadf5dc2e8e68c56edb7",
+              "downloads": 6,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "sha256": "46639569a12d367f3973c6a57e7769e83ee325b8614fa4385d5df70912544807",
-          "downloads": 992
+          "sha256": "3c6a855d7e19351a966f7e833d1d27199a8e34e981e94af005d8d756bf5f9de7",
+          "downloads": 72
         }
       ]
     },
@@ -3690,7 +3690,7 @@
       "bundleIdentifier": "com.facebook.Facebook.glow",
       "category": "social",
       "developerName": "dayanch96 & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
       "localizedDescription": "Glow is a simple, clean and powerful tweak for Facebook by Dayanch96: it removes ads and sponsored content, adds video downloads, unlocks media quality options and hides unwanted UI elements on top of the official Facebook app.",
       "name": "Glow",
@@ -3725,27 +3725,27 @@
           "notes": "Tracks the ready-to-sideload Glow build from the IPA Vault source (the official dayanch96/Glow repo publishes the tweak as .deb only). Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "HTTP 404",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-24",
-          "lastUpdatedAt": "2026-09-05"
+          "lastUpdatedAt": "2026-09-24"
         },
         "bundleAlias": "com.facebook.Facebook.glow"
       },
       "screenshotURLs": [],
-      "size": 226667533,
+      "size": 144273472,
       "subtitle": "Clean, powerful Facebook tweak by dayanch96",
       "tintColor": "1877F2",
-      "version": "577.1",
-      "versionDate": "2026-09-05",
-      "versionDescription": "Facebook 577.1 | Facebook-577.1-Glow\n\nIPA Vault build for Facebook (Glow), version 577.1",
+      "version": "2026.38.0",
+      "versionDate": "2026-09-24",
+      "versionDescription": "Facebook 2026.38.0 | Reddit-2026.38.0-RedditFilter\n\nIPA Vault build for Reddit (RedditFilter), version 2026.38.0",
       "versions": [
         {
-          "version": "577.1",
-          "date": "2026-09-05",
-          "localizedDescription": "Facebook 577.1 | Facebook-577.1-Glow\n\nIPA Vault build for Facebook (Glow), version 577.1",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-          "size": 226667533,
+          "version": "2026.38.0",
+          "date": "2026-09-24",
+          "localizedDescription": "Facebook 2026.38.0 | Reddit-2026.38.0-RedditFilter\n\nIPA Vault build for Reddit (RedditFilter), version 2026.38.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
+          "size": 144273472,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -3753,12 +3753,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Facebook-577.1-Glow.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
+              "filename": "Reddit-2026.38.0-RedditFilter.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 226667533,
+              "size": 144273472,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -4699,7 +4699,7 @@
       "bundleIdentifier": "com.facebook.Facebook",
       "category": "social",
       "developerName": "7MD & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-580.0.0-iQFace.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
       "localizedDescription": "iQFace is a tweaked Facebook build with the iQFace tweak by 7MD, one of the Facebook modifications distributed ready-to-sideload through the IPA Vault source. Feature set is defined by the iQFace tweak.",
       "name": "iQFace",
@@ -4734,27 +4734,27 @@
           "notes": "Tweak by 7MD; distributed ready-to-sideload via the IPA Vault source. Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "HTTP 404",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-24",
-          "lastUpdatedAt": "2026-09-16"
+          "lastUpdatedAt": "2026-09-24"
         },
         "bundleAlias": "com.facebook.Facebook"
       },
       "screenshotURLs": [],
-      "size": 228632105,
+      "size": 232578756,
       "subtitle": "Facebook tweak build by 7MD",
       "tintColor": "1877F2",
-      "version": "579.0.0",
-      "versionDate": "2026-09-16",
-      "versionDescription": "Facebook 579.0.0 | Facebook-579.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 579.0.0",
+      "version": "580.0.0",
+      "versionDate": "2026-09-24",
+      "versionDescription": "Facebook 580.0.0 | Facebook-580.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 580.0.0",
       "versions": [
         {
-          "version": "579.0.0",
-          "date": "2026-09-16",
-          "localizedDescription": "Facebook 579.0.0 | Facebook-579.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 579.0.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
-          "size": 228632105,
+          "version": "580.0.0",
+          "date": "2026-09-24",
+          "localizedDescription": "Facebook 580.0.0 | Facebook-580.0.0-iQFace\n\nIPA Vault build for Facebook (iQFace), version 580.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-580.0.0-iQFace.ipa",
+          "size": 232578756,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -4762,12 +4762,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Facebook-579.0.0-iQFace.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-579.0.0-iQFace.ipa",
+              "filename": "Facebook-580.0.0-iQFace.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-580.0.0-iQFace.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 228632105,
+              "size": 232578756,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -5369,7 +5369,7 @@
               "fileType": "APK",
               "size": 87021134,
               "sha256": "7409d39f514e287a39d0b9017cea7545ea719f68a4935870840678358fde7fcd",
-              "downloads": 10,
+              "downloads": 11,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5381,7 +5381,7 @@
               "fileType": "APK",
               "size": 108612022,
               "sha256": "d89ffb0f4c7d73099b4227f04599fa24fb9fbc85618d72797c8bba6b55921460",
-              "downloads": 63,
+              "downloads": 66,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5429,7 +5429,7 @@
               "fileType": "IPA",
               "size": 56199092,
               "sha256": "2418b6a4c8648bcad63a7b818dd017e7756953d7b5aa8e0f261f37b11e687d67",
-              "downloads": 8,
+              "downloads": 9,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -5441,7 +5441,7 @@
               "fileType": "APK",
               "size": 29460082,
               "sha256": "0bd3099908fdb515f2ecb4725036cfdb94d183fd5726c6f1029b29f677640bf6",
-              "downloads": 15,
+              "downloads": 16,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5453,7 +5453,7 @@
               "fileType": "APK",
               "size": 31553916,
               "sha256": "988baa0cab3119d0470e0228711e79f2d1f704ef397ff36059496972a7098b5c",
-              "downloads": 357,
+              "downloads": 367,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -5501,13 +5501,13 @@
               "fileType": "IPA",
               "size": 14640159,
               "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-              "downloads": 194,
+              "downloads": 205,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "7c33defdbb852b2e91b79740afb5360bd4a7f8713abcb6a5f0a3fe7ad83dacfd",
-          "downloads": 194
+          "downloads": 205
         }
       ]
     },
@@ -6444,13 +6444,13 @@
               "fileType": "IPA",
               "size": 106518711,
               "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-              "downloads": 967,
+              "downloads": 1103,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "ac9e50e355d6911d01ec31dd405b7ca361490499b91cb68c988fe72427b34413",
-          "downloads": 967
+          "downloads": 1103
         }
       ]
     },
@@ -6569,13 +6569,13 @@
               "fileType": "IPA",
               "size": 133357787,
               "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-              "downloads": 312,
+              "downloads": 322,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "8d4fe82447fe35056ebc9a2962b9ce531fd581926f471c4bca88146fc5aae22f",
-          "downloads": 312
+          "downloads": 322
         }
       ]
     },
@@ -6608,7 +6608,7 @@
       "bundleIdentifier": "com.facebook.Messenger.flow",
       "category": "social",
       "developerName": "dvntms & IPA Vault",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-Flow.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
       "localizedDescription": "Messenger Flow is a tweaked Facebook Messenger build by dvntms, distributed ready-to-sideload through the IPA Vault on a current Messenger base version. The Flow tweak's feature set is defined by its build; no official public documentation exists.",
       "name": "Messenger Flow",
@@ -6646,24 +6646,24 @@
           "downloadReachable": true,
           "detail": "HTTP 200",
           "statusSince": "2026-09-18",
-          "lastUpdatedAt": "2026-09-16"
+          "lastUpdatedAt": "2026-09-24"
         },
         "bundleAlias": "com.facebook.Messenger.flow"
       },
       "screenshotURLs": [],
-      "size": 112483407,
+      "size": 115010861,
       "subtitle": "Facebook Messenger tweak by dvntms (unofficial build)",
       "tintColor": "0084FF",
-      "version": "579.0.0",
-      "versionDate": "2026-09-16",
-      "versionDescription": "Messenger 579.0.0 | Messenger-579.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 579.0.0",
+      "version": "580.0.0",
+      "versionDate": "2026-09-24",
+      "versionDescription": "Messenger 580.0.0 | Messenger-580.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 580.0.0",
       "versions": [
         {
-          "version": "579.0.0",
-          "date": "2026-09-16",
-          "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 579.0.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
-          "size": 112483407,
+          "version": "580.0.0",
+          "date": "2026-09-24",
+          "localizedDescription": "Messenger 580.0.0 | Messenger-580.0.0-Flow\n\nIPA Vault build for Messenger (Flow), version 580.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-Flow.ipa",
+          "size": 115010861,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -6671,12 +6671,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Messenger-579.0.0-Flow.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-Flow.ipa",
+              "filename": "Messenger-580.0.0-Flow.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-Flow.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 112483407,
+              "size": 115010861,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -6789,7 +6789,7 @@
       "bundleIdentifier": "G7YU7X7KRJ.SworIM",
       "category": "social",
       "developerName": "Monal IM",
-      "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
+      "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Monal.webp",
       "localizedDescription": "Monal is a free, open-source XMPP (Jabber) instant messenger for iOS and macOS. It offers OMEMO end-to-end encryption, multiple accounts, group chat and push notifications without a central server.",
       "name": "Monal",
@@ -6827,93 +6827,93 @@
           "downloadReachable": true,
           "detail": "HTTP 302",
           "statusSince": "2026-09-13",
-          "lastUpdatedAt": "2026-05-27"
+          "lastUpdatedAt": "2026-09-24"
         },
         "bundleAlias": "G7YU7X7KRJ.SworIM"
       },
       "screenshotURLs": [],
-      "size": 38349660,
+      "size": 38407335,
       "subtitle": "XMPP instant messenger",
       "tintColor": "00A8E8",
-      "version": "6.4.21",
-      "versionDate": "2026-05-27",
-      "versionDescription": "Monal 6.4.21 | Monal\n\n- Show last usage timestamp of OMEMO keys\n- Use the iOS 18 UI in the share sheet\n- Allow using any language in the Display Name field in account settings\n- Try to improve location sharing accuracy\n- Improve contact last activity timestamps\n- Fix several bugs",
+      "version": "6.4.22",
+      "versionDate": "2026-09-24",
+      "versionDescription": "Monal 6.4.22 | Monal\n\n- Improve SRV-record handling for dot records\n- Allow voice-over localization of loading spinner in the chats overview\n- Obfuscate upload filenames when sending encrypted files",
       "versions": [
         {
-          "version": "6.4.21",
-          "date": "2026-05-27",
-          "localizedDescription": "Monal 6.4.21 | Monal\n\n- Show last usage timestamp of OMEMO keys\n- Use the iOS 18 UI in the share sheet\n- Allow using any language in the Display Name field in account settings\n- Try to improve location sharing accuracy\n- Improve contact last activity timestamps\n- Fix several bugs",
-          "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
-          "size": 38349660,
+          "version": "6.4.22",
+          "date": "2026-09-24",
+          "localizedDescription": "Monal 6.4.22 | Monal\n\n- Improve SRV-record handling for dot records\n- Allow voice-over localization of loading spinner in the chats overview\n- Obfuscate upload filenames when sending encrypted files",
+          "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
+          "size": 38407335,
           "minOSVersion": "16.1",
-          "releaseUrl": "https://github.com/monal-im/Monal/releases/tag/Build_iOS_1092",
+          "releaseUrl": "https://github.com/monal-im/Monal/releases/tag/Build_iOS_1094",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
+              "filename": "Monal.ipa",
+              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
+              "platform": "ios",
+              "architecture": null,
+              "fileType": "IPA",
+              "size": 38407335,
+              "sha256": "5c05702731ef44fd203b3691b3462f56e0e238863f69083479cdd1712f428b08",
+              "downloads": 1,
+              "mimeType": "application/octet-stream",
+              "installable": true
+            },
+            {
               "filename": "monal-ios-dsym.zip",
-              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/monal-ios-dsym.zip",
+              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/monal-ios-dsym.zip",
               "platform": "ios",
               "architecture": null,
               "fileType": "ZIP",
-              "size": 38099977,
-              "sha256": "aef09b763dba5e3c478599639bebe33570ef9d608c8b132b1ecacc660cdb87a3",
-              "downloads": 6,
-              "mimeType": "application/zip",
-              "installable": false
-            },
-            {
-              "filename": "Monal.zip",
-              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.zip",
-              "platform": "unknown",
-              "architecture": null,
-              "fileType": "ZIP",
-              "size": 46634197,
-              "sha256": "559da3f9bba9a6c50d3a39ff0c38b01bf86a8e7da0e11eee323cc0e835aa0764",
-              "downloads": 39,
+              "size": 38105987,
+              "sha256": "821b40df93165fdc524ee8f795e6bccbcb519d7ba67c58d0ab09cb2d6a1635da",
+              "downloads": 1,
               "mimeType": "application/zip",
               "installable": false
             },
             {
               "filename": "monal-catalyst-dsym.zip",
-              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/monal-catalyst-dsym.zip",
+              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/monal-catalyst-dsym.zip",
               "platform": "unknown",
               "architecture": null,
               "fileType": "ZIP",
               "size": 42006456,
-              "sha256": "ddd9922a3cc2d59358a6f307026fecc7a84ce5c4e3ce20ced069c574b885af42",
-              "downloads": 13,
+              "sha256": "7244c4b5b474af6255661e445e0814f3c6d75076ea1d0db51072462508d620a1",
+              "downloads": 1,
               "mimeType": "application/zip",
               "installable": false
             },
             {
-              "filename": "Monal.ipa",
-              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
-              "platform": "ios",
-              "architecture": null,
-              "fileType": "IPA",
-              "size": 38349660,
-              "sha256": "73c1d4e53ed347094ef2240574f8006b740ef33b896869bcdf94b4c099ce2d50",
-              "downloads": 136,
-              "mimeType": "application/octet-stream",
-              "installable": true
-            },
-            {
               "filename": "Monal.pkg",
-              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.pkg",
+              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.pkg",
               "platform": "unknown",
               "architecture": null,
               "fileType": "other",
-              "size": 50146295,
-              "sha256": "014e3c3c0c9bff0acc7fef1c72fef123a3f98665c15f93d8dec990095fe4f681",
-              "downloads": 56,
+              "size": 50177822,
+              "sha256": "cee402f1773db50cb62e23825e03ed96cd8771753e13effc1f07cb9fdf6cef58",
+              "downloads": 1,
               "mimeType": "application/octet-stream",
+              "installable": false
+            },
+            {
+              "filename": "Monal.zip",
+              "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.zip",
+              "platform": "unknown",
+              "architecture": null,
+              "fileType": "ZIP",
+              "size": 46664650,
+              "sha256": "1508c1e1a280fe5829016bbfe2750a32d3c143b8a58e168db0190591a590b22f",
+              "downloads": 1,
+              "mimeType": "application/zip",
               "installable": false
             }
           ],
-          "sha256": "73c1d4e53ed347094ef2240574f8006b740ef33b896869bcdf94b4c099ce2d50",
-          "downloads": 136
+          "sha256": "5c05702731ef44fd203b3691b3462f56e0e238863f69083479cdd1712f428b08",
+          "downloads": 1
         }
       ]
     },
@@ -6946,7 +6946,7 @@
       "bundleIdentifier": "com.facebook.Messenger",
       "category": "social",
       "developerName": "Dens0r & IPA Vault & lucaspedrosa",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-MSGPlusX.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
       "localizedDescription": "MSGPlusX is a tweaked Facebook Messenger build (MessengerPlus lineage by Dens0r and lucaspedrosa), distributed ready-to-sideload through the IPA Vault on a current Messenger base version. The tweak's feature set is defined by its build; no official public documentation exists.",
       "name": "MSGPlusX",
@@ -6984,24 +6984,24 @@
           "downloadReachable": true,
           "detail": "HTTP 200",
           "statusSince": "2026-09-18",
-          "lastUpdatedAt": "2026-09-16"
+          "lastUpdatedAt": "2026-09-24"
         },
         "bundleAlias": "com.facebook.Messenger"
       },
       "screenshotURLs": [],
-      "size": 112520493,
+      "size": 114887462,
       "subtitle": "Messenger tweak by Dens0r & lucaspedrosa (unofficial build)",
       "tintColor": "0084FF",
-      "version": "579.0.0",
-      "versionDate": "2026-09-16",
-      "versionDescription": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 579.0.0",
+      "version": "580.0.0",
+      "versionDate": "2026-09-24",
+      "versionDescription": "Messenger 580.0.0 | Messenger-580.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 580.0.0",
       "versions": [
         {
-          "version": "579.0.0",
-          "date": "2026-09-16",
-          "localizedDescription": "Messenger 579.0.0 | Messenger-579.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 579.0.0",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
-          "size": 112520493,
+          "version": "580.0.0",
+          "date": "2026-09-24",
+          "localizedDescription": "Messenger 580.0.0 | Messenger-580.0.0-MSGPlusX\n\nIPA Vault build for Messenger (MSGPlusX), version 580.0.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-MSGPlusX.ipa",
+          "size": 114887462,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -7009,12 +7009,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Messenger-579.0.0-MSGPlusX.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-579.0.0-MSGPlusX.ipa",
+              "filename": "Messenger-580.0.0-MSGPlusX.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Messenger-580.0.0-MSGPlusX.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 112520493,
+              "size": 114887462,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -7215,7 +7215,7 @@
       "bundleIdentifier": "personal.Nebulo-V2-3",
       "category": "photo-video",
       "developerName": "mongoosemonke504",
-      "downloadURL": "https://github.com/mongoosemonke504/NebuloIPTV/releases/download/V2.3/Nebulo_V2.3.ipa",
+      "downloadURL": "https://github.com/mongoosemonke504/OnsideTV/releases/download/V2.3/Nebulo_V2.3.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nebulo.webp",
       "localizedDescription": "Nebulo is a clean IPTV player for iOS with a built-in sports score center. Load your M3U playlists and watch live channels with a simple, focused interface.",
       "name": "Nebulo",
@@ -7269,41 +7269,41 @@
           "version": "2.3",
           "date": "2026-02-01",
           "localizedDescription": "Nebulo 2.3 | Nebulo_V2.3\n\n### **What's New in V2.3?**\n\n### **If the main ipa does is unable to be verified, try the backup it will work with users using signing apps**\n\n### **Major Improvements**\n- **Expanded Sports Section:** New categories for soccer and more sports added\n       - Settings to customize sports tabs, press and hold on a game for more options, language and resolution tags added, improved the searching for game.\n\n- **Stronger recording abilities:** The user can now record in the background when the phone is off, can now watch another stream while one is recording, recording will start again if app is force quit, replaced the recording function with one that can fill in any gaps leading to a much more stable experience.\n\n- **Fixed KSPlayer bug:** KSPlayer is much more reliable now with some bug fixes.\n\n- **Increased Multi-view reliability:** Multi-view should now work smoother with bug fixed. Made the layout much cleaner and more optimized\n\n### **UI/UX Improvements**\n- **Significantly Quicker Startup:** After logging in for the first time, loading is much faster and the epg updates either manually or once every 24 hours.\n\n- **Smart Progress Bar:** Progress bar is accurate after the first time it loads.\n\n- **Settings Upgrades:** \n       - Added a \"System Up to Date\" confirmation for manual update checks.\n       - Consolidated EPG loading status into the main overlay.\n       - Added a \"System Up to Date\" confirmation for manual update checks.\n\n### **Bug Fixes and Stability**\n- **EPG Parsing:** EPG parsing is faster and more efficient.\n- **KSPlayer Stalling:** KSPlayer would stop working after 30 seconds but it is much more stable now\n- **Memory Optimization:** Fixed memory leaks in the recording manager that would mess things up and crash app.\n\n### **Under the Hood**\n- **Update Checker Connected to GitHub:** Checks github to see if any updates have been released.\n- **FFmpegKit:** Switched to a more stable and up to date version of FFmpegKit which helped to fix KSPlayer's stability issues.",
-          "downloadURL": "https://github.com/mongoosemonke504/NebuloIPTV/releases/download/V2.3/Nebulo_V2.3.ipa",
+          "downloadURL": "https://github.com/mongoosemonke504/OnsideTV/releases/download/V2.3/Nebulo_V2.3.ipa",
           "size": 56279112,
           "minOSVersion": "26.0",
-          "releaseUrl": "https://github.com/mongoosemonke504/NebuloIPTV/releases/tag/V2.3",
+          "releaseUrl": "https://github.com/mongoosemonke504/OnsideTV/releases/tag/V2.3",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "Nebulo_V2.3.ipa",
-              "downloadUrl": "https://github.com/mongoosemonke504/NebuloIPTV/releases/download/V2.3/Nebulo_V2.3.ipa",
+              "downloadUrl": "https://github.com/mongoosemonke504/OnsideTV/releases/download/V2.3/Nebulo_V2.3.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
               "size": 56279112,
               "sha256": "e174466ca2d39a1229e3b52a4d3ef28b1dcd74cc4f8438777bf3526c3eef88e4",
-              "downloads": 2570,
+              "downloads": 2699,
               "mimeType": "application/octet-stream",
               "installable": true
             },
             {
               "filename": "Nebulo_V2.3_Backup.ipa",
-              "downloadUrl": "https://github.com/mongoosemonke504/NebuloIPTV/releases/download/V2.3/Nebulo_V2.3_Backup.ipa",
+              "downloadUrl": "https://github.com/mongoosemonke504/OnsideTV/releases/download/V2.3/Nebulo_V2.3_Backup.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
               "size": 3255369,
               "sha256": "8612b2f85040515d2a589d9127bb38df296be6c867d2600df48bc6c1f046d996",
-              "downloads": 574,
+              "downloads": 586,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "e174466ca2d39a1229e3b52a4d3ef28b1dcd74cc4f8438777bf3526c3eef88e4",
-          "downloads": 2570
+          "downloads": 2699
         }
       ]
     },
@@ -8111,7 +8111,7 @@
               "fileType": "IPA",
               "size": 9414861,
               "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-              "downloads": 468,
+              "downloads": 478,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -8141,7 +8141,7 @@
             }
           ],
           "sha256": "bc01541c26bf6fd8bbc3fdec7c989bf8d5cff60e041b7a1b3cc63573b5f68b15",
-          "downloads": 468
+          "downloads": 478
         }
       ]
     },
@@ -9656,7 +9656,7 @@
               "fileType": "IPA",
               "size": 108503085,
               "sha256": "04ca6071def9ea560686ccdb7ba04dd7c9a30dfec77bde1b19b5238daa76dbd0",
-              "downloads": 162,
+              "downloads": 211,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9668,7 +9668,7 @@
               "fileType": "IPA",
               "size": 108552628,
               "sha256": "1904c54ab760b996dc436721d48a705a50f7a6b378e7502c91c563dc0c8eba3e",
-              "downloads": 1181,
+              "downloads": 1509,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -9680,13 +9680,13 @@
               "fileType": "IPA",
               "size": 108452990,
               "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-              "downloads": 440,
+              "downloads": 578,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "2d4d1bcfe984c9eb11f212835060262f8480c9ee65199ca65dd856e40729a7ec",
-          "downloads": 440
+          "downloads": 578
         }
       ]
     },
@@ -11001,7 +11001,7 @@
       "bundleIdentifier": "oss.krtirtho.spotube.stable",
       "category": "music",
       "developerName": "KRTirtho",
-      "downloadURL": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+      "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Spotube.webp",
       "localizedDescription": "Spotube is an open-source, cross-platform music streaming client that combines Spotify's metadata — your playlists, albums, liked songs and recommendations — with community audio sources, so you can play your whole Spotify library without ads or telemetry. Includes lyrics and a plugin system for extending playback sources.",
       "name": "Spotube",
@@ -11055,197 +11055,197 @@
           "version": "5.1.2",
           "date": "2026-06-05",
           "localizedDescription": "Spotube 5.1.2 | Spotube-iOS\n\n### Bug Fixes\n\n- **newpipe**: Fallback to muxed streams if no audio stream is available\n- Dismiss search dropdown and keyboard on submission\n- Custom image helper null exception\n\n**Full Changelog**: https://github.com/KRTirtho/spotube/compare/v5.1.1...v5.1.2",
-          "downloadURL": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
           "size": 34853093,
           "minOSVersion": "14.0",
-          "releaseUrl": "https://github.com/KRTirtho/spotube/releases/tag/v5.1.2",
+          "releaseUrl": "https://github.com/team-spotube/spotube/releases/tag/v5.1.2",
           "source": "github",
           "isPrerelease": false,
           "isDraft": false,
           "assets": [
             {
               "filename": "RELEASE.md5sum",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/RELEASE.md5sum",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/RELEASE.md5sum",
               "platform": "unknown",
               "architecture": null,
               "fileType": "other",
               "size": 811,
               "sha256": "9056b0106032cd126a87d513e3d1a4025bba16689376e70b33e4113379a72599",
-              "downloads": 2301,
+              "downloads": 2423,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "RELEASE.sha256sum",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/RELEASE.sha256sum",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/RELEASE.sha256sum",
               "platform": "unknown",
               "architecture": null,
               "fileType": "other",
               "size": 1227,
               "sha256": "182c7196f7bae77b9b582e7165cf68da20410f5d5cd4f424dfd97f3e835141b7",
-              "downloads": 701,
+              "downloads": 723,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "Spotube-android-all-arch.apk",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-android-all-arch.apk",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-android-all-arch.apk",
               "platform": "android",
               "architecture": "universal",
               "fileType": "APK",
               "size": 128388471,
               "sha256": "20de38abd2eea0c0998174c8a34b324f4a9531665110f67176257e7ecc5bf0fe",
-              "downloads": 216652,
+              "downloads": 229375,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
             {
               "filename": "Spotube-iOS.ipa",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-iOS.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
               "size": 34853093,
               "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0",
-              "downloads": 13538,
+              "downloads": 14613,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "spotube-linux-5.1.2-aarch64.tar.xz",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/spotube-linux-5.1.2-aarch64.tar.xz",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/spotube-linux-5.1.2-aarch64.tar.xz",
               "platform": "linux",
               "architecture": "arm64",
               "fileType": "other",
               "size": 34254800,
               "sha256": "aba4a987e064c32852fb73a1847a3b77500f6f838e613faeffe4d0ca28b56518",
-              "downloads": 504,
+              "downloads": 552,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "spotube-linux-5.1.2-x86_64.tar.xz",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/spotube-linux-5.1.2-x86_64.tar.xz",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/spotube-linux-5.1.2-x86_64.tar.xz",
               "platform": "linux",
               "architecture": "x86_64",
               "fileType": "other",
               "size": 35261468,
               "sha256": "cc04df17e43a8f36447942045cf81f514a0c88aeaa950cb17083510760dd25f5",
-              "downloads": 5432,
+              "downloads": 5755,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "Spotube-linux-aarch64.AppImage",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-linux-aarch64.AppImage",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-linux-aarch64.AppImage",
               "platform": "linux",
               "architecture": "arm64",
               "fileType": "AppImage",
               "size": 104290808,
               "sha256": "017d7b77919353b704990c71f80dee5e3381a4799ac46d3204cc5937a760b5c1",
-              "downloads": 1027,
+              "downloads": 1085,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "Spotube-linux-aarch64.deb",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-linux-aarch64.deb",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-linux-aarch64.deb",
               "platform": "linux",
               "architecture": "arm64",
               "fileType": "DEB",
               "size": 37636312,
               "sha256": "71bf6a3cd275c01df3511bc108b10922bf8be01198c2d82301ecd2466e104031",
-              "downloads": 564,
+              "downloads": 616,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "Spotube-linux-x86_64.AppImage",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-linux-x86_64.AppImage",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-linux-x86_64.AppImage",
               "platform": "linux",
               "architecture": "x86_64",
               "fileType": "AppImage",
               "size": 106015224,
               "sha256": "a14dc29d7778fad748062159541cd47e797719f37175df2726c74cd3c5519a48",
-              "downloads": 3767,
+              "downloads": 3976,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "Spotube-linux-x86_64.deb",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-linux-x86_64.deb",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-linux-x86_64.deb",
               "platform": "linux",
               "architecture": "x86_64",
               "fileType": "DEB",
               "size": 37996550,
               "sha256": "1446f998f986380330e279c5274902fb29a0e3305d5175a3bc83b4b06392e8cd",
-              "downloads": 7102,
+              "downloads": 7531,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "Spotube-linux-x86_64.rpm",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-linux-x86_64.rpm",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-linux-x86_64.rpm",
               "platform": "linux",
               "architecture": "x86_64",
               "fileType": "other",
               "size": 37131723,
               "sha256": "cf4feaa792133afe2887064de119899f102b78e77aff37499c09a3343b4e4abc",
-              "downloads": 1531,
+              "downloads": 1670,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "Spotube-macos-universal.dmg",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-macos-universal.dmg",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-macos-universal.dmg",
               "platform": "macos",
               "architecture": "universal",
               "fileType": "DMG",
               "size": 63167099,
               "sha256": "27627dfd44190040af1a6ba6a86cdc4450399296a43a616940a94ae687ac0913",
-              "downloads": 7622,
+              "downloads": 8723,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "Spotube-macos-universal.pkg",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-macos-universal.pkg",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-macos-universal.pkg",
               "platform": "macos",
               "architecture": "universal",
               "fileType": "other",
               "size": 62856766,
               "sha256": "a9bbdf6ac1961657187980c9751b53e6d8fa82408b546f0929dfbddd249757ad",
-              "downloads": 526,
+              "downloads": 576,
               "mimeType": "raw",
               "installable": false
             },
             {
               "filename": "Spotube-windows-x86_64-setup.exe",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-windows-x86_64-setup.exe",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-windows-x86_64-setup.exe",
               "platform": "windows",
               "architecture": "x86_64",
               "fileType": "EXE",
               "size": 38294732,
               "sha256": "e5641f3841ec724fcb5e00a22d980f410ee507fdd00669b86db0c29f9b741162",
-              "downloads": 60981,
+              "downloads": 64959,
               "mimeType": "raw",
               "installable": true
             },
             {
               "filename": "Spotube-windows-x86_64.nupkg",
-              "downloadUrl": "https://github.com/KRTirtho/spotube/releases/download/v5.1.2/Spotube-windows-x86_64.nupkg",
+              "downloadUrl": "https://github.com/team-spotube/spotube/releases/download/v5.1.2/Spotube-windows-x86_64.nupkg",
               "platform": "windows",
               "architecture": "x86_64",
               "fileType": "other",
               "size": 37749819,
               "sha256": "0d338156b2284863d3e4cc63020190e83f6ddcc71ceff048cb73ee882cabb5e9",
-              "downloads": 411,
+              "downloads": 438,
               "mimeType": "raw",
               "installable": false
             }
           ],
           "sha256": "9ec07f5ff1302567075b3c02cb3a4baac5fa475a65f71a3878f2d78744ba7bc0",
-          "downloads": 13538
+          "downloads": 14613
         }
       ]
     },
@@ -11591,7 +11591,7 @@
               "fileType": "APK",
               "size": 197174334,
               "sha256": "9af07d922fbf5472a9f0caa1cb45bb7d2c28f1a9911b423237aefe0948317b81",
-              "downloads": 11249,
+              "downloads": 11309,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11603,7 +11603,7 @@
               "fileType": "APK",
               "size": 191577143,
               "sha256": "a908b39a34b567844e03cce36ffbc3fd3a01a0757dc05ad4952ec7a16251e1b4",
-              "downloads": 1532,
+              "downloads": 1546,
               "mimeType": "application/vnd.android.package-archive",
               "installable": true
             },
@@ -11615,7 +11615,7 @@
               "fileType": "AAB",
               "size": 117678831,
               "sha256": "f2048d65a565ee5e9425b284b34e401bd21ef0e91cdb89660925eab47c40f469",
-              "downloads": 70,
+              "downloads": 72,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -11627,7 +11627,7 @@
               "fileType": "IPA",
               "size": 39456520,
               "sha256": "d94ed09c3fe3b4886b316f95bec3a812dbf5e76a4d9b5961f60b93c357fc78dc",
-              "downloads": 47,
+              "downloads": 48,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -11639,13 +11639,13 @@
               "fileType": "IPA",
               "size": 53931137,
               "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-              "downloads": 317,
+              "downloads": 328,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "706adb7f41b60565c1924deb84f6afb3fe3727dbdf291a3ece934ddb90a178b2",
-          "downloads": 317
+          "downloads": 328
         }
       ]
     },
@@ -12713,7 +12713,7 @@
               "fileType": "IPA",
               "size": 27098183,
               "sha256": null,
-              "downloads": 366203,
+              "downloads": 366466,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -12725,12 +12725,12 @@
               "fileType": "IPA",
               "size": 6889214,
               "sha256": null,
-              "downloads": 1248933,
+              "downloads": 1249802,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
-          "downloads": 1248933
+          "downloads": 1249802
         }
       ]
     },
@@ -13020,7 +13020,7 @@
               "fileType": "IPA",
               "size": 143381478,
               "sha256": "d01020aa34ddf4517a1a0e5fef430120450148b7cd8346024b50a8445d7f6bf4",
-              "downloads": 563,
+              "downloads": 578,
               "mimeType": "application/octet-stream",
               "installable": true
             },
@@ -13032,13 +13032,13 @@
               "fileType": "IPA",
               "size": 152372292,
               "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-              "downloads": 1451,
+              "downloads": 1486,
               "mimeType": "application/octet-stream",
               "installable": true
             }
           ],
           "sha256": "5ddea13264259f54c7f8812ef16ddc20ddb675703826537a1e5dfd144f228181",
-          "downloads": 1451
+          "downloads": 1486
         }
       ]
     },
@@ -15292,6 +15292,60 @@
   ],
   "news": [
     {
+      "title": "Apollo v3.8.0",
+      "identifier": "news-apollo-3-8-0",
+      "caption": "The beloved Reddit client, continued by Apollo-Reborn",
+      "date": "2026-09-25",
+      "appID": "com.christianselig.Apollo",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Apollo.webp",
+      "notify": true
+    },
+    {
+      "title": "MSGPlusX v580.0.0",
+      "identifier": "news-msgplusx-580-0-0",
+      "caption": "Messenger tweak by Dens0r & lucaspedrosa (unofficial build)",
+      "date": "2026-09-24",
+      "appID": "com.facebook.Messenger",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+      "notify": true
+    },
+    {
+      "title": "Monal v6.4.22",
+      "identifier": "news-monal-6-4-22",
+      "caption": "XMPP instant messenger",
+      "date": "2026-09-24",
+      "appID": "G7YU7X7KRJ.SworIM",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Monal.webp",
+      "notify": true
+    },
+    {
+      "title": "Messenger Flow v580.0.0",
+      "identifier": "news-messenger-flow-580-0-0",
+      "caption": "Facebook Messenger tweak by dvntms (unofficial build)",
+      "date": "2026-09-24",
+      "appID": "com.facebook.Messenger.flow",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Messenger.webp",
+      "notify": true
+    },
+    {
+      "title": "iQFace v580.0.0",
+      "identifier": "news-iqface-580-0-0",
+      "caption": "Facebook tweak build by 7MD",
+      "date": "2026-09-24",
+      "appID": "com.facebook.Facebook",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
+      "notify": true
+    },
+    {
+      "title": "Glow v2026.38.0",
+      "identifier": "news-glow-2026-38-0",
+      "caption": "Clean, powerful Facebook tweak by dayanch96",
+      "date": "2026-09-24",
+      "appID": "com.facebook.Facebook.glow",
+      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
+      "notify": true
+    },
+    {
       "title": "Zeus v13.2.2",
       "identifier": "news-zeus-13-2-2",
       "caption": "Self-custodial Bitcoin and Lightning wallet",
@@ -15325,60 +15379,6 @@
       "date": "2026-09-23",
       "appID": "com.zarz.spotiflacAndroid",
       "imageURL": "https://iamsmmh.github.io/OmniSource/assets/SpotiFLAC.webp",
-      "notify": true
-    },
-    {
-      "title": "Nuvio v0.5.1",
-      "identifier": "news-nuvio-0-5-1",
-      "caption": "Open-source media player, bring your own sources",
-      "date": "2026-09-23",
-      "appID": "com.nuvio.app",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Nuvio.webp",
-      "notify": true
-    },
-    {
-      "title": "iNKillerPlus v448.0.0",
-      "identifier": "news-inkillerplus-448-0-0",
-      "caption": "Instagram with downloads, ghost mode and no ads",
-      "date": "2026-09-23",
-      "appID": "com.burbn.instagram",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Instagram.webp",
-      "notify": true
-    },
-    {
-      "title": "Dopamine v3.0.10",
-      "identifier": "news-dopamine-3-0-10",
-      "caption": "Semi-untethered jailbreak for iOS 15 – 26",
-      "date": "2026-09-23",
-      "appID": "com.opa334.Dopamine",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Dopamine.webp",
-      "notify": true
-    },
-    {
-      "title": "YTMusicUltimate v9.38.1",
-      "identifier": "news-ytmusic-9-38-1",
-      "caption": "Lightweight YouTube Music tweak",
-      "date": "2026-09-22",
-      "appID": "com.google.ios.youtubemusic",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/YouTubeMusic.webp",
-      "notify": true
-    },
-    {
-      "title": "Synkplay v0.25.0",
-      "identifier": "news-synkplay-0-25-0",
-      "caption": "Synced video playback",
-      "date": "2026-09-22",
-      "appID": "com.yuroyami.syncplay.iosApp",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Synkplay.webp",
-      "notify": true
-    },
-    {
-      "title": "Reynard v0.14.1",
-      "identifier": "news-reynard-0-14-1",
-      "caption": "Gecko-based browser, a real WebKit alternative",
-      "date": "2026-09-22",
-      "appID": "com.minh-ton.Reynard",
-      "imageURL": "https://iamsmmh.github.io/OmniSource/assets/Reynard.webp",
       "notify": true
     }
   ]

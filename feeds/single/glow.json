@@ -18,18 +18,18 @@
       "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Facebook.webp",
       "tintColor": "1877F2",
       "category": "social",
-      "version": "577.1",
-      "versionDate": "2026-09-05",
-      "versionDescription": "Facebook 577.1 | Facebook-577.1-Glow\n\nIPA Vault build for Facebook (Glow), version 577.1",
-      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-      "size": 226667533,
+      "version": "2026.38.0",
+      "versionDate": "2026-09-24",
+      "versionDescription": "Facebook 2026.38.0 | Reddit-2026.38.0-RedditFilter\n\nIPA Vault build for Reddit (RedditFilter), version 2026.38.0",
+      "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
+      "size": 144273472,
       "versions": [
         {
-          "version": "577.1",
-          "date": "2026-09-05",
-          "localizedDescription": "Facebook 577.1 | Facebook-577.1-Glow\n\nIPA Vault build for Facebook (Glow), version 577.1",
-          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
-          "size": 226667533,
+          "version": "2026.38.0",
+          "date": "2026-09-24",
+          "localizedDescription": "Facebook 2026.38.0 | Reddit-2026.38.0-RedditFilter\n\nIPA Vault build for Reddit (RedditFilter), version 2026.38.0",
+          "downloadURL": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
+          "size": 144273472,
           "minOSVersion": "15.1",
           "releaseUrl": null,
           "source": "altstore",
@@ -37,12 +37,12 @@
           "isDraft": false,
           "assets": [
             {
-              "filename": "Facebook-577.1-Glow.ipa",
-              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Facebook-577.1-Glow.ipa",
+              "filename": "Reddit-2026.38.0-RedditFilter.ipa",
+              "downloadUrl": "https://pub-dd800571175348b6a2745b3396360028.r2.dev/Reddit-2026.38.0-RedditFilter.ipa",
               "platform": "ios",
               "architecture": null,
               "fileType": "IPA",
-              "size": 226667533,
+              "size": 144273472,
               "sha256": null,
               "downloads": 0,
               "mimeType": null,
@@ -108,10 +108,10 @@
           "notes": "Tracks the ready-to-sideload Glow build from the IPA Vault source (the official dayanch96/Glow repo publishes the tweak as .deb only). Facebook 577.x builds require iOS 15.1 or newer. Uses its own bundle identifier, so it installs alongside the stock App Store Facebook."
         },
         "health": {
-          "downloadReachable": false,
-          "detail": "HTTP 404",
+          "downloadReachable": true,
+          "detail": "HTTP 200",
           "statusSince": "2026-09-24",
-          "lastUpdatedAt": "2026-09-05"
+          "lastUpdatedAt": "2026-09-24"
         }
       }
     }

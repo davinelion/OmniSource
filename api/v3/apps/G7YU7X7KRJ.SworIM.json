@@ -1,7 +1,7 @@
 {
   "apiVersion": "3.0.0",
   "schemaVersion": 3,
-  "feedVersion": "12338d3505e1",
+  "feedVersion": "e36bf7bb685d",
   "data": {
     "name": "Monal",
     "bundleIdentifier": "G7YU7X7KRJ.SworIM",
@@ -11,87 +11,87 @@
     "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Monal.webp",
     "tintColor": "00A8E8",
     "category": "social",
-    "version": "6.4.21",
-    "versionDate": "2026-05-27",
-    "versionDescription": "Monal 6.4.21 | Monal\n\n- Show last usage timestamp of OMEMO keys\n- Use the iOS 18 UI in the share sheet\n- Allow using any language in the Display Name field in account settings\n- Try to improve location sharing accuracy\n- Improve contact last activity timestamps\n- Fix several bugs",
-    "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
-    "size": 38349660,
+    "version": "6.4.22",
+    "versionDate": "2026-09-24",
+    "versionDescription": "Monal 6.4.22 | Monal\n\n- Improve SRV-record handling for dot records\n- Allow voice-over localization of loading spinner in the chats overview\n- Obfuscate upload filenames when sending encrypted files",
+    "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
+    "size": 38407335,
     "versions": [
       {
-        "version": "6.4.21",
-        "date": "2026-05-27",
-        "localizedDescription": "Monal 6.4.21 | Monal\n\n- Show last usage timestamp of OMEMO keys\n- Use the iOS 18 UI in the share sheet\n- Allow using any language in the Display Name field in account settings\n- Try to improve location sharing accuracy\n- Improve contact last activity timestamps\n- Fix several bugs",
-        "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
-        "size": 38349660,
+        "version": "6.4.22",
+        "date": "2026-09-24",
+        "localizedDescription": "Monal 6.4.22 | Monal\n\n- Improve SRV-record handling for dot records\n- Allow voice-over localization of loading spinner in the chats overview\n- Obfuscate upload filenames when sending encrypted files",
+        "downloadURL": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
+        "size": 38407335,
         "minOSVersion": "16.1",
-        "releaseUrl": "https://github.com/monal-im/Monal/releases/tag/Build_iOS_1092",
+        "releaseUrl": "https://github.com/monal-im/Monal/releases/tag/Build_iOS_1094",
         "source": "github",
         "isPrerelease": false,
         "isDraft": false,
         "assets": [
           {
+            "filename": "Monal.ipa",
+            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.ipa",
+            "platform": "ios",
+            "architecture": null,
+            "fileType": "IPA",
+            "size": 38407335,
+            "sha256": "5c05702731ef44fd203b3691b3462f56e0e238863f69083479cdd1712f428b08",
+            "downloads": 1,
+            "mimeType": "application/octet-stream",
+            "installable": true
+          },
+          {
             "filename": "monal-ios-dsym.zip",
-            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/monal-ios-dsym.zip",
+            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/monal-ios-dsym.zip",
             "platform": "ios",
             "architecture": null,
             "fileType": "ZIP",
-            "size": 38099977,
-            "sha256": "aef09b763dba5e3c478599639bebe33570ef9d608c8b132b1ecacc660cdb87a3",
-            "downloads": 6,
-            "mimeType": "application/zip",
-            "installable": false
-          },
-          {
-            "filename": "Monal.zip",
-            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.zip",
-            "platform": "unknown",
-            "architecture": null,
-            "fileType": "ZIP",
-            "size": 46634197,
-            "sha256": "559da3f9bba9a6c50d3a39ff0c38b01bf86a8e7da0e11eee323cc0e835aa0764",
-            "downloads": 39,
+            "size": 38105987,
+            "sha256": "821b40df93165fdc524ee8f795e6bccbcb519d7ba67c58d0ab09cb2d6a1635da",
+            "downloads": 1,
             "mimeType": "application/zip",
             "installable": false
           },
           {
             "filename": "monal-catalyst-dsym.zip",
-            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/monal-catalyst-dsym.zip",
+            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/monal-catalyst-dsym.zip",
             "platform": "unknown",
             "architecture": null,
             "fileType": "ZIP",
             "size": 42006456,
-            "sha256": "ddd9922a3cc2d59358a6f307026fecc7a84ce5c4e3ce20ced069c574b885af42",
-            "downloads": 13,
+            "sha256": "7244c4b5b474af6255661e445e0814f3c6d75076ea1d0db51072462508d620a1",
+            "downloads": 1,
             "mimeType": "application/zip",
             "installable": false
           },
           {
-            "filename": "Monal.ipa",
-            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.ipa",
-            "platform": "ios",
-            "architecture": null,
-            "fileType": "IPA",
-            "size": 38349660,
-            "sha256": "73c1d4e53ed347094ef2240574f8006b740ef33b896869bcdf94b4c099ce2d50",
-            "downloads": 136,
-            "mimeType": "application/octet-stream",
-            "installable": true
-          },
-          {
             "filename": "Monal.pkg",
-            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1092/Monal.pkg",
+            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.pkg",
             "platform": "unknown",
             "architecture": null,
             "fileType": "other",
-            "size": 50146295,
-            "sha256": "014e3c3c0c9bff0acc7fef1c72fef123a3f98665c15f93d8dec990095fe4f681",
-            "downloads": 56,
+            "size": 50177822,
+            "sha256": "cee402f1773db50cb62e23825e03ed96cd8771753e13effc1f07cb9fdf6cef58",
+            "downloads": 1,
             "mimeType": "application/octet-stream",
+            "installable": false
+          },
+          {
+            "filename": "Monal.zip",
+            "downloadUrl": "https://github.com/monal-im/Monal/releases/download/Build_iOS_1094/Monal.zip",
+            "platform": "unknown",
+            "architecture": null,
+            "fileType": "ZIP",
+            "size": 46664650,
+            "sha256": "1508c1e1a280fe5829016bbfe2750a32d3c143b8a58e168db0190591a590b22f",
+            "downloads": 1,
+            "mimeType": "application/zip",
             "installable": false
           }
         ],
-        "sha256": "73c1d4e53ed347094ef2240574f8006b740ef33b896869bcdf94b4c099ce2d50",
-        "downloads": 136
+        "sha256": "5c05702731ef44fd203b3691b3462f56e0e238863f69083479cdd1712f428b08",
+        "downloads": 1
       }
     ],
     "screenshotURLs": [],
@@ -133,7 +133,7 @@
         "downloadReachable": true,
         "detail": "HTTP 302",
         "statusSince": "2026-09-13",
-        "lastUpdatedAt": "2026-05-27"
+        "lastUpdatedAt": "2026-09-24"
       }
     },
     "id": "G7YU7X7KRJ.SworIM"
