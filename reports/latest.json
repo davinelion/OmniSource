@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-09-25",
-  "feedVersion": "61a197836ccf",
+  "feedVersion": "a85d0f6ab824",
   "apps": {
     "total": 130,
     "reachable": 130,
@@ -9,13 +9,21 @@
   },
   "sync": {
     "synced": 130,
-    "incrementalHits": 121,
-    "updated": 0,
+    "incrementalHits": 120,
+    "updated": 1,
     "failed": 0,
     "apiRequests": 116
   },
   "unreachable": [],
-  "updates": [],
+  "updates": [
+    {
+      "slug": "nuvio",
+      "name": "Nuvio",
+      "previousVersion": "0.5.1",
+      "version": "0.5.2",
+      "kind": "updated"
+    }
+  ],
   "errors": [],
   "translations": {
     "ar": 100,

@@ -5,8 +5,29 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
     <description>Release feed for Nuvio within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/nuvio.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Nuvio v0.5.2</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
+      <guid isPermaLink="false">nuvio-0.5.2</guid>
+      <pubDate>Fri, 25 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[Nuvio 0.5.2 | nuvio-0.5.2-full-release
+
+- 353b8cd9 fix(exo): update buffer defaults @tapframe  
+- f50bd149 update engine libs @tapframe  
+- 23e4d3f7 fix(ios): hide home indicator during playback @tapframe  
+- [i18n(vi): update latest Vietnamese strings (#2064)](https://github.com/NuvioMedia/NuvioMobile/pull/2064) @blueocean2308  
+- [Fix badge cache, library poster scope, and next-episode post-credits timing (#2059)](https://github.com/NuvioMedia/NuvioMobile/pull/2059) @skoruppa  
+- [Add landscape banner to Simkl More Like This items (#2058)](https://github.com/NuvioMedia/NuvioMobile/pull/2058) @skoruppa  
+- [added the percent value to the swipe up gesture bars (#2057)](https://github.com/NuvioMedia/NuvioMobile/pull/2057) @AdityasahuX07  
+- [Simkl more like this (#2052)](https://github.com/NuvioMedia/NuvioMobile/pull/2052) @skoruppa  
+- [Add per-screen toggles for custom poster URL overlay (#2050)](https://github.com/NuvioMedia/NuvioMobile/pull/2050) @skoruppa  
+- [fix(i18n): render Show "All" Tab without backslashes (#2047)](https://github.com/NuvioMedia/NuvioMobile/pull/2047) @blueocean2308  
+- d4b69c2d fix(player): key player lifecycle by episode and source @tapframe  
+- [Fix binary request and response handling in plugin fetch() (#2041)](https://github.com/NuvioMedia/NuvioMobile/pull/2041) @joojoooo]]></description>
+      <enclosure url="https://github.com/NuvioMedia/NuvioMobile/releases/download/0.5.2-beta/nuvio-0.5.2-full-release.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>Nuvio v0.5.1</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/nuvio.json</link>
