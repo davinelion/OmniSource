@@ -1,8 +1,23 @@
 {
-  "generatedAt": "2026-09-25",
+  "generatedAt": "2026-09-26",
   "sourceURL": "https://iamsmmh.github.io/OmniSource/apps.json",
   "count": 100,
   "updates": [
+    {
+      "slug": "ytkace",
+      "name": "YTKACE",
+      "version": "21.38.3",
+      "previousVersion": "21.38.2",
+      "date": "2026-09-26",
+      "kind": "updated",
+      "changelog": "YouTube 21.38.3 | YTKACE 1.1.0 | YTKACE_1.1.0_YouTube_21.38.3\n\nby @itzzace0\n\nWhat's new:\n• Updated to YouTube 21.38.3\n• Redesigned the YTKACE library player with a floating mini player, PiP and YouTube style controls\n• SponsorBlock now skips segments in downloaded videos\n• New Download Method option with Direct downloads\n• Modify YouTube's video zoom\n• Keep Shorts in Subscriptions\n• Option to disable PiP for Shorts\n• Speed menu button\n• Options to disable HDR, remove 1080p Premium and set a separate Shorts speed\n• Layout mode option\n• Choose the subtitle language for downloads\n\nFixed:\n• PiP not working for music videos\n• Gap left by hidden comment guidelines, topic chips and community posts\n• Download and queue buttons on older YouTube versions\n• Autoplay in queues\n• Improved Playback Fix and download retrying\n\nThanks to @Ganeron11 and @kes158 for contributions\n\nYouTube 21.38.3 requires iOS 17, so there are two IPAs:\n• `YTKACE_1.1.0_YouTube_21.38.3.ipa` for iOS 17 and newer\n• `YTKACE_1.1.0_YouTube_iOS16_21.33.6.ipa` for iOS 16",
+      "downloadURL": "https://github.com/itzzace/ytkace/releases/download/v1.1.0/YTKACE_1.1.0_YouTube_21.38.3.ipa",
+      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/YouTube.webp",
+      "feedURL": "https://iamsmmh.github.io/OmniSource/ytkace.json",
+      "rssURL": "https://iamsmmh.github.io/OmniSource/ytkace.xml",
+      "status": "stable",
+      "shortDescription": "YTKACE"
+    },
     {
       "slug": "nuvio",
       "name": "Nuvio",
@@ -1472,21 +1487,6 @@
       "rssURL": "https://iamsmmh.github.io/OmniSource/spotiflac.xml",
       "status": "stable",
       "shortDescription": "FLAC Downloader for iOS"
-    },
-    {
-      "slug": "nicegram",
-      "name": "Nicegram",
-      "version": "2.6.1",
-      "previousVersion": "",
-      "date": "2026-09-07",
-      "kind": "new",
-      "changelog": "Nicegram 2.6.1 | build 2.6.1\n\nBuild of Nicegram for iOS 2.6.1 (713)",
-      "downloadURL": "https://github.com/nicegram/Nicegram-iOS/releases/download/build-713/Nicegram.ipa",
-      "iconURL": "https://iamsmmh.github.io/OmniSource/assets/Nicegram.webp",
-      "feedURL": "https://iamsmmh.github.io/OmniSource/nicegram.json",
-      "rssURL": "https://iamsmmh.github.io/OmniSource/nicegram.xml",
-      "status": "stable",
-      "shortDescription": "Independent Telegram client: multi-account, AI, privacy"
     },
     {
       "slug": "uyouenhanced",

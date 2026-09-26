@@ -5,8 +5,44 @@
     <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>
     <description>Release feed for YTKACE within OmniSource, curated from official upstream sources.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://iamsmmh.github.io/OmniSource/feeds/ytkace.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>YTKACE v21.38.3</title>
+      <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>
+      <guid isPermaLink="false">ytkace-21.38.3</guid>
+      <pubDate>Sat, 26 Sep 2026 00:00:00 +0000</pubDate>
+      <description><![CDATA[YouTube 21.38.3 | YTKACE 1.1.0 | YTKACE_1.1.0_YouTube_21.38.3
+
+by @itzzace0
+
+What's new:
+• Updated to YouTube 21.38.3
+• Redesigned the YTKACE library player with a floating mini player, PiP and YouTube style controls
+• SponsorBlock now skips segments in downloaded videos
+• New Download Method option with Direct downloads
+• Modify YouTube's video zoom
+• Keep Shorts in Subscriptions
+• Option to disable PiP for Shorts
+• Speed menu button
+• Options to disable HDR, remove 1080p Premium and set a separate Shorts speed
+• Layout mode option
+• Choose the subtitle language for downloads
+
+Fixed:
+• PiP not working for music videos
+• Gap left by hidden comment guidelines, topic chips and community posts
+• Download and queue buttons on older YouTube versions
+• Autoplay in queues
+• Improved Playback Fix and download retrying
+
+Thanks to @Ganeron11 and @kes158 for contributions
+
+YouTube 21.38.3 requires iOS 17, so there are two IPAs:
+• `YTKACE_1.1.0_YouTube_21.38.3.ipa` for iOS 17 and newer
+• `YTKACE_1.1.0_YouTube_iOS16_21.33.6.ipa` for iOS 16]]></description>
+      <enclosure url="https://github.com/itzzace/ytkace/releases/download/v1.1.0/YTKACE_1.1.0_YouTube_21.38.3.ipa" length="0" type="application/octet-stream" />
+    </item>
     <item>
       <title>YTKACE v21.38.2</title>
       <link>https://iamsmmh.github.io/OmniSource/feeds/ytkace.json</link>
